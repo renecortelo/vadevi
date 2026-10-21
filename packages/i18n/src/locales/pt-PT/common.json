@@ -510,7 +510,9 @@
       },
       "pairingSaid": "Segundo as suas fontes, combina com:",
       "pairingSuggested": "Sugeridas pelas regras de harmonização, pelo seu estilo:",
-      "noPairing": "Nenhuma casta da biblioteca combina ainda."
+      "noPairing": "Nenhuma casta da biblioteca combina ainda.",
+      "showAll": "Ver todas ({{count}})",
+      "showFewer": "Ver menos"
     },
     "glanceSourceFederalRegister": "Federal Register dos EUA, a norma que criou a AVA ({{campaign}})",
     "glanceSourceArtea": "Fonte: ARTEA – Regione Toscana, vindima {{campaign}} · CC BY 4.0",

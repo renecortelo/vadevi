@@ -510,7 +510,9 @@
       },
       "pairingSaid": "What its sources say it goes with:",
       "pairingSuggested": "Suggested by the pairing rules, from its style:",
-      "noPairing": "No grape of the library goes with it yet."
+      "noPairing": "No grape of the library goes with it yet.",
+      "showAll": "Show all {{count}}",
+      "showFewer": "Show fewer"
     },
     "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})",
     "glanceSourceArtea": "Source: ARTEA – Regione Toscana, grape harvest {{campaign}} · CC BY 4.0",

@@ -411906,7 +411906,168 @@
     "countryCode": "CH",
     "eambrosiaId": null,
     "giType": "AOC",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "aligote",
+        "quote": "La liste des cépages blancs autorisés est la suivante: Aligoté Altesse Amigne Arvine (petite) Auxerrois Bouvier",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "chasselas",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "elbling",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gouais-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "kerner",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "pinot-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "savagnin",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "silvaner",
+        "quote": "Solaris Souvignier gris Sylvaner Viognier",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Solaris Souvignier gris Sylvaner Viognier",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "ancellotta",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "cabernet-dorsa",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "dornfelder",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gamaret",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "st-laurent",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "bastardo",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "zweigelt",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      }
+    ],
     "id": "ch-cheyres",
     "latitude": 46.8172944,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
@@ -411966,7 +412127,168 @@
     "countryCode": "CH",
     "eambrosiaId": null,
     "giType": "AOC",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "aligote",
+        "quote": "La liste des cépages blancs autorisés est la suivante: Aligoté Altesse Amigne Arvine (petite) Auxerrois Bouvier",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "chasselas",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "elbling",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gouais-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "kerner",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "pinot-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "savagnin",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "silvaner",
+        "quote": "Solaris Souvignier gris Sylvaner Viognier",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "Solaris Souvignier gris Sylvaner Viognier",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "ancellotta",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "cabernet-dorsa",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "dornfelder",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gamaret",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "st-laurent",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "bastardo",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      },
+      {
+        "grapeId": "zweigelt",
+        "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+        "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+      }
+    ],
     "id": "ch-vully",
     "latitude": 46.9548166,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
@@ -412547,7 +412869,148 @@
     "countryCode": "CH",
     "eambrosiaId": null,
     "giType": "AOC",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "aligote",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chasselas",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "kerner",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "savagnin",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "silvaner",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "ancellotta",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-dorsa",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "dornfelder",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gamaret",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "bastardo",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      }
+    ],
     "id": "ch-cotes-de-l-orbe",
     "latitude": 46.724144,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
@@ -412610,7 +413073,148 @@
     "countryCode": "CH",
     "eambrosiaId": null,
     "giType": "AOC",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "aligote",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chasselas",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "kerner",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "savagnin",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "silvaner",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "ancellotta",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-dorsa",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "dornfelder",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gamaret",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "bastardo",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      }
+    ],
     "id": "ch-bonvillars",
     "latitude": 46.8375743,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",
@@ -412830,7 +413434,148 @@
     "countryCode": "CH",
     "eambrosiaId": null,
     "giType": "AOC",
-    "grapes": [],
+    "grapes": [
+      {
+        "grapeId": "aligote",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chardonnay",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chasselas",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "chenin-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gewurztraminer",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "kerner",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "marsanne",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "muller-thurgau",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-gris",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "riesling",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "sauvignon-blanc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "savagnin",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "semillon",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "silvaner",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "viognier",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "ancellotta",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-dorsa",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-franc",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "cabernet-sauvignon",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "dornfelder",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gamaret",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "gamay",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "malbec",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "merlot",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "pinot-noir",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "syrah",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      },
+      {
+        "grapeId": "bastardo",
+        "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+        "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+      }
+    ],
     "id": "ch-dezaley-marsens",
     "latitude": 46.6356963,
     "legalUrl": "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf",

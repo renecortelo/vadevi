@@ -23,6 +23,11 @@ has the reasons.
 
 ### The library
 
+- **The pairing wheel's suggestions, best known first**: a dish's grapes
+  that the pairing rules suggest by style (up to 65 for some) show twelve at
+  first, the most prominent, with «Show all 59» for the rest and «Show
+  fewer» to fold them again. What the grapes' own sources say is shown whole,
+  as before.
 - **Grapes read in eleven more languages**: their Wikipedia articles in
   Russian, Ukrainian, Bulgarian, Hungarian, Croatian, Romanian, Czech,
   Slovenian, Greek, Polish and Georgian, read by hand where the other
@@ -68,6 +73,10 @@ has the reasons.
   or a fixed alias («Shiraz», «Primitivo», «Petite Sirah»); a family name
   («Muscat», «Pinot») and the hybrids the library has no page for are left
   out.
+- **Vaud's and Fribourg's varieties**: Côtes-de-l'Orbe, Bonvillars and
+  Dézaley-Marsens list the varieties Vaud's wine regulation admits in AOC
+  (its 2018 annex), Vully and Cheyres those of Fribourg's ordinance (annex 1,
+  2024), mapped by hand as Geneva's.
 - **Geneva's varieties**: the AOC Genève and its 22 premiers crus list the
   grapes Geneva's wine law authorises in them (its annex: Chasselas,
   Gamay, Pinot Noir, Gamaret, Merlot and 25 more), each name mapped by hand

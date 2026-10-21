@@ -184,7 +184,7 @@ export const sources: Source[] = [
   {
     group: "registers",
     terms: "officialFacts",
-    name: "Règlement sur la vigne et les vins de Genève (RSG M 2 50.05)",
+    name: "Genève RSG M 2 50.05 · Vaud RSV 916.125.2 · Fribourg RSF 912.4.111",
     url: "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm",
     what: "varieties",
   },

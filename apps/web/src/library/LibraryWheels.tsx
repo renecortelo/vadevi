@@ -16,6 +16,7 @@ import { Wheel, type WheelNode } from "./Wheel";
 import { aromaWheel, colourKinds, colourWheel, pairingWheel } from "./wheels";
 
 type Kind = "aromas" | "colours" | "pairings";
+const suggestedShown = 12;
 type Pairings = Map<string, LibraryPairingsResponse["data"][number]["grapes"]>;
 type Aromas = Map<string, { grapeCount: number; label: string }>;
 
@@ -33,6 +34,9 @@ export function LibraryWheels() {
   const locale = resolveSupportedLocale(i18n.language);
   const [kind, setKind] = useState<Kind>("aromas");
   const [selected, setSelected] = useState<string | null>(null);
+  // The pairing rules can suggest dozens of grapes for a dish: the best known
+  // first, and the rest on request.
+  const [allSuggested, setAllSuggested] = useState(false);
   const [aromas, setAromas] = useState<{ key: string; map: Aromas } | null>(null);
   const [grapes, setGrapes] = useState<{
     term: string;
@@ -141,7 +145,10 @@ export function LibraryWheels() {
           }}
           key={kind}
           label={t(`library.wheels.${kind}`)}
-          onSelect={(node) => setSelected(node.id)}
+          onSelect={(node) => {
+            setSelected(node.id);
+            setAllSuggested(false);
+          }}
           root={root}
           selected={selected}
         />
@@ -169,7 +176,8 @@ export function LibraryWheels() {
             <p className="section-help">{t("library.wheels.noPairing")}</p>
           ) : (
             [true, false].map((said) => {
-              const these = goWith.filter((grape) => grape.said === said);
+              const all = goWith.filter((grape) => grape.said === said);
+              const these = said || allSuggested ? all : all.slice(0, suggestedShown);
               return these.length === 0 ? null : (
                 <div key={String(said)}>
                   <p className="section-help">
@@ -188,6 +196,17 @@ export function LibraryWheels() {
                       </li>
                     ))}
                   </ul>
+                  {said || all.length <= suggestedShown ? null : (
+                    <button
+                      className="text-button"
+                      onClick={() => setAllSuggested((shown) => !shown)}
+                      type="button"
+                    >
+                      {allSuggested
+                        ? t("library.wheels.showFewer")
+                        : t("library.wheels.showAll", { count: all.length })}
+                    </button>
+                  )}
                 </div>
               );
             })

@@ -510,7 +510,9 @@
       },
       "pairingSaid": "Secondo le sue fonti, si abbina a:",
       "pairingSuggested": "Suggeriti dalle regole di abbinamento, dal suo stile:",
-      "noPairing": "Nessun vitigno della biblioteca si abbina ancora."
+      "noPairing": "Nessun vitigno della biblioteca si abbina ancora.",
+      "showAll": "Mostra tutte ({{count}})",
+      "showFewer": "Mostra meno"
     },
     "glanceSourceFederalRegister": "Federal Register degli USA, la norma che ha istituito l’AVA ({{campaign}})",
     "glanceSourceArtea": "Fonte: ARTEA – Regione Toscana, raccolta uva {{campaign}} · CC BY 4.0",

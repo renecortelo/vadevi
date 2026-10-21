@@ -397,7 +397,10 @@ Every few months, or when a register announces a name:
 - **Swiss cantonal wine laws** (`ch-cantonal-grapes.json`): the varieties
   a canton's law authorises in its AOC, where no register lists them —
   Geneva's «Règlement sur la vigne et les vins» (RSG M 2 50.05), annex, for
-  the AOC Genève and its 22 premiers crus. Official texts, free to reuse
+  the AOC Genève and its 22 premiers crus; Vaud's «Règlement sur les vins
+  vaudois» (annex of 2018) for Côtes-de-l'Orbe, Bonvillars and
+  Dézaley-Marsens; Fribourg's «Ordonnance sur la vigne et le vin» (annex 1)
+  for Vully and Cheyres. Official texts, free to reuse
   (Swiss Copyright Act, art. 5); each list's quote is checked against the
   law's text cached in `.kb-cache/ch-law/`.
 

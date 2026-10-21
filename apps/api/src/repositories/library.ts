@@ -466,7 +466,7 @@ export async function libraryPairings(
   const [grapeRows, attributeRows] = await database.batch([
     database
       .prepare(
-        `SELECT grape.id, grape.color, grape.acidity, grape.tannin, grape.body,
+        `SELECT grape.id, grape.color, grape.acidity, grape.tannin, grape.body, grape.prominence,
           coalesce(
             (SELECT name FROM kb_names WHERE entity_type = 'grape' AND entity_id = grape.id
               AND kind = 'primary' AND locale = ?),
@@ -484,7 +484,7 @@ export async function libraryPairings(
   const grapes = (grapeRows?.results ?? []) as (Pick<
     GrapeRow,
     "acidity" | "body" | "color" | "id" | "tannin"
-  > & { name: string })[];
+  > & { name: string; prominence: number | null })[];
   const attributes = (attributeRows?.results ?? []) as {
     grape_id: string;
     kind: string;
@@ -514,11 +514,18 @@ export async function libraryPairings(
     }
   }
   const nameOf = new Map(grapes.map((grape) => [grape.id, grape.name]));
+  const prominenceOf = new Map(grapes.map((grape) => [grape.id, grape.prominence ?? 0]));
   const byName = (left: string, right: string) =>
     nameOf.get(left)!.localeCompare(nameOf.get(right)!, locale);
   return dishFamilyOrder.map((family) => {
     const own = [...(said.get(family) ?? [])].sort(byName);
-    const rules = [...(suggested.get(family) ?? [])].filter((id) => !own.includes(id)).sort(byName);
+    // The rules suggest many: the best-known grapes first.
+    const rules = [...(suggested.get(family) ?? [])]
+      .filter((id) => !own.includes(id))
+      .sort(
+        (left, right) =>
+          (prominenceOf.get(right) ?? 0) - (prominenceOf.get(left) ?? 0) || byName(left, right),
+      );
     return {
       family,
       grapes: [

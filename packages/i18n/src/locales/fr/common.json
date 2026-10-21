@@ -510,7 +510,9 @@
       },
       "pairingSaid": "Selon ses sources, il va avec :",
       "pairingSuggested": "Suggérés par les règles d’accord, d’après son style :",
-      "noPairing": "Aucun cépage de la bibliothèque ne va encore avec."
+      "noPairing": "Aucun cépage de la bibliothèque ne va encore avec.",
+      "showAll": "Voir les {{count}}",
+      "showFewer": "Voir moins"
     },
     "glanceSourceFederalRegister": "Federal Register des États-Unis, la règle créant l’AVA ({{campaign}})",
     "glanceSourceArtea": "Source : ARTEA – Regione Toscana, vendanges {{campaign}} · CC BY 4.0",

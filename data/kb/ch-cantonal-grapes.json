@@ -1,19 +1,29 @@
 {
- "about": "Grape varieties authorised in a Swiss canton's AOC by its own wine law, read where no register lists varieties: the list as the law gives it, each name mapped by hand to the library's grape (a name that could be several — «muscat», «auxerrois», «arvine» — is left out; «riesling-sylvaner» is Müller-Thurgau). Official texts, free to reuse (Swiss Copyright Act, art. 5). scripts/kb/build-appellations.ts checks each quote against the law's text as cached in .kb-cache/ch-law/.",
+ "about": "Grape varieties authorised in a Swiss canton's AOC by its own wine law, read where no register lists varieties: the list as the law gives it, each name mapped by hand to the library's grape (a name that could be several — «muscat», «auxerrois», «arvine» — is left out; «riesling-sylvaner» is Müller-Thurgau, «trousseau» is Bastardo). Official texts, free to reuse (Swiss Copyright Act, art. 5). scripts/kb/build-appellations.ts checks each quote against the law's text as cached in .kb-cache/ch-law/.",
  "laws": {
   "ge-rvv": {
    "cache": "ge-rvv.htm",
    "encoding": "latin1",
    "name": "Règlement sur la vigne et les vins de Genève (RSG M 2 50.05), annexe",
    "sourceUrl": "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+  },
+  "vd-rvv": {
+   "cache": "vd-rvv.txt",
+   "name": "Règlement sur les vins vaudois (RSV 916.125.2), annexe «Cépages admis pour l'appellation d'origine contrôlée» (2018), état au 1er avril 2021",
+   "sourceUrl": "https://www.lexfind.ch/tolv/209199/fr"
+  },
+  "fr-ovv": {
+   "cache": "fr-ovv.txt",
+   "name": "Ordonnance DIAF sur la vigne et le vin (RSF 912.4.111), annexe 1, version du 1er janvier 2024",
+   "sourceUrl": "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
   }
  },
  "regions": {
-  "ch-geneve": {
-   "law": "ge-rvv",
+  "ch-bonvillars": {
+   "law": "vd-rvv",
    "lists": [
     {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
      "grapes": [
       "aligote",
       "chardonnay",
@@ -21,175 +31,33 @@
       "chenin-blanc",
       "gewurztraminer",
       "kerner",
+      "marsanne",
+      "muller-thurgau",
       "pinot-blanc",
       "pinot-gris",
       "riesling",
-      "muller-thurgau",
-      "roussanne",
       "sauvignon-blanc",
       "savagnin",
-      "scheurebe",
       "semillon",
       "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
+      "viognier",
       "ancellotta",
+      "cabernet-dorsa",
       "cabernet-franc",
       "cabernet-sauvignon",
       "dornfelder",
       "gamaret",
       "gamay",
-      "grenache",
       "malbec",
-      "marselan",
       "merlot",
       "pinot-noir",
       "syrah",
-      "zinfandel"
+      "bastardo"
      ]
     }
    ]
   },
-  "ch-coteau-de-chevrens": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-cotes-de-landecy": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-coteau-de-lully": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-coteau-de-choulex": {
+  "ch-chateau-de-choully": {
    "law": "ge-rvv",
    "lists": [
     {
@@ -279,186 +147,6 @@
     }
    ]
   },
-  "ch-coteau-de-bossy": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-coteau-de-la-vigne-blanche": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-coteaux-de-dardagny": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-coteau-de-genthod": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
   "ch-chateau-du-crest": {
    "law": "ge-rvv",
    "lists": [
@@ -504,187 +192,69 @@
     }
    ]
   },
-  "ch-mandement-de-jussy": {
-   "law": "ge-rvv",
+  "ch-cheyres": {
+   "law": "fr-ovv",
    "lists": [
     {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "quote": "La liste des cépages blancs autorisés est la suivante: Aligoté Altesse Amigne Arvine (petite) Auxerrois Bouvier",
      "grapes": [
-      "aligote",
+      "aligote"
+     ]
+    },
+    {
+     "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+     "grapes": [
       "chardonnay",
       "chasselas",
       "chenin-blanc",
+      "elbling",
       "gewurztraminer",
+      "gouais-blanc",
       "kerner",
+      "marsanne",
+      "muller-thurgau",
       "pinot-blanc",
       "pinot-gris",
       "riesling",
-      "muller-thurgau",
-      "roussanne",
       "sauvignon-blanc",
       "savagnin",
-      "scheurebe",
-      "semillon",
+      "semillon"
+     ]
+    },
+    {
+     "quote": "Solaris Souvignier gris Sylvaner Viognier",
+     "grapes": [
       "silvaner",
       "viognier"
      ]
     },
     {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
      "grapes": [
       "ancellotta",
+      "cabernet-dorsa",
       "cabernet-franc",
       "cabernet-sauvignon",
       "dornfelder",
       "gamaret",
       "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-grand-carraz": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
+      "malbec"
      ]
     },
     {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
      "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
       "merlot",
       "pinot-noir",
+      "st-laurent",
       "syrah",
-      "zinfandel"
+      "bastardo",
+      "zweigelt"
      ]
     }
    ]
   },
-  "ch-domaine-de-l-abbaye": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-cotes-de-russin": {
-   "law": "ge-rvv",
-   "lists": [
-    {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
-     "grapes": [
-      "aligote",
-      "chardonnay",
-      "chasselas",
-      "chenin-blanc",
-      "gewurztraminer",
-      "kerner",
-      "pinot-blanc",
-      "pinot-gris",
-      "riesling",
-      "muller-thurgau",
-      "roussanne",
-      "sauvignon-blanc",
-      "savagnin",
-      "scheurebe",
-      "semillon",
-      "silvaner",
-      "viognier"
-     ]
-    },
-    {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
-     "grapes": [
-      "ancellotta",
-      "cabernet-franc",
-      "cabernet-sauvignon",
-      "dornfelder",
-      "gamaret",
-      "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
-      "merlot",
-      "pinot-noir",
-      "syrah",
-      "zinfandel"
-     ]
-    }
-   ]
-  },
-  "ch-coteau-des-baillets": {
+  "ch-coteau-de-bossy": {
    "law": "ge-rvv",
    "lists": [
     {
@@ -774,7 +344,232 @@
     }
    ]
   },
+  "ch-coteau-de-chevrens": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-coteau-de-choulex": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
   "ch-coteau-de-choully": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-coteau-de-genthod": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-coteau-de-la-vigne-blanche": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-coteau-de-lully": {
    "law": "ge-rvv",
    "lists": [
     {
@@ -864,6 +659,96 @@
     }
    ]
   },
+  "ch-coteau-des-baillets": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-coteaux-de-dardagny": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
   "ch-coteaux-de-peney": {
    "law": "ge-rvv",
    "lists": [
@@ -909,7 +794,353 @@
     }
    ]
   },
-  "ch-chateau-de-choully": {
+  "ch-cotes-de-l-orbe": {
+   "law": "vd-rvv",
+   "lists": [
+    {
+     "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "marsanne",
+      "muller-thurgau",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "sauvignon-blanc",
+      "savagnin",
+      "semillon",
+      "silvaner",
+      "viognier",
+      "ancellotta",
+      "cabernet-dorsa",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "malbec",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "bastardo"
+     ]
+    }
+   ]
+  },
+  "ch-cotes-de-landecy": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-cotes-de-russin": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-dezaley-marsens": {
+   "law": "vd-rvv",
+   "lists": [
+    {
+     "quote": "la liste des cépages admis pour l'appellation d'origine contrôlée s'établit comme suit : Cépages blancs Cépages rouges 1. Aligoté 1. Ancellotta 2. Altesse 2. Cabernello 3. Amigne 3. Cabernet Dorsa 4. Arvine (petite) 4. Cabernet franc 5. Auxerrois 5. Cabernet Sauvignon 6. Chardonnay 6. Carminoir 7. Charmont 7. Cornalin 8. Chasselas / Chasselas violet 8. Cornarello 9. Chenin blanc 9. Dakapo 10. Divona 10. Diolinoir 11. Doral 11. Divico 12. Freisamer / Freiburger 12. Dornfelder 13. Gewürztraminer 13. Dunkelfelder 14. Johanniter 14. Galotta 15. Kerner 15. Gamarello 16. Marsanne blanche / Hermitage / Ermitage 16. Gamaret 17. Müller Thurgau 17. Gamay / Plant Robert Robez Robaz 18. Muscat / Muscat Ottonel 18. Garanoir 19. Nobling 19. Humagne rouge 20. Pinot blanc 20. Léon Millot 21. Pinot gris 21. Malbec 22. Riesling 22. Mara 23. Sauvignon blanc 23. Maréchal Foch 24. Sauvignon gris 24. Merello 25. Savagnin blanc 25. Merlot 26. Sémillon 26. Mondeuse 27. Seyval blanc 27. Nerolo 28. Solaris 28. Pinot noir / Servagnin 29. Sylvaner 29. Regent 30. Viognier 30. Syrah 31. Trousseau",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "marsanne",
+      "muller-thurgau",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "sauvignon-blanc",
+      "savagnin",
+      "semillon",
+      "silvaner",
+      "viognier",
+      "ancellotta",
+      "cabernet-dorsa",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "malbec",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "bastardo"
+     ]
+    }
+   ]
+  },
+  "ch-domaine-de-l-abbaye": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-geneve": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-grand-carraz": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-la-feuillee": {
+   "law": "ge-rvv",
+   "lists": [
+    {
+     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "grapes": [
+      "aligote",
+      "chardonnay",
+      "chasselas",
+      "chenin-blanc",
+      "gewurztraminer",
+      "kerner",
+      "pinot-blanc",
+      "pinot-gris",
+      "riesling",
+      "muller-thurgau",
+      "roussanne",
+      "sauvignon-blanc",
+      "savagnin",
+      "scheurebe",
+      "semillon",
+      "silvaner",
+      "viognier"
+     ]
+    },
+    {
+     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "grapes": [
+      "ancellotta",
+      "cabernet-franc",
+      "cabernet-sauvignon",
+      "dornfelder",
+      "gamaret",
+      "gamay",
+      "grenache",
+      "malbec",
+      "marselan",
+      "merlot",
+      "pinot-noir",
+      "syrah",
+      "zinfandel"
+     ]
+    }
+   ]
+  },
+  "ch-mandement-de-jussy": {
    "law": "ge-rvv",
    "lists": [
     {
@@ -999,47 +1230,64 @@
     }
    ]
   },
-  "ch-la-feuillee": {
-   "law": "ge-rvv",
+  "ch-vully": {
+   "law": "fr-ovv",
    "lists": [
     {
-     "quote": "Liste des cépages européens blancs autorisés en AOC 1° aligoté; 2° altesse; 3° arvine; 4° auxerrois; 5° chardonnay; 6° charmont; 7° chasselas; 8° chenin; 9° doral; 10° findling; 11° gewürtzraminer; 12° kerner; 13° mondeuse blanche; 14° muscat; 15° pinot blanc; 16° pinot gris; 17° riesling; 18° riesling-sylvaner; 19° roussanne; 20° sauvignon blanc; 21° sauvignon gris; 22° savagnin blanc; 23° scheurebe; 24° sémillon; 25° sylvaner; 26° viognier.",
+     "quote": "La liste des cépages blancs autorisés est la suivante: Aligoté Altesse Amigne Arvine (petite) Auxerrois Bouvier",
      "grapes": [
-      "aligote",
+      "aligote"
+     ]
+    },
+    {
+     "quote": "Cabernet blanc Chardonnay Charmont Chasselas Completer Chenin blanc Divona Doral Elbling Floreal Freiburger / Freisamer Gewürztraminer Gouais Johanniter Kerner Marsanne blanche Müller Thurgau / Riesling-Sylvaner Muscaris Muscat Nobling Pinot Blanc Pinot Gris Räuschling Rèze Riesling Sauvignac Sauvignon blanc Sauvignon Gris Sauvignon Soyhières Savagnin blanc Sémillon Seyval blanc",
+     "grapes": [
       "chardonnay",
       "chasselas",
       "chenin-blanc",
+      "elbling",
       "gewurztraminer",
+      "gouais-blanc",
       "kerner",
+      "marsanne",
+      "muller-thurgau",
       "pinot-blanc",
       "pinot-gris",
       "riesling",
-      "muller-thurgau",
-      "roussanne",
       "sauvignon-blanc",
       "savagnin",
-      "scheurebe",
-      "semillon",
+      "semillon"
+     ]
+    },
+    {
+     "quote": "Solaris Souvignier gris Sylvaner Viognier",
+     "grapes": [
       "silvaner",
       "viognier"
      ]
     },
     {
-     "quote": "Liste des cépages européens rouges autorisés en AOC 1° ancellotta; 2° cabernet franc; 3° cabernet sauvignon; 4° carminoir; 5° cornalin; 6° dakapo; 7° diolinoir; 8° dornfelder; 9° dunkelfelder; 10° galotta; 11° gamaret; 12° gamay; 13° garanoir; 14° grenache; 15° malbec; 16° mara; 17° marselan; 18° merlot; 19° mondeuse; 20° pinot noir; 21° syrah; 22° zinfandel.",
+     "quote": "La liste des cépages rouges autorisés est la suivante: Ancellotta Cabaret noir Cabernello Cabernet Cortis Cabernet Dorsa Cabernet franc Cabernet Jura Cabernet Noir Cabernet-Sauvignon Cabertin Carminoir Cornalin Cornarello Dakapo Diolinoir Divico Dornfelder Dunkelfelder Galotta Gamarello Gamaret Gamay Garanoir Humagne rouge Léon Millot Malbec",
      "grapes": [
       "ancellotta",
+      "cabernet-dorsa",
       "cabernet-franc",
       "cabernet-sauvignon",
       "dornfelder",
       "gamaret",
       "gamay",
-      "grenache",
-      "malbec",
-      "marselan",
+      "malbec"
+     ]
+    },
+    {
+     "quote": "Mara Maréchal Foch Merello Merlot Mondeuse Nerolo Pinotin Pinot Noir Regent Saint-Laurent Satin noir Siramé Syrah Trousseau Zweigelt",
+     "grapes": [
       "merlot",
       "pinot-noir",
+      "st-laurent",
       "syrah",
-      "zinfandel"
+      "bastardo",
+      "zweigelt"
      ]
     }
    ]

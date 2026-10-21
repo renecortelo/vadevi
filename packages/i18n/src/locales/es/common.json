@@ -510,7 +510,9 @@
       },
       "pairingSaid": "Según sus fuentes, va con esto:",
       "pairingSuggested": "Sugeridas por las reglas de maridaje, por su estilo:",
-      "noPairing": "Ninguna uva de la biblioteca va con esto todavía."
+      "noPairing": "Ninguna uva de la biblioteca va con esto todavía.",
+      "showAll": "Ver las {{count}}",
+      "showFewer": "Ver menos"
     },
     "glanceSourceFederalRegister": "Federal Register de EE. UU., la norma que creó la AVA ({{campaign}})",
     "glanceSourceArtea": "Fuente: ARTEA – Regione Toscana, vendimia {{campaign}} · CC BY 4.0",

@@ -82,6 +82,13 @@ test("the aroma and colour wheels narrow to one aroma or one colour", async ({ p
     page.getByText("Sugeridas por las reglas de maridaje, por su estilo:"),
   ).toBeVisible();
   await expect(page.locator(".wheel-choice .library-chips a").first()).toBeVisible();
+  // The rules suggest many: twelve at first, the best known, and the rest on request.
+  const suggested = page.locator(".wheel-choice > div").last().locator(".library-chips li");
+  await expect(suggested).toHaveCount(12);
+  await page.getByRole("button", { name: /^Ver las \d+$/ }).click();
+  await expect.poll(() => suggested.count()).toBeGreaterThan(12);
+  await page.getByRole("button", { name: "Ver menos" }).click();
+  await expect(suggested).toHaveCount(12);
   await page.screenshot({ fullPage: true, path: test.info().outputPath("wheel-pairings.png") });
 
   // The wheels are a tab of the library's page, like the grapes: the page

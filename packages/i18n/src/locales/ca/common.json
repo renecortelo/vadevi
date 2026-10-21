@@ -510,7 +510,9 @@
       },
       "pairingSaid": "Segons les seves fonts, hi va bé:",
       "pairingSuggested": "Suggerits per les regles de maridatge, pel seu estil:",
-      "noPairing": "Cap raïm de la biblioteca no hi va encara."
+      "noPairing": "Cap raïm de la biblioteca no hi va encara.",
+      "showAll": "Veure-les totes ({{count}})",
+      "showFewer": "Veure'n menys"
     },
     "glanceSourceFederalRegister": "Federal Register dels EUA, la norma que va crear l’AVA ({{campaign}})",
     "glanceSourceArtea": "Font: ARTEA – Regione Toscana, verema {{campaign}} · CC BY 4.0",

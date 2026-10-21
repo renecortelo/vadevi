@@ -510,7 +510,9 @@
       },
       "pairingSaid": "Volgens zijn bronnen past het bij:",
       "pairingSuggested": "Voorgesteld door de combinatieregels, op basis van zijn stijl:",
-      "noPairing": "Nog geen druif van de bibliotheek past erbij."
+      "noPairing": "Nog geen druif van de bibliotheek past erbij.",
+      "showAll": "Alle {{count}} tonen",
+      "showFewer": "Minder tonen"
     },
     "glanceSourceFederalRegister": "Amerikaanse Federal Register, de regel die de AVA instelde ({{campaign}})",
     "glanceSourceArtea": "Bron: ARTEA – Regione Toscana, oogst {{campaign}} · CC BY 4.0",
