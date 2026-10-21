@@ -28,6 +28,9 @@ test.describe("correcting a wine", () => {
       .fill("Vinya Editable");
     await page.getByRole("button", { name: /review/i }).click();
     await page.getByRole("button", { name: /^confirm/i }).click();
+    // Saved and synced before leaving the page: navigating at once could cut
+    // the save short when the machine is busy.
+    await expect(page.getByText("It has synced exactly once.")).toBeVisible({ timeout: 30_000 });
 
     await page.goto("/memory");
     await page.waitForLoadState("networkidle");
