@@ -254,7 +254,8 @@ for (const entry of entries) {
     const parts = swiss[entry.id];
     if (parts === undefined) continue;
     chosen = inCountry.filter((row) => parts.includes(row.path[1] ?? ""));
-    unit = parts.join(" + ");
+    // The canton by its name, with the table's rows: «Vaud (VD)».
+    unit = `${entry.name} (${parts.join(" + ")})`;
   } else if (entry.countryCode === "AR") {
     // By the province and department the INV gives the name, never by the
     // name alone: Junín is in three provinces, 25 de Mayo in two.
@@ -317,7 +318,8 @@ for (const entry of entries) {
       .map(([grapeId, { ha, prime }]) => ({ grapeId, ha: round(ha), prime })),
     area: !grapesOnly.has(entry.countryCode),
     totalHa: round(total),
-    unit: `${unit}, ${country}`,
+    // South Africa's units said for what they are.
+    unit: `${unit}${grapesOnly.has(entry.countryCode) ? " (SAWIS statistical region)" : ""}, ${country}`,
     year: [...years][0]!,
   };
 }

@@ -372488,17 +372488,17 @@
     "grapes": [
       {
         "grapeId": "sultana",
-        "quote": "Bearing area, Northern Cape, South Africa, 2023: Sultaniye 2434.7 ha of 4840.2 ha",
+        "quote": "Bearing area, Northern Cape (SAWIS statistical region), South Africa, 2023: Sultaniye 2434.7 ha of 4840.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "colombard",
-        "quote": "Bearing area, Northern Cape, South Africa, 2023: Colombard 1033.5 ha of 4840.2 ha",
+        "quote": "Bearing area, Northern Cape (SAWIS statistical region), South Africa, 2023: Colombard 1033.5 ha of 4840.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Northern Cape, South Africa, 2023: Chenin Blanc 706.2 ha of 4840.2 ha",
+        "quote": "Bearing area, Northern Cape (SAWIS statistical region), South Africa, 2023: Chenin Blanc 706.2 ha of 4840.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -373034,47 +373034,47 @@
     "grapes": [
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Sauvignon Blanc 757.2 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 757.2 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Chardonnay 378 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Chardonnay 378 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Pinot Noir 358.6 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Pinot Noir 358.6 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Syrah 319.7 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Syrah 319.7 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Cabernet Sauvignon 158.1 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 158.1 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Merlot 142 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Merlot 142 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Chenin Blanc 86.5 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Chenin Blanc 86.5 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "semillon",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Sémillon 72.3 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Sémillon 72.3 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Cape South Coast, South Africa, 2023: Pinotage 59.2 ha of 2646.3 ha",
+        "quote": "Bearing area, Cape South Coast (SAWIS statistical region), South Africa, 2023: Pinotage 59.2 ha of 2646.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -373328,52 +373328,52 @@
     "grapes": [
       {
         "grapeId": "colombard",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Colombard 686.3 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Colombard 686.3 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Chenin Blanc 437.3 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Chenin Blanc 437.3 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muscat-of-alexandria",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Muscat of Alexandria 92.5 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Muscat of Alexandria 92.5 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Syrah 77.5 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Syrah 77.5 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Sauvignon Blanc 75.9 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 75.9 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Chardonnay 68 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Chardonnay 68 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "ruby-cabernet",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Ruby Cabernet 66.6 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Ruby Cabernet 66.6 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muscat-blanc-a-petits-grains",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Muscat Blanc à Petits Grains 56.4 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Muscat Blanc à Petits Grains 56.4 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Merlot 50.5 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Merlot 50.5 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Klein Karoo, South Africa, 2023: Cabernet Sauvignon 45.1 ha of 2001.6 ha",
+        "quote": "Bearing area, Klein Karoo (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 45.1 ha of 2001.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -373488,47 +373488,47 @@
     "grapes": [
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Chenin Blanc 2496.1 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Chenin Blanc 2496.1 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "colombard",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Colombard 2231.8 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Colombard 2231.8 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Sauvignon Blanc 688.7 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 688.7 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Pinotage 546.2 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Pinotage 546.2 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Syrah 462 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Syrah 462 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "ruby-cabernet",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Ruby Cabernet 314.6 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Ruby Cabernet 314.6 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Cabernet Sauvignon 300.2 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 300.2 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muscat-of-alexandria",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Muscat of Alexandria 269.8 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Muscat of Alexandria 269.8 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Olifants River, South Africa, 2023: Merlot 195.6 ha of 8522.6 ha",
+        "quote": "Bearing area, Olifants River (SAWIS statistical region), South Africa, 2023: Merlot 195.6 ha of 8522.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -374366,37 +374366,37 @@
     "grapes": [
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Cape Town, South Africa, 2023: Sauvignon Blanc 943.7 ha of 2578 ha",
+        "quote": "Bearing area, Cape Town (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 943.7 ha of 2578 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Cape Town, South Africa, 2023: Cabernet Sauvignon 396.9 ha of 2578 ha",
+        "quote": "Bearing area, Cape Town (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 396.9 ha of 2578 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Cape Town, South Africa, 2023: Merlot 268 ha of 2578 ha",
+        "quote": "Bearing area, Cape Town (SAWIS statistical region), South Africa, 2023: Merlot 268 ha of 2578 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Cape Town, South Africa, 2023: Syrah 261.5 ha of 2578 ha",
+        "quote": "Bearing area, Cape Town (SAWIS statistical region), South Africa, 2023: Syrah 261.5 ha of 2578 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Cape Town, South Africa, 2023: Chardonnay 168.1 ha of 2578 ha",
+        "quote": "Bearing area, Cape Town (SAWIS statistical region), South Africa, 2023: Chardonnay 168.1 ha of 2578 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Cape Town, South Africa, 2023: Pinotage 151.9 ha of 2578 ha",
+        "quote": "Bearing area, Cape Town (SAWIS statistical region), South Africa, 2023: Pinotage 151.9 ha of 2578 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Cape Town, South Africa, 2023: Chenin Blanc 106.3 ha of 2578 ha",
+        "quote": "Bearing area, Cape Town (SAWIS statistical region), South Africa, 2023: Chenin Blanc 106.3 ha of 2578 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -374773,47 +374773,47 @@
     "grapes": [
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Chenin Blanc 2668.4 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Chenin Blanc 2668.4 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Syrah 2115 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Syrah 2115 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Cabernet Sauvignon 2061.7 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 2061.7 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Pinotage 1296 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Pinotage 1296 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Chardonnay 1190.6 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Chardonnay 1190.6 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Merlot 953.3 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Merlot 953.3 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Sauvignon Blanc 881.9 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 881.9 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cinsaut",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Cinsaut 565.9 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Cinsaut 565.9 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "colombard",
-        "quote": "Bearing area, Paarl, South Africa, 2023: Colombard 308 ha of 14248 ha",
+        "quote": "Bearing area, Paarl (SAWIS statistical region), South Africa, 2023: Colombard 308 ha of 14248 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -374930,47 +374930,47 @@
     "grapes": [
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Cabernet Sauvignon 2351.1 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 2351.1 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Sauvignon Blanc 1548.3 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 1548.3 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Merlot 1436.1 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Merlot 1436.1 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Syrah 1414.7 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Syrah 1414.7 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Chenin Blanc 1270.2 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Chenin Blanc 1270.2 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Pinotage 1021.8 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Pinotage 1021.8 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Chardonnay 960.9 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Chardonnay 960.9 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-franc",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Cabernet Franc 349.8 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Cabernet Franc 349.8 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, Stellenbosch, South Africa, 2023: Pinot Noir 243.1 ha of 11815.4 ha",
+        "quote": "Bearing area, Stellenbosch (SAWIS statistical region), South Africa, 2023: Pinot Noir 243.1 ha of 11815.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -375087,42 +375087,42 @@
       },
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Chenin Blanc 2439 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Chenin Blanc 2439 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Syrah 1959.1 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Syrah 1959.1 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Cabernet Sauvignon 1572.8 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 1572.8 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Pinotage 1337.2 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Pinotage 1337.2 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Sauvignon Blanc 1093.8 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 1093.8 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Merlot 696.6 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Merlot 696.6 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Chardonnay 666.2 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Chardonnay 666.2 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cinsaut",
-        "quote": "Bearing area, Swartland, South Africa, 2023: Cinsaut 282.3 ha of 12177.7 ha",
+        "quote": "Bearing area, Swartland (SAWIS statistical region), South Africa, 2023: Cinsaut 282.3 ha of 12177.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -375456,57 +375456,57 @@
       },
       {
         "grapeId": "colombard",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Colombard 1757.6 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Colombard 1757.6 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Sauvignon Blanc 1557.2 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 1557.2 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Pinotage 910.6 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Pinotage 910.6 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Chardonnay 801.6 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Chardonnay 801.6 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Syrah 721.1 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Syrah 721.1 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Merlot 636.3 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Merlot 636.3 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Cabernet Sauvignon 610.9 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 610.9 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muscat-of-alexandria",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Muscat of Alexandria 545.6 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Muscat of Alexandria 545.6 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "ruby-cabernet",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Ruby Cabernet 524.9 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Ruby Cabernet 524.9 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cinsaut",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Cinsaut 515.8 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Cinsaut 515.8 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "semillon",
-        "quote": "Bearing area, Breedekloof, South Africa, 2023: Sémillon 343 ha of 12659 ha",
+        "quote": "Bearing area, Breedekloof (SAWIS statistical region), South Africa, 2023: Sémillon 343 ha of 12659 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -375630,47 +375630,47 @@
       },
       {
         "grapeId": "colombard",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Colombard 1824.9 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Colombard 1824.9 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Sauvignon Blanc 1689.6 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 1689.6 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Chardonnay 1674.3 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Chardonnay 1674.3 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Chenin Blanc 1512.8 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Chenin Blanc 1512.8 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Cabernet Sauvignon 1269.2 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 1269.2 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Syrah 926.8 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Syrah 926.8 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Pinotage 779 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Pinotage 779 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Merlot 574.2 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Merlot 574.2 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muscat-blanc-a-petits-grains",
-        "quote": "Bearing area, Robertson, South Africa, 2023: Muscat Blanc à Petits Grains 409.4 ha of 12776.4 ha",
+        "quote": "Bearing area, Robertson (SAWIS statistical region), South Africa, 2023: Muscat Blanc à Petits Grains 409.4 ha of 12776.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -375781,52 +375781,52 @@
     "grapes": [
       {
         "grapeId": "chenin-blanc",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Chenin Blanc 1733.7 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Chenin Blanc 1733.7 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "colombard",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Colombard 1048.7 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Colombard 1048.7 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Sauvignon Blanc 748.8 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Sauvignon Blanc 748.8 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Chardonnay 468.8 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Chardonnay 468.8 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinotage",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Pinotage 415.7 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Pinotage 415.7 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Syrah 404.1 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Syrah 404.1 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-sauvignon",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Cabernet Sauvignon 250 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Cabernet Sauvignon 250 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Merlot 204.8 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Merlot 204.8 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "ruby-cabernet",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Ruby Cabernet 167.6 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Ruby Cabernet 167.6 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muscat-of-alexandria",
-        "quote": "Bearing area, Worcester, South Africa, 2023: Muscat of Alexandria 131.2 ha of 6518.2 ha",
+        "quote": "Bearing area, Worcester (SAWIS statistical region), South Africa, 2023: Muscat of Alexandria 131.2 ha of 6518.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -412685,27 +412685,27 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, AG, Switzerland, 2022: Pinot Noir 192.4 ha of 383.1 ha",
+        "quote": "Bearing area, Aargau (AG), Switzerland, 2022: Pinot Noir 192.4 ha of 383.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, AG, Switzerland, 2022: Müller-Thurgau 67.6 ha of 383.1 ha",
+        "quote": "Bearing area, Aargau (AG), Switzerland, 2022: Müller-Thurgau 67.6 ha of 383.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, AG, Switzerland, 2022: Sauvignon Blanc 17.5 ha of 383.1 ha",
+        "quote": "Bearing area, Aargau (AG), Switzerland, 2022: Sauvignon Blanc 17.5 ha of 383.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, AG, Switzerland, 2022: Chardonnay 9.4 ha of 383.1 ha",
+        "quote": "Bearing area, Aargau (AG), Switzerland, 2022: Chardonnay 9.4 ha of 383.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, AG, Switzerland, 2022: Pinot Gris 7.8 ha of 383.1 ha",
+        "quote": "Bearing area, Aargau (AG), Switzerland, 2022: Pinot Gris 7.8 ha of 383.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -412767,7 +412767,7 @@
       "planted": {
         "amount": 383.1,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, AG, Switzerland, 2022 (ha): 383.1",
+        "quote": "Bearing area, all varieties, Aargau (AG), Switzerland, 2022 (ha): 383.1",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -412781,7 +412781,7 @@
     "grapes": [
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, AI, Switzerland, 2022: Müller-Thurgau 0.6 ha of 0.7 ha",
+        "quote": "Bearing area, Appenzell Innerrhoden (AI), Switzerland, 2022: Müller-Thurgau 0.6 ha of 0.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -412843,7 +412843,7 @@
       "planted": {
         "amount": 0.7,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, AI, Switzerland, 2022 (ha): 0.7",
+        "quote": "Bearing area, all varieties, Appenzell Innerrhoden (AI), Switzerland, 2022 (ha): 0.7",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -412857,27 +412857,27 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, AR, Switzerland, 2022: Pinot Noir 1.4 ha of 5.1 ha",
+        "quote": "Bearing area, Appenzell Ausserrhoden (AR), Switzerland, 2022: Pinot Noir 1.4 ha of 5.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, AR, Switzerland, 2022: Müller-Thurgau 0.9 ha of 5.1 ha",
+        "quote": "Bearing area, Appenzell Ausserrhoden (AR), Switzerland, 2022: Müller-Thurgau 0.9 ha of 5.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "malbec",
-        "quote": "Bearing area, AR, Switzerland, 2022: Côt 0.3 ha of 5.1 ha",
+        "quote": "Bearing area, Appenzell Ausserrhoden (AR), Switzerland, 2022: Côt 0.3 ha of 5.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "kerner",
-        "quote": "Bearing area, AR, Switzerland, 2022: Kerner 0.1 ha of 5.1 ha",
+        "quote": "Bearing area, Appenzell Ausserrhoden (AR), Switzerland, 2022: Kerner 0.1 ha of 5.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, AR, Switzerland, 2022: Merlot 0.1 ha of 5.1 ha",
+        "quote": "Bearing area, Appenzell Ausserrhoden (AR), Switzerland, 2022: Merlot 0.1 ha of 5.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -412939,7 +412939,7 @@
       "planted": {
         "amount": 5.1,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, AR, Switzerland, 2022 (ha): 5.1",
+        "quote": "Bearing area, all varieties, Appenzell Ausserrhoden (AR), Switzerland, 2022 (ha): 5.1",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -412953,32 +412953,32 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland, 2022: Pinot Noir 88.9 ha of 247.8 ha",
+        "quote": "Bearing area, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022: Pinot Noir 88.9 ha of 247.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chasselas",
-        "quote": "Bearing area, BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland, 2022: Chasselas 66.3 ha of 247.8 ha",
+        "quote": "Bearing area, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022: Chasselas 66.3 ha of 247.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland, 2022: Pinot Gris 13.4 ha of 247.8 ha",
+        "quote": "Bearing area, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022: Pinot Gris 13.4 ha of 247.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland, 2022: Chardonnay 11.6 ha of 247.8 ha",
+        "quote": "Bearing area, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022: Chardonnay 11.6 ha of 247.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland, 2022: Sauvignon Blanc 11.4 ha of 247.8 ha",
+        "quote": "Bearing area, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022: Sauvignon Blanc 11.4 ha of 247.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland, 2022: Müller-Thurgau 8.5 ha of 247.8 ha",
+        "quote": "Bearing area, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022: Müller-Thurgau 8.5 ha of 247.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413045,7 +413045,7 @@
       "planted": {
         "amount": 247.8,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland, 2022 (ha): 247.8",
+        "quote": "Bearing area, all varieties, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022 (ha): 247.8",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413059,37 +413059,37 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, BL, Switzerland, 2022: Pinot Noir 54.9 ha of 113.8 ha",
+        "quote": "Bearing area, Basel-Landschaft (BL), Switzerland, 2022: Pinot Noir 54.9 ha of 113.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, BL, Switzerland, 2022: Müller-Thurgau 11.7 ha of 113.8 ha",
+        "quote": "Bearing area, Basel-Landschaft (BL), Switzerland, 2022: Müller-Thurgau 11.7 ha of 113.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "kerner",
-        "quote": "Bearing area, BL, Switzerland, 2022: Kerner 4.8 ha of 113.8 ha",
+        "quote": "Bearing area, Basel-Landschaft (BL), Switzerland, 2022: Kerner 4.8 ha of 113.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, BL, Switzerland, 2022: Sauvignon Blanc 4.2 ha of 113.8 ha",
+        "quote": "Bearing area, Basel-Landschaft (BL), Switzerland, 2022: Sauvignon Blanc 4.2 ha of 113.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, BL, Switzerland, 2022: Chardonnay 3.2 ha of 113.8 ha",
+        "quote": "Bearing area, Basel-Landschaft (BL), Switzerland, 2022: Chardonnay 3.2 ha of 113.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, BL, Switzerland, 2022: Pinot Gris 2.8 ha of 113.8 ha",
+        "quote": "Bearing area, Basel-Landschaft (BL), Switzerland, 2022: Pinot Gris 2.8 ha of 113.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chasselas",
-        "quote": "Bearing area, BL, Switzerland, 2022: Chasselas 2.3 ha of 113.8 ha",
+        "quote": "Bearing area, Basel-Landschaft (BL), Switzerland, 2022: Chasselas 2.3 ha of 113.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413151,7 +413151,7 @@
       "planted": {
         "amount": 113.8,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, BL, Switzerland, 2022 (ha): 113.8",
+        "quote": "Bearing area, all varieties, Basel-Landschaft (BL), Switzerland, 2022 (ha): 113.8",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413165,32 +413165,32 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, BS, Switzerland, 2022: Pinot Noir 2.5 ha of 4.8 ha",
+        "quote": "Bearing area, Basel-Stadt (BS), Switzerland, 2022: Pinot Noir 2.5 ha of 4.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, BS, Switzerland, 2022: Müller-Thurgau 0.6 ha of 4.8 ha",
+        "quote": "Bearing area, Basel-Stadt (BS), Switzerland, 2022: Müller-Thurgau 0.6 ha of 4.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-blanc",
-        "quote": "Bearing area, BS, Switzerland, 2022: Pinot Blanc 0.5 ha of 4.8 ha",
+        "quote": "Bearing area, Basel-Stadt (BS), Switzerland, 2022: Pinot Blanc 0.5 ha of 4.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, BS, Switzerland, 2022: Sauvignon Blanc 0.5 ha of 4.8 ha",
+        "quote": "Bearing area, Basel-Stadt (BS), Switzerland, 2022: Sauvignon Blanc 0.5 ha of 4.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, BS, Switzerland, 2022: Chardonnay 0.3 ha of 4.8 ha",
+        "quote": "Bearing area, Basel-Stadt (BS), Switzerland, 2022: Chardonnay 0.3 ha of 4.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chasselas",
-        "quote": "Bearing area, BS, Switzerland, 2022: Chasselas 0.2 ha of 4.8 ha",
+        "quote": "Bearing area, Basel-Stadt (BS), Switzerland, 2022: Chasselas 0.2 ha of 4.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413252,7 +413252,7 @@
       "planted": {
         "amount": 4.8,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, BS, Switzerland, 2022 (ha): 4.8",
+        "quote": "Bearing area, all varieties, Basel-Stadt (BS), Switzerland, 2022 (ha): 4.8",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413473,7 +413473,7 @@
       "planted": {
         "amount": 1348.5,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, GE, Switzerland, 2022 (ha): 1348.5",
+        "quote": "Bearing area, all varieties, Genève (GE), Switzerland, 2022 (ha): 1348.5",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413487,22 +413487,22 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, GL, Switzerland, 2022: Pinot Noir 1.1 ha of 1.9 ha",
+        "quote": "Bearing area, Glarus (GL), Switzerland, 2022: Pinot Noir 1.1 ha of 1.9 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, GL, Switzerland, 2022: Müller-Thurgau 0.4 ha of 1.9 ha",
+        "quote": "Bearing area, Glarus (GL), Switzerland, 2022: Müller-Thurgau 0.4 ha of 1.9 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, GL, Switzerland, 2022: Chardonnay 0.2 ha of 1.9 ha",
+        "quote": "Bearing area, Glarus (GL), Switzerland, 2022: Chardonnay 0.2 ha of 1.9 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, GL, Switzerland, 2022: Sauvignon Blanc 0.1 ha of 1.9 ha",
+        "quote": "Bearing area, Glarus (GL), Switzerland, 2022: Sauvignon Blanc 0.1 ha of 1.9 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413564,7 +413564,7 @@
       "planted": {
         "amount": 1.9,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, GL, Switzerland, 2022 (ha): 1.9",
+        "quote": "Bearing area, all varieties, Glarus (GL), Switzerland, 2022 (ha): 1.9",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413578,37 +413578,37 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022: Pinot Noir 290.2 ha of 452.2 ha",
+        "quote": "Bearing area, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022: Pinot Noir 290.2 ha of 452.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022: Müller-Thurgau 31.7 ha of 452.2 ha",
+        "quote": "Bearing area, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022: Müller-Thurgau 31.7 ha of 452.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022: Merlot 29.5 ha of 452.2 ha",
+        "quote": "Bearing area, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022: Merlot 29.5 ha of 452.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022: Chardonnay 27.4 ha of 452.2 ha",
+        "quote": "Bearing area, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022: Chardonnay 27.4 ha of 452.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-blanc",
-        "quote": "Bearing area, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022: Pinot Blanc 15.1 ha of 452.2 ha",
+        "quote": "Bearing area, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022: Pinot Blanc 15.1 ha of 452.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022: Sauvignon Blanc 14 ha of 452.2 ha",
+        "quote": "Bearing area, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022: Sauvignon Blanc 14 ha of 452.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022: Pinot Gris 10.7 ha of 452.2 ha",
+        "quote": "Bearing area, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022: Pinot Gris 10.7 ha of 452.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413675,7 +413675,7 @@
       "planted": {
         "amount": 452.2,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, GR Mesolcina + GR übriges Gebiet, Switzerland, 2022 (ha): 452.2",
+        "quote": "Bearing area, all varieties, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022 (ha): 452.2",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413689,17 +413689,17 @@
     "grapes": [
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, JU, Switzerland, 2022: Pinot Gris 1.9 ha of 17.7 ha",
+        "quote": "Bearing area, Jura (JU), Switzerland, 2022: Pinot Gris 1.9 ha of 17.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, JU, Switzerland, 2022: Müller-Thurgau 1.3 ha of 17.7 ha",
+        "quote": "Bearing area, Jura (JU), Switzerland, 2022: Müller-Thurgau 1.3 ha of 17.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, JU, Switzerland, 2022: Pinot Noir 1 ha of 17.7 ha",
+        "quote": "Bearing area, Jura (JU), Switzerland, 2022: Pinot Noir 1 ha of 17.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413761,7 +413761,7 @@
       "planted": {
         "amount": 17.7,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, JU, Switzerland, 2022 (ha): 17.7",
+        "quote": "Bearing area, all varieties, Jura (JU), Switzerland, 2022 (ha): 17.7",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413775,42 +413775,42 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, LU, Switzerland, 2022: Pinot Noir 14.2 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Pinot Noir 14.2 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, LU, Switzerland, 2022: Müller-Thurgau 8.4 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Müller-Thurgau 8.4 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, LU, Switzerland, 2022: Sauvignon Blanc 6.2 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Sauvignon Blanc 6.2 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, LU, Switzerland, 2022: Pinot Gris 4.1 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Pinot Gris 4.1 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "gamaret",
-        "quote": "Bearing area, LU, Switzerland, 2022: Gamaret 3.1 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Gamaret 3.1 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "zweigelt",
-        "quote": "Bearing area, LU, Switzerland, 2022: Zweigelt 2.9 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Zweigelt 2.9 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, LU, Switzerland, 2022: Merlot 2 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Merlot 2 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "riesling",
-        "quote": "Bearing area, LU, Switzerland, 2022: Riesling 2 ha of 78.7 ha",
+        "quote": "Bearing area, Luzern (LU), Switzerland, 2022: Riesling 2 ha of 78.7 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413872,7 +413872,7 @@
       "planted": {
         "amount": 78.7,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, LU, Switzerland, 2022 (ha): 78.7",
+        "quote": "Bearing area, all varieties, Luzern (LU), Switzerland, 2022 (ha): 78.7",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413886,27 +413886,27 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, NE, Switzerland, 2022: Pinot Noir 334.6 ha of 604.8 ha",
+        "quote": "Bearing area, Neuchâtel (NE), Switzerland, 2022: Pinot Noir 334.6 ha of 604.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chasselas",
-        "quote": "Bearing area, NE, Switzerland, 2022: Chasselas 147.7 ha of 604.8 ha",
+        "quote": "Bearing area, Neuchâtel (NE), Switzerland, 2022: Chasselas 147.7 ha of 604.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, NE, Switzerland, 2022: Chardonnay 27.5 ha of 604.8 ha",
+        "quote": "Bearing area, Neuchâtel (NE), Switzerland, 2022: Chardonnay 27.5 ha of 604.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, NE, Switzerland, 2022: Pinot Gris 24 ha of 604.8 ha",
+        "quote": "Bearing area, Neuchâtel (NE), Switzerland, 2022: Pinot Gris 24 ha of 604.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "gamaret",
-        "quote": "Bearing area, NE, Switzerland, 2022: Gamaret 14.1 ha of 604.8 ha",
+        "quote": "Bearing area, Neuchâtel (NE), Switzerland, 2022: Gamaret 14.1 ha of 604.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -413968,7 +413968,7 @@
       "planted": {
         "amount": 604.8,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, NE, Switzerland, 2022 (ha): 604.8",
+        "quote": "Bearing area, all varieties, Neuchâtel (NE), Switzerland, 2022 (ha): 604.8",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -413982,12 +413982,12 @@
     "grapes": [
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, NW, Switzerland, 2022: Müller-Thurgau 0.2 ha of 1.6 ha",
+        "quote": "Bearing area, Nidwalden (NW), Switzerland, 2022: Müller-Thurgau 0.2 ha of 1.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, NW, Switzerland, 2022: Pinot Noir 0.1 ha of 1.6 ha",
+        "quote": "Bearing area, Nidwalden (NW), Switzerland, 2022: Pinot Noir 0.1 ha of 1.6 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414049,7 +414049,7 @@
       "planted": {
         "amount": 1.6,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, NW, Switzerland, 2022 (ha): 1.6",
+        "quote": "Bearing area, all varieties, Nidwalden (NW), Switzerland, 2022 (ha): 1.6",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414119,7 +414119,7 @@
       "planted": {
         "amount": 1.6,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, OW, Switzerland, 2022 (ha): 1.6",
+        "quote": "Bearing area, all varieties, Obwalden (OW), Switzerland, 2022 (ha): 1.6",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414133,22 +414133,22 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, SG, Switzerland, 2022: Pinot Noir 118.2 ha of 213.5 ha",
+        "quote": "Bearing area, St. Gallen (SG), Switzerland, 2022: Pinot Noir 118.2 ha of 213.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, SG, Switzerland, 2022: Müller-Thurgau 19.8 ha of 213.5 ha",
+        "quote": "Bearing area, St. Gallen (SG), Switzerland, 2022: Müller-Thurgau 19.8 ha of 213.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, SG, Switzerland, 2022: Chardonnay 12.4 ha of 213.5 ha",
+        "quote": "Bearing area, St. Gallen (SG), Switzerland, 2022: Chardonnay 12.4 ha of 213.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, SG, Switzerland, 2022: Sauvignon Blanc 9.2 ha of 213.5 ha",
+        "quote": "Bearing area, St. Gallen (SG), Switzerland, 2022: Sauvignon Blanc 9.2 ha of 213.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414210,7 +414210,7 @@
       "planted": {
         "amount": 213.5,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, SG, Switzerland, 2022 (ha): 213.5",
+        "quote": "Bearing area, all varieties, St. Gallen (SG), Switzerland, 2022 (ha): 213.5",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414224,27 +414224,27 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, SH, Switzerland, 2022: Pinot Noir 273.8 ha of 467.4 ha",
+        "quote": "Bearing area, Schaffhausen (SH), Switzerland, 2022: Pinot Noir 273.8 ha of 467.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, SH, Switzerland, 2022: Müller-Thurgau 69.2 ha of 467.4 ha",
+        "quote": "Bearing area, Schaffhausen (SH), Switzerland, 2022: Müller-Thurgau 69.2 ha of 467.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, SH, Switzerland, 2022: Chardonnay 13.1 ha of 467.4 ha",
+        "quote": "Bearing area, Schaffhausen (SH), Switzerland, 2022: Chardonnay 13.1 ha of 467.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, SH, Switzerland, 2022: Sauvignon Blanc 11.2 ha of 467.4 ha",
+        "quote": "Bearing area, Schaffhausen (SH), Switzerland, 2022: Sauvignon Blanc 11.2 ha of 467.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, SH, Switzerland, 2022: Pinot Gris 10.8 ha of 467.4 ha",
+        "quote": "Bearing area, Schaffhausen (SH), Switzerland, 2022: Pinot Gris 10.8 ha of 467.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414346,7 +414346,7 @@
       "planted": {
         "amount": 467.4,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, SH, Switzerland, 2022 (ha): 467.4",
+        "quote": "Bearing area, all varieties, Schaffhausen (SH), Switzerland, 2022 (ha): 467.4",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414360,27 +414360,27 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, SO, Switzerland, 2022: Pinot Noir 2.9 ha of 11.4 ha",
+        "quote": "Bearing area, Solothurn (SO), Switzerland, 2022: Pinot Noir 2.9 ha of 11.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, SO, Switzerland, 2022: Müller-Thurgau 1.6 ha of 11.4 ha",
+        "quote": "Bearing area, Solothurn (SO), Switzerland, 2022: Müller-Thurgau 1.6 ha of 11.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, SO, Switzerland, 2022: Pinot Gris 0.8 ha of 11.4 ha",
+        "quote": "Bearing area, Solothurn (SO), Switzerland, 2022: Pinot Gris 0.8 ha of 11.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, SO, Switzerland, 2022: Merlot 0.4 ha of 11.4 ha",
+        "quote": "Bearing area, Solothurn (SO), Switzerland, 2022: Merlot 0.4 ha of 11.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "malbec",
-        "quote": "Bearing area, SO, Switzerland, 2022: Côt 0.3 ha of 11.4 ha",
+        "quote": "Bearing area, Solothurn (SO), Switzerland, 2022: Côt 0.3 ha of 11.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414442,7 +414442,7 @@
       "planted": {
         "amount": 11.4,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, SO, Switzerland, 2022 (ha): 11.4",
+        "quote": "Bearing area, all varieties, Solothurn (SO), Switzerland, 2022 (ha): 11.4",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414461,22 +414461,22 @@
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, SZ, Switzerland, 2022: Pinot Noir 12 ha of 36.3 ha",
+        "quote": "Bearing area, Schwyz (SZ), Switzerland, 2022: Pinot Noir 12 ha of 36.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, SZ, Switzerland, 2022: Müller-Thurgau 7.7 ha of 36.3 ha",
+        "quote": "Bearing area, Schwyz (SZ), Switzerland, 2022: Müller-Thurgau 7.7 ha of 36.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, SZ, Switzerland, 2022: Chardonnay 2.5 ha of 36.3 ha",
+        "quote": "Bearing area, Schwyz (SZ), Switzerland, 2022: Chardonnay 2.5 ha of 36.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "gamaret",
-        "quote": "Bearing area, SZ, Switzerland, 2022: Gamaret 0.8 ha of 36.3 ha",
+        "quote": "Bearing area, Schwyz (SZ), Switzerland, 2022: Gamaret 0.8 ha of 36.3 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414538,7 +414538,7 @@
       "planted": {
         "amount": 36.3,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, SZ, Switzerland, 2022 (ha): 36.3",
+        "quote": "Bearing area, all varieties, Schwyz (SZ), Switzerland, 2022 (ha): 36.3",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414552,22 +414552,22 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, TG, Switzerland, 2022: Pinot Noir 109.3 ha of 236.2 ha",
+        "quote": "Bearing area, Thurgau (TG), Switzerland, 2022: Pinot Noir 109.3 ha of 236.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, TG, Switzerland, 2022: Müller-Thurgau 50.3 ha of 236.2 ha",
+        "quote": "Bearing area, Thurgau (TG), Switzerland, 2022: Müller-Thurgau 50.3 ha of 236.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, TG, Switzerland, 2022: Sauvignon Blanc 5.8 ha of 236.2 ha",
+        "quote": "Bearing area, Thurgau (TG), Switzerland, 2022: Sauvignon Blanc 5.8 ha of 236.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, TG, Switzerland, 2022: Pinot Gris 5.6 ha of 236.2 ha",
+        "quote": "Bearing area, Thurgau (TG), Switzerland, 2022: Pinot Gris 5.6 ha of 236.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414629,7 +414629,7 @@
       "planted": {
         "amount": 236.2,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, TG, Switzerland, 2022 (ha): 236.2",
+        "quote": "Bearing area, all varieties, Thurgau (TG), Switzerland, 2022 (ha): 236.2",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414643,42 +414643,42 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, UR, Switzerland, 2022: Pinot Noir 1.4 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Pinot Noir 1.4 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, UR, Switzerland, 2022: Pinot Gris 0.4 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Pinot Gris 0.4 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-dorsa",
-        "quote": "Bearing area, UR, Switzerland, 2022: Cabernet Dorsa 0.2 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Cabernet Dorsa 0.2 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, UR, Switzerland, 2022: Merlot 0.2 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Merlot 0.2 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "zweigelt",
-        "quote": "Bearing area, UR, Switzerland, 2022: Zweigelt 0.2 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Zweigelt 0.2 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, UR, Switzerland, 2022: Müller-Thurgau 0.1 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Müller-Thurgau 0.1 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, UR, Switzerland, 2022: Chardonnay 0.1 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Chardonnay 0.1 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "silvaner",
-        "quote": "Bearing area, UR, Switzerland, 2022: Arvine 0.1 ha of 3.2 ha",
+        "quote": "Bearing area, Uri (UR), Switzerland, 2022: Arvine 0.1 ha of 3.2 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414740,7 +414740,7 @@
       "planted": {
         "amount": 3.2,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, UR, Switzerland, 2022 (ha): 3.2",
+        "quote": "Bearing area, all varieties, Uri (UR), Switzerland, 2022 (ha): 3.2",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414759,27 +414759,27 @@
       },
       {
         "grapeId": "chasselas",
-        "quote": "Bearing area, VD, Switzerland, 2022: Chasselas 2242.8 ha of 3787.4 ha",
+        "quote": "Bearing area, Vaud (VD), Switzerland, 2022: Chasselas 2242.8 ha of 3787.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, VD, Switzerland, 2022: Pinot Noir 483.2 ha of 3787.4 ha",
+        "quote": "Bearing area, Vaud (VD), Switzerland, 2022: Pinot Noir 483.2 ha of 3787.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "gamay",
-        "quote": "Bearing area, VD, Switzerland, 2022: Gamay Noir 328 ha of 3787.4 ha",
+        "quote": "Bearing area, Vaud (VD), Switzerland, 2022: Gamay Noir 328 ha of 3787.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "gamaret",
-        "quote": "Bearing area, VD, Switzerland, 2022: Gamaret 150.8 ha of 3787.4 ha",
+        "quote": "Bearing area, Vaud (VD), Switzerland, 2022: Gamaret 150.8 ha of 3787.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, VD, Switzerland, 2022: Merlot 78.3 ha of 3787.4 ha",
+        "quote": "Bearing area, Vaud (VD), Switzerland, 2022: Merlot 78.3 ha of 3787.4 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -414881,7 +414881,7 @@
       "planted": {
         "amount": 3787.4,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, VD, Switzerland, 2022 (ha): 3787.4",
+        "quote": "Bearing area, all varieties, Vaud (VD), Switzerland, 2022 (ha): 3787.4",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -414910,37 +414910,37 @@
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, VS, Switzerland, 2022: Pinot Noir 1304.7 ha of 4680.5 ha",
+        "quote": "Bearing area, Valais (VS), Switzerland, 2022: Pinot Noir 1304.7 ha of 4680.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chasselas",
-        "quote": "Bearing area, VS, Switzerland, 2022: Chasselas 769.4 ha of 4680.5 ha",
+        "quote": "Bearing area, Valais (VS), Switzerland, 2022: Chasselas 769.4 ha of 4680.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "silvaner",
-        "quote": "Bearing area, VS, Switzerland, 2022: Silvaner 566.1 ha of 4680.5 ha",
+        "quote": "Bearing area, Valais (VS), Switzerland, 2022: Silvaner 566.1 ha of 4680.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "gamay",
-        "quote": "Bearing area, VS, Switzerland, 2022: Gamay Noir 475 ha of 4680.5 ha",
+        "quote": "Bearing area, Valais (VS), Switzerland, 2022: Gamay Noir 475 ha of 4680.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "syrah",
-        "quote": "Bearing area, VS, Switzerland, 2022: Syrah 172.8 ha of 4680.5 ha",
+        "quote": "Bearing area, Valais (VS), Switzerland, 2022: Syrah 172.8 ha of 4680.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, VS, Switzerland, 2022: Merlot 145.1 ha of 4680.5 ha",
+        "quote": "Bearing area, Valais (VS), Switzerland, 2022: Merlot 145.1 ha of 4680.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "gamaret",
-        "quote": "Bearing area, VS, Switzerland, 2022: Gamaret 103.2 ha of 4680.5 ha",
+        "quote": "Bearing area, Valais (VS), Switzerland, 2022: Gamaret 103.2 ha of 4680.5 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -415065,12 +415065,12 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, ZG, Switzerland, 2022: Pinot Noir 0.6 ha of 6.1 ha",
+        "quote": "Bearing area, Zug (ZG), Switzerland, 2022: Pinot Noir 0.6 ha of 6.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, ZG, Switzerland, 2022: Müller-Thurgau 0.3 ha of 6.1 ha",
+        "quote": "Bearing area, Zug (ZG), Switzerland, 2022: Müller-Thurgau 0.3 ha of 6.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -415132,7 +415132,7 @@
       "planted": {
         "amount": 6.1,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, ZG, Switzerland, 2022 (ha): 6.1",
+        "quote": "Bearing area, all varieties, Zug (ZG), Switzerland, 2022 (ha): 6.1",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -415151,27 +415151,27 @@
       },
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, ZH, Switzerland, 2022: Pinot Noir 271.1 ha of 605.1 ha",
+        "quote": "Bearing area, Zürich (ZH), Switzerland, 2022: Pinot Noir 271.1 ha of 605.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, ZH, Switzerland, 2022: Müller-Thurgau 112.4 ha of 605.1 ha",
+        "quote": "Bearing area, Zürich (ZH), Switzerland, 2022: Müller-Thurgau 112.4 ha of 605.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, ZH, Switzerland, 2022: Sauvignon Blanc 19.8 ha of 605.1 ha",
+        "quote": "Bearing area, Zürich (ZH), Switzerland, 2022: Sauvignon Blanc 19.8 ha of 605.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, ZH, Switzerland, 2022: Chardonnay 16.8 ha of 605.1 ha",
+        "quote": "Bearing area, Zürich (ZH), Switzerland, 2022: Chardonnay 16.8 ha of 605.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, ZH, Switzerland, 2022: Pinot Gris 14.5 ha of 605.1 ha",
+        "quote": "Bearing area, Zürich (ZH), Switzerland, 2022: Pinot Gris 14.5 ha of 605.1 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -415233,7 +415233,7 @@
       "planted": {
         "amount": 605.1,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, ZH, Switzerland, 2022 (ha): 605.1",
+        "quote": "Bearing area, all varieties, Zürich (ZH), Switzerland, 2022 (ha): 605.1",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -415252,12 +415252,12 @@
       },
       {
         "grapeId": "merlot",
-        "quote": "Bearing area, TI, Switzerland, 2022: Merlot 891.3 ha of 1163 ha",
+        "quote": "Bearing area, Ticino (TI), Switzerland, 2022: Merlot 891.3 ha of 1163 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, TI, Switzerland, 2022: Chardonnay 47.9 ha of 1163 ha",
+        "quote": "Bearing area, Ticino (TI), Switzerland, 2022: Chardonnay 47.9 ha of 1163 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -415561,27 +415561,27 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, BE Lac de Bienne, Switzerland, 2022: Pinot Noir 81.8 ha of 221.8 ha",
+        "quote": "Bearing area, Bielersee (BE Lac de Bienne), Switzerland, 2022: Pinot Noir 81.8 ha of 221.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chasselas",
-        "quote": "Bearing area, BE Lac de Bienne, Switzerland, 2022: Chasselas 66 ha of 221.8 ha",
+        "quote": "Bearing area, Bielersee (BE Lac de Bienne), Switzerland, 2022: Chasselas 66 ha of 221.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "pinot-gris",
-        "quote": "Bearing area, BE Lac de Bienne, Switzerland, 2022: Pinot Gris 13 ha of 221.8 ha",
+        "quote": "Bearing area, Bielersee (BE Lac de Bienne), Switzerland, 2022: Pinot Gris 13 ha of 221.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "chardonnay",
-        "quote": "Bearing area, BE Lac de Bienne, Switzerland, 2022: Chardonnay 11.6 ha of 221.8 ha",
+        "quote": "Bearing area, Bielersee (BE Lac de Bienne), Switzerland, 2022: Chardonnay 11.6 ha of 221.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "sauvignon-blanc",
-        "quote": "Bearing area, BE Lac de Bienne, Switzerland, 2022: Sauvignon Blanc 11.4 ha of 221.8 ha",
+        "quote": "Bearing area, Bielersee (BE Lac de Bienne), Switzerland, 2022: Sauvignon Blanc 11.4 ha of 221.8 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -415691,7 +415691,7 @@
       "planted": {
         "amount": 221.8,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, BE Lac de Bienne, Switzerland, 2022 (ha): 221.8",
+        "quote": "Bearing area, all varieties, Bielersee (BE Lac de Bienne), Switzerland, 2022 (ha): 221.8",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
@@ -415705,22 +415705,22 @@
     "grapes": [
       {
         "grapeId": "pinot-noir",
-        "quote": "Bearing area, BE Thunersee, Switzerland, 2022: Pinot Noir 5.7 ha of 19 ha",
+        "quote": "Bearing area, Thunersee (BE Thunersee), Switzerland, 2022: Pinot Noir 5.7 ha of 19 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muller-thurgau",
-        "quote": "Bearing area, BE Thunersee, Switzerland, 2022: Müller-Thurgau 5.1 ha of 19 ha",
+        "quote": "Bearing area, Thunersee (BE Thunersee), Switzerland, 2022: Müller-Thurgau 5.1 ha of 19 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "cabernet-dorsa",
-        "quote": "Bearing area, BE Thunersee, Switzerland, 2022: Cabernet Dorsa 0.4 ha of 19 ha",
+        "quote": "Bearing area, Thunersee (BE Thunersee), Switzerland, 2022: Cabernet Dorsa 0.4 ha of 19 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       },
       {
         "grapeId": "muscat-blanc-a-petits-grains",
-        "quote": "Bearing area, BE Thunersee, Switzerland, 2022: Muscat Blanc à Petits Grains 0.4 ha of 19 ha",
+        "quote": "Bearing area, Thunersee (BE Thunersee), Switzerland, 2022: Muscat Blanc à Petits Grains 0.4 ha of 19 ha",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1"
       }
     ],
@@ -415825,7 +415825,7 @@
       "planted": {
         "amount": 19,
         "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, BE Thunersee, Switzerland, 2022 (ha): 19",
+        "quote": "Bearing area, all varieties, Thunersee (BE Thunersee), Switzerland, 2022 (ha): 19",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },

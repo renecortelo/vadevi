@@ -5626,7 +5626,7 @@
    ],
    "area": true,
    "totalHa": 383.1,
-   "unit": "AG, Switzerland",
+   "unit": "Aargau (AG), Switzerland",
    "year": "2022"
   },
   "ch-appenzell-ausserrhoden": {
@@ -5659,7 +5659,7 @@
    ],
    "area": true,
    "totalHa": 5.1,
-   "unit": "AR, Switzerland",
+   "unit": "Appenzell Ausserrhoden (AR), Switzerland",
    "year": "2022"
   },
   "ch-appenzell-innerrhoden": {
@@ -5672,7 +5672,7 @@
    ],
    "area": true,
    "totalHa": 0.7,
-   "unit": "AI, Switzerland",
+   "unit": "Appenzell Innerrhoden (AI), Switzerland",
    "year": "2022"
   },
   "ch-basel-landschaft": {
@@ -5715,7 +5715,7 @@
    ],
    "area": true,
    "totalHa": 113.8,
-   "unit": "BL, Switzerland",
+   "unit": "Basel-Landschaft (BL), Switzerland",
    "year": "2022"
   },
   "ch-basel-stadt": {
@@ -5753,7 +5753,7 @@
    ],
    "area": true,
    "totalHa": 4.8,
-   "unit": "BS, Switzerland",
+   "unit": "Basel-Stadt (BS), Switzerland",
    "year": "2022"
   },
   "ch-bern": {
@@ -5791,7 +5791,7 @@
    ],
    "area": true,
    "totalHa": 247.8,
-   "unit": "BE Lac de Bienne + BE Thunersee + BE übriges Gebiet, Switzerland",
+   "unit": "Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland",
    "year": "2022"
   },
   "ch-bielersee": {
@@ -5824,7 +5824,7 @@
    ],
    "area": true,
    "totalHa": 221.8,
-   "unit": "BE Lac de Bienne, Switzerland",
+   "unit": "Bielersee (BE Lac de Bienne), Switzerland",
    "year": "2022"
   },
   "ch-geneve": {
@@ -5872,7 +5872,7 @@
    ],
    "area": true,
    "totalHa": 1348.5,
-   "unit": "GE, Switzerland",
+   "unit": "Genève (GE), Switzerland",
    "year": "2022"
   },
   "ch-glarus": {
@@ -5900,7 +5900,7 @@
    ],
    "area": true,
    "totalHa": 1.9,
-   "unit": "GL, Switzerland",
+   "unit": "Glarus (GL), Switzerland",
    "year": "2022"
   },
   "ch-graubunden": {
@@ -5943,7 +5943,7 @@
    ],
    "area": true,
    "totalHa": 452.2,
-   "unit": "GR Mesolcina + GR übriges Gebiet, Switzerland",
+   "unit": "Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland",
    "year": "2022"
   },
   "ch-jura": {
@@ -5966,7 +5966,7 @@
    ],
    "area": true,
    "totalHa": 17.7,
-   "unit": "JU, Switzerland",
+   "unit": "Jura (JU), Switzerland",
    "year": "2022"
   },
   "ch-luzern": {
@@ -6014,7 +6014,7 @@
    ],
    "area": true,
    "totalHa": 78.7,
-   "unit": "LU, Switzerland",
+   "unit": "Luzern (LU), Switzerland",
    "year": "2022"
   },
   "ch-neuchatel": {
@@ -6047,7 +6047,7 @@
    ],
    "area": true,
    "totalHa": 604.8,
-   "unit": "NE, Switzerland",
+   "unit": "Neuchâtel (NE), Switzerland",
    "year": "2022"
   },
   "ch-nidwalden": {
@@ -6065,14 +6065,14 @@
    ],
    "area": true,
    "totalHa": 1.6,
-   "unit": "NW, Switzerland",
+   "unit": "Nidwalden (NW), Switzerland",
    "year": "2022"
   },
   "ch-obwalden": {
    "grapes": [],
    "area": true,
    "totalHa": 1.6,
-   "unit": "OW, Switzerland",
+   "unit": "Obwalden (OW), Switzerland",
    "year": "2022"
   },
   "ch-schaffhausen": {
@@ -6105,7 +6105,7 @@
    ],
    "area": true,
    "totalHa": 467.4,
-   "unit": "SH, Switzerland",
+   "unit": "Schaffhausen (SH), Switzerland",
    "year": "2022"
   },
   "ch-schwyz": {
@@ -6133,7 +6133,7 @@
    ],
    "area": true,
    "totalHa": 36.3,
-   "unit": "SZ, Switzerland",
+   "unit": "Schwyz (SZ), Switzerland",
    "year": "2022"
   },
   "ch-solothurn": {
@@ -6166,7 +6166,7 @@
    ],
    "area": true,
    "totalHa": 11.4,
-   "unit": "SO, Switzerland",
+   "unit": "Solothurn (SO), Switzerland",
    "year": "2022"
   },
   "ch-st-gallen": {
@@ -6194,7 +6194,7 @@
    ],
    "area": true,
    "totalHa": 213.5,
-   "unit": "SG, Switzerland",
+   "unit": "St. Gallen (SG), Switzerland",
    "year": "2022"
   },
   "ch-thunersee": {
@@ -6222,7 +6222,7 @@
    ],
    "area": true,
    "totalHa": 19,
-   "unit": "BE Thunersee, Switzerland",
+   "unit": "Thunersee (BE Thunersee), Switzerland",
    "year": "2022"
   },
   "ch-thurgau": {
@@ -6250,7 +6250,7 @@
    ],
    "area": true,
    "totalHa": 236.2,
-   "unit": "TG, Switzerland",
+   "unit": "Thurgau (TG), Switzerland",
    "year": "2022"
   },
   "ch-ticino": {
@@ -6268,7 +6268,7 @@
    ],
    "area": true,
    "totalHa": 1163,
-   "unit": "TI, Switzerland",
+   "unit": "Ticino (TI), Switzerland",
    "year": "2022"
   },
   "ch-uri": {
@@ -6316,7 +6316,7 @@
    ],
    "area": true,
    "totalHa": 3.2,
-   "unit": "UR, Switzerland",
+   "unit": "Uri (UR), Switzerland",
    "year": "2022"
   },
   "ch-valais": {
@@ -6364,7 +6364,7 @@
    ],
    "area": true,
    "totalHa": 4680.5,
-   "unit": "VS, Switzerland",
+   "unit": "Valais (VS), Switzerland",
    "year": "2022"
   },
   "ch-vaud": {
@@ -6397,7 +6397,7 @@
    ],
    "area": true,
    "totalHa": 3787.4,
-   "unit": "VD, Switzerland",
+   "unit": "Vaud (VD), Switzerland",
    "year": "2022"
   },
   "ch-zug": {
@@ -6415,7 +6415,7 @@
    ],
    "area": true,
    "totalHa": 6.1,
-   "unit": "ZG, Switzerland",
+   "unit": "Zug (ZG), Switzerland",
    "year": "2022"
   },
   "ch-zurich": {
@@ -6448,7 +6448,7 @@
    ],
    "area": true,
    "totalHa": 605.1,
-   "unit": "ZH, Switzerland",
+   "unit": "Zürich (ZH), Switzerland",
    "year": "2022"
   },
   "cz-cechy": {
@@ -8821,7 +8821,7 @@
    ],
    "area": false,
    "totalHa": 12659,
-   "unit": "Breedekloof, South Africa",
+   "unit": "Breedekloof (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-cape-south-coast": {
@@ -8874,7 +8874,7 @@
    ],
    "area": false,
    "totalHa": 2646.3,
-   "unit": "Cape South Coast, South Africa",
+   "unit": "Cape South Coast (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-cape-town": {
@@ -8917,7 +8917,7 @@
    ],
    "area": false,
    "totalHa": 2578,
-   "unit": "Cape Town, South Africa",
+   "unit": "Cape Town (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-klein-karoo": {
@@ -8975,7 +8975,7 @@
    ],
    "area": false,
    "totalHa": 2001.6,
-   "unit": "Klein Karoo, South Africa",
+   "unit": "Klein Karoo (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-northern-cape": {
@@ -8998,7 +8998,7 @@
    ],
    "area": false,
    "totalHa": 4840.2,
-   "unit": "Northern Cape, South Africa",
+   "unit": "Northern Cape (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-olifants-river": {
@@ -9051,7 +9051,7 @@
    ],
    "area": false,
    "totalHa": 8522.6,
-   "unit": "Olifants River, South Africa",
+   "unit": "Olifants River (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-paarl": {
@@ -9104,7 +9104,7 @@
    ],
    "area": false,
    "totalHa": 14248,
-   "unit": "Paarl, South Africa",
+   "unit": "Paarl (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-robertson": {
@@ -9162,7 +9162,7 @@
    ],
    "area": false,
    "totalHa": 12776.4,
-   "unit": "Robertson, South Africa",
+   "unit": "Robertson (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-stellenbosch": {
@@ -9215,7 +9215,7 @@
    ],
    "area": false,
    "totalHa": 11815.4,
-   "unit": "Stellenbosch, South Africa",
+   "unit": "Stellenbosch (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-swartland": {
@@ -9263,7 +9263,7 @@
    ],
    "area": false,
    "totalHa": 12177.7,
-   "unit": "Swartland, South Africa",
+   "unit": "Swartland (SAWIS statistical region), South Africa",
    "year": "2023"
   },
   "za-worcester": {
@@ -9321,7 +9321,7 @@
    ],
    "area": false,
    "totalHa": 6518.2,
-   "unit": "Worcester, South Africa",
+   "unit": "Worcester (SAWIS statistical region), South Africa",
    "year": "2023"
   }
  },

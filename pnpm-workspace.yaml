@@ -61,6 +61,10 @@ overrides:
   # 8.2.0–8.2.3): the dev server and vitest, never the Worker or the built
   # bundle. A patch release within the major.
   vite@8: ">=8.2.4 <9"
+  # GHSA-5r4p-p66f-jhc7 (hono's serveStatic decodes a path twice): the API
+  # never serves static files through Hono, and its own dependency is raised
+  # past it; this lifts the copies under firebase-tools too. Within the major.
+  hono@4: ">=4.13.11 <5"
   # Not overridden: stream-json (GHSA-528h-pc64-c93x, fixed in 3.x) and
   # csv-parse (GHSA-8cw4-87c7-c6xx, fixed in 7.x) under firebase-tools are
   # major bumps the emulator has not been tested against; both are moderate,

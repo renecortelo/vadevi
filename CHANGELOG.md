@@ -34,7 +34,9 @@ has the reasons.
   Twenty-one grapes without an origin in any article take the country its
   table gives (Fiano, Aglianico, Koshu, Pinot Meunier, Zierfandler…); those
   whose origin is disputed stay without one. «Sources and licences» credits
-  it, and says what was changed.
+  it, and says what was changed. Each quote names the Swiss canton
+  («Vaud (VD)») and says South Africa's units are SAWIS's statistical
+  regions.
 - **Swiss names say their level in words**: the names a Swiss AOC contains
   read «Lavaux · regional AOC», not the text's key.
 - **The pairing wheel's suggestions, best known first**: a dish's grapes
@@ -177,6 +179,17 @@ has the reasons.
   in all) from the rule that established each one: where a page of the
   Federal Register holds two rules, the day's whole issue, from govinfo's
   bulk data, names the right one.
+
+### For operators
+
+- Hono at 4.13.13 and pinned to at least 4.13.11 everywhere
+  (GHSA-5r4p-p66f-jhc7: `serveStatic` decoded a path twice). The API serves
+  no static files through Hono, so it was never reachable; the copies under
+  firebase-tools are lifted too.
+- `pnpm kb:score` now splits each field's gaps by cause (awaiting
+  permission, permission not asked yet, licence declined, no open source)
+  and prints the score every permission would give: 74.8, or 75.6 with
+  Chile's licence too.
 
 ## 0.5.0 — 20 October 2026
 
