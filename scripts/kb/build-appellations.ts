@@ -1635,6 +1635,11 @@ for (const entry of entries) {
 // by hand; reuse allowed with the source named).
 const austrian = JSON.parse(readFileSync(resolve("data/kb/at-weinbau-figures.json"), "utf8")) as {
   campaign: string;
+  production?: {
+    campaign: string;
+    regions: Record<string, { amountHl: number; name: string }>;
+    sourceUrl: string;
+  };
   regions: Record<string, { name: string; plantedHa: number }>;
   sourceUrl: string;
 };
@@ -1651,6 +1656,22 @@ for (const entry of entries) {
       year: austrian.campaign,
     },
     production: entry.figures?.production ?? null,
+  };
+  statistikAustria += 1;
+}
+// And the wine harvested in each, from its yearly harvest report.
+for (const entry of entries) {
+  const made = austrian.production?.regions[entry.id];
+  if (made === undefined || austrian.production === undefined) continue;
+  entry.figures = {
+    planted: entry.figures?.planted ?? null,
+    production: {
+      amount: made.amountHl,
+      publisher: "statistik-austria",
+      quote: `Weinernte (insgesamt), ${made.name}, ${austrian.production.campaign} (hl): ${made.amountHl}`,
+      sourceUrl: austrian.production.sourceUrl,
+      year: austrian.production.campaign,
+    },
   };
   statistikAustria += 1;
 }

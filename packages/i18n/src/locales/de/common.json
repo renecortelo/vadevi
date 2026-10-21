@@ -483,6 +483,7 @@
     "glanceSourceInv": "Argentiniens Nationales Weinbauinstitut (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Statistisches Bundesamt (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, Weingartengrunderhebung {{campaign}} (Auszug)",
+    "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, Weinernte {{campaign}} (Auszug)",
     "wheels": {
       "tab": "Räder",
       "title": "Räder der Aromen, Farben und Speisen",

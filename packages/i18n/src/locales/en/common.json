@@ -483,6 +483,7 @@
     "glanceSourceInv": "Argentina's National Wine Institute (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Germany's Federal Statistical Office (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, vineyard survey {{campaign}} (extract)",
+    "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, wine harvest {{campaign}} (extract)",
     "wheels": {
       "tab": "Wheels",
       "title": "Aromas, colours and pairings",

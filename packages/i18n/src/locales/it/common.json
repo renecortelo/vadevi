@@ -483,6 +483,7 @@
     "glanceSourceInv": "Istituto nazionale di vitivinicoltura argentino (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Ufficio federale di statistica tedesco (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, censimento viticolo {{campaign}} (estratto)",
+    "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, vendemmia {{campaign}} (estratto)",
     "wheels": {
       "tab": "Ruote",
       "title": "Ruote di aromi, colori e abbinamenti",

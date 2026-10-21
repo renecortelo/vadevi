@@ -483,6 +483,7 @@
     "glanceSourceInv": "Institut Nacional de Vitivinicultura de l'Argentina (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Oficina Federal d'Estadística d'Alemanya (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, cens vitícola {{campaign}} (extracte)",
+    "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, collita de vi {{campaign}} (extracte)",
     "wheels": {
       "tab": "Rodes",
       "title": "Rodes d’aromes, colors i maridatges",

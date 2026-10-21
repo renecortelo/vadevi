@@ -23,6 +23,11 @@ has the reasons.
 
 ### The library
 
+- **Austria's wine harvest of 2025**: 20 wine-growing regions and states
+  show the wine they made (Statistik Austria, «Weinernte und Weinbestand
+  2025»), credited as the harvest report beside the 2020 vineyard survey;
+  each row checked by its area and yield. Leithaberg and Rosalia share one
+  row in the report and take none.
 - **Argentina's vineyards in 2025**: the 66 indications named after a
   department or a province show the INV's «Informe anual de superficie
   2025» (31 December 2025) instead of 2024's, each province's departments

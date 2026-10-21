@@ -85,6 +85,14 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   await expect(page.getByText("· AOC regional").first()).toBeVisible();
   await expect(page.getByText(/library\.levelName/)).toHaveCount(0);
   await page.screenshot({ fullPage: true, path: test.info().outputPath("region-adelaide.png") });
+  // An Austrian region: its vineyards from the 2020 survey and its wine from
+  // the 2025 harvest report, each credited as the source it is.
+  await page.goto("/library/regions/at-kamptal");
+  const austrianSources = page.locator("#region-glance ~ .section-help");
+  await expect(austrianSources).toContainText("STATISTIK AUSTRIA, censo vitícola 2020 (extracto)", {
+    timeout: 15_000,
+  });
+  await expect(austrianSources).toContainText("STATISTIK AUSTRIA, cosecha de vino 2025 (extracto)");
   await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.

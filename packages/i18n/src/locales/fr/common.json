@@ -483,6 +483,7 @@
     "glanceSourceInv": "Institut national de viticulture d'Argentine (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceDestatis": "Office fédéral de la statistique d'Allemagne (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, recensement viticole {{campaign}} (extrait)",
+    "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, récolte de vin {{campaign}} (extrait)",
     "wheels": {
       "tab": "Roues",
       "title": "Roues des arômes, couleurs et accords",

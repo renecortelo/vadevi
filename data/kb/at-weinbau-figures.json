@@ -111,5 +111,92 @@
       "name": "Wien",
       "plantedHa": 667.24
     }
+  },
+  "production": {
+    "about": "Wine harvested (hl, «Ernte») in 2025 in each wine-growing region and state, from Statistik Austria's «Weinernte und Weinbestand 2025» (Statistik im Fokus 1.15, reference date 30 November 2025), table 5 «Weinernte (insgesamt) 2025 nach Weinbaugebiet», an extract read from its text; each row checked by its area and yield, each state's regions add up to its row, and the states to Austria's. Steirerland is the state of Steiermark; Bergland takes the row «Übrige Bundesländer» (Kärnten, Oberösterreich, Salzburg, Tirol and Vorarlberg, the states the wine law places in it). Leithaberg and Rosalia share one row and take none; Weinland would be a sum of two rows and takes none. Same terms as the area: STATISTIK AUSTRIA named, and a note that the content is an extract.",
+    "campaign": "2025",
+    "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+    "regions": {
+      "at-bergland": {
+        "amountHl": 7750,
+        "name": "Übrige Bundesländer"
+      },
+      "at-burgenland": {
+        "amountHl": 582936,
+        "name": "Burgenland"
+      },
+      "at-carnuntum": {
+        "amountHl": 34464,
+        "name": "Carnuntum"
+      },
+      "at-eisenberg": {
+        "amountHl": 14574,
+        "name": "Eisenberg (Südburgenland)"
+      },
+      "at-kamptal": {
+        "amountHl": 179116,
+        "name": "Kamptal"
+      },
+      "at-kremstal": {
+        "amountHl": 164734,
+        "name": "Kremstal"
+      },
+      "at-mittelburgenland": {
+        "amountHl": 113747,
+        "name": "Mittelburgenland"
+      },
+      "at-neusiedlersee": {
+        "amountHl": 331241,
+        "name": "Neusiedlersee"
+      },
+      "at-niederosterreich": {
+        "amountHl": 1695967,
+        "name": "Niederösterreich"
+      },
+      "at-steiermark": {
+        "amountHl": 244717,
+        "name": "Steiermark"
+      },
+      "at-steirerland": {
+        "amountHl": 244717,
+        "name": "Steiermark"
+      },
+      "at-sudsteiermark": {
+        "amountHl": 138085,
+        "name": "Südsteiermark"
+      },
+      "at-thermenregion": {
+        "amountHl": 65453,
+        "name": "Thermenregion"
+      },
+      "at-traisental": {
+        "amountHl": 49003,
+        "name": "Traisental"
+      },
+      "at-vulkanland-steiermark": {
+        "amountHl": 79898,
+        "name": "Vulkanland Steiermark (Südoststeiermark)"
+      },
+      "at-wachau": {
+        "amountHl": 77777,
+        "name": "Wachau"
+      },
+      "at-wagram": {
+        "amountHl": 135411,
+        "name": "Wagram"
+      },
+      "at-weinviertel": {
+        "amountHl": 989317,
+        "name": "Weinviertel"
+      },
+      "at-weststeiermark": {
+        "amountHl": 26734,
+        "name": "Weststeiermark"
+      },
+      "at-wien": {
+        "amountHl": 30195,
+        "name": "Wien"
+      }
+    }
   }
 }

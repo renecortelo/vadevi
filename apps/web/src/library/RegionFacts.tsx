@@ -108,9 +108,12 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
                         : figure.publisher === "destatis"
                           ? t("library.glanceSourceDestatis", { campaign: figure.year ?? "" })
                           : figure.publisher === "statistik-austria"
-                            ? t("library.glanceSourceStatistikAustria", {
-                                campaign: figure.year ?? "",
-                              })
+                            ? t(
+                                figure === production
+                                  ? "library.glanceSourceStatistikAustriaHarvest"
+                                  : "library.glanceSourceStatistikAustria",
+                                { campaign: figure.year ?? "" },
+                              )
                             : figure.publisher === "artea"
                               ? t("library.glanceSourceArtea", { campaign: figure.year ?? "" })
                               : figure.publisher === "regione-umbria"

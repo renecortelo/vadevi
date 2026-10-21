@@ -398,7 +398,10 @@ for what moved.
   (`at-weinbau-figures.json`): reproduction for commercial and non-commercial
   purposes allowed with «STATISTIK AUSTRIA» named and a note that the content
   is an extract; each region, area and state shows its vineyard area so
-  credited, with the year and a link.
+  credited, with the year and a link. Its «Weinernte und Weinbestand 2025»
+  (table 5) gives the wine harvested in 2025 in 20 regions and states, each
+  row checked by its area and yield and against its state's total; Leithaberg
+  and Rosalia, which share a row, take none.
 
 - **The University of Adelaide**, «Database of Regional, National and Global
   Winegrape Bearing Areas by Variety, 2000 to 2023» (K. Anderson, S. Nelgen

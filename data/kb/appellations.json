@@ -35685,7 +35685,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 7750,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Übrige Bundesländer, 2025 (hl): 7750",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -45134,7 +45140,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 582936,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Burgenland, 2025 (hl): 582936",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -53539,7 +53551,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 34464,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Carnuntum, 2025 (hl): 34464",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -108598,7 +108616,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 14574,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Eisenberg (Südburgenland), 2025 (hl): 14574",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -137350,7 +137374,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 179116,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Kamptal, 2025 (hl): 179116",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -137826,7 +137856,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 164734,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Kremstal, 2025 (hl): 164734",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -163986,7 +164022,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 113747,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Mittelburgenland, 2025 (hl): 113747",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -181951,7 +181993,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 331241,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Neusiedlersee, 2025 (hl): 331241",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -182368,7 +182416,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 1695967,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Niederösterreich, 2025 (hl): 1695967",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -243832,7 +243886,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 244717,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Steiermark, 2025 (hl): 244717",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -244031,7 +244091,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 244717,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Steiermark, 2025 (hl): 244717",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -245436,7 +245502,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 138085,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Südsteiermark, 2025 (hl): 138085",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -255355,7 +255427,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 65453,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Thermenregion, 2025 (hl): 65453",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -258591,7 +258669,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 49003,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Traisental, 2025 (hl): 49003",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -284352,7 +284436,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 79898,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Vulkanland Steiermark (Südoststeiermark), 2025 (hl): 79898",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -284886,7 +284976,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 77777,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Wachau, 2025 (hl): 77777",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -285146,7 +285242,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 135411,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Wagram, 2025 (hl): 135411",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -285486,7 +285588,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 989317,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Weinviertel, 2025 (hl): 989317",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -285746,7 +285854,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 26734,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Weststeiermark, 2025 (hl): 26734",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
@@ -286006,7 +286120,13 @@
         "sourceUrl": "https://www.statistik.at/fileadmin/pages/164/Weingartenflaechen2020nachWeinbauregionen.ods",
         "year": "2020"
       },
-      "production": null
+      "production": {
+        "amount": 30195,
+        "publisher": "statistik-austria",
+        "quote": "Weinernte (insgesamt), Wien, 2025 (hl): 30195",
+        "sourceUrl": "https://www.statistik.at/fileadmin/publications/SB_1-15-WeinernteUndBestand2025.pdf",
+        "year": "2025"
+      }
     }
   },
   {
