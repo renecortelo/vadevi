@@ -1841,6 +1841,27 @@ for (const [id, { law, lists }] of Object.entries(cantonal.regions)) {
 }
 console.info(`  ${fromCantonalLaw} grape links from Swiss cantonal wine laws.`);
 
+// The grapes a name's English Wikipedia infobox lists, where nothing above
+// gives any (`data/kb/region-infobox-grapes.json`,
+// `pnpm kb:fetch-region-infobox-grapes`).
+const infoboxGrapes = JSON.parse(
+  readFileSync(resolve("data/kb/region-infobox-grapes.json"), "utf8"),
+) as { regions: Record<string, { grapes: string[]; quote: string; sourceUrl: string }> };
+let fromInfoboxes = 0;
+for (const [id, { grapes: listed, quote, sourceUrl }] of Object.entries(infoboxGrapes.regions)) {
+  const entry = entryById.get(id);
+  if (entry === undefined) throw new Error(`region-infobox-grapes: no name ${id}`);
+  if ((entry.register?.grapes.length ?? 0) > 0) continue;
+  for (const grapeId of listed) {
+    if (!grapeIds.has(grapeId)) throw new Error(`region-infobox-grapes: no grape ${grapeId}`);
+    if (entry.grapes.some((known) => known.grapeId === grapeId)) continue;
+    entry.grapes.push({ grapeId, quote, sourceUrl });
+    fromInfoboxes += 1;
+    links += 1;
+  }
+}
+console.info(`  ${fromInfoboxes} grape links from regions' infoboxes.`);
+
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;
 const withPoint = entries.filter((entry) => entry.latitude !== null).length;

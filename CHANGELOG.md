@@ -45,6 +45,13 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Grapes of 102 more names from their Wikipedia infobox**: where nothing
+  else gives varieties, the «grapes» line of the English article's wine
+  region infobox — 101 American Viticultural Areas, Western Plains and
+  Sussex, 893 links — each name matched to a library grape by its own names
+  or a fixed alias («Shiraz», «Primitivo», «Petite Sirah»); a family name
+  («Muscat», «Pinot») and the hybrids the library has no page for are left
+  out.
 - **Geneva's varieties**: the AOC Genève and its 22 premiers crus list the
   grapes Geneva's wine law authorises in them (its annex: Chasselas,
   Gamay, Pinot Noir, Gamaret, Merlot and 25 more), each name mapped by hand

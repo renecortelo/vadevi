@@ -1,0 +1,1510 @@
+{
+ "about": "Grapes a wine region's English Wikipedia infobox lists (its «grapes» line), for registered names no register or article sentence gives varieties for, each name matched to a library grape by the grape's own names or a fixed alias; a name that is not one grape («Muscat», «Pinot») is left out. The line is kept as the quote. Wikipedia text is CC BY-SA 4.0. Built by scripts/kb/fetch-region-infobox-grapes.ts.",
+ "regions": {
+  "au-western-plains": {
+   "grapes": [
+    "syrah",
+    "grenache"
+   ],
+   "quote": "Shiraz, Grenache etc.",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Western_Plains_wine_zone"
+  },
+  "gb-sussex": {
+   "grapes": [
+    "pinot-meunier",
+    "pinot-noir",
+    "chardonnay",
+    "bacchus-weiss",
+    "pinot-blanc"
+   ],
+   "quote": "Pinot Meunier, Pinot Noir, Chardonnay, Bacchus, Pinot Blanc and Regent",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sussex_wine"
+  },
+  "us-alexandria-lakes": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Fox, Frontenac, Frontenac Gris, Itasca, La Crescent, Malbec, Marquette, Merlot, Petite Verdot, Shiraz, Traminette and Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Alexandria_Lakes_AVA"
+  },
+  "us-antelope-valley-of-the-california-high-desert": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "grenache",
+    "syrah"
+   ],
+   "quote": "Cabernet Sauvignon, Grenache, Shiraz",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Antelope_Valley_of_the_California_High_Desert_AVA"
+  },
+  "us-appalachian-high-country": {
+   "grapes": [
+    "cabernet-franc",
+    "merlot",
+    "pinot-noir",
+    "riesling",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Merlot, Frontenac, Marechal Foch, Marquette, Pinot Noir, Riesling, Seyval Blanc, Traminette, Vidal Blanc and Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Appalachian_High_Country_AVA"
+  },
+  "us-atlas-peak": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "petit-verdot",
+    "sangiovese",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Merlot, Petit Verdot, Sangiovese, Syrah, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Atlas_Peak_AVA"
+  },
+  "us-ben-lomond-mountain": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "pinot-noir",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Pinot Noir, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Ben_Lomond_Mountain_AVA"
+  },
+  "us-beverly-washington": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "cabernet-franc",
+    "malbec",
+    "merlot"
+   ],
+   "quote": "Cabernet Sauvignon, Cabernet Franc, Malbec, Merlot",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Beverly%2C_Washington_AVA"
+  },
+  "us-borden-ranch": {
+   "grapes": [
+    "albarino",
+    "cabernet-sauvignon",
+    "grenache-blanc",
+    "verdelho",
+    "zinfandel"
+   ],
+   "quote": "Albariño, Cabernet Sauvignon, Garnacha Blanca, Grenache Blanc, Verdelho, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Borden_Ranch_AVA"
+  },
+  "us-calistoga": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "merlot",
+    "durif",
+    "sauvignon-blanc",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Merlot, Petite Syrah, Sauvignon Blanc, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Calistoga_AVA"
+  },
+  "us-candy-mountain": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "merlot",
+    "sangiovese",
+    "syrah"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Merlot, Sangiovese , Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Candy_Mountain_AVA"
+  },
+  "us-capay-valley": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "marsanne",
+    "mourvedre",
+    "sauvignon-blanc",
+    "syrah",
+    "tempranillo",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Marsanne, Mourvedre, Petite Verdot, Sauvignon Blanc, Syrah, Tempranillo, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Capay_Valley_AVA"
+  },
+  "us-cape-may-peninsula": {
+   "grapes": [
+    "albarino",
+    "dolcetto",
+    "tempranillo",
+    "nebbiolo",
+    "merlot",
+    "barbera",
+    "viognier"
+   ],
+   "quote": "Albariño, Dolcetto, Tempranillo, Nebbiolo, Merlot, Barbera, Moscato, Malvasia, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Cape_May_Peninsula_AVA"
+  },
+  "us-catoctin": {
+   "grapes": [
+    "albarino",
+    "barbera",
+    "cabernet-sauvignon",
+    "cabernet-franc",
+    "pinot-noir",
+    "riesling",
+    "tannat"
+   ],
+   "quote": "Albariño, Barbera, Cabernet Sauvignon, Cabernet Franc, Muscat Canelli, Pinot noir, Riesling, Tannat, Vidal blanc",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Catoctin_AVA"
+  },
+  "us-cayuga-lake": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "concord",
+    "delaware",
+    "gewurztraminer",
+    "merlot",
+    "niagara",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "sangiovese",
+    "syrah",
+    "viognier"
+   ],
+   "quote": "Baco noir, Cabernet Franc, Cabernet Sauvignon, Catawba, Cayuga, Chambourcin, Chancellor, Chardonnay, Concord, Delaware, Diamond, Gewurztraminer, Isabella, Ives noir, Lemberger, Marechal Foch, Melody, Merlot, Niagara, Pinot gris, Pinot noir, Riesling, Sangiovese, Seyval blanc, Syrah, Traminette, Vidal blanc, Vignoles, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Cayuga_Lake_AVA"
+  },
+  "us-chalone": {
+   "grapes": [
+    "chardonnay",
+    "chenin-blanc",
+    "grenache",
+    "pinot-blanc",
+    "pinot-noir",
+    "marsanne",
+    "sangiovese",
+    "syrah"
+   ],
+   "quote": "Chardonnay, Chenin blanc, Grenache, Pinot blanc, Pinot noir, Marsanne, Sangiovese, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Chalone_AVA"
+  },
+  "us-champlain-valley-of-new-york": {
+   "grapes": [
+    "riesling"
+   ],
+   "quote": "Cold-hardy North American hybrid grape varieties, Crimson Pearl, Frontenac, La Crescent, Laurentia, Marquette, Sabrevois, Petite Pearl, Riesling and St. Croix",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Champlain_Valley_of_New_York_AVA"
+  },
+  "us-clarksburg": {
+   "grapes": [
+    "albarino",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "chenin-blanc",
+    "gewurztraminer",
+    "grenache-blanc",
+    "merlot",
+    "durif",
+    "pinot-gris",
+    "riesling",
+    "sauvignon-blanc",
+    "syrah",
+    "tempranillo",
+    "verdelho",
+    "viognier"
+   ],
+   "quote": "Albarino, Cabernet Sauvignon, Chardonnay, Chenin Blanc, Gewurztraminer, Grenache blanc, Malvasia, Merlot, Orange Muscat, Petite Sirah, Pinot gris, Riesling, Sauvignon blanc, Syrah, Tempranillo, Verdelho, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Clarksburg_AVA"
+  },
+  "us-columbia-hills": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "sauvignon-blanc",
+    "syrah"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Merlot, Sauvignon Blanc, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Columbia_Hills_AVA"
+  },
+  "us-coombsville": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "pinot-noir",
+    "syrah"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Pinot noir, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Coombsville_AVA"
+  },
+  "us-covelo": {
+   "grapes": [
+    "mencia",
+    "pinot-noir",
+    "tempranillo"
+   ],
+   "quote": "Granacha, Mencia, Pinot Noir, Tempranillo",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Covelo_AVA"
+  },
+  "us-cucamonga-valley": {
+   "grapes": [
+    "aleatico",
+    "alicante-bouschet",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chasselas",
+    "grenache",
+    "merlot",
+    "mourvedre",
+    "palomino",
+    "pedro-ximenez",
+    "durif",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Aleatico, Alicante Bouschet, Cabernet Franc, Cabernet Sauvignon, Chasselas, Grenache, Merlot, Mission, Mourvedre, Palomino, Pedro Ximenes, Petite Sirah, Syrah, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Cucamonga_Valley_AVA"
+  },
+  "us-dahlonega-plateau": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "pinot-blanc",
+    "pinot-noir",
+    "riesling",
+    "sangiovese",
+    "touriga-nacional"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Norton(Cynthiana), Merlot, Muscadine, Pinot Blanc, Pinot Noir, Riesling, Sangiovese, Touriga Nacional, Vidal Blanc",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dahlonega_Plateau_AVA"
+  },
+  "us-diablo-grande": {
+   "grapes": [
+    "barbera",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "pinot-noir",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah"
+   ],
+   "quote": "Barbera, Cabernet Sauvignon, Chardonnay, Merlot, Pinot noir, Sangiovese, Sauvignon Blanc, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Diablo_Grande_AVA"
+  },
+  "us-diamond-mountain-district": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "malbec",
+    "merlot",
+    "petit-verdot",
+    "sauvignon-blanc"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Malbec, Merlot, Petit Verdot, Sauvignon Blanc",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Diamond_Mountain_District_AVA"
+  },
+  "us-dos-rios": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Merlot, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dos_Rios_AVA"
+  },
+  "us-dunnigan-hills": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "durif",
+    "malbec",
+    "sauvignon-blanc",
+    "syrah",
+    "tempranillo",
+    "viognier"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Merlot, Petite Sirah, Malbec, Sauvignon blanc, Syrah, Tempranillo, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dunnigan_Hills_AVA"
+  },
+  "us-eagle-peak-mendocino-county": {
+   "grapes": [
+    "pinot-noir"
+   ],
+   "quote": "Pinot noir",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Eagle_Peak_Mendocino_County_AVA"
+  },
+  "us-eastern-connecticut-highlands": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "dornfelder",
+    "gamay",
+    "merlot",
+    "pinot-noir"
+   ],
+   "quote": "Cayuga, Cabernet Franc, Chardonnay, Dornfelder, Frontenac, Gamay, Merlot, Pinot noir, Seyval blanc, St. Croix, Traminette, Vidal, Vignoles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Eastern_Connecticut_Highlands_AVA"
+  },
+  "us-el-pomar-district": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "grenache",
+    "malbec",
+    "merlot",
+    "mourvedre",
+    "durif",
+    "pinot-gris",
+    "zinfandel",
+    "sauvignon-blanc",
+    "syrah",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Grenache, Malbec, Merlot, Mourvèdre, Petite Sirah, Pinot Gris, Primitivo, Sauvignon Blanc, Syrah, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/El_Pomar_District_AVA"
+  },
+  "us-escondido-valley": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "pinot-noir"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Pinot Noir",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Escondido_Valley_AVA"
+  },
+  "us-fennville": {
+   "grapes": [
+    "cabernet-franc",
+    "pinot-gris",
+    "pinot-noir",
+    "zinfandel",
+    "riesling"
+   ],
+   "quote": "Aurora, Baco Noir, Cascade, Chelois, Cabernet Franc, Chardonel, Chancellor, Chambourcin, Maréchal Foch, Pinot Gris, Pinot Noir, Primitivo, Seyval, Riesling, Vignoles, Vidal Blanc",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Fennville_AVA"
+  },
+  "us-fort-ross-seaview": {
+   "grapes": [
+    "chardonnay",
+    "marsanne",
+    "pinot-noir",
+    "pinot-meunier",
+    "syrah",
+    "viognier"
+   ],
+   "quote": "Chardonnay, Marsanne, Pinot Noir, Pinot Meunier, Pinotageóa, Roussane, Syrah, Viognier, Zinfindel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Fort_Ross-Seaview_AVA"
+  },
+  "us-fredericksburg-in-the-texas-hill-country": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "chenin-blanc",
+    "cinsaut",
+    "malbec",
+    "marsanne",
+    "merlot",
+    "montepulciano",
+    "roussanne",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "tannat",
+    "tempranillo",
+    "viognier"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Chenin Blanc, Cinsault, Malbec, Marsanne, Merlot, Montepulciano, Petit Sirah, Roussanne, Sangiovese, Sauvignon Blanc, Syrah, Tannat, Tempranillo, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Fredericksburg_in_the_Texas_Hill_Country_AVA"
+  },
+  "us-gabilan-mountains": {
+   "grapes": [
+    "aligote",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "carignan",
+    "chardonnay",
+    "chenin-blanc",
+    "grenache",
+    "pinot-noir",
+    "roussanne",
+    "sauvignon-blanc",
+    "semillon",
+    "syrah",
+    "viognier"
+   ],
+   "quote": "Aligoté, Bordelaise, Cabernet Franc, Cabernet Sauvignon, Carignane, Chardonnay, Chenin Blanc, Grenache, Pinot Noir, Roussanne, Sauvignon Blanc, Semillon, Syrah, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gabilan_Mountains_AVA"
+  },
+  "us-happy-canyon-of-santa-barbara": {
+   "grapes": [
+    "albarino",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "malbec",
+    "merlot",
+    "petit-verdot",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Albarino, Cabernet Franc, Cabernet Sauvignon, Malbec, Merlot, Petit Verdot, Rosé, Sangiovese, Sauvignon blanc, Syrah, Viognier,Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Happy_Canyon_of_Santa_Barbara_AVA"
+  },
+  "us-haw-river-valley": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "syrah",
+    "tempranillo"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Syrah, Tempranillo, Valdepenas, Muscadine",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Haw_River_Valley_AVA"
+  },
+  "us-high-valley": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "cabernet-sauvignon",
+    "cinsaut",
+    "gewurztraminer",
+    "grenache",
+    "merlot",
+    "mourvedre",
+    "petit-verdot",
+    "durif",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "sauvignon-blanc",
+    "semillon",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Chardonnay, Cabernet Sauvignon, Cinsault, Gewurztraminer, Grenache, Merlot, Mourvedre / Mataro, Petit Verdot, Petite Sirah, Pinot Gris / Grigio, Pinot Noir, Riesling, Sauvignon Blanc, Semillon, Syrah /Shiraz, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/High_Valley_AVA"
+  },
+  "us-hudson-river-region": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "pinot-noir",
+    "riesling"
+   ],
+   "quote": "Baco noir, Cabernet Franc, Cabernet Sauvignon, Cayuga, Chambourcin, Chancellor, Chardonnay, Chelois, De Chaunac, Frontenac, Lemberger, Marechal Foch, Merlot, Pinot Noir, Riesling, Seyval Blanc, St. Pepin, Traminette, Vidal Blanc",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Hudson_River_Region_AVA"
+  },
+  "us-inwood-valley": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Merlot, Syrah, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Inwood_Valley_AVA"
+  },
+  "us-jahant": {
+   "grapes": [
+    "chardonnay",
+    "durif",
+    "tempranillo",
+    "zinfandel"
+   ],
+   "quote": "Chardonnay, Petite Sirah, Tempranillo, Valdepenas, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Jahant_AVA"
+  },
+  "us-lake-chelan": {
+   "grapes": [
+    "barbera",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "carmenere",
+    "chardonnay",
+    "dolcetto",
+    "gewurztraminer",
+    "grenache",
+    "pinot-meunier",
+    "malbec",
+    "merlot",
+    "durif",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "semillon",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "tannat",
+    "tempranillo",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Barbera, Cabernet Franc, Cabernet Sauvignon, Carmenere, Chardonnay, Dolcetto, Gewurztraminer, Grenache, Pinot Meunier, Malbec, Merlot, Muscat Blanc, Orange Muscat, Petite Syrah, Petite Verdot, Pinot Gris, Pinot Noir, Riesling, Semillon, Sangiovese, Sauvignon Blanc, Syrah, Tannat, Tempranillo, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lake_Chelan_AVA"
+  },
+  "us-lancaster-valley": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "merlot",
+    "niagara",
+    "riesling"
+   ],
+   "quote": "Cabernet Franc, Catawba, Cayuga, Chambourcin, Chancellor, Chardonnay, De Chaunac, Merlot, Niagara, Riesling, Seyval blanc, Vidal Blanc, Vignoles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lancaster_Valley_AVA"
+  },
+  "us-leelanau-peninsula": {
+   "grapes": [
+    "auxerrois-blanc",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "dolcetto",
+    "gewurztraminer",
+    "malbec",
+    "merlot",
+    "pinot-blanc",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling"
+   ],
+   "quote": "Aurore, Auxerrois, Bianca, Cabernet Franc, Cabernet Sauvignon, Cayuga, Chardonnay, De Chaunac, Dolcetto, Gewurztraminer, Malbec, Marechal Foch, Merlot, Pinot Blanc, Pinot gris, Pinot noir, Riesling, Seyval Blanc, Traminette, Vignoles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Leelanau_Peninsula_AVA"
+  },
+  "us-lehigh-valley": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "concord",
+    "dolcetto",
+    "gewurztraminer",
+    "gruner-veltliner",
+    "merlot",
+    "niagara",
+    "durif",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "sangiovese",
+    "syrah",
+    "zweigelt"
+   ],
+   "quote": "Baco Noir, Cabernet Franc, Cabernet Sauvignon, Catawba, Cayuga, Chambourcin, Chardonnay, Concord, De Chaunac, Dolcetto, Gewürztraminer, Grüner Veltliner, Lemberger, Leon Millot, Marechal Foch, Marquette, Merlot, Niagara, Petite Sirah, Pinot Gris / Grigio, Pinot Noir, Regent, Riesling, Sangiovese, Seyval Blanc, Steuben, Syrah / Shiraz, Traminette, Valvin Muscat, Vidal Blanc, Vignoles/Ravat, Zweigelt",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lehigh_Valley_AVA"
+  },
+  "us-lewis-clark-valley": {
+   "grapes": [
+    "blaufrankisch",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "carmenere",
+    "chardonnay",
+    "gewurztraminer",
+    "grenache",
+    "malbec",
+    "merlot",
+    "petit-verdot",
+    "pinot-noir",
+    "sangiovese",
+    "syrah",
+    "tempranillo",
+    "pinot-gris",
+    "riesling",
+    "rkatsiteli",
+    "sauvignon-blanc",
+    "zinfandel"
+   ],
+   "quote": "Blaufränkisch(Lemberger), Cabernet Franc, Cabernet Sauvignon, Carmenere, Chardonnay, Gewürztraminer, Grenache, Malbec, Merlot, Petit Verdot, Pinot Noir, Sangiovese, Syrah, Tempranillo, Muscat, Pinot Gris, Riesling, Rkatsiteli, Sauvignon Blanc, Semillon. Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lewis-Clark_Valley_AVA"
+  },
+  "us-linganore": {
+   "grapes": [
+    "cabernet-sauvignon"
+   ],
+   "quote": "Cabernet Sauvignon, Chambourcin, Chardonel, Traminette",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Linganore_AVA"
+  },
+  "us-long-island": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "niagara",
+    "petit-verdot",
+    "pinot-gris",
+    "pinot-noir",
+    "sauvignon-blanc"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Chardonnay Musqué, Merlot, Niagara, Petit Verdot, Pinot gris, Pinot noir, Sauvignon blanc, Tocai Friulano",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Long_Island_AVA"
+  },
+  "us-malibu-coast": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "pinot-noir",
+    "syrah"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Merlot, Pinot Noir, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Malibu_Coast_AVA"
+  },
+  "us-manton-valley": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "gewurztraminer",
+    "merlot",
+    "durif",
+    "pinot-noir",
+    "sauvignon-blanc",
+    "syrah",
+    "tempranillo",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Gewurztraminer, Merlot, Petite Sirah, Pinot Noir, Sauvignon Blanc, Syrah/Shiraz, Tempranillo / Valdepenas, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Manton_Valley_AVA"
+  },
+  "us-middleburg-virginia": {
+   "grapes": [
+    "merlot",
+    "chardonnay",
+    "cabernet-franc",
+    "nebbiolo",
+    "cabernet-sauvignon",
+    "riesling"
+   ],
+   "quote": "Merlot, Chardonnay, Cabernet Franc, Nebbiolo, Cabernet Sauvignon, Riesling",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Middleburg_Virginia_AVA"
+  },
+  "us-mimbres-valley": {
+   "grapes": [
+    "barbera",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "chenin-blanc",
+    "dolcetto",
+    "colombard",
+    "merlot",
+    "nebbiolo",
+    "pinot-meunier",
+    "pinot-noir",
+    "ruby-cabernet",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Barbera, Cabernet Sauvignon, Chardonnay, Chenin Blanc, Dolcetto, French Colombard, Malvasia Bianca, Merlot, Muscat Canelli, Nebbiolo, Pinot Meunier, Pinot Noir, Ruby Cabernet, Syrah, Ugni Blanc and Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Mimbres_Valley_AVA"
+  },
+  "us-mt-harlan": {
+   "grapes": [
+    "aligote",
+    "chardonnay",
+    "pinot-noir",
+    "viognier"
+   ],
+   "quote": "Aligote, Chardonnay, Pinot noir, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Mt._Harlan_AVA"
+  },
+  "us-nine-lakes-of-east-tennessee": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "concord",
+    "merlot",
+    "niagara",
+    "petit-manseng",
+    "pinot-gris",
+    "petit-verdot",
+    "riesling",
+    "sangiovese",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Catawba, Cayuga, Chambourcin, Chardonnay, Concord, Corot noir, Cynthiana, Merlot, Noiret, Muscadine, Muscato, Niagara, Norton, Noiret, Petit Manseng, Pinot Gris, Petit Verdot, Riesling, Sangiovese, Steuben, Syrah, Touriga, Traminette, Vidal Blanc, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Nine_Lakes_of_East_Tennessee_AVA"
+  },
+  "us-northern-neck-george-washington-birthplace": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "petit-verdot",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chambourcin, Chardonnay, Merlot, Petit Verdot, Seyval blanc, Vidal Blanc, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Northern_Neck_George_Washington_Birthplace_AVA"
+  },
+  "us-oakville": {
+   "grapes": [
+    "black-muscat",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "carmenere",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "petit-verdot",
+    "durif",
+    "sangiovese",
+    "sauvignon-blanc",
+    "semillon",
+    "syrah",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Black Muscat, Cabernet Franc, Cabernet Sauvignon, Carmenere, Chardonnay, Malbec, Merlot, Muscat Canelli, Petit Verdot, Petite Sirah, Sangiovese, Sauvignon Blanc, Semillon, Syrah/Shiraz, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Oakville_AVA"
+  },
+  "us-outer-coastal-plain": {
+   "grapes": [
+    "albarino",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "muscat-ottonel",
+    "niagara",
+    "petit-verdot",
+    "pinot-gris",
+    "riesling",
+    "rkatsiteli",
+    "sangiovese",
+    "syrah",
+    "tinta-cao",
+    "touriga-nacional",
+    "trebbiano",
+    "viognier"
+   ],
+   "quote": "Albarino, Cabernet Franc, Cabernet Sauvignon, Cayuga. Chambourcin, Chardonnay, Fredonia, Ives Noir, Lemberger, Malbec, Merlot, Muscat Ottonel, Niagara, Petit Verdot, Pinot Gris/Grigio, Riesling, Rkatsiteli, Sangiovese, Seyval Blanc, Syrah/Shiraz, Tinta Cao, Touriga Nacional, Traminette, Trebbiano, Vidal Blanc, Vignoles/Ravat, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Outer_Coastal_Plain_AVA"
+  },
+  "us-ozark-mountain": {
+   "grapes": [
+    "concord"
+   ],
+   "quote": "Catawba, Chambourcin, Chardonel, Concord, Norton, St. Vincent, Vidal blanc, Vignoles, Villard noir",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Ozark_Mountain_AVA"
+  },
+  "us-pacheco-pass": {
+   "grapes": [
+    "black-muscat",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "gewurztraminer",
+    "merlot",
+    "zinfandel"
+   ],
+   "quote": "Black Muscat, Cabernet Sauvignon, Chardonnay, Gewurztraminer, Merlot, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Pacheco_Pass_AVA"
+  },
+  "us-paso-robles-estrella-district": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "grenache",
+    "merlot",
+    "mourvedre",
+    "syrah"
+   ],
+   "quote": "Cabernet Sauvignon, Grenache, Merlot, Mourvèdre, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_Estrella_District_AVA"
+  },
+  "us-paso-robles-geneseo-district": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "grenache",
+    "merlot",
+    "mourvedre",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Grenache, Merlot, Mourvèdre, Syrah, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_Geneseo_District_AVA"
+  },
+  "us-paso-robles-highlands-district": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chenin-blanc",
+    "durif",
+    "syrah"
+   ],
+   "quote": "Cabernet Sauvignon, Chenin Blanc, Petite Sirah, Syrah, Valdigue",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_Highlands_District_AVA"
+  },
+  "us-paso-robles-willow-creek-district": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chenin-blanc",
+    "grenache-blanc",
+    "marsanne",
+    "mourvedre",
+    "durif",
+    "roussanne",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Chenin Blanc, Grenache Blanc,Marsanne, Mourvedre, Petite Sirah, Roussanne, Syrah, Valdigue, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_Willow_Creek_District_AVA"
+  },
+  "us-paulsell-valley": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "durif",
+    "petit-verdot"
+   ],
+   "quote": "Cabernet Sauvignon, Petite Sirah, Petit Verdot, Teroldego",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Paulsell_Valley_AVA"
+  },
+  "us-ramona-valley": {
+   "grapes": [
+    "albarino",
+    "barbera",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "carignan",
+    "chardonnay",
+    "grenache-blanc",
+    "grenache",
+    "malbec",
+    "mourvedre",
+    "merlot",
+    "petit-verdot",
+    "durif",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "tempranillo",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Albariño, Barbera, Cabernet Franc, Cabernet Sauvignon, Carignane, Chardonnay, Garnacha Blanca, Grenache, Malbec, Mataro, Merlot, Monastrell, Mouvedre, Muscat Canelli, Petit Verdot, Petite Sirah, Sangiovese, Sauvignon Blanc, Syrah, Shiraz, Tempranillo, Valdepenas, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Ramona_Valley_AVA"
+  },
+  "us-rattlesnake-hills": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "chenin-blanc",
+    "gewurztraminer",
+    "grenache",
+    "malbec",
+    "merlot",
+    "mourvedre",
+    "durif",
+    "riesling",
+    "semillon",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Chenin blanc, Gewurztraminer, Grenache, Malbec, Merlot, Mourvèdre, Muscat Canelli, Petite Sirah, Riesling, Semillon, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rattlesnake_Hills_AVA"
+  },
+  "us-red-hill-douglas-county-oregon": {
+   "grapes": [
+    "chardonnay",
+    "gewurztraminer",
+    "pinot-blanc",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "syrah",
+    "tempranillo",
+    "zinfandel"
+   ],
+   "quote": "Baco Noir, Chardonnay, Gewürztraminer, Muscat, Pinot Blanc, Pinot Gris, Pinot Noir, Riesling, Syrah, Tempranillo, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Red_Hill_Douglas_County_AVA"
+  },
+  "us-redwood-valley": {
+   "grapes": [
+    "barbera",
+    "cabernet-sauvignon",
+    "carignan",
+    "chardonnay",
+    "merlot",
+    "durif",
+    "pinot-noir",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Barbera, Cabernet Sauvignon, Carignane, Charbono, Chardonnay, Merlot, Petite Sirah, Pinot Noir, Sangiovese, Sauvignon Blanc, Syrah, Valdiguie, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Redwood_Valley_AVA"
+  },
+  "us-rockpile": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "malbec",
+    "durif",
+    "pinot-noir",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Malbec, Petite Sirah, Pinot Noir, Syrah, Shiraz, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rockpile_AVA"
+  },
+  "us-rocky-reach": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "cabernet-franc",
+    "grenache",
+    "malbec",
+    "carmenere",
+    "mourvedre",
+    "merlot",
+    "sauvignon-blanc",
+    "semillon",
+    "marsanne",
+    "viognier",
+    "muscat-blanc-a-petits-grains",
+    "syrah"
+   ],
+   "quote": "Cabernet Sauvignon, Cabernet Franc, Grenache, Malbec, Carmenere, Mourvedre, Merlot, Sauvignon Blanc, Semillon, Marsanne, Rousanne, Viognier, Muscat Blanc à Petits Grains, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rocky_Reach_AVA"
+  },
+  "us-royal-slope": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "merlot",
+    "riesling",
+    "syrah"
+   ],
+   "quote": "Cabernet Franc, Chardonnay, Merlot, Riesling, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Royal_Slope_AVA"
+  },
+  "us-san-benito": {
+   "grapes": [
+    "barbera",
+    "chardonnay",
+    "grenache",
+    "merlot",
+    "mourvedre",
+    "syrah",
+    "tempranillo"
+   ],
+   "quote": "Barbera, Chardonnay, Grenache, Merlot, Mourvedre, Syrah, Tempranillo",
+   "sourceUrl": "https://en.wikipedia.org/wiki/San_Benito_AVA"
+  },
+  "us-san-bernabe": {
+   "grapes": [
+    "chardonnay",
+    "pinot-noir",
+    "riesling",
+    "cabernet-sauvignon",
+    "merlot"
+   ],
+   "quote": "Chardonnay, Pinot Noir, Riesling, Cabernet Sauvignon and Merlot",
+   "sourceUrl": "https://en.wikipedia.org/wiki/San_Bernabe_AVA"
+  },
+  "us-san-francisco-bay": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "cabernet-franc",
+    "chardonnay",
+    "grenache",
+    "mourvedre",
+    "durif",
+    "pinot-noir",
+    "riesling",
+    "sangiovese",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Cabernet Franc, Chardonnay, Grenache, Mourvedre, Petite Sirah, Pinot Noir, Riesling, Sangiovese, Syrah, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/San_Francisco_Bay_AVA"
+  },
+  "us-san-juan-creek": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "merlot",
+    "durif"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Merlot, Petite Sirah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/San_Juan_Creek_AVA"
+  },
+  "us-santa-clara-valley": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "carignan",
+    "chardonnay",
+    "fiano",
+    "grenache",
+    "merlot",
+    "durif",
+    "pinot-noir",
+    "riesling",
+    "roussanne",
+    "sangiovese",
+    "semillon",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Carignane, Chardonnay, Fiano, Grenache, Grignolino, Merlot, Muscat Canelli, Petite Sirah, Pinot noir, Riesling, Roussanne, Sangiovese, Semillon, Syrah, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Clara_Valley_AVA"
+  },
+  "us-shawnee-hills": {
+   "grapes": [
+    "cabernet-franc",
+    "riesling"
+   ],
+   "quote": "Cabernet Franc, Chambourcin, Chancellor, Chardonel, Frontenac, Riesling, Traminette",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Shawnee_Hills_AVA"
+  },
+  "us-shenandoah-valley": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "gewurztraminer",
+    "riesling",
+    "viognier",
+    "cabernet-sauvignon",
+    "merlot"
+   ],
+   "quote": "Cabernet Franc, Chambourcin, Chardonnay, Gewurztraminer, Riesling, Traminette, Viognier, Norton, Cabernet Sauvignon, Merlot",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Shenandoah_Valley_AVA"
+  },
+  "us-sierra-pelona-valley": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "syrah",
+    "tempranillo",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Muscat, Syrah, Tempranillo, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sierra_Pelona_Valley_AVA"
+  },
+  "us-snipes-mountain": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "cabernet-franc",
+    "chardonnay",
+    "chenin-blanc",
+    "merlot",
+    "mourvedre",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "sauvignon-blanc",
+    "semillon",
+    "syrah"
+   ],
+   "quote": "Cabernet Sauvignon, Cabernet Franc, Chardonnay, Chenin Blanc, Merlot, Mourvèdre, Muscat, Pinot Gris, Pinot Noir, Riesling, Sauvignon Blanc, Semillon, Syrah",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Snipes_Mountain_AVA"
+  },
+  "us-solano-county-green-valley": {
+   "grapes": [
+    "cabernet-sauvignon",
+    "merlot",
+    "sangiovese",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Sauvignon, Merlot, Sangiovese, Syrah, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Solano_County_Green_Valley_AVA"
+  },
+  "us-sonoita": {
+   "grapes": [
+    "aglianico",
+    "albarino",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "grenache",
+    "marsanne",
+    "merlot",
+    "montepulciano",
+    "mourvedre",
+    "durif",
+    "petit-manseng",
+    "pinot-noir",
+    "riesling",
+    "sagrantino",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "tannat",
+    "tempranillo",
+    "vermentino",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Aglianico, Albarino,Counoise,Cabernet Franc, Cabernet Sauvignon, Chardonnay, Grenache, Malvasia, Marsanne, Merlot, Mission, Montepulciano, Mourvèdre, Petite Sirah, Petit Manseng, Pinot Noir, Riesling, Sagrantino, Sangiovese, Sauvignon Blanc, Syrah, Tannat, Tempranillo, Vermentino, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sonoita_AVA"
+  },
+  "us-sonoma-coast": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "gewurztraminer",
+    "marsanne",
+    "merlot",
+    "pinot-gris",
+    "pinot-meunier",
+    "pinot-noir",
+    "pinotage",
+    "roussanne",
+    "sauvignon-blanc",
+    "syrah",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Gewurztraminer, Marsanne, Merlot, Pinot gris, Pinot Meunier, Pinot noir, Pinotage, Roussanne, Sauvignon blanc, Syrah, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Coast_AVA"
+  },
+  "us-sonoma-valley": {
+   "grapes": [
+    "aleatico",
+    "alicante-bouschet",
+    "barbera",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "carignan",
+    "chardonnay",
+    "gewurztraminer",
+    "grenache",
+    "malbec",
+    "marsanne",
+    "merlot",
+    "mourvedre",
+    "muscadelle",
+    "nebbiolo",
+    "palomino",
+    "petit-verdot",
+    "durif",
+    "pinot-noir",
+    "zinfandel",
+    "riesling",
+    "roussanne",
+    "sangiovese",
+    "sauvignon-blanc",
+    "semillon",
+    "silvaner",
+    "syrah",
+    "tannat",
+    "tempranillo",
+    "viognier"
+   ],
+   "quote": "Aleatico, Alicante Bouschet, Barbera, Burger, Cabernet Franc, Cabernet Sauvignon, Carignane, Chardonnay, Gewurztraminer, Grand Noir, Grenache, Lenoir, Malbec, Marsanne, Merlot, Mourvedre, Muscadelle, Muscat Canelli, Nebbiolo, Palomino, Petit Bouschet, Petit Verdot, Petite Sirah, Pinot noir, Primitivo , Riesling, Roussanne, Sangiovese, Sauvignon Blanc, Semillon, Silvaner, Syrah, Tannat, Tempranillo, Teroldego, Trousseau Gris, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sonoma_Valley_AVA"
+  },
+  "us-south-coast": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "merlot",
+    "montepulciano",
+    "petit-verdot",
+    "durif",
+    "pinot-gris",
+    "riesling",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "tempranillo",
+    "trebbiano",
+    "viognier",
+    "zinfandel"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chardonnay, Lenoir, Merlot, Montepulciano, Muscat Canelli, Petit Verdot, Petite Sirah, Pinot gris, Riesling, Sangiovese, Sauvignon blanc, Symphony, Syrah, Tempranillo, Trebbiano, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/South_Coast_AVA"
+  },
+  "us-texas-high-plains": {
+   "grapes": [
+    "aglianico",
+    "barbera",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "chenin-blanc",
+    "cinsaut",
+    "dolcetto",
+    "gewurztraminer",
+    "grenache",
+    "malbec",
+    "marsanne",
+    "merlot",
+    "mourvedre",
+    "montepulciano",
+    "petit-verdot",
+    "pinot-noir",
+    "riesling",
+    "roussanne",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "tannat",
+    "tempranillo",
+    "touriga-nacional",
+    "zinfandel"
+   ],
+   "quote": "Aglianico, Barbera, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Chenin blanc, Cinsault, Dolcetto, Gewurztraminer, Grenache, Malbec, Marsanne, Merlot, Mourvèdre, Mataro, Montepulciano, Muscat Canelli, Orange Muscat, Petit Verdot, Pinot noir,Riesling, Roussanne, Sangiovese, Sauvignon Blanc, Syrah, Tannat, Tempranillo, Touriga Nacional, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Texas_High_Plains_AVA"
+  },
+  "us-texoma": {
+   "grapes": [
+    "albarino",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "graciano",
+    "grenache",
+    "merlot",
+    "mourvedre",
+    "petit-verdot",
+    "pinot-noir",
+    "roussanne",
+    "syrah",
+    "tempranillo",
+    "viognier"
+   ],
+   "quote": "Albariño, Cabernet Sauvignon, Chardonnay, Graciano, Grenache, Merlot, Mourvèdre, Petit Verdot, Picpoul Blanc, Pinot Noir, Roussanne, Syrah, Tempranillo, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Texoma_AVA"
+  },
+  "us-the-rocks-district-of-milton-freewater": {
+   "grapes": [
+    "cabernet-franc",
+    "grenache",
+    "malbec",
+    "syrah",
+    "tempranillo",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Grenache, Malbec, Syrah, Tempranillo, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/The_Rocks_District_of_Milton-Freewater_AVA"
+  },
+  "us-tip-of-the-mitt": {
+   "grapes": [
+    "auxerrois-blanc",
+    "cabernet-franc",
+    "chardonnay",
+    "dolcetto",
+    "gamay",
+    "gewurztraminer",
+    "malbec",
+    "merlot",
+    "muscat-ottonel",
+    "pinot-blanc",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling"
+   ],
+   "quote": "Aurore, Auxerrois, Bianca, Cabernet Franc, Chambourcin, Cayuga, Chardonnay, De Chaunac, Dolcetto, Frontenac, Gamay noir, Gewurztraminer, Lemberger, Leon Millot, Malbec, Marquette, Marechal Foch, Merlot, Muscat Ottonel, Pinot Blanc, Pinot Gris, Pinot Noir, Riesling, Seyval Blanc, Traminette, Vignoles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tip_of_the_Mitt_AVA"
+  },
+  "us-trinity-lakes": {
+   "grapes": [
+    "blaufrankisch",
+    "chardonnay",
+    "gewurztraminer",
+    "merlot",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling"
+   ],
+   "quote": "Blaufrankisch, Chardonnay, Gewurztraminer, Lemberger, Merlot, Pinot Gris, Pinot Noir and Riesling",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Trinity_Lakes_AVA"
+  },
+  "us-tryon-foothills": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "petit-manseng",
+    "petit-verdot",
+    "sauvignon-blanc",
+    "tannat",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Chambourcin, Chardonnay, Malbec, Malvasia, Merlot, Muscadine, Muscat, Petit Manseng, Petit Verdot, Sauvignon Blanc, Tannat, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tryon_Foothills_AVA"
+  },
+  "us-tualatin-hills": {
+   "grapes": [
+    "chardonnay",
+    "pinot-noir"
+   ],
+   "quote": "Chardonnay, Pinot Noir",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tualatin_Hills_AVA"
+  },
+  "us-ulupalakua": {
+   "grapes": [
+    "chenin-blanc",
+    "gewurztraminer",
+    "grenache",
+    "malbec",
+    "syrah",
+    "durif",
+    "viognier"
+   ],
+   "quote": "Chenin Blanc, Gewurztraminer, Grenache, Malbec, Syrah, Petite Sirah and Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Ulupalakua_AVA"
+  },
+  "us-upper-cumberland": {
+   "grapes": [
+    "chardonnay",
+    "concord",
+    "cabernet-sauvignon",
+    "merlot",
+    "niagara",
+    "pinot-gris",
+    "riesling",
+    "zinfandel"
+   ],
+   "quote": "Chardonnay, Concord, Cabernet Sauvignon, Merlot, Muscadine, Niagara, Pinot Gris, Riesling, Vidal Blanc, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Upper_Cumberland_AVA"
+  },
+  "us-van-duzer-corridor": {
+   "grapes": [
+    "chardonnay",
+    "pinot-blanc",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "sauvignon-blanc",
+    "viognier",
+    "zweigelt"
+   ],
+   "quote": "Chardonnay, Pinot Blanc, Pinot Gris, Pinot Noir, Riesling, Sauvignon Blanc, Viognier, Zweigelt)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Van_Duzer_Corridor_AVA"
+  },
+  "us-virginia-peninsula": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "merlot",
+    "petit-manseng",
+    "riesling",
+    "tannat",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Chambourcin, Chardonnay, Merlot, Norton, Petite Verdot, Petit Manseng, Riesling, Tannat, Vidal Blanc and Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Virginia_Peninsula_AVA"
+  },
+  "us-warren-hills": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "pinot-noir"
+   ],
+   "quote": "Cabernet Franc, Cayuga, Chardonnay, Léon Millot, Pinot Noir, Seyval Blanc",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Warren_Hills_AVA"
+  },
+  "us-western-connecticut-highlands": {
+   "grapes": [
+    "cabernet-franc",
+    "chardonnay",
+    "merlot",
+    "pinot-noir"
+   ],
+   "quote": "Aurora, Cabernet Franc, Cayuga, Chambourcin, Chardonnay, Foch, Léon Millot, Merlot, Pinot Noir, Seyval Blanc and Vidal Blanc",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Western_Connecticut_Highlands_AVA"
+  },
+  "us-wisconsin-ledge": {
+   "grapes": [
+    "niagara"
+   ],
+   "quote": "Brianna, Edelweiss, Frontenac, La Crescent, Maréchal Foch, Marquette, Niagara, Petite Pearl, Seyval Blanc, St. Croix, St. Pepin",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Wisconsin_Ledge_AVA"
+  },
+  "us-yadkin-valley": {
+   "grapes": [
+    "aleatico",
+    "barbera",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "montepulciano",
+    "nebbiolo",
+    "niagara",
+    "petit-verdot",
+    "pinot-gris",
+    "pinot-noir",
+    "riesling",
+    "sangiovese",
+    "sauvignon-blanc",
+    "syrah",
+    "vermentino",
+    "viognier"
+   ],
+   "quote": "Aleatico, Barbera, Cabernet Franc, Cabernet Sauvignon, Chambourcin, Chardonnay, Malbec, Malvasia, Merlot, Montepulciano, Muscat Canelli, Nebbiolo, Niagara, Petit Verdot, Pinot gris, Pinot noir, Riesling, Sangiovese, Vidal Blanc, Traminette, Cynthiana/Norton, Sauvignon blanc, Seyval blanc, Syrah, Vermentino, Viognier",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Yadkin_Valley_AVA"
+  },
+  "us-yorkville-highlands": {
+   "grapes": [
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "carmenere",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "petit-verdot",
+    "durif",
+    "pinot-noir",
+    "zinfandel",
+    "sauvignon-blanc",
+    "semillon",
+    "syrah",
+    "viognier"
+   ],
+   "quote": "Cabernet Franc, Cabernet Sauvignon, Carmenere, Chardonnay, Malbec, Merlot, Petit Verdot, Petite Sirah, Pinot noir, Primitivo, Sauvignon blanc, Semillon, Symphony, Syrah, Viognier, Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Yorkville_Highlands_AVA"
+  },
+  "us-yucaipa-valley": {
+   "grapes": [
+    "barbera",
+    "cabernet-franc",
+    "cabernet-sauvignon",
+    "chardonnay",
+    "malbec",
+    "merlot",
+    "nebbiolo",
+    "durif",
+    "sangiovese",
+    "syrah",
+    "zinfandel"
+   ],
+   "quote": "Barbera, Cabernet Franc, Cabernet Sauvignon, Chardonnay, Malbec, Merlot, Nebbiolo, Petite Sirah, Sangiovese, Syrah and Zinfandel",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Yucaipa_Valley_AVA"
+  }
+ }
+}

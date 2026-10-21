@@ -389,6 +389,11 @@ Every few months, or when a register announces a name:
   reading in `grape-readings.json` names its volume (`source`), its quote is
   checked against that volume's text, and the fact links the scan.
 
+- **The grapes line of a region's English Wikipedia infobox**
+  (`region-infobox-grapes.json`, `pnpm kb:fetch-region-infobox-grapes`):
+  for names nothing else gives varieties for, the line as a reader sees it,
+  each name matched to a library grape; CC BY-SA 4.0.
+
 - **Swiss cantonal wine laws** (`ch-cantonal-grapes.json`): the varieties
   a canton's law authorises in its AOC, where no register lists them —
   Geneva's «Règlement sur la vigne et les vins» (RSG M 2 50.05), annex, for
