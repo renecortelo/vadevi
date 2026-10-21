@@ -1804,6 +1804,43 @@ for (const [id, found] of Object.entries(regionSentences.regions)) {
 }
 console.info(`  ${fromRegionArticles} grape links from regions' own articles.`);
 
+// Swiss names whose canton's own wine law lists the varieties authorised in
+// its AOC (`data/kb/ch-cantonal-grapes.json`): each list's quote must stand in
+// the law's text as cached in `.kb-cache/ch-law/`.
+const cantonal = JSON.parse(readFileSync(resolve("data/kb/ch-cantonal-grapes.json"), "utf8")) as {
+  laws: Record<string, { cache: string; encoding?: BufferEncoding; sourceUrl: string }>;
+  regions: Record<string, { law: string; lists: { grapes: string[]; quote: string }[] }>;
+};
+let fromCantonalLaw = 0;
+for (const [id, { law, lists }] of Object.entries(cantonal.regions)) {
+  const entry = entryById.get(id);
+  if (entry === undefined) throw new Error(`ch-cantonal-grapes: no name ${id}`);
+  const source = cantonal.laws[law];
+  if (source === undefined) throw new Error(`ch-cantonal-grapes: no law ${law}`);
+  const path = resolve(".kb-cache/ch-law", source.cache);
+  if (!existsSync(path)) continue;
+  const text = readFileSync(path, source.encoding ?? "utf8")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&([a-z]+|#\d+);/gi, (entity: string, name: string) =>
+      name.startsWith("#")
+        ? String.fromCharCode(Number(name.slice(1)))
+        : (({ amp: "&", gt: ">", lt: "<", nbsp: " ", quot: '"' } as Record<string, string>)[name] ??
+          entity),
+    )
+    .replace(/\s+/g, " ");
+  for (const { grapes: listed, quote } of lists) {
+    if (!text.includes(quote)) throw new Error(`ch-cantonal-grapes: ${id}'s list is not in ${law}`);
+    for (const grapeId of listed) {
+      if (!grapeIds.has(grapeId)) throw new Error(`ch-cantonal-grapes: no grape ${grapeId}`);
+      if (entry.grapes.some((known) => known.grapeId === grapeId)) continue;
+      entry.grapes.push({ grapeId, quote, sourceUrl: source.sourceUrl });
+      fromCantonalLaw += 1;
+      links += 1;
+    }
+  }
+}
+console.info(`  ${fromCantonalLaw} grape links from Swiss cantonal wine laws.`);
+
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;
 const withPoint = entries.filter((entry) => entry.latitude !== null).length;

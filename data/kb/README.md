@@ -389,6 +389,13 @@ Every few months, or when a register announces a name:
   reading in `grape-readings.json` names its volume (`source`), its quote is
   checked against that volume's text, and the fact links the scan.
 
+- **Swiss cantonal wine laws** (`ch-cantonal-grapes.json`): the varieties
+  a canton's law authorises in its AOC, where no register lists them —
+  Geneva's «Règlement sur la vigne et les vins» (RSG M 2 50.05), annex, for
+  the AOC Genève and its 22 premiers crus. Official texts, free to reuse
+  (Swiss Copyright Act, art. 5); each list's quote is checked against the
+  law's text cached in `.kb-cache/ch-law/`.
+
 - **Figures in the body of a name's Wikipedia article**
   (`region-text-figures.json`, articles cached by `pnpm
 kb:fetch-region-articles`): area and production where the infobox gives

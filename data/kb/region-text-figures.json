@@ -379,6 +379,14 @@
     "year": "2019"
    }
   },
+  "it-brunello-di-montalcino": {
+   "production": {
+    "amount": 69247.0,
+    "quote": "Im Jahr 2017 wurden 69.247 hl Brunello di Montalcino produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Brunello_di_Montalcino",
+    "year": "2017"
+   }
+  },
   "it-cannonau-di-sardegna": {
    "planted": {
     "amount": 1789.0,

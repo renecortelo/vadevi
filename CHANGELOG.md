@@ -45,6 +45,11 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Geneva's varieties**: the AOC Genève and its 22 premiers crus list the
+  grapes Geneva's wine law authorises in them (its annex: Chasselas,
+  Gamay, Pinot Noir, Gamaret, Merlot and 25 more), each name mapped by hand
+  — «muscat», «auxerrois» and «arvine», which could be more than one of the
+  library's grapes, left out. On the sources page.
 - **Grapes of seven more names from their whole articles**: Drôme (its
   specification's main varieties), Puget Sound, Naches Heights (the
   varieties «currently grown»), San Miguel, Templeton Gap, San Luis Rey and

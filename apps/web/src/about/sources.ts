@@ -38,7 +38,8 @@ export type Source = {
     | "points"
     | "registerNames"
     | "summaries"
-    | "traits";
+    | "traits"
+    | "varieties";
 };
 
 export const sourceGroups: SourceGroup[] = [
@@ -179,6 +180,13 @@ export const sources: Source[] = [
     name: "Sakpatenti · AGEPI",
     url: "https://www.sakpatenti.gov.ge/en/state_registry/",
     what: "registerNames",
+  },
+  {
+    group: "registers",
+    terms: "officialFacts",
+    name: "Règlement sur la vigne et les vins de Genève (RSG M 2 50.05)",
+    url: "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm",
+    what: "varieties",
   },
   {
     group: "figures",

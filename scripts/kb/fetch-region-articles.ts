@@ -13,7 +13,12 @@ import { wikimedia } from "./wikimedia";
  * `data/kb/region-text-figures.json`. An article already cached is kept.
  * Serial, one request at a time.
  *
- * Usage: pnpm kb:fetch-region-articles
+ * With `--every`, also the articles its Wikidata item links in the languages
+ * whose articles give figures in their text (German, French, Italian,
+ * Spanish, Portuguese, Catalan, Dutch, English) — the German Wikipedia
+ * describes almost every Italian DOC on its own page.
+ *
+ * Usage: pnpm kb:fetch-region-articles [--every]
  */
 type Entry = {
   figures?: { planted: unknown; production: unknown } | null;
@@ -27,17 +32,55 @@ const entries = JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "u
 
 type Pages = { query?: { pages?: Record<string, { extract?: string; title: string }> } };
 
+const every = process.argv.includes("--every");
+const languages = ["de", "fr", "it", "es", "pt", "ca", "nl", "en"];
+const wanting = entries.filter(
+  (entry) => entry.wikidataId !== null && !(entry.figures?.planted && entry.figures.production),
+);
+// Each wanting item's articles in those languages, from Wikidata.
+const linked = new Map<string, Record<string, string>>();
+if (every) {
+  const items = wanting.map((entry) => entry.wikidataId!);
+  for (let start = 0; start < items.length; start += 50) {
+    const response = await wikimedia<{
+      entities?: Record<string, { sitelinks?: Record<string, { title: string }> }>;
+    }>(
+      `https://www.wikidata.org/w/api.php?${new URLSearchParams({
+        action: "wbgetentities",
+        format: "json",
+        ids: items.slice(start, start + 50).join("|"),
+        props: "sitelinks",
+        sitefilter: languages.map((lang) => `${lang}wiki`).join("|"),
+      })}`,
+    );
+    for (const [item, entity] of Object.entries(response.entities ?? {})) {
+      linked.set(
+        item,
+        Object.fromEntries(
+          Object.entries(entity.sitelinks ?? {}).map(([site, link]) => [
+            site.slice(0, -"wiki".length),
+            link.title,
+          ]),
+        ),
+      );
+    }
+  }
+}
+
 let fetched = 0;
 let kept = 0;
-for (const entry of entries) {
-  if (entry.wikidataId === null) continue;
-  if (entry.figures?.planted && entry.figures.production) continue;
+for (const entry of wanting) {
+  const titles = new Map<string, string>();
   for (const summary of Object.values(entry.summaries)) {
     if (summary.translated === true || summary.url === undefined) continue;
     const match = /^https:\/\/([a-z-]+)\.wikipedia\.org\/wiki\/(.+)$/.exec(summary.url);
-    if (match === null) continue;
-    const [, lang, encoded] = match;
-    const path = resolve(folder, `${entry.wikidataId}.${lang}.json`);
+    if (match !== null) titles.set(match[1]!, decodeURIComponent(match[2]!).replaceAll("_", " "));
+  }
+  for (const [lang, title] of Object.entries(linked.get(entry.wikidataId!) ?? {})) {
+    if (!titles.has(lang)) titles.set(lang, title);
+  }
+  for (const [lang, title] of titles) {
+    const path = resolve(folder, `${entry.wikidataId!}.${lang}.json`);
     if (existsSync(path)) {
       kept += 1;
       continue;
@@ -48,7 +91,7 @@ for (const entry of entries) {
       format: "json",
       prop: "extracts",
       redirects: "1",
-      titles: decodeURIComponent(encoded!).replaceAll("_", " "),
+      titles: title,
     })}`;
     const page = Object.values((await wikimedia<Pages>(url)).query?.pages ?? {})[0];
     if (page?.extract === undefined || page.extract.length < 200) continue;
