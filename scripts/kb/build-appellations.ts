@@ -1674,6 +1674,54 @@ for (const entry of entries) {
   };
   italianRegional += 1;
 }
+// Area and production a name's own Wikipedia article gives in its text rather
+// than its infobox («Im Jahr 2017 wurden von 908 Hektar Rebfläche 35.859
+// Hektoliter DOC-Wein erzeugt»), read from the article's sentences
+// (`data/kb/region-text-figures.json`) where nothing else gives one, or where
+// another article's figure is older. Each
+// quote must stand in the article as `fetch-region-articles.ts` cached it.
+const textFigures = JSON.parse(
+  readFileSync(resolve("data/kb/region-text-figures.json"), "utf8"),
+) as {
+  regions: Record<
+    string,
+    Partial<
+      Record<
+        "planted" | "production",
+        { amount: number; quote: string; sourceUrl: string; year: string | null }
+      >
+    >
+  >;
+};
+let fromText = 0;
+for (const entry of entries) {
+  const found = textFigures.regions[entry.id];
+  if (found === undefined) continue;
+  for (const field of ["planted", "production"] as const) {
+    const figure = found[field];
+    if (figure === undefined) continue;
+    // A newer year than another article's figure takes its place; an
+    // official source's never gives way.
+    const known = entry.figures?.[field] as { publisher?: string; year?: string | null } | null;
+    const yearOf = (year: string | null | undefined) => Number(/\d{4}/.exec(year ?? "")?.[0] ?? 0);
+    if (known && (known.publisher !== undefined || yearOf(figure.year) <= yearOf(known.year))) {
+      continue;
+    }
+    const lang = /^https:\/\/([a-z-]+)\.wikipedia\.org\//.exec(figure.sourceUrl)?.[1];
+    const path = resolve(cache, "articles", `${entry.wikidataId}.${lang}.json`);
+    if (lang === undefined || !existsSync(path)) continue;
+    const { text } = JSON.parse(readFileSync(path, "utf8")) as { text: string };
+    if (!text.replace(/\s+/g, " ").includes(figure.quote)) {
+      throw new Error(`region-text-figures: ${entry.id}'s ${field} quote is not in its article`);
+    }
+    entry.figures = {
+      planted: entry.figures?.planted ?? null,
+      production: entry.figures?.production ?? null,
+      [field]: { ...figure },
+    };
+    fromText += 1;
+  }
+}
 // American Viticultural Areas with no area from Wikipedia: the acres of
 // vineyards the Federal Register rule that established each one gives, read
 // by hand (`data/kb/us-ava-figures.json`; US federal works, public domain in
@@ -1715,7 +1763,7 @@ for (const entry of entries) {
   federalRegister += 1;
 }
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany and Lombardy, ${federalRegister} American from the Federal Register.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany and Lombardy, ${fromText} from articles' text, ${federalRegister} American from the Federal Register.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

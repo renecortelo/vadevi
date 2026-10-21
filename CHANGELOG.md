@@ -45,6 +45,18 @@ has the reasons.
   again by hand: Prieto Picudo's notable acidity, Castelão's medium alcohol,
   Sémillon's weight, Poulsard's light structure; what Tannat, Pedro Ximénez
   and Scheurebe go with.
+- **Area and production from the body of each name's article**: where the
+  infobox says nothing, the sentence that does — the German articles'
+  «Im Jahr 2017 wurden von 908 Hektar Rebfläche 35.859 Hektoliter DOC-Wein
+  erzeugt», the French «La superficie plantée en vignes est de … hectares»,
+  and some eighty more read one by one (Barolo, Barbaresco, Prosecco,
+  Valpolicella, the Mosel, the Dão, the Balearic islands, Lavaux, the Paso
+  Robles districts) — 207 figures, each with its year and a link; a newer
+  one replaces an older article's (Primitivo di Manduria's 2017 for its
+  1996/97). Left out: history («at the outset», the nineteenth century), a
+  province's or a department's figure, a sum of villages, a yield, an area
+  that would mean an impossible yield, and Chile's (its national register's
+  licence was declined).
 - **Wikipedia in every language a grape is written in**: the articles of
   grapes still missing a fact, in some forty more languages (Hebrew,
   Serbian, Slovak, Occitan, Cantonese, Indonesian, Vietnamese, Persian…),

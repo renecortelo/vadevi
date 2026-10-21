@@ -1,0 +1,1629 @@
+{
+ "about": "Vineyard area (ha) and production (hl) a registered name's own Wikipedia article gives in its text rather than its infobox — chiefly the German articles' «Im Jahr 2017 wurden von 908 Hektar Rebfläche 35.859 Hektoliter DOC-Wein erzeugt» and the French «La superficie plantée en vignes est de … hectares» — each with its sentence copied as written, its year where the article gives one and a link. Only a figure about the name itself: a sentence about another wine of the zone («Classico», «Superiore») is left out, and an area that would mean an impossible yield beside the name's production (more than 200 hl/ha, or a zone's whole area) is set aside by hand. scripts/kb/build-appellations.ts checks each quote against the article cached by scripts/kb/fetch-region-articles.ts. Wikipedia text is CC BY-SA 4.0.",
+ "regions": {
+  "au-australia": {
+   "planted": {
+    "amount": 146244,
+    "quote": "Von den insgesamt 146.244 Hektar (Stand 2019) bestockter Rebfläche",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Weinbau_in_Australien",
+    "year": "2019"
+   }
+  },
+  "au-hunter-valley": {
+   "planted": {
+    "amount": 4469,
+    "quote": "In 2008, a total of 4,469 ha (11,043 acres) of wine grapes were planted in the Hunter Valley",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hunter_Valley_wine_region",
+    "year": "2008"
+   }
+  },
+  "ch-dezaley": {
+   "planted": {
+    "amount": 53.6,
+    "quote": "Ce terroir viticole de 53,6 hectares est partagé entre 133 propriétaires",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Dézaley_grand_cru",
+    "year": null
+   }
+  },
+  "ch-lavaux": {
+   "planted": {
+    "amount": 830,
+    "quote": "Lavaux consists of 830 hectares (2,100 acres) of terraced vineyards",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Lavaux",
+    "year": null
+   }
+  },
+  "de-mosel": {
+   "production": {
+    "amount": 719422,
+    "quote": "In der Region wurden 2021 719.422 hl Wein produziert.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Mosel_(Weinanbaugebiet)",
+    "year": "2021"
+   }
+  },
+  "es-bailen": {
+   "production": {
+    "amount": 466,
+    "quote": "Zuletzt wurde in der Saison 2017/2018 eine Produktion in der Statistik des spanischen Landwirtschaftsministeriums verzeichnet, wobei 466 Hektoliter von einer Kellerei abgefüllt wurden, wofür Trauben von 40 Weinbauern auf 20 Hektar angebaut wurden",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bailén_(Weinbaugebiet)",
+    "year": "2017/2018"
+   },
+   "planted": {
+    "amount": 20,
+    "quote": "Zuletzt wurde in der Saison 2017/2018 eine Produktion in der Statistik des spanischen Landwirtschaftsministeriums verzeichnet, wobei 466 Hektoliter von einer Kellerei abgefüllt wurden, wofür Trauben von 40 Weinbauern auf 20 Hektar angebaut wurden",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bailén_(Weinbaugebiet)",
+    "year": "2017/2018"
+   }
+  },
+  "es-formentera": {
+   "planted": {
+    "amount": 10,
+    "quote": "There are currently around 10 hectares of vineyards and 2 wineries (bodegas) registered with the Regulatory Council (Consejo Regulador).",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Formentera_(Vino_de_la_Tierra)",
+    "year": null
+   }
+  },
+  "es-ibiza": {
+   "planted": {
+    "amount": 35,
+    "quote": "There are currently about 35 hectares of vineyards, spread over a large part of the island and 5 wineries",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ibiza_(Vino_de_la_Tierra)",
+    "year": null
+   }
+  },
+  "es-illes-balears": {
+   "planted": {
+    "amount": 300,
+    "quote": "There are currently about 300 hectares of vineyards and 37 wineries (bodegas) registered with the Regulatory Council.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Illes_Balears_(Vino_de_la_Tierra)",
+    "year": null
+   }
+  },
+  "es-isla-de-menorca": {
+   "planted": {
+    "amount": 20,
+    "quote": "There are currently around 20 hectares of vineyards and 5 wineries (bodegas) registered with the Regulatory Council (Consejo Regulador).",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Isla_de_Menorca_(Vino_de_la_Tierra)",
+    "year": null
+   }
+  },
+  "es-laujar-alpujarra": {
+   "planted": {
+    "amount": 800,
+    "quote": "cuenta con una extensión de más 800 hectáreas de vid cultivada en bancales",
+    "sourceUrl": "https://es.wikipedia.org/wiki/Laujar-Alpujarra",
+    "year": null
+   }
+  },
+  "fr-coteaux-d-enserune": {
+   "production": {
+    "amount": 25000,
+    "quote": "Chaque année, il est vinifié un volume de 25 000 hectolitres.",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Coteaux-d'ensérune",
+    "year": null
+   }
+  },
+  "fr-coteaux-de-peyriac": {
+   "production": {
+    "amount": 80000,
+    "quote": "des coteaux-de-peyriac est de 80 000 hectolitres.",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Coteaux-de-peyriac",
+    "year": null
+   }
+  },
+  "fr-coteaux-de-tannay": {
+   "production": {
+    "amount": 730,
+    "quote": "La production moyenne est de 730 hl (moyenne depuis 2015).",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Coteaux-de-tannay",
+    "year": null
+   }
+  },
+  "fr-cotes-de-gascogne": {
+   "planted": {
+    "amount": 15000,
+    "quote": "De gehele AOC bestaat uit wijngaarden met een gezamenlijke omvang van 15.000 hectare.",
+    "sourceUrl": "https://nl.wikipedia.org/wiki/Côtes_de_Gascogne",
+    "year": null
+   }
+  },
+  "fr-cotes-de-la-charite": {
+   "production": {
+    "amount": 1580,
+    "quote": "le volume de production annuel moyen est de 1 580 hl et une dizaine de producteurs.",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Côtes-de-la-charité",
+    "year": null
+   }
+  },
+  "fr-cotes-de-thau": {
+   "production": {
+    "amount": 55000,
+    "quote": "En moyenne, la production est d'environ 55 000 hectolitres chaque année dans quatre caves coopératives et 13 exploitations particulières.",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Côtes-de-thau",
+    "year": null
+   }
+  },
+  "fr-saint-guilhem-le-desert": {
+   "production": {
+    "amount": 10000,
+    "quote": "pour une production annuelle totale de 10 000 hectolitres de vin.",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Saint-guilhem-le-désert_(IGP)",
+    "year": null
+   }
+  },
+  "fr-urfe": {
+   "production": {
+    "amount": 1000,
+    "quote": "La production actuelle, environ 1000 hl, revient essentiellement aux viticulteurs",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Urfé_(IGP)",
+    "year": null
+   }
+  },
+  "fr-vallee-du-paradis": {
+   "production": {
+    "amount": 10000,
+    "quote": "En moyenne, la production est d'environ 10 000 hectolitres chaque année.",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Vallée-du-paradis_(IGP)",
+    "year": null
+   }
+  },
+  "it-abruzzo": {
+   "planted": {
+    "amount": 260.0,
+    "quote": "Im Jahr 2019 wurden von 260 Hektar Rebfläche 21.779 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Abruzzo_DOC",
+    "year": "2019"
+   },
+   "production": {
+    "amount": 21779.0,
+    "quote": "Im Jahr 2019 wurden von 260 Hektar Rebfläche 21.779 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Abruzzo_DOC",
+    "year": "2019"
+   }
+  },
+  "it-alba": {
+   "production": {
+    "amount": 144.0,
+    "quote": "Im Jahr 2019 wurden lediglich 144 Hektoliter Qualitätswein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Alba_(Wein)",
+    "year": "2019"
+   }
+  },
+  "it-albugnano": {
+   "planted": {
+    "amount": 13.0,
+    "quote": "Im Jahr 2014 wurden auf 13 Hektar Rebfläche 823 hl Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Albugnano_(Wein)",
+    "year": "2014"
+   },
+   "production": {
+    "amount": 823.0,
+    "quote": "Im Jahr 2014 wurden auf 13 Hektar Rebfläche 823 hl Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Albugnano_(Wein)",
+    "year": "2014"
+   }
+  },
+  "it-alcamo": {
+   "planted": {
+    "amount": 238.0,
+    "quote": "Im Jahr 2017 wurden von 238 Hektar Rebfläche 13.773 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Alcamo_(Wein)",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 13773.0,
+    "quote": "Im Jahr 2017 wurden von 238 Hektar Rebfläche 13.773 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Alcamo_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-aleatico-di-gradoli": {
+   "planted": {
+    "amount": 22.0,
+    "quote": "La superficie plantée en vigne est de 22 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Aleatico_di_Gradoli",
+    "year": null
+   }
+  },
+  "it-alghero": {
+   "planted": {
+    "amount": 709.0,
+    "quote": "Im Jahr 2017 wurden von 709 Hektar Rebfläche 14.240 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Alghero_(Wein)",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 14240.0,
+    "quote": "Im Jahr 2017 wurden von 709 Hektar Rebfläche 14.240 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Alghero_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-alta-langa": {
+   "planted": {
+    "amount": 100,
+    "quote": "Die Rebfläche zum Anbau ist sehr klein, sie umfasst nur etwa 100 Hektar.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Alta_Langa",
+    "year": null
+   }
+  },
+  "it-alto-adige": {
+   "production": {
+    "amount": 350000,
+    "quote": "nell´anno 2016 con soli 5.400 ettari di superficie vitivinicola vennero prodotti 350.000 ettolitri di vino DOC",
+    "sourceUrl": "https://it.wikipedia.org/wiki/Alto_Adige_(zona_vitivinicola)",
+    "year": "2016"
+   }
+  },
+  "it-asolo-prosecco": {
+   "production": {
+    "amount": 92799.0,
+    "quote": "2017 wurden 92.799 hl DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Prosecco_Asolo",
+    "year": "2017"
+   }
+  },
+  "it-barbaresco": {
+   "production": {
+    "amount": 31446.0,
+    "quote": "Im Jahr 2017 wurden 31.446 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Barbaresco_(Wein)",
+    "year": "2017"
+   },
+   "planted": {
+    "amount": 733,
+    "quote": "The area under vine has increased dramatically over the last few decades - from 484 hectares in the early 1990s to 733 hectares in 2019.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Barbaresco",
+    "year": "2019"
+   }
+  },
+  "it-barbera-d-alba": {
+   "production": {
+    "amount": 84569.0,
+    "quote": "Im Jahr 2018 wurden insgesamt 84.569 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Barbera_d’Alba",
+    "year": "2018"
+   }
+  },
+  "it-barbera-d-asti": {
+   "production": {
+    "amount": 212667,
+    "quote": "2265 Winzer, meist im Nebenerwerb, teilen sich 2018 die Rebflächen und erzeugten 212.667 hl Barbera d’Asti.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Barbera_d’Asti",
+    "year": "2018"
+   }
+  },
+  "it-barbera-del-monferrato": {
+   "planted": {
+    "amount": 2396.0,
+    "quote": "La superficie plantée en vignes est de 2 396 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Barbera_del_Monferrato_(DOC)",
+    "year": null
+   },
+   "production": {
+    "amount": 43118,
+    "quote": "2019 wurden 43.118 hl Barbera del Monferrato",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Barbera_del_Monferrato",
+    "year": "2019"
+   }
+  },
+  "it-barolo": {
+   "planted": {
+    "amount": 1734,
+    "quote": "Between 1990 and 2004 there was a 47% increase in nebbiolo plantings in the Barolo zone with 1,734 ha (4,285 acres) under vine.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Barolo",
+    "year": "2004"
+   }
+  },
+  "it-bianchello-del-metauro": {
+   "production": {
+    "amount": 11242.0,
+    "quote": "Im Jahr 2017 wurden 11.242 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bianchello_del_Metauro",
+    "year": "2017"
+   }
+  },
+  "it-bianco-di-pitigliano": {
+   "planted": {
+    "amount": 187.0,
+    "quote": "Im Jahr 2016 wurden von 187 ha Rebfläche 16.061 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bianco_di_Pitigliano",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 16061.0,
+    "quote": "Im Jahr 2016 wurden von 187 ha Rebfläche 16.061 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bianco_di_Pitigliano",
+    "year": "2016"
+   }
+  },
+  "it-boca": {
+   "planted": {
+    "amount": 17.3,
+    "quote": "2019 wurden in dem kleinen Anbaugebiet (17,3 ha) 569 Hektoliter Weine der Denomination produziert.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Boca_(Wein)",
+    "year": "2019"
+   },
+   "production": {
+    "amount": 569,
+    "quote": "2019 wurden in dem kleinen Anbaugebiet (17,3 ha) 569 Hektoliter Weine der Denomination produziert.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Boca_(Wein)",
+    "year": "2019"
+   }
+  },
+  "it-bolgheri": {
+   "planted": {
+    "amount": 999.0,
+    "quote": "2016 wurden von 999 ha Rebfläche 57.978 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bolgheri_(Wein)",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 57978.0,
+    "quote": "2016 wurden von 999 ha Rebfläche 57.978 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bolgheri_(Wein)",
+    "year": "2016"
+   }
+  },
+  "it-brachetto-d-acqui": {
+   "planted": {
+    "amount": 403.0,
+    "quote": "Im Jahr 2019 wurden von 403 ha Rebfläche 22.593 Hektoliter DOCG-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Brachetto_d’Acqui",
+    "year": "2019"
+   },
+   "production": {
+    "amount": 22593.0,
+    "quote": "Im Jahr 2019 wurden von 403 ha Rebfläche 22.593 Hektoliter DOCG-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Brachetto_d’Acqui",
+    "year": "2019"
+   }
+  },
+  "it-cannonau-di-sardegna": {
+   "planted": {
+    "amount": 1789.0,
+    "quote": "Im Jahr 2018 wurden von 1.789 Hektar Rebfläche 60.287 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cannonau_di_Sardegna",
+    "year": "2018"
+   },
+   "production": {
+    "amount": 60287.0,
+    "quote": "Im Jahr 2018 wurden von 1.789 Hektar Rebfläche 60.287 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cannonau_di_Sardegna",
+    "year": "2018"
+   }
+  },
+  "it-carmignano": {
+   "production": {
+    "amount": 2700,
+    "quote": "The Carmignano DOCG zones covers roughly 270 acres (110 ha) of planted land producing nearly 71,500 gallons (2,700 hl) of DOCG wine a year.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Carmignano_DOCG",
+    "year": null
+   }
+  },
+  "it-carso": {
+   "production": {
+    "amount": 1080,
+    "quote": "It has produced 1, 080 hl total 2013/2014",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Carso_DOC",
+    "year": "2013/2014"
+   }
+  },
+  "it-castel-del-monte": {
+   "production": {
+    "amount": 29406.0,
+    "quote": "Im Jahr 2020 wurden dort 29.406 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Castel_del_Monte_(DOC-Wein)",
+    "year": "2020"
+   }
+  },
+  "it-castel-del-monte-bombino-nero": {
+   "production": {
+    "amount": 2159.0,
+    "quote": "Im Jahr 2017 wurden lediglich 2.159 hl DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Castel_del_Monte_Bombino_Nero",
+    "year": "2017"
+   }
+  },
+  "it-castel-del-monte-nero-di-troia-riserva": {
+   "production": {
+    "amount": 2939.0,
+    "quote": "Im Jahr 2017 wurden lediglich 2.939 hl DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Castel_del_Monte_Nero_di_Troia_Riserva",
+    "year": "2017"
+   }
+  },
+  "it-castel-del-monte-rosso-riserva": {
+   "production": {
+    "amount": 3873.0,
+    "quote": "Im Jahr 2017 wurden lediglich 3.873 hl DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Castel_del_Monte_Rosso_Riserva",
+    "year": "2017"
+   }
+  },
+  "it-cerasuolo-d-abruzzo": {
+   "planted": {
+    "amount": 970.0,
+    "quote": "Im Jahr 2017 wurden von 970 Hektar Rebfläche 84.324 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cerasuolo_d’Abruzzo",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 84324.0,
+    "quote": "Im Jahr 2017 wurden von 970 Hektar Rebfläche 84.324 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cerasuolo_d’Abruzzo",
+    "year": "2017"
+   }
+  },
+  "it-chianti": {
+   "planted": {
+    "amount": 14266.0,
+    "quote": "Im Jahr 2016 wurden von 14.266 ha Rebfläche 835.089 hl Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Chianti_(Wein)",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 835089.0,
+    "quote": "Im Jahr 2016 wurden von 14.266 ha Rebfläche 835.089 hl Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Chianti_(Wein)",
+    "year": "2016"
+   }
+  },
+  "it-ciro": {
+   "production": {
+    "amount": 36959.0,
+    "quote": "Im Jahr 2017 wurden 36.959 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cirò_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-cisterna-d-asti": {
+   "production": {
+    "amount": 426,
+    "quote": "Im Jahr 2019 sind von 12 Erzeugern insgesamt 426 hl dieser Denomination produziert worden.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cisterna_d’Asti_(Wein)",
+    "year": "2019"
+   }
+  },
+  "it-colli-berici": {
+   "production": {
+    "amount": 13503.0,
+    "quote": "Im Jahr 2017 wurden 13.503 Hektoliter DOC-Wein auf Flaschen gezogen",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Colli_Berici",
+    "year": "2017"
+   }
+  },
+  "it-colli-bolognesi-pignoletto": {
+   "planted": {
+    "amount": 624.0,
+    "quote": "La superficie plantée en vigne est de 624 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Colli_Bolognesi_Pignoletto",
+    "year": null
+   }
+  },
+  "it-colli-di-scandiano-e-di-canossa": {
+   "production": {
+    "amount": 24101.0,
+    "quote": "Im Jahr 2017 wurden 24.101 hl DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Colli_di_Scandiano_e_di_Canossa",
+    "year": "2017"
+   }
+  },
+  "it-colli-euganei-fior-d-arancio": {
+   "production": {
+    "amount": 9041.0,
+    "quote": "Im Jahr 2017 wurden 9.041 hl DOCG-Wein hergestellt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Colli_Euganei_Fior_d’Arancio",
+    "year": "2017"
+   }
+  },
+  "it-colli-piacentini": {
+   "production": {
+    "amount": 72834.0,
+    "quote": "Im Jahr 2017 wurden 72.834 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Colli_Piacentini",
+    "year": "2017"
+   }
+  },
+  "it-colli-tortonesi": {
+   "production": {
+    "amount": 17284.0,
+    "quote": "Im Jahr 2019 wurden 17.284 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Colli_Tortonesi",
+    "year": "2019"
+   }
+  },
+  "it-colline-novaresi": {
+   "production": {
+    "amount": 10284,
+    "quote": "Im Jahr 2019 wurden innerhalb der Denomination 10.284 Hektoliter DOC-Wein erzeugt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Colline_Novaresi_(Wein)",
+    "year": "2019"
+   }
+  },
+  "it-colline-saluzzesi": {
+   "planted": {
+    "amount": 3.93,
+    "quote": "La superficie plantée en vignes est de 3,93 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Colline_Saluzzesi",
+    "year": null
+   }
+  },
+  "it-conegliano-valdobbiadene-prosecco": {
+   "production": {
+    "amount": 683154,
+    "quote": "2017 erzeugten 3388 Winzer 683.154 Hektoliter Wein.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Prosecco_di_Conegliano_Valdobbiadene",
+    "year": "2017"
+   }
+  },
+  "it-cortese-dell-alto-monferrato": {
+   "planted": {
+    "amount": 714.3,
+    "quote": "La superficie planté en vigne est de 714.30 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Cortese_dell'Alto_Monferrato",
+    "year": null
+   },
+   "production": {
+    "amount": 16879.0,
+    "quote": "2019 wurden insgesamt 16.879 Hektoliter DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cortese_dell’Alto_Monferrato",
+    "year": "2019"
+   }
+  },
+  "it-curtefranca": {
+   "planted": {
+    "amount": 142.0,
+    "quote": "Im Jahr 2016 wurden von 142 Hektar Rebfläche 9.936 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Curtefranca",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 9936.0,
+    "quote": "Im Jahr 2016 wurden von 142 Hektar Rebfläche 9.936 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Curtefranca",
+    "year": "2016"
+   }
+  },
+  "it-custoza": {
+   "planted": {
+    "amount": 1345.0,
+    "quote": "2014 wurden auf 1.345 ha Rebfläche 111.685 Hektoliter Weißwein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bianco_di_Custoza",
+    "year": "2014"
+   },
+   "production": {
+    "amount": 111685.0,
+    "quote": "2014 wurden auf 1.345 ha Rebfläche 111.685 Hektoliter Weißwein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Bianco_di_Custoza",
+    "year": "2014"
+   }
+  },
+  "it-dogliani": {
+   "production": {
+    "amount": 22837.0,
+    "quote": "Im Jahr 2019 wurden 22.837 Hektoliter Qualitätswein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Dolcetto_di_Dogliani",
+    "year": "2019"
+   }
+  },
+  "it-dolcetto-d-acqui": {
+   "production": {
+    "amount": 11065.0,
+    "quote": "Im Jahr 2016 wurden 11.065 hl des DOC-Weins erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Dolcetto_d’Acqui",
+    "year": "2016"
+   },
+   "planted": {
+    "amount": 447.0,
+    "quote": "La superficie plantée en vignes est de 447 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Dolcetto_d'Acqui",
+    "year": null
+   }
+  },
+  "it-dolcetto-d-alba": {
+   "production": {
+    "amount": 40889.0,
+    "quote": "Im Jahr 2019 wurden 40.889 Hektoliter des DOC-Weins produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Dolcetto_d’Alba",
+    "year": "2019"
+   }
+  },
+  "it-dolcetto-d-asti": {
+   "planted": {
+    "amount": 199.0,
+    "quote": "La superficie plantée en vignes est de 199 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Dolcetto_d'Asti",
+    "year": null
+   }
+  },
+  "it-dolcetto-di-diano-d-alba": {
+   "planted": {
+    "amount": 283.0,
+    "quote": "La superficie plantée en vignes est de 283 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Dolcetto_di_Diano_d'Alba",
+    "year": null
+   }
+  },
+  "it-dolcetto-di-ovada": {
+   "planted": {
+    "amount": 979.0,
+    "quote": "La superficie plantée en vignes est de 979 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Dolcetto_d'Ovada",
+    "year": null
+   },
+   "production": {
+    "amount": 14685.0,
+    "quote": "2019 wurden 14.685 Hektoliter „Dolcetto di Ovada“ (DOC) erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Dolcetto_di_Ovada",
+    "year": "2019"
+   }
+  },
+  "it-erbaluce-di-caluso": {
+   "planted": {
+    "amount": 196.0,
+    "quote": "2016 wurden auf 196 Hektar Rebfläche 9.493 Hektoliter Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Erbaluce_di_Caluso",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 9493.0,
+    "quote": "2016 wurden auf 196 Hektar Rebfläche 9.493 Hektoliter Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Erbaluce_di_Caluso",
+    "year": "2016"
+   }
+  },
+  "it-est-est-est-di-montefiascone": {
+   "planted": {
+    "amount": 331.0,
+    "quote": "Im Jahr 2017 wurden von 331 Hektar Rebfläche 21.570 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Est!_Est!!_Est!!!",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 21570.0,
+    "quote": "Im Jahr 2017 wurden von 331 Hektar Rebfläche 21.570 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Est!_Est!!_Est!!!",
+    "year": "2017"
+   }
+  },
+  "it-etna": {
+   "planted": {
+    "amount": 908.0,
+    "quote": "Im Jahr 2017 wurden von 908 Hektar Rebfläche 35.859 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Etna_(Wein)",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 35859.0,
+    "quote": "Im Jahr 2017 wurden von 908 Hektar Rebfläche 35.859 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Etna_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-falanghina-del-sannio": {
+   "production": {
+    "amount": 71961.0,
+    "quote": "Im Jahr 2017 wurden 71.961 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Falanghina_del_Sannio",
+    "year": "2017"
+   }
+  },
+  "it-falerio": {
+   "production": {
+    "amount": 23282.0,
+    "quote": "Im Jahr 2017 wurden 23.282 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Falerio_dei_Colli_Ascolani",
+    "year": "2017"
+   }
+  },
+  "it-fara": {
+   "planted": {
+    "amount": 18.0,
+    "quote": "La superficie plantée en vignes est de 18 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Fara_(vin)",
+    "year": null
+   }
+  },
+  "it-fiano-di-avellino": {
+   "planted": {
+    "amount": 394.0,
+    "quote": "Im Jahr 2016 wurden von 394 Hektar Rebfläche 16.511 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Fiano_di_Avellino",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 16511.0,
+    "quote": "Im Jahr 2016 wurden von 394 Hektar Rebfläche 16.511 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Fiano_di_Avellino",
+    "year": "2016"
+   }
+  },
+  "it-franciacorta": {
+   "production": {
+    "amount": 149134,
+    "quote": "Erzeugt wurden von dieser Fläche 149.134 Hektoliter DOCG-Wein.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Franciacorta",
+    "year": null
+   }
+  },
+  "it-frascati": {
+   "production": {
+    "amount": 37674.0,
+    "quote": "Im Jahr 2017 wurden 37.674 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Frascati_(Wein)",
+    "year": "2017"
+   },
+   "planted": {
+    "amount": 900.0,
+    "quote": "La superficie plantée en vigne est de 900 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Frascati_(vin)",
+    "year": null
+   }
+  },
+  "it-frascati-superiore": {
+   "planted": {
+    "amount": 170.0,
+    "quote": "Im Jahr 2016 wurden von 170 Hektar Rebfläche 13.097 Hektoliter dieses DOCG-Weins erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Frascati_Superiore",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 13097.0,
+    "quote": "Im Jahr 2016 wurden von 170 Hektar Rebfläche 13.097 Hektoliter dieses DOCG-Weins erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Frascati_Superiore",
+    "year": "2016"
+   }
+  },
+  "it-freisa-d-asti": {
+   "production": {
+    "amount": 8991.0,
+    "quote": "Im Jahr 2019 wurden 8.991 hl DOC-Wein hergestellt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Freisa_d’Asti",
+    "year": "2019"
+   },
+   "planted": {
+    "amount": 365.75,
+    "quote": "La superficie plantée en vignes est de 365,75 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Freisa_d'Asti",
+    "year": null
+   }
+  },
+  "it-friuli-aquileia": {
+   "production": {
+    "amount": 17204.0,
+    "quote": "Im Jahr 2017 wurden 17.204 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Friuli_Aquileia",
+    "year": "2017"
+   }
+  },
+  "it-friuli-colli-orientali": {
+   "production": {
+    "amount": 77843.0,
+    "quote": "Im Jahr 2017 wurden 77.843 Hektoliter Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Colli_Orientali_del_Friuli",
+    "year": "2017"
+   }
+  },
+  "it-friuli-grave": {
+   "production": {
+    "amount": 73800,
+    "quote": "Hier wurden 2017 73.800 Hektoliter DOC-Wein produziert.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Friuli_Grave",
+    "year": "2017"
+   }
+  },
+  "it-friuli-isonzo": {
+   "production": {
+    "amount": 40471.0,
+    "quote": "Im Jahr 2017 wurden 40.471 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Friuli_Isonzo_(Weinbaugebiet)",
+    "year": "2017"
+   }
+  },
+  "it-gabiano": {
+   "planted": {
+    "amount": 5.3,
+    "quote": "La superficie plantée en vignes est de 5,30 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Gabiano_(vin)",
+    "year": null
+   }
+  },
+  "it-garda": {
+   "production": {
+    "amount": 366703,
+    "quote": "Im Jahr 2017 wurden in den Regionen Venetien und Lombardei gemeinsam 366.703 Hektoliter DOC-Wein erzeugt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Garda_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-gavi": {
+   "planted": {
+    "amount": 984.3,
+    "quote": "La superficie plantée en vigne est de 984.30 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Cortese_di_Gavi_(DOCG)",
+    "year": null
+   },
+   "production": {
+    "amount": 106253.0,
+    "quote": "Im Jahr 2019 wurden 106.253 Hektoliter Gavi erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cortese_di_Gavi",
+    "year": "2019"
+   }
+  },
+  "it-ghemme": {
+   "planted": {
+    "amount": 58.26,
+    "quote": "La superficie plantée en vignes est de 58,26 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Ghemme_(DOCG)",
+    "year": null
+   }
+  },
+  "it-greco-di-tufo": {
+   "production": {
+    "amount": 27407.0,
+    "quote": "Im Jahr 2019 wurden 27.407 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Greco_di_Tufo",
+    "year": "2019"
+   }
+  },
+  "it-grignolino-d-asti": {
+   "planted": {
+    "amount": 241,
+    "quote": "Im Jahr 2017 wurden von 241 Hektar 12.530 Hektoliter DOC-Wein produziert.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Grignolino_d’Asti",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 12530,
+    "quote": "Im Jahr 2017 wurden von 241 Hektar 12.530 Hektoliter DOC-Wein produziert.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Grignolino_d’Asti",
+    "year": "2017"
+   }
+  },
+  "it-grignolino-del-monferrato-casalese": {
+   "planted": {
+    "amount": 360.0,
+    "quote": "La superficie plantée en vignes est de 360 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Grignolino_del_Monferrato_Casalese",
+    "year": null
+   }
+  },
+  "it-gutturnio": {
+   "production": {
+    "amount": 69821.0,
+    "quote": "Im Jahr 2017 wurden 69.821 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Gutturnio",
+    "year": "2017"
+   }
+  },
+  "it-irpinia": {
+   "planted": {
+    "amount": 331.0,
+    "quote": "Im Jahr 2016 wurden von 331 Hektar Rebfläche 14.646 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Irpinia_(Wein)",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 14646.0,
+    "quote": "Im Jahr 2016 wurden von 331 Hektar Rebfläche 14.646 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Irpinia_(Wein)",
+    "year": "2016"
+   }
+  },
+  "it-lacrima-di-morro": {
+   "planted": {
+    "amount": 256,
+    "quote": "le superfici coltivate certificate sono passate dagli originari 7 ha di vigneti del 1985 agli oltre 256 ha del 2025.",
+    "sourceUrl": "https://it.wikipedia.org/wiki/Lacrima_di_Morro_d'Alba",
+    "year": "2025"
+   },
+   "production": {
+    "amount": 18594,
+    "quote": "Im Jahr 2016 wurden von 217 ha rund 18.594 Hektoliter DOC-Wein hergestellt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Lacrima_di_Morro_d’Alba",
+    "year": "2016"
+   }
+  },
+  "it-lambrusco-salamino-di-santa-croce": {
+   "production": {
+    "amount": 212202.0,
+    "quote": "Im Jahr 2017 wurden 212.202 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Lambrusco_Salamino_di_Santa_Croce",
+    "year": "2017"
+   }
+  },
+  "it-lison-pramaggiore": {
+   "production": {
+    "amount": 17717.0,
+    "quote": "Im Jahr 2017 wurden 17.717 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Lison-Pramaggiore",
+    "year": "2017"
+   }
+  },
+  "it-lugana": {
+   "production": {
+    "amount": 139862.0,
+    "quote": "Im Jahr 2017 wurden 139.862 Hektoliter Lugana hergestellt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Lugana",
+    "year": "2017"
+   }
+  },
+  "it-malvasia-di-casorzo-d-asti": {
+   "planted": {
+    "amount": 49.2,
+    "quote": "Insgesamt 72 Winzer bearbeiten die 49,2 Hektar zugelassenen Reblands",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Malvasia_di_Casorzo_d’Asti",
+    "year": null
+   }
+  },
+  "it-maremma-toscana": {
+   "planted": {
+    "amount": 1150.0,
+    "quote": "Im Jahr 2016 wurden von 1150 ha Rebfläche 92.461 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Maremma_Toscana",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 92461.0,
+    "quote": "Im Jahr 2016 wurden von 1150 ha Rebfläche 92.461 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Maremma_Toscana",
+    "year": "2016"
+   }
+  },
+  "it-marsala": {
+   "planted": {
+    "amount": 1527.0,
+    "quote": "2020 wurden von 1527 Hektar Rebfläche 48.291 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Marsala_(Wein)",
+    "year": "2020"
+   },
+   "production": {
+    "amount": 48291.0,
+    "quote": "2020 wurden von 1527 Hektar Rebfläche 48.291 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Marsala_(Wein)",
+    "year": "2020"
+   }
+  },
+  "it-menfi": {
+   "planted": {
+    "amount": 279.0,
+    "quote": "Im Jahr 2016 wurden von 279 Hektar Rebfläche 14.430 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Menfi_(Wein)",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 14430.0,
+    "quote": "Im Jahr 2016 wurden von 279 Hektar Rebfläche 14.430 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Menfi_(Wein)",
+    "year": "2016"
+   }
+  },
+  "it-monica-di-sardegna": {
+   "production": {
+    "amount": 12046.0,
+    "quote": "Im Jahr 2017 wurden 12.046 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Monica_di_Sardegna",
+    "year": "2017"
+   }
+  },
+  "it-morellino-di-scansano": {
+   "planted": {
+    "amount": 1315.0,
+    "quote": "Im Jahr 2014 wurden von 1315 Hektar Rebfläche 77.268 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Morellino_di_Scansano",
+    "year": "2014"
+   },
+   "production": {
+    "amount": 77268.0,
+    "quote": "Im Jahr 2014 wurden von 1315 Hektar Rebfläche 77.268 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Morellino_di_Scansano",
+    "year": "2014"
+   }
+  },
+  "it-moscadello-di-montalcino": {
+   "production": {
+    "amount": 275,
+    "quote": "The 2014 vintage of Moscadello di Montalicino produced nearly 7,300 gallons (275 hectoliters) of DOCG designating wine",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Moscadello_di_Montalcino",
+    "year": "2014"
+   }
+  },
+  "it-nebbiolo-d-alba": {
+   "planted": {
+    "amount": 588.0,
+    "quote": "La superficie plantée en vignes est de 588 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Nebbiolo_d'Alba_(DOC)",
+    "year": null
+   },
+   "production": {
+    "amount": 31872.0,
+    "quote": "2017 wurden 31.872 Hektoliter „Nebbiolo d’Alba“ erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Nebbiolo_d’Alba",
+    "year": "2017"
+   }
+  },
+  "it-nuragus-di-cagliari": {
+   "planted": {
+    "amount": 123.0,
+    "quote": "Im Jahr 2016 wurden von 123 Hektar Rebfläche 13.723 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Nuragus_di_Cagliari",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 13723.0,
+    "quote": "Im Jahr 2016 wurden von 123 Hektar Rebfläche 13.723 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Nuragus_di_Cagliari",
+    "year": "2016"
+   }
+  },
+  "it-offida": {
+   "production": {
+    "amount": 22319.0,
+    "quote": "Im Jahr 2017 wurden 22.319 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Offida_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-ortrugo-dei-colli-piacentini": {
+   "production": {
+    "amount": 28776.0,
+    "quote": "Im Jahr 2017 wurden 28.776 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Ortrugo_dei_Colli_Piacentini",
+    "year": "2017"
+   }
+  },
+  "it-orvieto": {
+   "production": {
+    "amount": 75229.0,
+    "quote": "Im Jahr 2017 wurden 75.229 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Orvieto_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-piave": {
+   "production": {
+    "amount": 12362,
+    "quote": "Im Jahr 2023 belief sich die Erzeugung auf 17.660 Doppelzentner Trauben und hieraus 12.362 Hektoliter DOC-Wein.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Piave_(Wein)",
+    "year": "2023"
+   }
+  },
+  "it-piemonte": {
+   "production": {
+    "amount": 207076,
+    "quote": "Die im Jahr 2019 erzeugte Menge der unter dieser Denomination erzeugten Weine betrug 207.076 Hektoliter",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Piemonte_(Wein)",
+    "year": "2019"
+   }
+  },
+  "it-primitivo-di-manduria": {
+   "planted": {
+    "amount": 2722.0,
+    "quote": "Im Jahr 2017 wurden von 2722 Hektar Rebfläche 238.161 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Primitivo_di_Manduria",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 238161.0,
+    "quote": "Im Jahr 2017 wurden von 2722 Hektar Rebfläche 238.161 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Primitivo_di_Manduria",
+    "year": "2017"
+   }
+  },
+  "it-prosecco": {
+   "production": {
+    "amount": 3197033.0,
+    "quote": "2017 wurden insgesamt 3.197.033 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Prosecco",
+    "year": "2017"
+   },
+   "planted": {
+    "amount": 23300,
+    "quote": "While the bulk of Prosecco DOC is grown on low-lying plains in an extended area covering 23,300 hectares",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Prosecco",
+    "year": null
+   }
+  },
+  "it-reggiano": {
+   "production": {
+    "amount": 234255.0,
+    "quote": "Im Jahr 2017 wurden 234.255 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Reggiano",
+    "year": "2017"
+   }
+  },
+  "it-rossese-di-dolceacqua": {
+   "planted": {
+    "amount": 49,
+    "quote": "die Rebfläche von 49 ha teilten sich 68 Winzer.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Rossese_di_Dolceacqua",
+    "year": null
+   },
+   "production": {
+    "amount": 2040,
+    "quote": "Sie erzeugten 2.040 hl Qualitätswein.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Rossese_di_Dolceacqua",
+    "year": null
+   }
+  },
+  "it-rosso-conero": {
+   "production": {
+    "amount": 11370,
+    "quote": "Im Jahr 2016 wurden von 125 ha rund 11.370 Hektoliter DOC-Wein hergestellt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Rosso_Cònero",
+    "year": "2016"
+   },
+   "planted": {
+    "amount": 125,
+    "quote": "Im Jahr 2016 wurden von 125 ha rund 11.370 Hektoliter DOC-Wein hergestellt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Rosso_Cònero",
+    "year": "2016"
+   }
+  },
+  "it-rosso-piceno": {
+   "production": {
+    "amount": 70105.0,
+    "quote": "Im Jahr 2017 wurden 70.105 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Rosso_Piceno",
+    "year": "2017"
+   }
+  },
+  "it-rubino-di-cantavenna": {
+   "planted": {
+    "amount": 7.8,
+    "quote": "La superficie plantée en vignes est de 7,80 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Rubino_di_Cantavenna",
+    "year": null
+   }
+  },
+  "it-ruche-di-castagnole-monferrato": {
+   "planted": {
+    "amount": 37.0,
+    "quote": "La superficie plantée en vignes est de 37 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Ruché_di_Castagnole_Monferrato",
+    "year": null
+   }
+  },
+  "it-san-severo": {
+   "planted": {
+    "amount": 196.0,
+    "quote": "Im Jahr 2016 wurden von 196 Hektar Rebfläche 19.650 Hektoliter DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/San_Severo_(Wein)",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 19650.0,
+    "quote": "Im Jahr 2016 wurden von 196 Hektar Rebfläche 19.650 Hektoliter DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/San_Severo_(Wein)",
+    "year": "2016"
+   }
+  },
+  "it-sannio": {
+   "production": {
+    "amount": 68852.0,
+    "quote": "Im Jahr 2017 wurden 68.852 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Sannio_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-sant-antimo": {
+   "planted": {
+    "amount": 160.0,
+    "quote": "Im Jahr 2016 wurden von 160 ha Rebfläche 9.688 hl Sant’Antimo DOC-Weine erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Sant’Antimo_DOC",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 9688.0,
+    "quote": "Im Jahr 2016 wurden von 160 ha Rebfläche 9.688 hl Sant’Antimo DOC-Weine erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Sant’Antimo_DOC",
+    "year": "2016"
+   }
+  },
+  "it-teroldego-rotaliano": {
+   "planted": {
+    "amount": 422.0,
+    "quote": "Im Jahr 2016 wurden von 422 Hektar Rebfläche 40.244 Hektoliter DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Teroldego_Rotaliano",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 40244.0,
+    "quote": "Im Jahr 2016 wurden von 422 Hektar Rebfläche 40.244 Hektoliter DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Teroldego_Rotaliano",
+    "year": "2016"
+   }
+  },
+  "it-terre-tollesi": {
+   "planted": {
+    "amount": 21.0,
+    "quote": "Im Jahr 2018 wurden von 21 Hektar Rebfläche 1.445 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Terre_Tollesi",
+    "year": "2018"
+   },
+   "production": {
+    "amount": 1445.0,
+    "quote": "Im Jahr 2018 wurden von 21 Hektar Rebfläche 1.445 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Terre_Tollesi",
+    "year": "2018"
+   }
+  },
+  "it-trebbiano-d-abruzzo": {
+   "planted": {
+    "amount": 2184.0,
+    "quote": "Im Jahr 2017 wurden von 2184 ha Rebfläche 184.001 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Trebbiano_d’Abruzzo",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 184001.0,
+    "quote": "Im Jahr 2017 wurden von 2184 ha Rebfläche 184.001 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Trebbiano_d’Abruzzo",
+    "year": "2017"
+   }
+  },
+  "it-trentino": {
+   "planted": {
+    "amount": 7141.0,
+    "quote": "Im Jahr 2016 wurden von 7141 Hektar Rebfläche 619.798 Hektoliter DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Trentino_(Wein)",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 619798.0,
+    "quote": "Im Jahr 2016 wurden von 7141 Hektar Rebfläche 619.798 Hektoliter DOC-Wein produziert",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Trentino_(Wein)",
+    "year": "2016"
+   }
+  },
+  "it-valdadige": {
+   "production": {
+    "amount": 104473.0,
+    "quote": "Im Jahr 2017 wurden 104.473 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Valdadige",
+    "year": "2017"
+   }
+  },
+  "it-valdichiana-toscana": {
+   "planted": {
+    "amount": 84.0,
+    "quote": "2015 wurden von 84 ha Rebfläche 4.791 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Valdichiana_toscana",
+    "year": "2015"
+   },
+   "production": {
+    "amount": 4791.0,
+    "quote": "2015 wurden von 84 ha Rebfläche 4.791 hl DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Valdichiana_toscana",
+    "year": "2015"
+   }
+  },
+  "it-valle-d-aosta": {
+   "production": {
+    "amount": 7511.0,
+    "quote": "Im Jahr 2017 wurden 7511 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Valle_d’Aosta_(Wein)",
+    "year": "2017"
+   }
+  },
+  "it-valpolicella": {
+   "planted": {
+    "amount": 7435,
+    "quote": "Von den DOC-Weinen (Valpolicella und Valpolicella Ripasso) wurden 2014 von 7435 Hektar Rebfläche 425.031 Hektoliter Wein erzeugt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Valpolicella_(Wein)",
+    "year": "2014"
+   },
+   "production": {
+    "amount": 425031,
+    "quote": "Von den DOC-Weinen (Valpolicella und Valpolicella Ripasso) wurden 2014 von 7435 Hektar Rebfläche 425.031 Hektoliter Wein erzeugt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Valpolicella_(Wein)",
+    "year": "2014"
+   }
+  },
+  "it-valtellina-superiore": {
+   "production": {
+    "amount": 18853,
+    "quote": "Hiernach wurden im Jahr 2019 18.853 Hektoliter (hl) Valtellina Superiore DOCG erzeugt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Valtellina_Superiore",
+    "year": "2019"
+   }
+  },
+  "it-verdicchio-dei-castelli-di-jesi": {
+   "production": {
+    "amount": 112107.0,
+    "quote": "Im Jahr 2017 wurden 112.107 hl DOC-Wein hergestellt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Verdicchio_dei_Castelli_di_Jesi",
+    "year": "2017"
+   }
+  },
+  "it-verdicchio-di-matelica": {
+   "planted": {
+    "amount": 204,
+    "quote": "2016 wurden in diesem Gebiet von 204 ha Rebfläche 18.527 hl DOC-Wein erzeugt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Verdicchio_di_Matelica",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 18527,
+    "quote": "2016 wurden in diesem Gebiet von 204 ha Rebfläche 18.527 hl DOC-Wein erzeugt.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Verdicchio_di_Matelica",
+    "year": "2016"
+   }
+  },
+  "it-verduno-pelaverga": {
+   "planted": {
+    "amount": 10.62,
+    "quote": "La superficie plantée en vignes est de 10,62 hectares",
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Verduno_Pelaverga",
+    "year": null
+   }
+  },
+  "it-vermentino-di-gallura": {
+   "production": {
+    "amount": 31118.0,
+    "quote": "Im Jahr 2017 wurden insgesamt 31.118 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Vermentino_di_Gallura",
+    "year": "2017"
+   },
+   "planted": {
+    "amount": 1241,
+    "quote": "Die Zone der insgesamt 1241 Hektar zugelassenen Rebflächen",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Vermentino_di_Gallura",
+    "year": null
+   }
+  },
+  "it-vermentino-di-sardegna": {
+   "planted": {
+    "amount": 1271.0,
+    "quote": "Im Jahr 2017 wurden von 1271 Hektar Rebfläche 106.814 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Vermentino_di_Sardegna",
+    "year": "2017"
+   },
+   "production": {
+    "amount": 106814.0,
+    "quote": "Im Jahr 2017 wurden von 1271 Hektar Rebfläche 106.814 Hektoliter DOC-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Vermentino_di_Sardegna",
+    "year": "2017"
+   }
+  },
+  "it-vernaccia-di-san-gimignano": {
+   "planted": {
+    "amount": 650.0,
+    "quote": "Im Jahr 2016 wurden von 650 ha Rebfläche 41.285 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Vernaccia_di_San_Gimignano",
+    "year": "2016"
+   },
+   "production": {
+    "amount": 41285.0,
+    "quote": "Im Jahr 2016 wurden von 650 ha Rebfläche 41.285 Hektoliter DOCG-Wein erzeugt",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Vernaccia_di_San_Gimignano",
+    "year": "2016"
+   }
+  },
+  "nl-mergelland": {
+   "planted": {
+    "amount": 25,
+    "quote": "zijn in dit gebied anno 2022 circa 25 hectare wijngaarden in productie.",
+    "sourceUrl": "https://nl.wikipedia.org/wiki/Mergelland_(wijnstreek)",
+    "year": "2022"
+   }
+  },
+  "pt-carcavelos": {
+   "planted": {
+    "amount": 12,
+    "quote": "schrumpfte die Rebfläche auf heute etwa 12 Hektar.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Carcavelos_(Wein)",
+    "year": null
+   }
+  },
+  "pt-colares": {
+   "planted": {
+    "amount": 20.2,
+    "quote": "In the 1940s, vineyards covered about 2,500 acres but have since been reduced by suburbanization to 50 acres.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Colares_DOC",
+    "year": null
+   }
+  },
+  "pt-dao": {
+   "planted": {
+    "amount": 20000,
+    "quote": "A região do Dão tem cerca de 20.000 hectares de vinha em aproximadamente 376.000 hectares de terra",
+    "sourceUrl": "https://pt.wikipedia.org/wiki/Região_Demarcada_do_Dão",
+    "year": null
+   }
+  },
+  "pt-madeira": {
+   "planted": {
+    "amount": 600,
+    "quote": "Van de 2000 hectare die voor wijngaarden geschikt is wordt maar 600 hectare ook werkelijk benut.",
+    "sourceUrl": "https://nl.wikipedia.org/wiki/Madeira_(wijn)",
+    "year": null
+   }
+  },
+  "us-adelaida-district": {
+   "planted": {
+    "amount": 530,
+    "quote": "Adelaida District encompasses approximately 53,342 acres (83 sq mi) with 1,300 acres (530 ha) cultivation under vine.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Adelaida_District_AVA",
+    "year": null
+   }
+  },
+  "us-altus": {
+   "planted": {
+    "amount": 320,
+    "quote": "Presently there are approximately 800 acres (320 ha) of grapes under cultivation in the area surrounding Altus.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Altus_AVA",
+    "year": null
+   }
+  },
+  "us-creston-district": {
+   "planted": {
+    "amount": 552,
+    "quote": "Creston District encompasses 47,000 acres (73 sq mi) with 1,365 acres (552 ha) of cultivated vineyards.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Creston_District_AVA",
+    "year": null
+   }
+  },
+  "us-cumberland-valley": {
+   "planted": {
+    "amount": 40,
+    "quote": "liegt die tatsächlich bestockte Rebfläche bei bescheidenen 40 Hektar.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Cumberland_Valley_AVA",
+    "year": null
+   }
+  },
+  "us-hermann": {
+   "planted": {
+    "amount": 81,
+    "quote": "Today, there is around 200 acres (81 ha) under vine",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hermann_AVA",
+    "year": null
+   }
+  },
+  "us-lake-erie": {
+   "planted": {
+    "amount": 17000,
+    "quote": "Over 42,000 acres (17,000 ha) of the region are cultivated with grapevines",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Lake_Erie_AVA",
+    "year": null
+   }
+  },
+  "us-lancaster-valley": {
+   "planted": {
+    "amount": 160,
+    "quote": "cultivating about 400 acres (160 ha) under vine.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Lancaster_Valley_AVA",
+    "year": null
+   }
+  },
+  "us-lime-kiln-valley": {
+   "planted": {
+    "amount": 16,
+    "quote": "Currently there are 40 acres (16 ha) of vineyards",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Lime_Kiln_Valley_AVA",
+    "year": null
+   }
+  },
+  "us-livermore-valley": {
+   "planted": {
+    "amount": 1762,
+    "quote": "As of 2024, there are 17 vineyards cultivating approximately 4,355 acres (1,762 ha) and over 50 wineries.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Livermore_Valley_AVA",
+    "year": "2024"
+   }
+  },
+  "us-madera": {
+   "planted": {
+    "amount": 15300,
+    "quote": "von denen mehr als 15.300 Hektar (38.000 acre) mit Reben bestockt sind",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Madera_AVA",
+    "year": null
+   }
+  },
+  "us-old-mission-peninsula": {
+   "planted": {
+    "amount": 730,
+    "quote": "The total size is approximately 19,200 acres (30 sq mi) with 1,800 acres (730 ha) of vinifera vineyards",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Old_Mission_Peninsula_AVA",
+    "year": null
+   }
+  },
+  "us-ozark-highlands": {
+   "planted": {
+    "amount": 200,
+    "quote": "Today, there is around 500 acres (200 ha) under vine",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ozark_Highlands_AVA",
+    "year": null
+   }
+  },
+  "us-paso-robles": {
+   "planted": {
+    "amount": 15000,
+    "quote": "Die Rebfläche beträgt über 15'000 Hektar.",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Paso_Robles_AVA",
+    "year": null
+   }
+  },
+  "us-paso-robles-highlands-district": {
+   "planted": {
+    "amount": 810,
+    "quote": "Highlands District AVA encompasses about 60,300 acres (94.2 sq mi) with a little over 2,000 acres (810 ha) under vine.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_Highlands_District_AVA",
+    "year": null
+   }
+  },
+  "us-paso-robles-willow-creek-district": {
+   "planted": {
+    "amount": 570,
+    "quote": "cultivating approximately 1,400 acres (570 ha) under vine with over 40 bonded wineries.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Paso_Robles_Willow_Creek_District_AVA",
+    "year": null
+   }
+  },
+  "us-san-juan-creek": {
+   "planted": {
+    "amount": 1200,
+    "quote": "San Juan Creek encompasses about 26,000 acres (41 sq mi) with a little over 3,000 acres (1,200 ha) under vine.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/San_Juan_Creek_AVA",
+    "year": null
+   }
+  },
+  "us-san-miguel-district": {
+   "planted": {
+    "amount": 770,
+    "quote": "The San Miguel District encompasses approximately 19,000 acres (30 sq mi) and cultivates about 1,900 acres (770 ha) of vineyards",
+    "sourceUrl": "https://en.wikipedia.org/wiki/San_Miguel_District_AVA",
+    "year": null
+   }
+  },
+  "us-san-ysidro-district": {
+   "planted": {
+    "amount": 210,
+    "quote": "The two vineyards comprise approximately 520 acres (210 ha) under cultivation.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/San_Ysidro_District_AVA",
+    "year": null
+   }
+  },
+  "us-santa-margarita-ranch": {
+   "planted": {
+    "amount": 320,
+    "quote": "Santa Margarita Ranch encompasses about 17,835 acres (28 sq mi) with a little over 800 acres (320 ha) under vine",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Margarita_Ranch_AVA",
+    "year": null
+   }
+  },
+  "us-sierra-foothills": {
+   "planted": {
+    "amount": 2307,
+    "quote": "Sierra Foothills has 5,700 acres (2,307 ha) being cultivated for wine grapes",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sierra_Foothills_AVA",
+    "year": null
+   }
+  },
+  "us-wild-horse-valley": {
+   "planted": {
+    "amount": 40,
+    "quote": "Da nur 40 Hektar mit Reben bestockt sind",
+    "sourceUrl": "https://de.wikipedia.org/wiki/Wild_Horse_Valley_AVA",
+    "year": null
+   }
+  },
+  "us-willow-creek": {
+   "planted": {
+    "amount": 4,
+    "quote": "As of 2008, there were no commercially bonded wineries in the region, and only ten acres (4 ha) under vine.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Willow_Creek_AVA",
+    "year": "2008"
+   }
+  },
+  "za-breedekloof": {
+   "planted": {
+    "amount": 13029,
+    "quote": "The Breedekloof represents 14.24% (13 029 hectares) of wine grape vineyard plantings in South Africa.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Breedekloof",
+    "year": null
+   }
+  }
+ }
+}

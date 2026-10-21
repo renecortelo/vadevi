@@ -389,6 +389,12 @@ Every few months, or when a register announces a name:
   reading in `grape-readings.json` names its volume (`source`), its quote is
   checked against that volume's text, and the fact links the scan.
 
+- **Figures in the body of a name's Wikipedia article**
+  (`region-text-figures.json`, articles cached by `pnpm
+kb:fetch-region-articles`): area and production where the infobox gives
+  none, each sentence copied as written and checked against the cached
+  article by the build; CC BY-SA 4.0 like every Wikipedia text.
+
 - **Tuscany's agricultural payments agency (ARTEA)**, «Artea - Raccolta Uva»
   on dati.toscana.it (`it-regional-figures.json`, `pnpm
 kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
