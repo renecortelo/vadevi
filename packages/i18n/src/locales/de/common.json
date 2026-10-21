@@ -481,6 +481,7 @@
     "glanceSourceMapa": "Spanisches Landwirtschaftsministerium (MAPA), Kampagne {{campaign}}",
     "glanceSourceDouane": "Französischer Zoll, Ernteerklärungen {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Argentiniens Nationales Weinbauinstitut (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceInePortugal": "Statistikamt Portugals (INE), gemeldeter Wein {{campaign}} (CC BY 4.0)",
     "glanceSourceDestatis": "Statistisches Bundesamt (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, Weingartengrunderhebung {{campaign}} (Auszug)",
     "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, Weinernte {{campaign}} (Auszug)",

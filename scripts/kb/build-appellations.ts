@@ -1850,6 +1850,33 @@ for (const entry of entries) {
   };
   federalRegister += 1;
 }
+// Portuguese names whose ground Statistics Portugal's table can be read for:
+// the PDO (or PGI) wine declared in the municipalities of their demarcated
+// area, where no other name of the kind lies (`data/kb/pt-production-figures.json`,
+// CC BY 4.0, `pnpm kb:fetch-pt-production`).
+const portuguese = JSON.parse(
+  readFileSync(resolve("data/kb/pt-production-figures.json"), "utf8"),
+) as {
+  campaign: string;
+  regions: Record<string, { amountHl: number; quote: string }>;
+  sourceUrl: string;
+};
+let inePortugal = 0;
+for (const entry of entries) {
+  const made = portuguese.regions[entry.id];
+  if (made === undefined || entry.figures?.production) continue;
+  entry.figures = {
+    planted: entry.figures?.planted ?? null,
+    production: {
+      amount: made.amountHl,
+      publisher: "ine-portugal",
+      quote: made.quote,
+      sourceUrl: portuguese.sourceUrl,
+      year: portuguese.campaign,
+    },
+  };
+  inePortugal += 1;
+}
 // Where nothing above gives an area: the bearing area of the region of the
 // name's own name in the University of Adelaide's database of winegrape areas
 // by region and variety (`data/kb/adelaide.json`, CC BY 4.0,
@@ -1885,7 +1912,7 @@ for (const entry of entries) {
   fromAdelaide += 1;
 }
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

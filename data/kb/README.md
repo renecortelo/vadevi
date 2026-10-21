@@ -495,6 +495,18 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
   2025», the wine made in that department or province. Chile's vineyard survey (SAG/ODEPA) was not used:
   its CC BY-NC-SA licence forbids commercial reuse.
 
+- **Statistics Portugal (INE)**, indicator 0012835 «Produção vinícola
+  declarada em vinho (hl) pelos produtores por Local de vinificação e
+  Qualidade e cor do vinho» on dados.gov.pt (CC BY 4.0;
+  `pt-production-figures.json`, `pnpm kb:fetch-pt-production`): for the 15
+  Portuguese names whose demarcated area, as their technical file writes it,
+  is whole districts, an autonomous region or a set of municipalities where
+  no other name of their kind lies, the PDO wine and PDO fortified wine (or
+  the PGI wine) declared in those municipalities in 2025, summed. Names that
+  share their ground (Setúbal and Palmela, Madeira and Madeirense, Óbidos and
+  Encostas d'Aire, Douro and Porto) take none; wine is counted where it was
+  made.
+
 - **Copernicus DEM GLO-90** (doi:10.5270/ESA-c5d3d65), through
   Open-Meteo's elevation API: CC BY 4.0, credited to the Copernicus programme
   and Open-Meteo under the climate (`pnpm kb:fetch-elevation`).

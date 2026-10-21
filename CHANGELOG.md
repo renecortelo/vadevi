@@ -23,6 +23,12 @@ has the reasons.
 
 ### The library
 
+- **Portugal's wine by name, from its statistics office**: 15 Portuguese
+  names show the wine declared in 2025 (INE, CC BY 4.0) — Alentejo and
+  Alentejano, Tejo, Península de Setúbal, Algarve and four of its PDOs, the
+  Azores and three of their islands' PDOs, Bucelas, Carcavelos and Colares —
+  each only where its demarcated area is whole municipalities or districts no
+  other name of its kind shares.
 - **Austria's wine harvest of 2025**: 20 wine-growing regions and states
   show the wine they made (Statistik Austria, «Weinernte und Weinbestand
   2025»), credited as the harvest report beside the 2020 vineyard survey;

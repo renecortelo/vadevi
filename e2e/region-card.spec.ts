@@ -93,6 +93,13 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     timeout: 15_000,
   });
   await expect(austrianSources).toContainText("STATISTIK AUSTRIA, cosecha de vino 2025 (extracto)");
+  // A Portuguese PDO drawn on its island's municipalities: the wine declared
+  // there, from Statistics Portugal.
+  await page.goto("/library/regions/pt-pico");
+  await expect(page.locator("#region-glance ~ .section-help")).toContainText(
+    "Instituto Nacional de Estatística (INE) de Portugal, vino declarado 2025 (CC BY 4.0)",
+    { timeout: 15_000 },
+  );
   await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.

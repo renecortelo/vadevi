@@ -481,6 +481,7 @@
     "glanceSourceMapa": "Ministério da Agricultura de Espanha (MAPA), campanha {{campaign}}",
     "glanceSourceDouane": "Alfândegas de França, declarações de colheita {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Instituto Nacional de Vitivinicultura da Argentina (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceInePortugal": "Instituto Nacional de Estatística (INE), vinho declarado {{campaign}} (CC BY 4.0)",
     "glanceSourceDestatis": "Serviço Federal de Estatística da Alemanha (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, recenseamento vitícola {{campaign}} (extrato)",
     "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, colheita de vinho {{campaign}} (extrato)",

@@ -4531,6 +4531,16 @@
         13,
         10.4
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 375186,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: 43 concelhos (todos os concelhos dos distritos de Beja, Évora e Portalegre), 2025 (hl): 375186",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -4927,7 +4937,13 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
-      "production": null
+      "production": {
+        "amount": 515296,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: 43 concelhos (as sub-regiões, nos distritos de Beja, Évora e Portalegre (a única DOP desses distritos)), 2025 (hl): 515296",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -5407,7 +5423,13 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
-      "production": null
+      "production": {
+        "amount": 15224,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: Algarve, 2025 (hl): 15224",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -25351,6 +25373,16 @@
         14.9,
         13.5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 1731,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: Região Autónoma dos Açores, 2025 (hl): 1731",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -37953,6 +37985,16 @@
         15.1,
         13.8
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 194,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Vila da Praia da Vitória, 2025 (hl): 194",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -44476,6 +44518,16 @@
         13.8,
         11.5
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 4344,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Loures, 2025 (hl): 4344",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -52601,7 +52653,13 @@
         "sourceUrl": "https://de.wikipedia.org/wiki/Carcavelos_(Wein)",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 572,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Cascais, Oeiras, 2025 (hl): 572",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -65069,7 +65127,13 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Colares_DOC",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 241,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Sintra, 2025 (hl): 241",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -124858,6 +124922,16 @@
         16.2,
         14.8
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 166,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Santa Cruz da Graciosa, 2025 (hl): 166",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -141613,6 +141687,16 @@
         15.3,
         13.2
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 237,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: 4 concelhos (os concelhos de Albufeira, Lagoa, Loulé (parte) e Silves (parte)), 2025 (hl): 237",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -194380,7 +194464,13 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
-      "production": null
+      "production": {
+        "amount": 223245,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: 13 concelhos (todo o distrito de Setúbal), 2025 (hl): 223245",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -196600,6 +196690,16 @@
         17.6,
         16.2
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 5951,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Lajes do Pico, Madalena, São Roque do Pico, 2025 (hl): 5951",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -200732,6 +200832,16 @@
         15.5,
         13.4
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 10,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Portimão, 2025 (hl): 10",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -247448,6 +247558,16 @@
         15.7,
         13.3
       ]
+    },
+    "figures": {
+      "planted": null,
+      "production": {
+        "amount": 565,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: 6 concelhos (os concelhos de Faro, Olhão, São Brás de Alportel, Castro Marim, Tavira e Vila Real de Santo António (parte de alguns)), 2025 (hl): 565",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {
@@ -248028,7 +248148,13 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2022"
       },
-      "production": null
+      "production": {
+        "amount": 401616,
+        "publisher": "ine-portugal",
+        "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: 21 concelhos (todo o concelho de Azambuja e todo o distrito de Santarém, excepto o concelho de Ourém), 2025 (hl): 401616",
+        "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT",
+        "year": "2025"
+      }
     }
   },
   {

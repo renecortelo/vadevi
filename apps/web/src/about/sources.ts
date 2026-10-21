@@ -242,6 +242,14 @@ export const sources: Source[] = [
     what: "areas",
   },
   {
+    credit: "Fonte: INE, Estatísticas da Produção Vegetal; municipalities summed",
+    group: "figures",
+    licence: "CC BY 4.0",
+    name: "Instituto Nacional de Estatística (INE) · dados.gov.pt",
+    url: "https://dados.gov.pt/datasets/producao-vinicola-declarada-em-vinho-hl-pelos-produtores",
+    what: "areas",
+  },
+  {
     credit:
       "Anderson, K., S. Nelgen and G. Puga, Database of Regional, National and Global Winegrape Bearing Areas by Variety, 2000 to 2023, Wine Economics Research Centre, University of Adelaide, December 2025 (revised March 2026); summed by region and grape",
     group: "figures",

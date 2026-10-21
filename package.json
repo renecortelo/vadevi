@@ -56,6 +56,7 @@
     "kb:fetch-ava-rules": "tsx scripts/kb/fetch-ava-rules.ts",
     "kb:fetch-it-regional-figures": "tsx scripts/kb/fetch-it-regional-figures.ts",
     "kb:fetch-region-articles": "tsx scripts/kb/fetch-region-articles.ts",
+    "kb:fetch-pt-production": "tsx scripts/kb/fetch-pt-production.ts",
     "kb:fetch-region-infobox-grapes": "tsx scripts/kb/fetch-region-infobox-grapes.ts",
     "kb:read-adelaide": "tsx scripts/kb/read-adelaide.ts",
     "kb:fetch-topics": "tsx scripts/kb/fetch-topics.ts",

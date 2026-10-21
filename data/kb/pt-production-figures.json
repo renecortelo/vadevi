@@ -1,0 +1,239 @@
+{
+ "about": "Wine declared by producers (hl) in 2025 for the Portuguese names whose ground the table can be read for, from Statistics Portugal's indicator 0012835 «Produção vinícola declarada em vinho (hl) pelos produtores por Local de vinificação (NUTS - 2024) e Qualidade e cor do vinho» (dados.gov.pt, CC BY 4.0): the PDO wine and PDO fortified wine (or the PGI wine) made in the municipalities, districts or region of the name's demarcated area, as its technical file writes it, where no other name of its kind lies in them. Changed: municipalities summed. Wine is counted where it was made, not where its grapes grew. Built by scripts/kb/fetch-pt-production.ts.",
+ "campaign": "2025",
+ "regions": {
+  "pt-acores": {
+   "amountHl": 1731,
+   "places": [
+    "Região Autónoma dos Açores"
+   ],
+   "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: Região Autónoma dos Açores, 2025 (hl): 1731"
+  },
+  "pt-alentejano": {
+   "amountHl": 375186,
+   "places": [
+    "Odemira",
+    "Aljustrel",
+    "Almodôvar",
+    "Alvito",
+    "Barrancos",
+    "Beja",
+    "Castro Verde",
+    "Cuba",
+    "Ferreira do Alentejo",
+    "Mértola",
+    "Moura",
+    "Ourique",
+    "Serpa",
+    "Vidigueira",
+    "Alter do Chão",
+    "Arronches",
+    "Avis",
+    "Campo Maior",
+    "Castelo de Vide",
+    "Crato",
+    "Elvas",
+    "Fronteira",
+    "Gavião",
+    "Marvão",
+    "Monforte",
+    "Nisa",
+    "Ponte de Sor",
+    "Portalegre",
+    "Sousel",
+    "Alandroal",
+    "Arraiolos",
+    "Borba",
+    "Estremoz",
+    "Évora",
+    "Montemor-o-Novo",
+    "Mora",
+    "Mourão",
+    "Portel",
+    "Redondo",
+    "Reguengos de Monsaraz",
+    "Vendas Novas",
+    "Viana do Alentejo",
+    "Vila Viçosa"
+   ],
+   "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: 43 concelhos (todos os concelhos dos distritos de Beja, Évora e Portalegre), 2025 (hl): 375186"
+  },
+  "pt-alentejo": {
+   "amountHl": 515296,
+   "places": [
+    "Odemira",
+    "Aljustrel",
+    "Almodôvar",
+    "Alvito",
+    "Barrancos",
+    "Beja",
+    "Castro Verde",
+    "Cuba",
+    "Ferreira do Alentejo",
+    "Mértola",
+    "Moura",
+    "Ourique",
+    "Serpa",
+    "Vidigueira",
+    "Alter do Chão",
+    "Arronches",
+    "Avis",
+    "Campo Maior",
+    "Castelo de Vide",
+    "Crato",
+    "Elvas",
+    "Fronteira",
+    "Gavião",
+    "Marvão",
+    "Monforte",
+    "Nisa",
+    "Ponte de Sor",
+    "Portalegre",
+    "Sousel",
+    "Alandroal",
+    "Arraiolos",
+    "Borba",
+    "Estremoz",
+    "Évora",
+    "Montemor-o-Novo",
+    "Mora",
+    "Mourão",
+    "Portel",
+    "Redondo",
+    "Reguengos de Monsaraz",
+    "Vendas Novas",
+    "Viana do Alentejo",
+    "Vila Viçosa"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: 43 concelhos (as sub-regiões, nos distritos de Beja, Évora e Portalegre (a única DOP desses distritos)), 2025 (hl): 515296"
+  },
+  "pt-algarve": {
+   "amountHl": 15224,
+   "places": [
+    "Algarve"
+   ],
+   "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: Algarve, 2025 (hl): 15224"
+  },
+  "pt-biscoitos": {
+   "amountHl": 194,
+   "places": [
+    "Vila da Praia da Vitória"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Vila da Praia da Vitória, 2025 (hl): 194"
+  },
+  "pt-bucelas": {
+   "amountHl": 4344,
+   "places": [
+    "Loures"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Loures, 2025 (hl): 4344"
+  },
+  "pt-carcavelos": {
+   "amountHl": 572,
+   "places": [
+    "Cascais",
+    "Oeiras"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Cascais, Oeiras, 2025 (hl): 572"
+  },
+  "pt-colares": {
+   "amountHl": 241,
+   "places": [
+    "Sintra"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Sintra, 2025 (hl): 241"
+  },
+  "pt-graciosa": {
+   "amountHl": 166,
+   "places": [
+    "Santa Cruz da Graciosa"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Santa Cruz da Graciosa, 2025 (hl): 166"
+  },
+  "pt-lagoa": {
+   "amountHl": 237,
+   "places": [
+    "Albufeira",
+    "Lagoa",
+    "Loulé",
+    "Silves"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: 4 concelhos (os concelhos de Albufeira, Lagoa, Loulé (parte) e Silves (parte)), 2025 (hl): 237"
+  },
+  "pt-peninsula-de-setubal": {
+   "amountHl": 223245,
+   "places": [
+    "Alcochete",
+    "Almada",
+    "Barreiro",
+    "Moita",
+    "Montijo",
+    "Seixal",
+    "Sesimbra",
+    "Setúbal",
+    "Alcácer do Sal",
+    "Grândola",
+    "Santiago do Cacém",
+    "Sines",
+    "Palmela"
+   ],
+   "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: 13 concelhos (todo o distrito de Setúbal), 2025 (hl): 223245"
+  },
+  "pt-pico": {
+   "amountHl": 5951,
+   "places": [
+    "Lajes do Pico",
+    "Madalena",
+    "São Roque do Pico"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Lajes do Pico, Madalena, São Roque do Pico, 2025 (hl): 5951"
+  },
+  "pt-portimao": {
+   "amountHl": 10,
+   "places": [
+    "Portimão"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: Portimão, 2025 (hl): 10"
+  },
+  "pt-tavira": {
+   "amountHl": 565,
+   "places": [
+    "Faro",
+    "Olhão",
+    "São Brás de Alportel",
+    "Castro Marim",
+    "Tavira",
+    "Vila Real de Santo António"
+   ],
+   "quote": "Produção vinícola declarada, vinho e vinho licoroso com DOP, local de vinificação: 6 concelhos (os concelhos de Faro, Olhão, São Brás de Alportel, Castro Marim, Tavira e Vila Real de Santo António (parte de alguns)), 2025 (hl): 565"
+  },
+  "pt-tejo": {
+   "amountHl": 401616,
+   "places": [
+    "Abrantes",
+    "Alcanena",
+    "Constância",
+    "Entroncamento",
+    "Ferreira do Zêzere",
+    "Mação",
+    "Sardoal",
+    "Tomar",
+    "Torres Novas",
+    "Vila Nova da Barquinha",
+    "Almeirim",
+    "Alpiarça",
+    "Benavente",
+    "Cartaxo",
+    "Chamusca",
+    "Coruche",
+    "Golegã",
+    "Rio Maior",
+    "Salvaterra de Magos",
+    "Santarém",
+    "Azambuja"
+   ],
+   "quote": "Produção vinícola declarada, vinho com IGP, local de vinificação: 21 concelhos (todo o concelho de Azambuja e todo o distrito de Santarém, excepto o concelho de Ourém), 2025 (hl): 401616"
+  }
+ },
+ "sourceUrl": "https://www.ine.pt/xurl/indx/0012835/PT"
+}

@@ -481,6 +481,7 @@
     "glanceSourceMapa": "Ministerio de Agricultura (MAPA), campaña {{campaign}}",
     "glanceSourceDouane": "Aduanas de Francia, declaraciones de cosecha {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Instituto Nacional de Vitivinicultura de Argentina (INV), {{campaign}} · CC BY 4.0",
+    "glanceSourceInePortugal": "Instituto Nacional de Estatística (INE) de Portugal, vino declarado {{campaign}} (CC BY 4.0)",
     "glanceSourceDestatis": "Oficina Federal de Estadística de Alemania (Destatis), {{campaign}}",
     "glanceSourceStatistikAustria": "STATISTIK AUSTRIA, censo vitícola {{campaign}} (extracto)",
     "glanceSourceStatistikAustriaHarvest": "STATISTIK AUSTRIA, cosecha de vino {{campaign}} (extracto)",

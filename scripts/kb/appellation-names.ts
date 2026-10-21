@@ -13,6 +13,7 @@ export type RegionFigureSource = {
     | "destatis"
     | "douane"
     | "federal-register"
+    | "ine-portugal"
     | "inv"
     | "ksh"
     | "mapa"
