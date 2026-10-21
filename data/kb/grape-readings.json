@@ -993,6 +993,16 @@
         "lang": "pl",
         "quote": "Dolcetto – czerwony szczep winorośli, pochodzący z Włoch.",
         "value": "IT"
+      },
+      {
+        "field": "alcohol",
+        "lang": "it",
+        "value": "medium",
+        "quote": "Ottiensene vino da pasto, pieno, ricco di colore, abboccato, mediocremente spiritoso",
+        "source": {
+          "volume": "ampelografiadel00leargoog",
+          "work": "demaria-leardi-alessandria"
+        }
       }
     ],
     "dornfelder": [

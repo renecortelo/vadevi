@@ -23,6 +23,10 @@ has the reasons.
 
 ### The library
 
+- **Dolcetto's alcohol, from an 1875 ampelography**: Demaria and Leardi's
+  «Ampelografia della provincia di Alessandria» (public domain) gives
+  «mediocremente spiritoso»; the check now reads «spiritoso» as alcohol and
+  «mediocremente» as moderate.
 - **Portugal's wine by name, from its statistics office**: 15 Portuguese
   names show the wine declared in 2025 (INE, CC BY 4.0) — Alentejo and
   Alentejano, Tejo, Península de Setúbal, Algarve and four of its PDOs, the

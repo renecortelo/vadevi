@@ -442,6 +442,14 @@ for what moved.
   a variety's wine described as such («The Ploussard yields a wine of very
   light tint and body, with little tannin»), never a single sample's.
 
+- **P. P. Demaria and C. Leardi, «Ampelografia della provincia di
+  Alessandria»** (1875; public domain): the Internet Archive's text
+  (`ampelografiadel00leargoog`), read the same way. A sentence is used only
+  where the articles do not contradict it: its «poco tannino» for Dolcetto
+  is not, as they call the grape tannic. V. Rendu's «Ampélographie
+  française» (1857) was read too and gave nothing usable (its sentences are
+  comparative or about a place's wine).
+
 - **P. Viala and V. Vermorel, «Ampélographie»** (Masson, 1901–1910; the
   authors died in 1936 and 1927, so in the public domain): the Internet
   Archive's text of its scanned volumes (`.kb-cache/ampelography/`, not in
