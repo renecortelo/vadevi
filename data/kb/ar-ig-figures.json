@@ -335,180 +335,177 @@
   }
  },
  "production": {
-  "about": "Wine made (hl, «Total vinos») in 2024 in each department or province an indication is named after, from the Instituto Nacional de Vitivinicultura's «Informe anual de cosecha y elaboración 2024» (database frozen on 1 September 2024), section 8 «Elaboración de vino, mostos y jugo — por provincia y departamentos», transcribed by hand; each province's departments add up to its total. The table counts wine where it was made (form CEC/05), not where its grapes grew. A department the table lists no wine for takes none. Argentina.gob.ar, Creative Commons Attribution 4.0.",
-  "campaign": "2024",
-  "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_cosecha_y_elaboracion_2024.pdf",
+  "about": "Wine made (hl, «Total vinos») in 2025 in each department or province an indication is named after, from the Instituto Nacional de Vitivinicultura's «Informe anual de cosecha y elaboración 2025» (database frozen on 1 September 2025), section 8 «Elaboración de vino, mostos y jugo — por provincia y departamentos», read from the report's text, each row checked against its own sums (white, rosé and red to their total, the totals to «Total vinos»); each province's departments add up to its total. The table counts wine where it was made (form CEC/05), not where its grapes grew. A department the table lists no wine for takes none. Argentina.gob.ar, Creative Commons Attribution 4.0.",
+  "campaign": "2025",
+  "sourceUrl": "https://www.argentina.gob.ar/sites/default/files/2018/10/anuario_cosecha_y_elaboracion_2025.pdf",
   "regions": {
    "ar-25-de-mayo": {
-    "amountHl": 99207
+    "amountHl": 69337
    },
    "ar-9-de-julio": {
-    "amountHl": 14985
+    "amountHl": 13510
    },
    "ar-albardon": {
-    "amountHl": 141700
+    "amountHl": 77800
    },
    "ar-anelo": {
-    "amountHl": 55297
+    "amountHl": 45566
    },
    "ar-angaco": {
-    "amountHl": 12712
+    "amountHl": 7061
    },
    "ar-balcarce": {
-    "amountHl": 132
+    "amountHl": 323
    },
    "ar-belen": {
-    "amountHl": 472
+    "amountHl": 1368
    },
    "ar-cachi": {
-    "amountHl": 1362
+    "amountHl": 3098
    },
    "ar-calingasta": {
-    "amountHl": 956
+    "amountHl": 1226
    },
    "ar-castro-barros": {
-    "amountHl": 19586
+    "amountHl": 16163
    },
    "ar-catamarca": {
-    "amountHl": 39996
+    "amountHl": 36467
    },
    "ar-caucete": {
-    "amountHl": 236735
+    "amountHl": 184916
    },
    "ar-chilecito": {
-    "amountHl": 339224
+    "amountHl": 277558
    },
    "ar-chimbas": {
-    "amountHl": 93603
+    "amountHl": 96798
    },
    "ar-confluencia": {
-    "amountHl": 1885
+    "amountHl": 2004
    },
    "ar-cordoba-argentina": {
-    "amountHl": 3798
+    "amountHl": 3330
    },
    "ar-famatina": {
-    "amountHl": 17355
-   },
-   "ar-felipe-varela": {
-    "amountHl": 14852
+    "amountHl": 22036
    },
    "ar-general-alvear": {
-    "amountHl": 203817
+    "amountHl": 167669
    },
    "ar-general-roca": {
-    "amountHl": 23209
+    "amountHl": 25638
    },
    "ar-godoy-cruz": {
-    "amountHl": 66097
+    "amountHl": 69939
    },
    "ar-guaymallen": {
-    "amountHl": 167498
+    "amountHl": 172292
    },
    "ar-jujuy": {
-    "amountHl": 1742
+    "amountHl": 2705
    },
    "ar-junin": {
-    "amountHl": 876660
+    "amountHl": 898573
    },
    "ar-la-paz": {
-    "amountHl": 1120
+    "amountHl": 1228
    },
    "ar-la-rioja-argentina": {
-    "amountHl": 391016
+    "amountHl": 315952
    },
    "ar-las-heras": {
-    "amountHl": 29701
+    "amountHl": 24240
    },
    "ar-lavalle": {
-    "amountHl": 563712
+    "amountHl": 558802
    },
    "ar-lujan-de-cuyo-mendoza": {
-    "amountHl": 973003
+    "amountHl": 1094198
    },
    "ar-maipu": {
-    "amountHl": 1221784
+    "amountHl": 1157954
    },
    "ar-mendoza": {
-    "amountHl": 8792740
+    "amountHl": 9051717
    },
    "ar-molinos": {
-    "amountHl": 3891
+    "amountHl": 6379
    },
    "ar-neuquen": {
-    "amountHl": 57182
+    "amountHl": 47569
    },
    "ar-pocito": {
-    "amountHl": 78023
+    "amountHl": 53870
    },
    "ar-rawson": {
-    "amountHl": 10979
+    "amountHl": 8929
    },
    "ar-rio-negro": {
-    "amountHl": 25743
+    "amountHl": 28880
    },
    "ar-rivadavia-mendoza": {
-    "amountHl": 1120959
+    "amountHl": 1051494
    },
    "ar-rivadavia-san-juan": {
-    "amountHl": 4834
+    "amountHl": 5204
    },
    "ar-salta": {
-    "amountHl": 175779
+    "amountHl": 218309
    },
    "ar-san-carlos-mendoza": {
-    "amountHl": 158402
+    "amountHl": 171829
    },
    "ar-san-carlos-salta": {
-    "amountHl": 11310
+    "amountHl": 13363
    },
    "ar-san-juan": {
-    "amountHl": 1370690
+    "amountHl": 1053773
    },
    "ar-san-luis": {
-    "amountHl": 1592
+    "amountHl": 1239
    },
    "ar-san-martin-mendoza": {
-    "amountHl": 2283354
+    "amountHl": 2410243
    },
    "ar-san-martin-san-juan": {
-    "amountHl": 504087
+    "amountHl": 372229
    },
    "ar-san-rafael-mendoza": {
-    "amountHl": 356488
+    "amountHl": 367097
    },
    "ar-santa-lucia": {
-    "amountHl": 43079
+    "amountHl": 25992
    },
    "ar-santa-maria": {
-    "amountHl": 30578
+    "amountHl": 27197
    },
    "ar-santa-rosa": {
-    "amountHl": 154467
+    "amountHl": 148178
    },
    "ar-sarmiento-san-juan": {
-    "amountHl": 84053
+    "amountHl": 86274
    },
    "ar-tandil": {
-    "amountHl": 21
+    "amountHl": 28
    },
    "ar-tinogasta": {
-    "amountHl": 8686
+    "amountHl": 7587
    },
    "ar-tucuman": {
-    "amountHl": 874
+    "amountHl": 1361
    },
    "ar-tunuyan": {
-    "amountHl": 271540
+    "amountHl": 364183
    },
    "ar-tupungato": {
-    "amountHl": 344137
+    "amountHl": 393797
    },
    "ar-ullum": {
-    "amountHl": 2230
+    "amountHl": 1632
    },
    "ar-zonda": {
-    "amountHl": 20068
+    "amountHl": 28179
    }
   }
  }

@@ -488,7 +488,8 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
   de superficie 2025» (`ar-ig-figures.json`): published on argentina.gob.ar
   under Creative Commons Attribution 4.0; each indication named after a
   department or a province shows that area's vineyard surface, with the year
-  and a link to the report. Chile's vineyard survey (SAG/ODEPA) was not used:
+  and a link to the report; and, from «Informe anual de cosecha y elaboración
+  2025», the wine made in that department or province. Chile's vineyard survey (SAG/ODEPA) was not used:
   its CC BY-NC-SA licence forbids commercial reuse.
 
 - **Copernicus DEM GLO-90** (doi:10.5270/ESA-c5d3d65), through

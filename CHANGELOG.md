@@ -26,7 +26,9 @@ has the reasons.
 - **Argentina's vineyards in 2025**: the 66 indications named after a
   department or a province show the INV's «Informe anual de superficie
   2025» (31 December 2025) instead of 2024's, each province's departments
-  checked against its total.
+  checked against its total; and 56 show the wine made in 2025 («Informe
+  anual de cosecha y elaboración 2025»), each row checked against its own
+  sums. Coronel Felipe Varela made only must in 2025, so it shows no wine.
 - **Vineyards by region and variety, from the University of Adelaide**:
   Anderson, Nelgen and Puga's database of winegrape bearing areas (CC BY
   4.0) gives 99 names their area where nothing else did — Australian and New
