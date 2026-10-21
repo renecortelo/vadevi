@@ -23,6 +23,11 @@ has the reasons.
 
 ### The library
 
+- **Switzerland's cantons, from the 2025 harvest report**: the 21 cantonal
+  AOCs show their canton's vineyard area and harvest in 2025, from the Federal
+  Office for Agriculture (its reports are free of copyright under Swiss law),
+  in place of the University of Adelaide's 2022 area; 20 of them had no
+  production before.
 - **Dolcetto's alcohol, from an 1875 ampelography**: Demaria and Leardi's
   «Ampelografia della provincia di Alessandria» (public domain) gives
   «mediocremente spiritoso»; the check now reads «spiritoso» as alcohol and

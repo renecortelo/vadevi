@@ -522,6 +522,7 @@
     "glanceSourceFederalRegister": "Federal Register des États-Unis, la règle créant l’AVA ({{campaign}})",
     "glanceSourceAdelaide": "Anderson, Nelgen et Puga, Université d’Adélaïde, superficie en production {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Source : ARTEA – Regione Toscana, vendanges {{campaign}} · CC BY 4.0",
+    "glanceSourceBlw": "Office fédéral de l’agriculture (OFAG), vendange {{campaign}}",
     "glanceSourceLombardia": "Source : Regione Lombardia, surface revendiquée aux vendanges {{campaign}} · CC0",
     "glanceSourceUmbria": "Source : Regione Umbria, vin certifié pour son AOP en {{campaign}} · CC BY 4.0",
     "glanceSourceKsh": "Forrás : KSH (statistique hongroise), vignobles {{campaign}} · CC BY 4.0"

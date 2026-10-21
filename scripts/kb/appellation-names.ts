@@ -10,6 +10,7 @@ export type RegionFigureSource = {
   publisher?:
     | "adelaide"
     | "artea"
+    | "blw"
     | "destatis"
     | "douane"
     | "federal-register"

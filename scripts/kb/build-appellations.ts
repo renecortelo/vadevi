@@ -1850,6 +1850,41 @@ for (const entry of entries) {
   };
   federalRegister += 1;
 }
+// Swiss cantonal AOCs: their canton's vineyard area and harvest from the
+// Federal Office for Agriculture's 2025 harvest report
+// (`data/kb/ch-canton-figures.json`, transcribed by hand; reports of federal
+// authorities are not protected by copyright), in place of any other figure.
+const swissCantons = JSON.parse(
+  readFileSync(resolve("data/kb/ch-canton-figures.json"), "utf8"),
+) as {
+  campaign: string;
+  regions: Record<string, { amountHl: number; plantedHa: number; rows: string }>;
+  sourceUrl: string;
+};
+let blw = 0;
+for (const entry of entries) {
+  const canton = swissCantons.regions[entry.id];
+  if (canton === undefined) continue;
+  const said = (what: string, unit: string, value: number) =>
+    `${what}, ${canton.rows}, ${swissCantons.campaign} (${unit}): ${value}`;
+  entry.figures = {
+    planted: {
+      amount: canton.plantedHa,
+      publisher: "blw",
+      quote: said("Rebfläche", "ha", canton.plantedHa),
+      sourceUrl: swissCantons.sourceUrl,
+      year: swissCantons.campaign,
+    },
+    production: {
+      amount: canton.amountHl,
+      publisher: "blw",
+      quote: said("Erntemenge", "hl", canton.amountHl),
+      sourceUrl: swissCantons.sourceUrl,
+      year: swissCantons.campaign,
+    },
+  };
+  blw += 1;
+}
 // Portuguese names whose ground Statistics Portugal's table can be read for:
 // the PDO (or PGI) wine declared in the municipalities of their demarcated
 // area, where no other name of the kind lies (`data/kb/pt-production-figures.json`,
@@ -1912,7 +1947,7 @@ for (const entry of entries) {
   fromAdelaide += 1;
 }
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE, ${blw} Swiss from the BLW.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

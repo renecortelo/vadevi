@@ -1,0 +1,112 @@
+{
+ "about": "Vineyard area (ha) and harvest (hl) in 2025 by canton, from the Federal Office for Agriculture's annex to its press release «Weinlese 2025 – Moderate Produktion und guter Jahrgang» (3 March 2026), «Rebfläche und Erntemenge», transcribed by hand; each language region's cantons add up to its total and the regions to Switzerland's. Reports of federal authorities are not protected by copyright (Swiss Copyright Act, art. 5 para. 1 lit. c). Each cantonal AOC takes its canton's row; Graubünden and Bern add up their two rows; rows that join cantons (AI + AR, UR + OW + NW) or part of one (BE Thunersee + übriger Kanton) give none on their own; Fribourg has no cantonal AOC in the atlas.",
+ "campaign": "2025",
+ "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+ "regions": {
+  "ch-aargau": {
+   "rows": "AG",
+   "plantedHa": 383,
+   "amountHl": 16501
+  },
+  "ch-basel-landschaft": {
+   "rows": "BL",
+   "plantedHa": 114,
+   "amountHl": 5117
+  },
+  "ch-basel-stadt": {
+   "rows": "BS",
+   "plantedHa": 5,
+   "amountHl": 235
+  },
+  "ch-bern": {
+   "rows": "BE Thunersee + übriger Kanton + BE Lac de Bienne",
+   "plantedHa": 252,
+   "amountHl": 12604
+  },
+  "ch-bielersee": {
+   "rows": "BE Lac de Bienne",
+   "plantedHa": 220,
+   "amountHl": 11264
+  },
+  "ch-geneve": {
+   "rows": "GE",
+   "plantedHa": 1361,
+   "amountHl": 88056
+  },
+  "ch-glarus": {
+   "rows": "GL",
+   "plantedHa": 2,
+   "amountHl": 57
+  },
+  "ch-graubunden": {
+   "rows": "GR (ohne Misox) + GR Mesolcina",
+   "plantedHa": 450,
+   "amountHl": 22135
+  },
+  "ch-jura": {
+   "rows": "JU",
+   "plantedHa": 18,
+   "amountHl": 427
+  },
+  "ch-luzern": {
+   "rows": "LU",
+   "plantedHa": 91,
+   "amountHl": 4911
+  },
+  "ch-neuchatel": {
+   "rows": "NE",
+   "plantedHa": 603,
+   "amountHl": 29258
+  },
+  "ch-schaffhausen": {
+   "rows": "SH",
+   "plantedHa": 472,
+   "amountHl": 28621
+  },
+  "ch-schwyz": {
+   "rows": "SZ",
+   "plantedHa": 37,
+   "amountHl": 1908
+  },
+  "ch-solothurn": {
+   "rows": "SO",
+   "plantedHa": 13,
+   "amountHl": 487
+  },
+  "ch-st-gallen": {
+   "rows": "SG",
+   "plantedHa": 204,
+   "amountHl": 8078
+  },
+  "ch-thurgau": {
+   "rows": "TG",
+   "plantedHa": 238,
+   "amountHl": 12719
+  },
+  "ch-ticino": {
+   "rows": "TI",
+   "plantedHa": 1115,
+   "amountHl": 37903
+  },
+  "ch-valais": {
+   "rows": "VS",
+   "plantedHa": 4578,
+   "amountHl": 285475
+  },
+  "ch-vaud": {
+   "rows": "VD",
+   "plantedHa": 3749,
+   "amountHl": 221931
+  },
+  "ch-zug": {
+   "rows": "ZG",
+   "plantedHa": 10,
+   "amountHl": 329
+  },
+  "ch-zurich": {
+   "rows": "ZH",
+   "plantedHa": 609,
+   "amountHl": 35020
+  }
+ }
+}

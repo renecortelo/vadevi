@@ -255,12 +255,14 @@ const RegionFigureSchema = z
      * Hungary's Central Statistical Office ("ksh"), Tuscany's agricultural
      * payments agency ("artea"), the Lombardy region ("regione-lombardia"), the Umbria region
      * ("regione-umbria"), the University of Adelaide's database of winegrape
-     * areas ("adelaide"), Statistics Portugal ("ine-portugal").
+     * areas ("adelaide"), Statistics Portugal ("ine-portugal"), Switzerland's
+     * Federal Office for Agriculture ("blw").
      */
     publisher: z
       .enum([
         "adelaide",
         "artea",
+        "blw",
         "destatis",
         "douane",
         "federal-register",

@@ -503,6 +503,14 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
   2025», the wine made in that department or province. Chile's vineyard survey (SAG/ODEPA) was not used:
   its CC BY-NC-SA licence forbids commercial reuse.
 
+- **Switzerland's Federal Office for Agriculture (BLW/OFAG)**, annex to its
+  press release «Weinlese 2025» (3 March 2026), «Rebfläche und Erntemenge»
+  by canton (`ch-canton-figures.json`, transcribed by hand; each language
+  region adds up to its total): reports of federal authorities are not
+  protected by copyright (Swiss Copyright Act, art. 5 para. 1 lit. c). The
+  21 cantonal AOCs with a row of their own (Graubünden and Bern adding their
+  two) show their canton's area and harvest, in place of any other figure.
+
 - **Statistics Portugal (INE)**, indicator 0012835 «Produção vinícola
   declarada em vinho (hl) pelos produtores por Local de vinificação e
   Qualidade e cor do vinho» on dados.gov.pt (CC BY 4.0;

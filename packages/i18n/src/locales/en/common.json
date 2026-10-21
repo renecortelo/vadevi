@@ -522,6 +522,7 @@
     "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})",
     "glanceSourceAdelaide": "Anderson, Nelgen and Puga, University of Adelaide, bearing area {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Source: ARTEA – Regione Toscana, grape harvest {{campaign}} · CC BY 4.0",
+    "glanceSourceBlw": "Swiss Federal Office for Agriculture (FOAG), harvest {{campaign}}",
     "glanceSourceLombardia": "Source: Regione Lombardia, area claimed at the {{campaign}} harvest · CC0",
     "glanceSourceUmbria": "Source: Regione Umbria, wine certified for its DO in {{campaign}} · CC BY 4.0",
     "glanceSourceKsh": "Forrás: KSH (Hungarian statistics), vineyards {{campaign}} · CC BY 4.0"

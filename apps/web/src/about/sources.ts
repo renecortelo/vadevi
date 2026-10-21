@@ -242,6 +242,13 @@ export const sources: Source[] = [
     what: "areas",
   },
   {
+    group: "figures",
+    terms: "officialFacts",
+    name: "Bundesamt für Landwirtschaft (BLW) · Office fédéral de l'agriculture (OFAG)",
+    url: "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+    what: "areas",
+  },
+  {
     credit: "Fonte: INE, Estatísticas da Produção Vegetal; municipalities summed",
     group: "figures",
     licence: "CC BY 4.0",

@@ -11850,6 +11850,7 @@
                     "enum": [
                       "adelaide",
                       "artea",
+                      "blw",
                       "destatis",
                       "douane",
                       "federal-register",
@@ -11894,6 +11895,7 @@
                     "enum": [
                       "adelaide",
                       "artea",
+                      "blw",
                       "destatis",
                       "douane",
                       "federal-register",

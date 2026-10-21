@@ -73,11 +73,11 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     { timeout: 15_000 },
   );
   await expect(page.locator(".region-glance")).toContainText("≈ 406,7 ha");
-  // A Swiss canton: its bearing area and its most planted grapes from the
-  // University of Adelaide's database, credited with its licence.
+  // A Swiss canton: its area and harvest from the federal harvest report,
+  // and its most planted grapes from the University of Adelaide's database.
   await page.goto("/library/regions/ch-vaud");
   await expect(page.locator("#region-glance ~ .section-help")).toContainText(
-    "Universidad de Adelaida, superficie en producción 2022 (CC BY 4.0)",
+    "Oficina Federal de Agricultura de Suiza (OFAG), vendimia 2025",
     { timeout: 15_000 },
   );
   await expect(page.getByRole("link", { name: "Chasselas", exact: true })).toBeVisible();

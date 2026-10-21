@@ -413005,13 +413005,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 383.1,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Aargau (AG), Switzerland, 2022 (ha): 383.1",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 383,
+        "publisher": "blw",
+        "quote": "Rebfläche, AG, 2025 (ha): 383",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 16501,
+        "publisher": "blw",
+        "quote": "Erntemenge, AG, 2025 (hl): 16501",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -413283,13 +413289,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 247.8,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Bern (BE Lac de Bienne + BE Thunersee + BE übriges Gebiet), Switzerland, 2022 (ha): 247.8",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 252,
+        "publisher": "blw",
+        "quote": "Rebfläche, BE Thunersee + übriger Kanton + BE Lac de Bienne, 2025 (ha): 252",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 12604,
+        "publisher": "blw",
+        "quote": "Erntemenge, BE Thunersee + übriger Kanton + BE Lac de Bienne, 2025 (hl): 12604",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -413389,13 +413401,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 113.8,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Basel-Landschaft (BL), Switzerland, 2022 (ha): 113.8",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 114,
+        "publisher": "blw",
+        "quote": "Rebfläche, BL, 2025 (ha): 114",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 5117,
+        "publisher": "blw",
+        "quote": "Erntemenge, BL, 2025 (hl): 5117",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -413490,13 +413508,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 4.8,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Basel-Stadt (BS), Switzerland, 2022 (ha): 4.8",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 5,
+        "publisher": "blw",
+        "quote": "Rebfläche, BS, 2025 (ha): 5",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 235,
+        "publisher": "blw",
+        "quote": "Erntemenge, BS, 2025 (hl): 235",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -413711,13 +413735,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 1348.5,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Genève (GE), Switzerland, 2022 (ha): 1348.5",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 1361,
+        "publisher": "blw",
+        "quote": "Rebfläche, GE, 2025 (ha): 1361",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 88056,
+        "publisher": "blw",
+        "quote": "Erntemenge, GE, 2025 (hl): 88056",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -413802,13 +413832,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 1.9,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Glarus (GL), Switzerland, 2022 (ha): 1.9",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 2,
+        "publisher": "blw",
+        "quote": "Rebfläche, GL, 2025 (ha): 2",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 57,
+        "publisher": "blw",
+        "quote": "Erntemenge, GL, 2025 (hl): 57",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -413913,13 +413949,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 452.2,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Graubünden (GR Mesolcina + GR übriges Gebiet), Switzerland, 2022 (ha): 452.2",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 450,
+        "publisher": "blw",
+        "quote": "Rebfläche, GR (ohne Misox) + GR Mesolcina, 2025 (ha): 450",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 22135,
+        "publisher": "blw",
+        "quote": "Erntemenge, GR (ohne Misox) + GR Mesolcina, 2025 (hl): 22135",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -413999,13 +414041,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 17.7,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Jura (JU), Switzerland, 2022 (ha): 17.7",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 18,
+        "publisher": "blw",
+        "quote": "Rebfläche, JU, 2025 (ha): 18",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 427,
+        "publisher": "blw",
+        "quote": "Erntemenge, JU, 2025 (hl): 427",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -414110,13 +414158,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 78.7,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Luzern (LU), Switzerland, 2022 (ha): 78.7",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 91,
+        "publisher": "blw",
+        "quote": "Rebfläche, LU, 2025 (ha): 91",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 4911,
+        "publisher": "blw",
+        "quote": "Erntemenge, LU, 2025 (hl): 4911",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -414206,13 +414260,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 604.8,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Neuchâtel (NE), Switzerland, 2022 (ha): 604.8",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 603,
+        "publisher": "blw",
+        "quote": "Rebfläche, NE, 2025 (ha): 603",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 29258,
+        "publisher": "blw",
+        "quote": "Erntemenge, NE, 2025 (hl): 29258",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -414448,13 +414508,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 213.5,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, St. Gallen (SG), Switzerland, 2022 (ha): 213.5",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 204,
+        "publisher": "blw",
+        "quote": "Rebfläche, SG, 2025 (ha): 204",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 8078,
+        "publisher": "blw",
+        "quote": "Erntemenge, SG, 2025 (hl): 8078",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -414584,13 +414650,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 467.4,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Schaffhausen (SH), Switzerland, 2022 (ha): 467.4",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 472,
+        "publisher": "blw",
+        "quote": "Rebfläche, SH, 2025 (ha): 472",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 28621,
+        "publisher": "blw",
+        "quote": "Erntemenge, SH, 2025 (hl): 28621",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -414680,13 +414752,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 11.4,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Solothurn (SO), Switzerland, 2022 (ha): 11.4",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 13,
+        "publisher": "blw",
+        "quote": "Rebfläche, SO, 2025 (ha): 13",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 487,
+        "publisher": "blw",
+        "quote": "Erntemenge, SO, 2025 (hl): 487",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -414776,13 +414854,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 36.3,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Schwyz (SZ), Switzerland, 2022 (ha): 36.3",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 37,
+        "publisher": "blw",
+        "quote": "Rebfläche, SZ, 2025 (ha): 37",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 1908,
+        "publisher": "blw",
+        "quote": "Erntemenge, SZ, 2025 (hl): 1908",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -414867,13 +414951,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 236.2,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Thurgau (TG), Switzerland, 2022 (ha): 236.2",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 238,
+        "publisher": "blw",
+        "quote": "Rebfläche, TG, 2025 (ha): 238",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 12719,
+        "publisher": "blw",
+        "quote": "Erntemenge, TG, 2025 (hl): 12719",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -415119,13 +415209,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 3787.4,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Vaud (VD), Switzerland, 2022 (ha): 3787.4",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 3749,
+        "publisher": "blw",
+        "quote": "Rebfläche, VD, 2025 (ha): 3749",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 221931,
+        "publisher": "blw",
+        "quote": "Erntemenge, VD, 2025 (hl): 221931",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -415285,16 +415381,18 @@
     },
     "figures": {
       "planted": {
-        "amount": 5259,
-        "quote": "superficieplantée = {{formatnum:5259}} hectares",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais",
-        "year": null
+        "amount": 4578,
+        "publisher": "blw",
+        "quote": "Rebfläche, VS, 2025 (ha): 4578",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
       "production": {
-        "amount": 225000,
-        "quote": "volproduction = {{formatnum:225000}} hectolitres en vins rouges<br>{{formatnum:155000}} hectolitres en vins blancs",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Vignoble_du_Valais",
-        "year": null
+        "amount": 285475,
+        "publisher": "blw",
+        "quote": "Erntemenge, VS, 2025 (hl): 285475",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       }
     }
   },
@@ -415370,13 +415468,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 6.1,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Zug (ZG), Switzerland, 2022 (ha): 6.1",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 10,
+        "publisher": "blw",
+        "quote": "Rebfläche, ZG, 2025 (ha): 10",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 329,
+        "publisher": "blw",
+        "quote": "Erntemenge, ZG, 2025 (hl): 329",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -415471,13 +415575,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 605.1,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Zürich (ZH), Switzerland, 2022 (ha): 605.1",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 609,
+        "publisher": "blw",
+        "quote": "Rebfläche, ZH, 2025 (ha): 609",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 35020,
+        "publisher": "blw",
+        "quote": "Erntemenge, ZH, 2025 (hl): 35020",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -415597,12 +415707,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 1040,
-        "quote": "planted = 1,040 ha",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Ticino_(wine_region)",
-        "year": null
+        "amount": 1115,
+        "publisher": "blw",
+        "quote": "Rebfläche, TI, 2025 (ha): 1115",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 37903,
+        "publisher": "blw",
+        "quote": "Erntemenge, TI, 2025 (hl): 37903",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
@@ -415929,13 +416046,19 @@
     },
     "figures": {
       "planted": {
-        "amount": 221.8,
-        "publisher": "adelaide",
-        "quote": "Bearing area, all varieties, Bielersee (BE Lac de Bienne), Switzerland, 2022 (ha): 221.8",
-        "sourceUrl": "https://doi.org/10.25909/32870405.v1",
-        "year": "2022"
+        "amount": 220,
+        "publisher": "blw",
+        "quote": "Rebfläche, BE Lac de Bienne, 2025 (ha): 220",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
       },
-      "production": null
+      "production": {
+        "amount": 11264,
+        "publisher": "blw",
+        "quote": "Erntemenge, BE Lac de Bienne, 2025 (hl): 11264",
+        "sourceUrl": "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+        "year": "2025"
+      }
     }
   },
   {
