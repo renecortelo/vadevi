@@ -306,6 +306,17 @@
         "lang": "oc",
         "quote": "L'origina d'aqueste vitatge es Provença o Lengadòc.",
         "value": "FR"
+      },
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "low",
+        "quote": "on rejette généralement Paramon et le teret-bouret comme donnant des vins qui nont pas assez d’alcool, de corps ni de couleur",
+        "source": {
+          "volume": "guyot-etude-vignobles-1876",
+          "work": "guyot-etude-des-vignobles",
+          "url": "https://archive.org/details/bwb_Y0-BSE-098_1"
+        }
       }
     ],
     "arinto": [

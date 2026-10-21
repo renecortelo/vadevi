@@ -42796,7 +42796,7 @@
       "earthy",
       "herbaceous"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -42936,6 +42936,12 @@
         "quote": "L'origina d'aqueste vitatge es Provença o Lengadòc.",
         "value": "FR",
         "sourceUrl": "https://oc.wikipedia.org/wiki/Aramon_(vitatge)"
+      },
+      {
+        "field": "body",
+        "quote": "on rejette généralement Paramon et le teret-bouret comme donnant des vins qui nont pas assez d’alcool, de corps ni de couleur",
+        "value": "low",
+        "sourceUrl": "https://archive.org/details/bwb_Y0-BSE-098_1"
       }
     ],
     "id": "aramon",

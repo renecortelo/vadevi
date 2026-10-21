@@ -75,6 +75,13 @@ export const sources: Source[] = [
     what: "traits",
   },
   {
+    group: "texts",
+    name: "J. Guyot, «Étude des vignobles de France», 2nd ed., 1876 (Internet Archive)",
+    terms: "publicDomain",
+    url: "https://archive.org/details/bwb_Y0-BSE-098_1",
+    what: "traits",
+  },
+  {
     credit: "M. Kreidlmayer (2026), «Wines of Fire and Earth», Ecocycles 11(3)",
     group: "texts",
     licence: "CC BY 4.0",

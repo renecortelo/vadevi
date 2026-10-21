@@ -450,6 +450,15 @@ for what moved.
   française» (1857) was read too and gave nothing usable (its sentences are
   comparative or about a place's wine).
 
+- **J. Guyot, «Étude des vignobles de France»** (2nd ed., Masson, 1876; the
+  author died in 1872), two volumes in the Internet Archive
+  (`bwb_Y0-BSE-098_1`, `etudedesvignobl00guyogoog`): Aramon's body, «des
+  vins qui n'ont pas assez d'alcool, de corps ni de couleur» (the check now
+  reads «pas assez» as low). Also read, with nothing usable — they list a
+  quinta's or a region's grapes, or describe its blended wine: Villa Maior,
+  «O Douro illustrado» (1876); A. A. de Aguiar, «Conferencias sobre vinhos»
+  (1876–77); E. Abela, «El libro del viticultor» (1885).
+
 - **Open-access articles under CC BY 4.0**, read the same way where a
   sentence states a level for the variety itself: M. Kreidlmayer, «Wines of
   Fire and Earth: Exploring the Volcanic Terroirs of the Canary Islands»,

@@ -23,6 +23,9 @@ has the reasons.
 
 ### The library
 
+- **Aramon's body, from Guyot's «Étude des vignobles de France»** (1876,
+  public domain): its wines «n'ont pas assez d'alcool, de corps ni de
+  couleur», as its articles also say.
 - **Alfrocheiro's acidity, from an open-access article**: Kreidlmayer's study
   of the Canary Islands' volcanic terroirs (Ecocycles, 2026, CC BY 4.0) says
   the wines of Baboso Negro — Alfrocheiro — are known for their high natural
