@@ -1010,6 +1010,30 @@
           "volume": "traitegeneraldev0005pvia",
           "work": "viala-vermorel"
         }
+      },
+      {
+        "field": "pairings",
+        "lang": "fr",
+        "value": [
+          "seafood",
+          "fish",
+          "goat cheese"
+        ],
+        "quote": "Traditionnellement il est consommé en accompagnement d'un plateau de fruits de mer, de poissons ou de fromage de chèvre.",
+        "words": {
+          "seafood": "fruits de mer",
+          "fish": "poissons",
+          "goat cheese": "fromage de chèvre"
+        },
+        "scope": {
+          "place": "Clairette de Bellegarde",
+          "regionId": "fr-clairette-de-bellegarde"
+        },
+        "source": {
+          "url": "https://fr.wikipedia.org/wiki/Clairette_de_Bellegarde",
+          "volume": "frwiki-fr-clairette-de-bellegarde",
+          "work": "wikipedia-fr"
+        }
       }
     ],
     "colombard": [
@@ -2247,6 +2271,21 @@
         "source": {
           "volume": "traitegeneralvol02unse",
           "work": "viala-vermorel"
+        }
+      },
+      {
+        "field": "alcohol",
+        "lang": "en",
+        "value": "medium",
+        "quote": "The moderate alcohol level of Muscadet allows it to complement many types of dishes without overwhelming them.",
+        "scope": {
+          "place": "Muscadet",
+          "regionId": "fr-muscadet"
+        },
+        "source": {
+          "url": "https://en.wikipedia.org/wiki/Muscadet",
+          "volume": "enwiki-fr-muscadet",
+          "work": "wikipedia-en"
         }
       }
     ],

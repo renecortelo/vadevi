@@ -40064,7 +40064,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "flint"
     ],
@@ -40148,6 +40148,14 @@
         "quote": "Dans les crus à Melon de la Bourgogne, il donne un vin incolore, à reflets d'opale, léger au palais, sans mâche ni corps, qui coule, gratte avec un léger pétillement.",
         "value": "low",
         "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
+      },
+      {
+        "field": "alcohol",
+        "quote": "The moderate alcohol level of Muscadet allows it to complement many types of dishes without overwhelming them.",
+        "value": "medium",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Muscadet",
+        "place": "Muscadet",
+        "placeId": "fr-muscadet"
       }
     ],
     "id": "melon-de-bourgogne",
@@ -49839,6 +49847,30 @@
         "quote": "« Les vins de Clairette, désignés en Languedoc sous le nom de picardans, sont pleins, corsés, trés agréables",
         "value": "high",
         "sourceUrl": "https://archive.org/details/traitegeneraldev0005pvia"
+      },
+      {
+        "field": "pairings",
+        "quote": "Traditionnellement il est consommé en accompagnement d'un plateau de fruits de mer, de poissons ou de fromage de chèvre.",
+        "value": "seafood",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Clairette_de_Bellegarde",
+        "place": "Clairette de Bellegarde",
+        "placeId": "fr-clairette-de-bellegarde"
+      },
+      {
+        "field": "pairings",
+        "quote": "Traditionnellement il est consommé en accompagnement d'un plateau de fruits de mer, de poissons ou de fromage de chèvre.",
+        "value": "fish",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Clairette_de_Bellegarde",
+        "place": "Clairette de Bellegarde",
+        "placeId": "fr-clairette-de-bellegarde"
+      },
+      {
+        "field": "pairings",
+        "quote": "Traditionnellement il est consommé en accompagnement d'un plateau de fruits de mer, de poissons ou de fromage de chèvre.",
+        "value": "goat cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Clairette_de_Bellegarde",
+        "place": "Clairette de Bellegarde",
+        "placeId": "fr-clairette-de-bellegarde"
       }
     ],
     "id": "clairette-blanche",
@@ -49853,7 +49885,11 @@
       "pt": "Clairette blanche"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "seafood",
+      "fish",
+      "goat cheese"
+    ],
     "prominence": 8,
     "regions": [
       {

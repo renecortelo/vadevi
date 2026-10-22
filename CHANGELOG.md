@@ -27,14 +27,15 @@ has the reasons.
   speaks of a grape everywhere, its card may take a value from what one
   place's wine is — a single-variety DOC's, as its specification describes
   it, or the region where nearly all of it grows — and says so beside it,
-  «Said of the wine of Tokaj», linked to that place. Nineteen so far:
+  «Said of the wine of Tokaj», linked to that place. Twenty-one so far:
   Furmint's body and pairings and Hárslevelű's pairings (Tokaj, from
   Wikivoyage); from the articles of single-variety DOCs, Glera's body,
   sweetness and pairings (Conegliano Valdobbiadene, Prosecco), Greco's body
   and pairings (Greco di Tufo), Montepulciano's dry wines and pairings
   (Montepulciano d'Abruzzo), Aleatico's body and pairings (Elba, Puglia),
   Ansonica's dry wines, and the pairings of Vernaccia, Barbera, Moscato
-  bianco and giallo, Friulano and Garganega.
+  bianco and giallo, Friulano and Garganega; Melon de Bourgogne's moderate
+  alcohol (Muscadet) and Clairette's pairings (Clairette de Bellegarde).
 - **Each grape fact links its own source**: in «Where each fact comes from»,
   a fact read from a book or an article links it even when it comes first in
   the list, and «Read the article on Wikipedia» always opens the grape's
