@@ -17,6 +17,8 @@ has the reasons.
   now has its vineyard area, production and climate, as its card shows them,
   each cited to whoever gives it (Spain's Ministry, the French customs, the
   ABS, CHELSA…); its grapes are credited to their own sources.
+- **The lees in French**: «sur lies» and «élevage sur lies» find the lees,
+  as «sur lie» and «lías» already did.
 - **A grape by its own name first**: «Sauvignon vert» now finds Sauvignon
   vert, not Muscadelle, whose synonym it also is — on a tie, a grape's own
   name wins over another's synonym.

@@ -2346,6 +2346,14 @@
       {
         "locale": "es",
         "name": "lias"
+      },
+      {
+        "locale": "fr",
+        "name": "sur lies"
+      },
+      {
+        "locale": "fr",
+        "name": "élevage sur lies"
       }
     ],
     "category": "method",
