@@ -201,6 +201,10 @@ describe("Vicenç's question bank", () => {
 
   it("finds registered names, and says nothing of a grape that does not exist", async () => {
     let found = 0;
+    let regionFacts = 0;
+    let regionFactsGiven = 0;
+    let regionCitations = 0;
+    let regionCredited = 0;
     const misses: string[] = [];
     for (const region of regions) {
       // As a Spanish reader writes it: its Spanish name, or one in Latin
@@ -209,9 +213,36 @@ describe("Vicenç's question bank", () => {
         region.names.find((entry) => entry.locale === "es")?.name ??
         region.names.find((entry) => /^[\p{Script=Latin}\d\s'’.,()-]+$/u.test(entry.name))?.name ??
         region.name;
-      const { data } = await ask(`¿Qué uvas se usan en ${name}?`, "es");
+      const { data, statements } = await ask(`¿Qué uvas se usan en ${name}?`, "es");
       if (data?.libraryRegions.some((entry) => entry.id === region.id)) found += 1;
-      else misses.push(`${region.id} («${name}»)`);
+      else {
+        misses.push(`${region.id} («${name}»)`);
+        continue;
+      }
+      // Its card's figures and climate reach Vicenç, each credited as itself.
+      const text = statements
+        .filter((statement) => statement.id.startsWith(`library-region-${region.id}-`))
+        .map((statement) => statement.text)
+        .join(" ");
+      const expected = [
+        ...(region.figures?.planted ? [`vineyard area: ${region.figures.planted.amount} ha`] : []),
+        ...(region.figures?.production
+          ? [`wine produced: ${region.figures.production.amount} hl`]
+          : []),
+        ...(region.climate ? [`Köppen ${region.climate.koppen}`] : []),
+      ];
+      for (const fact of expected) {
+        regionFacts += 1;
+        if (text.includes(fact)) regionFactsGiven += 1;
+        else misses.push(`fact missing: ${region.id}: «${fact}»`);
+      }
+      for (const source of data.citations) {
+        const fromWikipedia = new URL(source.canonicalUrl).hostname.endsWith("wikipedia.org");
+        regionCitations += 1;
+        if (fromWikipedia === (source.publisher === "Wikipedia")) regionCredited += 1;
+        else
+          misses.push(`miscredited: ${region.id}: ${source.canonicalUrl} as ${source.publisher}`);
+      }
     }
     let silent = 0;
     for (const name of invented) {
@@ -226,11 +257,15 @@ describe("Vicenç's question bank", () => {
     console.info(
       [
         `Registered names found: ${found} / ${regions.length}`,
+        `Their card's figures and climate given: ${regionFactsGiven} / ${regionFacts}`,
+        `Their citations credited as Wikipedia only when they are: ${regionCredited} / ${regionCitations}`,
         `Invented grapes met with silence: ${silent} / ${invented.length}`,
         ...misses.slice(0, 30).map((miss) => `  not found: ${miss}`),
       ].join("\n"),
     );
     expect(silent).toBe(invented.length);
+    expect(regionFactsGiven).toBe(regionFacts);
+    expect(regionCredited).toBe(regionCitations);
     expect(found / regions.length).toBeGreaterThan(0.9);
   }, 1_800_000);
 });

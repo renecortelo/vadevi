@@ -1206,11 +1206,9 @@ async function loadLibraryStatements(
               createdByProvider: "wine-library",
               createdByUserId: null,
               id,
-              licenseIdentifier: "CC-BY-SA-4.0",
-              publisher: "Wikipedia",
+              ...librarySourceKind(grape.sourceUrl, grape.name),
               retrievedAt: now,
               sourceType: "open_dataset",
-              title: `${grape.name} — Wikipedia`,
               updatedAt: now,
             });
           }
@@ -1221,6 +1219,56 @@ async function loadLibraryStatements(
         "grapes",
         `grapes whose own articles say they are grown there: ${region.grapes.map((grape) => grape.name).join(", ")}`,
         grapeSources,
+      );
+    }
+    // Its vineyards and wine, each figure cited to whoever gives it.
+    for (const [suffix, figure, unit, what] of [
+      ["planted", region.figures.planted, "ha", "vineyard area"],
+      ["production", region.figures.production, "hl", "wine produced"],
+    ] as const) {
+      if (figure === null) continue;
+      const figureId = await librarySourceId(`region-${suffix}:${region.id}`);
+      const credit =
+        figurePublishers[figure.publisher ?? "wikipedia"] ?? figurePublishers.wikipedia!;
+      sources.push({
+        canonicalUrl: figure.sourceUrl,
+        createdAt: now,
+        createdByProvider: "wine-library",
+        createdByUserId: null,
+        id: figureId,
+        licenseIdentifier: credit.license,
+        publisher: credit.publisher,
+        retrievedAt: now,
+        sourceType: credit.publisher === "Wikipedia" ? "open_dataset" : "regulator",
+        title: `${region.name} — ${what}`,
+        updatedAt: now,
+      });
+      say(
+        suffix,
+        `${what}: ${figure.amount} ${unit}${figure.year === null ? "" : ` (${figure.year})`}`,
+        [figureId],
+      );
+    }
+    if (region.climate !== null) {
+      const climateId = await librarySourceId(`region-climate:${region.id}`);
+      sources.push({
+        canonicalUrl: "https://doi.org/10.16904/envidat.228",
+        createdAt: now,
+        createdByProvider: "wine-library",
+        createdByUserId: null,
+        id: climateId,
+        licenseIdentifier: "CC0-1.0",
+        publisher: "CHELSA V2.1 (Karger et al.)",
+        retrievedAt: now,
+        sourceType: "open_dataset",
+        title: `${region.name} — climate 1981–2010 at its point`,
+        updatedAt: now,
+      });
+      const { climate } = region;
+      say(
+        "climate",
+        `climate at its point on the map, 1981–2010 (one point: a guide for a large area): Köppen ${climate.koppen}, ${climate.rainfall} mm of rain a year, mean ${climate.meanTemperature} °C, ${climate.growingDegreeDays} growing degree days (Winkler ${climate.winkler ?? "below I"})${climate.elevation === null ? "" : `, ${climate.elevation} m above the sea`}`,
+        [climateId],
       );
     }
     regions.push({ id: region.id, name: region.name });
@@ -3057,3 +3105,22 @@ function librarySourceKind(
   }
   return { licenseIdentifier: "see-source", publisher: host, title: `${name} — ${host}` };
 }
+
+/** Who gives a registered name's vineyard figures, and under what terms. */
+const figurePublishers: Record<string, { license: string; publisher: string }> = {
+  abs: { license: "CC-BY-4.0", publisher: "Australian Bureau of Statistics" },
+  adelaide: { license: "CC-BY-4.0", publisher: "University of Adelaide" },
+  artea: { license: "CC-BY-4.0", publisher: "ARTEA, Regione Toscana" },
+  blw: { license: "CH-official-report", publisher: "Swiss Federal Office for Agriculture" },
+  destatis: { license: "DL-DE-BY-2.0", publisher: "Destatis" },
+  douane: { license: "Licence-Ouverte-2.0", publisher: "French customs (DGDDI)" },
+  "federal-register": { license: "US-public-domain", publisher: "US Federal Register" },
+  "ine-portugal": { license: "CC-BY-4.0", publisher: "Statistics Portugal (INE)" },
+  inv: { license: "CC-BY-4.0", publisher: "Instituto Nacional de Vitivinicultura (INV)" },
+  ksh: { license: "CC-BY-4.0", publisher: "Hungarian Central Statistical Office (KSH)" },
+  mapa: { license: "ES-reuse-citing-source", publisher: "Spain's Ministry of Agriculture (MAPA)" },
+  "regione-lombardia": { license: "CC0-1.0", publisher: "Regione Lombardia" },
+  "regione-umbria": { license: "CC-BY-4.0", publisher: "Regione Umbria" },
+  "statistik-austria": { license: "AT-reuse-citing-source", publisher: "Statistik Austria" },
+  wikipedia: { license: "CC-BY-SA-4.0", publisher: "Wikipedia" },
+};

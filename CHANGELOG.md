@@ -13,6 +13,10 @@ has the reasons.
   body, says a fact read from one place's wine as such («said of the wine of
   Tokaj»), and credits each source as what it is — a paper, a public-domain
   book, the EU register, Wikivoyage — rather than all as Wikipedia.
+- **A registered name's vineyards and climate**: asked about a name, Vicenç
+  now has its vineyard area, production and climate, as its card shows them,
+  each cited to whoever gives it (Spain's Ministry, the French customs, the
+  ABS, CHELSA…); its grapes are credited to their own sources.
 - **A question bank** (`pnpm eval:vicenc`, `docs/assistant-evaluation.md`):
   every grape asked about in the eight languages, by synonym, a sample of
   registered names and grapes that do not exist; all 209 grapes found, every
