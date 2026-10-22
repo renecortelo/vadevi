@@ -102,7 +102,7 @@
     "typescript": "6.0.3",
     "typescript-eslint": "*",
     "vitest": "catalog:",
-    "wrangler": "^4.133.0",
+    "wrangler": "^4.151.3",
     "zod": "*",
     "zxing-wasm": "^3.1.3"
   }

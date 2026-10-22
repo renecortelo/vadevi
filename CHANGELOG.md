@@ -6,6 +6,12 @@ has the reasons.
 
 ## Unreleased
 
+### Maintenance
+
+- Vitest 4.1.12 (two moderate advisories in its mocker closed) and Wrangler
+  4.151.3; the web app's build config imports its helper with its extension,
+  as Vite's native config loader will require.
+
 ### Finding your way
 
 - **The sign-in screen at once**: a device that holds no session to restore
