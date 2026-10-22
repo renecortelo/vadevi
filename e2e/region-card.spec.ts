@@ -100,6 +100,13 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     "Instituto Nacional de Estatística (INE) de Portugal, vino declarado 2025 (CC BY 4.0)",
     { timeout: 15_000 },
   );
+  // An Australian GI zone: its vineyard area from the Australian Bureau of
+  // Statistics.
+  await page.goto("/library/regions/au-barossa");
+  await expect(page.locator("#region-glance ~ .section-help")).toContainText(
+    "Oficina de Estadística de Australia (ABS), viñedos 2014-15 (CC BY 4.0)",
+    { timeout: 15_000 },
+  );
   await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.

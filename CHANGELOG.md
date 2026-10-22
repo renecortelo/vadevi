@@ -23,6 +23,10 @@ has the reasons.
 
 ### The library
 
+- **Each grape fact links its own source**: in «Where each fact comes from»,
+  a fact read from a book or an article links it even when it comes first in
+  the list, and «Read the article on Wikipedia» always opens the grape's
+  Wikipedia article (it could open a paper's address instead).
 - **Australia's vineyard area, from the Australian Bureau of Statistics**:
   32 states, GI zones and regions that had no area — South Australia,
   Barossa, Limestone Coast, Big Rivers, Hunter, King Valley… — show their

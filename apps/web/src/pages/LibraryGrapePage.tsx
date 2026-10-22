@@ -101,6 +101,16 @@ export function LibraryGrapePage() {
     text.charAt(0).toLocaleUpperCase(i18n.language) + text.slice(1);
   const fromSource = grape.pairings;
   const suggested = grape.suggestedPairings;
+  // The grape's own article: the Wikipedia page most of its facts are read
+  // from. The facts come sorted by field, so a book's or a paper's may come
+  // first; each fact from anywhere else links its own source.
+  const quoted = new Map<string, number>();
+  for (const entry of grape.evidence) {
+    if (new URL(entry.sourceUrl).hostname.endsWith("wikipedia.org")) {
+      quoted.set(entry.sourceUrl, (quoted.get(entry.sourceUrl) ?? 0) + 1);
+    }
+  }
+  const article = [...quoted].sort((one, other) => other[1] - one[1])[0]?.[0] ?? null;
   const origin = country(grape.originCountryCode);
 
   // The pages this card links to lead back here, and on from here.
@@ -381,8 +391,8 @@ export function LibraryGrapePage() {
               <li key={`${entry.field}-${entry.value}`}>
                 <strong>{entry.value}</strong> — “{entry.quote}”
                 {/* A fact read from another article — the grape's own
-                    language's — links that article, not the English one. */}
-                {entry.sourceUrl === grape.evidence[0]!.sourceUrl ? null : (
+                    language's, a book, a paper — links that source. */}
+                {entry.sourceUrl === article ? null : (
                   <>
                     {" "}
                     <a
@@ -398,16 +408,13 @@ export function LibraryGrapePage() {
               </li>
             ))}
           </ul>
-          <p className="section-help">
-            <a
-              className="text-link"
-              href={grape.evidence[0]!.sourceUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              {t("library.evidenceSource")}
-            </a>
-          </p>
+          {article === null ? null : (
+            <p className="section-help">
+              <a className="text-link" href={article} rel="noreferrer" target="_blank">
+                {t("library.evidenceSource")}
+              </a>
+            </p>
+          )}
         </details>
       )}
 

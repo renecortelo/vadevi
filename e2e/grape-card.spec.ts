@@ -92,4 +92,21 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
     /--from: 0%; --to: 100%/,
   );
   await page.screenshot({ fullPage: true, path: test.info().outputPath("grape-range.png") });
+
+  // A fact read from an open-access article quotes it and links it, though it
+  // comes first: Cabernet Franc's acidity and tannins. The card's own article
+  // is still Wikipedia's.
+  await page.goto("/library/grapes/cabernet-franc");
+  const evidence = page.locator(".library-evidence");
+  await expect(evidence).toBeVisible({ timeout: 15_000 });
+  await evidence.locator("summary").click();
+  const fromPaper = evidence.locator("li", { hasText: "moderate tannins" });
+  await expect(fromPaper).toHaveCount(2);
+  await expect(fromPaper.first().getByRole("link", { name: "(doi.org)" })).toHaveAttribute(
+    "href",
+    "https://doi.org/10.3390/insects16050497",
+  );
+  await expect(
+    evidence.getByRole("link", { name: "Leer el artículo en Wikipedia" }),
+  ).toHaveAttribute("href", /wikipedia\.org/);
 });

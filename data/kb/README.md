@@ -41,7 +41,8 @@ the permissions would give.
 
 Every structured value carries `evidence`: the sentence it was read from — of
 the grape's English Wikipedia article, of its article in another language,
-or of a public-domain book (see «Licences») — or, for an origin no text
+of a public-domain book or of an open-access article under CC BY (see
+«Licences»), whose text is cached beside the books — or, for an origin no text
 gives, the row of the University of Adelaide's table. A language model, or a
 reader by hand, proposes values with quotes; `scripts/kb/grape-validation.ts`
 keeps a value only if its quote occurs in the text and says it. The model is
@@ -314,8 +315,10 @@ Each name's card shows the climate at its point on the map and, where a
 source gives them, its vineyards' size and production: an official
 statistic first (Spain's Ministry, France's customs, Argentina's INV,
 Destatis, Statistik Austria, the KSH, ARTEA, Lombardy, Umbria, the Federal
-Register), then its Wikipedia article's infobox or text, then the University
-of Adelaide's areas — each credited as «Licences» says.
+Register, Switzerland's BLW, Statistics Portugal), then its Wikipedia
+article's infobox or text, then the University of Adelaide's areas, then the
+Australian Bureau of Statistics' for Australian names still without one —
+each credited as «Licences» says.
 
 - `pnpm kb:fetch-climate` reads the monthly mean temperature and
   precipitation, 1981–2010, at every point from CHELSA V2.1 — only the rows
@@ -468,7 +471,7 @@ for what moved.
   grape berries for selection of varieties better adapted to climate
   change», Frontiers in Plant Science 15, 2024 (doi:10.3389/fpls.2024.1439114,
   read from Europe PMC) — «two white varieties known for their high acidity:
-  Alvarinho and Petit Manseng»; and five MDPI articles read from Europe PMC
+  Alvarinho and Petit Manseng»; and six MDPI articles read from Europe PMC
   (MDPI's own pages refuse scripts), each in its introduction or methods
   describing the variety itself: Ibn Amor et al., Insects 16:497, 2025 —
   Cabernet Franc «characterized by high acidity, moderate tannins»;
@@ -483,9 +486,10 @@ for what moved.
   «musts generally have high acidity», said of the musts, as Plantevin's is of
   the berries. They were found by searching Europe PMC's CC BY full texts for
   each grape and trait still missing; a sentence about an experimental wine,
-  a sample, a comparison or a region is not used. The text
-  extracted from its PDF is cached beside the books, and the reading names
-  the article's address (`source.url`).
+  a sample, a comparison or a region is not used. Each article's text (from
+  its PDF or Europe PMC's XML) is cached beside the books, and the reading
+  names the article's address (`source.url`), which the grape's card links
+  beside the quote.
 
 - **P. Viala and V. Vermorel, «Ampélographie»** (Masson, 1901–1910; the
   authors died in 1936 and 1927, so in the public domain): the Internet
