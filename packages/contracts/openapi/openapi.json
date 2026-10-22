@@ -12531,6 +12531,12 @@
               "type": "string"
             }
           },
+          "pairingTerms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "regions": {
             "type": "array",
             "items": {
@@ -12688,6 +12694,7 @@
           "name",
           "originCountryCode",
           "pairings",
+          "pairingTerms",
           "regions",
           "styles",
           "summary",

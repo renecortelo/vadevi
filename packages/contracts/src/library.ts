@@ -51,6 +51,8 @@ export const LibraryGrapeSchema = z
     name: z.string(),
     originCountryCode: z.string().length(2).nullable(),
     pairings: z.array(z.string()),
+    /** Each dish's term in the library's vocabulary, in the same order. */
+    pairingTerms: z.array(z.string()),
     regions: z.array(
       z
         .object({

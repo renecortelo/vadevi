@@ -111,6 +111,38 @@ export function LibraryGrapePage() {
     }
   }
   const article = [...quoted].sort((one, other) => other[1] - one[1])[0]?.[0] ?? null;
+  // Each fact's value in the reader's language, where the library has a label
+  // for it; a dish or a name it has none for stays as the source wrote it.
+  const shown = (entry: { field: string; value: string }) => {
+    const { field, value } = entry;
+    if (field === "acidity" || field === "tannin" || field === "body" || field === "alcohol") {
+      return t(`library.level.${value}`, { defaultValue: value });
+    }
+    if (field === "sweetness") {
+      const [from, to] = value.split("-");
+      const label = (end: string) => t(`library.sweetness.${end}`, { defaultValue: end });
+      return to === undefined
+        ? label(from!)
+        : sentence(
+            t("library.sweetnessRange", {
+              from: label(from!).toLocaleLowerCase(i18n.language),
+              to: label(to).toLocaleLowerCase(i18n.language),
+            }),
+          );
+    }
+    if (field === "color") return t(`library.color.${value}`, { defaultValue: value });
+    if (field === "origin") return country(value) ?? value;
+    if (field === "styles") return t(`library.kind.${value}`, { defaultValue: value });
+    if (field === "aromas" || field === "pairings") {
+      const [terms, labels] =
+        field === "aromas"
+          ? [grape.aromaTerms, grape.aromas]
+          : [grape.pairingTerms, grape.pairings];
+      const index = terms.indexOf(value);
+      return index === -1 ? value : labels[index]!;
+    }
+    return value;
+  };
   const origin = country(grape.originCountryCode);
 
   // The pages this card links to lead back here, and on from here.
@@ -389,7 +421,7 @@ export function LibraryGrapePage() {
           <ul>
             {grape.evidence.map((entry) => (
               <li key={`${entry.field}-${entry.value}`}>
-                <strong>{entry.value}</strong> — “{entry.quote}”
+                <strong>{shown(entry)}</strong> — “{entry.quote}”
                 {/* A fact read from another article — the grape's own
                     language's, a book, a paper — links that source. */}
                 {entry.sourceUrl === article ? null : (

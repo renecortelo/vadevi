@@ -279,6 +279,7 @@ export async function getLibraryGrape(
     name: primary,
     originCountryCode: grape.origin_country_code,
     pairings: of("pairing"),
+    pairingTerms: attributeRows.filter((row) => row.kind === "pairing").map((row) => row.value),
     regions: attributeRows
       .filter((row) => row.kind === "region")
       .map((row) => ({

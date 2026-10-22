@@ -102,6 +102,8 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await evidence.locator("summary").click();
   const fromPaper = evidence.locator("li", { hasText: "moderate tannins" });
   await expect(fromPaper).toHaveCount(2);
+  // Each value in the reader's language: acidity «Alta», tannins «Media».
+  await expect(fromPaper.locator("strong")).toHaveText(["Alta", "Media"]);
   await expect(fromPaper.first().getByRole("link", { name: "(doi.org)" })).toHaveAttribute(
     "href",
     "https://doi.org/10.3390/insects16050497",
