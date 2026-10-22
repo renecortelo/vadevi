@@ -780,6 +780,21 @@
           "volume": "insects16050497",
           "work": "ibn-amor-2025-insects"
         }
+      },
+      {
+        "field": "body",
+        "lang": "fr",
+        "value": "low",
+        "quote": "En bouche, la structure des vins est souple",
+        "scope": {
+          "place": "Orléans-Cléry",
+          "regionId": "fr-orleans-clery"
+        },
+        "source": {
+          "url": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001301",
+          "volume": "eambrosia-11138",
+          "work": "eambrosia-single-document"
+        }
       }
     ],
     "cabernet-sauvignon": [
@@ -2606,6 +2621,21 @@
           "volume": "enwiki-it-moscadello-di-montalcino",
           "work": "wikipedia-en"
         }
+      },
+      {
+        "field": "alcohol",
+        "lang": "ca",
+        "value": "low",
+        "quote": "Elaborat amb raïm moscatell de gra menut, és dolç i baix en alcohol",
+        "scope": {
+          "place": "Asti",
+          "regionId": "it-asti"
+        },
+        "source": {
+          "url": "https://ca.wikipedia.org/wiki/Asti_spumante",
+          "volume": "cawiki-it-asti",
+          "work": "wikipedia-ca"
+        }
       }
     ],
     "muscat-of-alexandria": [
@@ -4346,6 +4376,21 @@
           "plum": "слива",
           "olive": "оливок",
           "dried fruit": "сухофруктов"
+        }
+      },
+      {
+        "field": "sweetness",
+        "lang": "el",
+        "value": "dry-medium",
+        "quote": "Οίνος ερυθρός ξηρός, ημίξηρος, ημίγλυκος",
+        "scope": {
+          "place": "Νάουσα",
+          "regionId": "gr-naousa"
+        },
+        "source": {
+          "url": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007267",
+          "volume": "eambrosia-11098",
+          "work": "eambrosia-single-document"
         }
       }
     ],

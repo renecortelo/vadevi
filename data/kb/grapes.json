@@ -15923,7 +15923,7 @@
       "coffee",
       "olive"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -16090,6 +16090,14 @@
         "quote": "an early-ripening French red wine grape characterized by high acidity, moderate tannins, and thin skin",
         "value": "medium",
         "sourceUrl": "https://doi.org/10.3390/insects16050497"
+      },
+      {
+        "field": "body",
+        "quote": "En bouche, la structure des vins est souple",
+        "value": "low",
+        "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001301",
+        "place": "Orléans-Cléry",
+        "placeId": "fr-orleans-clery"
       }
     ],
     "id": "cabernet-franc",
@@ -31038,6 +31046,14 @@
         "quote": "Обычно, во вкусе можно обнаружить красные фрукты и ягоды, например, клубника и слива, но с возрастом вкус меняется в сторону более пикантных тонов томатов, оливок и сухофруктов",
         "value": "dried fruit",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9A%D1%81%D0%B8%D0%BD%D0%BE%D0%BC%D0%B0%D0%B2%D1%80%D0%BE"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Οίνος ερυθρός ξηρός, ημίξηρος, ημίγλυκος",
+        "value": "dry-medium",
+        "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007267",
+        "place": "Νάουσα",
+        "placeId": "gr-naousa"
       }
     ],
     "id": "xinomavro",
@@ -31146,7 +31162,10 @@
         "url": "https://es.wikipedia.org/wiki/Xin%C3%B3mavro"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Mavro Naoussis",
@@ -37373,7 +37392,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "spice",
       "rose",
@@ -37598,6 +37617,14 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Moscadello_di_Montalcino",
         "place": "Moscadello di Montalcino",
         "placeId": "it-moscadello-di-montalcino"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Elaborat amb raïm moscatell de gra menut, és dolç i baix en alcohol",
+        "value": "low",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Asti_spumante",
+        "place": "Asti",
+        "placeId": "it-asti"
       }
     ],
     "id": "muscat-blanc-a-petits-grains",
