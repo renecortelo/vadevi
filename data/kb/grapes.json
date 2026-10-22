@@ -1764,7 +1764,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -1865,6 +1865,46 @@
         "quote": "coltivato inizialmente nella località Prosecco di Trieste ... lo collega alla Valdobbiadene ... Conegliano Valdobbiadene - Prosecco DOCG",
         "value": "IT: Conegliano",
         "sourceUrl": "https://it.wikipedia.org/wiki/Glera"
+      },
+      {
+        "field": "body",
+        "quote": "Il Conegliano Valdobbiadene è un vino di colore paglierino leggero, moderata corposità e profumo fruttato e floreale.",
+        "value": "medium",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Conegliano_Valdobbiadene_-_Prosecco",
+        "place": "Conegliano Valdobbiadene - Prosecco",
+        "placeId": "it-conegliano-valdobbiadene-prosecco"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Geschmack: von trocken bis lieblich, frisch und charakteristisch",
+        "value": "dry-medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Prosecco",
+        "place": "Prosecco",
+        "placeId": "it-prosecco"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il prosecco si consiglia con piatti a base di pesce o crostacei, e con gli antipasti",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Prosecco",
+        "place": "Prosecco",
+        "placeId": "it-prosecco"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il prosecco si consiglia con piatti a base di pesce o crostacei, e con gli antipasti",
+        "value": "shellfish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Prosecco",
+        "place": "Prosecco",
+        "placeId": "it-prosecco"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il prosecco si consiglia con piatti a base di pesce o crostacei, e con gli antipasti",
+        "value": "appetizers",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Prosecco",
+        "place": "Prosecco",
+        "placeId": "it-prosecco"
       }
     ],
     "id": "glera",
@@ -1879,7 +1919,11 @@
       "pt": "Glera"
     },
     "origin": "SI",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "shellfish",
+      "appetizers"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -1938,7 +1982,10 @@
         "url": "https://en.wikipedia.org/wiki/Glera_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Ghera",
@@ -11802,6 +11849,30 @@
         "quote": "Vom Geschmacksbild besitzt die Sorte eine ausgeprägt fruchtige Muskatnote",
         "value": "fruity",
         "sourceUrl": "https://de.wikipedia.org/wiki/Moscato_Giallo"
+      },
+      {
+        "field": "pairings",
+        "quote": "La versione secca si abbina a crostacei e piatti di pesce, lo spumante ad antipasti di pesce o di verdure",
+        "value": "shellfish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Colli_Euganei_Fior_d%27Arancio",
+        "place": "Colli Euganei Fior d'Arancio",
+        "placeId": "it-colli-euganei-fior-d-arancio"
+      },
+      {
+        "field": "pairings",
+        "quote": "La versione secca si abbina a crostacei e piatti di pesce, lo spumante ad antipasti di pesce o di verdure",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Colli_Euganei_Fior_d%27Arancio",
+        "place": "Colli Euganei Fior d'Arancio",
+        "placeId": "it-colli-euganei-fior-d-arancio"
+      },
+      {
+        "field": "pairings",
+        "quote": "La versione secca si abbina a crostacei e piatti di pesce, lo spumante ad antipasti di pesce o di verdure",
+        "value": "appetizers",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Colli_Euganei_Fior_d%27Arancio",
+        "place": "Colli Euganei Fior d'Arancio",
+        "placeId": "it-colli-euganei-fior-d-arancio"
       }
     ],
     "id": "moscato-giallo",
@@ -11816,7 +11887,11 @@
       "pt": "Moscato giallo"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "shellfish",
+      "fish",
+      "appetizers"
+    ],
     "prominence": 5,
     "regions": [
       {
@@ -27973,6 +28048,14 @@
         "quote": "De zuurgraad van de Garganega is zodanig hoog, dat het gebruikt wordt voor de productie van de zoete recioto",
         "value": "high",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Garganega"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il Recioto di Gambellara si abbina bene a dolci (esclusi quelli al cioccolato), gelati, zabaione e biscotti di tutti i tipi",
+        "value": "desserts",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Recioto_di_Gambellara",
+        "place": "Recioto di Gambellara",
+        "placeId": "it-recioto-di-gambellara"
       }
     ],
     "id": "garganega",
@@ -27987,7 +28070,9 @@
       "pt": "Garganega"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "desserts"
+    ],
     "prominence": 16,
     "regions": [],
     "styles": [
@@ -37505,6 +37590,14 @@
         "field": "sweetness",
         "quote": "On Samos, it produces a Vin Doux Naturel, aromatic dry white wines",
         "value": "dry-sweet"
+      },
+      {
+        "field": "pairings",
+        "quote": "Moscadello di Montalcino, considering its characteristics, is an excellent wine to accompany fruit, desserts or ice cream.",
+        "value": "desserts",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Moscadello_di_Montalcino",
+        "place": "Moscadello di Montalcino",
+        "placeId": "it-moscadello-di-montalcino"
       }
     ],
     "id": "muscat-blanc-a-petits-grains",
@@ -37519,7 +37612,9 @@
       "nl": "Muscat blanc à petits grains"
     },
     "origin": "GR",
-    "pairings": [],
+    "pairings": [
+      "desserts"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -48238,6 +48333,22 @@
         "quote": "Aus ihr werden sowohl trockene als auch süße Weine gewonnen",
         "value": "dry-sweet",
         "sourceUrl": "https://de.wikipedia.org/wiki/Friulano"
+      },
+      {
+        "field": "pairings",
+        "quote": "si abbina bene a frittate di verdura, cucina marinara, formaggi di media stagionatura, prosciutto crudo.",
+        "value": "cheese",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Lison_%28vino%29",
+        "place": "Lison",
+        "placeId": "it-lison"
+      },
+      {
+        "field": "pairings",
+        "quote": "si abbina bene a frittate di verdura, cucina marinara, formaggi di media stagionatura, prosciutto crudo.",
+        "value": "prosciutto",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Lison_%28vino%29",
+        "place": "Lison",
+        "placeId": "it-lison"
       }
     ],
     "id": "sauvignon-vert",
@@ -48252,7 +48363,10 @@
       "nl": "Sauvignonasse"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "prosciutto"
+    ],
     "prominence": 9,
     "regions": [
       {

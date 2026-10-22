@@ -1481,6 +1481,26 @@
         "lang": "nl",
         "value": "high",
         "quote": "De zuurgraad van de Garganega is zodanig hoog, dat het gebruikt wordt voor de productie van de zoete recioto"
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "desserts"
+        ],
+        "quote": "Il Recioto di Gambellara si abbina bene a dolci (esclusi quelli al cioccolato), gelati, zabaione e biscotti di tutti i tipi",
+        "words": {
+          "desserts": "dolci"
+        },
+        "scope": {
+          "place": "Recioto di Gambellara",
+          "regionId": "it-recioto-di-gambellara"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Recioto_di_Gambellara",
+          "volume": "itwiki-it-recioto-di-gambellara",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "garnacha-roja": [
@@ -2388,6 +2408,30 @@
         "words": {
           "fruity": "fruchtige"
         }
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "shellfish",
+          "fish",
+          "appetizers"
+        ],
+        "quote": "La versione secca si abbina a crostacei e piatti di pesce, lo spumante ad antipasti di pesce o di verdure",
+        "words": {
+          "shellfish": "crostacei",
+          "fish": "pesce",
+          "appetizers": "antipasti"
+        },
+        "scope": {
+          "place": "Colli Euganei Fior d'Arancio",
+          "regionId": "it-colli-euganei-fior-d-arancio"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Colli_Euganei_Fior_d%27Arancio",
+          "volume": "itwiki-it-colli-euganei-fior-d-arancio",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "mourvedre": [
@@ -2506,6 +2550,23 @@
         "lang": "en",
         "value": "dry-sweet",
         "quote": "On Samos, it produces a Vin Doux Naturel, aromatic dry white wines"
+      },
+      {
+        "field": "pairings",
+        "lang": "en",
+        "value": [
+          "desserts"
+        ],
+        "quote": "Moscadello di Montalcino, considering its characteristics, is an excellent wine to accompany fruit, desserts or ice cream.",
+        "scope": {
+          "place": "Moscadello di Montalcino",
+          "regionId": "it-moscadello-di-montalcino"
+        },
+        "source": {
+          "url": "https://en.wikipedia.org/wiki/Moscadello_di_Montalcino",
+          "volume": "enwiki-it-moscadello-di-montalcino",
+          "work": "wikipedia-en"
+        }
       }
     ],
     "muscat-of-alexandria": [
@@ -3446,6 +3507,28 @@
         "lang": "de",
         "value": "dry-sweet",
         "quote": "Aus ihr werden sowohl trockene als auch süße Weine gewonnen"
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "cheese",
+          "prosciutto"
+        ],
+        "quote": "si abbina bene a frittate di verdura, cucina marinara, formaggi di media stagionatura, prosciutto crudo.",
+        "words": {
+          "cheese": "formaggi",
+          "prosciutto": "prosciutto crudo"
+        },
+        "scope": {
+          "place": "Lison",
+          "regionId": "it-lison"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Lison_%28vino%29",
+          "volume": "itwiki-it-lison",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "savagnin": [
@@ -4323,6 +4406,62 @@
           "url": "https://doi.org/10.3390/foods13193065",
           "volume": "foods13193065",
           "work": "cisterna-castillo-2024-foods"
+        }
+      }
+    ],
+    "glera": [
+      {
+        "field": "body",
+        "lang": "it",
+        "value": "medium",
+        "quote": "Il Conegliano Valdobbiadene è un vino di colore paglierino leggero, moderata corposità e profumo fruttato e floreale.",
+        "scope": {
+          "place": "Conegliano Valdobbiadene - Prosecco",
+          "regionId": "it-conegliano-valdobbiadene-prosecco"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Conegliano_Valdobbiadene_-_Prosecco",
+          "volume": "itwiki-it-conegliano-valdobbiadene-prosecco",
+          "work": "wikipedia-it"
+        }
+      },
+      {
+        "field": "sweetness",
+        "lang": "de",
+        "value": "dry-medium",
+        "quote": "Geschmack: von trocken bis lieblich, frisch und charakteristisch",
+        "scope": {
+          "place": "Prosecco",
+          "regionId": "it-prosecco"
+        },
+        "source": {
+          "url": "https://de.wikipedia.org/wiki/Prosecco",
+          "volume": "dewiki-it-prosecco",
+          "work": "wikipedia-de"
+        }
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "fish",
+          "shellfish",
+          "appetizers"
+        ],
+        "quote": "Il prosecco si consiglia con piatti a base di pesce o crostacei, e con gli antipasti",
+        "words": {
+          "fish": "pesce",
+          "shellfish": "crostacei",
+          "appetizers": "antipasti"
+        },
+        "scope": {
+          "place": "Prosecco",
+          "regionId": "it-prosecco"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Prosecco",
+          "volume": "itwiki-it-prosecco",
+          "work": "wikipedia-it"
         }
       }
     ]

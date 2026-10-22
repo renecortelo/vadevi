@@ -51,7 +51,7 @@ the reader, never the source.
 Where no sentence speaks of the variety everywhere, a value may be read from
 what one place's wine is, and the card says so beside it («Said of the wine
 of Tokaj», linked to that name's card): the wine of a DOC made of the grape
-alone or nearly so (85 % or more), as its specification describes it — the
+alone or nearly so (its register lists that one grape, or its specification asks 85 % or more), as its specification describes it — the
 «caratteristiche organolettiche» and «abbinamenti» its Italian article copies
 from the disciplinare — or the varietal wine of the region where nearly all
 of the grape grows (Furmint and Hárslevelű in Tokaj, from Wikivoyage). The
