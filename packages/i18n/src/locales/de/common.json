@@ -92,6 +92,7 @@
       "medium": "Mittel",
       "high": "Hoch"
     },
+    "saidOfPlace": "Gesagt vom Wein aus {{place}}",
     "noSourceValue": "keine Angabe in den Quellen",
     "kind": {
       "still": "Stillwein",

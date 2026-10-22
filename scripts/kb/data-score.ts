@@ -26,6 +26,7 @@ type Grape = {
   aromas: string[];
   body: string | null;
   color: string | null;
+  evidence: { field: string; place?: string }[];
   names: Record<string, string>;
   origin: string | null;
   pairings: string[];
@@ -132,6 +133,15 @@ const print = (title: string, rows: Row[]) => {
 
 const rows = [...grapeRows, ...regionRows];
 print(`Grapes (${grapes.length})`, grapeRows);
+// Counted like the rest, and shown apart: the card labels each one.
+const placed = grapes.flatMap((grape) => [
+  ...new Set(grape.evidence.filter((entry) => entry.place).map((entry) => entry.field)),
+]);
+if (placed.length > 0) {
+  console.info(
+    `  of which said of one place's wine (a DOC's, or the region of nearly all of it): ${placed.length} fields`,
+  );
+}
 print(`Regions (${regions.length})`, regionRows);
 const score = mean(rows);
 console.info(`Library score: ${score.toFixed(1)} / 100`);

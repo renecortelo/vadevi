@@ -92,6 +92,7 @@
       "medium": "Mitjana",
       "high": "Alta"
     },
+    "saidOfPlace": "Dit del vi de {{place}}",
     "noSourceValue": "sense dada a les fonts",
     "kind": {
       "still": "vi tranquil",

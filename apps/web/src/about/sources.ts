@@ -61,6 +61,14 @@ export const sources: Source[] = [
     what: "summaries",
   },
   {
+    credit: "Wikivoyage, «Tokaj»",
+    group: "texts",
+    licence: "CC BY-SA 4.0",
+    name: "Wikivoyage",
+    url: "https://en.wikivoyage.org/wiki/Tokaj",
+    what: "traits",
+  },
+  {
     group: "texts",
     name: "P. Viala, V. Vermorel, «Ampélographie» (Internet Archive)",
     terms: "publicDomain",

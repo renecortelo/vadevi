@@ -173,6 +173,28 @@
         "lang": "nl",
         "quote": "De Aleatico is een van oorsprong blauwe Italiaanse druivensoort die meestal gebruikt wordt om zoete rode wijn te maken.",
         "value": "IT"
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "desserts",
+          "cheese"
+        ],
+        "quote": "Biscotti e pasticcini, formaggi erborinati.",
+        "words": {
+          "desserts": "pasticcini",
+          "cheese": "formaggi"
+        },
+        "scope": {
+          "place": "Aleatico di Puglia",
+          "regionId": "it-aleatico-di-puglia"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Aleatico_di_Puglia",
+          "volume": "itwiki-aleatico-di-puglia",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "alexandrouli": [
@@ -285,6 +307,21 @@
           "risotto": "ризото",
           "fish": "рибними",
           "seafood": "морепродуктів"
+        }
+      },
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "sapore: asciutto, morbido, vivace e armonico",
+        "scope": {
+          "place": "Ansonica Costa dell'Argentario",
+          "regionId": "it-ansonica-costa-dell-argentario"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Ansonica_Costa_dell%27Argentario",
+          "volume": "itwiki-ansonica-costa-dell-argentario",
+          "work": "wikipedia-it"
         }
       }
     ],
@@ -484,6 +521,26 @@
         "lang": "ru",
         "value": "dry",
         "quote": "На основе барберы вырабатываются сухие столовые вина"
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "red meat"
+        ],
+        "quote": "Con secondi piatti di carne rossa, ad esempio arrosti.",
+        "words": {
+          "red meat": "carne rossa"
+        },
+        "scope": {
+          "place": "Barbera del Monferrato",
+          "regionId": "it-barbera-del-monferrato"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Barbera_del_Monferrato",
+          "volume": "itwiki-barbera-del-monferrato",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "bastardo": [
@@ -1347,6 +1404,40 @@
         "lang": "fr",
         "value": "high",
         "quote": "Il donne un vin au potentiel alcoolique élevé."
+      },
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "high",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines",
+        "scope": {
+          "place": "Tokaj",
+          "regionId": "hu-tokaj"
+        },
+        "source": {
+          "url": "https://en.wikivoyage.org/wiki/Tokaj",
+          "volume": "wikivoyage-tokaj",
+          "work": "wikivoyage-tokaj"
+        }
+      },
+      {
+        "field": "pairings",
+        "lang": "en",
+        "value": [
+          "fish",
+          "seafood",
+          "white meat"
+        ],
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "scope": {
+          "place": "Tokaj",
+          "regionId": "hu-tokaj"
+        },
+        "source": {
+          "url": "https://en.wikivoyage.org/wiki/Tokaj",
+          "volume": "wikivoyage-tokaj",
+          "work": "wikivoyage-tokaj"
+        }
       }
     ],
     "gamay": [
@@ -1522,6 +1613,47 @@
         "lang": "ja",
         "value": "high",
         "quote": "白ワインおよび強い酸味を生かしたスプマンテが生産されている。"
+      },
+      {
+        "field": "body",
+        "lang": "it",
+        "value": "high",
+        "quote": "Al palato si presenta con una struttura ricca e avvolgente",
+        "scope": {
+          "place": "Greco di Tufo",
+          "regionId": "it-greco-di-tufo"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
+          "volume": "itwiki-greco-di-tufo",
+          "work": "wikipedia-it"
+        }
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "fish",
+          "seafood",
+          "soft cheese",
+          "risotto"
+        ],
+        "quote": "Il Greco di Tufo si abbina idealmente a qualsiasi piatto a base di pesce o frutti di mare; formaggi non stagionati e molli; risotti.",
+        "words": {
+          "fish": "pesce",
+          "seafood": "frutti di mare",
+          "soft cheese": "formaggi non stagionati e molli",
+          "risotto": "risotti"
+        },
+        "scope": {
+          "place": "Greco di Tufo",
+          "regionId": "it-greco-di-tufo"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
+          "volume": "itwiki-greco-di-tufo",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "grenache": [
@@ -1629,6 +1761,25 @@
         "lang": "nl",
         "quote": "Door DNA-onderzoek is gebleken dat dit ras een kruising is van de Hongaarse druif Furmint en de oude Zwitserse variëteit Plantscher, die op zijn beurt van Hongaarse afkomst is en waarmee dus is aangetoond dat de Hárslevelű echt uit dit land afkomstig is.",
         "value": "HU"
+      },
+      {
+        "field": "pairings",
+        "lang": "en",
+        "value": [
+          "fish",
+          "seafood",
+          "white meat"
+        ],
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "scope": {
+          "place": "Tokaj",
+          "regionId": "hu-tokaj"
+        },
+        "source": {
+          "url": "https://en.wikivoyage.org/wiki/Tokaj",
+          "volume": "wikivoyage-tokaj",
+          "work": "wikivoyage-tokaj"
+        }
       }
     ],
     "hondarrabi-zuri": [
@@ -3910,6 +4061,28 @@
         "lang": "nl",
         "value": "high",
         "quote": "De zuurgraad is relatief hoog en de wijn heeft een aromatische neus van voornamelijk citrusvruchten."
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "fish",
+          "white meat"
+        ],
+        "quote": "Primi piatti di salse bianche, fritture varie, piatti di pesce, uova e carni bianche (coniglio).",
+        "words": {
+          "fish": "pesce",
+          "white meat": "carni bianche"
+        },
+        "scope": {
+          "place": "Vernaccia di San Gimignano",
+          "regionId": "it-vernaccia-di-san-gimignano"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Vernaccia_di_San_Gimignano",
+          "volume": "itwiki-vernaccia-di-san-gimignano",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "viognier": [

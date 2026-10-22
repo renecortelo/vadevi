@@ -107,7 +107,7 @@ The `kb_` tables hold the open wine library: reference data, the same for every 
 - `kb_region_grapes` — a grape placed under a name by a source, with that source's words (`quote`) and link.
 - `kb_names` — every name of a grape, a region or a style in each language, with its normalised form for search.
 - `kb_summaries` — each entity's summary per locale, with its source, licence and whether it is a translation.
-- `kb_evidence` — the quote each grape value was read from, and its source.
+- `kb_evidence` — the quote each grape value was read from, and its source; `place` and `place_id` where the quote describes one place's wine (a single-variety DOC's, or the region where nearly all of the grape grows) rather than the variety everywhere — the card labels it.
 - `kb_terms`, `kb_topics`, `kb_images` — the vocabulary in eight languages, the styles and methods, and the photographs with their author and licence.
 - `kb_meta` — the version of the data loaded, so a deploy reloads only when `data/kb/` changes.
 

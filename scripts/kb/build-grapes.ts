@@ -135,6 +135,13 @@ const handReadings = (
          * Archive identifier.
          */
         source?: { url?: string; volume: string; work: string };
+        /**
+         * The place whose wine the quote describes, where it is not the
+         * variety everywhere — a single-variety DOC's wine as its
+         * specification describes it, or the wine of the region where nearly
+         * all of the grape grows — and its atlas entry. The card says so.
+         */
+        scope?: { place: string; regionId?: string };
         value: string | string[];
         words?: Record<string, string>;
       }[]
@@ -168,6 +175,13 @@ function ampelography(volume: string, url?: string): { article: string; url: str
     url: url ?? `https://archive.org/details/${volume}`,
   };
 }
+
+/** The atlas's entries, which a reading's place must name if it gives one. */
+const atlasIds = new Set(
+  (JSON.parse(readFileSync(resolve("data/kb/appellations.json"), "utf8")) as { id: string }[]).map(
+    (entry) => entry.id,
+  ),
+);
 
 /** Countries of origin from the University of Adelaide (`pnpm kb:read-adelaide`). */
 const { origins: adelaideOrigins, sourceUrl: adelaideSource } = JSON.parse(
@@ -298,6 +312,18 @@ for (const qid of index) {
       });
       continue;
     }
+    if (reading.scope?.regionId !== undefined && !atlasIds.has(reading.scope.regionId)) {
+      throw new Error(`${raw.labels.en ?? qid}: no atlas entry ${reading.scope.regionId}.`);
+    }
+    // Said of one place's wine: the card names the place beside the fact.
+    const placed = <T extends object>(entry: T) =>
+      reading.scope === undefined
+        ? entry
+        : {
+            ...entry,
+            place: reading.scope.place,
+            ...(reading.scope.regionId === undefined ? {} : { placeId: reading.scope.regionId }),
+          };
     // An origin read by hand: the sentence stands in the article and says
     // the country — its name, its adjective or a region wholly within it.
     if (reading.field === "origin") {
@@ -318,12 +344,14 @@ for (const qid of index) {
         });
       } else if (result.origin === null) {
         result.origin = code;
-        result.evidence.push({
-          field: "origin",
-          quote: reading.quote,
-          value: code,
-          ...(source.url === undefined ? {} : { sourceUrl: source.url }),
-        });
+        result.evidence.push(
+          placed({
+            field: "origin",
+            quote: reading.quote,
+            value: code,
+            ...(source.url === undefined ? {} : { sourceUrl: source.url }),
+          }),
+        );
       }
       continue;
     }
@@ -353,7 +381,8 @@ for (const qid of index) {
     result.evidence.push(
       ...found.evidence
         .filter((entry) => entry.field === field)
-        .map((entry) => (source.url === undefined ? entry : { ...entry, sourceUrl: source.url })),
+        .map((entry) => (source.url === undefined ? entry : { ...entry, sourceUrl: source.url }))
+        .map(placed),
     );
   }
   // Where no article says where the grape comes from: the country of origin

@@ -92,6 +92,7 @@
       "medium": "Media",
       "high": "Alta"
     },
+    "saidOfPlace": "Detto del vino di {{place}}",
     "noSourceValue": "nessun dato nelle fonti",
     "kind": {
       "still": "vino fermo",

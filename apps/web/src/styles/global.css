@@ -4601,6 +4601,12 @@ p {
   margin-block-end: var(--space-1);
 }
 
+/* A value said of one place's wine, not of the variety everywhere. */
+.library-place {
+  display: block;
+  font-size: var(--text-xs, 0.75rem);
+}
+
 /* A registered name at a glance: a drawing, a figure, what it counts. */
 .region-glance {
   display: grid;

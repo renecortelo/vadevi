@@ -12460,6 +12460,14 @@
                 "field": {
                   "type": "string"
                 },
+                "place": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "placeId": {
+                  "type": "string",
+                  "nullable": true
+                },
                 "quote": {
                   "type": "string"
                 },
@@ -12473,6 +12481,8 @@
               },
               "required": [
                 "field",
+                "place",
+                "placeId",
                 "quote",
                 "sourceUrl",
                 "value"

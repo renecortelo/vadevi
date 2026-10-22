@@ -111,6 +111,23 @@ export function LibraryGrapePage() {
     }
   }
   const article = [...quoted].sort((one, other) => other[1] - one[1])[0]?.[0] ?? null;
+  // A fact said of one place's wine — a DOC's, the region where nearly all of
+  // the grape grows — names the place beside it, linked where it is in the
+  // atlas.
+  const placeNote = (entry: { place: string | null; placeId: string | null } | undefined) =>
+    entry?.place == null ? null : (
+      <span className="library-place">
+        {entry.placeId === null ? (
+          t("library.saidOfPlace", { place: entry.place })
+        ) : (
+          <Link className="text-link" state={backHere} to={`/library/regions/${entry.placeId}`}>
+            {t("library.saidOfPlace", { place: entry.place })}
+          </Link>
+        )}
+      </span>
+    );
+  const noteFor = (field: string) =>
+    placeNote(grape.evidence.find((entry) => entry.field === field && entry.place !== null));
   // Each fact's value in the reader's language, where the library has a label
   // for it; a dish or a name it has none for stays as the source wrote it.
   const shown = (entry: { field: string; value: string }) => {
@@ -266,6 +283,7 @@ export function LibraryGrapePage() {
                         <i style={{ "--from": "0%", "--to": reach } as CSSProperties} />
                       </span>
                       {level === null ? t("library.noSourceValue") : t(`library.level.${level}`)}
+                      {level === null ? null : noteFor(axis)}
                     </dd>
                   </div>
                 );
@@ -311,6 +329,7 @@ export function LibraryGrapePage() {
                             ),
                           }),
                         )}
+                  {grape.sweetness === null ? null : noteFor("sweetness")}
                 </dd>
               </div>
             </dl>
@@ -329,6 +348,7 @@ export function LibraryGrapePage() {
                   <li key={food}>{food}</li>
                 ))}
               </ul>
+              {noteFor("pairings")}
             </div>
           )}
           {suggested === null ? null : (
@@ -421,7 +441,7 @@ export function LibraryGrapePage() {
           <ul>
             {grape.evidence.map((entry) => (
               <li key={`${entry.field}-${entry.value}`}>
-                <strong>{shown(entry)}</strong> — “{entry.quote}”
+                <strong>{shown(entry)}</strong> — “{entry.quote}”{placeNote(entry)}
                 {/* A fact read from another article — the grape's own
                     language's, a book, a paper — links that source. */}
                 {entry.sourceUrl === article ? null : (

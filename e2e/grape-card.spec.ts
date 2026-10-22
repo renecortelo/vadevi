@@ -111,4 +111,14 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await expect(
     evidence.getByRole("link", { name: "Leer el artículo en Wikipedia" }),
   ).toHaveAttribute("href", /wikipedia\.org/);
+
+  // A fact said of one place's wine says so and links the place: Furmint's
+  // body, read from what Tokaj's dry varietal wines are.
+  await page.goto("/library/grapes/furmint");
+  const body = page.locator(".library-bar", { hasText: "Cuerpo" });
+  await expect(body).toContainText("Alta", { timeout: 15_000 });
+  await expect(body.getByRole("link", { name: "Dicho del vino de Tokaj" })).toHaveAttribute(
+    "href",
+    "/library/regions/hu-tokaj",
+  );
 });

@@ -11,6 +11,13 @@ export const LibraryLevelSchema = z.enum(["low", "medium", "high"]);
 export const LibraryEvidenceSchema = z
   .object({
     field: z.string(),
+    /**
+     * The place whose wine the quote describes, where it is not the variety
+     * everywhere — a single-variety DOC's, or the region where nearly all of
+     * the grape grows — and its atlas entry, where it is one.
+     */
+    place: z.string().nullable(),
+    placeId: z.string().nullable(),
     quote: z.string(),
     sourceUrl: z.string().url(),
     value: z.string(),

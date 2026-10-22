@@ -158,7 +158,7 @@ export async function getLibraryGrape(
         .bind(grapeId),
       database
         .prepare(
-          `SELECT field, value, quote, source_url FROM kb_evidence
+          `SELECT field, value, quote, source_url, place, place_id FROM kb_evidence
         WHERE entity_type = 'grape' AND entity_id = ? ORDER BY field, value`,
         )
         .bind(grapeId),
@@ -255,12 +255,16 @@ export async function getLibraryGrape(
     evidence: (
       (evidence?.results ?? []) as {
         field: string;
+        place: string | null;
+        place_id: string | null;
         quote: string;
         source_url: string;
         value: string;
       }[]
     ).map((row) => ({
       field: row.field,
+      place: row.place,
+      placeId: row.place_id,
       quote: row.quote,
       sourceUrl: row.source_url,
       value: row.value,

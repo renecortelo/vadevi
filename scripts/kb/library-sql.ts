@@ -349,7 +349,7 @@ export function libraryTables(
     ),
     table(
       "kb_evidence",
-      ["entity_type", "entity_id", "field", "value", "quote", "source_url"],
+      ["entity_type", "entity_id", "field", "value", "quote", "source_url", "place", "place_id"],
       ["entity_type", "entity_id", "field", "value"],
       1,
       grapes.flatMap((grape) =>
@@ -362,6 +362,8 @@ export function libraryTables(
             : entry.value,
           entry.quote,
           entry.sourceUrl ?? grape.wikipediaUrl,
+          entry.place ?? null,
+          entry.placeId ?? null,
         ]),
       ),
     ),

@@ -48,6 +48,19 @@ reader by hand, proposes values with quotes; `scripts/kb/grape-validation.ts`
 keeps a value only if its quote occurs in the text and says it. The model is
 the reader, never the source.
 
+Where no sentence speaks of the variety everywhere, a value may be read from
+what one place's wine is, and the card says so beside it («Said of the wine
+of Tokaj», linked to that name's card): the wine of a DOC made of the grape
+alone or nearly so (85 % or more), as its specification describes it — the
+«caratteristiche organolettiche» and «abbinamenti» its Italian article copies
+from the disciplinare — or the varietal wine of the region where nearly all
+of the grape grows (Furmint and Hárslevelű in Tokaj, from Wikivoyage). The
+reading names the place and its atlas entry (`scope` in
+`grape-readings.json`; `place`, `placeId` in the evidence), the build refuses
+an atlas entry that does not exist, and `pnpm kb:score` counts these values
+like the rest and shows how many there are. A DOC whose grape shares a name
+with another (Trebbiano d'Abruzzo, Vernaccia di Oristano) is not used for it.
+
 The atlas (`appellations.json`) involves no model at all. Every registered
 wine PDO and PGI comes from the EU register itself; Wikidata adds names in
 other languages and a point on the map, matched by the register's id or by

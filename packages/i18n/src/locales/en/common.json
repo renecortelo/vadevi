@@ -92,6 +92,7 @@
       "medium": "Medium",
       "high": "High"
     },
+    "saidOfPlace": "Said of the wine of {{place}}",
     "noSourceValue": "no figure in the sources",
     "kind": {
       "still": "still wine",

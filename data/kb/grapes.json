@@ -5768,7 +5768,7 @@
       "herbs",
       "citrus"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -5929,6 +5929,46 @@
         "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%82%B3_(%E3%83%96%E3%83%89%E3%82%A6)"
       },
       {
+        "field": "body",
+        "quote": "Al palato si presenta con una struttura ricca e avvolgente",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
+        "place": "Greco di Tufo",
+        "placeId": "it-greco-di-tufo"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il Greco di Tufo si abbina idealmente a qualsiasi piatto a base di pesce o frutti di mare; formaggi non stagionati e molli; risotti.",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
+        "place": "Greco di Tufo",
+        "placeId": "it-greco-di-tufo"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il Greco di Tufo si abbina idealmente a qualsiasi piatto a base di pesce o frutti di mare; formaggi non stagionati e molli; risotti.",
+        "value": "seafood",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
+        "place": "Greco di Tufo",
+        "placeId": "it-greco-di-tufo"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il Greco di Tufo si abbina idealmente a qualsiasi piatto a base di pesce o frutti di mare; formaggi non stagionati e molli; risotti.",
+        "value": "soft cheese",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
+        "place": "Greco di Tufo",
+        "placeId": "it-greco-di-tufo"
+      },
+      {
+        "field": "pairings",
+        "quote": "Il Greco di Tufo si abbina idealmente a qualsiasi piatto a base di pesce o frutti di mare; formaggi non stagionati e molli; risotti.",
+        "value": "risotto",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
+        "place": "Greco di Tufo",
+        "placeId": "it-greco-di-tufo"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Greco: Italy",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -5947,7 +5987,12 @@
       "nl": "Greco"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood",
+      "soft cheese",
+      "risotto"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -20551,6 +20596,14 @@
         "quote": "На основе барберы вырабатываются сухие столовые вина",
         "value": "dry",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D0%B0_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "field": "pairings",
+        "quote": "Con secondi piatti di carne rossa, ad esempio arrosti.",
+        "value": "red meat",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Barbera_del_Monferrato",
+        "place": "Barbera del Monferrato",
+        "placeId": "it-barbera-del-monferrato"
       }
     ],
     "id": "barbera",
@@ -20565,7 +20618,9 @@
       "pt": "Barbera"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "red meat"
+    ],
     "prominence": 24,
     "regions": [],
     "styles": [
@@ -24034,7 +24089,7 @@
       "cinnamon",
       "chocolate"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -24252,6 +24307,38 @@
         "quote": "Il donne un vin au potentiel alcoolique élevé.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Furmint"
+      },
+      {
+        "field": "body",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines",
+        "value": "high",
+        "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
+        "place": "Tokaj",
+        "placeId": "hu-tokaj"
+      },
+      {
+        "field": "pairings",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "value": "fish",
+        "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
+        "place": "Tokaj",
+        "placeId": "hu-tokaj"
+      },
+      {
+        "field": "pairings",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "value": "seafood",
+        "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
+        "place": "Tokaj",
+        "placeId": "hu-tokaj"
+      },
+      {
+        "field": "pairings",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "value": "white meat",
+        "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
+        "place": "Tokaj",
+        "placeId": "hu-tokaj"
       }
     ],
     "id": "furmint",
@@ -24266,7 +24353,11 @@
       "pt": "Furmint"
     },
     "origin": "HU",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood",
+      "white meat"
+    ],
     "prominence": 19,
     "regions": [
       {
@@ -29886,6 +29977,30 @@
         "quote": "Door DNA-onderzoek is gebleken dat dit ras een kruising is van de Hongaarse druif Furmint en de oude Zwitserse variëteit Plantscher, die op zijn beurt van Hongaarse afkomst is en waarmee dus is aangetoond dat de Hárslevelű echt uit dit land afkomstig is.",
         "value": "HU",
         "sourceUrl": "https://nl.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1"
+      },
+      {
+        "field": "pairings",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "value": "fish",
+        "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
+        "place": "Tokaj",
+        "placeId": "hu-tokaj"
+      },
+      {
+        "field": "pairings",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "value": "seafood",
+        "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
+        "place": "Tokaj",
+        "placeId": "hu-tokaj"
+      },
+      {
+        "field": "pairings",
+        "quote": "Dry varietal Tokaji Furmint and Tokaji Hárslevelű are full-bodied white wines that are a perfect accompaniment not only to fish and seafood but also to white meat.",
+        "value": "white meat",
+        "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
+        "place": "Tokaj",
+        "placeId": "hu-tokaj"
       }
     ],
     "id": "harslevelu",
@@ -29900,7 +30015,11 @@
       "pt": "Hárslevelű"
     },
     "origin": "HU",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood",
+      "white meat"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -45589,6 +45708,14 @@
         "quote": "гарно поєднуються з ризото, рибними стравами та стравами з морепродуктів",
         "value": "seafood",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D1%81%D0%BE%D0%BD%D1%96%D0%BA%D0%B0"
+      },
+      {
+        "field": "sweetness",
+        "quote": "sapore: asciutto, morbido, vivace e armonico",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Ansonica_Costa_dell%27Argentario",
+        "place": "Ansonica Costa dell'Argentario",
+        "placeId": "it-ansonica-costa-dell-argentario"
       }
     ],
     "id": "ansonica",
@@ -45685,7 +45812,10 @@
         "url": "https://en.wikipedia.org/wiki/Ansonica"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Inzolia",
@@ -48348,6 +48478,22 @@
         "quote": "De Aleatico is een van oorsprong blauwe Italiaanse druivensoort die meestal gebruikt wordt om zoete rode wijn te maken.",
         "value": "IT",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Aleatico"
+      },
+      {
+        "field": "pairings",
+        "quote": "Biscotti e pasticcini, formaggi erborinati.",
+        "value": "desserts",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Aleatico_di_Puglia",
+        "place": "Aleatico di Puglia",
+        "placeId": "it-aleatico-di-puglia"
+      },
+      {
+        "field": "pairings",
+        "quote": "Biscotti e pasticcini, formaggi erborinati.",
+        "value": "cheese",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Aleatico_di_Puglia",
+        "place": "Aleatico di Puglia",
+        "placeId": "it-aleatico-di-puglia"
       }
     ],
     "id": "aleatico",
@@ -48362,7 +48508,10 @@
       "pt": "Aleatico"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "desserts",
+      "cheese"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -48524,6 +48673,22 @@
         "quote": "De zuurgraad is relatief hoog en de wijn heeft een aromatische neus van voornamelijk citrusvruchten.",
         "value": "high",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Vernaccia"
+      },
+      {
+        "field": "pairings",
+        "quote": "Primi piatti di salse bianche, fritture varie, piatti di pesce, uova e carni bianche (coniglio).",
+        "value": "fish",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vernaccia_di_San_Gimignano",
+        "place": "Vernaccia di San Gimignano",
+        "placeId": "it-vernaccia-di-san-gimignano"
+      },
+      {
+        "field": "pairings",
+        "quote": "Primi piatti di salse bianche, fritture varie, piatti di pesce, uova e carni bianche (coniglio).",
+        "value": "white meat",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Vernaccia_di_San_Gimignano",
+        "place": "Vernaccia di San Gimignano",
+        "placeId": "it-vernaccia-di-san-gimignano"
       }
     ],
     "id": "vernaccia",
@@ -48538,7 +48703,10 @@
       "pt": "Vernaccia"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "white meat"
+    ],
     "prominence": 8,
     "regions": [
       {

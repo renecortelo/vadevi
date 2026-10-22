@@ -92,6 +92,7 @@
       "medium": "Media",
       "high": "Alta"
     },
+    "saidOfPlace": "Dicho del vino de {{place}}",
     "noSourceValue": "sin dato en las fuentes",
     "kind": {
       "still": "vino tranquilo",

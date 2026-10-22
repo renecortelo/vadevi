@@ -92,6 +92,7 @@
       "medium": "Gemiddeld",
       "high": "Hoog"
     },
+    "saidOfPlace": "Gezegd van de wijn uit {{place}}",
     "noSourceValue": "geen gegeven in de bronnen",
     "kind": {
       "still": "stille wijn",

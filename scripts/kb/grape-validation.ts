@@ -17,6 +17,13 @@ export type Evidence = {
   quote: string;
   value: string; /** The article the quote is from, when not the grape's English one. */
   sourceUrl?: string;
+  /**
+   * The place whose wine the quote describes, where it is not the variety
+   * everywhere: a single-variety DOC's wine, or the wine of the region where
+   * nearly all of the grape grows. Its atlas entry, where it is one.
+   */
+  place?: string;
+  placeId?: string;
 };
 
 export type GrapeEntry = {
@@ -142,7 +149,7 @@ const fieldWords: Record<"acidity" | "alcohol" | "body" | "tannin", RegExp> = {
  * sweet wines named by how they are made (late harvest, noble rot, passito).
  */
 const sweetnessWords: Record<Sweetness, RegExp> = {
-  dry: /\b(dry|seco|secos|seca|secas|sec|secs|seche|seches|trocken[a-z]*|secco|secchi|secca|secche|szaraz|suh[aoie]?|suv[aoi]?|seci|seaca|such[aey]|suche|wytrawn[a-z]*|droge?|torr[at]?|tørr?[et]?|kuiva[a-z]*|sek|lehor[a-z]*)\b|(?<![а-яёіїє])сух|ξηρ|მშრალ|辛口|干型|干白|干红|乾型/,
+  dry: /\b(dry|seco|secos|seca|secas|sec|secs|seche|seches|trocken[a-z]*|secco|secchi|secca|secche|asciutt[oaie]|szaraz|suh[aoie]?|suv[aoi]?|seci|seaca|such[aey]|suche|wytrawn[a-z]*|droge?|torr[at]?|tørr?[et]?|kuiva[a-z]*|sek|lehor[a-z]*)\b|(?<![а-яёіїє])сух|ξηρ|მშრალ|辛口|干型|干白|干红|乾型/,
   medium:
     /\b(off-dry|medium[- ](sweet|dry)|semi-?(sweet|dry)|semi-?seco|semi-?dulce|demi-sec|halbtrocken|halbsu(ss|ß)[a-z]*|lieblich|feinherb|abboccato|amabile|meio-seco|felszaraz|feledes|polusuh[a-z]*|polsuh[a-z]*|polsuch[a-z]*|polosuch[a-z]*|połwytrawn[a-z]*|połsłodk[a-z]*|demisec[a-z]*|demidulc[a-z]*|halfdroog|halfzoet|halvtorr[at]?|halvsot[a]?|halvtørr?[et]?|puolikuiva[a-z]*|puolimakea[a-z]*)\b|полусух|полусладк|напівсух|напівсолодк|ημιξηρ|ημιγλυκ|やや甘口|半甘口|半辛口|半干|半甜/,
   sweet:
