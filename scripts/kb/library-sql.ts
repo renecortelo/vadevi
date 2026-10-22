@@ -360,8 +360,13 @@ export function libraryTables(
           "grape",
           grape.id,
           entry.field,
+          // An aroma or a dish as the library's term («cassis» is blackcurrant),
+          // so the card can say it in the reader's language; a word the
+          // vocabulary drops stays as the source wrote it.
           entry.field === "aromas" || entry.field === "pairings"
-            ? entry.value.toLowerCase()
+            ? (vocabulary[entry.field === "aromas" ? "aroma" : "pairing"].variants[
+                entry.value.toLowerCase()
+              ] ?? entry.value.toLowerCase())
             : entry.value,
           entry.quote,
           entry.sourceUrl ?? grape.wikipediaUrl,

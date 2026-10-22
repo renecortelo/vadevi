@@ -155,8 +155,12 @@ export function LibraryGrapePage() {
         field === "aromas"
           ? [grape.aromaTerms, grape.aromas]
           : [grape.pairingTerms, grape.pairings];
-      const index = terms.indexOf(value);
-      return index === -1 ? value : labels[index]!;
+      // The source's own word, which may be the plural of the term
+      // («apples», «cherries» for «apple», «cherry»).
+      const index = [value, value.replace(/ies$/, "y"), value.replace(/e?s$/, "")]
+        .map((form) => terms.indexOf(form))
+        .find((found) => found !== -1);
+      return index === undefined ? value : labels[index]!;
     }
     return value;
   };
