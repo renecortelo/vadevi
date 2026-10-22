@@ -4601,6 +4601,27 @@ p {
   margin-block-end: var(--space-1);
 }
 
+/* The soil's clay, silt and sand as one bar, in the climograph's colours. */
+.soil-bar {
+  block-size: 0.75rem;
+  border-radius: 999px;
+  display: flex;
+  margin-block-end: var(--space-3);
+  overflow: hidden;
+}
+
+.soil-bar__clay {
+  background: var(--color-plum);
+}
+
+.soil-bar__silt {
+  background: var(--color-plum-surface, var(--color-border));
+}
+
+.soil-bar__sand {
+  background: var(--color-border);
+}
+
 /* A value said of one place's wine, not of the variety everywhere. */
 .library-place {
   display: block;

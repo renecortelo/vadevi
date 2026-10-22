@@ -291,3 +291,47 @@ export function RegionClimate({ climate }: { climate: NonNullable<LibraryRegion[
     </section>
   );
 }
+
+/**
+ * The soil at the name's point in the top 30 cm: clay, silt and sand as one
+ * bar, its pH in words, and its organic carbon. One point: a guide.
+ */
+export function RegionSoil({ soil }: { soil: NonNullable<LibraryRegion["soil"]> }) {
+  const { i18n, t } = useTranslation();
+  const number = new Intl.NumberFormat(i18n.language, { maximumFractionDigits: 1 });
+  const reaction = soil.ph < 6.5 ? "acid" : soil.ph > 7.5 ? "alkaline" : "neutral";
+  const parts = [
+    ["clay", soil.clay],
+    ["silt", soil.silt],
+    ["sand", soil.sand],
+  ] as const;
+  return (
+    <section aria-labelledby="region-soil" className="settings-card">
+      <h2 id="region-soil">{t("library.soilTitle")}</h2>
+      <div aria-hidden="true" className="soil-bar">
+        {parts.map(([name, share]) => (
+          <i className={`soil-bar__${name}`} key={name} style={{ flexGrow: share }} />
+        ))}
+      </div>
+      <dl className="region-climate">
+        {parts.map(([name, share]) => (
+          <div key={name}>
+            <dt>{t(`library.soil.${name}`)}</dt>
+            <dd>{number.format(share)} %</dd>
+          </div>
+        ))}
+        <div>
+          <dt>{t("library.soil.ph")}</dt>
+          <dd>
+            {number.format(soil.ph)} · {t(`library.soil.${reaction}`)}
+          </dd>
+        </div>
+        <div>
+          <dt>{t("library.soil.organicCarbon")}</dt>
+          <dd>{number.format(soil.organicCarbon)} g/kg</dd>
+        </div>
+      </dl>
+      <p className="section-help">{t("library.soilNote")}</p>
+    </section>
+  );
+}

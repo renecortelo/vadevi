@@ -319,6 +319,21 @@ export const LibraryRegionSchema = z
       .nullable(),
     /** The names whose area lies within this one's, directly: a district's wards. */
     contains: z.array(RegionLinkSchema),
+    /**
+     * The soil at the name's point in the top 30 cm (SoilGrids 2.0, ISRIC):
+     * clay, silt and sand in %, pH in water, organic carbon in g/kg. One
+     * point, so only a guide. Null without one.
+     */
+    soil: z
+      .object({
+        clay: z.number(),
+        organicCarbon: z.number(),
+        ph: z.number(),
+        sand: z.number(),
+        silt: z.number(),
+      })
+      .strict()
+      .nullable(),
     countryCode: z.string().length(2),
     /** The EU register's id; null for a name another country's register holds. */
     eambrosiaId: z.string().nullable(),

@@ -62,6 +62,7 @@
     "kb:fetch-topics": "tsx scripts/kb/fetch-topics.ts",
     "kb:build-topics": "tsx scripts/kb/build-topics.ts",
     "kb:fetch-grape-images": "tsx scripts/kb/fetch-grape-images.ts",
+    "kb:fetch-soil": "tsx scripts/kb/fetch-soil.ts",
     "kb:fetch-topic-images": "tsx scripts/kb/fetch-topic-images.ts",
     "kb:build-map": "tsx scripts/kb/build-map.ts",
     "kb:check-pairing-sources": "tsx scripts/kb/check-pairing-sources.ts",

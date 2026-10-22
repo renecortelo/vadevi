@@ -430,6 +430,18 @@
     "glanceYear": "em {{year}}",
     "glanceConverted": "convertido de acres",
     "glanceSource": "Área e produção:",
+    "soilTitle": "Solo",
+    "soil": {
+      "clay": "Argila",
+      "silt": "Limo",
+      "sand": "Areia",
+      "ph": "pH",
+      "acid": "ácido",
+      "neutral": "neutro",
+      "alkaline": "alcalino",
+      "organicCarbon": "Carbono orgânico"
+    },
+    "soilNote": "Os primeiros 30 cm no ponto do mapa, segundo o SoilGrids 2.0 (ISRIC, CC BY 4.0). Um só ponto: indicativo numa área grande.",
     "climateTitle": "Clima",
     "climateKoppen": "Tipo de clima (Köppen)",
     "climateRainfall": "Chuva por ano",

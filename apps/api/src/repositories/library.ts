@@ -651,12 +651,13 @@ export async function getLibraryRegion(
       `SELECT id, eambrosia_id, name, country_code, gi_type, registered_on, legal_url,
         latitude, longitude, wikidata_id, point_source,
         register_categories, register_grapes, register_source_url, register_ref,
-        register_level, within, climate, figures
+        register_level, within, climate, figures, soil
       FROM kb_regions WHERE id = ?`,
     )
     .bind(regionId)
     .first<{
       climate: string | null;
+      soil: string | null;
       country_code: string;
       eambrosia_id: string | null;
       figures: string | null;
@@ -766,6 +767,7 @@ export async function getLibraryRegion(
     countryCode: region.country_code,
     eambrosiaId: region.eambrosia_id,
     figures,
+    soil: region.soil === null ? null : (JSON.parse(region.soil) as LibraryRegion["soil"]),
     giType: region.gi_type,
     grapes: (
       (grapes?.results ?? []) as {

@@ -430,6 +430,18 @@
     "glanceYear": "{{year}}",
     "glanceConverted": "aus Acres umgerechnet",
     "glanceSource": "Fläche und Erzeugung:",
+    "soilTitle": "Boden",
+    "soil": {
+      "clay": "Ton",
+      "silt": "Schluff",
+      "sand": "Sand",
+      "ph": "pH-Wert",
+      "acid": "sauer",
+      "neutral": "neutral",
+      "alkaline": "basisch",
+      "organicCarbon": "Organischer Kohlenstoff"
+    },
+    "soilNote": "Die obersten 30 cm am Punkt der Karte, nach SoilGrids 2.0 (ISRIC, CC BY 4.0). Ein einzelner Punkt: für ein großes Gebiet nur ein Anhalt.",
     "climateTitle": "Klima",
     "climateKoppen": "Klimatyp (Köppen)",
     "climateRainfall": "Niederschlag im Jahr",

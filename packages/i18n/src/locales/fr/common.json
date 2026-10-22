@@ -430,6 +430,18 @@
     "glanceYear": "en {{year}}",
     "glanceConverted": "converti d'acres",
     "glanceSource": "Superficie et production :",
+    "soilTitle": "Sol",
+    "soil": {
+      "clay": "Argile",
+      "silt": "Limon",
+      "sand": "Sable",
+      "ph": "pH",
+      "acid": "acide",
+      "neutral": "neutre",
+      "alkaline": "alcalin",
+      "organicCarbon": "Carbone organique"
+    },
+    "soilNote": "Les 30 premiers centimètres au point de la carte, d’après SoilGrids 2.0 (ISRIC, CC BY 4.0). Un seul point : indicatif pour une grande aire.",
     "climateTitle": "Climat",
     "climateKoppen": "Type de climat (Köppen)",
     "climateRainfall": "Pluie par an",

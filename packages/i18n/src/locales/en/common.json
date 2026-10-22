@@ -430,6 +430,18 @@
     "glanceYear": "in {{year}}",
     "glanceConverted": "converted from acres",
     "glanceSource": "Area and production:",
+    "soilTitle": "Soil",
+    "soil": {
+      "clay": "Clay",
+      "silt": "Silt",
+      "sand": "Sand",
+      "ph": "pH",
+      "acid": "acid",
+      "neutral": "neutral",
+      "alkaline": "alkaline",
+      "organicCarbon": "Organic carbon"
+    },
+    "soilNote": "The top 30 cm at the point on the map, from SoilGrids 2.0 (ISRIC, CC BY 4.0). One point: a guide for a large area.",
     "climateTitle": "Climate",
     "climateKoppen": "Climate type (Köppen)",
     "climateRainfall": "Rain a year",

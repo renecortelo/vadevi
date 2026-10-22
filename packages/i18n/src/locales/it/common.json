@@ -430,6 +430,18 @@
     "glanceYear": "nel {{year}}",
     "glanceConverted": "convertito da acri",
     "glanceSource": "Superficie e produzione:",
+    "soilTitle": "Suolo",
+    "soil": {
+      "clay": "Argilla",
+      "silt": "Limo",
+      "sand": "Sabbia",
+      "ph": "pH",
+      "acid": "acido",
+      "neutral": "neutro",
+      "alkaline": "alcalino",
+      "organicCarbon": "Carbonio organico"
+    },
+    "soilNote": "I primi 30 cm nel punto della mappa, secondo SoilGrids 2.0 (ISRIC, CC BY 4.0). Un solo punto: indicativo per un’area grande.",
     "climateTitle": "Clima",
     "climateKoppen": "Tipo di clima (Köppen)",
     "climateRainfall": "Pioggia all'anno",

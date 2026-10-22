@@ -62,6 +62,11 @@ export type RegionEntry = {
    * Winkler's degree days and region.
    */
   climate?: ClimateSummary & MonthlyClimate & { elevation: number | null };
+  /**
+   * The soil at its point in the top 30 cm (SoilGrids 2.0): clay, silt and
+   * sand in %, pH in water, organic carbon in g/kg.
+   */
+  soil?: { clay: number; organicCarbon: number; ph: number; sand: number; silt: number };
   /** Planted area (ha) and production (hl), from its article's infobox. */
   figures?: {
     planted: RegionFigureSource | null;

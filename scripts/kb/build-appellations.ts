@@ -1431,8 +1431,21 @@ const figures = (
     >;
   }
 ).regions;
+// The soil at the same points (`pnpm kb:fetch-soil`), attached with the climate
+// it was read beside.
+const soils = existsSync(resolve("data/kb/region-soil.json"))
+  ? (
+      JSON.parse(readFileSync(resolve("data/kb/region-soil.json"), "utf8")) as {
+        regions: Record<
+          string,
+          { clay: number; phh2o: number; sand: number; silt: number; soc: number }
+        >;
+      }
+    ).regions
+  : {};
 let withClimate = 0;
 let withFigures = 0;
+let withSoil = 0;
 for (const entry of entries) {
   const climate = climates[entry.id];
   if (
@@ -1449,6 +1462,17 @@ for (const entry of entries) {
       tas: climate.tas,
     };
     withClimate += 1;
+    const soil = soils[entry.id];
+    if (soil !== undefined) {
+      entry.soil = {
+        clay: soil.clay,
+        organicCarbon: soil.soc,
+        ph: soil.phh2o,
+        sand: soil.sand,
+        silt: soil.silt,
+      };
+      withSoil += 1;
+    }
   }
   const figure = figures[entry.id];
   if (figure !== undefined) {
@@ -1972,7 +1996,7 @@ for (const entry of entries) {
   abs += 1;
 }
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE, ${blw} Swiss from the BLW, ${abs} Australian from the ABS.`,
+  `  ${withClimate} names with their climate (${withSoil} with their soil), ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE, ${blw} Swiss from the BLW, ${abs} Australian from the ABS.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

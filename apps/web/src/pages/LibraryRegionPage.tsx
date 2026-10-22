@@ -7,7 +7,7 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 import { MapLink } from "../components/MapLink";
 import { AtlasMap } from "../library/AtlasMap";
-import { RegionClimate, RegionGlance } from "../library/RegionFacts";
+import { RegionClimate, RegionGlance, RegionSoil } from "../library/RegionFacts";
 import { RegionTastings } from "../library/RegionTastings";
 import { designationKey, inEuRegister, registerSuffix } from "../library/designation";
 import { flagOf } from "../library/flag";
@@ -172,6 +172,7 @@ export function LibraryRegionPage() {
 
       <RegionGlance region={region} />
       {region.climate === null ? null : <RegionClimate climate={region.climate} />}
+      {region.soil === null ? null : <RegionSoil soil={region.soil} />}
       <RegionTastings backHere={backHere} regionId={region.id} />
 
       <section aria-labelledby="region-map" className="settings-card">

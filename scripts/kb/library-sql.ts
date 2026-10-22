@@ -195,6 +195,7 @@ export function libraryTables(
         "within",
         "climate",
         "figures",
+        "soil",
       ],
       ["id"],
       3,
@@ -231,6 +232,7 @@ export function libraryTables(
           : JSON.stringify(region.within),
         region.climate === undefined ? null : JSON.stringify(region.climate),
         region.figures === undefined ? null : JSON.stringify(region.figures),
+        region.soil === undefined ? null : JSON.stringify(region.soil),
       ]),
     ),
     table(

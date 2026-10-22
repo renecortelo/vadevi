@@ -11826,6 +11826,35 @@
               "additionalProperties": false
             }
           },
+          "soil": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "clay": {
+                "type": "number"
+              },
+              "organicCarbon": {
+                "type": "number"
+              },
+              "ph": {
+                "type": "number"
+              },
+              "sand": {
+                "type": "number"
+              },
+              "silt": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "clay",
+              "organicCarbon",
+              "ph",
+              "sand",
+              "silt"
+            ],
+            "additionalProperties": false
+          },
           "countryCode": {
             "type": "string",
             "minLength": 2,
@@ -12172,6 +12201,7 @@
         "required": [
           "climate",
           "contains",
+          "soil",
           "countryCode",
           "eambrosiaId",
           "figures",
