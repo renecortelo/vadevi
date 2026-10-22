@@ -92,7 +92,8 @@ async function namedIn(
     chunks.map((chunk) =>
       database
         .prepare(
-          `SELECT entity_id AS id, max(length(normalized_name)) AS matched
+          `SELECT entity_id AS id, max(length(normalized_name)) AS matched,
+            max(CASE WHEN kind = 'primary' THEN length(normalized_name) ELSE 0 END) AS own
           FROM kb_names
           WHERE normalized_name IN (${chunk.map(() => "?").join(", ")}) AND entity_type = ?
           GROUP BY entity_id`,
@@ -100,14 +101,25 @@ async function namedIn(
         .bind(...chunk, entityType),
     ),
   );
-  const best = new Map<string, number>();
+  // The longest name matched first; on a tie, the one whose own name it is —
+  // «Sauvignon vert» is Sauvignon vert's name, and only a synonym of Muscadelle.
+  const best = new Map<string, { matched: number; own: number }>();
   for (const result of results) {
-    for (const row of result.results as { id: string; matched: number }[]) {
-      best.set(row.id, Math.max(best.get(row.id) ?? 0, row.matched));
+    for (const row of result.results as { id: string; matched: number; own: number }[]) {
+      const known = best.get(row.id);
+      best.set(row.id, {
+        matched: Math.max(known?.matched ?? 0, row.matched),
+        own: Math.max(known?.own ?? 0, row.own),
+      });
     }
   }
   return [...best.entries()]
-    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+    .sort(
+      (left, right) =>
+        right[1].matched - left[1].matched ||
+        right[1].own - left[1].own ||
+        left[0].localeCompare(right[0]),
+    )
     .slice(0, limit)
     .map(([id]) => id);
 }

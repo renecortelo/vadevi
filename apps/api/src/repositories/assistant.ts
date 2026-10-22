@@ -1285,11 +1285,9 @@ async function loadLibraryStatements(
       createdByProvider: "wine-library",
       createdByUserId: null,
       id,
-      licenseIdentifier: "CC-BY-SA-4.0",
-      publisher: "Wikipedia",
+      ...librarySourceKind(topic.summary.sourceUrl, topic.name),
       retrievedAt: now,
       sourceType: "open_dataset",
-      title: `${topic.name} — Wikipedia`,
       updatedAt: now,
     });
     statements.push({

@@ -5,7 +5,8 @@ import { beforeAll, describe, expect, it } from "vitest";
 
 import grapesFile from "../../../data/kb/grapes.json";
 import termsFile from "../../../data/kb/terms.json";
-import type { RegionEntry } from "../../../scripts/kb/appellation-names";
+import topicsFile from "../../../data/kb/topics.json";
+import type { RegionEntry, TopicEntry } from "../../../scripts/kb/appellation-names";
 import type { GrapeEntry } from "../../../scripts/kb/grape-validation";
 import { librarySql, type Vocabulary } from "../../../scripts/kb/library-sql";
 import { runDeterministicAssistantTurn } from "../src/repositories/assistant";
@@ -27,6 +28,7 @@ import regionsSample from "./regions-sample.json";
  */
 const grapes = grapesFile as unknown as GrapeEntry[];
 const regions = regionsSample as unknown as RegionEntry[];
+const topics = topicsFile as unknown as TopicEntry[];
 
 const templates: [locale: string, nameKey: string, template: (name: string) => string][] = [
   ["en", "en", (name) => `What is ${name} like?`],
@@ -46,7 +48,9 @@ let spaceId = "";
 
 beforeAll(async () => {
   await applyD1Migrations(env.DB, env.TEST_MIGRATIONS);
-  for (const statement of librarySql(grapes, "eval", termsFile as unknown as Vocabulary, regions)) {
+  for (const statement of librarySql(grapes, "eval", termsFile as unknown as Vocabulary, regions, {
+    topics,
+  })) {
     await env.DB.prepare(statement).run();
   }
   const me = BootstrapResponseSchema.parse(
@@ -267,5 +271,75 @@ describe("Vicenç's question bank", () => {
     expect(regionFactsGiven).toBe(regionFacts);
     expect(regionCredited).toBe(regionCitations);
     expect(found / regions.length).toBeGreaterThan(0.9);
+  }, 1_800_000);
+  it("explains each style and method, and gives each grape's pairings as their kind", async () => {
+    const asks: [locale: string, nameKey: string, template: (name: string) => string][] = [
+      ["en", "en", (name) => `What is ${name}?`],
+      ["es", "es", (name) => `¿Qué es ${name}?`],
+      ["ca", "ca", (name) => `Què és ${name}?`],
+      ["fr", "fr", (name) => `Qu'est-ce que ${name} ?`],
+      ["de", "de", (name) => `Was ist ${name}?`],
+      ["it", "it", (name) => `Che cos'è ${name}?`],
+      ["nl", "nl", (name) => `Wat is ${name}?`],
+      ["pt-PT", "pt", (name) => `O que é ${name}?`],
+    ];
+    const misses: string[] = [];
+    let topicsFound = 0;
+    let topicsCredited = 0;
+    for (const [index, topic] of topics.entries()) {
+      const [locale, nameKey, template] = asks[index % asks.length]!;
+      const name = topic.names[nameKey] ?? topic.names.en!;
+      const { data } = await ask(template(name), locale);
+      if (!data?.libraryTopics.some((entry) => entry.id === topic.id)) {
+        misses.push(`topic not found: ${topic.id} («${template(name)}»)`);
+        continue;
+      }
+      topicsFound += 1;
+      if (
+        data.citations.every((source) => source.publisher === publisherFor(source.canonicalUrl))
+      ) {
+        topicsCredited += 1;
+      } else misses.push(`topic miscredited: ${topic.id}`);
+    }
+    // A grape's pairings: its source's, cited, and the rules' suggestion, never cited.
+    let pairingAsks = 0;
+    let pairingsRight = 0;
+    for (const grape of grapes) {
+      if (grape.pairings.length === 0) continue;
+      pairingAsks += 1;
+      const { statements } = await ask(
+        `¿Con qué marida el ${grape.names.es ?? grape.names.en}?`,
+        "es",
+      );
+      const sourced = statements.find((one) => one.id === `library-${grape.id}-pairings`);
+      const suggested = statements.find((one) => one.id === `library-${grape.id}-suggested`);
+      if (
+        sourced !== undefined &&
+        sourced.evidenceClass === "researched" &&
+        sourced.sourceIds.length > 0 &&
+        (suggested === undefined ||
+          (suggested.evidenceClass === "inferred" && suggested.sourceIds.length === 0))
+      ) {
+        pairingsRight += 1;
+      } else {
+        misses.push(
+          `pairings: ${grape.id}: ${statements
+            .filter((one) => one.id.startsWith("library-"))
+            .map((one) => `${one.id}/${one.evidenceClass}/${one.sourceIds.length}`)
+            .join(" ")}`,
+        );
+      }
+    }
+    console.info(
+      [
+        `Styles and methods found: ${topicsFound} / ${topics.length}`,
+        `Their citations credited as their own: ${topicsCredited} / ${topicsFound}`,
+        `Grapes whose pairings are given cited, and the rules' as suggestion: ${pairingsRight} / ${pairingAsks}`,
+        ...misses.slice(0, 30).map((miss) => `  ${miss}`),
+      ].join("\n"),
+    );
+    expect(topicsFound / topics.length).toBeGreaterThan(0.9);
+    expect(topicsCredited).toBe(topicsFound);
+    expect(pairingsRight).toBe(pairingAsks);
   }, 1_800_000);
 });

@@ -56,7 +56,7 @@ The checked-in Wrangler file contains placeholder identifiers only. Preview and 
 pnpm check
 ```
 
-This runs formatting, linting, strict TypeScript checks, tests, OpenAPI drift detection, translation and pseudo-locale checks, the documentation, migration, brand and third-party-notice checks, production builds, the initial-route JavaScript budget, and the release scan. End-to-end drills run apart with `pnpm e2e`. To intentionally refresh the generated contract:
+This runs formatting, linting, strict TypeScript checks, tests, OpenAPI drift detection, translation and pseudo-locale checks, the documentation, migration, brand and third-party-notice checks, production builds, the initial-route JavaScript budget, and the release scan. End-to-end drills run apart with `pnpm e2e`, and Vicenç's question bank with `pnpm eval:vicenc` (`docs/assistant-evaluation.md`). To intentionally refresh the generated contract:
 
 ```powershell
 pnpm openapi:generate
