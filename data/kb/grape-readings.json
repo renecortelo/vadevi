@@ -195,6 +195,21 @@
           "volume": "itwiki-aleatico-di-puglia",
           "work": "wikipedia-it"
         }
+      },
+      {
+        "field": "body",
+        "lang": "it",
+        "value": "high",
+        "quote": "Al palato si riscontra ricco di corpo, sapido e armonico, con grande morbidezza.",
+        "scope": {
+          "place": "Elba Aleatico Passito",
+          "regionId": "it-elba-aleatico-passito"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Elba_Aleatico_Passito",
+          "volume": "itwiki-elba-aleatico-passito",
+          "work": "wikipedia-it"
+        }
       }
     ],
     "alexandrouli": [
@@ -2308,6 +2323,45 @@
         "quote": "per i sentori di ciliegia e di marasca",
         "words": {
           "cherry": "ciliegia"
+        }
+      },
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "Gusto: pieno, secco, armonico, giustamente tannico.",
+        "scope": {
+          "place": "Montepulciano d'Abruzzo",
+          "regionId": "it-montepulciano-d-abruzzo"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Montepulciano_d%27Abruzzo",
+          "volume": "itwiki-montepulciano-d-abruzzo",
+          "work": "wikipedia-it"
+        }
+      },
+      {
+        "field": "pairings",
+        "lang": "it",
+        "value": [
+          "red meat",
+          "beef",
+          "lamb"
+        ],
+        "quote": "I vini più vecchi sono comunque preferibili con carni rosse, pezzature nobili di bovino o ovino.",
+        "words": {
+          "red meat": "carni rosse",
+          "beef": "bovino",
+          "lamb": "ovino"
+        },
+        "scope": {
+          "place": "Montepulciano d'Abruzzo",
+          "regionId": "it-montepulciano-d-abruzzo"
+        },
+        "source": {
+          "url": "https://it.wikipedia.org/wiki/Montepulciano_d%27Abruzzo",
+          "volume": "itwiki-montepulciano-d-abruzzo",
+          "work": "wikipedia-it"
         }
       }
     ],

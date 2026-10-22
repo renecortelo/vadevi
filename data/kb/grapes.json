@@ -35282,6 +35282,38 @@
         "quote": "per i sentori di ciliegia e di marasca",
         "value": "cherry",
         "sourceUrl": "https://it.wikipedia.org/wiki/Montepulciano_(vitigno)"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Gusto: pieno, secco, armonico, giustamente tannico.",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Montepulciano_d%27Abruzzo",
+        "place": "Montepulciano d'Abruzzo",
+        "placeId": "it-montepulciano-d-abruzzo"
+      },
+      {
+        "field": "pairings",
+        "quote": "I vini più vecchi sono comunque preferibili con carni rosse, pezzature nobili di bovino o ovino.",
+        "value": "red meat",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Montepulciano_d%27Abruzzo",
+        "place": "Montepulciano d'Abruzzo",
+        "placeId": "it-montepulciano-d-abruzzo"
+      },
+      {
+        "field": "pairings",
+        "quote": "I vini più vecchi sono comunque preferibili con carni rosse, pezzature nobili di bovino o ovino.",
+        "value": "beef",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Montepulciano_d%27Abruzzo",
+        "place": "Montepulciano d'Abruzzo",
+        "placeId": "it-montepulciano-d-abruzzo"
+      },
+      {
+        "field": "pairings",
+        "quote": "I vini più vecchi sono comunque preferibili con carni rosse, pezzature nobili di bovino o ovino.",
+        "value": "lamb",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Montepulciano_d%27Abruzzo",
+        "place": "Montepulciano d'Abruzzo",
+        "placeId": "it-montepulciano-d-abruzzo"
       }
     ],
     "id": "montepulciano",
@@ -35296,7 +35328,11 @@
       "pt": "Montepulciano"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "beef",
+      "lamb"
+    ],
     "prominence": 13,
     "regions": [
       {
@@ -35365,7 +35401,10 @@
         "url": "https://en.wikipedia.org/wiki/Montepulciano_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Cordicso",
@@ -48348,7 +48387,7 @@
       "red berry",
       "lychee"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -48494,6 +48533,14 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Aleatico_di_Puglia",
         "place": "Aleatico di Puglia",
         "placeId": "it-aleatico-di-puglia"
+      },
+      {
+        "field": "body",
+        "quote": "Al palato si riscontra ricco di corpo, sapido e armonico, con grande morbidezza.",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Elba_Aleatico_Passito",
+        "place": "Elba Aleatico Passito",
+        "placeId": "it-elba-aleatico-passito"
       }
     ],
     "id": "aleatico",
