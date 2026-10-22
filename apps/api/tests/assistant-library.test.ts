@@ -40,9 +40,44 @@ const grape = {
   wikipediaUrl: "https://en.wikipedia.org/wiki/Tempranillo",
 };
 
+// A grape whose body is said of one place's wine, read from a paper.
+const furmint = {
+  ...grape,
+  acidity: null,
+  alcohol: "high" as const,
+  aromas: [],
+  body: "high" as const,
+  evidence: [
+    {
+      field: "summary",
+      quote: "Furmint is a white grape.",
+      value: "summary",
+    },
+    {
+      field: "body",
+      place: "Tokaj",
+      placeId: "hu-tokaj",
+      quote: "Dry varietal Tokaji Furmint is full-bodied",
+      sourceUrl: "https://doi.org/10.0000/furmint",
+      value: "high",
+    },
+  ],
+  id: "furmint",
+  names: { en: "Furmint" },
+  regions: [],
+  summaries: {
+    en: { text: "Furmint is a white grape.", url: "https://en.wikipedia.org/wiki/Furmint" },
+  },
+  synonyms: [],
+  wikidataId: "Q940015",
+  wikipediaUrl: "https://en.wikipedia.org/wiki/Furmint",
+};
+
 beforeAll(async () => {
   await applyD1Migrations(env.DB, env.TEST_MIGRATIONS);
-  for (const statement of librarySql([grape], "test")) await env.DB.prepare(statement).run();
+  for (const statement of librarySql([grape, furmint], "test")) {
+    await env.DB.prepare(statement).run();
+  }
 });
 
 const sub = "firebase-emulator-user-library-assistant";
@@ -182,5 +217,51 @@ describe("Vicenç with the wine library", () => {
     });
     expect(response?.data.renderedText).toContain("rephrase");
     expect(response?.data.warnings).toEqual(["unclear_question"]);
+  });
+  it("gives a grape's alcohol, says a place's wine as such, and credits a paper as a paper", async () => {
+    const me = BootstrapResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+      ).json(),
+    );
+    let seen: AssistantLanguageStatement[] = [];
+    const response = await runDeterministicAssistantTurn(env.DB, {
+      aiProvider: "cloudflare",
+      externalResearch: false,
+      language: {
+        render: async (input) => {
+          seen = input.statements;
+          return { claims: [], modelVersion: "@cf/example/model" };
+        },
+      },
+      pairing: null,
+      principal: {
+        authTime: Math.floor(Date.now() / 1_000),
+        displayName: "Reader",
+        email: "library-assistant@example.test",
+        emailVerified: true,
+        firebaseUid: sub,
+      },
+      request: {
+        context: { allowedCrossSpaceIds: [], visibleWineId: null },
+        locale: "en",
+        message: "What is Furmint like?",
+        saveHistory: false,
+        threadId: null,
+      },
+      requestId: randomOpaqueToken(),
+      semanticNotes: null,
+      spaceId: me.data.user.activeSpaceId,
+    });
+    const profile = seen.find((statement) => statement.id === "library-furmint-profile");
+    expect(profile?.text).toContain("body high (said of the wine of Tokaj)");
+    expect(profile?.text).toContain("alcohol high");
+    const paper = response?.data.citations.find(
+      (source) => source.canonicalUrl === "https://doi.org/10.0000/furmint",
+    );
+    expect(paper?.publisher).toBe("Open-access article");
+    expect(paper?.licenseIdentifier).toBe("CC-BY-4.0");
   });
 });

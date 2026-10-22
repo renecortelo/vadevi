@@ -794,7 +794,18 @@ async function loadLibraryStatements(
     // Each statement cites the article its facts were read from: a card's
     // facts may come from its English article and from the grape's article in
     // its own language (Mencía's aromas are the Spanish one's).
-    const mainUrl = card.evidence[0]?.sourceUrl ?? card.summary?.sourceUrl ?? null;
+    // The card's own article: the Wikipedia page most of its facts are read
+    // from (the facts come sorted by field, so a paper's may come first).
+    const quoted = new Map<string, number>();
+    for (const entry of card.evidence) {
+      if (new URL(entry.sourceUrl).hostname.endsWith("wikipedia.org")) {
+        quoted.set(entry.sourceUrl, (quoted.get(entry.sourceUrl) ?? 0) + 1);
+      }
+    }
+    const mainUrl =
+      [...quoted].sort((one, other) => other[1] - one[1])[0]?.[0] ??
+      card.summary?.sourceUrl ??
+      null;
     const sourceIdByUrl = new Map<string, string>();
     const sourceFor = async (url: string): Promise<string> => {
       const known = sourceIdByUrl.get(url);
@@ -807,11 +818,9 @@ async function loadLibraryStatements(
         createdByProvider: "wine-library",
         createdByUserId: null,
         id,
-        licenseIdentifier: "CC-BY-SA-4.0",
-        publisher: "Wikipedia",
+        ...librarySourceKind(url, card.name),
         retrievedAt: now,
         sourceType: "open_dataset",
-        title: `${card.name} — Wikipedia`,
         updatedAt: now,
       });
       return id;
@@ -847,9 +856,26 @@ async function loadLibraryStatements(
         await sourceFor(card.summary.sourceUrl),
       ]);
     }
-    const structure = (["acidity", "tannin", "body"] as const)
+    // A value read from one place's wine says so: "said of the wine of Tokaj".
+    const placeOf = (field: string) =>
+      card.evidence.find((entry) => entry.field === field && entry.place !== null)?.place ?? null;
+    const placed = (field: string, text: string) => {
+      const place = placeOf(field);
+      return place === null ? text : `${text} (said of the wine of ${place})`;
+    };
+    const structure = (["acidity", "tannin", "body", "alcohol"] as const)
       .filter((axis) => card[axis] !== null)
-      .map((axis) => `${axis} ${card[axis]}`);
+      .map((axis) => placed(axis, `${axis} ${card[axis]}`));
+    if (card.sweetness !== null) {
+      structure.push(
+        placed(
+          "sweetness",
+          card.sweetness.from === card.sweetness.to
+            ? card.sweetness.from
+            : `from ${card.sweetness.from} to ${card.sweetness.to}`,
+        ),
+      );
+    }
     if (card.color !== null || card.originCountryCode !== null || structure.length > 0) {
       await say(
         "profile",
@@ -861,7 +887,7 @@ async function loadLibraryStatements(
           .filter(Boolean)
           .join("; "),
         "researched",
-        await citing(["color", "origin", "acidity", "tannin", "body"]),
+        await citing(["color", "origin", "acidity", "tannin", "body", "alcohol", "sweetness"]),
       );
     }
     if (card.aromas.length > 0) {
@@ -891,7 +917,7 @@ async function loadLibraryStatements(
     if (card.pairings.length > 0) {
       await say(
         "pairings",
-        `its source says it goes with: ${card.pairings.join(", ")}`,
+        placed("pairings", `its source says it goes with: ${card.pairings.join(", ")}`),
         "researched",
         await citing(["pairings"]),
       );
@@ -2974,4 +3000,60 @@ export async function runDeterministicAssistantTurn(
       wineContext: visibleContext.context,
     },
   };
+}
+
+/**
+ * Who a library fact's source is and under what licence, from its address:
+ * a grape's facts come from Wikipedia and Wikivoyage, from open-access papers,
+ * from public-domain books and from the EU's register, not all from one.
+ */
+function librarySourceKind(
+  url: string,
+  name: string,
+): { licenseIdentifier: string; publisher: string; title: string } {
+  const host = new URL(url).hostname;
+  if (host.endsWith("wikipedia.org")) {
+    return {
+      licenseIdentifier: "CC-BY-SA-4.0",
+      publisher: "Wikipedia",
+      title: `${name} — Wikipedia`,
+    };
+  }
+  if (host.endsWith("wikivoyage.org")) {
+    return {
+      licenseIdentifier: "CC-BY-SA-4.0",
+      publisher: "Wikivoyage",
+      title: `${name} — Wikivoyage`,
+    };
+  }
+  // The University of Adelaide's winegrape database (its DOI is figshare's).
+  if (host === "doi.org" && new URL(url).pathname.startsWith("/10.25909/")) {
+    return {
+      licenseIdentifier: "CC-BY-4.0",
+      publisher: "University of Adelaide",
+      title: `${name} — winegrape database`,
+    };
+  }
+  if (host === "doi.org") {
+    return {
+      licenseIdentifier: "CC-BY-4.0",
+      publisher: "Open-access article",
+      title: `${name} — doi:${new URL(url).pathname.slice(1)}`,
+    };
+  }
+  if (host.endsWith("archive.org")) {
+    return {
+      licenseIdentifier: "public-domain",
+      publisher: "Internet Archive",
+      title: `${name} — public-domain ampelography`,
+    };
+  }
+  if (host === "ec.europa.eu") {
+    return {
+      licenseIdentifier: "CC-BY-4.0",
+      publisher: "EU register of geographical indications (eAmbrosia)",
+      title: `${name} — single document`,
+    };
+  }
+  return { licenseIdentifier: "see-source", publisher: host, title: `${name} — ${host}` };
 }

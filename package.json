@@ -24,6 +24,7 @@
     "dev:auth": "firebase emulators:start --only auth --project demo-vadevi",
     "dev:web": "pnpm --filter @vadevi/web dev",
     "e2e": "playwright test --project=chromium-desktop --project=chromium-320",
+    "eval:vicenc": "pnpm --filter @vadevi/api exec vitest run --config vitest.eval.config.ts",
     "e2e:install": "playwright install chromium",
     "e2e:resilience": "playwright test --project=resilience",
     "format": "prettier --write .",

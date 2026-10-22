@@ -6,6 +6,18 @@ has the reasons.
 
 ## Unreleased
 
+### Vicenç
+
+- **Every fact of a grape's card, said as the card says it**: Vicenç now
+  gives a grape's alcohol and sweetness as well as its acidity, tannin and
+  body, says a fact read from one place's wine as such («said of the wine of
+  Tokaj»), and credits each source as what it is — a paper, a public-domain
+  book, the EU register, Wikivoyage — rather than all as Wikipedia.
+- **A question bank** (`pnpm eval:vicenc`, `docs/assistant-evaluation.md`):
+  every grape asked about in the eight languages, by synonym, a sample of
+  registered names and grapes that do not exist; all 209 grapes found, every
+  card fact given and cited to its own source.
+
 ### Maintenance
 
 - Vitest 4.1.12 (two moderate advisories in its mocker closed) and Wrangler
