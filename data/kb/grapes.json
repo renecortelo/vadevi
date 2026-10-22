@@ -19287,6 +19287,12 @@
         "quote": "les meilleurs vins sont produits sur les vignes de plus de quarante ans, donnant des vins dominés par les arômes de fruits rouges et d'épices.",
         "value": "spice",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Carignan_N"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Carignano is undoubtedly one of Sardinian oenology’s most interesting and prestigious grape varieties, with an intense ruby red color, vinous perfume, and dry, spicy, and harmonious taste",
+        "value": "dry",
+        "sourceUrl": "https://doi.org/10.3390/foods14132290"
       }
     ],
     "id": "carignan",
@@ -19342,7 +19348,10 @@
         "url": "https://en.wikipedia.org/wiki/Carignan"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Cariñena",
@@ -42219,7 +42228,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Elbling"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [],
     "body": "high",
@@ -42361,6 +42370,12 @@
         "quote": "לפאלאנגינה גוף מלא (בדומה לשרדונה) עם טעמי אפרסק, לימון ואגס",
         "value": "high",
         "sourceUrl": "https://he.wikipedia.org/wiki/%D7%A4%D7%90%D7%9C%D7%90%D7%A0%D7%92%D7%99%D7%A0%D7%94"
+      },
+      {
+        "field": "acidity",
+        "quote": "musts generally have high acidity",
+        "value": "high",
+        "sourceUrl": "https://doi.org/10.3390/horticulturae8090829"
       }
     ],
     "id": "falanghina",

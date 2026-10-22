@@ -477,7 +477,11 @@ for what moved.
   produce full-bodied and aromatic wines»; Valcárcel-Muñoz et al., Foods
   12:1911, 2023 — «The dry fortified wines are made from Palomino grapes»;
   Filimon et al., Foods 15:321, 2026 — Muscat Ottonel «usually deficient in
-  acidity». They were found by searching Europe PMC's CC BY full texts for
+  acidity»; Sarais et al., Foods 14:2290, 2025 — Carignano's «dry, spicy, and
+  harmonious taste»; and, from the PDF (MDPI's pages refuse scripts, so it was
+  downloaded by hand), Damiano et al., Horticulturae 8:829, 2022 — Falanghina's
+  «musts generally have high acidity», said of the musts, as Plantevin's is of
+  the berries. They were found by searching Europe PMC's CC BY full texts for
   each grape and trait still missing; a sentence about an experimental wine,
   a sample, a comparison or a region is not used. The text
   extracted from its PDF is cached beside the books, and the reading names

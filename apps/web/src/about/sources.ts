@@ -99,10 +99,10 @@ export const sources: Source[] = [
   },
   {
     credit:
-      "Ibn Amor et al. (2025), Insects 16:497 · Cisterna-Castillo et al. (2024), Foods 13:3065 · Thomaz et al. (2022), Antioxidants 11:859 · Valcárcel-Muñoz et al. (2023), Foods 12:1911 · Filimon et al. (2026), Foods 15:321",
+      "Ibn Amor et al. (2025), Insects 16:497 · Cisterna-Castillo et al. (2024), Foods 13:3065 · Thomaz et al. (2022), Antioxidants 11:859 · Valcárcel-Muñoz et al. (2023), Foods 12:1911 · Filimon et al. (2026), Foods 15:321 · Sarais et al. (2025), Foods 14:2290 · Damiano et al. (2022), Horticulturae 8:829",
     group: "texts",
     licence: "CC BY 4.0",
-    name: "MDPI open-access articles, read from Europe PMC",
+    name: "MDPI open-access articles",
     url: "https://europepmc.org/",
     what: "traits",
   },

@@ -27,11 +27,11 @@ has the reasons.
   32 states, GI zones and regions that had no area — South Australia,
   Barossa, Limestone Coast, Big Rivers, Hunter, King Valley… — show their
   wine grapes' area in 2014-15 (CC BY 4.0).
-- **Six traits from open-access research articles** (CC BY 4.0, read from
-  Europe PMC): Cabernet Franc's acidity (high) and tannins (moderate),
-  Carménère's acidity (low), Negroamaro's body (full), Palomino's wines
-  (dry) and Muscat Ottonel's acidity (low), each from a sentence about the
-  variety itself.
+- **Eight traits from open-access research articles** (CC BY 4.0, most read
+  from Europe PMC): Cabernet Franc's acidity (high) and tannins (moderate),
+  Carménère's acidity (low), Negroamaro's body (full), Palomino's and
+  Carignan's wines (dry), Muscat Ottonel's acidity (low) and Falanghina's
+  (high), each from a sentence about the variety itself.
 - **Petit Manseng's acidity, from an open-access article**: a 2024 study of
   grape acidity in a changing climate (Frontiers in Plant Science, CC BY 4.0)
   names Alvarinho and Petit Manseng as «two white varieties known for their

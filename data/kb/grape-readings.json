@@ -765,6 +765,17 @@
           "red fruit": "fruits rouges",
           "spice": "épices"
         }
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "Carignano is undoubtedly one of Sardinian oenology’s most interesting and prestigious grape varieties, with an intense ruby red color, vinous perfume, and dry, spicy, and harmonious taste",
+        "source": {
+          "url": "https://doi.org/10.3390/foods14132290",
+          "volume": "foods14132290",
+          "work": "sarais-2025-foods"
+        }
       }
     ],
     "castelao": [
@@ -1157,6 +1168,17 @@
         "lang": "he",
         "value": "high",
         "quote": "לפאלאנגינה גוף מלא (בדומה לשרדונה) עם טעמי אפרסק, לימון ואגס"
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "high",
+        "quote": "musts generally have high acidity",
+        "source": {
+          "url": "https://doi.org/10.3390/horticulturae8090829",
+          "volume": "horticulturae8090829",
+          "work": "damiano-2022-horticulturae"
+        }
       }
     ],
     "fernao-pires": [
