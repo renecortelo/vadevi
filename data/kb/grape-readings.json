@@ -686,6 +686,28 @@
           "fish": "halételekkel",
           "beef": "marhahúsételekkel"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "high",
+        "quote": "an early-ripening French red wine grape characterized by high acidity, moderate tannins, and thin skin",
+        "source": {
+          "url": "https://doi.org/10.3390/insects16050497",
+          "volume": "insects16050497",
+          "work": "ibn-amor-2025-insects"
+        }
+      },
+      {
+        "field": "tannin",
+        "lang": "en",
+        "value": "medium",
+        "quote": "an early-ripening French red wine grape characterized by high acidity, moderate tannins, and thin skin",
+        "source": {
+          "url": "https://doi.org/10.3390/insects16050497",
+          "volume": "insects16050497",
+          "work": "ibn-amor-2025-insects"
+        }
       }
     ],
     "cabernet-sauvignon": [
@@ -2304,6 +2326,17 @@
         "lang": "fr",
         "quote": "Ce cépage a été obtenu par Jean-Pierre Vibert en 1839, alors installé à Angers.",
         "value": "FR"
+      },
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "low",
+        "quote": "Muscat Ottonel grapes are usually deficient in acidity, presenting low concentrations of organic acids upon ripening",
+        "source": {
+          "url": "https://doi.org/10.3390/foods15020321",
+          "volume": "foods15020321",
+          "work": "filimon-2026-foods"
+        }
       }
     ],
     "nebbiolo": [
@@ -2395,6 +2428,17 @@
         "lang": "da",
         "value": "low",
         "quote": "Druen besidder karakteristisk kraft og fylde, lavt syreindhold, rig på tanniner"
+      },
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "high",
+        "quote": "the Negroamaro variety is also strongly linked to the Apulia region, especially in the neighboring areas of Alezio, Brindisi, Copertino, Galatina, Gioia del Colle, Lizzano, Leverano and Terra d’Otranto; it is used to produce full-bodied and aromatic wines",
+        "source": {
+          "url": "https://doi.org/10.3390/antiox11050859",
+          "volume": "antiox11050859",
+          "work": "thomaz-2022-antioxidants"
+        }
       }
     ],
     "nero-d-avola": [
@@ -2539,6 +2583,17 @@
         "lang": "pl",
         "quote": "Odmiana pochodzi z Hiszpanii, a bardziej szczegółowe informacje wskazują na Andaluzję",
         "value": "ES"
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "dry",
+        "quote": "The dry fortified wines are made from Palomino grapes",
+        "source": {
+          "url": "https://doi.org/10.3390/foods12091911",
+          "volume": "foods12091911",
+          "work": "valcarcel-munoz-2023-foods"
+        }
       }
     ],
     "parellada": [
@@ -4006,6 +4061,19 @@
         "words": {
           "cheese": "sýry",
           "pasta": "těstoviny"
+        }
+      }
+    ],
+    "carmenere": [
+      {
+        "field": "acidity",
+        "lang": "en",
+        "value": "low",
+        "quote": "a variety like Carménère is suitable for studying the CaT instability due to its usual low acidity and high pH",
+        "source": {
+          "url": "https://doi.org/10.3390/foods13193065",
+          "volume": "foods13193065",
+          "work": "cisterna-castillo-2024-foods"
         }
       }
     ]

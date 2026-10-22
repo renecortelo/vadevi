@@ -520,6 +520,7 @@
       "showFewer": "Voir moins"
     },
     "glanceSourceFederalRegister": "Federal Register des États-Unis, la règle créant l’AVA ({{campaign}})",
+    "glanceSourceAbs": "Bureau australien de statistique (ABS), vignobles {{campaign}} (CC BY 4.0)",
     "glanceSourceAdelaide": "Anderson, Nelgen et Puga, Université d’Adélaïde, superficie en production {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Source : ARTEA – Regione Toscana, vendanges {{campaign}} · CC BY 4.0",
     "glanceSourceBlw": "Office fédéral de l’agriculture (OFAG), vendange {{campaign}}",

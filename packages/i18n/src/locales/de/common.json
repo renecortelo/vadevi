@@ -520,6 +520,7 @@
       "showFewer": "Weniger anzeigen"
     },
     "glanceSourceFederalRegister": "US Federal Register, die Regel zur Einrichtung der AVA ({{campaign}})",
+    "glanceSourceAbs": "Australisches Statistikamt (ABS), Rebflächen {{campaign}} (CC BY 4.0)",
     "glanceSourceAdelaide": "Anderson, Nelgen und Puga, Universität Adelaide, Ertragsrebfläche {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Quelle: ARTEA – Regione Toscana, Lese {{campaign}} · CC BY 4.0",
     "glanceSourceBlw": "Bundesamt für Landwirtschaft (BLW), Weinlese {{campaign}}",

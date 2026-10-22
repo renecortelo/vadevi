@@ -8,6 +8,7 @@ export type RegionFigureSource = {
   amount: number;
   /** Who gives it, where not Wikipedia: Spain's Ministry, France's customs. */
   publisher?:
+    | "abs"
     | "adelaide"
     | "artea"
     | "blw"

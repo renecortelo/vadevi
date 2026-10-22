@@ -256,10 +256,12 @@ const RegionFigureSchema = z
      * payments agency ("artea"), the Lombardy region ("regione-lombardia"), the Umbria region
      * ("regione-umbria"), the University of Adelaide's database of winegrape
      * areas ("adelaide"), Statistics Portugal ("ine-portugal"), Switzerland's
-     * Federal Office for Agriculture ("blw").
+     * Federal Office for Agriculture ("blw"), the Australian Bureau of
+     * Statistics ("abs").
      */
     publisher: z
       .enum([
+        "abs",
         "adelaide",
         "artea",
         "blw",

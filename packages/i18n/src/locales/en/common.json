@@ -520,6 +520,7 @@
       "showFewer": "Show fewer"
     },
     "glanceSourceFederalRegister": "US Federal Register, the rule establishing the AVA ({{campaign}})",
+    "glanceSourceAbs": "Australian Bureau of Statistics, vineyards {{campaign}} (CC BY 4.0)",
     "glanceSourceAdelaide": "Anderson, Nelgen and Puga, University of Adelaide, bearing area {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Source: ARTEA – Regione Toscana, grape harvest {{campaign}} · CC BY 4.0",
     "glanceSourceBlw": "Swiss Federal Office for Agriculture (FOAG), harvest {{campaign}}",

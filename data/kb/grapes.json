@@ -15789,7 +15789,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gew%C3%BCrztraminer"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "black pepper",
@@ -15958,6 +15958,18 @@
         "quote": "fiatal borai (az éretlen tanninok) jól harmonizálnak a könnyű halételekkel és az angolosra sütött marhahúsételekkel",
         "value": "beef",
         "sourceUrl": "https://hu.wikipedia.org/wiki/Cabernet_franc"
+      },
+      {
+        "field": "acidity",
+        "quote": "an early-ripening French red wine grape characterized by high acidity, moderate tannins, and thin skin",
+        "value": "high",
+        "sourceUrl": "https://doi.org/10.3390/insects16050497"
+      },
+      {
+        "field": "tannin",
+        "quote": "an early-ripening French red wine grape characterized by high acidity, moderate tannins, and thin skin",
+        "value": "medium",
+        "sourceUrl": "https://doi.org/10.3390/insects16050497"
       }
     ],
     "id": "cabernet-franc",
@@ -16081,7 +16093,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "medium",
     "wikidataId": "Q63591",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cabernet_Franc"
   },
@@ -19664,7 +19676,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trebbiano"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": null,
     "aromas": [
       "red fruit",
@@ -19804,6 +19816,12 @@
         "field": "regions",
         "quote": "the world's largest area planted with this variety is in Chile ... Carménère is also grown in Italy's Eastern Veneto and Friuli-Venezia Giulia regions, in Argentina, and in smaller quantities in California and Walla Walla (Washington and Oregon) ... established in Eastern Washington's Walla Walla Valley and in California ... in Australia ... in New Zealand ... champion ... in the Robertson region of the Western Cape ...",
         "value": "ZA: Western Cape"
+      },
+      {
+        "field": "acidity",
+        "quote": "a variety like Carménère is suitable for studying the CaT instability due to its usual low acidity and high pH",
+        "value": "low",
+        "sourceUrl": "https://doi.org/10.3390/foods13193065"
       }
     ],
     "id": "carmenere",
@@ -26428,7 +26446,7 @@
       "earthy",
       "bitter"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -26574,6 +26592,12 @@
         "quote": "Druen besidder karakteristisk kraft og fylde, lavt syreindhold, rig på tanniner",
         "value": "low",
         "sourceUrl": "https://da.wikipedia.org/wiki/Negroamaro"
+      },
+      {
+        "field": "body",
+        "quote": "the Negroamaro variety is also strongly linked to the Apulia region, especially in the neighboring areas of Alezio, Brindisi, Copertino, Galatina, Gioia del Colle, Lizzano, Leverano and Terra d’Otranto; it is used to produce full-bodied and aromatic wines",
+        "value": "high",
+        "sourceUrl": "https://doi.org/10.3390/antiox11050859"
       }
     ],
     "id": "negroamaro",
@@ -27187,6 +27211,12 @@
         "quote": "Odmiana pochodzi z Hiszpanii, a bardziej szczegółowe informacje wskazują na Andaluzję",
         "value": "ES",
         "sourceUrl": "https://pl.wikipedia.org/wiki/Palomino_fino"
+      },
+      {
+        "field": "sweetness",
+        "quote": "The dry fortified wines are made from Palomino grapes",
+        "value": "dry",
+        "sourceUrl": "https://doi.org/10.3390/foods12091911"
       }
     ],
     "id": "palomino",
@@ -27263,7 +27293,10 @@
         "url": "https://es.wikipedia.org/wiki/Palomino_(vid)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Listán",
@@ -34446,7 +34479,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/St._Laurent_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "low",
     "aromas": [
       "floral"
@@ -34579,6 +34612,12 @@
         "quote": "Ce cépage a été obtenu par Jean-Pierre Vibert en 1839, alors installé à Angers.",
         "value": "FR",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Muscat_ottonel"
+      },
+      {
+        "field": "acidity",
+        "quote": "Muscat Ottonel grapes are usually deficient in acidity, presenting low concentrations of organic acids upon ripening",
+        "value": "low",
+        "sourceUrl": "https://doi.org/10.3390/foods15020321"
       }
     ],
     "id": "muscat-ottonel",

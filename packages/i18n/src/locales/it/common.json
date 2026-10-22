@@ -520,6 +520,7 @@
       "showFewer": "Mostra meno"
     },
     "glanceSourceFederalRegister": "Federal Register degli USA, la norma che ha istituito l’AVA ({{campaign}})",
+    "glanceSourceAbs": "Ufficio di statistica australiano (ABS), vigneti {{campaign}} (CC BY 4.0)",
     "glanceSourceAdelaide": "Anderson, Nelgen e Puga, Università di Adelaide, superficie in produzione {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Fonte: ARTEA – Regione Toscana, raccolta uva {{campaign}} · CC BY 4.0",
     "glanceSourceBlw": "Ufficio federale dell’agricoltura (UFAG), vendemmia {{campaign}}",

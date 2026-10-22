@@ -98,6 +98,15 @@ export const sources: Source[] = [
     what: "traits",
   },
   {
+    credit:
+      "Ibn Amor et al. (2025), Insects 16:497 · Cisterna-Castillo et al. (2024), Foods 13:3065 · Thomaz et al. (2022), Antioxidants 11:859 · Valcárcel-Muñoz et al. (2023), Foods 12:1911 · Filimon et al. (2026), Foods 15:321",
+    group: "texts",
+    licence: "CC BY 4.0",
+    name: "MDPI open-access articles, read from Europe PMC",
+    url: "https://europepmc.org/",
+    what: "traits",
+  },
+  {
     group: "texts",
     name: "University of California, «Report of the viticultural work» 1885–1896 (Internet Archive)",
     terms: "publicDomain",
@@ -276,6 +285,14 @@ export const sources: Source[] = [
     terms: "officialFacts",
     name: "Bundesamt für Landwirtschaft (BLW) · Office fédéral de l'agriculture (OFAG)",
     url: "https://www.admin.ch/de/newnsb/Wiy4sgpi96CU",
+    what: "areas",
+  },
+  {
+    credit: "Source: ABS, Vineyards, Australia, 2014-15 (1329.0.55.002)",
+    group: "figures",
+    licence: "CC BY 4.0",
+    name: "Australian Bureau of Statistics (ABS)",
+    url: "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
     what: "areas",
   },
   {

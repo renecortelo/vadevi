@@ -1,0 +1,135 @@
+{
+ "about": "Total area of wine grapes (ha) in 2014-15 by state, Geographical Indication zone and GI region, from the Australian Bureau of Statistics' data cube «Vineyards, Australia, 2014-15» (1329.0.55.002, 1329055002do001_201415.xls, released 16 October 2015; row «Wine grapes - Total - Total area (ha)»). ABS material is licensed under CC BY 4.0 («All material presented on this website is provided under a Creative Commons Attribution 4.0 International licence»). Estimates with a relative standard error of 25 % or more (marked * or **) are not used (Eastern Plains, Inland and North of WA). A GI region the ABS splits by state (Murray Darling, Swan Hill) adds up its two rows. «Port Phillip and Gippsland» is not used: its extent is unclear. Only names with no other area take it.",
+ "campaign": "2014-15",
+ "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+ "regions": {
+  "au-australian-capital-territory": {
+   "plantedHa": 92.7,
+   "rows": "Table 2, Australian Capital Territory (c) (code 89)"
+  },
+  "au-barossa": {
+   "plantedHa": 11221.01,
+   "rows": "Table 2, Barossa (code 42)"
+  },
+  "au-big-rivers": {
+   "plantedHa": 26281.93,
+   "rows": "Table 2, Big Rivers (code 11)"
+  },
+  "au-central-ranges": {
+   "plantedHa": 3253.96,
+   "rows": "Table 2, Central Ranges (code 13)"
+  },
+  "au-central-victoria": {
+   "plantedHa": 4100.62,
+   "rows": "Table 2, Central Vic. (code 23)"
+  },
+  "au-central-western-australia": {
+   "plantedHa": 18.19,
+   "rows": "Table 2, Central Western Australia (code 52)"
+  },
+  "au-far-north": {
+   "plantedHa": 177.17,
+   "rows": "Table 2, Far North (code 47)"
+  },
+  "au-fleurieu": {
+   "plantedHa": 13060.52,
+   "rows": "Table 2, Fleurieu (code 43)"
+  },
+  "au-greater-perth": {
+   "plantedHa": 1050.37,
+   "rows": "Table 2, Greater Perth (code 51)"
+  },
+  "au-hunter": {
+   "plantedHa": 2323.99,
+   "rows": "Table 3, Hunter (code 181)"
+  },
+  "au-king-valley": {
+   "plantedHa": 1369.87,
+   "rows": "Table 3, King Valley (code 225)"
+  },
+  "au-limestone-coast": {
+   "plantedHa": 14055.92,
+   "rows": "Table 2, Limestone Coast (code 44)"
+  },
+  "au-lower-murray": {
+   "plantedHa": 19904.49,
+   "rows": "Table 2, Lower Murray (code 45)"
+  },
+  "au-mount-lofty-ranges": {
+   "plantedHa": 8418.0,
+   "rows": "Table 2, Mount Lofty Ranges (code 41)"
+  },
+  "au-murray-darling": {
+   "plantedHa": 15689.08,
+   "rows": "Table 3, Murray Darling (NSW) (code 111) + Table 3, Murray Darling (Vic.) (code 211)"
+  },
+  "au-new-england-australia": {
+   "plantedHa": 136.34,
+   "rows": "Table 3, New England Australia (code 161)"
+  },
+  "au-new-south-wales": {
+   "plantedHa": 34024.18,
+   "rows": "Table 1, New South Wales (code 1)"
+  },
+  "au-north-east-victoria": {
+   "plantedHa": 2410.49,
+   "rows": "Table 2, North East Vic. (code 22)"
+  },
+  "au-north-west-victoria": {
+   "plantedHa": 11178.28,
+   "rows": "Table 2, North and West Vic. (code 21)"
+  },
+  "au-northern-rivers": {
+   "plantedHa": 21.22,
+   "rows": "Table 2, Northern Rivers (code 17)"
+  },
+  "au-queensland": {
+   "plantedHa": 543.01,
+   "rows": "Table 2, Queensland (a) (code 31)"
+  },
+  "au-shoalhaven-coast": {
+   "plantedHa": 35.1,
+   "rows": "Table 3, Shoalhaven Coast (code 151)"
+  },
+  "au-south-australia": {
+   "plantedHa": 66912.47,
+   "rows": "Table 1, South Australia (code 4)"
+  },
+  "au-south-coast": {
+   "plantedHa": 235.13,
+   "rows": "Table 2, South Coast (code 15)"
+  },
+  "au-south-west-australia": {
+   "plantedHa": 7918.68,
+   "rows": "Table 2, South West Australia (code 53)"
+  },
+  "au-southern-flinders-ranges": {
+   "plantedHa": 175.17,
+   "rows": "Table 3, Southern Flinders Ranges (code 471)"
+  },
+  "au-southern-new-south-wales": {
+   "plantedHa": 1434.85,
+   "rows": "Table 2, Southern NSW (code 14)"
+  },
+  "au-swan-hill": {
+   "plantedHa": 1884.48,
+   "rows": "Table 3, Swan Hill (NSW) (code 114) + Table 3, Swan Hill (Vic.) (code 212)"
+  },
+  "au-victoria": {
+   "plantedHa": 23087.69,
+   "rows": "Table 1, Victoria (code 2)"
+  },
+  "au-west-australian-south-east-coastal": {
+   "plantedHa": 23.3,
+   "rows": "Table 2, West Australia South East Coastal (code 54)"
+  },
+  "au-western-australia": {
+   "plantedHa": 9012.69,
+   "rows": "Table 1, Western Australia (code 5)"
+  },
+  "au-western-victoria": {
+   "plantedHa": 1242.58,
+   "rows": "Table 2, Western Vic. (code 24)"
+  }
+ }
+}

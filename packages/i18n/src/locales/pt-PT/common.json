@@ -520,6 +520,7 @@
       "showFewer": "Ver menos"
     },
     "glanceSourceFederalRegister": "Federal Register dos EUA, a norma que criou a AVA ({{campaign}})",
+    "glanceSourceAbs": "Instituto de Estatística da Austrália (ABS), vinhas {{campaign}} (CC BY 4.0)",
     "glanceSourceAdelaide": "Anderson, Nelgen e Puga, Universidade de Adelaide, área em produção {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Fonte: ARTEA – Regione Toscana, vindima {{campaign}} · CC BY 4.0",
     "glanceSourceBlw": "Serviço Federal da Agricultura da Suíça (OFAG), vindima {{campaign}}",

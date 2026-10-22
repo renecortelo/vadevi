@@ -468,7 +468,18 @@ for what moved.
   grape berries for selection of varieties better adapted to climate
   change», Frontiers in Plant Science 15, 2024 (doi:10.3389/fpls.2024.1439114,
   read from Europe PMC) — «two white varieties known for their high acidity:
-  Alvarinho and Petit Manseng». The text
+  Alvarinho and Petit Manseng»; and five MDPI articles read from Europe PMC
+  (MDPI's own pages refuse scripts), each in its introduction or methods
+  describing the variety itself: Ibn Amor et al., Insects 16:497, 2025 —
+  Cabernet Franc «characterized by high acidity, moderate tannins»;
+  Cisterna-Castillo et al., Foods 13:3065, 2024 — Carménère's «usual low
+  acidity»; Thomaz et al., Antioxidants 11:859, 2022 — Negroamaro «used to
+  produce full-bodied and aromatic wines»; Valcárcel-Muñoz et al., Foods
+  12:1911, 2023 — «The dry fortified wines are made from Palomino grapes»;
+  Filimon et al., Foods 15:321, 2026 — Muscat Ottonel «usually deficient in
+  acidity». They were found by searching Europe PMC's CC BY full texts for
+  each grape and trait still missing; a sentence about an experimental wine,
+  a sample, a comparison or a region is not used. The text
   extracted from its PDF is cached beside the books, and the reading names
   the article's address (`source.url`).
 
@@ -532,6 +543,15 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
   protected by copyright (Swiss Copyright Act, art. 5 para. 1 lit. c). The
   21 cantonal AOCs with a row of their own (Graubünden and Bern adding their
   two) show their canton's area and harvest, in place of any other figure.
+
+- **The Australian Bureau of Statistics (ABS)**, data cube «Vineyards,
+  Australia, 2014-15» (1329.0.55.002, `1329055002do001_201415.xls`, CC BY
+  4.0): the row «Wine grapes - Total - Total area (ha)» of each state, GI zone
+  and GI region (`au-gi-figures.json`). 32 Australian names with no other area
+  take it; Murray Darling and Swan Hill add up the two states' rows the ABS
+  splits them into. Estimates with a relative standard error of 25 % or more
+  are left out, and so is «Port Phillip and Gippsland», whose extent is
+  unclear. Its production is in tonnes of grapes, not wine, so it is not used.
 
 - **Statistics Portugal (INE)**, indicator 0012835 «Produção vinícola
   declarada em vinho (hl) pelos produtores por Local de vinificação e

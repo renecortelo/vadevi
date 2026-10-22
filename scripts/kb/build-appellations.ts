@@ -1946,8 +1946,33 @@ for (const entry of entries) {
   };
   fromAdelaide += 1;
 }
+// Australian states, GI zones and regions with no other area: the total area
+// of wine grapes in 2014-15 from the Australian Bureau of Statistics' data
+// cube (`data/kb/au-gi-figures.json`, CC BY 4.0; estimates with a relative
+// standard error of 25 % or more left out).
+const australian = JSON.parse(readFileSync(resolve("data/kb/au-gi-figures.json"), "utf8")) as {
+  campaign: string;
+  regions: Record<string, { plantedHa: number; rows: string }>;
+  sourceUrl: string;
+};
+let abs = 0;
+for (const entry of entries) {
+  const region = australian.regions[entry.id];
+  if (region === undefined || entry.figures?.planted) continue;
+  entry.figures = {
+    planted: {
+      amount: region.plantedHa,
+      publisher: "abs",
+      quote: `Wine grapes - Total - Total area (ha), ${region.rows}, ${australian.campaign}: ${region.plantedHa}`,
+      sourceUrl: australian.sourceUrl,
+      year: australian.campaign,
+    },
+    production: entry.figures?.production ?? null,
+  };
+  abs += 1;
+}
 console.info(
-  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE, ${blw} Swiss from the BLW.`,
+  `  ${withClimate} names with their climate, ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE, ${blw} Swiss from the BLW, ${abs} Australian from the ABS.`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

@@ -430141,6 +430141,16 @@
         23.3,
         25.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 66912.47,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 1, South Australia (code 4), 2014-15: 66912.47",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -430357,6 +430367,16 @@
         16.2,
         18.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 11221.01,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Barossa (code 42), 2014-15: 11221.01",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -430893,6 +430913,16 @@
         24.8,
         27
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 177.17,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Far North (code 47), 2014-15: 177.17",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -431015,6 +431045,16 @@
         18.6,
         20.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 175.17,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 3, Southern Flinders Ranges (code 471), 2014-15: 175.17",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -431152,6 +431192,16 @@
         15.8,
         17.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 13060.52,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Fleurieu (code 43), 2014-15: 13060.52",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -431962,6 +432012,16 @@
         16.4,
         18.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 14055.92,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Limestone Coast (code 44), 2014-15: 14055.92",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -432968,6 +433028,16 @@
         19.4,
         21.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 19904.49,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Lower Murray (code 45), 2014-15: 19904.49",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -433251,6 +433321,16 @@
         18,
         20
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 8418,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Mount Lofty Ranges (code 41), 2014-15: 8418",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -434177,6 +434257,16 @@
         21.8,
         24.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 34024.18,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 1, New South Wales (code 1), 2014-15: 34024.18",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -434283,6 +434373,16 @@
         21.3,
         23.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 26281.93,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Big Rivers (code 11), 2014-15: 26281.93",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -434392,6 +434492,16 @@
         21,
         23.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 15689.08,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 3, Murray Darling (NSW) (code 111) + Table 3, Murray Darling (Vic.) (code 211), 2014-15: 15689.08",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -434821,6 +434931,16 @@
         19.5,
         21.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1884.48,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 3, Swan Hill (NSW) (code 114) + Table 3, Swan Hill (Vic.) (code 212), 2014-15: 1884.48",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -434927,6 +435047,16 @@
         16.8,
         19.5
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 3253.96,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Central Ranges (code 13), 2014-15: 3253.96",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -435679,6 +435809,16 @@
         20.1,
         22.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2323.99,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 3, Hunter (code 181), 2014-15: 2323.99",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -435989,6 +436129,16 @@
         18.5,
         20.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 21.22,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Northern Rivers (code 17), 2014-15: 21.22",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -436355,6 +436505,16 @@
         14.6,
         16.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 136.34,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 3, New England Australia (code 161), 2014-15: 136.34",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -436421,6 +436581,16 @@
         17.5,
         19.6
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 235.13,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, South Coast (code 15), 2014-15: 235.13",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -436559,6 +436729,16 @@
         18,
         19.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 35.1,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 3, Shoalhaven Coast (code 151), 2014-15: 35.1",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -436778,6 +436958,16 @@
         13.8,
         16.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1434.85,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Southern NSW (code 14), 2014-15: 1434.85",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -437693,6 +437883,16 @@
         27.4,
         29.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 9012.69,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 1, Western Australia (code 5), 2014-15: 9012.69",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -437758,6 +437958,16 @@
         18.3,
         21
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 18.19,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Central Western Australia (code 52), 2014-15: 18.19",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -437888,6 +438098,16 @@
         19.8,
         22.1
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1050.37,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Greater Perth (code 51), 2014-15: 1050.37",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -438522,6 +438742,16 @@
         15.7,
         17.7
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 7918.68,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, South West Australia (code 53), 2014-15: 7918.68",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -439982,6 +440212,16 @@
         17.7,
         19.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 23.3,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, West Australia South East Coastal (code 54), 2014-15: 23.3",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -440046,6 +440286,16 @@
         28.3,
         29.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 543.01,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Queensland (a) (code 31), 2014-15: 543.01",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -440553,6 +440803,16 @@
         17.4,
         19.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 23087.69,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 1, Victoria (code 2), 2014-15: 23087.69",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -440619,6 +440879,16 @@
         17.1,
         19.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 4100.62,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Central Vic. (code 23), 2014-15: 4100.62",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -441716,6 +441986,16 @@
         14.4,
         16.9
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 2410.49,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, North East Vic. (code 22), 2014-15: 2410.49",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -442308,6 +442588,16 @@
         17.4,
         19.8
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1369.87,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 3, King Valley (code 225), 2014-15: 1369.87",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -442527,6 +442817,16 @@
         19,
         21.3
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 11178.28,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, North and West Vic. (code 21), 2014-15: 11178.28",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -443456,6 +443756,16 @@
         14.4,
         16.4
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 1242.58,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Western Vic. (code 24), 2014-15: 1242.58",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   },
   {
@@ -444385,6 +444695,16 @@
         14.8,
         17.2
       ]
+    },
+    "figures": {
+      "planted": {
+        "amount": 92.7,
+        "publisher": "abs",
+        "quote": "Wine grapes - Total - Total area (ha), Table 2, Australian Capital Territory (c) (code 89), 2014-15: 92.7",
+        "sourceUrl": "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1329.0.55.0022014-15?OpenDocument",
+        "year": "2014-15"
+      },
+      "production": null
     }
   }
 ]

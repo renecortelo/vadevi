@@ -520,6 +520,7 @@
       "showFewer": "Minder tonen"
     },
     "glanceSourceFederalRegister": "Amerikaanse Federal Register, de regel die de AVA instelde ({{campaign}})",
+    "glanceSourceAbs": "Australisch Bureau voor de Statistiek (ABS), wijngaarden {{campaign}} (CC BY 4.0)",
     "glanceSourceAdelaide": "Anderson, Nelgen en Puga, Universiteit van Adelaide, productieve oppervlakte {{campaign}} (CC BY 4.0)",
     "glanceSourceArtea": "Bron: ARTEA – Regione Toscana, oogst {{campaign}} · CC BY 4.0",
     "glanceSourceBlw": "Zwitsers Federaal Bureau voor Landbouw (FOAG), oogst {{campaign}}",
