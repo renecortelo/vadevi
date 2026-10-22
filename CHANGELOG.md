@@ -23,6 +23,11 @@ has the reasons.
 
 ### The library
 
+- **Twelve more styles and methods with a picture** (31 of 41): ageing,
+  biodynamic and organic wine, clarification, dosage, fermentation,
+  maceration, sweetness, terroir, the traditional method, vegan wine and the
+  vintage — chosen on Wikimedia Commons where Wikidata gives none, each
+  showing the thing itself and credited on its page.
 - **Facts said of one place's wine, and labelled so**: where no source
   speaks of a grape everywhere, its card may take a value from what one
   place's wine is — a single-variety DOC's, as its specification describes

@@ -8,7 +8,8 @@ import { wikimedia, wikimediaFile } from "./wikimedia";
 
 /**
  * A picture for each style and method that has one: the image Wikidata gives
- * its item (P18), from Wikimedia Commons, kept only under a licence that
+ * its item (P18) — or, where it gives none, one chosen by hand on Commons
+ * that shows the style or the method itself — kept only under a licence that
  * allows reuse — public domain, CC0, CC BY or CC BY-SA — and copied into the
  * app at 360 pixels, as the grapes' are. Author, licence and source are
  * recorded in `data/kb/topic-images.json`, and the page shows them.
@@ -25,6 +26,29 @@ const record = (
 
 // Pictures looked at and found not to show the style or the method.
 const notIt = new Set<string>([]);
+
+// Chosen by hand on Commons for items Wikidata gives no picture: each shows
+// the thing itself (a riddling rack, a dosage machine, a fining agent going
+// into a tank). Styles and methods with nothing that shows them stay
+// without one: pét-nat, natural wine, malolactic fermentation,
+// chaptalisation, wine faults, cork taint, late harvest, carbonic maceration;
+// kosher wine (the bottle Commons has is grape juice) and sulfites (the
+// words on the label do not read at 360 pixels).
+const chosen: Record<string, string> = {
+  aging:
+    "Oak barrels used for aging of wine in a cellar at Grover Zampa Vineyard, Doddaballapura, Karnataka, India.jpg",
+  "biodynamic-wine": "Biodynamic sheep grazing vineyard for weeds.jpg",
+  clarification: "Semillon tank getting Bentonite addition.JPG",
+  dosage: "Pol Roger disgorgement line 5-dosage.jpg",
+  fermentation: "Wine fermentation tanks in a winery in Tarija.jpg",
+  maceration: "Pigeage in a wine barrel.jpg",
+  "organic-wine": "Organic Chianti vineyard with expansive cover crop Italia 2010.jpg",
+  sweetness: "Malaga wine glass.JPG",
+  terroir: "Rocky vineyard soil terroir-la-peira.jpg",
+  "traditional-method": "Champagne bottles in riddling rack.jpg",
+  "vegan-wine": "Vegan-wine.jpg",
+  vintage: "Grape harvest - La vendemmia.jpg",
+};
 
 for (const [topicId, image] of Object.entries(record)) {
   if (topics.some((topic) => topic.id === topicId) && !notIt.has(topicId)) continue;
@@ -49,6 +73,9 @@ for (let start = 0; start < withItem.length; start += 50) {
     const file = body.entities[topic.wikidataId!]?.claims?.P18?.[0]?.mainsnak.datavalue?.value;
     if (file !== undefined) fileOf.set(topic.id, file);
   }
+}
+for (const [topicId, file] of Object.entries(chosen)) {
+  if (!fileOf.has(topicId)) fileOf.set(topicId, file);
 }
 
 const free = /^(public domain|pd\b|cc0|cc[ -]by(-sa)?[ -]?\d|attribution$|copyrighted free use$)/i;

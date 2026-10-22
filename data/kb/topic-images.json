@@ -1,10 +1,45 @@
 {
+  "aging": {
+    "author": "Subhashish Panigrahi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/aging.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oak_barrels_used_for_aging_of_wine_in_a_cellar_at_Grover_Zampa_Vineyard,_Doddaballapura,_Karnataka,_India.jpg"
+  },
+  "biodynamic-wine": {
+    "author": "Mark Smith",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "path": "library/topics/biodynamic-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Biodynamic_sheep_grazing_vineyard_for_weeds.jpg"
+  },
+  "clarification": {
+    "author": "Agne27",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/topics/clarification.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Semillon_tank_getting_Bentonite_addition.JPG"
+  },
   "dessert-wine": {
     "author": "Wujianbj at English Wikipedia",
     "license": "Public domain",
     "licenseUrl": null,
     "path": "library/topics/dessert-wine.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vin_Santo.JPG"
+  },
+  "dosage": {
+    "author": "Tomas er",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "path": "library/topics/dosage.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pol_Roger_disgorgement_line_5-dosage.jpg"
+  },
+  "fermentation": {
+    "author": "Aldrihe",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/fermentation.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wine_fermentation_tanks_in_a_winery_in_Tarija.jpg"
   },
   "fino": {
     "author": "Xemenendura",
@@ -41,6 +76,13 @@
     "path": "library/topics/lees.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Merlot_wine_lees_after_fermentation.JPG"
   },
+  "maceration": {
+    "author": "Ryan O'Connell",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "path": "library/topics/maceration.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pigeage_in_a_wine_barrel.jpg"
+  },
   "noble-rot": {
     "author": "T.o.m.",
     "license": "CC BY-SA 3.0",
@@ -61,6 +103,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "path": "library/topics/orange-wine.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glass_quevri_rkatsiteli.JPG"
+  },
+  "organic-wine": {
+    "author": "drdcuddy",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "path": "library/topics/organic-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Organic_Chianti_vineyard_with_expansive_cover_crop_Italia_2010.jpg"
   },
   "qvevri": {
     "author": "Carole Raddato",
@@ -111,6 +160,34 @@
     "path": "library/topics/straw-wine.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vin_paille.jpg"
   },
+  "sweetness": {
+    "author": "uploader",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/sweetness.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Malaga_wine_glass.JPG"
+  },
+  "terroir": {
+    "author": "Ryan O'Connell",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "path": "library/topics/terroir.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rocky_vineyard_soil_terroir-la-peira.jpg"
+  },
+  "traditional-method": {
+    "author": "Amanda Slater",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "path": "library/topics/traditional-method.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Champagne_bottles_in_riddling_rack.jpg"
+  },
+  "vegan-wine": {
+    "author": "Pachango",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "path": "library/topics/vegan-wine.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vegan-wine.jpg"
+  },
   "vin-jaune": {
     "author": "User:Arnaud 25",
     "license": "CC BY-SA 3.0",
@@ -124,6 +201,13 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "path": "library/topics/vin-santo.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantucci_con_Vin_Santo.jpg"
+  },
+  "vintage": {
+    "author": "Anna.Massini",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "path": "library/topics/vintage.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grape_harvest_-_La_vendemmia.jpg"
   },
   "white-wine": {
     "author": "Tomas er",
