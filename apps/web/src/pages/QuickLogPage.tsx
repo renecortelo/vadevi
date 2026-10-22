@@ -13,6 +13,7 @@ import { DecimalInput } from "../components/DecimalInput";
 import { Dictate } from "../components/Dictate";
 import { ModalDialog } from "../components/ModalDialog";
 import { VoiceNote } from "../components/VoiceNote";
+import { ProducerInput } from "../components/ProducerInput";
 import { RegionInput } from "../components/RegionInput";
 import { wineOptionLabel } from "../components/wine-label";
 import { Link } from "react-router";
@@ -422,11 +423,12 @@ export function QuickLogPage() {
             </label>
           )}
           <label htmlFor="producer-name">{t("quickLog.producer")}</label>
-          <input
-            autoComplete="organization"
+          <ProducerInput
+            country={draft.winePayload.countryCode ?? null}
             id="producer-name"
             maxLength={160}
-            onChange={(event) => updateWine("producerName", event.target.value)}
+            onChange={(value) => updateWine("producerName", value)}
+            onCountry={(countryCode) => updateWine("countryCode", countryCode)}
             required
             value={draft.winePayload.producerName}
           />

@@ -16,6 +16,8 @@ import {
   LibraryRegionResponseSchema,
   LibraryRegionSearchQuerySchema,
   LibraryRegionSearchResponseSchema,
+  LibraryWinerySearchQuerySchema,
+  LibraryWinerySearchResponseSchema,
   LibrarySearchQuerySchema,
   LibrarySearchResponseSchema,
   LibraryTopicPathSchema,
@@ -34,6 +36,7 @@ import {
   listLibraryTopics,
   searchLibraryGrapes,
   searchLibraryRegions,
+  searchLibraryWineries,
 } from "../repositories/library";
 import type { ApiEnvironment } from "../types";
 
@@ -186,6 +189,26 @@ const regionSearchRoute = createRoute({
   },
 });
 
+const winerySearchRoute = createRoute({
+  method: "get",
+  path: "/api/v1/library/wineries",
+  operationId: "searchLibraryWineries",
+  tags: ["Library"],
+  summary: "Wineries by name, for the producer field to suggest",
+  security: [{ FirebaseBearer: [] }],
+  request: { query: LibraryWinerySearchQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: LibraryWinerySearchResponseSchema } },
+      description: "Matching wineries, those whose name begins with the words first.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+  },
+});
+
 const atlasCoverageRoute = createRoute({
   method: "get",
   path: "/api/v1/library/atlas/coverage",
@@ -314,6 +337,12 @@ export function registerLibraryRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const { country, query } = context.req.valid("query");
     const data = await searchLibraryRegions(context.env.DB!, query, country ?? null);
     return context.json(LibraryRegionSearchResponseSchema.parse({ data }), 200);
+  });
+
+  app.openapi(winerySearchRoute, async (context) => {
+    const { country, query } = context.req.valid("query");
+    const data = await searchLibraryWineries(context.env.DB!, query, country ?? null);
+    return context.json(LibraryWinerySearchResponseSchema.parse({ data }), 200);
   });
 
   app.openapi(atlasCoverageRoute, async (context) => {

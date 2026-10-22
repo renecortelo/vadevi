@@ -2034,7 +2034,7 @@
     },
     "what": {
       "summaries": "résumés, et les phrases citées derrière les données de chaque cépage et région",
-      "traits": "l’acidité, l’alcool et le corps d’un cépage là où aucun article ne les dit (1885–1910)",
+      "traits": "l’acidité, les tanins, le corps, l’alcool, la douceur et les accords d’un cépage là où aucun article de Wikipédia ne les dit : ampélographies anciennes, articles en libre accès et ce qu’est le vin d’un lieu, indiqué comme tel",
       "varieties": "les cépages autorisés dans chaque appellation",
       "names": "noms, alias et liens entre fiches",
       "registerNames": "les noms protégés, leur type, leurs dates et lieux",
@@ -2045,7 +2045,8 @@
       "boundaries": "limites",
       "points": "points approximatifs sur la carte",
       "outlines": "contours des régions et des pays",
-      "photos": "photos de cépages et de styles et méthodes"
+      "photos": "photos de cépages et de styles et méthodes",
+      "wineries": "les domaines que suggère le champ Producteur pendant la saisie"
     },
     "terms": {
       "commonsEach": "chaque fichier sous sa propre licence libre, créditée sous la photo",

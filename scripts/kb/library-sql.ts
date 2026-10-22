@@ -1,4 +1,4 @@
-import type { ImageEntry, RegionEntry, TopicEntry } from "./appellation-names";
+import type { ImageEntry, RegionEntry, TopicEntry, WineryEntry } from "./appellation-names";
 import type { GrapeEntry } from "./grape-validation";
 
 /**
@@ -91,6 +91,7 @@ export function libraryTables(
     images?: Record<string, ImageEntry>;
     topicImages?: Record<string, ImageEntry>;
     topics?: readonly TopicEntry[];
+    wineries?: readonly WineryEntry[];
   } = {},
 ): LibraryTable[] {
   const topics = extras.topics ?? [];
@@ -411,6 +412,20 @@ export function libraryTables(
         image.license,
         image.licenseUrl,
         image.sourceUrl,
+      ]),
+    ),
+    table(
+      "kb_wineries",
+      ["id", "name", "normalized_name", "country_code", "latitude", "longitude"],
+      ["id"],
+      1,
+      (extras.wineries ?? []).map((winery) => [
+        winery.id,
+        winery.name,
+        normalizeLibraryText(winery.name),
+        winery.countryCode,
+        winery.latitude,
+        winery.longitude,
       ]),
     ),
     table("kb_meta", ["key", "value"], ["key"], 1, [["version", version]]),

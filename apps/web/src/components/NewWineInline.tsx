@@ -6,6 +6,8 @@ import { createIdempotencyKey } from "../security/idempotency";
 import { createWineDirectly } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 
+import { ProducerInput } from "./ProducerInput";
+
 /**
  * Add a wine from wherever you needed one.
  *
@@ -66,10 +68,11 @@ export function NewWineInline({
     <div className="wine-picker-new">
       <p className="cache-note">{t("winePicker.addHelp")}</p>
       <label htmlFor="new-wine-producer">{t("quickLog.producer")}</label>
-      <input
+      <ProducerInput
+        country={null}
         id="new-wine-producer"
         maxLength={160}
-        onChange={(event) => setProducerName(event.target.value)}
+        onChange={setProducerName}
         value={producerName}
       />
       <label htmlFor="new-wine-name">{t("quickLog.wineName")}</label>

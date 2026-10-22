@@ -2034,7 +2034,7 @@
     },
     "what": {
       "summaries": "riassunti, e le frasi citate dietro i dati di ogni vitigno e regione",
-      "traits": "acidità, alcol e corpo di un vitigno dove nessuna voce li indica (1885–1910)",
+      "traits": "acidità, tannino, corpo, alcol, dolcezza e abbinamenti di un vitigno dove nessuna voce di Wikipedia li indica: ampelografie antiche, articoli ad accesso aperto e ciò che è il vino di un luogo, detto come tale",
       "varieties": "i vitigni autorizzati in ogni denominazione",
       "names": "nomi, alias e collegamenti tra le schede",
       "registerNames": "i nomi protetti, il loro tipo, le date e i luoghi",
@@ -2045,7 +2045,8 @@
       "boundaries": "confini",
       "points": "punti approssimativi sulla mappa",
       "outlines": "contorni di regioni e paesi",
-      "photos": "foto di vitigni e di stili e metodi"
+      "photos": "foto di vitigni e di stili e metodi",
+      "wineries": "le cantine che il campo Produttore suggerisce mentre scrivi"
     },
     "terms": {
       "commonsEach": "ogni file con la propria licenza libera, citata sotto la foto",

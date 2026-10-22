@@ -348,3 +348,12 @@ export type ImageEntry = {
   path: string;
   sourceUrl: string;
 };
+
+/** A winery the producer field suggests (`data/kb/wineries.json`, Wikidata). */
+export type WineryEntry = {
+  countryCode: string;
+  id: string;
+  latitude: number | null;
+  longitude: number | null;
+  name: string;
+};

@@ -1,6 +1,7 @@
 import {
   LibraryGrapeResponseSchema,
   LibraryRegionSearchResponseSchema,
+  LibraryWinerySearchResponseSchema,
   LibrarySearchResponseSchema,
   LibraryTopicResponseSchema,
   LibraryTopicsResponseSchema,
@@ -116,6 +117,11 @@ beforeAll(async () => {
         },
       },
       topics,
+      wineries: [
+        { countryCode: "FR", id: "Q1", latitude: null, longitude: null, name: "Château Lafite" },
+        { countryCode: "ES", id: "Q2", latitude: null, longitude: null, name: "Bodegas Lafuente" },
+        { countryCode: "IT", id: "Q3", latitude: null, longitude: null, name: "Marchesi Antinori" },
+      ],
     },
   );
   for (const statement of statements) await env.DB.prepare(statement).run();
@@ -157,6 +163,21 @@ describe("browsing the wine library", () => {
       await (await get("regions")).json(),
     ).data;
     expect(nothing).toEqual([]);
+  });
+
+  it("suggests wineries by any part of their name, beginnings first, in a country if asked", async () => {
+    const found = LibraryWinerySearchResponseSchema.parse(
+      await (await get("wineries?query=laf")).json(),
+    ).data;
+    expect(found.map((winery) => winery.name)).toEqual(["Bodegas Lafuente", "Château Lafite"]);
+    const accented = LibraryWinerySearchResponseSchema.parse(
+      await (await get("wineries?query=chateau&country=FR")).json(),
+    ).data;
+    expect(accented.map((winery) => winery.id)).toEqual(["Q1"]);
+    const elsewhere = LibraryWinerySearchResponseSchema.parse(
+      await (await get("wineries?query=antinori&country=ES")).json(),
+    ).data;
+    expect(elsewhere).toEqual([]);
   });
 
   it("explains styles and methods in the reader's language, or in the one there is", async () => {

@@ -21,6 +21,15 @@ has the reasons.
   are used (Wikipedia's share-alike, the pairing rules, the licences
   declined). Each card still credits its own beside what it shows.
 
+### Logging a wine
+
+- **The producer field suggests wineries as you type**: part of a name is
+  enough («Antin» → Marchesi Antinori), accents and case do not count, and
+  picking one fills in its country when none is chosen. 1,897 wineries,
+  champagne houses and wine companies from Wikidata (CC0), in the quick log,
+  the label reader, the wine editor and wherever a wine is added. Only a
+  suggestion: any producer can still be typed.
+
 ### The library
 
 - **Twelve more styles and methods with a picture** (31 of 41): ageing,

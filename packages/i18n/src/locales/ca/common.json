@@ -2034,7 +2034,7 @@
     },
     "what": {
       "summaries": "resums, i les frases citades darrere de les dades de cada raïm i regió",
-      "traits": "l’acidesa, l’alcohol i el cos d’un raïm on cap article no els diu (1885–1910)",
+      "traits": "l’acidesa, els tanins, el cos, l’alcohol, la dolçor i els maridatges d’un raïm on cap article de la Viquipèdia no els diu: ampelografies antigues, articles en obert i el que és el vi d’un lloc, dit així",
       "varieties": "les varietats autoritzades a cada denominació",
       "names": "noms, àlies i enllaços entre fitxes",
       "registerNames": "els noms protegits, el seu tipus, dates i llocs",
@@ -2045,7 +2045,8 @@
       "boundaries": "límits",
       "points": "punts aproximats al mapa",
       "outlines": "contorns de regions i països",
-      "photos": "fotos de raïms i d’estils i mètodes"
+      "photos": "fotos de raïms i d’estils i mètodes",
+      "wineries": "els cellers que suggereix el camp Productor mentre escrius"
     },
     "terms": {
       "commonsEach": "cada fitxer amb la seva pròpia llicència lliure, citada sota la foto",

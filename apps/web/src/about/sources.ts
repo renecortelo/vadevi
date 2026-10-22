@@ -40,7 +40,8 @@ export type Source = {
     | "registerNames"
     | "summaries"
     | "traits"
-    | "varieties";
+    | "varieties"
+    | "wineries";
 };
 
 export const sourceGroups: SourceGroup[] = [
@@ -127,6 +128,13 @@ export const sources: Source[] = [
     name: "Wikidata",
     url: "https://www.wikidata.org/",
     what: "names",
+  },
+  {
+    group: "texts",
+    licence: "CC0 1.0",
+    name: "Wikidata",
+    url: "https://www.wikidata.org/wiki/Q156362",
+    what: "wineries",
   },
   {
     group: "registers",

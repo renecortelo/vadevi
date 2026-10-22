@@ -2034,7 +2034,7 @@
     },
     "what": {
       "summaries": "Zusammenfassungen und die zitierten Sätze hinter den Angaben zu Rebsorten und Regionen",
-      "traits": "Säure, Alkohol und Körper einer Rebsorte, wo kein Artikel sie nennt (1885–1910)",
+      "traits": "Säure, Tannin, Körper, Alkohol, Süße und Speisen einer Rebsorte, wo Wikipedia sie nicht nennt: alte Ampelographien, offene Fachartikel und der Wein eines Ortes, als solcher gekennzeichnet",
       "varieties": "die in jeder Bezeichnung zugelassenen Rebsorten",
       "names": "Namen, Aliasse und Verknüpfungen zwischen Einträgen",
       "registerNames": "die geschützten Namen, ihre Art, Daten und Orte",
@@ -2045,7 +2045,8 @@
       "boundaries": "Grenzen",
       "points": "ungefähre Punkte auf der Karte",
       "outlines": "Umrisse von Regionen und Ländern",
-      "photos": "Fotos von Rebsorten sowie von Stilen und Verfahren"
+      "photos": "Fotos von Rebsorten sowie von Stilen und Verfahren",
+      "wineries": "die Weingüter, die das Feld Erzeuger beim Tippen vorschlägt"
     },
     "terms": {
       "commonsEach": "jede Datei unter ihrer eigenen freien Lizenz, unter dem Foto genannt",

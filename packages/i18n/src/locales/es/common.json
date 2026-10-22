@@ -2034,7 +2034,7 @@
     },
     "what": {
       "summaries": "resúmenes, y las frases citadas detrás de los datos de cada uva y región",
-      "traits": "la acidez, el alcohol y el cuerpo de una uva donde ningún artículo los dice (1885–1910)",
+      "traits": "la acidez, los taninos, el cuerpo, el alcohol, el dulzor y los maridajes de una uva donde ningún artículo de Wikipedia los dice: ampelografías antiguas, artículos en abierto y lo que es el vino de un lugar, dicho así",
       "varieties": "las variedades autorizadas en cada denominación",
       "names": "nombres, alias y enlaces entre fichas",
       "registerNames": "los nombres protegidos, su tipo, fechas y lugares",
@@ -2045,7 +2045,8 @@
       "boundaries": "límites",
       "points": "puntos aproximados en el mapa",
       "outlines": "contornos de regiones y países",
-      "photos": "fotos de uvas y de estilos y métodos"
+      "photos": "fotos de uvas y de estilos y métodos",
+      "wineries": "las bodegas que sugiere el campo Productor mientras escribes"
     },
     "terms": {
       "commonsEach": "cada archivo con su propia licencia libre, citada bajo la foto",

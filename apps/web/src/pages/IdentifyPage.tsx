@@ -11,6 +11,7 @@ import {
   scanImageFile,
   stopStream,
 } from "../media/barcode";
+import { ProducerInput } from "../components/ProducerInput";
 import { RegionInput } from "../components/RegionInput";
 import { VoiceNote } from "../components/VoiceNote";
 import { countryOptionsFor } from "../components/country-options";
@@ -398,9 +399,11 @@ export function IdentifyPage() {
           <p>{t("identify.reviewBody")}</p>
 
           <label htmlFor="wine-producer">{t("quickLog.producer")}</label>
-          <input
+          <ProducerInput
+            country={wine.countryCode.length === 0 ? null : wine.countryCode}
             id="wine-producer"
-            onChange={(event) => setWine({ ...wine, producerName: event.target.value })}
+            onChange={(producerName) => setWine((current) => ({ ...current, producerName }))}
+            onCountry={(countryCode) => setWine((current) => ({ ...current, countryCode }))}
             required
             value={wine.producerName}
           />

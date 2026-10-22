@@ -12295,6 +12295,38 @@
         ],
         "additionalProperties": false
       },
+      "LibraryWinerySearchResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "countryCode": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "countryCode",
+                "id",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false
+      },
       "LibraryAtlasCoverageResponse": {
         "type": "object",
         "properties": {
@@ -21445,6 +21477,63 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LibraryRegionSearchResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/library/wineries": {
+      "get": {
+        "operationId": "searchLibraryWineries",
+        "tags": [
+          "Library"
+        ],
+        "summary": "Wineries by name, for the producer field to suggest",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "required": false,
+            "name": "country",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 120
+            },
+            "required": true,
+            "name": "query",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching wineries, those whose name begins with the words first.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LibraryWinerySearchResponse"
                 }
               }
             }

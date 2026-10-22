@@ -2034,7 +2034,7 @@
     },
     "what": {
       "summaries": "samenvattingen, en de geciteerde zinnen achter de gegevens van elke druif en regio",
-      "traits": "de zuurgraad, het alcoholgehalte en de body van een druif waar geen artikel ze noemt (1885–1910)",
+      "traits": "zuur, tannine, body, alcohol, zoetheid en combinaties van een druif waar Wikipedia ze niet noemt: oude ampelografieën, open artikelen en de wijn van een plaats, als zodanig vermeld",
       "varieties": "de toegestane druivenrassen van elke benaming",
       "names": "namen, aliassen en koppelingen tussen kaarten",
       "registerNames": "de beschermde namen, hun soort, data en plaatsen",
@@ -2045,7 +2045,8 @@
       "boundaries": "grenzen",
       "points": "benaderde punten op de kaart",
       "outlines": "omtrekken van regio’s en landen",
-      "photos": "foto’s van druiven en van stijlen en methoden"
+      "photos": "foto’s van druiven en van stijlen en methoden",
+      "wineries": "de wijnhuizen die het veld Producent voorstelt terwijl je typt"
     },
     "terms": {
       "commonsEach": "elk bestand onder zijn eigen vrije licentie, vermeld onder de foto",

@@ -2034,7 +2034,7 @@
     },
     "what": {
       "summaries": "summaries, and the quoted sentences behind each grape's and region's facts",
-      "traits": "a grape's acidity, alcohol and body where no article says them (1885–1910)",
+      "traits": "a grape's acidity, tannin, body, alcohol, sweetness and pairings where no Wikipedia article says them: old ampelographies, open-access papers, and what one place's wine is, labelled so",
       "varieties": "the grape varieties authorised in each name",
       "names": "names, aliases and links between entries",
       "registerNames": "the protected names, their kinds, dates and places",
@@ -2045,7 +2045,8 @@
       "boundaries": "boundaries",
       "points": "approximate points on the map",
       "outlines": "outlines of regions and countries",
-      "photos": "photographs of grapes and of styles and methods"
+      "photos": "photographs of grapes and of styles and methods",
+      "wineries": "the wineries the producer field suggests as you type"
     },
     "terms": {
       "commonsEach": "each file under its own free licence, credited under the photograph",

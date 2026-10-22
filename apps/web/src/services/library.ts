@@ -12,6 +12,7 @@ import {
   LibraryRegionNamesResponseSchema,
   LibraryRegionResponseSchema,
   LibraryRegionSearchResponseSchema,
+  LibraryWinerySearchResponseSchema,
   type LibrarySearchResponse,
   LibrarySearchResponseSchema,
   type LibraryTopic,
@@ -226,4 +227,22 @@ export async function getLibraryRegionNames(
   );
   if (!response.ok) throw await apiError(response);
   return LibraryRegionNamesResponseSchema.parse(await response.json()).data;
+}
+
+/** Wineries by name, for the producer field — in a country, if one is chosen. */
+export async function searchLibraryWineries(
+  tokenSource: TokenSource,
+  query: string,
+  country: string | null,
+  signal?: AbortSignal,
+): Promise<{ countryCode: string; id: string; name: string }[]> {
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/library/wineries?query=${encodeURIComponent(query)}${
+      country === null ? "" : `&country=${encodeURIComponent(country.toUpperCase())}`
+    }`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return LibraryWinerySearchResponseSchema.parse(await response.json()).data;
 }

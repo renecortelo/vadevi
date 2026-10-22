@@ -1,10 +1,10 @@
 import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-import type { ImageEntry, RegionEntry, TopicEntry } from "./appellation-names";
+import type { ImageEntry, RegionEntry, TopicEntry, WineryEntry } from "./appellation-names";
 import type { GrapeEntry } from "./grape-validation";
 import { libraryDiffSql, libraryTables, type Vocabulary } from "./library-sql";
 
@@ -44,6 +44,9 @@ const regionsSource = readFileSync(resolve("data/kb/appellations.json"), "utf8")
 const topicsSource = readFileSync(resolve("data/kb/topics.json"), "utf8");
 const imagesSource = readFileSync(resolve("data/kb/grape-images.json"), "utf8");
 const topicImagesSource = readFileSync(resolve("data/kb/topic-images.json"), "utf8");
+const wineriesSource = existsSync(resolve("data/kb/wineries.json"))
+  ? readFileSync(resolve("data/kb/wineries.json"), "utf8")
+  : '{"wineries":[]}';
 const version = createHash("sha256")
   .update(source)
   .update(vocabularySource)
@@ -51,6 +54,7 @@ const version = createHash("sha256")
   .update(topicsSource)
   .update(imagesSource)
   .update(topicImagesSource)
+  .update(wineriesSource)
   .digest("hex")
   .slice(0, 16);
 const grapes = JSON.parse(source) as GrapeEntry[];
@@ -59,6 +63,7 @@ const regions = JSON.parse(regionsSource) as RegionEntry[];
 const topics = JSON.parse(topicsSource) as TopicEntry[];
 const images = JSON.parse(imagesSource) as Record<string, ImageEntry>;
 const topicImages = JSON.parse(topicImagesSource) as Record<string, ImageEntry>;
+const wineries = (JSON.parse(wineriesSource) as { wineries: WineryEntry[] }).wineries;
 
 function wrangler(args: string[]): string {
   const result = spawnSync(
@@ -108,6 +113,7 @@ const tables = libraryTables(grapes, version, vocabulary, regions, {
   images,
   topicImages,
   topics,
+  wineries,
 });
 
 // What the database holds now, table by table. A table a migration has not
@@ -144,6 +150,6 @@ const file = join(mkdtempSync(join(tmpdir(), "vadevi-kb-")), "library.sql");
 writeFileSync(file, `${statements.join("\n")}\n`);
 wrangler(["--file", file]);
 console.info(
-  `  Loaded wine library ${version}: ${grapes.length} grapes, ${regions.length} registered names, ${topics.length} topics ` +
+  `  Loaded wine library ${version}: ${grapes.length} grapes, ${regions.length} registered names, ${topics.length} topics, ${wineries.length} wineries ` +
     `(${statements.length} statements, about ${writes.toLocaleString("en")} rows written).`,
 );

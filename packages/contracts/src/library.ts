@@ -557,3 +557,21 @@ export const LibraryRegionNamesResponseSchema = z
   })
   .strict()
   .openapi("LibraryRegionNamesResponse");
+
+/** Wineries by name, in a country if one is given: for the producer field. */
+export const LibraryWinerySearchQuerySchema = z
+  .object({
+    country: z
+      .string()
+      .regex(/^[A-Z]{2}$/)
+      .optional(),
+    query: z.string().trim().min(2).max(120),
+  })
+  .strict();
+
+export const LibraryWinerySearchResponseSchema = z
+  .object({
+    data: z.array(z.object({ countryCode: z.string(), id: z.string(), name: z.string() }).strict()),
+  })
+  .strict()
+  .openapi("LibraryWinerySearchResponse");

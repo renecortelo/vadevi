@@ -12,6 +12,7 @@ import { updateWine } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 import { countryOptionsFor } from "./country-options";
 import { ModalDialog } from "./ModalDialog";
+import { ProducerInput } from "./ProducerInput";
 import { RegionInput } from "./RegionInput";
 
 /**
@@ -183,10 +184,12 @@ export function EditWineDialog({
       <h2 id="edit-wine-title">{t("memory.editTitle")}</h2>
       <form className="field-stack" onSubmit={(event) => void save(event)}>
         <label htmlFor="edit-producer">{t("quickLog.producer")}</label>
-        <input
+        <ProducerInput
+          country={countryCode === "" ? null : countryCode}
           id="edit-producer"
           maxLength={160}
-          onChange={(event) => setProducerName(event.target.value)}
+          onChange={setProducerName}
+          onCountry={setCountryCode}
           required
           value={producerName}
         />

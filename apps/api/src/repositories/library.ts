@@ -989,3 +989,25 @@ export async function libraryRegionNames(
     .all<{ id: string; name: string }>();
   return rows.results;
 }
+
+/**
+ * Wineries whose name holds what is typed — those whose name begins with it
+ * first — in the country given, if one is: twelve at most.
+ */
+export async function searchLibraryWineries(
+  database: D1Database,
+  query: string,
+  country: string | null = null,
+): Promise<{ countryCode: string; id: string; name: string }[]> {
+  const typed = normalizeWineText(query);
+  if (typed.length < 2) return [];
+  const rows = await database
+    .prepare(
+      `SELECT id, name, country_code FROM kb_wineries
+      WHERE normalized_name LIKE '%' || ?1 || '%' AND (?2 IS NULL OR country_code = ?2)
+      ORDER BY normalized_name LIKE ?1 || '%' DESC, name LIMIT 12`,
+    )
+    .bind(typed, country)
+    .all<{ country_code: string; id: string; name: string }>();
+  return rows.results.map((row) => ({ countryCode: row.country_code, id: row.id, name: row.name }));
+}
