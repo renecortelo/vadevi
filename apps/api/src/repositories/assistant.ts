@@ -1271,6 +1271,29 @@ async function loadLibraryStatements(
         [climateId],
       );
     }
+    if (region.soil !== null) {
+      const soilId = await librarySourceId(`region-soil:${region.id}`);
+      sources.push({
+        canonicalUrl: "https://doi.org/10.5194/soil-7-217-2021",
+        createdAt: now,
+        createdByProvider: "wine-library",
+        createdByUserId: null,
+        id: soilId,
+        licenseIdentifier: "CC-BY-4.0",
+        publisher: "ISRIC SoilGrids 2.0 (Poggio et al.)",
+        retrievedAt: now,
+        sourceType: "open_dataset",
+        title: `${region.name} — soil at its point`,
+        updatedAt: now,
+      });
+      const { soil } = region;
+      const reaction = soil.ph < 6.5 ? "acid" : soil.ph > 7.5 ? "alkaline" : "neutral";
+      say(
+        "soil",
+        `soil at its point on the map, top 30 cm (one point: a guide for a large area): clay ${soil.clay} %, silt ${soil.silt} %, sand ${soil.sand} %, pH ${soil.ph} (${reaction}), organic carbon ${soil.organicCarbon} g/kg`,
+        [soilId],
+      );
+    }
     regions.push({ id: region.id, name: region.name });
   }
   // Styles and methods — "¿qué es un vino natural?", "la maloláctica" — from

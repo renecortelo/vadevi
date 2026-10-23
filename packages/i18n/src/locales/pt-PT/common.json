@@ -2042,6 +2042,7 @@
       "plantings": "área de vinha por região e casta, as castas mais plantadas em cada região e de onde vem cada casta",
       "climate": "o clima médio de cada região",
       "elevation": "a altitude do ponto de cada região",
+      "soil": "o solo no ponto de cada região: argila, limo, areia, pH e carbono orgânico",
       "boundaries": "limites",
       "points": "pontos aproximados no mapa",
       "outlines": "contornos de regiões e países",

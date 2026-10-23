@@ -2042,6 +2042,7 @@
       "plantings": "Rebfläche nach Region und Sorte, die meistgepflanzten Rebsorten einer Region und die Herkunft jeder Sorte",
       "climate": "das mittlere Klima jeder Region",
       "elevation": "die Höhe des Punkts jeder Region",
+      "soil": "der Boden am Punkt jeder Region: Ton, Schluff, Sand, pH-Wert und organischer Kohlenstoff",
       "boundaries": "Grenzen",
       "points": "ungefähre Punkte auf der Karte",
       "outlines": "Umrisse von Regionen und Ländern",

@@ -39,8 +39,12 @@ async function answer(id: string, [latitude, longitude]: [number, number]) {
     `&lat=${latitude.toFixed(5)}&${properties.map((name) => `property=${name}`).join("&")}` +
     "&depth=0-5cm&depth=5-15cm&depth=15-30cm&value=mean";
   for (let attempt = 1; attempt <= 5; attempt += 1) {
-    const response = await fetch(url, { headers: { "User-Agent": userAgent } });
-    if (response.ok) {
+    // A request the service never answers is tried again, like a refused one.
+    const response = await fetch(url, {
+      headers: { "User-Agent": userAgent },
+      signal: AbortSignal.timeout(120_000),
+    }).catch(() => null);
+    if (response?.ok) {
       const body = (await response.json()) as { properties: { layers: Layer[] } };
       writeFileSync(path, JSON.stringify(body.properties));
       await new Promise((done) => setTimeout(done, 12_000));

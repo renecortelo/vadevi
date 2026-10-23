@@ -2042,6 +2042,7 @@
       "plantings": "wijngaardoppervlak per regio en ras, de meest aangeplante druiven per regio en waar elke druif vandaan komt",
       "climate": "het gemiddelde klimaat van elke regio",
       "elevation": "de hoogte van het punt van elke regio",
+      "soil": "de bodem op het punt van elke regio: klei, leem, zand, pH en organische koolstof",
       "boundaries": "grenzen",
       "points": "benaderde punten op de kaart",
       "outlines": "omtrekken van regio’s en landen",

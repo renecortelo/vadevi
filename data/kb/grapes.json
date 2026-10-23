@@ -1759,7 +1759,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/S%C3%A9millon"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "fruity"
@@ -1905,6 +1905,12 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Prosecco",
         "place": "Prosecco",
         "placeId": "it-prosecco"
+      },
+      {
+        "field": "acidity",
+        "quote": "Сік має досить високу кислотність.",
+        "value": "high",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B5%D1%80%D0%B0"
       }
     ],
     "id": "glera",
@@ -4468,6 +4474,12 @@
         "quote": "Wines of this variety are known for their high natural acidity, which provides freshness and structure",
         "value": "high",
         "sourceUrl": "https://doi.org/10.19040/ecocycles.v11i3.648"
+      },
+      {
+        "field": "tannin",
+        "quote": "De smaak wordt gedomineerd door zachte tannines, waardoor de wijn makkelijk te drinken is.",
+        "value": "low",
+        "sourceUrl": "https://nl.wikipedia.org/wiki/Alfrocheiro"
       }
     ],
     "id": "alfrocheiro-preto",
@@ -4587,7 +4599,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q588556",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Alfrocheiro_Preto"
   },
@@ -12502,6 +12514,12 @@
         "field": "regions",
         "quote": "grown predominantly in the Friuli Venezia Giulia region of northeast Italy ... a prominent variety in the Colli Orientali del Friuli",
         "value": "IT: Colli Orientali del Friuli"
+      },
+      {
+        "field": "tannin",
+        "quote": "Gusto: vinoso, abbastanza tannico.",
+        "value": "high",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Pignolo"
       }
     ],
     "id": "pignolo",
@@ -12570,7 +12588,7 @@
     },
     "sweetness": null,
     "synonyms": [],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q2094692",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pignolo_(grape)"
   },
@@ -18852,6 +18870,18 @@
         "quote": "Сорт является основой для создания сухих, столовых и игристых вин",
         "value": "dry",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%BC%D0%B5"
+      },
+      {
+        "field": "pairings",
+        "quote": "Le gamay se marie très bien avec la charcuterie et les fromages frais",
+        "value": "cured meats",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gamay"
+      },
+      {
+        "field": "pairings",
+        "quote": "Le gamay se marie très bien avec la charcuterie et les fromages frais",
+        "value": "fresh cheese",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Gamay"
       }
     ],
     "id": "gamay",
@@ -18866,7 +18896,10 @@
       "pt": "Gamay"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "cured meats",
+      "fresh cheese"
+    ],
     "prominence": 27,
     "regions": [],
     "styles": [
@@ -19959,6 +19992,12 @@
         "quote": "a variety like Carménère is suitable for studying the CaT instability due to its usual low acidity and high pH",
         "value": "low",
         "sourceUrl": "https://doi.org/10.3390/foods13193065"
+      },
+      {
+        "field": "tannin",
+        "quote": "Aus der Carménère-Traube wird ein tanninarmer, dunkler, süffiger, nach Schokolade-, Tabak- und Lederaromen schmeckender Rotwein mit einem angenehmen Beerenaroma gekeltert.",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
       }
     ],
     "id": "carmenere",
@@ -20069,7 +20108,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1043868",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
   },
@@ -21393,7 +21432,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "herbs",
       "citrus",
@@ -21530,6 +21569,12 @@
         "quote": "passt sehr gut zu Fisch und zu Meeresfrüchten",
         "value": "seafood",
         "sourceUrl": "https://de.wikipedia.org/wiki/Alvarinho"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Sus vinos tienen una graduación alcohólica elevada y una acidez notable.",
+        "value": "high",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Albari%C3%B1o"
       }
     ],
     "id": "albarino",
@@ -23803,6 +23848,12 @@
         "quote": "Неро д'Авола гарно поєднується зі стравами з м'яса, пастою, тушкованими овочами",
         "value": "vegetables",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
+      },
+      {
+        "field": "tannin",
+        "quote": "Вино має повне тіло, відносно невелику кислотність та м'які таніни.",
+        "value": "low",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
       }
     ],
     "id": "nero-d-avola",
@@ -23911,7 +23962,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1713890",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nero_d'Avola"
   },
@@ -27933,7 +27984,7 @@
       "almond",
       "spice"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -28064,6 +28115,12 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Recioto_di_Gambellara",
         "place": "Recioto di Gambellara",
         "placeId": "it-recioto-di-gambellara"
+      },
+      {
+        "field": "body",
+        "quote": "Вината от Гарганега се отличават със структура, плътност и аромат на бадеми, зелена слива и цитруси.",
+        "value": "high",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%93%D0%B0%D1%80%D0%B3%D0%B0%D0%BD%D0%B5%D0%B3%D0%B0"
       }
     ],
     "id": "garganega",
@@ -38985,7 +39042,7 @@
       "coffee",
       "chocolate"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -39029,6 +39086,12 @@
         "quote": "je crna autohtona sorta grožđa Hercegovine.",
         "value": "BA",
         "sourceUrl": "https://hr.wikipedia.org/wiki/Blatina"
+      },
+      {
+        "field": "body",
+        "quote": "Blatina ergibt rubinrote, vollfruchtige und mittelschwere Qualitätsweine mit 12 bis 13,5 % Alkohol, 5 bis 7 g/l Säure, 25 bis 32 g/l Extrakt und Johannisbeer- und Brombeer-Aromen.",
+        "value": "medium",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Blatina"
       }
     ],
     "id": "blatina",

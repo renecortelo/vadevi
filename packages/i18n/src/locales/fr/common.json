@@ -2042,6 +2042,7 @@
       "plantings": "surface de vigne par région et par cépage, les cépages les plus plantés de chaque région et l'origine de chaque cépage",
       "climate": "le climat moyen de chaque région",
       "elevation": "l’altitude du point de chaque région",
+      "soil": "le sol au point de chaque région : argile, limon, sable, pH et carbone organique",
       "boundaries": "limites",
       "points": "points approximatifs sur la carte",
       "outlines": "contours des régions et des pays",

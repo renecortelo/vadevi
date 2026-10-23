@@ -147,6 +147,12 @@
           "fish": "Fisch",
           "seafood": "Meeresfrüchten"
         }
+      },
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "value": "high",
+        "quote": "Sus vinos tienen una graduación alcohólica elevada y una acidez notable."
       }
     ],
     "aleatico": [
@@ -237,6 +243,12 @@
           "volume": "ecocycles-v11i3-648",
           "work": "kreidlmayer-2026-canary-islands"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "nl",
+        "value": "low",
+        "quote": "De smaak wordt gedomineerd door zachte tannines, waardoor de wijn makkelijk te drinken is."
       }
     ],
     "alicante-bouschet": [
@@ -609,6 +621,12 @@
         "lang": "hr",
         "quote": "je crna autohtona sorta grožđa Hercegovine.",
         "value": "BA"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "value": "medium",
+        "quote": "Blatina ergibt rubinrote, vollfruchtige und mittelschwere Qualitätsweine mit 12 bis 13,5 % Alkohol, 5 bis 7 g/l Säure, 25 bis 32 g/l Extrakt und Johannisbeer- und Brombeer-Aromen."
       }
     ],
     "blauer-portugieser": [
@@ -1512,6 +1530,19 @@
         "lang": "ru",
         "value": "dry",
         "quote": "Сорт является основой для создания сухих, столовых и игристых вин"
+      },
+      {
+        "field": "pairings",
+        "lang": "fr",
+        "value": [
+          "cured meats",
+          "fresh cheese"
+        ],
+        "quote": "Le gamay se marie très bien avec la charcuterie et les fromages frais",
+        "words": {
+          "cured meats": "charcuterie",
+          "fresh cheese": "fromages frais"
+        }
       }
     ],
     "garganega": [
@@ -1540,6 +1571,12 @@
           "volume": "itwiki-it-recioto-di-gambellara",
           "work": "wikipedia-it"
         }
+      },
+      {
+        "field": "body",
+        "lang": "bg",
+        "value": "high",
+        "quote": "Вината от Гарганега се отличават със структура, плътност и аромат на бадеми, зелена слива и цитруси."
       }
     ],
     "garnacha-roja": [
@@ -2829,6 +2866,12 @@
           "pasta": "пастою",
           "vegetables": "овочами"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "uk",
+        "value": "low",
+        "quote": "Вино має повне тіло, відносно невелику кислотність та м'які таніни."
       }
     ],
     "neuburger": [
@@ -4491,6 +4534,12 @@
           "volume": "foods13193065",
           "work": "cisterna-castillo-2024-foods"
         }
+      },
+      {
+        "field": "tannin",
+        "lang": "de",
+        "value": "low",
+        "quote": "Aus der Carménère-Traube wird ein tanninarmer, dunkler, süffiger, nach Schokolade-, Tabak- und Lederaromen schmeckender Rotwein mit einem angenehmen Beerenaroma gekeltert."
       }
     ],
     "glera": [
@@ -4547,6 +4596,20 @@
           "volume": "itwiki-it-prosecco",
           "work": "wikipedia-it"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "uk",
+        "value": "high",
+        "quote": "Сік має досить високу кислотність."
+      }
+    ],
+    "pignolo": [
+      {
+        "field": "tannin",
+        "lang": "it",
+        "value": "high",
+        "quote": "Gusto: vinoso, abbastanza tannico."
       }
     ]
   }

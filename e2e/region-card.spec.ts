@@ -107,6 +107,12 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     "Oficina de Estadística de Australia (ABS), viñedos 2014-15 (CC BY 4.0)",
     { timeout: 15_000 },
   );
+  // The soil at a name's point: clay, silt and sand, and its pH in words.
+  await page.goto("/library/regions/ar-angaco");
+  const soil = page.locator('section[aria-labelledby="region-soil"]');
+  await expect(soil).toContainText("Arcilla", { timeout: 15_000 });
+  await expect(soil).toContainText("alcalino");
+  await expect(soil).toContainText("SoilGrids 2.0");
   await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.

@@ -2042,6 +2042,7 @@
       "plantings": "vineyard area by region and variety, the grapes most planted in a region, and where a grape comes from",
       "climate": "climate normals of each region",
       "elevation": "the height of each region's point",
+      "soil": "the soil at each region's point: clay, silt, sand, pH and organic carbon",
       "boundaries": "boundaries",
       "points": "approximate points on the map",
       "outlines": "outlines of regions and countries",

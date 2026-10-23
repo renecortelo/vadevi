@@ -40,6 +40,7 @@ export type Source = {
     | "registerNames"
     | "summaries"
     | "traits"
+    | "soil"
     | "varieties"
     | "wineries";
 };
@@ -363,6 +364,14 @@ export const sources: Source[] = [
     name: "Copernicus DEM GLO-90 · Open-Meteo",
     url: "https://open-meteo.com/en/docs/elevation-api",
     what: "elevation",
+  },
+  {
+    credit: "Poggio et al. (2021), SoilGrids 2.0, SOIL 7, 217–240",
+    group: "climate",
+    licence: "CC BY 4.0",
+    name: "ISRIC SoilGrids 2.0",
+    url: "https://doi.org/10.5194/soil-7-217-2021",
+    what: "soil",
   },
   {
     group: "maps",

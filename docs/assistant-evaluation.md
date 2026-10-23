@@ -13,25 +13,25 @@ every grape and asks some 450 questions in about five seconds), from
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | Every grape, in one of the eight languages by turns, by its name in that language («Wie ist die Rebsorte …?») | the grape is found; every fact its card holds — acidity, tannin, body, alcohol, sweetness — reaches the statements, and a fact read from one place's wine says so («said of the wine of Tokaj»); every researched statement carries a source; every citation is credited to who its address is (Wikipedia, Wikivoyage, an open-access paper, the University of Adelaide, the Internet Archive, the EU register) | 95 % found; facts, citations and credits all |
 | Every grape with a synonym, by its first one («Ull de Llebre?»)                                               | the grape is found                                                                                                                                                                                                                                                                                                                                                                                              | 80 %                                         |
-| A sample of 44 registered names in 18 countries (every 60th), by the name a Spanish reader writes             | the name is found; its card's vineyard area, production and climate reach the statements; a citation is credited to Wikipedia only when it is Wikipedia's                                                                                                                                                                                                                                                       | 90 % found; figures, climate and credits all |
+| A sample of 44 registered names in 18 countries (every 60th), by the name a Spanish reader writes             | the name is found; its card's vineyard area, production, climate and soil reach the statements; a citation is credited to Wikipedia only when it is Wikipedia's                                                                                                                                                                                                                                                 | 90 % found; figures, climate and credits all |
 | Five grapes that do not exist («Zarvenelle»)                                                                  | no grape found and no library statement given                                                                                                                                                                                                                                                                                                                                                                   | all                                          |
 | Every style and method, in the eight languages by turns («Qu'est-ce que le vin orange ?»)                     | the style is found; its citation credited as itself                                                                                                                                                                                                                                                                                                                                                             | 90 % found; credits all                      |
 | Every grape whose source gives pairings («¿Con qué marida el …?»)                                             | its source's dishes given and cited; the pairing rules' suggestion given as a suggestion, uncited                                                                                                                                                                                                                                                                                                               | all                                          |
 
 ## Results
 
-22 October 2026, first run:
+22–23 October 2026 (the soil added on the 23rd):
 
 | Measure                                                  | Result        |
 | -------------------------------------------------------- | ------------- |
 | Grapes found                                             | 209 / 209     |
-| Card facts given                                         | 560 / 560     |
+| Card facts given                                         | 568 / 568     |
 | Researched statements cited                              | 1,068 / 1,068 |
 | Citations credited to their own source                   | 773 / 773     |
 | Grapes found by a synonym                                | 179 / 182     |
 | Registered names found                                   | 44 / 44       |
-| Their figures and climate given                          | 87 / 87       |
-| Their citations credited as Wikipedia only when they are | 270 / 270     |
+| Their figures, climate and soil given                    | 117 / 117     |
+| Their citations credited as Wikipedia only when they are | 285 / 285     |
 | Invented grapes met with silence                         | 5 / 5         |
 | Styles and methods found                                 | 40 / 41       |
 | Grapes whose pairings are given as their kind            | 95 / 95       |

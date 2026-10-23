@@ -2042,6 +2042,7 @@
       "plantings": "superficie de viñedo por región y variedad, las uvas más plantadas en cada región y de dónde viene cada uva",
       "climate": "el clima medio de cada región",
       "elevation": "la altitud del punto de cada región",
+      "soil": "el suelo en el punto de cada región: arcilla, limo, arena, pH y carbono orgánico",
       "boundaries": "límites",
       "points": "puntos aproximados en el mapa",
       "outlines": "contornos de regiones y países",

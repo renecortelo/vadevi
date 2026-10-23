@@ -30,6 +30,7 @@ questions ("what does a Garnacha smell like?").
 | `grape-names.json`                 | given by hand                                                                                  | A grape's name in an app language Wikidata has no label in (an international name, a proper name)                                                                                                                                                                                                                                                                                                                                                                                                |
 | `place-sentences.json`             | chosen by hand                                                                                 | One sentence on a name's wine from the Wikipedia article of its place, for names no article of their own describes                                                                                                                                                                                                                                                                                                                                                                               |
 | `region-climate.json`              | `pnpm kb:fetch-climate`, `pnpm kb:fetch-elevation`                                             | CHELSA V2.1, Copernicus DEM GLO-90 (see «Climate, planted area and production»)                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `region-soil.json`                 | `pnpm kb:fetch-soil`                                                                           | ISRIC SoilGrids 2.0 (CC BY 4.0): clay, silt, sand, pH and organic carbon in the top 30 cm at each name's point                                                                                                                                                                                                                                                                                                                                                                                   |
 | `region-figures.json`              | `pnpm kb:fetch-region-figures`                                                                 | Area and production from the infobox of a name's Wikipedia articles                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `*-figures.json`, `adelaide.json`  | transcribed by hand, or read from the publisher's files                                        | Official statistics on vineyard area and production, and the University of Adelaide's areas by region and variety (see «Licences»)                                                                                                                                                                                                                                                                                                                                                               |
 | `registers/`                       | transcribed by hand                                                                            | The registers of Switzerland, Canada, Japan, Moldova, Georgia, Brazil and the regions of Mexico and Uruguay (see «Registers transcribed by hand»)                                                                                                                                                                                                                                                                                                                                                |
@@ -352,6 +353,13 @@ each credited as «Licences» says.
   acres is converted and marked as such.
 - `pnpm kb:fetch-elevation` reads the elevation at every point (Copernicus
   DEM GLO-90, through Open-Meteo) into `region-climate.json`.
+- `pnpm kb:fetch-soil` reads the soil at every point from ISRIC's SoilGrids
+  2.0 REST API — clay, silt and sand, pH in water and organic carbon in the
+  0–5, 5–15 and 15–30 cm layers, averaged by thickness — one point a request,
+  twelve seconds apart as ISRIC asks (some nine hours; each answer cached in
+  `.kb-cache/soil/`, so a stopped run picks up where it left), into
+  `region-soil.json`. The atlas build attaches it with the climate read at the
+  same point; the card shows it with a note that one point is a guide.
 - `pnpm kb:fetch-region-articles` caches the full articles of each name
   (`--every`: in every language Wikidata links), which the figures and grape
   sentences read by hand are checked against.
@@ -594,6 +602,9 @@ kb:fetch-it-regional-figures`): CC BY 4.0, credited «Fonte: ARTEA – Regione
 - **27 CFR part 9** (eCFR): a work of the US government, public domain.
 - **UC Davis AVA project** boundaries
   (https://github.com/UCDavisLibrary/ava): CC0 1.0; credited under the map.
+- **ISRIC SoilGrids 2.0** (Poggio et al. 2021, _SOIL_ 7, 217–240,
+  doi:10.5194/soil-7-217-2021): CC BY 4.0; the card credits it under the soil.
+
 - **Wine Australia's** GI boundaries, kinds and numbers: CC BY 4.0, ©
   Wine Australia; credited under the map. The register's pages give only
   facts here: names and dates.

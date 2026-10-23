@@ -2042,6 +2042,7 @@
       "plantings": "superficie vitata per regione e vitigno, i vitigni più piantati in ogni regione e da dove viene ciascuno",
       "climate": "il clima medio di ogni regione",
       "elevation": "l’altitudine del punto di ogni regione",
+      "soil": "il suolo nel punto di ogni regione: argilla, limo, sabbia, pH e carbonio organico",
       "boundaries": "confini",
       "points": "punti approssimativi sulla mappa",
       "outlines": "contorni di regioni e paesi",

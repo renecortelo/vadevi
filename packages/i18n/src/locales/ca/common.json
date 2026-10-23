@@ -2042,6 +2042,7 @@
       "plantings": "superfície de vinya per regió i varietat, els raïms més plantats a cada regió i d'on ve cada raïm",
       "climate": "el clima mitjà de cada regió",
       "elevation": "l’altitud del punt de cada regió",
+      "soil": "el sòl al punt de cada regió: argila, llim, sorra, pH i carboni orgànic",
       "boundaries": "límits",
       "points": "punts aproximats al mapa",
       "outlines": "contorns de regions i països",

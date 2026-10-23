@@ -234,6 +234,7 @@ describe("Vicenç's question bank", () => {
           ? [`wine produced: ${region.figures.production.amount} hl`]
           : []),
         ...(region.climate ? [`Köppen ${region.climate.koppen}`] : []),
+        ...(region.soil ? [`clay ${region.soil.clay} %`] : []),
       ];
       for (const fact of expected) {
         regionFacts += 1;
