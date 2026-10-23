@@ -11,19 +11,22 @@ shared runner would turn them into noise rather than evidence.
 
 ## What was measured
 
-Re-measured 18 October 2026, after the atlas in figures, the cellar map, the
-library's 209 grapes and voice tastings. Nothing regressed; the new library
-read is well within.
+Re-measured 23 October 2026, after the winery suggestions, the soil and the
+labelled grape facts. Nothing regressed; the sign-in LCP is a little lower.
+The initial route's JavaScript is 229.8 KiB gzip of its 250 KiB budget.
 
 | Measure                              | Median | p95     | Budget  | Verdict |
 | ------------------------------------ | ------ | ------- | ------- | ------- |
-| LCP — sign-in, Slow 4G, 4× CPU       | 428 ms | 2124 ms | 2500 ms | within  |
-| API read `GET /me/bootstrap`         | 12 ms  | 34 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/wines`    | 12 ms  | 18 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/sessions` | 9 ms   | 90 ms   | 500 ms  | within  |
-| API read `GET /library/grapes`       | 15 ms  | 29 ms   | 500 ms  | within  |
-| Interaction — Memory view switch     | 71 ms  | 75 ms   | 200 ms  | within  |
-| Quick-log save, online               | 24 ms  | 30 ms   | 800 ms  | within  |
+| LCP — sign-in, Slow 4G, 4× CPU       | 324 ms | 2044 ms | 2500 ms | within  |
+| API read `GET /me/bootstrap`         | 22 ms  | 31 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/wines`    | 13 ms  | 21 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/sessions` | 14 ms  | 108 ms  | 500 ms  | within  |
+| API read `GET /library/grapes`       | 18 ms  | 44 ms   | 500 ms  | within  |
+| Interaction — Memory view switch     | 71 ms  | 84 ms   | 200 ms  | within  |
+| Quick-log save, online               | 25 ms  | 35 ms   | 800 ms  | within  |
+
+On 18 October 2026 the same measures gave 428/2124 ms for the sign-in LCP and
+12–15 ms medians for the API reads.
 
 ### The deployed sign-in page, on a phone's profile
 
