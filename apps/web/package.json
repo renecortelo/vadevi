@@ -16,7 +16,7 @@
     "@vadevi/contracts": "workspace:*",
     "@vadevi/i18n": "workspace:*",
     "@vadevi/ui": "workspace:*",
-    "dexie": "4.4.4",
+    "dexie": "4.4.6",
     "firebase": "12.17.1",
     "i18next": "*",
     "leaflet": "^1.9.4",
@@ -26,7 +26,7 @@
     "react-router": "*",
     "workbox-window": "*",
     "zod": "catalog:",
-    "zxing-wasm": "^3.1.3"
+    "zxing-wasm": "^3.1.5"
   },
   "devDependencies": {
     "@types/react": "*",
