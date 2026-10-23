@@ -1290,7 +1290,7 @@ async function loadLibraryStatements(
       const reaction = soil.ph < 6.5 ? "acid" : soil.ph > 7.5 ? "alkaline" : "neutral";
       say(
         "soil",
-        `soil at its point on the map, top 30 cm (one point: a guide for a large area): clay ${soil.clay} %, silt ${soil.silt} %, sand ${soil.sand} %, pH ${soil.ph} (${reaction}), organic carbon ${soil.organicCarbon} g/kg`,
+        `soil ${soil.nearKm === null ? "at its point on the map" : `${soil.nearKm} km from its point on the map, which falls in a town or on water`}, top 30 cm (one point: a guide for a large area): clay ${soil.clay} %, silt ${soil.silt} %, sand ${soil.sand} %, pH ${soil.ph} (${reaction}), organic carbon ${soil.organicCarbon} g/kg`,
         [soilId],
       );
     }

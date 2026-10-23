@@ -358,7 +358,10 @@ each credited as «Licences» says.
   0–5, 5–15 and 15–30 cm layers, averaged by thickness — one point a request,
   twelve seconds apart as ISRIC asks (some nine hours; each answer cached in
   `.kb-cache/soil/`, so a stopped run picks up where it left), into
-  `region-soil.json`. The atlas build attaches it with the climate read at the
+  `region-soil.json`. A point in a town or on water has no soil in SoilGrids
+  (Rioja's falls in Logroño): the nearest point one or two kilometres away
+  that has is read instead, and its distance kept (`nearKm`), which the card
+  and Vicenç say. The atlas build attaches it with the climate read at the
   same point; the card shows it with a note that one point is a guide.
 - `pnpm kb:fetch-region-articles` caches the full articles of each name
   (`--every`: in every language Wikidata links), which the figures and grape

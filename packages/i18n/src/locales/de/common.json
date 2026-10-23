@@ -441,6 +441,7 @@
       "alkaline": "basisch",
       "organicCarbon": "Organischer Kohlenstoff"
     },
+    "soilNear": "In {{km}} km Entfernung gelesen: Der Punkt liegt in einem Ort oder im Wasser.",
     "soilNote": "Die obersten 30 cm am Punkt der Karte, nach SoilGrids 2.0 (ISRIC, CC BY 4.0). Ein einzelner Punkt: für ein großes Gebiet nur ein Anhalt.",
     "climateTitle": "Klima",
     "climateKoppen": "Klimatyp (Köppen)",

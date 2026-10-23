@@ -779,7 +779,7 @@ export async function getLibraryRegion(
     countryCode: region.country_code,
     eambrosiaId: region.eambrosia_id,
     figures,
-    soil: region.soil === null ? null : (JSON.parse(region.soil) as LibraryRegion["soil"]),
+    soil: region.soil === null ? null : soilOf(region.soil),
     giType: region.gi_type,
     grapes: (
       (grapes?.results ?? []) as {
@@ -1022,4 +1022,12 @@ export async function searchLibraryWineries(
     .bind(typed, country)
     .all<{ country_code: string; id: string; name: string }>();
   return rows.results.map((row) => ({ countryCode: row.country_code, id: row.id, name: row.name }));
+}
+
+/** A name's soil as loaded; one loaded before the nearest point was read is at the point. */
+function soilOf(json: string): NonNullable<LibraryRegion["soil"]> {
+  const soil = JSON.parse(json) as Omit<NonNullable<LibraryRegion["soil"]>, "nearKm"> & {
+    nearKm?: number | null;
+  };
+  return { ...soil, nearKm: soil.nearKm ?? null };
 }

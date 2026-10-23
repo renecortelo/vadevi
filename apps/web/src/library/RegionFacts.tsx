@@ -331,7 +331,12 @@ export function RegionSoil({ soil }: { soil: NonNullable<LibraryRegion["soil"]> 
           <dd>{number.format(soil.organicCarbon)} g/kg</dd>
         </div>
       </dl>
-      <p className="section-help">{t("library.soilNote")}</p>
+      <p className="section-help">
+        {t("library.soilNote")}
+        {soil.nearKm === null
+          ? null
+          : ` ${t("library.soilNear", { km: number.format(soil.nearKm) })}`}
+      </p>
     </section>
   );
 }

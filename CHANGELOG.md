@@ -69,7 +69,8 @@ has the reasons.
   its point — clay, silt and sand as one bar, its pH in words (acid, neutral,
   alkaline) and its organic carbon — from ISRIC's SoilGrids 2.0 (CC BY 4.0),
   with a note that one point is a guide for a large area; Vicenç has it too,
-  cited.
+  cited. Where the point falls in a town or on water, the nearest soil a
+  kilometre or two away is read, and the card says how far.
 - **Twelve more styles and methods with a picture** (31 of 41): ageing,
   biodynamic and organic wine, clarification, dosage, fermentation,
   maceration, sweetness, terroir, the traditional method, vegan wine and the

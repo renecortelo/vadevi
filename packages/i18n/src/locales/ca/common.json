@@ -441,6 +441,7 @@
       "alkaline": "alcalí",
       "organicCarbon": "Carboni orgànic"
     },
+    "soilNear": "Llegit a {{km}} km: el punt cau en una població o a l’aigua.",
     "soilNote": "Els primers 30 cm al punt del mapa, segons SoilGrids 2.0 (ISRIC, CC BY 4.0). Un sol punt: orientatiu en una àrea gran.",
     "climateTitle": "Clima",
     "climateKoppen": "Tipus de clima (Köppen)",

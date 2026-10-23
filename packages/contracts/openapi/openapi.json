@@ -11833,6 +11833,10 @@
               "clay": {
                 "type": "number"
               },
+              "nearKm": {
+                "type": "number",
+                "nullable": true
+              },
               "organicCarbon": {
                 "type": "number"
               },
@@ -11848,6 +11852,7 @@
             },
             "required": [
               "clay",
+              "nearKm",
               "organicCarbon",
               "ph",
               "sand",

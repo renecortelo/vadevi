@@ -1438,7 +1438,7 @@ const soils = existsSync(resolve("data/kb/region-soil.json"))
       JSON.parse(readFileSync(resolve("data/kb/region-soil.json"), "utf8")) as {
         regions: Record<
           string,
-          { clay: number; phh2o: number; sand: number; silt: number; soc: number }
+          { clay: number; nearKm?: number; phh2o: number; sand: number; silt: number; soc: number }
         >;
       }
     ).regions
@@ -1466,6 +1466,7 @@ for (const entry of entries) {
     if (soil !== undefined) {
       entry.soil = {
         clay: soil.clay,
+        nearKm: soil.nearKm ?? null,
         organicCarbon: soil.soc,
         ph: soil.phh2o,
         sand: soil.sand,

@@ -441,6 +441,7 @@
       "alkaline": "alcalino",
       "organicCarbon": "Carbono orgánico"
     },
+    "soilNear": "Leído a {{km}} km: el punto cae en una población o en el agua.",
     "soilNote": "Los primeros 30 cm en el punto del mapa, según SoilGrids 2.0 (ISRIC, CC BY 4.0). Un solo punto: orientativo en un área grande.",
     "climateTitle": "Clima",
     "climateKoppen": "Tipo de clima (Köppen)",

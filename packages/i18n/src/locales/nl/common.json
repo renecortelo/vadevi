@@ -441,6 +441,7 @@
       "alkaline": "basisch",
       "organicCarbon": "Organische koolstof"
     },
+    "soilNear": "Gelezen op {{km}} km: het punt valt in een plaats of in het water.",
     "soilNote": "De bovenste 30 cm op het punt op de kaart, volgens SoilGrids 2.0 (ISRIC, CC BY 4.0). Eén punt: een richtwaarde voor een groot gebied.",
     "climateTitle": "Klimaat",
     "climateKoppen": "Klimaattype (Köppen)",

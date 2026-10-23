@@ -327,6 +327,8 @@ export const LibraryRegionSchema = z
     soil: z
       .object({
         clay: z.number(),
+        /** Read this far from the point, which falls in a town or on water. */
+        nearKm: z.number().nullable(),
         organicCarbon: z.number(),
         ph: z.number(),
         sand: z.number(),

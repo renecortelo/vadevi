@@ -441,6 +441,7 @@
       "alkaline": "alkaline",
       "organicCarbon": "Organic carbon"
     },
+    "soilNear": "Read {{km}} km away: the point falls in a town or on water.",
     "soilNote": "The top 30 cm at the point on the map, from SoilGrids 2.0 (ISRIC, CC BY 4.0). One point: a guide for a large area.",
     "climateTitle": "Climate",
     "climateKoppen": "Climate type (Köppen)",

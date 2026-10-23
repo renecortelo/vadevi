@@ -31,8 +31,8 @@ type Layer = {
 const properties = ["clay", "silt", "sand", "phh2o", "soc"] as const;
 const thickness: Record<string, number> = { "0-5cm": 5, "15-30cm": 15, "5-15cm": 10 };
 
-async function answer(id: string, [latitude, longitude]: [number, number]) {
-  const path = resolve(cache, `${id}.json`);
+async function answer(id: string, [latitude, longitude]: [number, number], at = "") {
+  const path = resolve(cache, `${id}${at}.json`);
   if (existsSync(path)) return JSON.parse(readFileSync(path, "utf8")) as { layers: Layer[] };
   const url =
     `https://rest.isric.org/soilgrids/v2.0/properties/query?lon=${longitude.toFixed(5)}` +
@@ -55,10 +55,8 @@ async function answer(id: string, [latitude, longitude]: [number, number]) {
   throw new Error(`SoilGrids failed at ${id}.`);
 }
 
-const regions: Record<string, Record<(typeof properties)[number], number>> = {};
-const ids = Object.keys(climate.regions).sort();
-for (const [index, id] of ids.entries()) {
-  const { layers } = await answer(id, climate.regions[id]!.point);
+/** The three layers averaged by thickness; null where any is missing. */
+function averaged(layers: Layer[]): Record<(typeof properties)[number], number> | null {
   const values: Partial<Record<(typeof properties)[number], number>> = {};
   for (const layer of layers) {
     const read = layer.depths.filter((depth) => depth.values.mean !== null);
@@ -70,9 +68,49 @@ for (const [index, id] of ids.entries()) {
     values[layer.name as (typeof properties)[number]] =
       Math.round((sum / 30 / layer.unit_measure.d_factor) * 10) / 10;
   }
-  if (properties.every((name) => values[name] !== undefined)) {
-    regions[id] = values as Record<(typeof properties)[number], number>;
+  return properties.every((name) => values[name] !== undefined)
+    ? (values as Record<(typeof properties)[number], number>)
+    : null;
+}
+
+// A point in a town or on water has no soil in SoilGrids (Rioja's is in
+// Logroño): the nearest that has, a kilometre or two away, north, south,
+// east, west, then the diagonals — said as such, with its distance.
+const around = [1, 2].flatMap((km) =>
+  [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+    [1, 1],
+    [1, -1],
+    [-1, 1],
+    [-1, -1],
+  ].map(([north, east]) => ({
+    east: east! * km,
+    km: Math.hypot(north!, east!) * km,
+    north: north! * km,
+  })),
+);
+
+const regions: Record<string, Record<(typeof properties)[number], number> & { nearKm?: number }> =
+  {};
+const ids = Object.keys(climate.regions).sort();
+for (const [index, id] of ids.entries()) {
+  const point = climate.regions[id]!.point;
+  let values = averaged((await answer(id, point)).layers);
+  for (const step of values === null ? around : []) {
+    const near: [number, number] = [
+      point[0] + step.north / 111.32,
+      point[1] + step.east / (111.32 * Math.cos((point[0] * Math.PI) / 180)),
+    ];
+    const found = averaged((await answer(id, near, `@${step.north},${step.east}`)).layers);
+    if (found !== null) {
+      values = { ...found, nearKm: Math.round(step.km * 10) / 10 } as typeof found;
+      break;
+    }
   }
+  if (values !== null) regions[id] = values;
   if ((index + 1) % 100 === 0) console.info(`  ${index + 1} of ${ids.length} points read.`);
 }
 writeFileSync(
@@ -80,7 +118,7 @@ writeFileSync(
   `${JSON.stringify(
     {
       about:
-        "Clay, silt and sand (%), pH in water and organic carbon (g/kg) in the top 30 cm at each name's point, averaged over SoilGrids 2.0's 0–5, 5–15 and 15–30 cm layers by their thickness (ISRIC; Poggio et al. 2021, SOIL 7, 217–240; CC BY 4.0). `pnpm kb:fetch-soil`.",
+        "Clay, silt and sand (%), pH in water and organic carbon (g/kg) in the top 30 cm at each name's point — or, where it falls in a town or on water and SoilGrids gives none, at the nearest point that has, one or two kilometres away (`nearKm`) — averaged over SoilGrids 2.0's 0–5, 5–15 and 15–30 cm layers by their thickness (ISRIC; Poggio et al. 2021, SOIL 7, 217–240; CC BY 4.0). `pnpm kb:fetch-soil`.",
       regions,
     },
     null,
