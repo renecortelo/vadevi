@@ -833,8 +833,11 @@ async function loadLibraryStatements(
             .map((entry) => entry.sourceUrl),
         ),
       ];
+      // Every source a statement's facts come from, so each fact is cited to
+      // its own — a profile may gather six (Wikipedia in two languages, a
+      // paper, a book, the EU register).
       const chosen = urls.length > 0 ? urls : mainUrl === null ? [] : [mainUrl];
-      return Promise.all(chosen.slice(0, 3).map(sourceFor));
+      return Promise.all(chosen.map(sourceFor));
     };
     const about = `wine library, grape ${card.name}`;
     const say = async (
@@ -904,6 +907,14 @@ async function loadLibraryStatements(
         `notably grown in: ${card.regions.map((region) => `${region.name}${region.countryCode === null ? "" : ` (${region.countryCode})`}`).join(", ")}`,
         "researched",
         await citing(["regions"]),
+      );
+    }
+    if (card.styles.length > 0) {
+      await say(
+        "styles",
+        `its sources say it is made into: ${card.styles.join(", ")} wine`,
+        "researched",
+        await citing(["styles"]),
       );
     }
     if (card.synonyms.length > 0) {

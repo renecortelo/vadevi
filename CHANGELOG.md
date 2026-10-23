@@ -19,6 +19,9 @@ has the reasons.
   ABS, CHELSA…); its grapes are credited to their own sources.
 - **The lees in French**: «sur lies» and «élevage sur lies» find the lees,
   as «sur lie» and «lías» already did.
+- **Each grape fact cited to its own source**: a grape's profile cited at
+  most three sources, and some gather six; now each is cited, and its wine
+  styles reach Vicenç too.
 - **A grape by its own name first**: «Sauvignon vert» now finds Sauvignon
   vert, not Muscadelle, whose synonym it also is — on a tie, a grape's own
   name wins over another's synonym.

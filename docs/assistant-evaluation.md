@@ -28,6 +28,7 @@ every grape and asks some 450 questions in about five seconds), from
 | Card facts given                                         | 568 / 568     |
 | Researched statements cited                              | 1,068 / 1,068 |
 | Citations credited to their own source                   | 773 / 773     |
+| Each fact's own source among the citations               | 2,309 / 2,309 |
 | Grapes found by a synonym                                | 179 / 182     |
 | Registered names found                                   | 44 / 44       |
 | Their figures, climate and soil given                    | 117 / 117     |
@@ -55,3 +56,10 @@ Sauvignon vert, Vicenç answered about Muscadelle and Sauvignon blanc —
 alphabet chose. Now a name matched as a grape's own wins over the same name
 as another's synonym. The one style not found is the lees in French, «Lie»:
 three letters, too short to match without false hits, like «PX».
+
+A code review on the 23rd found one more the bank did not yet ask: a grape's
+profile cited only its first three sources, and 39 grapes gather four to six
+(Wikipedia in two languages, a paper, a book, the EU register), so a fact
+could reach Vicenç without its own. Every source is now cited, a grape's
+wine styles reach Vicenç too, and the bank checks that each card fact's own
+source is among the citations.

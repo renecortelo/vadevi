@@ -121,6 +121,8 @@ describe("Vicenç's question bank", () => {
     let researched = 0;
     let credited = 0;
     let citations = 0;
+    let sourced = 0;
+    let sourcedCited = 0;
     for (const [index, grape] of grapes.entries()) {
       const [locale, nameKey, template] = templates[index % templates.length]!;
       const name = grape.names[nameKey] ?? grape.names.en!;
@@ -161,6 +163,15 @@ describe("Vicenç's question bank", () => {
         if (statement.sourceIds.length > 0) cited += 1;
         else misses.push(`uncited: ${statement.id}`);
       }
+      // Every source a card fact comes from is among the citations.
+      const citedUrls = new Set(data.citations.map((source) => source.canonicalUrl));
+      for (const entry of grape.evidence) {
+        if (entry.field === "synonyms" || entry.field === "regions") continue;
+        sourced += 1;
+        const url = entry.sourceUrl ?? grape.wikipediaUrl;
+        if (url !== null && citedUrls.has(url)) sourcedCited += 1;
+        else misses.push(`source not cited: ${grape.id} ${entry.field}: ${url}`);
+      }
       for (const source of data.citations) {
         citations += 1;
         if (source.publisher === publisherFor(source.canonicalUrl)) credited += 1;
@@ -175,12 +186,14 @@ describe("Vicenç's question bank", () => {
         `Card facts given: ${factsGiven} / ${facts} (${percent(factsGiven, facts)})`,
         `Researched statements cited: ${cited} / ${researched} (${percent(cited, researched)})`,
         `Citations credited to their own source: ${credited} / ${citations} (${percent(credited, citations)})`,
+        `Each fact's own source among the citations: ${sourcedCited} / ${sourced} (${percent(sourcedCited, sourced)})`,
         ...misses.slice(0, 40).map((miss) => `  ${miss}`),
       ].join("\n"),
     );
     expect(factsGiven).toBe(facts);
     expect(cited).toBe(researched);
     expect(credited).toBe(citations);
+    expect(sourcedCited).toBe(sourced);
     expect(found / grapes.length).toBeGreaterThan(0.95);
   }, 1_800_000);
 
