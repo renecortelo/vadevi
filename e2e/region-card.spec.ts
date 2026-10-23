@@ -113,6 +113,9 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   await expect(soil).toContainText("Arcilla", { timeout: 15_000 });
   await expect(soil).toContainText("alcalino");
   await expect(soil).toContainText("SoilGrids 2.0");
+  // The new soil block too: no serious accessibility fault on this card.
+  const soilAxe = await new AxeBuilder({ page }).include(".library-page").analyze();
+  expect(soilAxe.violations).toEqual([]);
   await page.goto(`/library/regions/${rioja.id}`);
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.
