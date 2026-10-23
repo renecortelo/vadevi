@@ -61,6 +61,15 @@ const furmint = {
       sourceUrl: "https://doi.org/10.0000/furmint",
       value: "high",
     },
+    // And one from a name's specification, as the Spanish Ministry publishes it.
+    {
+      field: "alcohol",
+      place: "Tokaj",
+      placeId: "hu-tokaj",
+      quote: "vinos de graduación alcohólica alta",
+      sourceUrl: "https://www.mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/test.pdf",
+      value: "high",
+    },
   ],
   id: "furmint",
   names: { en: "Furmint" },
@@ -263,5 +272,9 @@ describe("Vicenç with the wine library", () => {
     );
     expect(paper?.publisher).toBe("Open-access article");
     expect(paper?.licenseIdentifier).toBe("CC-BY-4.0");
+    const specification = response?.data.citations.find((source) =>
+      source.canonicalUrl.startsWith("https://www.mapa.gob.es/"),
+    );
+    expect(specification?.publisher).toBe("Spain's Ministry of Agriculture (MAPA)");
   });
 });

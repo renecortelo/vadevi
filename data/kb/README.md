@@ -55,7 +55,9 @@ what one place's wine is, and the card says so beside it («Said of the wine
 of Tokaj», linked to that name's card): the wine of a DOC made of the grape
 alone or nearly so (its register lists that one grape, or its specification asks 85 % or more), as its specification describes it — the
 «caratteristiche organolettiche» and «abbinamenti» its Italian article copies
-from the disciplinare — or the varietal wine of the region where nearly all
+from the disciplinare, or a Spanish name's own specification (pliego de
+condiciones) as Spain's Ministry publishes it, reusable citing the source
+(the Godello of Valdeorras) — or the varietal wine of the region where nearly all
 of the grape grows (Furmint and Hárslevelű in Tokaj, from Wikivoyage). The
 reading names the place and its atlas entry (`scope` in
 `grape-readings.json`; `place`, `placeId` in the evidence), the build refuses

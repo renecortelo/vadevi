@@ -6,6 +6,13 @@ has the reasons.
 
 ## Unreleased
 
+### Library
+
+- **Godello's body, from Valdeorras's specification**: «perfectamente
+  estructurados… vinos plenos», as Spain's Ministry publishes the
+  specification, shown as said of the wine of Valdeorras and credited to it
+  in «Sources and licences» and by Vicenç.
+
 ### Vicenç
 
 - **Every fact of a grape's card, said as the card says it**: Vicenç now

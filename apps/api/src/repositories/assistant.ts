@@ -3135,6 +3135,15 @@ function librarySourceKind(
       title: `${name} — single document`,
     };
   }
+  // A Spanish name's specification (pliego de condiciones), as the Ministry
+  // publishes it.
+  if (host === "www.mapa.gob.es") {
+    return {
+      licenseIdentifier: "ES-reuse-citing-source",
+      publisher: "Spain's Ministry of Agriculture (MAPA)",
+      title: `${name} — specification (pliego de condiciones)`,
+    };
+  }
   return { licenseIdentifier: "see-source", publisher: host, title: `${name} — ${host}` };
 }
 

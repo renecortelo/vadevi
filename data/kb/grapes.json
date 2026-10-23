@@ -7,7 +7,7 @@
       "floral",
       "almond"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -129,6 +129,14 @@
         "quote": "Produce vinos monovarietales con una acidez y un nivel de alcohol medio-elevado.",
         "value": "still",
         "sourceUrl": "https://es.wikipedia.org/wiki/Godello"
+      },
+      {
+        "field": "body",
+        "quote": "En boca se muestran perfectamente estructurados, con una acidez natural que los hace frescos y elegantes, resultando vinos plenos",
+        "value": "high",
+        "sourceUrl": "https://www.mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/valdeorras_2024_12_04_tcm30-210717.pdf",
+        "place": "Valdeorras",
+        "placeId": "es-valdeorras"
       }
     ],
     "id": "godello",

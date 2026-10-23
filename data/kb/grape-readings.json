@@ -4611,6 +4611,23 @@
         "value": "high",
         "quote": "Gusto: vinoso, abbastanza tannico."
       }
+    ],
+    "godello": [
+      {
+        "field": "body",
+        "lang": "es",
+        "value": "high",
+        "quote": "En boca se muestran perfectamente estructurados, con una acidez natural que los hace frescos y elegantes, resultando vinos plenos",
+        "scope": {
+          "place": "Valdeorras",
+          "regionId": "es-valdeorras"
+        },
+        "source": {
+          "url": "https://www.mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/valdeorras_2024_12_04_tcm30-210717.pdf",
+          "volume": "mapa-pliego-valdeorras-2024",
+          "work": "mapa-pliego"
+        }
+      }
     ]
   }
 }
