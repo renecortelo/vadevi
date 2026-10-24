@@ -12,6 +12,10 @@ has the reasons.
   estructurados… vinos plenos», as Spain's Ministry publishes the
   specification, shown as said of the wine of Valdeorras and credited to it
   in «Sources and licences» and by Vicenç.
+- **Sagrantino's body and Trollinger's sweetness**: the full body of
+  Montefalco Sagrantino, a DOCG of Sagrantino alone, and the off-dry wine of
+  Württemberg, where nearly all Trollinger grows, each shown as said of that
+  place's wine.
 
 ### Vicenç
 
@@ -39,6 +43,15 @@ has the reasons.
 
 ### Maintenance
 
+- **zod 4.6.7**: closes GHSA-mrhx-c7xc-m3w5 (memory exhausted validating an
+  oversized constrained collection), which reached the Worker's request
+  validation. The browser bundle keeps zod's English messages alone (the
+  other 48 locales were loaded with `z` and never used), so the first load
+  is 221.9 KiB, down from 230.6. undici 7.30.1 under wrangler and miniflare
+  (two development-only advisories).
+- Patch and minor releases at least a week old (eslint, prettier, i18next,
+  react-router, firebase-tools, dexie…); React 19.3 and React Query 5.104
+  are held, as they add 9 KiB to the first load.
 - Vitest 4.1.12 (two moderate advisories in its mocker closed) and Wrangler
   4.151.3; the web app's build config imports its helper with its extension,
   as Vite's native config loader will require.

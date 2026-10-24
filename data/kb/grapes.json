@@ -6789,7 +6789,7 @@
       "cinnamon",
       "earthy"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -6880,6 +6880,14 @@
         "quote": "Sagrantino Secco past bij geroosterd rood vlees, hert en ander wild of harde kazen.",
         "value": "hard cheese",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Sagrantino"
+      },
+      {
+        "field": "body",
+        "quote": "The combination of the very thick-skinned Sagrantino grape and the long aging time in oak produces a typically very dense, full-bodied wine",
+        "value": "high",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Montefalco_Sagrantino",
+        "place": "Montefalco Sagrantino",
+        "placeId": "it-montefalco-sagrantino"
       }
     ],
     "id": "sagrantino",
@@ -43056,6 +43064,13 @@
         "quote": "Pijí se vychlazená až na 12 °C a dobře se hodí k rybám asijské kuchyně",
         "value": "asian cuisine",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Trol%C3%ADnsk%C3%A9"
+      },
+      {
+        "field": "sweetness",
+        "quote": "In Württemberg, the wine is often slightly sweet with some residual sugar left over after fermentation is completed.",
+        "value": "medium",
+        "place": "Württemberg",
+        "placeId": "de-wurttemberg"
       }
     ],
     "id": "trollinger",
@@ -43144,7 +43159,10 @@
         "url": "https://es.wikipedia.org/wiki/Trollinger"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Schiava",

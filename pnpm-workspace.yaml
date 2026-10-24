@@ -39,11 +39,12 @@ overrides:
   # (morgan): both under firebase-tools, both patched in a minor. Emulator only.
   qs: ">=6.16.0"
   morgan: ">=1.12.0"
-  # GHSA-rfgv-xxqx-mfg5 (undici WebSocket subprotocol DoS), under wrangler,
+  # GHSA-rfgv-xxqx-mfg5 (undici WebSocket subprotocol DoS), and in 7 also
+  # GHSA-xjj6-f33q-929c and GHSA-4qv8-2p9j-2685 (fixed in 7.30.1), under wrangler,
   # miniflare, jsdom and firebase-tools: a patch release in each major. The
   # Worker uses the runtime's fetch, not undici.
   undici@6: ">=6.28.1 <7"
-  undici@7: ">=7.29.1 <8"
+  undici@7: ">=7.30.1 <8"
   undici@8: ">=8.10.2 <9"
   # GHSA-qhr7-859c-m2p7 and GHSA-6j4f-fj2g-mc7p (brace-expansion), under
   # eslint and firebase-tools: a patch release in each major. Tooling only.
@@ -65,6 +66,9 @@ overrides:
   # never serves static files through Hono, and its own dependency is raised
   # past it; this lifts the copies under firebase-tools too. Within the major.
   hono@4: ">=4.13.11 <5"
+  # GHSA-mrhx-c7xc-m3w5 (zod before 4.6.6), in the copy
+  # @cloudflare/vitest-pool-workers pins for the test pool. Within the major.
+  zod@4: ">=4.6.7 <5"
   # Not overridden: stream-json (GHSA-528h-pc64-c93x, fixed in 3.x) and
   # csv-parse (GHSA-8cw4-87c7-c6xx, fixed in 7.x) under firebase-tools are
   # major bumps the emulator has not been tested against; both are moderate,
@@ -73,7 +77,9 @@ overrides:
 catalog:
   typescript: "6.0.3"
   vitest: "^4.1.12"
-  zod: "*"
+  # GHSA-mrhx-c7xc-m3w5: zod before 4.6.6 can exhaust memory validating an
+  # oversized constrained collection, and the Worker validates requests with it.
+  zod: "^4.6.7"
 
 allowBuilds:
   "@firebase/util": true

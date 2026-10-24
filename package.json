@@ -104,7 +104,7 @@
     "typescript-eslint": "*",
     "vitest": "catalog:",
     "wrangler": "^4.151.3",
-    "zod": "*",
+    "zod": "^4.6.7",
     "zxing-wasm": "^3.1.5"
   }
 }

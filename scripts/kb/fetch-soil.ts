@@ -28,10 +28,15 @@ type Layer = {
   name: string;
   unit_measure: { d_factor: number };
 };
+let unanswered = 0;
 const properties = ["clay", "silt", "sand", "phh2o", "soc"] as const;
 const thickness: Record<string, number> = { "0-5cm": 5, "15-30cm": 15, "5-15cm": 10 };
 
-async function answer(id: string, [latitude, longitude]: [number, number], at = "") {
+async function answer(
+  id: string,
+  [latitude, longitude]: [number, number],
+  at = "",
+): Promise<{ layers: Layer[] } | null> {
   const path = resolve(cache, `${id}${at}.json`);
   if (existsSync(path)) return JSON.parse(readFileSync(path, "utf8")) as { layers: Layer[] };
   const url =
@@ -52,11 +57,18 @@ async function answer(id: string, [latitude, longitude]: [number, number], at = 
     }
     await new Promise((done) => setTimeout(done, 60_000 * attempt));
   }
-  throw new Error(`SoilGrids failed at ${id}.`);
+  // Left out this time and not cached, so the next run asks again.
+  console.warn(`  SoilGrids did not answer for ${id}${at}; left out.`);
+  unanswered += 1;
+  return null;
 }
 
 /** The three layers averaged by thickness; null where any is missing. */
-function averaged(layers: Layer[]): Record<(typeof properties)[number], number> | null {
+function averaged(
+  answered: { layers: Layer[] } | null,
+): Record<(typeof properties)[number], number> | null {
+  if (answered === null) return null;
+  const { layers } = answered;
   const values: Partial<Record<(typeof properties)[number], number>> = {};
   for (const layer of layers) {
     const read = layer.depths.filter((depth) => depth.values.mean !== null);
@@ -98,13 +110,13 @@ const regions: Record<string, Record<(typeof properties)[number], number> & { ne
 const ids = Object.keys(climate.regions).sort();
 for (const [index, id] of ids.entries()) {
   const point = climate.regions[id]!.point;
-  let values = averaged((await answer(id, point)).layers);
+  let values = averaged(await answer(id, point));
   for (const step of values === null ? around : []) {
     const near: [number, number] = [
       point[0] + step.north / 111.32,
       point[1] + step.east / (111.32 * Math.cos((point[0] * Math.PI) / 180)),
     ];
-    const found = averaged((await answer(id, near, `@${step.north},${step.east}`)).layers);
+    const found = averaged(await answer(id, near, `@${step.north},${step.east}`));
     if (found !== null) {
       values = { ...found, nearKm: Math.round(step.km * 10) / 10 } as typeof found;
       break;
@@ -125,4 +137,7 @@ writeFileSync(
     1,
   )}\n`,
 );
-console.info(`Soil for ${Object.keys(regions).length} of ${ids.length} points.`);
+console.info(
+  `Soil for ${Object.keys(regions).length} of ${ids.length} points` +
+    (unanswered > 0 ? `; ${unanswered} requests unanswered, run again to retry them.` : "."),
+);

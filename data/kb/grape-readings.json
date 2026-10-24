@@ -3529,6 +3529,21 @@
           "game": "wild",
           "hard cheese": "harde kazen"
         }
+      },
+      {
+        "field": "body",
+        "lang": "en",
+        "value": "high",
+        "quote": "The combination of the very thick-skinned Sagrantino grape and the long aging time in oak produces a typically very dense, full-bodied wine",
+        "scope": {
+          "place": "Montefalco Sagrantino",
+          "regionId": "it-montefalco-sagrantino"
+        },
+        "source": {
+          "url": "https://en.wikipedia.org/wiki/Montefalco_Sagrantino",
+          "volume": "enwiki-montefalco-sagrantino",
+          "work": "wikipedia-en"
+        }
       }
     ],
     "sangiovese": [
@@ -4160,6 +4175,16 @@
         "words": {
           "fish": "rybám",
           "asian cuisine": "asijské kuchyně"
+        }
+      },
+      {
+        "field": "sweetness",
+        "lang": "en",
+        "value": "medium",
+        "quote": "In Württemberg, the wine is often slightly sweet with some residual sugar left over after fermentation is completed.",
+        "scope": {
+          "place": "Württemberg",
+          "regionId": "de-wurttemberg"
         }
       }
     ],

@@ -1,11 +1,34 @@
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { createRequire } from "node:module";
+import { defineConfig, type Plugin } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 import { libraryFiguresPlugin } from "./library-figures.ts";
 
+// zod's `z` namespace, which @hono/zod-openapi extends as a whole, re-exports
+// every one of zod's 49 message locales; the app sets none and zod defaults to
+// English, so the browser bundle gets English alone.
+const zodEnglishOnly: Plugin = {
+  enforce: "pre",
+  load(id) {
+    return id === "\0zod-locales-en"
+      ? `export { default as en } from ${JSON.stringify(zodLocale)};`
+      : null;
+  },
+  name: "zod-english-only",
+  resolveId(source, importer) {
+    return source === "../locales/index.js" &&
+      importer !== undefined &&
+      /[\\/]zod[\\/]v4[\\/]/.test(importer)
+      ? "\0zod-locales-en"
+      : null;
+  },
+};
+const zodLocale = createRequire(import.meta.url).resolve("zod/v4/locales/en.js");
+
 export default defineConfig({
   plugins: [
+    zodEnglishOnly,
     react(),
     // The library's figures, counted from data/kb at build (the sign-in reel).
     libraryFiguresPlugin(),
