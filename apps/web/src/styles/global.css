@@ -1911,23 +1911,42 @@ p {
   max-inline-size: 70rem;
 }
 
-/* The wine's heading: its photo, portrait, at the left; name and provenance
-   beside it; the tastings at the right on a wide screen, under it on a phone. */
+/* The wine's heading, built like its card in the Memory: the way back across
+   the top, then the photo as a tall column at the left — a bottle stands, so
+   the column runs the height of the text and shows it whole — and the name,
+   provenance and facts beside it; the tastings at the right on a wide screen,
+   under it all on a phone. */
 .evidence-heading {
-  align-items: end;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4) var(--space-5);
+  align-items: start;
+  column-gap: var(--space-5);
+  display: grid;
+  grid-template-areas:
+    "back back back"
+    "photo text history";
+  grid-template-columns: 9rem minmax(0, 1fr) auto;
   max-inline-size: none;
+  row-gap: var(--space-4);
+}
+
+/* Without a photo the text takes its column. */
+.evidence-heading:not(:has(.evidence-heading__photo)) {
+  grid-template-areas:
+    "back back"
+    "text history";
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.evidence-heading > .evidence-heading__back {
+  grid-area: back;
 }
 
 .evidence-heading__photo {
-  aspect-ratio: 3 / 4;
+  align-self: stretch;
   background: var(--color-surface-muted);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  flex: 0 0 auto;
-  inline-size: 9rem;
+  grid-area: photo;
+  min-block-size: 12rem;
   overflow: hidden;
 }
 
@@ -1938,23 +1957,59 @@ p {
 }
 
 .evidence-heading__text {
-  flex: 1 1 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  grid-area: text;
   min-inline-size: 0;
 }
 
+.evidence-heading__text > h1 {
+  margin: 0;
+}
+
+/* Grapes, atlas, last tasting: one size and one colour, label then link,
+   like the facts on a card — not the heading's larger lead paragraph. */
+.evidence-heading .evidence-heading__text > p.evidence-heading__fact {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.evidence-heading__actions {
+  margin: var(--space-1) 0 0;
+}
+
 .evidence-heading > .tasting-history {
-  flex: 0 1 auto;
-  margin-inline-start: auto;
+  align-self: end;
+  grid-area: history;
 }
 
 @media (max-width: 40rem) {
-  .evidence-heading__photo {
-    inline-size: 6.5rem;
+  .evidence-heading {
+    column-gap: var(--space-4);
+    grid-template-areas:
+      "back back"
+      "photo text"
+      "history history";
+    grid-template-columns: 7rem minmax(0, 1fr);
   }
 
-  .evidence-heading > .tasting-history {
-    flex-basis: 100%;
-    margin-inline-start: 0;
+  .evidence-heading:not(:has(.evidence-heading__photo)) {
+    grid-template-areas:
+      "back"
+      "text"
+      "history";
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .evidence-heading__photo {
+    min-block-size: 10rem;
+  }
+
+  /* Beside the photo the column is narrow: the lead and the provenance a
+     step smaller, so they read as lines rather than a heap. */
+  .evidence-heading .evidence-heading__text > p:not(.eyebrow, .evidence-heading__fact) {
+    font-size: var(--text-base);
   }
 }
 
@@ -3344,8 +3399,7 @@ p {
     inline-size: 100%;
   }
 
-  .assistant-chat__heading,
-  .evidence-heading {
+  .assistant-chat__heading {
     align-items: stretch;
     display: grid;
   }
@@ -4098,27 +4152,34 @@ p {
 /* The link out to a map. It sits inline beside a place name, so it must not
    inherit a button's block layout when it is given an action-link class. */
 .map-link {
-  color: var(--color-accent);
-  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-underline-offset: 0.2em;
   white-space: nowrap;
 }
 
-/* A place's name that opens the map: inherits its line's size and colour,
-   underlined so it reads as a way out, with a pin so it reads as a place. */
+/* A place's name that opens the map: the same size, weight and colour as
+   every other inline link (.text-link) wherever it sits — it used to inherit
+   its line's size and came out larger than the links beside it — with a pin
+   so it reads as a place. */
 .venue-link {
-  color: inherit;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: var(--color-field-border);
   text-underline-offset: 0.2em;
-  transition: text-decoration-color var(--motion-fast);
+  transition: color var(--motion-fast);
 }
 
 .venue-link:hover {
-  text-decoration-color: currentcolor;
+  color: var(--color-text);
 }
 
+/* Inline-block, so the link's underline runs under the name, not the pin. */
 .venue-link::before {
   content: "📍";
+  display: inline-block;
   font-size: 0.85em;
   margin-inline-end: 0.2em;
 }

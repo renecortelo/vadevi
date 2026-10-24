@@ -462,6 +462,12 @@ export function WineEvidencePage() {
         />
       )}
       <header className="page-heading evidence-heading">
+        {/* The shell's way back names where the reader came from; a wine
+            reached from a library card goes back along its trail. Above the
+            photo, across the whole heading. */}
+        <p className="evidence-heading__back">
+          <TrailBackLink />
+        </p>
         {/* The bottle itself, beside its name. The card showed it and this
             screen did not, so opening a wine lost the one thing that made it
             recognisable at a glance. */}
@@ -475,12 +481,6 @@ export function WineEvidencePage() {
           </div>
         )}
         <div className="evidence-heading__text">
-          {/* Reached from the cellar book, the way back to it first. */}
-          {/* The shell's way back names where the reader came from; a wine
-              reached from a library card goes back along its trail. */}
-          <p className="evidence-heading__back">
-            <TrailBackLink />
-          </p>
           <p className="eyebrow">{t("evidence.eyebrow")}</p>
           <h1>{wine?.displayName ?? t("evidence.title")}</h1>
           <p>
@@ -502,19 +502,12 @@ export function WineEvidencePage() {
                     }`,
               ]
                 .filter(Boolean)
-                .join(" · ")}{" "}
-              <button
-                className="action-link action-link--secondary"
-                onClick={() => setEditingWine(true)}
-                type="button"
-              >
-                {t("memory.editAction")}
-              </button>
+                .join(" · ")}
             </p>
           )}
           {/* Its grapes, each a way into the wine library's card for it. */}
           {wine === null || wine.grapes.length === 0 ? null : (
-            <p className="evidence-heading__grapes">
+            <p className="evidence-heading__grapes evidence-heading__fact">
               <span>{t("library.grapesLink")}:</span>
               {/* A linked grape opens its own card, named in the app's language. */}
               {wine.grapes.map((grape) => (
@@ -534,7 +527,7 @@ export function WineEvidencePage() {
             </p>
           )}
           {atlasRegion === null ? null : (
-            <p className="evidence-heading__grapes">
+            <p className="evidence-heading__grapes evidence-heading__fact">
               <span>{t("library.atlasEyebrow")}:</span>
               <Link
                 className="text-link"
@@ -549,7 +542,7 @@ export function WineEvidencePage() {
               on the tasting, but this is where you come looking for a wine's
               history, so this is where it has to be reachable. */}
           {wine?.lastVenue === undefined ? null : (
-            <p className="evidence-heading__venue">
+            <p className="evidence-heading__venue evidence-heading__fact">
               {/* The sentence with the place's name as the link to the map. */}
               {t("evidence.lastVenue", {
                 date: new Date(wine.lastVenue.tastedAt).toLocaleDateString(i18n.language),
@@ -573,6 +566,19 @@ export function WineEvidencePage() {
                     </Fragment>
                   ),
                 )}
+            </p>
+          )}
+          {/* Editing on its own line, after what it edits, rather than squeezed
+              in beside the vintage and the country. */}
+          {wine === null ? null : (
+            <p className="evidence-heading__actions">
+              <button
+                className="action-link action-link--secondary"
+                onClick={() => setEditingWine(true)}
+                type="button"
+              >
+                {t("memory.editAction")}
+              </button>
             </p>
           )}
         </div>
