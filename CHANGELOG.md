@@ -65,6 +65,15 @@ has the reasons.
 
 ### Finding your way
 
+- **A wine's page, laid out like its card**: the photo is a tall column at the
+  left, so the bottle shows whole, with the name, provenance, grapes, atlas
+  and last tasting beside it, each fact on its own line at one size, and
+  «Edit» on its own line after them; the way back runs across the top.
+- **Every place link the size of the links beside it**: a tasting's venue
+  («📍 Casa Muntaner») took its line's size and came out larger than the
+  grape and atlas links; venues and map links now read like every other
+  inline link, wherever they appear, with the underline under the name only.
+
 - **The sign-in screen at once**: a device that holds no session to restore
   draws it without waiting for the configuration and Google's sign-in script
   (the wait that kept the first paint over 2.5 s on a phone); «Continue with
