@@ -156,7 +156,9 @@ test.describe("performance budgets", () => {
       await page.getByRole("button", { name: /review/i }).click();
       const started = Date.now();
       await page.getByRole("button", { name: /^confirm/i }).click();
-      await expect(page.getByRole("status").first()).toBeVisible({ timeout: 15_000 });
+      // The saved notice, not the draft's autosave line, which is a status too
+      // and shows from the start.
+      await expect(page.locator('.notice-card[role="status"]')).toBeVisible({ timeout: 15_000 });
       saves.push(Date.now() - started);
     }
     lines.push(report("Quick-log save (online)", saves, budgets.quickLogSaveP95));

@@ -11,22 +11,27 @@ shared runner would turn them into noise rather than evidence.
 
 ## What was measured
 
-Re-measured 23 October 2026, after the winery suggestions, the soil and the
-labelled grape facts. Nothing regressed; the sign-in LCP is a little lower.
-The initial route's JavaScript is 229.8 KiB gzip of its 250 KiB budget.
+Re-measured 24 October 2026, after zod 4.6 (its English messages alone in the
+browser), firebase 13 and Vitest 5. Nothing regressed. The initial route's
+JavaScript is 222.0 KiB gzip of its 250 KiB budget.
 
 | Measure                              | Median | p95     | Budget  | Verdict |
 | ------------------------------------ | ------ | ------- | ------- | ------- |
-| LCP — sign-in, Slow 4G, 4× CPU       | 324 ms | 2044 ms | 2500 ms | within  |
-| API read `GET /me/bootstrap`         | 22 ms  | 31 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/wines`    | 13 ms  | 21 ms   | 500 ms  | within  |
-| API read `GET /spaces/{id}/sessions` | 14 ms  | 108 ms  | 500 ms  | within  |
-| API read `GET /library/grapes`       | 18 ms  | 44 ms   | 500 ms  | within  |
-| Interaction — Memory view switch     | 71 ms  | 84 ms   | 200 ms  | within  |
-| Quick-log save, online               | 25 ms  | 35 ms   | 800 ms  | within  |
+| LCP — sign-in, Slow 4G, 4× CPU       | 276 ms | 1960 ms | 2500 ms | within  |
+| API read `GET /me/bootstrap`         | 14 ms  | 28 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/wines`    | 13 ms  | 20 ms   | 500 ms  | within  |
+| API read `GET /spaces/{id}/sessions` | 10 ms  | 19 ms   | 500 ms  | within  |
+| API read `GET /library/grapes`       | 15 ms  | 34 ms   | 500 ms  | within  |
+| Interaction — Memory view switch     | 85 ms  | 99 ms   | 200 ms  | within  |
+| Quick-log save, online               | 64 ms  | 80 ms   | 800 ms  | within  |
 
-On 18 October 2026 the same measures gave 428/2124 ms for the sign-in LCP and
-12–15 ms medians for the API reads.
+**The quick-log save was measured short before.** The test stopped its clock
+at the first `role="status"` on the page, and the draft's autosave line is one
+that shows from the start, so it timed little more than the click (25/35 ms on
+23 October). It now waits for the saved notice itself.
+
+On 23 October 2026 the sign-in LCP was 324/2044 ms; on 18 October, 428/2124 ms,
+with 12–15 ms medians for the API reads.
 
 ### The deployed sign-in page, on a phone's profile
 

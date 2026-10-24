@@ -49,6 +49,10 @@ has the reasons.
   other 48 locales were loaded with `z` and never used), so the first load
   is 221.9 KiB, down from 230.6. undici 7.30.1 under wrangler and miniflare
   (two development-only advisories).
+- Playwright 1.64 and axe 4.14. Three end-to-end tests waited, after
+  «Confirm», for the first status on the page, which is the draft's autosave
+  line; they now wait for the saved notice. The quick-log save had been
+  timed the same way: it takes 64/80 ms (median/p95), not 25/35 ms.
 - Vitest 5 with `@cloudflare/vitest-plugin` (the renamed Workers test pool),
   firebase 13, vite-plugin-pwa 2 and dotenv 18; TypeScript 7 waits for
   typescript-eslint to support it.

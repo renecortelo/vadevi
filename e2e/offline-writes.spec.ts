@@ -103,6 +103,8 @@ async function quickLog(page: Page, producer: string, name: string) {
     .fill(name);
   await page.getByRole("button", { name: /review/i }).click();
   await page.getByRole("button", { name: /^confirm/i }).click();
+  // Kept, online or queued: leaving before the notice could drop the write.
+  await expect(page.locator('.notice-card[role="status"]')).toBeVisible({ timeout: 15_000 });
 }
 
 /**
