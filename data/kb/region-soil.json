@@ -1,5 +1,5 @@
 {
- "about": "Clay, silt and sand (%), pH in water and organic carbon (g/kg) in the top 30 cm at each name's point, averaged over SoilGrids 2.0's 0–5, 5–15 and 15–30 cm layers by their thickness (ISRIC; Poggio et al. 2021, SOIL 7, 217–240; CC BY 4.0). `pnpm kb:fetch-soil`.",
+ "about": "Clay, silt and sand (%), pH in water and organic carbon (g/kg) in the top 30 cm at each name's point — or, where it falls in a town or on water and SoilGrids gives none, at the nearest point that has, one or two kilometres away (`nearKm`) — averaged over SoilGrids 2.0's 0–5, 5–15 and 15–30 cm layers by their thickness (ISRIC; Poggio et al. 2021, SOIL 7, 217–240; CC BY 4.0). `pnpm kb:fetch-soil`.",
  "regions": {
   "ar-25-de-mayo": {
    "clay": 16.3,
@@ -70,6 +70,22 @@
    "sand": 62.1,
    "silt": 23.2,
    "soc": 9.8
+  },
+  "ar-balcarce": {
+   "clay": 22.4,
+   "phh2o": 6.8,
+   "sand": 42.8,
+   "silt": 34.8,
+   "soc": 30.1,
+   "nearKm": 2
+  },
+  "ar-barrancas": {
+   "clay": 15.9,
+   "phh2o": 7.9,
+   "sand": 46.9,
+   "silt": 37.2,
+   "soc": 9,
+   "nearKm": 1
   },
   "ar-barreal": {
    "clay": 16.7,
@@ -155,6 +171,14 @@
    "silt": 55,
    "soc": 16.6
   },
+  "ar-colonia-caroya": {
+   "clay": 28,
+   "phh2o": 6.9,
+   "sand": 13.7,
+   "silt": 58.3,
+   "soc": 14.7,
+   "nearKm": 1
+  },
   "ar-confluencia": {
    "clay": 14.6,
    "phh2o": 7.7,
@@ -190,6 +214,22 @@
    "silt": 28,
    "soc": 8
   },
+  "ar-el-hoyo": {
+   "clay": 25.6,
+   "phh2o": 6.2,
+   "sand": 40.1,
+   "silt": 34.4,
+   "soc": 63.8,
+   "nearKm": 1
+  },
+  "ar-el-paraiso": {
+   "clay": 15.9,
+   "phh2o": 7.9,
+   "sand": 46.9,
+   "silt": 37.2,
+   "soc": 9,
+   "nearKm": 1
+  },
   "ar-el-peral": {
    "clay": 18.7,
    "phh2o": 7.9,
@@ -218,6 +258,14 @@
    "silt": 20.3,
    "soc": 9.4
   },
+  "ar-general-conesa": {
+   "clay": 18.8,
+   "phh2o": 7.3,
+   "sand": 59.8,
+   "silt": 21.5,
+   "soc": 22.8,
+   "nearKm": 1
+  },
   "ar-general-lamadrid": {
    "clay": 21,
    "phh2o": 7.8,
@@ -238,6 +286,14 @@
    "sand": 58,
    "silt": 25.4,
    "soc": 10.2
+  },
+  "ar-guaymallen": {
+   "clay": 15.9,
+   "phh2o": 8,
+   "sand": 53.6,
+   "silt": 30.5,
+   "soc": 8.8,
+   "nearKm": 1.4
   },
   "ar-hilario-valle-de-calingasta": {
    "clay": 14.6,
@@ -280,6 +336,14 @@
    "sand": 45.8,
    "silt": 25.2,
    "soc": 19.1
+  },
+  "ar-la-consulta": {
+   "clay": 12.8,
+   "phh2o": 7.8,
+   "sand": 71.2,
+   "silt": 16,
+   "soc": 8.6,
+   "nearKm": 1
   },
   "ar-la-paz": {
    "clay": 19.5,
@@ -343,6 +407,14 @@
    "sand": 53.2,
    "silt": 30.6,
    "soc": 8.7
+  },
+  "ar-maipu": {
+   "clay": 15.9,
+   "phh2o": 7.9,
+   "sand": 46.9,
+   "silt": 37.2,
+   "soc": 9,
+   "nearKm": 1
   },
   "ar-mendoza": {
    "clay": 22,
@@ -448,6 +520,14 @@
    "sand": 54.6,
    "silt": 29,
    "soc": 8.4
+  },
+  "ar-russel": {
+   "clay": 15.9,
+   "phh2o": 7.9,
+   "sand": 46.9,
+   "silt": 37.2,
+   "soc": 9,
+   "nearKm": 1
   },
   "ar-salta": {
    "clay": 23.8,
@@ -561,6 +641,14 @@
    "silt": 31.2,
    "soc": 5.1
   },
+  "ar-sarmiento-chubut": {
+   "clay": 25.7,
+   "phh2o": 8.1,
+   "sand": 58.1,
+   "silt": 16.2,
+   "soc": 14.4,
+   "nearKm": 1
+  },
   "ar-sarmiento-san-juan": {
    "clay": 14.4,
    "phh2o": 8.2,
@@ -589,12 +677,28 @@
    "silt": 21.2,
    "soc": 13.5
   },
+  "ar-tandil": {
+   "clay": 30.4,
+   "phh2o": 6.1,
+   "sand": 39.1,
+   "silt": 30.5,
+   "soc": 44.2,
+   "nearKm": 2
+  },
   "ar-tinogasta": {
    "clay": 16.3,
    "phh2o": 7.8,
    "sand": 64.7,
    "silt": 19.1,
    "soc": 18.7
+  },
+  "ar-trevelin": {
+   "clay": 22.3,
+   "phh2o": 6.2,
+   "sand": 43,
+   "silt": 34.8,
+   "soc": 61.1,
+   "nearKm": 1
   },
   "ar-tucuman": {
    "clay": 23.5,
@@ -623,6 +727,14 @@
    "sand": 49,
    "silt": 28.2,
    "soc": 14.7
+  },
+  "ar-valle-de-cafayate": {
+   "clay": 19.5,
+   "phh2o": 7.3,
+   "sand": 51.9,
+   "silt": 28.7,
+   "soc": 11.1,
+   "nearKm": 1
   },
   "ar-valle-de-chanarmuyo": {
    "clay": 14.4,
@@ -708,6 +820,14 @@
    "silt": 23,
    "soc": 27.3
   },
+  "ar-vista-flores": {
+   "clay": 13.7,
+   "phh2o": 7.8,
+   "sand": 72.4,
+   "silt": 14,
+   "soc": 11.9,
+   "nearKm": 1
+  },
   "ar-vistalba": {
    "clay": 14.8,
    "phh2o": 7.9,
@@ -785,6 +905,14 @@
    "silt": 46.2,
    "soc": 18.2
   },
+  "at-neusiedlersee": {
+   "clay": 28.2,
+   "phh2o": 6.5,
+   "sand": 34.1,
+   "silt": 37.7,
+   "soc": 25.8,
+   "nearKm": 1
+  },
   "at-niederosterreich": {
    "clay": 26.3,
    "phh2o": 7.2,
@@ -798,6 +926,22 @@
    "sand": 18.9,
    "silt": 54.4,
    "soc": 25
+  },
+  "at-rosalia": {
+   "clay": 31,
+   "phh2o": 5.8,
+   "sand": 26.2,
+   "silt": 42.9,
+   "soc": 23.7,
+   "nearKm": 1
+  },
+  "at-ruster-ausbruch": {
+   "clay": 32.3,
+   "phh2o": 7.1,
+   "sand": 27.6,
+   "silt": 40.2,
+   "soc": 19.7,
+   "nearKm": 1
   },
   "at-salzburg": {
    "clay": 23.6,
@@ -861,6 +1005,14 @@
    "sand": 30.9,
    "silt": 44.9,
    "soc": 28.5
+  },
+  "at-wachau": {
+   "clay": 22.6,
+   "phh2o": 5.3,
+   "sand": 35.4,
+   "silt": 42.1,
+   "soc": 31.8,
+   "nearKm": 1
   },
   "at-wagram": {
    "clay": 25.2,
@@ -945,6 +1097,14 @@
    "sand": 63.3,
    "silt": 8.8,
    "soc": 30.6
+  },
+  "au-beechworth": {
+   "clay": 18.9,
+   "phh2o": 5.9,
+   "sand": 62,
+   "silt": 19.1,
+   "soc": 43.1,
+   "nearKm": 1
   },
   "au-bendigo": {
    "clay": 21.7,
@@ -1408,6 +1568,14 @@
    "silt": 17,
    "soc": 13.3
   },
+  "au-perth-hills": {
+   "clay": 14.4,
+   "phh2o": 6.1,
+   "sand": 75.8,
+   "silt": 9.8,
+   "soc": 39.8,
+   "nearKm": 1
+  },
   "au-piccadilly-valley": {
    "clay": 18.7,
    "phh2o": 5.9,
@@ -1576,6 +1744,14 @@
    "silt": 11.4,
    "soc": 14.5
   },
+  "au-swan-valley": {
+   "clay": 20,
+   "phh2o": 6.2,
+   "sand": 68.3,
+   "silt": 11.8,
+   "soc": 37.6,
+   "nearKm": 1
+  },
   "au-tasmania": {
    "clay": 20.9,
    "phh2o": 5.2,
@@ -1730,12 +1906,28 @@
    "silt": 35.3,
    "soc": 44.2
   },
+  "bg-asenovgrad": {
+   "clay": 31.6,
+   "phh2o": 7.1,
+   "sand": 34.3,
+   "silt": 34.2,
+   "soc": 18.9,
+   "nearKm": 1
+  },
   "bg-bolyarovo": {
    "clay": 26.9,
    "phh2o": 7,
    "sand": 38.4,
    "silt": 34.8,
    "soc": 20.1
+  },
+  "bg-brestnik": {
+   "clay": 31,
+   "phh2o": 6.5,
+   "sand": 34.5,
+   "silt": 34.5,
+   "soc": 24.5,
+   "nearKm": 1
   },
   "bg-chernomorski-raion": {
    "clay": 44.4,
@@ -1751,12 +1943,36 @@
    "silt": 35.2,
    "soc": 18.8
   },
+  "bg-dragoevo": {
+   "clay": 31,
+   "phh2o": 6.8,
+   "sand": 10.7,
+   "silt": 58.4,
+   "soc": 22.3,
+   "nearKm": 1
+  },
   "bg-dunavska-ravnina": {
    "clay": 35.8,
    "phh2o": 7,
    "sand": 6.4,
    "silt": 57.8,
    "soc": 16.3
+  },
+  "bg-evksinograd": {
+   "clay": 35,
+   "phh2o": 7.1,
+   "sand": 19.6,
+   "silt": 45.3,
+   "soc": 37.3,
+   "nearKm": 1
+  },
+  "bg-han-krum": {
+   "clay": 33.2,
+   "phh2o": 6.7,
+   "sand": 12.5,
+   "silt": 54.3,
+   "soc": 26.1,
+   "nearKm": 1
   },
   "bg-harsovo": {
    "clay": 22.5,
@@ -1779,12 +1995,68 @@
    "silt": 27.6,
    "soc": 18.3
   },
+  "bg-ivailovgrad": {
+   "clay": 28.3,
+   "phh2o": 6.7,
+   "sand": 40,
+   "silt": 31.8,
+   "soc": 17.7,
+   "nearKm": 1
+  },
+  "bg-karlovo": {
+   "clay": 23.9,
+   "phh2o": 6.3,
+   "sand": 47.3,
+   "silt": 28.8,
+   "soc": 22.7,
+   "nearKm": 1
+  },
+  "bg-karnobat": {
+   "clay": 40.7,
+   "phh2o": 6.6,
+   "sand": 21.2,
+   "silt": 38.2,
+   "soc": 18.8,
+   "nearKm": 1
+  },
+  "bg-lom": {
+   "clay": 38,
+   "phh2o": 7,
+   "sand": 24,
+   "silt": 38.1,
+   "soc": 18.1,
+   "nearKm": 1
+  },
+  "bg-lovech": {
+   "clay": 37.6,
+   "phh2o": 6.5,
+   "sand": 18.4,
+   "silt": 44,
+   "soc": 21.2,
+   "nearKm": 1
+  },
   "bg-lozitsa": {
    "clay": 36.2,
    "phh2o": 6.7,
    "sand": 10.4,
    "silt": 53.5,
    "soc": 24.1
+  },
+  "bg-lyaskovets": {
+   "clay": 36.9,
+   "phh2o": 7.1,
+   "sand": 10.4,
+   "silt": 52.7,
+   "soc": 18.5,
+   "nearKm": 1
+  },
+  "bg-lyubimets": {
+   "clay": 26.8,
+   "phh2o": 7.3,
+   "sand": 34.1,
+   "silt": 39.1,
+   "soc": 14.8,
+   "nearKm": 1
   },
   "bg-melnik": {
    "clay": 21.3,
@@ -1793,12 +2065,84 @@
    "silt": 31.5,
    "soc": 20.3
   },
+  "bg-montana": {
+   "clay": 41,
+   "phh2o": 6.6,
+   "sand": 19.6,
+   "silt": 39.4,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
+  "bg-nova-zagora": {
+   "clay": 45.3,
+   "phh2o": 7,
+   "sand": 17.6,
+   "silt": 37,
+   "soc": 17.9,
+   "nearKm": 1
+  },
+  "bg-novi-pazar": {
+   "clay": 34.1,
+   "phh2o": 7.2,
+   "sand": 11.1,
+   "silt": 54.8,
+   "soc": 18.4,
+   "nearKm": 1
+  },
   "bg-novo-selo": {
    "clay": 33.8,
    "phh2o": 6.9,
    "sand": 27.9,
    "silt": 38.3,
    "soc": 16.7
+  },
+  "bg-oryahovitsa": {
+   "clay": 36.2,
+   "phh2o": 6.6,
+   "sand": 31.2,
+   "silt": 32.6,
+   "soc": 22.8,
+   "nearKm": 1
+  },
+  "bg-pavlikeni": {
+   "clay": 28.9,
+   "phh2o": 7,
+   "sand": 7.6,
+   "silt": 63.5,
+   "soc": 16.5,
+   "nearKm": 1.4
+  },
+  "bg-pazardzhik": {
+   "clay": 25.4,
+   "phh2o": 7.1,
+   "sand": 44,
+   "silt": 30.6,
+   "soc": 18.2,
+   "nearKm": 1.4
+  },
+  "bg-perushtitsa": {
+   "clay": 31.5,
+   "phh2o": 7.1,
+   "sand": 37.4,
+   "silt": 31.1,
+   "soc": 16.7,
+   "nearKm": 1
+  },
+  "bg-pleven": {
+   "clay": 35,
+   "phh2o": 6.5,
+   "sand": 14.3,
+   "silt": 50.8,
+   "soc": 20,
+   "nearKm": 1
+  },
+  "bg-plovdiv": {
+   "clay": 22.3,
+   "phh2o": 7.2,
+   "sand": 44.6,
+   "silt": 33.1,
+   "soc": 23.4,
+   "nearKm": 2
   },
   "bg-ruse": {
    "clay": 36.9,
@@ -1814,12 +2158,76 @@
    "silt": 39.1,
    "soc": 24.2
   },
+  "bg-sandanski": {
+   "clay": 23.5,
+   "phh2o": 7.1,
+   "sand": 53,
+   "silt": 23.5,
+   "soc": 17.3,
+   "nearKm": 1
+  },
+  "bg-septemvri": {
+   "clay": 27.2,
+   "phh2o": 6.6,
+   "sand": 42,
+   "silt": 30.8,
+   "soc": 15.9,
+   "nearKm": 1
+  },
+  "bg-shivachevo": {
+   "clay": 32.4,
+   "phh2o": 6.5,
+   "sand": 34.5,
+   "silt": 33.1,
+   "soc": 20,
+   "nearKm": 1
+  },
+  "bg-shumen": {
+   "clay": 44.4,
+   "phh2o": 7.1,
+   "sand": 9.5,
+   "silt": 46.1,
+   "soc": 18.7,
+   "nearKm": 1
+  },
+  "bg-slavyantsi": {
+   "clay": 35.2,
+   "phh2o": 6.6,
+   "sand": 31,
+   "silt": 33.8,
+   "soc": 19.6,
+   "nearKm": 1
+  },
+  "bg-sliven": {
+   "clay": 32.5,
+   "phh2o": 6.8,
+   "sand": 29.6,
+   "silt": 37.8,
+   "soc": 19.9,
+   "nearKm": 1.4
+  },
   "bg-stambolovo": {
    "clay": 29.6,
    "phh2o": 6.6,
    "sand": 33.5,
    "silt": 37,
    "soc": 18.3
+  },
+  "bg-stara-zagora": {
+   "clay": 29.8,
+   "phh2o": 6.6,
+   "sand": 36.7,
+   "silt": 33.6,
+   "soc": 22.1,
+   "nearKm": 1.4
+  },
+  "bg-suhindol": {
+   "clay": 43.1,
+   "phh2o": 6.4,
+   "sand": 12.3,
+   "silt": 44.7,
+   "soc": 28.6,
+   "nearKm": 1
   },
   "bg-sungurlare": {
    "clay": 36.9,
@@ -1828,6 +2236,22 @@
    "silt": 34.9,
    "soc": 17
   },
+  "bg-svishtov": {
+   "clay": 29.9,
+   "phh2o": 7,
+   "sand": 20.6,
+   "silt": 49.4,
+   "soc": 34,
+   "nearKm": 1
+  },
+  "bg-targovishte": {
+   "clay": 38.3,
+   "phh2o": 7,
+   "sand": 7,
+   "silt": 54.8,
+   "soc": 19.4,
+   "nearKm": 1
+  },
   "bg-trakiiska-nizina": {
    "clay": 37.3,
    "phh2o": 6.8,
@@ -1835,12 +2259,44 @@
    "silt": 44.3,
    "soc": 16.8
   },
+  "bg-varbitsa": {
+   "clay": 39.1,
+   "phh2o": 6.8,
+   "sand": 10.1,
+   "silt": 50.7,
+   "soc": 18.2,
+   "nearKm": 1
+  },
+  "bg-veliki-preslav": {
+   "clay": 38.6,
+   "phh2o": 6.9,
+   "sand": 11.3,
+   "silt": 50.1,
+   "soc": 23.8,
+   "nearKm": 1
+  },
+  "bg-vidin": {
+   "clay": 34.8,
+   "phh2o": 7,
+   "sand": 30.9,
+   "silt": 34.3,
+   "soc": 18.6,
+   "nearKm": 2
+  },
   "bg-vratsa": {
    "clay": 43.1,
    "phh2o": 6.3,
    "sand": 10.3,
    "silt": 46.6,
    "soc": 18.4
+  },
+  "bg-yambol": {
+   "clay": 40.2,
+   "phh2o": 7.1,
+   "sand": 19,
+   "silt": 40.8,
+   "soc": 16.7,
+   "nearKm": 1.4
   },
   "bg-yuzhno-chernomorie": {
    "clay": 36.9,
@@ -1856,6 +2312,14 @@
    "silt": 33.9,
    "soc": 28.9
   },
+  "br-altos-montes": {
+   "clay": 49.2,
+   "phh2o": 5.3,
+   "sand": 18,
+   "silt": 32.8,
+   "soc": 33.9,
+   "nearKm": 1
+  },
   "br-bituruna": {
    "clay": 57.3,
    "phh2o": 5,
@@ -1869,6 +2333,14 @@
    "sand": 35,
    "silt": 31.5,
    "soc": 26.3
+  },
+  "br-farroupilha": {
+   "clay": 46.8,
+   "phh2o": 5.1,
+   "sand": 16.4,
+   "silt": 36.9,
+   "soc": 36,
+   "nearKm": 1
   },
   "br-monte-belo": {
    "clay": 44.8,
@@ -1926,6 +2398,14 @@
    "silt": 29.1,
    "soc": 20.9
   },
+  "ca-beamsville-bench": {
+   "clay": 33.7,
+   "phh2o": 6.7,
+   "sand": 22.2,
+   "silt": 44.1,
+   "soc": 24.9,
+   "nearKm": 1
+  },
   "ca-british-columbia": {
    "clay": 24.2,
    "phh2o": 6,
@@ -1933,12 +2413,44 @@
    "silt": 38.9,
    "soc": 19.7
   },
+  "ca-cowichan-valley": {
+   "clay": 21.1,
+   "phh2o": 5.4,
+   "sand": 36.2,
+   "silt": 42.8,
+   "soc": 57.5,
+   "nearKm": 1
+  },
   "ca-creek-shores": {
    "clay": 26.7,
    "phh2o": 6.5,
    "sand": 42.2,
    "silt": 31.2,
    "soc": 32.8
+  },
+  "ca-east-kelowna-slopes": {
+   "clay": 27.7,
+   "phh2o": 7,
+   "sand": 33.5,
+   "silt": 38.8,
+   "soc": 28.3,
+   "nearKm": 2.8
+  },
+  "ca-four-mile-creek": {
+   "clay": 23.7,
+   "phh2o": 6.4,
+   "sand": 43.7,
+   "silt": 32.5,
+   "soc": 27.5,
+   "nearKm": 1
+  },
+  "ca-fraser-valley": {
+   "clay": 17.4,
+   "phh2o": 5.3,
+   "sand": 41.2,
+   "silt": 41.4,
+   "soc": 51.5,
+   "nearKm": 2.8
   },
   "ca-golden-mile-bench": {
    "clay": 31.6,
@@ -2010,12 +2522,44 @@
    "silt": 46.6,
    "soc": 21.1
   },
+  "ca-niagara-lakeshore": {
+   "clay": 23.7,
+   "phh2o": 6.4,
+   "sand": 43.7,
+   "silt": 32.5,
+   "soc": 27.5,
+   "nearKm": 1
+  },
+  "ca-niagara-on-the-lake": {
+   "clay": 23.7,
+   "phh2o": 6.4,
+   "sand": 43.7,
+   "silt": 32.5,
+   "soc": 27.5,
+   "nearKm": 1
+  },
   "ca-niagara-peninsula": {
    "clay": 25.9,
    "phh2o": 6.7,
    "sand": 31,
    "silt": 43.2,
    "soc": 24.4
+  },
+  "ca-niagara-river": {
+   "clay": 23.7,
+   "phh2o": 6.4,
+   "sand": 43.7,
+   "silt": 32.5,
+   "soc": 27.5,
+   "nearKm": 1
+  },
+  "ca-okanagan-falls": {
+   "clay": 30.2,
+   "phh2o": 7,
+   "sand": 32.7,
+   "silt": 37.1,
+   "soc": 31,
+   "nearKm": 1
   },
   "ca-okanagan-valley": {
    "clay": 31.6,
@@ -2066,6 +2610,22 @@
    "silt": 39.8,
    "soc": 24.2
   },
+  "ca-south-kelowna-slopes": {
+   "clay": 27.7,
+   "phh2o": 7,
+   "sand": 33.5,
+   "silt": 38.8,
+   "soc": 28.3,
+   "nearKm": 2.8
+  },
+  "ca-st-davids-bench": {
+   "clay": 26.3,
+   "phh2o": 6.6,
+   "sand": 36.7,
+   "silt": 37,
+   "soc": 23.3,
+   "nearKm": 1
+  },
   "ca-summerland-bench": {
    "clay": 28.3,
    "phh2o": 7.2,
@@ -2093,6 +2653,22 @@
    "sand": 36.9,
    "silt": 38.9,
    "soc": 19.7
+  },
+  "ca-twenty-mile-bench": {
+   "clay": 37,
+   "phh2o": 6.8,
+   "sand": 15,
+   "silt": 48.1,
+   "soc": 22,
+   "nearKm": 1
+  },
+  "ca-vancouver-island": {
+   "clay": 17.7,
+   "phh2o": 5.2,
+   "sand": 39.5,
+   "silt": 42.8,
+   "soc": 76.1,
+   "nearKm": 1
   },
   "ca-vinemount-ridge": {
    "clay": 38.6,
@@ -2136,12 +2712,36 @@
    "silt": 42.5,
    "soc": 38.6
   },
+  "ch-basel-stadt": {
+   "clay": 23.1,
+   "phh2o": 5.8,
+   "sand": 41,
+   "silt": 36,
+   "soc": 32.3,
+   "nearKm": 2.8
+  },
+  "ch-bern": {
+   "clay": 22.4,
+   "phh2o": 6.1,
+   "sand": 49.5,
+   "silt": 28.1,
+   "soc": 35,
+   "nearKm": 2
+  },
   "ch-bianco-del-ticino": {
    "clay": 18.7,
    "phh2o": 5.3,
    "sand": 48.8,
    "silt": 32.6,
    "soc": 57.3
+  },
+  "ch-bielersee": {
+   "clay": 22.4,
+   "phh2o": 6.1,
+   "sand": 49.5,
+   "silt": 28.1,
+   "soc": 35,
+   "nearKm": 2
   },
   "ch-bonvillars": {
    "clay": 22.6,
@@ -2171,12 +2771,28 @@
    "silt": 35.8,
    "soc": 37.5
   },
+  "ch-chateau-de-collex": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
   "ch-chateau-du-crest": {
    "clay": 29.4,
    "phh2o": 6.6,
    "sand": 35.5,
    "silt": 35.1,
    "soc": 34.9
+  },
+  "ch-cheyres": {
+   "clay": 15,
+   "phh2o": 6.3,
+   "sand": 61.7,
+   "silt": 23.4,
+   "soc": 44.6,
+   "nearKm": 1
   },
   "ch-coteau-de-bossy": {
    "clay": 25.8,
@@ -2185,12 +2801,28 @@
    "silt": 36.3,
    "soc": 32.8
   },
+  "ch-coteau-de-bourdigny": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
   "ch-coteau-de-chevrens": {
    "clay": 30.8,
    "phh2o": 6.6,
    "sand": 29.9,
    "silt": 39.3,
    "soc": 35.3
+  },
+  "ch-coteau-de-choulex": {
+   "clay": 30.6,
+   "phh2o": 6.6,
+   "sand": 35.5,
+   "silt": 33.9,
+   "soc": 34.7,
+   "nearKm": 1
   },
   "ch-coteau-de-choully": {
    "clay": 30.1,
@@ -2199,6 +2831,30 @@
    "silt": 35.8,
    "soc": 37.5
   },
+  "ch-coteau-de-genthod": {
+   "clay": 33.4,
+   "phh2o": 6.6,
+   "sand": 33.1,
+   "silt": 33.4,
+   "soc": 36.2,
+   "nearKm": 1
+  },
+  "ch-coteau-de-la-vigne-blanche": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
+  "ch-coteau-de-lully": {
+   "clay": 26.7,
+   "phh2o": 6.9,
+   "sand": 40.5,
+   "silt": 32.8,
+   "soc": 38.9,
+   "nearKm": 1
+  },
   "ch-coteau-de-peissy": {
    "clay": 28.7,
    "phh2o": 6.7,
@@ -2206,12 +2862,36 @@
    "silt": 37.2,
    "soc": 37.1
   },
+  "ch-coteau-des-baillets": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
   "ch-coteaux-de-dardagny": {
    "clay": 27,
    "phh2o": 6.7,
    "sand": 33,
    "silt": 40,
    "soc": 39.3
+  },
+  "ch-coteaux-de-peney": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
+  "ch-cotes-de-l-orbe": {
+   "clay": 21.9,
+   "phh2o": 6.4,
+   "sand": 42,
+   "silt": 36.2,
+   "soc": 37.4,
+   "nearKm": 1
   },
   "ch-cotes-de-landecy": {
    "clay": 30.9,
@@ -2241,12 +2921,36 @@
    "silt": 33.6,
    "soc": 35.3
   },
+  "ch-domaine-de-l-abbaye": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
+  "ch-geneve": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
   "ch-glarus": {
    "clay": 27.5,
    "phh2o": 5.5,
    "sand": 35.7,
    "silt": 36.8,
    "soc": 64.4
+  },
+  "ch-grand-carraz": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
   },
   "ch-graubunden": {
    "clay": 22.4,
@@ -2283,6 +2987,14 @@
    "silt": 38.5,
    "soc": 46.7
   },
+  "ch-luzern": {
+   "clay": 19.1,
+   "phh2o": 5.6,
+   "sand": 45.2,
+   "silt": 35.6,
+   "soc": 57.5,
+   "nearKm": 1
+  },
   "ch-mandement-de-jussy": {
    "clay": 30.8,
    "phh2o": 6.8,
@@ -2290,12 +3002,28 @@
    "silt": 34.4,
    "soc": 32.4
   },
+  "ch-neuchatel": {
+   "clay": 24,
+   "phh2o": 6.2,
+   "sand": 45.9,
+   "silt": 30.1,
+   "soc": 50.7,
+   "nearKm": 1.4
+  },
   "ch-nidwalden": {
    "clay": 24.7,
    "phh2o": 5.5,
    "sand": 40.7,
    "silt": 34.6,
    "soc": 62.1
+  },
+  "ch-obwalden": {
+   "clay": 22.3,
+   "phh2o": 5.9,
+   "sand": 43,
+   "silt": 34.7,
+   "soc": 63.2,
+   "nearKm": 1.4
   },
   "ch-rosato-del-ticino": {
    "clay": 18.7,
@@ -2311,6 +3039,22 @@
    "silt": 32.6,
    "soc": 57.3
   },
+  "ch-rougemont": {
+   "clay": 27.7,
+   "phh2o": 6.8,
+   "sand": 35.3,
+   "silt": 36.9,
+   "soc": 37.6,
+   "nearKm": 1.4
+  },
+  "ch-schaffhausen": {
+   "clay": 24.9,
+   "phh2o": 6,
+   "sand": 45.3,
+   "silt": 29.8,
+   "soc": 29.3,
+   "nearKm": 1
+  },
   "ch-schwyz": {
    "clay": 25.2,
    "phh2o": 5.1,
@@ -2324,6 +3068,22 @@
    "sand": 25.4,
    "silt": 36.9,
    "soc": 54.6
+  },
+  "ch-st-gallen": {
+   "clay": 29.4,
+   "phh2o": 6,
+   "sand": 38.4,
+   "silt": 32.1,
+   "soc": 46.9,
+   "nearKm": 1
+  },
+  "ch-thunersee": {
+   "clay": 23.2,
+   "phh2o": 6.1,
+   "sand": 45.7,
+   "silt": 31.1,
+   "soc": 48.1,
+   "nearKm": 2
   },
   "ch-thurgau": {
    "clay": 26.9,
@@ -2374,6 +3134,30 @@
    "silt": 30.9,
    "soc": 49.4
   },
+  "ch-zurich": {
+   "clay": 28.6,
+   "phh2o": 5.6,
+   "sand": 36.7,
+   "silt": 34.7,
+   "soc": 45.3,
+   "nearKm": 2.8
+  },
+  "ch-zurichsee": {
+   "clay": 25.8,
+   "phh2o": 6.1,
+   "sand": 32.2,
+   "silt": 42,
+   "soc": 39.5,
+   "nearKm": 2
+  },
+  "cl-algarrobo": {
+   "clay": 19.1,
+   "phh2o": 6.9,
+   "sand": 60.5,
+   "silt": 20.5,
+   "soc": 46.4,
+   "nearKm": 1
+  },
   "cl-alhue": {
    "clay": 20.3,
    "phh2o": 7,
@@ -2388,12 +3172,60 @@
    "silt": 38.9,
    "soc": 31.1
   },
+  "cl-buin": {
+   "clay": 16.7,
+   "phh2o": 7,
+   "sand": 58.9,
+   "silt": 24.4,
+   "soc": 21.4,
+   "nearKm": 1.4
+  },
+  "cl-calera-de-tango": {
+   "clay": 17.6,
+   "phh2o": 6.9,
+   "sand": 57.9,
+   "silt": 24.6,
+   "soc": 32.6,
+   "nearKm": 1
+  },
   "cl-calle-larga": {
    "clay": 18.6,
    "phh2o": 7.1,
    "sand": 62.8,
    "silt": 18.7,
    "soc": 43.6
+  },
+  "cl-cartagena": {
+   "clay": 15.5,
+   "phh2o": 7,
+   "sand": 62.7,
+   "silt": 21.7,
+   "soc": 66.3,
+   "nearKm": 1.4
+  },
+  "cl-catemu": {
+   "clay": 22.1,
+   "phh2o": 7.1,
+   "sand": 61.1,
+   "silt": 16.9,
+   "soc": 27.7,
+   "nearKm": 1
+  },
+  "cl-cauquenes": {
+   "clay": 26,
+   "phh2o": 6,
+   "sand": 47.6,
+   "silt": 26.3,
+   "soc": 109.5,
+   "nearKm": 1
+  },
+  "cl-chillan": {
+   "clay": 26,
+   "phh2o": 6.3,
+   "sand": 33.4,
+   "silt": 40.6,
+   "soc": 47.3,
+   "nearKm": 2.8
   },
   "cl-chiloe": {
    "clay": 19.3,
@@ -2402,6 +3234,14 @@
    "silt": 33.4,
    "soc": 168.1
   },
+  "cl-chimbarongo": {
+   "clay": 27.7,
+   "phh2o": 6,
+   "sand": 34.9,
+   "silt": 37.5,
+   "soc": 27.9,
+   "nearKm": 1
+  },
   "cl-coelemu": {
    "clay": 25.6,
    "phh2o": 6.1,
@@ -2409,12 +3249,44 @@
    "silt": 32.6,
    "soc": 133.3
   },
+  "cl-colbun": {
+   "clay": 28.6,
+   "phh2o": 6.1,
+   "sand": 28.8,
+   "silt": 42.6,
+   "soc": 70.5,
+   "nearKm": 1
+  },
+  "cl-colina": {
+   "clay": 20.4,
+   "phh2o": 7.2,
+   "sand": 65.1,
+   "silt": 14.5,
+   "soc": 20.5,
+   "nearKm": 1
+  },
   "cl-coltauco": {
    "clay": 21.3,
    "phh2o": 6.6,
    "sand": 48.7,
    "silt": 30,
    "soc": 29.4
+  },
+  "cl-curepto": {
+   "clay": 24.1,
+   "phh2o": 6.5,
+   "sand": 47.4,
+   "silt": 28.4,
+   "soc": 127.3,
+   "nearKm": 1
+  },
+  "cl-empedrado": {
+   "clay": 22.1,
+   "phh2o": 6.3,
+   "sand": 48.6,
+   "silt": 29.3,
+   "soc": 95.4,
+   "nearKm": 1
   },
   "cl-hijuelas": {
    "clay": 18.8,
@@ -2444,6 +3316,14 @@
    "silt": 26.5,
    "soc": 31.2
   },
+  "cl-la-serena": {
+   "clay": 13.7,
+   "phh2o": 7.4,
+   "sand": 69.8,
+   "silt": 16.5,
+   "soc": 37,
+   "nearKm": 1
+  },
   "cl-lampa": {
    "clay": 20.9,
    "phh2o": 7,
@@ -2451,12 +3331,28 @@
    "silt": 15.8,
    "soc": 21.8
   },
+  "cl-licanten": {
+   "clay": 23.2,
+   "phh2o": 6.2,
+   "sand": 45.2,
+   "silt": 31.6,
+   "soc": 123.7,
+   "nearKm": 1
+  },
   "cl-linares": {
    "clay": 26.5,
    "phh2o": 6.1,
    "sand": 28.4,
    "silt": 45.1,
    "soc": 66.3
+  },
+  "cl-litueche": {
+   "clay": 20.7,
+   "phh2o": 6.7,
+   "sand": 52.2,
+   "silt": 27.2,
+   "soc": 32.8,
+   "nearKm": 1
   },
   "cl-llaillay": {
    "clay": 19.1,
@@ -2479,12 +3375,28 @@
    "silt": 27.8,
    "soc": 34.1
   },
+  "cl-longavi": {
+   "clay": 24.4,
+   "phh2o": 6,
+   "sand": 30.5,
+   "silt": 45.1,
+   "soc": 42.7,
+   "nearKm": 1
+  },
   "cl-los-lingues": {
    "clay": 22.3,
    "phh2o": 6.8,
    "sand": 48.2,
    "silt": 29.5,
    "soc": 39.7
+  },
+  "cl-machali": {
+   "clay": 19.7,
+   "phh2o": 6.7,
+   "sand": 41.6,
+   "silt": 38.7,
+   "soc": 34,
+   "nearKm": 1
   },
   "cl-marchigue": {
    "clay": 22.2,
@@ -2500,12 +3412,52 @@
    "silt": 32,
    "soc": 28.2
   },
+  "cl-melipilla": {
+   "clay": 17.8,
+   "phh2o": 6.9,
+   "sand": 52.6,
+   "silt": 29.7,
+   "soc": 22.9,
+   "nearKm": 1.4
+  },
   "cl-molina": {
    "clay": 27.1,
    "phh2o": 6.3,
    "sand": 40.8,
    "silt": 32.1,
    "soc": 55.4
+  },
+  "cl-monte-patria": {
+   "clay": 21.1,
+   "phh2o": 7.7,
+   "sand": 64.1,
+   "silt": 14.8,
+   "soc": 31.9,
+   "nearKm": 1
+  },
+  "cl-mulchen": {
+   "clay": 22.4,
+   "phh2o": 6.2,
+   "sand": 32.7,
+   "silt": 44.9,
+   "soc": 80.8,
+   "nearKm": 1
+  },
+  "cl-nancagua": {
+   "clay": 23.3,
+   "phh2o": 6.3,
+   "sand": 45.5,
+   "silt": 31.3,
+   "soc": 54,
+   "nearKm": 1
+  },
+  "cl-ovalle": {
+   "clay": 24.3,
+   "phh2o": 7.6,
+   "sand": 59.6,
+   "silt": 16.1,
+   "soc": 31.6,
+   "nearKm": 1
   },
   "cl-paiguano": {
    "clay": 20,
@@ -2514,12 +3466,36 @@
    "silt": 18.6,
    "soc": 45.9
   },
+  "cl-palmilla": {
+   "clay": 23.9,
+   "phh2o": 6.3,
+   "sand": 49.8,
+   "silt": 26.3,
+   "soc": 30.6,
+   "nearKm": 1
+  },
   "cl-panquehue": {
    "clay": 20.9,
    "phh2o": 7,
    "sand": 60.3,
    "silt": 18.8,
    "soc": 29.2
+  },
+  "cl-paredones": {
+   "clay": 23.8,
+   "phh2o": 6.3,
+   "sand": 47.8,
+   "silt": 28.4,
+   "soc": 80.3,
+   "nearKm": 1
+  },
+  "cl-parral": {
+   "clay": 26.8,
+   "phh2o": 6.2,
+   "sand": 33.6,
+   "silt": 39.7,
+   "soc": 47.8,
+   "nearKm": 1
   },
   "cl-pencahue": {
    "clay": 23.4,
@@ -2528,12 +3504,92 @@
    "silt": 35.2,
    "soc": 43.1
   },
+  "cl-peralillo": {
+   "clay": 21.9,
+   "phh2o": 6.4,
+   "sand": 51.8,
+   "silt": 26.2,
+   "soc": 31.4,
+   "nearKm": 1
+  },
+  "cl-peumo": {
+   "clay": 18,
+   "phh2o": 6.3,
+   "sand": 51.3,
+   "silt": 30.6,
+   "soc": 32.4,
+   "nearKm": 1
+  },
+  "cl-pirque": {
+   "clay": 19.9,
+   "phh2o": 7.1,
+   "sand": 56.5,
+   "silt": 23.6,
+   "soc": 21.5,
+   "nearKm": 1
+  },
+  "cl-portezuelo": {
+   "clay": 25.4,
+   "phh2o": 6.2,
+   "sand": 37.6,
+   "silt": 37,
+   "soc": 84.1,
+   "nearKm": 1
+  },
+  "cl-puente-alto": {
+   "clay": 22.3,
+   "phh2o": 7.2,
+   "sand": 54,
+   "silt": 23.7,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
+  "cl-pumanque": {
+   "clay": 22.4,
+   "phh2o": 6.3,
+   "sand": 49.9,
+   "silt": 27.7,
+   "soc": 27.2,
+   "nearKm": 1
+  },
+  "cl-punitaqui": {
+   "clay": 25.6,
+   "phh2o": 7.4,
+   "sand": 54,
+   "silt": 20.5,
+   "soc": 23.1,
+   "nearKm": 1
+  },
   "cl-quillon": {
    "clay": 24.9,
    "phh2o": 5.9,
    "sand": 36.5,
    "silt": 38.7,
    "soc": 110.5
+  },
+  "cl-quillota": {
+   "clay": 17.7,
+   "phh2o": 6.9,
+   "sand": 57.8,
+   "silt": 24.5,
+   "soc": 21.6,
+   "nearKm": 1
+  },
+  "cl-rancagua": {
+   "clay": 18.4,
+   "phh2o": 7,
+   "sand": 41.8,
+   "silt": 39.8,
+   "soc": 34.7,
+   "nearKm": 1
+  },
+  "cl-rauco": {
+   "clay": 23.7,
+   "phh2o": 6.1,
+   "sand": 45.2,
+   "silt": 31.2,
+   "soc": 35.2,
+   "nearKm": 1
   },
   "cl-region-austral": {
    "clay": 28.6,
@@ -2584,6 +3640,22 @@
    "silt": 29.8,
    "soc": 31.5
   },
+  "cl-requinoa": {
+   "clay": 17.6,
+   "phh2o": 6.7,
+   "sand": 42.1,
+   "silt": 40.4,
+   "soc": 35.3,
+   "nearKm": 1
+  },
+  "cl-retiro": {
+   "clay": 21,
+   "phh2o": 6.2,
+   "sand": 32.9,
+   "silt": 46.1,
+   "soc": 46.9,
+   "nearKm": 1
+  },
   "cl-rio-hurtado": {
    "clay": 17.3,
    "phh2o": 7.5,
@@ -2598,12 +3670,76 @@
    "silt": 35.2,
    "soc": 34
   },
+  "cl-sagrada-familia": {
+   "clay": 23.2,
+   "phh2o": 6.3,
+   "sand": 42.4,
+   "silt": 34.4,
+   "soc": 37.5,
+   "nearKm": 1
+  },
+  "cl-salamanca": {
+   "clay": 21.7,
+   "phh2o": 7.1,
+   "sand": 64.6,
+   "silt": 13.8,
+   "soc": 20.1,
+   "nearKm": 1
+  },
+  "cl-san-clemente": {
+   "clay": 30.4,
+   "phh2o": 6.1,
+   "sand": 27.9,
+   "silt": 41.7,
+   "soc": 59.2,
+   "nearKm": 1
+  },
   "cl-san-esteban": {
    "clay": 18.3,
    "phh2o": 7.1,
    "sand": 66.8,
    "silt": 14.9,
    "soc": 34.9
+  },
+  "cl-san-felipe": {
+   "clay": 21.1,
+   "phh2o": 7.1,
+   "sand": 61.2,
+   "silt": 17.7,
+   "soc": 34.3,
+   "nearKm": 1.4
+  },
+  "cl-san-fernando": {
+   "clay": 23.6,
+   "phh2o": 6.5,
+   "sand": 44.5,
+   "silt": 31.9,
+   "soc": 28.4,
+   "nearKm": 1
+  },
+  "cl-san-javier": {
+   "clay": 24.1,
+   "phh2o": 6.4,
+   "sand": 37.1,
+   "silt": 38.9,
+   "soc": 49.6,
+   "nearKm": 1
+  },
+  "cl-san-juan": {
+   "clay": 18,
+   "phh2o": 6.9,
+   "sand": 59.4,
+   "silt": 22.6,
+   "soc": 60.5,
+   "nearKm": 1
+  },
+  "cl-san-rafael": {
+   "clay": 25.1,
+   "phh2o": 6.1,
+   "sand": 36.2,
+   "silt": 38.7,
+   "soc": 31.1,
+   "nearKm": 1
   },
   "cl-santa-cruz": {
    "clay": 23.8,
@@ -2612,6 +3748,22 @@
    "silt": 30.3,
    "soc": 39.5
   },
+  "cl-santa-maria": {
+   "clay": 20.8,
+   "phh2o": 7.1,
+   "sand": 61.2,
+   "silt": 18.1,
+   "soc": 27.1,
+   "nearKm": 1
+  },
+  "cl-santiago": {
+   "clay": 22.3,
+   "phh2o": 7.1,
+   "sand": 52.4,
+   "silt": 25.2,
+   "soc": 24.1,
+   "nearKm": 2
+  },
   "cl-santo-domingo": {
    "clay": 23,
    "phh2o": 6.9,
@@ -2619,12 +3771,44 @@
    "silt": 20.8,
    "soc": 44.3
   },
+  "cl-talagante": {
+   "clay": 17.8,
+   "phh2o": 7.1,
+   "sand": 55,
+   "silt": 27.3,
+   "soc": 29.1,
+   "nearKm": 1
+  },
+  "cl-talca": {
+   "clay": 22.3,
+   "phh2o": 5.9,
+   "sand": 43.1,
+   "silt": 34.7,
+   "soc": 41.9,
+   "nearKm": 1.4
+  },
   "cl-til-til": {
    "clay": 19.4,
    "phh2o": 7,
    "sand": 57.4,
    "silt": 23.1,
    "soc": 24.2
+  },
+  "cl-traiguen": {
+   "clay": 30.7,
+   "phh2o": 6,
+   "sand": 31.4,
+   "silt": 38,
+   "soc": 84.8,
+   "nearKm": 1
+  },
+  "cl-valle-de-casablanca": {
+   "clay": 18.8,
+   "phh2o": 6.6,
+   "sand": 53.3,
+   "silt": 28,
+   "soc": 33.6,
+   "nearKm": 1
   },
   "cl-valle-de-colchagua": {
    "clay": 22.3,
@@ -2646,6 +3830,14 @@
    "sand": 48.5,
    "silt": 29.1,
    "soc": 37.4
+  },
+  "cl-valle-de-leyda": {
+   "clay": 18,
+   "phh2o": 6.9,
+   "sand": 59.4,
+   "silt": 22.6,
+   "soc": 60.5,
+   "nearKm": 1
   },
   "cl-valle-de-osorno": {
    "clay": 28.6,
@@ -2759,6 +3951,14 @@
    "silt": 32.3,
    "soc": 76.7
   },
+  "cl-valle-del-marga-marga": {
+   "clay": 18,
+   "phh2o": 7,
+   "sand": 51.7,
+   "silt": 30.3,
+   "soc": 22.8,
+   "nearKm": 1
+  },
   "cl-valle-del-maule": {
    "clay": 19.3,
    "phh2o": 6.1,
@@ -2773,12 +3973,60 @@
    "silt": 29.5,
    "soc": 39.7
   },
+  "cl-valle-del-teno": {
+   "clay": 23.7,
+   "phh2o": 6.1,
+   "sand": 45.2,
+   "silt": 31.2,
+   "soc": 35.2,
+   "nearKm": 1
+  },
+  "cl-valle-del-tutuven": {
+   "clay": 26,
+   "phh2o": 6,
+   "sand": 47.6,
+   "silt": 26.3,
+   "soc": 109.5,
+   "nearKm": 1
+  },
+  "cl-vichuquen": {
+   "clay": 21.8,
+   "phh2o": 6.4,
+   "sand": 51.2,
+   "silt": 26.9,
+   "soc": 95.1,
+   "nearKm": 1
+  },
+  "cl-vicuna": {
+   "clay": 17.5,
+   "phh2o": 7.6,
+   "sand": 65.6,
+   "silt": 16.9,
+   "soc": 39.8,
+   "nearKm": 1
+  },
   "cl-villa-alegre": {
    "clay": 23.5,
    "phh2o": 6.2,
    "sand": 34.2,
    "silt": 42.3,
    "soc": 52.9
+  },
+  "cl-yumbel": {
+   "clay": 28,
+   "phh2o": 6.2,
+   "sand": 33.9,
+   "silt": 38.1,
+   "soc": 87.8,
+   "nearKm": 1
+  },
+  "cl-zapallar": {
+   "clay": 17.5,
+   "phh2o": 6.4,
+   "sand": 68.9,
+   "silt": 13.6,
+   "soc": 82.6,
+   "nearKm": 1
   },
   "cy-koumandaria": {
    "clay": 19.8,
@@ -2814,6 +4062,30 @@
    "sand": 31.9,
    "silt": 35.5,
    "soc": 25.4
+  },
+  "cy-larnaka": {
+   "clay": 27.6,
+   "phh2o": 8.1,
+   "sand": 36.5,
+   "silt": 36,
+   "soc": 13.8,
+   "nearKm": 1.4
+  },
+  "cy-leykosia": {
+   "clay": 29.3,
+   "phh2o": 7.6,
+   "sand": 33.2,
+   "silt": 37.5,
+   "soc": 10.6,
+   "nearKm": 2.8
+  },
+  "cy-pafos": {
+   "clay": 29,
+   "phh2o": 8,
+   "sand": 30.8,
+   "silt": 40.2,
+   "soc": 27.1,
+   "nearKm": 1
   },
   "cy-pitsilia": {
    "clay": 25.1,
@@ -2857,6 +4129,30 @@
    "silt": 41.9,
    "soc": 26.6
   },
+  "cz-mikulovska": {
+   "clay": 29.2,
+   "phh2o": 6.8,
+   "sand": 26.8,
+   "silt": 44.1,
+   "soc": 21.4,
+   "nearKm": 1
+  },
+  "cz-morava": {
+   "clay": 25.5,
+   "phh2o": 7,
+   "sand": 31.2,
+   "silt": 43.3,
+   "soc": 20.7,
+   "nearKm": 2
+  },
+  "cz-moravske": {
+   "clay": 25.7,
+   "phh2o": 6.5,
+   "sand": 28.1,
+   "silt": 46.2,
+   "soc": 22.4,
+   "nearKm": 2
+  },
   "cz-novosedelske-slamove-vino": {
    "clay": 26.9,
    "phh2o": 6.6,
@@ -2892,6 +4188,14 @@
    "silt": 50.9,
    "soc": 19.9
   },
+  "cz-znojmo": {
+   "clay": 29.6,
+   "phh2o": 6.6,
+   "sand": 30.6,
+   "silt": 39.8,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "de-ahr": {
    "clay": 26.3,
    "phh2o": 5.9,
@@ -2926,6 +4230,22 @@
    "sand": 26.2,
    "silt": 43.8,
    "soc": 31.3
+  },
+  "de-brandenburger-landwein": {
+   "clay": 8.8,
+   "phh2o": 6.7,
+   "sand": 77.5,
+   "silt": 13.7,
+   "soc": 20.1,
+   "nearKm": 1
+  },
+  "de-burgstadter-berg": {
+   "clay": 28.3,
+   "phh2o": 6.8,
+   "sand": 23,
+   "silt": 48.7,
+   "soc": 28.1,
+   "nearKm": 1
   },
   "de-franken": {
    "clay": 32.2,
@@ -3024,6 +4344,14 @@
    "sand": 24.7,
    "silt": 44.7,
    "soc": 18
+  },
+  "de-monzinger-niederberg": {
+   "clay": 29.1,
+   "phh2o": 6.6,
+   "sand": 18.5,
+   "silt": 52.5,
+   "soc": 27.3,
+   "nearKm": 1
   },
   "de-mosel": {
    "clay": 23.3,
@@ -3158,6 +4486,22 @@
    "silt": 43.2,
    "soc": 38.2
   },
+  "de-uhlen-blaufusser-lay": {
+   "clay": 25.1,
+   "phh2o": 6.6,
+   "sand": 24.3,
+   "silt": 50.7,
+   "soc": 20.8,
+   "nearKm": 1
+  },
+  "de-uhlen-laubach": {
+   "clay": 27.3,
+   "phh2o": 6.8,
+   "sand": 10.7,
+   "silt": 62,
+   "soc": 26,
+   "nearKm": 1
+  },
   "de-uhlen-roth-lay": {
    "clay": 24.7,
    "phh2o": 5.6,
@@ -3171,6 +4515,14 @@
    "sand": 23.3,
    "silt": 49,
    "soc": 32.8
+  },
+  "de-wurzburger-stein-berg": {
+   "clay": 33.8,
+   "phh2o": 6.6,
+   "sand": 22.3,
+   "silt": 43.9,
+   "soc": 28.7,
+   "nearKm": 1
   },
   "dk-bornholm": {
    "clay": 18.6,
@@ -3207,6 +4559,14 @@
    "silt": 25.2,
    "soc": 47
   },
+  "es-3-riberas": {
+   "clay": 38.1,
+   "phh2o": 7.7,
+   "sand": 18.6,
+   "silt": 43.3,
+   "soc": 25.9,
+   "nearKm": 1.4
+  },
   "es-abadia-retuerta": {
    "clay": 28.3,
    "phh2o": 7.7,
@@ -3220,6 +4580,14 @@
    "sand": 35.7,
    "silt": 32.8,
    "soc": 21.2
+  },
+  "es-alella": {
+   "clay": 29.1,
+   "phh2o": 7.5,
+   "sand": 30.7,
+   "silt": 40.2,
+   "soc": 29.1,
+   "nearKm": 1
   },
   "es-alicante": {
    "clay": 25.3,
@@ -3241,6 +4609,22 @@
    "sand": 25.2,
    "silt": 44,
    "soc": 16.5
+  },
+  "es-arabako-txakolina": {
+   "clay": 28.1,
+   "phh2o": 6.3,
+   "sand": 31.6,
+   "silt": 40.4,
+   "soc": 30.8,
+   "nearKm": 1
+  },
+  "es-arlanza": {
+   "clay": 28.2,
+   "phh2o": 7.8,
+   "sand": 33.9,
+   "silt": 38,
+   "soc": 16.1,
+   "nearKm": 1
   },
   "es-arribes": {
    "clay": 16.7,
@@ -3270,12 +4654,52 @@
    "silt": 42.2,
    "soc": 18.8
   },
+  "es-betanzos": {
+   "clay": 19.1,
+   "phh2o": 5.6,
+   "sand": 41.6,
+   "silt": 39.3,
+   "soc": 39.6,
+   "nearKm": 1
+  },
+  "es-bierzo": {
+   "clay": 25.7,
+   "phh2o": 6.6,
+   "sand": 32.7,
+   "silt": 41.7,
+   "soc": 24.3,
+   "nearKm": 1
+  },
+  "es-binissalem": {
+   "clay": 25.6,
+   "phh2o": 7.4,
+   "sand": 33.9,
+   "silt": 40.6,
+   "soc": 22.3,
+   "nearKm": 1
+  },
   "es-bizkaiko-txakolina": {
    "clay": 25.1,
    "phh2o": 5.5,
    "sand": 35.3,
    "silt": 39.7,
    "soc": 54.9
+  },
+  "es-bolandin": {
+   "clay": 29.6,
+   "phh2o": 8,
+   "sand": 29,
+   "silt": 41.5,
+   "soc": 20.7,
+   "nearKm": 1
+  },
+  "es-bullas": {
+   "clay": 28.6,
+   "phh2o": 7.9,
+   "sand": 33.9,
+   "silt": 37.5,
+   "soc": 12.9,
+   "nearKm": 1
   },
   "es-calzadilla": {
    "clay": 23.2,
@@ -3297,6 +4721,22 @@
    "sand": 41,
    "silt": 27.8,
    "soc": 11.6
+  },
+  "es-campo-de-cartagena": {
+   "clay": 34.7,
+   "phh2o": 8,
+   "sand": 22,
+   "silt": 43.3,
+   "soc": 16.3,
+   "nearKm": 1
+  },
+  "es-campo-de-la-guardia": {
+   "clay": 26.6,
+   "phh2o": 7.9,
+   "sand": 32.3,
+   "silt": 41.1,
+   "soc": 11.8,
+   "nearKm": 1
   },
   "es-cangas": {
    "clay": 21.8,
@@ -3354,12 +4794,52 @@
    "silt": 41.8,
    "soc": 17.9
   },
+  "es-cebreros": {
+   "clay": 20.6,
+   "phh2o": 7.4,
+   "sand": 54.4,
+   "silt": 25,
+   "soc": 16.8,
+   "nearKm": 1
+  },
+  "es-chozas-carrascal": {
+   "clay": 23.9,
+   "phh2o": 7.9,
+   "sand": 41.1,
+   "silt": 35,
+   "soc": 17,
+   "nearKm": 1
+  },
+  "es-cigales": {
+   "clay": 29.6,
+   "phh2o": 7.8,
+   "sand": 32.8,
+   "silt": 37.6,
+   "soc": 16.6,
+   "nearKm": 1
+  },
+  "es-conca-de-barbera": {
+   "clay": 31,
+   "phh2o": 8,
+   "sand": 25.7,
+   "silt": 43.3,
+   "soc": 18,
+   "nearKm": 1
+  },
   "es-condado-de-huelva": {
    "clay": 24.3,
    "phh2o": 6.1,
    "sand": 38.2,
    "silt": 37.5,
    "soc": 71.4
+  },
+  "es-cordoba": {
+   "clay": 37.7,
+   "phh2o": 7.6,
+   "sand": 32.5,
+   "silt": 29.7,
+   "soc": 15,
+   "nearKm": 2
   },
   "es-costa-de-cantabria": {
    "clay": 24.1,
@@ -3388,6 +4868,14 @@
    "sand": 44.8,
    "silt": 33.5,
    "soc": 15.1
+  },
+  "es-dehesa-penalba": {
+   "clay": 27.1,
+   "phh2o": 7.8,
+   "sand": 33.2,
+   "silt": 39.7,
+   "soc": 18.5,
+   "nearKm": 1
   },
   "es-desierto-de-almeria": {
    "clay": 25,
@@ -3424,6 +4912,14 @@
    "silt": 34,
    "soc": 14.5
   },
+  "es-emporda": {
+   "clay": 24,
+   "phh2o": 7.6,
+   "sand": 35.4,
+   "silt": 40.6,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "es-extremadura": {
    "clay": 18.8,
    "phh2o": 6.1,
@@ -3445,12 +4941,28 @@
    "silt": 33.5,
    "soc": 23.9
   },
+  "es-getariako-txakolina": {
+   "clay": 24.4,
+   "phh2o": 5.6,
+   "sand": 30.6,
+   "silt": 45,
+   "soc": 38.2,
+   "nearKm": 1
+  },
   "es-gran-canaria": {
    "clay": 28,
    "phh2o": 7,
    "sand": 38,
    "silt": 34.1,
    "soc": 33.1
+  },
+  "es-granada": {
+   "clay": 24.6,
+   "phh2o": 7.8,
+   "sand": 29,
+   "silt": 46.5,
+   "soc": 13.6,
+   "nearKm": 1.4
   },
   "es-guijoso": {
    "clay": 24.2,
@@ -3459,12 +4971,52 @@
    "silt": 35.3,
    "soc": 12.4
   },
+  "es-ibiza": {
+   "clay": 30.2,
+   "phh2o": 7.7,
+   "sand": 33.8,
+   "silt": 36,
+   "soc": 21.2,
+   "nearKm": 1.4
+  },
   "es-illes-balears": {
    "clay": 25.1,
    "phh2o": 7.3,
    "sand": 37.8,
    "silt": 37.1,
    "soc": 21.9
+  },
+  "es-isla-de-menorca": {
+   "clay": 23.8,
+   "phh2o": 6.7,
+   "sand": 38.8,
+   "silt": 37.4,
+   "soc": 30.6,
+   "nearKm": 1
+  },
+  "es-islas-canarias": {
+   "clay": 32.6,
+   "phh2o": 7.1,
+   "sand": 31.9,
+   "silt": 35.5,
+   "soc": 21.3,
+   "nearKm": 1
+  },
+  "es-jerez-xeres-sherry": {
+   "clay": 32.1,
+   "phh2o": 7.6,
+   "sand": 30,
+   "silt": 37.9,
+   "soc": 22.5,
+   "nearKm": 2
+  },
+  "es-jumilla": {
+   "clay": 31.9,
+   "phh2o": 8,
+   "sand": 26.7,
+   "silt": 41.4,
+   "soc": 12.4,
+   "nearKm": 1
   },
   "es-la-gomera": {
    "clay": 37.9,
@@ -3487,6 +5039,14 @@
    "silt": 30.2,
    "soc": 10.6
   },
+  "es-la-palma": {
+   "clay": 36.2,
+   "phh2o": 6.9,
+   "sand": 28.9,
+   "silt": 34.9,
+   "soc": 43.9,
+   "nearKm": 1
+  },
   "es-laderas-del-genil": {
    "clay": 29.5,
    "phh2o": 7.8,
@@ -3507,6 +5067,14 @@
    "sand": 43.3,
    "silt": 33.3,
    "soc": 17.5
+  },
+  "es-lebrija": {
+   "clay": 41.5,
+   "phh2o": 7.7,
+   "sand": 22.1,
+   "silt": 36.5,
+   "soc": 16.2,
+   "nearKm": 1
   },
   "es-leon": {
    "clay": 22.4,
@@ -3529,12 +5097,28 @@
    "silt": 36.5,
    "soc": 27.2
   },
+  "es-los-cerrillos": {
+   "clay": 26.1,
+   "phh2o": 7.9,
+   "sand": 45.6,
+   "silt": 28.3,
+   "soc": 11.8,
+   "nearKm": 1
+  },
   "es-los-palacios": {
    "clay": 36.5,
    "phh2o": 7.7,
    "sand": 31.9,
    "silt": 31.6,
    "soc": 13.2
+  },
+  "es-malaga": {
+   "clay": 26.3,
+   "phh2o": 6.6,
+   "sand": 45.1,
+   "silt": 28.7,
+   "soc": 23,
+   "nearKm": 2.8
   },
   "es-mallorca": {
    "clay": 27.7,
@@ -3549,6 +5133,30 @@
    "sand": 42.2,
    "silt": 30.6,
    "soc": 13.3
+  },
+  "es-manzanilla-de-sanlucar": {
+   "clay": 35.2,
+   "phh2o": 7.6,
+   "sand": 30.3,
+   "silt": 34.5,
+   "soc": 18.3,
+   "nearKm": 2
+  },
+  "es-mentrida": {
+   "clay": 29.2,
+   "phh2o": 7.5,
+   "sand": 44.8,
+   "silt": 26.1,
+   "soc": 12.1,
+   "nearKm": 1
+  },
+  "es-mondejar": {
+   "clay": 25.8,
+   "phh2o": 7.7,
+   "sand": 33.3,
+   "silt": 40.9,
+   "soc": 16.6,
+   "nearKm": 1
   },
   "es-monterrei": {
    "clay": 21.2,
@@ -3577,6 +5185,14 @@
    "sand": 30.6,
    "silt": 41.5,
    "soc": 18.6
+  },
+  "es-navarra": {
+   "clay": 34.3,
+   "phh2o": 7.6,
+   "sand": 19,
+   "silt": 46.8,
+   "soc": 27.6,
+   "nearKm": 2
   },
   "es-norte-de-almeria": {
    "clay": 19.1,
@@ -3612,6 +5228,22 @@
    "sand": 30.3,
    "silt": 46.4,
    "soc": 16.5
+  },
+  "es-pla-de-bages": {
+   "clay": 26.5,
+   "phh2o": 7.8,
+   "sand": 33.5,
+   "silt": 40,
+   "soc": 21,
+   "nearKm": 1
+  },
+  "es-pla-i-llevant": {
+   "clay": 23.8,
+   "phh2o": 7.5,
+   "sand": 35.5,
+   "silt": 40.7,
+   "soc": 19.4,
+   "nearKm": 1
   },
   "es-prado-de-irache": {
    "clay": 32.9,
@@ -3669,6 +5301,14 @@
    "silt": 46.5,
    "soc": 20.5
   },
+  "es-ribera-del-guadiana": {
+   "clay": 36.9,
+   "phh2o": 6.9,
+   "sand": 34,
+   "silt": 29.2,
+   "soc": 15.4,
+   "nearKm": 1
+  },
   "es-ribera-del-jiloca": {
    "clay": 26.8,
    "phh2o": 7.9,
@@ -3696,6 +5336,30 @@
    "sand": 42.4,
    "silt": 34.7,
    "soc": 26.7
+  },
+  "es-rioja": {
+   "clay": 25.7,
+   "phh2o": 7.9,
+   "sand": 23.3,
+   "silt": 51,
+   "soc": 15.7,
+   "nearKm": 1.4
+  },
+  "es-rosalejo": {
+   "clay": 22.6,
+   "phh2o": 7.2,
+   "sand": 50.6,
+   "silt": 26.8,
+   "soc": 12.9,
+   "nearKm": 1
+  },
+  "es-rueda": {
+   "clay": 23.9,
+   "phh2o": 7.6,
+   "sand": 49.2,
+   "silt": 26.9,
+   "soc": 15,
+   "nearKm": 1
   },
   "es-serra-de-tramuntana-costa-nord": {
    "clay": 28,
@@ -3732,6 +5396,22 @@
    "silt": 39.5,
    "soc": 11
   },
+  "es-sierras-de-malaga": {
+   "clay": 26.2,
+   "phh2o": 6.7,
+   "sand": 44.5,
+   "silt": 29.4,
+   "soc": 21.7,
+   "nearKm": 2.8
+  },
+  "es-somontano": {
+   "clay": 28.6,
+   "phh2o": 7.8,
+   "sand": 25.7,
+   "silt": 45.7,
+   "soc": 17.6,
+   "nearKm": 1
+  },
   "es-tacoronte-acentejo": {
    "clay": 40.6,
    "phh2o": 6.8,
@@ -3760,12 +5440,60 @@
    "silt": 39.3,
    "soc": 43.4
   },
+  "es-tharsys": {
+   "clay": 23.9,
+   "phh2o": 7.9,
+   "sand": 41.1,
+   "silt": 35,
+   "soc": 17,
+   "nearKm": 1
+  },
+  "es-tierra-del-vino-de-zamora": {
+   "clay": 25.6,
+   "phh2o": 6.5,
+   "sand": 43.6,
+   "silt": 30.8,
+   "soc": 22.2,
+   "nearKm": 1
+  },
+  "es-toro": {
+   "clay": 28,
+   "phh2o": 7.5,
+   "sand": 46.4,
+   "silt": 25.6,
+   "soc": 14.5,
+   "nearKm": 1
+  },
+  "es-torreperogil": {
+   "clay": 30.4,
+   "phh2o": 7.8,
+   "sand": 29.7,
+   "silt": 39.8,
+   "soc": 15.1,
+   "nearKm": 1
+  },
   "es-ucles": {
    "clay": 28,
    "phh2o": 7.9,
    "sand": 31.3,
    "silt": 40.8,
    "soc": 16.5
+  },
+  "es-urbezo": {
+   "clay": 27.2,
+   "phh2o": 8,
+   "sand": 28.6,
+   "silt": 44.2,
+   "soc": 13.6,
+   "nearKm": 1
+  },
+  "es-uruena": {
+   "clay": 24.7,
+   "phh2o": 7.8,
+   "sand": 41.1,
+   "silt": 34.3,
+   "soc": 18.4,
+   "nearKm": 1
   },
   "es-utiel-requena": {
    "clay": 25.6,
@@ -3837,6 +5565,14 @@
    "silt": 35.6,
    "soc": 18.7
   },
+  "es-valles-de-benavente": {
+   "clay": 23.4,
+   "phh2o": 7.1,
+   "sand": 43.8,
+   "silt": 32.8,
+   "soc": 19,
+   "nearKm": 1
+  },
   "es-valles-de-sadacia": {
    "clay": 30.1,
    "phh2o": 7.4,
@@ -3878,6 +5614,38 @@
    "sand": 45.3,
    "silt": 29.8,
    "soc": 11.8
+  },
+  "fr-agenais": {
+   "clay": 32.5,
+   "phh2o": 7.2,
+   "sand": 19.8,
+   "silt": 47.7,
+   "soc": 27.5,
+   "nearKm": 1
+  },
+  "fr-ajaccio": {
+   "clay": 23.7,
+   "phh2o": 7,
+   "sand": 44.8,
+   "silt": 31.5,
+   "soc": 30.8,
+   "nearKm": 1
+  },
+  "fr-aloxe-corton": {
+   "clay": 32.1,
+   "phh2o": 6.7,
+   "sand": 22.4,
+   "silt": 45.5,
+   "soc": 32.3,
+   "nearKm": 1
+  },
+  "fr-alpes-de-haute-provence": {
+   "clay": 23.7,
+   "phh2o": 7.1,
+   "sand": 27,
+   "silt": 49.2,
+   "soc": 39,
+   "nearKm": 1
   },
   "fr-alpes-maritimes": {
    "clay": 26.9,
@@ -3977,6 +5745,14 @@
    "silt": 49.3,
    "soc": 22.3
   },
+  "fr-alsace-grand-cru-geisberg": {
+   "clay": 23.3,
+   "phh2o": 5.3,
+   "sand": 36.7,
+   "silt": 40,
+   "soc": 41,
+   "nearKm": 1
+  },
   "fr-alsace-grand-cru-gloeckelberg": {
    "clay": 30.1,
    "phh2o": 6.8,
@@ -4019,12 +5795,28 @@
    "silt": 45.2,
    "soc": 23.2
   },
+  "fr-alsace-grand-cru-kastelberg": {
+   "clay": 26.3,
+   "phh2o": 5.4,
+   "sand": 31.5,
+   "silt": 42.1,
+   "soc": 32.7,
+   "nearKm": 1
+  },
   "fr-alsace-grand-cru-kessler": {
    "clay": 27.2,
    "phh2o": 6.8,
    "sand": 29.1,
    "silt": 43.7,
    "soc": 28.6
+  },
+  "fr-alsace-grand-cru-kirchberg-de-barr": {
+   "clay": 29,
+   "phh2o": 6.5,
+   "sand": 26.7,
+   "silt": 44.3,
+   "soc": 23.5,
+   "nearKm": 1
   },
   "fr-alsace-grand-cru-kirchberg-de-ribeauville": {
    "clay": 28.4,
@@ -4236,12 +6028,44 @@
    "silt": 47.7,
    "soc": 18.1
   },
+  "fr-anjou": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
   "fr-anjou-brissac": {
    "clay": 23,
    "phh2o": 6.4,
    "sand": 38.5,
    "silt": 38.4,
    "soc": 31.4
+  },
+  "fr-anjou-coteaux-de-la-loire": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
+  "fr-anjou-villages": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
+  "fr-arbois": {
+   "clay": 37.9,
+   "phh2o": 6.5,
+   "sand": 19.3,
+   "silt": 42.8,
+   "soc": 32.5,
+   "nearKm": 1
   },
   "fr-ardeche": {
    "clay": 26.3,
@@ -4285,6 +6109,22 @@
    "silt": 32.5,
    "soc": 31.8
   },
+  "fr-bandol": {
+   "clay": 25,
+   "phh2o": 6.9,
+   "sand": 35.7,
+   "silt": 39.4,
+   "soc": 32,
+   "nearKm": 2
+  },
+  "fr-banyuls": {
+   "clay": 31.2,
+   "phh2o": 7.6,
+   "sand": 30.1,
+   "silt": 38.7,
+   "soc": 28.2,
+   "nearKm": 1
+  },
   "fr-banyuls-grand-cru": {
    "clay": 25.7,
    "phh2o": 7.1,
@@ -4292,12 +6132,28 @@
    "silt": 39,
    "soc": 24.7
   },
+  "fr-barsac": {
+   "clay": 27,
+   "phh2o": 6.5,
+   "sand": 42.2,
+   "silt": 30.8,
+   "soc": 32,
+   "nearKm": 1
+  },
   "fr-batard-montrachet": {
    "clay": 33,
    "phh2o": 6.9,
    "sand": 19.3,
    "silt": 47.8,
    "soc": 25.8
+  },
+  "fr-bearn": {
+   "clay": 22.2,
+   "phh2o": 5.7,
+   "sand": 26.9,
+   "silt": 51,
+   "soc": 34.6,
+   "nearKm": 2.8
   },
   "fr-beaujolais": {
    "clay": 23.5,
@@ -4327,6 +6183,14 @@
    "silt": 48.4,
    "soc": 40.5
   },
+  "fr-bergerac": {
+   "clay": 21.3,
+   "phh2o": 6.9,
+   "sand": 33.1,
+   "silt": 45.7,
+   "soc": 26.4,
+   "nearKm": 1
+  },
   "fr-bienvenues-batard-montrachet": {
    "clay": 32.1,
    "phh2o": 6.9,
@@ -4341,12 +6205,44 @@
    "silt": 49.1,
    "soc": 24.6
   },
+  "fr-blaye": {
+   "clay": 35,
+   "phh2o": 7,
+   "sand": 28.8,
+   "silt": 36.2,
+   "soc": 31.3,
+   "nearKm": 1
+  },
   "fr-bonnes-mares": {
    "clay": 33,
    "phh2o": 6.9,
    "sand": 20.6,
    "silt": 46.4,
    "soc": 30
+  },
+  "fr-bonnezeaux": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
+  "fr-bordeaux-superieur": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-bourg": {
+   "clay": 27.8,
+   "phh2o": 6.9,
+   "sand": 34.5,
+   "silt": 37.9,
+   "soc": 23.8,
+   "nearKm": 1
   },
   "fr-bourgogne": {
    "clay": 31,
@@ -4369,6 +6265,22 @@
    "silt": 37.1,
    "soc": 47.6
   },
+  "fr-bourgogne-passe-tout-grains": {
+   "clay": 27.4,
+   "phh2o": 7.3,
+   "sand": 24.9,
+   "silt": 47.8,
+   "soc": 21,
+   "nearKm": 2
+  },
+  "fr-bourgueil": {
+   "clay": 21.7,
+   "phh2o": 6.7,
+   "sand": 41.1,
+   "silt": 37.1,
+   "soc": 19.7,
+   "nearKm": 1
+  },
   "fr-boutenac": {
    "clay": 28.1,
    "phh2o": 7.8,
@@ -4382,6 +6294,14 @@
    "sand": 30.5,
    "silt": 41.9,
    "soc": 26.8
+  },
+  "fr-brouilly": {
+   "clay": 29.8,
+   "phh2o": 6.1,
+   "sand": 30.3,
+   "silt": 39.9,
+   "soc": 23.3,
+   "nearKm": 1.4
   },
   "fr-brulhois": {
    "clay": 31.3,
@@ -4404,12 +6324,44 @@
    "silt": 34.1,
    "soc": 20.2
   },
+  "fr-cabardes": {
+   "clay": 31.3,
+   "phh2o": 7.6,
+   "sand": 28.1,
+   "silt": 40.6,
+   "soc": 22.3,
+   "nearKm": 1
+  },
   "fr-cabernet-d-anjou": {
    "clay": 21.5,
    "phh2o": 6.3,
    "sand": 35.8,
    "silt": 42.8,
    "soc": 23.7
+  },
+  "fr-cabernet-de-saumur": {
+   "clay": 22,
+   "phh2o": 6.8,
+   "sand": 44.9,
+   "silt": 33.1,
+   "soc": 24.9,
+   "nearKm": 1
+  },
+  "fr-cadillac": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-cahors": {
+   "clay": 31.9,
+   "phh2o": 7,
+   "sand": 23.2,
+   "silt": 44.9,
+   "soc": 37.2,
+   "nearKm": 1
   },
   "fr-cairanne": {
    "clay": 26.9,
@@ -4425,12 +6377,44 @@
    "silt": 52.9,
    "soc": 36.2
   },
+  "fr-canon-fronsac": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-cassis": {
+   "clay": 30.8,
+   "phh2o": 7.6,
+   "sand": 31,
+   "silt": 38.2,
+   "soc": 27.2,
+   "nearKm": 1
+  },
+  "fr-cerons": {
+   "clay": 28,
+   "phh2o": 6.8,
+   "sand": 41.9,
+   "silt": 30.2,
+   "soc": 28.4,
+   "nearKm": 1
+  },
   "fr-cevennes": {
    "clay": 24,
    "phh2o": 5.9,
    "sand": 35.8,
    "silt": 40.2,
    "soc": 67.2
+  },
+  "fr-chablis": {
+   "clay": 33.8,
+   "phh2o": 7.4,
+   "sand": 17.9,
+   "silt": 48.3,
+   "soc": 21.4,
+   "nearKm": 1
   },
   "fr-chablis-grand-cru": {
    "clay": 34.1,
@@ -4509,6 +6493,30 @@
    "silt": 42.4,
    "soc": 42.4
   },
+  "fr-chateau-grillet": {
+   "clay": 20,
+   "phh2o": 6.1,
+   "sand": 48.8,
+   "silt": 31.2,
+   "soc": 26.1,
+   "nearKm": 1
+  },
+  "fr-chateaumeillant": {
+   "clay": 26.6,
+   "phh2o": 6.3,
+   "sand": 38.1,
+   "silt": 35.4,
+   "soc": 30,
+   "nearKm": 1
+  },
+  "fr-chateauneuf-du-pape": {
+   "clay": 25.3,
+   "phh2o": 7.7,
+   "sand": 40.5,
+   "silt": 34.2,
+   "soc": 24.4,
+   "nearKm": 1
+  },
   "fr-chatillon-en-diois": {
    "clay": 29.2,
    "phh2o": 7.1,
@@ -4530,12 +6538,44 @@
    "silt": 46.3,
    "soc": 26.3
   },
+  "fr-cheverny": {
+   "clay": 24.6,
+   "phh2o": 6.5,
+   "sand": 44.7,
+   "silt": 30.8,
+   "soc": 23.4,
+   "nearKm": 1
+  },
+  "fr-chinon": {
+   "clay": 24,
+   "phh2o": 6.8,
+   "sand": 43.8,
+   "silt": 32.2,
+   "soc": 20.1,
+   "nearKm": 1
+  },
   "fr-chiroubles": {
    "clay": 21.2,
    "phh2o": 6.7,
    "sand": 41.7,
    "silt": 37.2,
    "soc": 28.2
+  },
+  "fr-chorey-les-beaune": {
+   "clay": 37.5,
+   "phh2o": 6.8,
+   "sand": 13.4,
+   "silt": 49.2,
+   "soc": 22.9,
+   "nearKm": 1
+  },
+  "fr-clairette-de-bellegarde": {
+   "clay": 24.9,
+   "phh2o": 7.6,
+   "sand": 25.1,
+   "silt": 50.1,
+   "soc": 32.9,
+   "nearKm": 1
   },
   "fr-clairette-de-die": {
    "clay": 29,
@@ -4550,6 +6590,14 @@
    "sand": 19.5,
    "silt": 46.4,
    "soc": 27.3
+  },
+  "fr-clos-de-tart": {
+   "clay": 33.9,
+   "phh2o": 7,
+   "sand": 19,
+   "silt": 47.2,
+   "soc": 27.9,
+   "nearKm": 1
   },
   "fr-clos-de-vougeot": {
    "clay": 30.3,
@@ -4572,6 +6620,22 @@
    "silt": 47.1,
    "soc": 25.1
   },
+  "fr-collines-rhodaniennes": {
+   "clay": 29.8,
+   "phh2o": 6.1,
+   "sand": 30.3,
+   "silt": 39.9,
+   "soc": 23.3,
+   "nearKm": 1.4
+  },
+  "fr-collioure": {
+   "clay": 27.5,
+   "phh2o": 7.6,
+   "sand": 35.2,
+   "silt": 37.4,
+   "soc": 22.7,
+   "nearKm": 1
+  },
   "fr-comte-tolosan": {
    "clay": 24.5,
    "phh2o": 6,
@@ -4586,12 +6650,28 @@
    "silt": 40.3,
    "soc": 28.7
   },
+  "fr-condrieu": {
+   "clay": 25.9,
+   "phh2o": 6.6,
+   "sand": 31.8,
+   "silt": 42.3,
+   "soc": 27.1,
+   "nearKm": 1
+  },
   "fr-corbieres": {
    "clay": 27.8,
    "phh2o": 6.4,
    "sand": 26.6,
    "silt": 45.6,
    "soc": 35.6
+  },
+  "fr-cornas": {
+   "clay": 25.9,
+   "phh2o": 6.8,
+   "sand": 38.2,
+   "silt": 35.9,
+   "soc": 26.2,
+   "nearKm": 1
   },
   "fr-correze": {
    "clay": 20,
@@ -4621,6 +6701,14 @@
    "silt": 47,
    "soc": 22.6
   },
+  "fr-costieres-de-nimes": {
+   "clay": 20.3,
+   "phh2o": 7.4,
+   "sand": 30.8,
+   "silt": 49,
+   "soc": 23.8,
+   "nearKm": 1.4
+  },
   "fr-cote-de-beaune": {
    "clay": 32.4,
    "phh2o": 7,
@@ -4635,6 +6723,14 @@
    "silt": 55.5,
    "soc": 44.4
   },
+  "fr-cote-de-brouilly": {
+   "clay": 29.8,
+   "phh2o": 6.1,
+   "sand": 30.3,
+   "silt": 39.9,
+   "soc": 23.3,
+   "nearKm": 1.4
+  },
   "fr-cote-de-nuits-villages": {
    "clay": 26,
    "phh2o": 6.4,
@@ -4642,12 +6738,52 @@
    "silt": 55.5,
    "soc": 44.4
   },
+  "fr-cote-roannaise": {
+   "clay": 20,
+   "phh2o": 6.1,
+   "sand": 48.8,
+   "silt": 31.2,
+   "soc": 26.1,
+   "nearKm": 1
+  },
+  "fr-cote-rotie": {
+   "clay": 29.8,
+   "phh2o": 6.1,
+   "sand": 30.3,
+   "silt": 39.9,
+   "soc": 23.3,
+   "nearKm": 1.4
+  },
+  "fr-cote-vermeille": {
+   "clay": 25.2,
+   "phh2o": 7.4,
+   "sand": 34.7,
+   "silt": 40.1,
+   "soc": 25.4,
+   "nearKm": 1
+  },
+  "fr-coteaux-bourguignons": {
+   "clay": 27.4,
+   "phh2o": 7.3,
+   "sand": 24.9,
+   "silt": 47.8,
+   "soc": 21,
+   "nearKm": 2
+  },
   "fr-coteaux-champenois": {
    "clay": 28.8,
    "phh2o": 7.6,
    "sand": 22.1,
    "silt": 49.1,
    "soc": 19.3
+  },
+  "fr-coteaux-d-ancenis": {
+   "clay": 19.2,
+   "phh2o": 6.2,
+   "sand": 40.4,
+   "silt": 40.4,
+   "soc": 42.6,
+   "nearKm": 1
   },
   "fr-coteaux-de-coiffy": {
    "clay": 43.4,
@@ -4677,6 +6813,14 @@
    "silt": 49.3,
    "soc": 34.1
   },
+  "fr-coteaux-de-l-aubance": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
   "fr-coteaux-de-l-auxois": {
    "clay": 26,
    "phh2o": 6.4,
@@ -4690,6 +6834,14 @@
    "sand": 31.4,
    "silt": 39,
    "soc": 35.1
+  },
+  "fr-coteaux-de-saumur": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
   },
   "fr-coteaux-de-tannay": {
    "clay": 33.7,
@@ -4719,12 +6871,36 @@
    "silt": 42.5,
    "soc": 20.1
   },
+  "fr-coteaux-du-layon": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
   "fr-coteaux-du-loir": {
    "clay": 19.8,
    "phh2o": 6.3,
    "sand": 34.1,
    "silt": 46.1,
    "soc": 27.1
+  },
+  "fr-coteaux-du-lyonnais": {
+   "clay": 29.8,
+   "phh2o": 6.1,
+   "sand": 30.3,
+   "silt": 39.9,
+   "soc": 23.3,
+   "nearKm": 1.4
+  },
+  "fr-coteaux-du-pont-du-gard": {
+   "clay": 20.3,
+   "phh2o": 7.4,
+   "sand": 30.8,
+   "silt": 49,
+   "soc": 23.8,
+   "nearKm": 1.4
   },
   "fr-coteaux-du-quercy": {
    "clay": 29.5,
@@ -4768,12 +6944,44 @@
    "silt": 41.7,
    "soc": 30.8
   },
+  "fr-cotes-de-blaye": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-cotes-de-bordeaux": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-cotes-de-bordeaux-saint-macaire": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
   "fr-cotes-de-duras": {
    "clay": 32.6,
    "phh2o": 7.1,
    "sand": 22.1,
    "silt": 45.3,
    "soc": 24.7
+  },
+  "fr-cotes-de-gascogne": {
+   "clay": 30.8,
+   "phh2o": 7.3,
+   "sand": 19.8,
+   "silt": 49.4,
+   "soc": 23.3,
+   "nearKm": 1
   },
   "fr-cotes-de-la-charite": {
    "clay": 33.7,
@@ -4816,6 +7024,22 @@
    "sand": 16.2,
    "silt": 48.9,
    "soc": 37.8
+  },
+  "fr-cotes-du-forez": {
+   "clay": 20,
+   "phh2o": 6.1,
+   "sand": 48.8,
+   "silt": 31.2,
+   "soc": 26.1,
+   "nearKm": 1
+  },
+  "fr-cotes-du-jura": {
+   "clay": 36.7,
+   "phh2o": 6.7,
+   "sand": 20.4,
+   "silt": 42.9,
+   "soc": 37,
+   "nearKm": 1
   },
   "fr-cotes-du-lot": {
    "clay": 23.7,
@@ -4880,6 +7104,38 @@
    "silt": 38.4,
    "soc": 31.4
   },
+  "fr-cour-cheverny": {
+   "clay": 22.1,
+   "phh2o": 7,
+   "sand": 47,
+   "silt": 30.9,
+   "soc": 15.4,
+   "nearKm": 1
+  },
+  "fr-cremant-d-alsace": {
+   "clay": 26,
+   "phh2o": 7,
+   "sand": 26.6,
+   "silt": 47.5,
+   "soc": 20.8,
+   "nearKm": 1
+  },
+  "fr-cremant-de-bordeaux": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-cremant-de-bourgogne": {
+   "clay": 27.4,
+   "phh2o": 7.3,
+   "sand": 24.9,
+   "silt": 47.8,
+   "soc": 21,
+   "nearKm": 2
+  },
   "fr-cremant-de-die": {
    "clay": 29,
    "phh2o": 7.1,
@@ -4893,6 +7149,22 @@
    "sand": 31.4,
    "silt": 39,
    "soc": 35.1
+  },
+  "fr-cremant-de-loire": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
+  "fr-cremant-du-jura": {
+   "clay": 36.7,
+   "phh2o": 6.7,
+   "sand": 20.4,
+   "silt": 42.9,
+   "soc": 37,
+   "nearKm": 1
   },
   "fr-criots-batard-montrachet": {
    "clay": 33.1,
@@ -4915,6 +7187,14 @@
    "silt": 39.6,
    "soc": 34.3
   },
+  "fr-duche-d-uzes": {
+   "clay": 20.3,
+   "phh2o": 7.4,
+   "sand": 30.8,
+   "silt": 49,
+   "soc": 23.8,
+   "nearKm": 1.4
+  },
   "fr-echezeaux": {
    "clay": 29.4,
    "phh2o": 7,
@@ -4929,6 +7209,14 @@
    "silt": 38.4,
    "soc": 38.3
   },
+  "fr-entre-deux-mers": {
+   "clay": 22.7,
+   "phh2o": 6.6,
+   "sand": 37.9,
+   "silt": 39.5,
+   "soc": 25.9,
+   "nearKm": 1
+  },
   "fr-estaing": {
    "clay": 24.3,
    "phh2o": 7.1,
@@ -4936,12 +7224,44 @@
    "silt": 43.6,
    "soc": 26.2
   },
+  "fr-faugeres": {
+   "clay": 28.7,
+   "phh2o": 6.8,
+   "sand": 30.8,
+   "silt": 40.5,
+   "soc": 31,
+   "nearKm": 1
+  },
+  "fr-fiefs-vendeens": {
+   "clay": 24,
+   "phh2o": 6.8,
+   "sand": 30.4,
+   "silt": 45.7,
+   "soc": 31.7,
+   "nearKm": 1
+  },
   "fr-fitou": {
    "clay": 29.7,
    "phh2o": 7.6,
    "sand": 32.3,
    "silt": 38,
    "soc": 21
+  },
+  "fr-fixin": {
+   "clay": 30,
+   "phh2o": 7.2,
+   "sand": 22.1,
+   "silt": 47.9,
+   "soc": 22.2,
+   "nearKm": 1
+  },
+  "fr-fleurie": {
+   "clay": 21.2,
+   "phh2o": 6.4,
+   "sand": 41.1,
+   "silt": 37.7,
+   "soc": 29.4,
+   "nearKm": 1
   },
   "fr-floc-de-gascogne": {
    "clay": 15.8,
@@ -4957,6 +7277,30 @@
    "silt": 60,
    "soc": 63.8
   },
+  "fr-fronsac": {
+   "clay": 23.9,
+   "phh2o": 7,
+   "sand": 38.2,
+   "silt": 37.8,
+   "soc": 23.5,
+   "nearKm": 1
+  },
+  "fr-fronton": {
+   "clay": 30.6,
+   "phh2o": 7,
+   "sand": 27.3,
+   "silt": 42.2,
+   "soc": 17.2,
+   "nearKm": 1
+  },
+  "fr-gaillac": {
+   "clay": 28.2,
+   "phh2o": 7,
+   "sand": 32.5,
+   "silt": 39.4,
+   "soc": 31.1,
+   "nearKm": 1
+  },
   "fr-gaillac-premieres-cotes": {
    "clay": 27.9,
    "phh2o": 6.9,
@@ -4964,12 +7308,44 @@
    "silt": 41.3,
    "soc": 20.2
   },
+  "fr-gard": {
+   "clay": 20.3,
+   "phh2o": 7.4,
+   "sand": 30.8,
+   "silt": 49,
+   "soc": 23.8,
+   "nearKm": 1.4
+  },
+  "fr-gers": {
+   "clay": 30.8,
+   "phh2o": 7.3,
+   "sand": 19.8,
+   "silt": 49.4,
+   "soc": 23.3,
+   "nearKm": 1
+  },
+  "fr-gevrey-chambertin": {
+   "clay": 29.3,
+   "phh2o": 6.9,
+   "sand": 22.7,
+   "silt": 47.9,
+   "soc": 27.4,
+   "nearKm": 1
+  },
   "fr-gigondas": {
    "clay": 30.2,
    "phh2o": 7.7,
    "sand": 33.8,
    "silt": 36,
    "soc": 27
+  },
+  "fr-givry": {
+   "clay": 24.3,
+   "phh2o": 6.5,
+   "sand": 30.5,
+   "silt": 45.3,
+   "soc": 22.2,
+   "nearKm": 1
   },
   "fr-grand-roussillon": {
    "clay": 26.4,
@@ -4992,6 +7368,22 @@
    "silt": 38.9,
    "soc": 23.9
   },
+  "fr-graves-de-vayres": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-graves-superieures": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
   "fr-grignan-les-adhemar": {
    "clay": 29,
    "phh2o": 7.1,
@@ -5006,12 +7398,36 @@
    "silt": 50.2,
    "soc": 24.4
   },
+  "fr-gros-plant-du-pays-nantais": {
+   "clay": 17.9,
+   "phh2o": 5.9,
+   "sand": 32.3,
+   "silt": 49.9,
+   "soc": 30.4,
+   "nearKm": 1
+  },
+  "fr-haut-medoc": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
   "fr-haut-montravel": {
    "clay": 26.9,
    "phh2o": 6.1,
    "sand": 31.4,
    "silt": 41.7,
    "soc": 30.8
+  },
+  "fr-haut-poitou": {
+   "clay": 26.2,
+   "phh2o": 6.8,
+   "sand": 35.4,
+   "silt": 38.4,
+   "soc": 23.8,
+   "nearKm": 1.4
   },
   "fr-haute-marne": {
    "clay": 43.4,
@@ -5026,6 +7442,14 @@
    "sand": 31.4,
    "silt": 39,
    "soc": 35.1
+  },
+  "fr-haute-vienne": {
+   "clay": 21.8,
+   "phh2o": 6.9,
+   "sand": 39.3,
+   "silt": 38.9,
+   "soc": 36.6,
+   "nearKm": 2
   },
   "fr-hautes-alpes": {
    "clay": 22.6,
@@ -5048,6 +7472,14 @@
    "silt": 41.6,
    "soc": 47.4
   },
+  "fr-irancy": {
+   "clay": 34.5,
+   "phh2o": 7.3,
+   "sand": 18.8,
+   "silt": 46.7,
+   "soc": 21.9,
+   "nearKm": 1
+  },
   "fr-irouleguy": {
    "clay": 25.8,
    "phh2o": 6.1,
@@ -5061,6 +7493,22 @@
    "sand": 28,
    "silt": 46.2,
    "soc": 27.1
+  },
+  "fr-julienas": {
+   "clay": 24.2,
+   "phh2o": 6.6,
+   "sand": 41.9,
+   "silt": 33.9,
+   "soc": 27.4,
+   "nearKm": 1
+  },
+  "fr-jurancon": {
+   "clay": 23.3,
+   "phh2o": 5.5,
+   "sand": 26.2,
+   "silt": 50.5,
+   "soc": 34.1,
+   "nearKm": 1
   },
   "fr-l-etoile": {
    "clay": 36.9,
@@ -5082,6 +7530,14 @@
    "sand": 22.6,
    "silt": 45.9,
    "soc": 25.1
+  },
+  "fr-la-liviniere": {
+   "clay": 32,
+   "phh2o": 7.7,
+   "sand": 27.5,
+   "silt": 40.5,
+   "soc": 23,
+   "nearKm": 1
   },
   "fr-la-romanee": {
    "clay": 32.6,
@@ -5153,12 +7609,36 @@
    "silt": 38.9,
    "soc": 30.5
   },
+  "fr-limoux": {
+   "clay": 30.6,
+   "phh2o": 7.3,
+   "sand": 25.3,
+   "silt": 44.2,
+   "soc": 21.3,
+   "nearKm": 1
+  },
   "fr-lirac": {
    "clay": 25.7,
    "phh2o": 7.7,
    "sand": 42.2,
    "silt": 32.2,
    "soc": 27.5
+  },
+  "fr-listrac-medoc": {
+   "clay": 16.7,
+   "phh2o": 6.7,
+   "sand": 61.8,
+   "silt": 21.6,
+   "soc": 27.5,
+   "nearKm": 1
+  },
+  "fr-lorraine": {
+   "clay": 36.9,
+   "phh2o": 7.1,
+   "sand": 14.5,
+   "silt": 48.6,
+   "soc": 23.5,
+   "nearKm": 1
   },
   "fr-loupiac": {
    "clay": 22.3,
@@ -5173,6 +7653,30 @@
    "sand": 27.2,
    "silt": 42.6,
    "soc": 35.1
+  },
+  "fr-lussac-saint-emilion": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-macon": {
+   "clay": 24.8,
+   "phh2o": 6.8,
+   "sand": 32.9,
+   "silt": 42.3,
+   "soc": 33.6,
+   "nearKm": 1
+  },
+  "fr-macvin-du-jura": {
+   "clay": 36.7,
+   "phh2o": 6.7,
+   "sand": 20.4,
+   "silt": 42.9,
+   "soc": 37,
+   "nearKm": 1
   },
   "fr-madiran": {
    "clay": 19.8,
@@ -5194,6 +7698,22 @@
    "sand": 31.8,
    "silt": 46.1,
    "soc": 25.5
+  },
+  "fr-marcillac": {
+   "clay": 25.4,
+   "phh2o": 6.5,
+   "sand": 32.9,
+   "silt": 41.7,
+   "soc": 32,
+   "nearKm": 1
+  },
+  "fr-margaux": {
+   "clay": 31.6,
+   "phh2o": 6.7,
+   "sand": 39.4,
+   "silt": 29,
+   "soc": 26.7,
+   "nearKm": 1
   },
   "fr-marsannay": {
    "clay": 26,
@@ -5237,6 +7757,14 @@
    "silt": 43.8,
    "soc": 52.7
   },
+  "fr-medoc": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
   "fr-menetou-salon": {
    "clay": 34.1,
    "phh2o": 7,
@@ -5250,6 +7778,14 @@
    "sand": 26.6,
    "silt": 48.6,
    "soc": 22.2
+  },
+  "fr-meursault": {
+   "clay": 30.9,
+   "phh2o": 6.9,
+   "sand": 22.1,
+   "silt": 47.1,
+   "soc": 22.2,
+   "nearKm": 1
   },
   "fr-minervois": {
    "clay": 29.6,
@@ -5271,6 +7807,14 @@
    "sand": 33.9,
    "silt": 40,
    "soc": 38.6
+  },
+  "fr-montagne-saint-emilion": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
   },
   "fr-montagny": {
    "clay": 22.1,
@@ -5307,6 +7851,22 @@
    "silt": 42.1,
    "soc": 24.6
   },
+  "fr-morey-saint-denis": {
+   "clay": 33.9,
+   "phh2o": 7,
+   "sand": 19,
+   "silt": 47.2,
+   "soc": 27.9,
+   "nearKm": 1
+  },
+  "fr-morgon": {
+   "clay": 29.8,
+   "phh2o": 6.1,
+   "sand": 30.3,
+   "silt": 39.9,
+   "soc": 23.3,
+   "nearKm": 1.4
+  },
   "fr-moselle": {
    "clay": 33.5,
    "phh2o": 6.9,
@@ -5321,6 +7881,22 @@
    "silt": 37.1,
    "soc": 25.7
   },
+  "fr-moulis": {
+   "clay": 17.7,
+   "phh2o": 6.8,
+   "sand": 58.9,
+   "silt": 23.4,
+   "soc": 23,
+   "nearKm": 1
+  },
+  "fr-muscadet": {
+   "clay": 17.9,
+   "phh2o": 5.9,
+   "sand": 32.3,
+   "silt": 49.9,
+   "soc": 30.4,
+   "nearKm": 1
+  },
   "fr-muscadet-coteaux-de-la-loire": {
    "clay": 17.7,
    "phh2o": 6.3,
@@ -5328,12 +7904,44 @@
    "silt": 46,
    "soc": 48.4
   },
+  "fr-muscadet-cotes-de-grandlieu": {
+   "clay": 17.9,
+   "phh2o": 5.9,
+   "sand": 32.3,
+   "silt": 49.9,
+   "soc": 30.4,
+   "nearKm": 1
+  },
+  "fr-muscadet-sevre-et-maine": {
+   "clay": 17.9,
+   "phh2o": 5.9,
+   "sand": 32.3,
+   "silt": 49.9,
+   "soc": 30.4,
+   "nearKm": 1
+  },
   "fr-muscat-de-beaumes-de-venise": {
    "clay": 24.6,
    "phh2o": 7.5,
    "sand": 35,
    "silt": 40.5,
    "soc": 30.4
+  },
+  "fr-muscat-de-frontignan": {
+   "clay": 37.7,
+   "phh2o": 7.7,
+   "sand": 26.3,
+   "silt": 36.1,
+   "soc": 29.2,
+   "nearKm": 1.4
+  },
+  "fr-muscat-de-rivesaltes": {
+   "clay": 26.8,
+   "phh2o": 7.7,
+   "sand": 30.4,
+   "silt": 42.8,
+   "soc": 22.6,
+   "nearKm": 1
   },
   "fr-muscat-du-cap-corse": {
    "clay": 35.1,
@@ -5348,6 +7956,14 @@
    "sand": 22,
    "silt": 46.6,
    "soc": 25.2
+  },
+  "fr-nuits-saint-georges": {
+   "clay": 29.8,
+   "phh2o": 7,
+   "sand": 20.3,
+   "silt": 50,
+   "soc": 22.3,
+   "nearKm": 1
   },
   "fr-orleans-clery": {
    "clay": 26.4,
@@ -5377,6 +7993,14 @@
    "silt": 38.3,
    "soc": 29
   },
+  "fr-pauillac": {
+   "clay": 32.7,
+   "phh2o": 6.4,
+   "sand": 32.7,
+   "silt": 34.6,
+   "soc": 30.3,
+   "nearKm": 1
+  },
   "fr-pays-d-oc": {
    "clay": 29.6,
    "phh2o": 6.2,
@@ -5398,6 +8022,14 @@
    "silt": 41.7,
    "soc": 30.8
   },
+  "fr-perigord": {
+   "clay": 28.3,
+   "phh2o": 6.9,
+   "sand": 35.3,
+   "silt": 36.4,
+   "soc": 30.2,
+   "nearKm": 1
+  },
   "fr-pernand-vergelesses": {
    "clay": 28.8,
    "phh2o": 6.9,
@@ -5411,6 +8043,14 @@
    "sand": 44.2,
    "silt": 34.4,
    "soc": 24.3
+  },
+  "fr-petit-chablis": {
+   "clay": 27.4,
+   "phh2o": 7.3,
+   "sand": 24.9,
+   "silt": 47.8,
+   "soc": 21,
+   "nearKm": 2
   },
   "fr-pic-saint-loup": {
    "clay": 31.5,
@@ -5475,6 +8115,14 @@
    "silt": 46.1,
    "soc": 25.5
   },
+  "fr-pouilly-sur-loire": {
+   "clay": 32,
+   "phh2o": 6.4,
+   "sand": 20.8,
+   "silt": 47.3,
+   "soc": 25.7,
+   "nearKm": 1
+  },
   "fr-pouilly-vinzelles": {
    "clay": 22.2,
    "phh2o": 6.1,
@@ -5482,12 +8130,44 @@
    "silt": 46.1,
    "soc": 25.5
   },
+  "fr-premieres-cotes-de-bordeaux": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-puisseguin-saint-emilion": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-puligny-montrachet": {
+   "clay": 31.8,
+   "phh2o": 6.9,
+   "sand": 19.4,
+   "silt": 48.7,
+   "soc": 25.6,
+   "nearKm": 1
+  },
   "fr-puy-de-dome": {
    "clay": 36.4,
    "phh2o": 7.4,
    "sand": 31.2,
    "silt": 32.4,
    "soc": 32.2
+  },
+  "fr-quarts-de-chaume": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
   },
   "fr-quincy": {
    "clay": 23.3,
@@ -5503,12 +8183,36 @@
    "silt": 36.3,
    "soc": 25.8
   },
+  "fr-regnie": {
+   "clay": 25.1,
+   "phh2o": 6.2,
+   "sand": 31,
+   "silt": 43.9,
+   "soc": 22.2,
+   "nearKm": 1
+  },
+  "fr-reuilly": {
+   "clay": 24,
+   "phh2o": 7.1,
+   "sand": 33.8,
+   "silt": 42.3,
+   "soc": 19.3,
+   "nearKm": 1
+  },
   "fr-richebourg": {
    "clay": 32.9,
    "phh2o": 7,
    "sand": 21.4,
    "silt": 45.8,
    "soc": 25.3
+  },
+  "fr-rivesaltes": {
+   "clay": 26.8,
+   "phh2o": 7.7,
+   "sand": 30.4,
+   "silt": 42.8,
+   "soc": 22.6,
+   "nearKm": 1
   },
   "fr-romanee-conti": {
    "clay": 32.9,
@@ -5517,12 +8221,28 @@
    "silt": 45.8,
    "soc": 25.3
   },
+  "fr-romanee-saint-vivant": {
+   "clay": 29.9,
+   "phh2o": 7,
+   "sand": 20.8,
+   "silt": 49.3,
+   "soc": 26,
+   "nearKm": 1
+  },
   "fr-rose-d-anjou": {
    "clay": 21.5,
    "phh2o": 6.3,
    "sand": 35.8,
    "silt": 42.8,
    "soc": 23.7
+  },
+  "fr-rose-de-loire": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
   },
   "fr-rose-des-riceys": {
    "clay": 33.5,
@@ -5559,12 +8279,76 @@
    "silt": 49.7,
    "soc": 21.5
   },
+  "fr-rully": {
+   "clay": 25.2,
+   "phh2o": 6.4,
+   "sand": 32.3,
+   "silt": 42.5,
+   "soc": 29.1,
+   "nearKm": 1
+  },
+  "fr-saint-amour": {
+   "clay": 29.1,
+   "phh2o": 6.5,
+   "sand": 25.9,
+   "silt": 45,
+   "soc": 30,
+   "nearKm": 1
+  },
   "fr-saint-aubin": {
    "clay": 27.3,
    "phh2o": 6.8,
    "sand": 34.1,
    "silt": 38.7,
    "soc": 30.8
+  },
+  "fr-saint-bris": {
+   "clay": 27.4,
+   "phh2o": 7.3,
+   "sand": 24.9,
+   "silt": 47.8,
+   "soc": 21,
+   "nearKm": 2
+  },
+  "fr-saint-chinian": {
+   "clay": 31.7,
+   "phh2o": 7.7,
+   "sand": 23.6,
+   "silt": 44.8,
+   "soc": 22.2,
+   "nearKm": 1
+  },
+  "fr-saint-emilion": {
+   "clay": 24.3,
+   "phh2o": 7.1,
+   "sand": 38,
+   "silt": 37.7,
+   "soc": 24.3,
+   "nearKm": 1
+  },
+  "fr-saint-emilion-grand-cru": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
+  "fr-saint-estephe": {
+   "clay": 40.7,
+   "phh2o": 6.9,
+   "sand": 25.3,
+   "silt": 34.1,
+   "soc": 31,
+   "nearKm": 1
+  },
+  "fr-saint-georges-saint-emilion": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
   },
   "fr-saint-guilhem-le-desert": {
    "clay": 27.9,
@@ -5580,12 +8364,36 @@
    "silt": 35.3,
    "soc": 34.6
   },
+  "fr-saint-julien": {
+   "clay": 23.1,
+   "phh2o": 6.7,
+   "sand": 46.8,
+   "silt": 30.1,
+   "soc": 25.1,
+   "nearKm": 1.4
+  },
   "fr-saint-mont": {
    "clay": 21.1,
    "phh2o": 5.9,
    "sand": 29.1,
    "silt": 49.8,
    "soc": 29.6
+  },
+  "fr-saint-nicolas-de-bourgueil": {
+   "clay": 19.7,
+   "phh2o": 6.7,
+   "sand": 45.3,
+   "silt": 35,
+   "soc": 18.7,
+   "nearKm": 1
+  },
+  "fr-saint-peray": {
+   "clay": 25.2,
+   "phh2o": 7.1,
+   "sand": 39.7,
+   "silt": 35.2,
+   "soc": 27.7,
+   "nearKm": 1
   },
   "fr-saint-pourcain": {
    "clay": 19.5,
@@ -5601,6 +8409,14 @@
    "silt": 41.4,
    "soc": 33.5
   },
+  "fr-saint-sardos": {
+   "clay": 27.5,
+   "phh2o": 7.2,
+   "sand": 23.3,
+   "silt": 49.1,
+   "soc": 21.5,
+   "nearKm": 1
+  },
   "fr-saint-veran": {
    "clay": 22.2,
    "phh2o": 6.1,
@@ -5615,12 +8431,60 @@
    "silt": 39.7,
    "soc": 22.8
   },
+  "fr-sainte-fou-bordeaux": {
+   "clay": 29.4,
+   "phh2o": 6.9,
+   "sand": 29.8,
+   "silt": 40.8,
+   "soc": 26.7,
+   "nearKm": 1
+  },
+  "fr-sainte-marie-la-blanche": {
+   "clay": 24.9,
+   "phh2o": 6.8,
+   "sand": 19.3,
+   "silt": 55.8,
+   "soc": 18.3,
+   "nearKm": 1
+  },
+  "fr-sancerre": {
+   "clay": 29.9,
+   "phh2o": 7.1,
+   "sand": 25.2,
+   "silt": 44.9,
+   "soc": 20.3,
+   "nearKm": 1
+  },
+  "fr-santenay": {
+   "clay": 28.3,
+   "phh2o": 6.3,
+   "sand": 35.5,
+   "silt": 36.2,
+   "soc": 40.3,
+   "nearKm": 1
+  },
   "fr-saone-et-loire": {
    "clay": 22.2,
    "phh2o": 6.1,
    "sand": 31.8,
    "silt": 46.1,
    "soc": 25.5
+  },
+  "fr-saumur": {
+   "clay": 18.6,
+   "phh2o": 6.8,
+   "sand": 48.5,
+   "silt": 32.9,
+   "soc": 36.8,
+   "nearKm": 2
+  },
+  "fr-saumur-champigny": {
+   "clay": 22.8,
+   "phh2o": 6.3,
+   "sand": 38.5,
+   "silt": 38.8,
+   "soc": 30.3,
+   "nearKm": 1
   },
   "fr-saussignac": {
    "clay": 27.9,
@@ -5636,12 +8500,44 @@
    "silt": 33.5,
    "soc": 22.2
   },
+  "fr-savennieres": {
+   "clay": 22.2,
+   "phh2o": 6.3,
+   "sand": 35.7,
+   "silt": 42.2,
+   "soc": 18.4,
+   "nearKm": 1
+  },
   "fr-savennieres-roche-aux-moines": {
    "clay": 23,
    "phh2o": 6.4,
    "sand": 38.5,
    "silt": 38.4,
    "soc": 31.4
+  },
+  "fr-savigny-les-beaune": {
+   "clay": 26.6,
+   "phh2o": 6.4,
+   "sand": 29.7,
+   "silt": 43.7,
+   "soc": 35.2,
+   "nearKm": 1
+  },
+  "fr-seyssel": {
+   "clay": 25.7,
+   "phh2o": 6.8,
+   "sand": 38.4,
+   "silt": 35.9,
+   "soc": 44.6,
+   "nearKm": 1
+  },
+  "fr-tavel": {
+   "clay": 22.3,
+   "phh2o": 7.7,
+   "sand": 40.6,
+   "silt": 37.2,
+   "soc": 26.2,
+   "nearKm": 1
   },
   "fr-terres-du-midi": {
    "clay": 31.4,
@@ -5657,6 +8553,14 @@
    "silt": 45.3,
    "soc": 24.7
   },
+  "fr-touraine": {
+   "clay": 25.2,
+   "phh2o": 6.8,
+   "sand": 34.7,
+   "silt": 40.1,
+   "soc": 30,
+   "nearKm": 2
+  },
   "fr-touraine-noble-joue": {
    "clay": 26,
    "phh2o": 5.6,
@@ -5671,6 +8575,14 @@
    "silt": 48.9,
    "soc": 27
   },
+  "fr-urfe": {
+   "clay": 20,
+   "phh2o": 6.1,
+   "sand": 48.8,
+   "silt": 31.2,
+   "soc": 26.1,
+   "nearKm": 1
+  },
   "fr-vacqueyras": {
    "clay": 25.1,
    "phh2o": 7.8,
@@ -5684,6 +8596,14 @@
    "sand": 50.4,
    "silt": 30.1,
    "soc": 21.8
+  },
+  "fr-valencay": {
+   "clay": 23.8,
+   "phh2o": 6.8,
+   "sand": 24.7,
+   "silt": 51.6,
+   "soc": 19.1,
+   "nearKm": 1
   },
   "fr-vallee-du-paradis": {
    "clay": 29.6,
@@ -5748,12 +8668,60 @@
    "silt": 49.3,
    "soc": 34.1
   },
+  "fr-vinsobres": {
+   "clay": 30.7,
+   "phh2o": 7.7,
+   "sand": 27.7,
+   "silt": 41.7,
+   "soc": 30.8,
+   "nearKm": 1
+  },
   "fr-vire-clesse": {
    "clay": 25.5,
    "phh2o": 6.3,
    "sand": 34.7,
    "silt": 39.8,
    "soc": 29.1
+  },
+  "fr-volnay": {
+   "clay": 29.1,
+   "phh2o": 6.8,
+   "sand": 31.8,
+   "silt": 39.2,
+   "soc": 25.8,
+   "nearKm": 1
+  },
+  "fr-vosne-romanee": {
+   "clay": 29.4,
+   "phh2o": 7,
+   "sand": 23.6,
+   "silt": 47,
+   "soc": 26.3,
+   "nearKm": 1
+  },
+  "fr-vougeot": {
+   "clay": 32.9,
+   "phh2o": 7.1,
+   "sand": 16.6,
+   "silt": 50.6,
+   "soc": 24.5,
+   "nearKm": 1
+  },
+  "fr-vouvray": {
+   "clay": 25.1,
+   "phh2o": 6.8,
+   "sand": 28.8,
+   "silt": 46.2,
+   "soc": 18.6,
+   "nearKm": 1
+  },
+  "fr-yonne": {
+   "clay": 27.4,
+   "phh2o": 7.3,
+   "sand": 24.9,
+   "silt": 47.8,
+   "soc": 21,
+   "nearKm": 2
   },
   "gb-darnibole": {
    "clay": 20.7,
@@ -5797,12 +8765,76 @@
    "silt": 53.8,
    "soc": 130.4
   },
+  "ge-akhasheni": {
+   "clay": 30.4,
+   "phh2o": 6.9,
+   "sand": 22.4,
+   "silt": 47.3,
+   "soc": 19.6,
+   "nearKm": 1
+  },
+  "ge-akhmeta": {
+   "clay": 31.4,
+   "phh2o": 6.7,
+   "sand": 24.9,
+   "silt": 43.7,
+   "soc": 19.6,
+   "nearKm": 1
+  },
+  "ge-akhoebi": {
+   "clay": 35,
+   "phh2o": 7,
+   "sand": 24.5,
+   "silt": 40.6,
+   "soc": 20.1,
+   "nearKm": 1
+  },
+  "ge-asuretuli-shala": {
+   "clay": 38.2,
+   "phh2o": 6.6,
+   "sand": 23.8,
+   "silt": 38,
+   "soc": 20.9,
+   "nearKm": 1
+  },
+  "ge-ateni": {
+   "clay": 30,
+   "phh2o": 6.8,
+   "sand": 31.7,
+   "silt": 38.4,
+   "soc": 17.5,
+   "nearKm": 1
+  },
+  "ge-bolnisi": {
+   "clay": 34.2,
+   "phh2o": 7,
+   "sand": 25.8,
+   "silt": 40,
+   "soc": 17.9,
+   "nearKm": 1
+  },
   "ge-eniseli": {
    "clay": 30.9,
    "phh2o": 6.9,
    "sand": 25.5,
    "silt": 43.5,
    "soc": 22
+  },
+  "ge-gremi": {
+   "clay": 32.4,
+   "phh2o": 6.1,
+   "sand": 24.3,
+   "silt": 43.4,
+   "soc": 39.4,
+   "nearKm": 1
+  },
+  "ge-gurjaani": {
+   "clay": 32.2,
+   "phh2o": 6.8,
+   "sand": 22.4,
+   "silt": 45.5,
+   "soc": 19,
+   "nearKm": 1.4
   },
   "ge-kakheti": {
    "clay": 34.5,
@@ -5811,12 +8843,28 @@
    "silt": 41.4,
    "soc": 27.2
   },
+  "ge-kardenakhi": {
+   "clay": 35,
+   "phh2o": 7,
+   "sand": 24.5,
+   "silt": 40.6,
+   "soc": 20.1,
+   "nearKm": 1
+  },
   "ge-khvanchkara": {
    "clay": 32.2,
    "phh2o": 6,
    "sand": 26.5,
    "silt": 41.3,
    "soc": 47.3
+  },
+  "ge-kindzmarauli": {
+   "clay": 30.1,
+   "phh2o": 6.4,
+   "sand": 23.1,
+   "silt": 46.8,
+   "soc": 21.1,
+   "nearKm": 1
   },
   "ge-kisi-magraani": {
    "clay": 34.5,
@@ -5825,12 +8873,52 @@
    "silt": 41.4,
    "soc": 27.2
   },
+  "ge-kotekhi": {
+   "clay": 33.1,
+   "phh2o": 6.6,
+   "sand": 22.1,
+   "silt": 44.9,
+   "soc": 20.6,
+   "nearKm": 1
+  },
+  "ge-kvareli": {
+   "clay": 30.1,
+   "phh2o": 6.4,
+   "sand": 23.1,
+   "silt": 46.8,
+   "soc": 21.1,
+   "nearKm": 1
+  },
+  "ge-manavi": {
+   "clay": 31.8,
+   "phh2o": 6.5,
+   "sand": 27.3,
+   "silt": 41,
+   "soc": 22.8,
+   "nearKm": 1
+  },
   "ge-mukuzani": {
    "clay": 33.2,
    "phh2o": 6.7,
    "sand": 23.2,
    "silt": 43.6,
    "soc": 21.2
+  },
+  "ge-napareuli": {
+   "clay": 27.8,
+   "phh2o": 6.6,
+   "sand": 24.8,
+   "silt": 47.3,
+   "soc": 19.8,
+   "nearKm": 1
+  },
+  "ge-okami": {
+   "clay": 31.9,
+   "phh2o": 6.5,
+   "sand": 24.7,
+   "silt": 43.5,
+   "soc": 25.2,
+   "nearKm": 1
   },
   "ge-okureshis-usakhelouri": {
    "clay": 30.9,
@@ -5845,6 +8933,14 @@
    "sand": 26.3,
    "silt": 43.2,
    "soc": 52.5
+  },
+  "ge-saperavi-khashmi": {
+   "clay": 34.3,
+   "phh2o": 6.4,
+   "sand": 26.7,
+   "silt": 39,
+   "soc": 25.4,
+   "nearKm": 1
   },
   "ge-sazanos-otskhanuri": {
    "clay": 32.7,
@@ -5874,12 +8970,44 @@
    "silt": 39.1,
    "soc": 21.3
   },
+  "ge-tsarapi": {
+   "clay": 35,
+   "phh2o": 7,
+   "sand": 24.5,
+   "silt": 40.6,
+   "soc": 20.1,
+   "nearKm": 1
+  },
+  "ge-tsinandali": {
+   "clay": 33.7,
+   "phh2o": 6.7,
+   "sand": 24.3,
+   "silt": 42,
+   "soc": 20.7,
+   "nearKm": 1
+  },
   "ge-tvishi": {
    "clay": 31,
    "phh2o": 5.5,
    "sand": 28.7,
    "silt": 40.2,
    "soc": 55.2
+  },
+  "ge-vartsikhe": {
+   "clay": 33.2,
+   "phh2o": 5.7,
+   "sand": 24.4,
+   "silt": 42.3,
+   "soc": 28.1,
+   "nearKm": 1
+  },
+  "ge-vazisubani": {
+   "clay": 27.9,
+   "phh2o": 6.7,
+   "sand": 23.1,
+   "silt": 49,
+   "soc": 21.7,
+   "nearKm": 1
   },
   "ge-zegaani": {
    "clay": 34.6,
@@ -5916,6 +9044,14 @@
    "silt": 33.6,
    "soc": 16.8
   },
+  "gr-amyntaio": {
+   "clay": 30.1,
+   "phh2o": 7.6,
+   "sand": 31,
+   "silt": 38.9,
+   "soc": 19.9,
+   "nearKm": 1
+  },
   "gr-anavyssos": {
    "clay": 26.1,
    "phh2o": 7.8,
@@ -5943,6 +9079,14 @@
    "sand": 31,
    "silt": 38.5,
    "soc": 18.5
+  },
+  "gr-attiki": {
+   "clay": 26.2,
+   "phh2o": 6.9,
+   "sand": 38.9,
+   "silt": 34.9,
+   "soc": 28.7,
+   "nearKm": 1.4
   },
   "gr-avdira": {
    "clay": 24.2,
@@ -5972,6 +9116,14 @@
    "silt": 44.3,
    "soc": 20
   },
+  "gr-chania": {
+   "clay": 28.6,
+   "phh2o": 7.4,
+   "sand": 31.4,
+   "silt": 40,
+   "soc": 28.6,
+   "nearKm": 2
+  },
   "gr-chios": {
    "clay": 29.1,
    "phh2o": 6.9,
@@ -5993,6 +9145,30 @@
    "silt": 40.4,
    "soc": 24.4
   },
+  "gr-drama": {
+   "clay": 27,
+   "phh2o": 7.5,
+   "sand": 40.1,
+   "silt": 32.9,
+   "soc": 15.5,
+   "nearKm": 1
+  },
+  "gr-elassona": {
+   "clay": 26.9,
+   "phh2o": 7,
+   "sand": 36,
+   "silt": 37.2,
+   "soc": 22,
+   "nearKm": 1
+  },
+  "gr-epanomi": {
+   "clay": 25.7,
+   "phh2o": 7.7,
+   "sand": 39.8,
+   "silt": 34.6,
+   "soc": 12.8,
+   "nearKm": 1
+  },
   "gr-evros": {
    "clay": 27.6,
    "phh2o": 6.2,
@@ -6006,6 +9182,14 @@
    "sand": 29,
    "silt": 41.8,
    "soc": 28.8
+  },
+  "gr-florina": {
+   "clay": 22.7,
+   "phh2o": 7.1,
+   "sand": 41.6,
+   "silt": 35.7,
+   "soc": 22.1,
+   "nearKm": 1
   },
   "gr-fthiotida": {
    "clay": 36.6,
@@ -6021,6 +9205,22 @@
    "silt": 44.4,
    "soc": 24.9
   },
+  "gr-goumenissa": {
+   "clay": 26,
+   "phh2o": 7.5,
+   "sand": 22.9,
+   "silt": 51.2,
+   "soc": 18.1,
+   "nearKm": 1
+  },
+  "gr-grevena": {
+   "clay": 25.9,
+   "phh2o": 7.2,
+   "sand": 33.2,
+   "silt": 40.9,
+   "soc": 18.2,
+   "nearKm": 1
+  },
   "gr-ikaria": {
    "clay": 27.9,
    "phh2o": 7,
@@ -6035,12 +9235,28 @@
    "silt": 43.4,
    "soc": 20.8
   },
+  "gr-ilion": {
+   "clay": 27.7,
+   "phh2o": 7.8,
+   "sand": 29.9,
+   "silt": 42.5,
+   "soc": 21.8,
+   "nearKm": 2.8
+  },
   "gr-imathia": {
    "clay": 32.4,
    "phh2o": 7.9,
    "sand": 22.2,
    "silt": 45.4,
    "soc": 16
+  },
+  "gr-ioannina": {
+   "clay": 31,
+   "phh2o": 7,
+   "sand": 26,
+   "silt": 43,
+   "soc": 25.3,
+   "nearKm": 1
   },
   "gr-ipeiros": {
    "clay": 28.3,
@@ -6049,6 +9265,14 @@
    "silt": 41.1,
    "soc": 31.9
   },
+  "gr-irakleio": {
+   "clay": 24,
+   "phh2o": 7.5,
+   "sand": 29.6,
+   "silt": 46.4,
+   "soc": 27.2,
+   "nearKm": 2.8
+  },
   "gr-ismaros": {
    "clay": 27.1,
    "phh2o": 7,
@@ -6056,12 +9280,52 @@
    "silt": 37.3,
    "soc": 24.8
   },
+  "gr-karditsa": {
+   "clay": 30,
+   "phh2o": 7.3,
+   "sand": 30.5,
+   "silt": 39.5,
+   "soc": 14.9,
+   "nearKm": 1.4
+  },
+  "gr-karystos": {
+   "clay": 24.6,
+   "phh2o": 7.4,
+   "sand": 41.9,
+   "silt": 33.5,
+   "soc": 24.9,
+   "nearKm": 1
+  },
+  "gr-kastoria": {
+   "clay": 24.7,
+   "phh2o": 7.4,
+   "sand": 34.3,
+   "silt": 41,
+   "soc": 27.1,
+   "nearKm": 1
+  },
+  "gr-kavala": {
+   "clay": 23.7,
+   "phh2o": 7.1,
+   "sand": 35.9,
+   "silt": 40.5,
+   "soc": 21,
+   "nearKm": 1
+  },
   "gr-kerkyra": {
    "clay": 28.3,
    "phh2o": 6.9,
    "sand": 32.6,
    "silt": 39.1,
    "soc": 30.9
+  },
+  "gr-kissamos": {
+   "clay": 31,
+   "phh2o": 7.4,
+   "sand": 29.8,
+   "silt": 39.3,
+   "soc": 31.5,
+   "nearKm": 1
   },
   "gr-klimenti": {
    "clay": 28.9,
@@ -6077,12 +9341,44 @@
    "silt": 44.5,
    "soc": 16.7
   },
+  "gr-korinthos": {
+   "clay": 33.7,
+   "phh2o": 7.8,
+   "sand": 22.1,
+   "silt": 44.3,
+   "soc": 21.2,
+   "nearKm": 2
+  },
   "gr-kos": {
    "clay": 29.5,
    "phh2o": 7.2,
    "sand": 30.7,
    "silt": 39.7,
    "soc": 30.5
+  },
+  "gr-kozani": {
+   "clay": 29.2,
+   "phh2o": 7.5,
+   "sand": 33.7,
+   "silt": 37.1,
+   "soc": 21.1,
+   "nearKm": 1
+  },
+  "gr-krania": {
+   "clay": 33.2,
+   "phh2o": 7.9,
+   "sand": 23.7,
+   "silt": 43.2,
+   "soc": 11.7,
+   "nearKm": 1
+  },
+  "gr-krannona": {
+   "clay": 33.2,
+   "phh2o": 7.9,
+   "sand": 23.7,
+   "silt": 43.2,
+   "soc": 11.7,
+   "nearKm": 1
   },
   "gr-kriti": {
    "clay": 28.5,
@@ -6119,6 +9415,14 @@
    "silt": 33.2,
    "soc": 28.2
   },
+  "gr-letrinoi": {
+   "clay": 25.1,
+   "phh2o": 7.3,
+   "sand": 31,
+   "silt": 43.9,
+   "soc": 22.3,
+   "nearKm": 1
+  },
   "gr-leykada": {
    "clay": 29.7,
    "phh2o": 6.4,
@@ -6139,6 +9443,14 @@
    "sand": 34.2,
    "silt": 31.3,
    "soc": 36.1
+  },
+  "gr-magnisia": {
+   "clay": 25.4,
+   "phh2o": 7.4,
+   "sand": 28.8,
+   "silt": 45.8,
+   "soc": 23.7,
+   "nearKm": 1
   },
   "gr-makedonia": {
    "clay": 22,
@@ -6174,6 +9486,14 @@
    "sand": 36.5,
    "silt": 37.5,
    "soc": 25.2
+  },
+  "gr-markopoulo": {
+   "clay": 27.2,
+   "phh2o": 7.7,
+   "sand": 37.7,
+   "silt": 35.2,
+   "soc": 18.6,
+   "nearKm": 1.4
   },
   "gr-martino": {
    "clay": 28.1,
@@ -6224,6 +9544,22 @@
    "silt": 37.6,
    "soc": 20.1
   },
+  "gr-metsovo": {
+   "clay": 23.7,
+   "phh2o": 6.6,
+   "sand": 37.7,
+   "silt": 38.6,
+   "soc": 37.2,
+   "nearKm": 1
+  },
+  "gr-monemvasia-malvasia": {
+   "clay": 30,
+   "phh2o": 7.6,
+   "sand": 31.5,
+   "silt": 38.5,
+   "soc": 20.8,
+   "nearKm": 1
+  },
   "gr-moschato-patron": {
    "clay": 23.8,
    "phh2o": 6.9,
@@ -6259,6 +9595,22 @@
    "silt": 40.4,
    "soc": 24.4
   },
+  "gr-naousa": {
+   "clay": 28.8,
+   "phh2o": 7,
+   "sand": 37.1,
+   "silt": 34.1,
+   "soc": 23.4,
+   "nearKm": 1
+  },
+  "gr-nea-mesimvria": {
+   "clay": 28.4,
+   "phh2o": 7.6,
+   "sand": 36.5,
+   "silt": 35.1,
+   "soc": 15.4,
+   "nearKm": 1
+  },
   "gr-nemea": {
    "clay": 26.5,
    "phh2o": 7.5,
@@ -6280,6 +9632,14 @@
    "silt": 30.7,
    "soc": 14
   },
+  "gr-pallini": {
+   "clay": 27.2,
+   "phh2o": 7.8,
+   "sand": 33.5,
+   "silt": 39.2,
+   "soc": 21,
+   "nearKm": 1.4
+  },
   "gr-parnassos": {
    "clay": 10.5,
    "phh2o": 6.1,
@@ -6294,12 +9654,36 @@
    "silt": 37.8,
    "soc": 24.4
   },
+  "gr-patra": {
+   "clay": 26.2,
+   "phh2o": 7.3,
+   "sand": 33.4,
+   "silt": 40.4,
+   "soc": 23.2,
+   "nearKm": 2
+  },
+  "gr-pella": {
+   "clay": 34.7,
+   "phh2o": 7.8,
+   "sand": 26.3,
+   "silt": 39,
+   "soc": 15.6,
+   "nearKm": 1
+  },
   "gr-peloponnisos": {
    "clay": 25,
    "phh2o": 7.2,
    "sand": 39.3,
    "silt": 35.7,
    "soc": 17.5
+  },
+  "gr-peza": {
+   "clay": 29.6,
+   "phh2o": 7.7,
+   "sand": 22.3,
+   "silt": 48.1,
+   "soc": 27.5,
+   "nearKm": 1
   },
   "gr-pieria": {
    "clay": 25.8,
@@ -6371,6 +9755,22 @@
    "silt": 40.8,
    "soc": 18.1
   },
+  "gr-plagies-pentelikou": {
+   "clay": 27.2,
+   "phh2o": 7.7,
+   "sand": 37.7,
+   "silt": 35.2,
+   "soc": 18.6,
+   "nearKm": 1.4
+  },
+  "gr-plagies-vertiskou": {
+   "clay": 26.6,
+   "phh2o": 7.2,
+   "sand": 38.4,
+   "silt": 35.1,
+   "soc": 26,
+   "nearKm": 1.4
+  },
   "gr-pylia": {
    "clay": 24.4,
    "phh2o": 6.4,
@@ -6391,6 +9791,14 @@
    "sand": 34.5,
    "silt": 39.2,
    "soc": 23.5
+  },
+  "gr-retsina-attikis": {
+   "clay": 29.5,
+   "phh2o": 7.8,
+   "sand": 24.8,
+   "silt": 45.7,
+   "soc": 16.6,
+   "nearKm": 2
   },
   "gr-retsina-chalkidas-eyvoias": {
    "clay": 23.7,
@@ -6518,6 +9926,22 @@
    "silt": 36.3,
    "soc": 31.9
   },
+  "gr-santorini": {
+   "clay": 39.7,
+   "phh2o": 7.4,
+   "sand": 20.7,
+   "silt": 39.6,
+   "soc": 26.5,
+   "nearKm": 1
+  },
+  "gr-serres": {
+   "clay": 24.2,
+   "phh2o": 7.7,
+   "sand": 46.1,
+   "silt": 29.6,
+   "soc": 15.6,
+   "nearKm": 1
+  },
   "gr-siatista": {
    "clay": 22.4,
    "phh2o": 7.4,
@@ -6525,12 +9949,28 @@
    "silt": 36.1,
    "soc": 25.6
   },
+  "gr-siteia": {
+   "clay": 29.1,
+   "phh2o": 7.2,
+   "sand": 35,
+   "silt": 35.9,
+   "soc": 24.8,
+   "nearKm": 1
+  },
   "gr-sithonia": {
    "clay": 26.2,
    "phh2o": 6.8,
    "sand": 34.9,
    "silt": 38.9,
    "soc": 28.5
+  },
+  "gr-spata": {
+   "clay": 26.8,
+   "phh2o": 7.8,
+   "sand": 35.4,
+   "silt": 37.8,
+   "soc": 18.2,
+   "nearKm": 1
   },
   "gr-sterea-ellada": {
    "clay": 28.8,
@@ -6560,6 +10000,14 @@
    "silt": 36.5,
    "soc": 17.3
   },
+  "gr-thiva": {
+   "clay": 37.8,
+   "phh2o": 8.1,
+   "sand": 23,
+   "silt": 39.2,
+   "soc": 15.4,
+   "nearKm": 1
+  },
   "gr-thraki": {
    "clay": 23.7,
    "phh2o": 7.5,
@@ -6573,6 +10021,14 @@
    "sand": 36.9,
    "silt": 35.6,
    "soc": 29.1
+  },
+  "gr-tyrnavos": {
+   "clay": 33.4,
+   "phh2o": 7.8,
+   "sand": 29.7,
+   "silt": 36.9,
+   "soc": 16.1,
+   "nearKm": 1
   },
   "gr-velvento": {
    "clay": 23.3,
@@ -6630,6 +10086,14 @@
    "silt": 32.8,
    "soc": 19.1
   },
+  "hr-hrvatsko-primorje": {
+   "clay": 38.7,
+   "phh2o": 7.5,
+   "sand": 31,
+   "silt": 30.3,
+   "soc": 39.6,
+   "nearKm": 1
+  },
   "hr-istocna-kontinentalna-hrvatska": {
    "clay": 26.3,
    "phh2o": 6.3,
@@ -6657,6 +10121,14 @@
    "sand": 32.6,
    "silt": 43.3,
    "soc": 28.2
+  },
+  "hr-pokuplje": {
+   "clay": 25.2,
+   "phh2o": 5.9,
+   "sand": 46.5,
+   "silt": 28.3,
+   "soc": 29.4,
+   "nearKm": 1
   },
   "hr-ponikve": {
    "clay": 37.8,
@@ -6692,6 +10164,14 @@
    "sand": 40.1,
    "silt": 35.5,
    "soc": 30
+  },
+  "hr-srednja-i-juzna-dalmacija": {
+   "clay": 33.8,
+   "phh2o": 7.4,
+   "sand": 35.1,
+   "silt": 31,
+   "soc": 39.1,
+   "nearKm": 1
   },
   "hr-zagorje-me-imurje": {
    "clay": 25.7,
@@ -6749,6 +10229,22 @@
    "silt": 41.4,
    "soc": 31.6
   },
+  "hu-csongrad": {
+   "clay": 29.9,
+   "phh2o": 7.8,
+   "sand": 40.3,
+   "silt": 29.8,
+   "soc": 16.6,
+   "nearKm": 1
+  },
+  "hu-csopak": {
+   "clay": 24.9,
+   "phh2o": 6.5,
+   "sand": 37.8,
+   "silt": 37.3,
+   "soc": 23.7,
+   "nearKm": 1
+  },
   "hu-debroi-harslevelu": {
    "clay": 35.2,
    "phh2o": 6.6,
@@ -6777,12 +10273,28 @@
    "silt": 30.3,
    "soc": 18.1
   },
+  "hu-eger": {
+   "clay": 38.3,
+   "phh2o": 6.7,
+   "sand": 32,
+   "silt": 29.7,
+   "soc": 20.4,
+   "nearKm": 1.4
+  },
   "hu-etyek-buda": {
    "clay": 16.8,
    "phh2o": 7.4,
    "sand": 55.2,
    "silt": 28.1,
    "soc": 15.3
+  },
+  "hu-etyeki-pezsgo": {
+   "clay": 23.4,
+   "phh2o": 7.6,
+   "sand": 38.8,
+   "silt": 37.8,
+   "soc": 15.5,
+   "nearKm": 1
   },
   "hu-felso-magyarorszag": {
    "clay": 34.3,
@@ -6819,6 +10331,14 @@
    "silt": 29.6,
    "soc": 27.4
   },
+  "hu-koszeg": {
+   "clay": 29.8,
+   "phh2o": 6.7,
+   "sand": 33.8,
+   "silt": 36.4,
+   "soc": 18.2,
+   "nearKm": 1
+  },
   "hu-kunsag": {
    "clay": 18.8,
    "phh2o": 7.2,
@@ -6832,6 +10352,22 @@
    "sand": 39.5,
    "silt": 35.9,
    "soc": 37
+  },
+  "hu-monor": {
+   "clay": 18.7,
+   "phh2o": 7.4,
+   "sand": 53,
+   "silt": 28.4,
+   "soc": 14,
+   "nearKm": 1.4
+  },
+  "hu-mor": {
+   "clay": 21.5,
+   "phh2o": 7.4,
+   "sand": 43.6,
+   "silt": 34.9,
+   "soc": 17.5,
+   "nearKm": 1
   },
   "hu-mura": {
    "clay": 23.7,
@@ -6847,12 +10383,52 @@
    "silt": 26.5,
    "soc": 21.6
   },
+  "hu-neszmely": {
+   "clay": 24.9,
+   "phh2o": 6.4,
+   "sand": 44.6,
+   "silt": 30.5,
+   "soc": 20.2,
+   "nearKm": 1
+  },
+  "hu-nivegy-volgy": {
+   "clay": 24.8,
+   "phh2o": 7.1,
+   "sand": 40.4,
+   "silt": 34.8,
+   "soc": 19.3,
+   "nearKm": 1
+  },
   "hu-pannon": {
    "clay": 23.3,
    "phh2o": 7.3,
    "sand": 42.9,
    "silt": 33.9,
    "soc": 19.7
+  },
+  "hu-pannonhalma": {
+   "clay": 27.1,
+   "phh2o": 7.4,
+   "sand": 35.3,
+   "silt": 37.6,
+   "soc": 17.2,
+   "nearKm": 1
+  },
+  "hu-pecs": {
+   "clay": 24.8,
+   "phh2o": 6.4,
+   "sand": 36.5,
+   "silt": 38.7,
+   "soc": 21.9,
+   "nearKm": 1
+  },
+  "hu-soltvadkerti": {
+   "clay": 12.9,
+   "phh2o": 8,
+   "sand": 72.3,
+   "silt": 14.9,
+   "soc": 15.1,
+   "nearKm": 1
   },
   "hu-somloi": {
    "clay": 26.9,
@@ -6861,12 +10437,52 @@
    "silt": 29.3,
    "soc": 29.5
   },
+  "hu-sopron": {
+   "clay": 27.3,
+   "phh2o": 6.9,
+   "sand": 31.4,
+   "silt": 41.4,
+   "soc": 19.5,
+   "nearKm": 1.4
+  },
+  "hu-szekszard": {
+   "clay": 27.1,
+   "phh2o": 7.4,
+   "sand": 38.1,
+   "silt": 34.8,
+   "soc": 19.4,
+   "nearKm": 1
+  },
+  "hu-tihany": {
+   "clay": 25.3,
+   "phh2o": 7.3,
+   "sand": 43,
+   "silt": 31.7,
+   "soc": 19.8,
+   "nearKm": 1
+  },
   "hu-tokaj": {
    "clay": 34,
    "phh2o": 6.7,
    "sand": 28.7,
    "silt": 37.3,
    "soc": 20.7
+  },
+  "hu-tolna": {
+   "clay": 26.5,
+   "phh2o": 7.7,
+   "sand": 41.7,
+   "silt": 31.8,
+   "soc": 23.5,
+   "nearKm": 1
+  },
+  "hu-villany": {
+   "clay": 32.2,
+   "phh2o": 7.2,
+   "sand": 27.4,
+   "silt": 40.4,
+   "soc": 17.5,
+   "nearKm": 1
   },
   "hu-zala": {
    "clay": 24.3,
@@ -6889,6 +10505,38 @@
    "silt": 42.6,
    "soc": 28.4
   },
+  "it-aglianico-del-taburno": {
+   "clay": 31.2,
+   "phh2o": 7.4,
+   "sand": 25.7,
+   "silt": 43.2,
+   "soc": 21,
+   "nearKm": 1
+  },
+  "it-aglianico-del-vulture": {
+   "clay": 34,
+   "phh2o": 7.6,
+   "sand": 27.6,
+   "silt": 38.5,
+   "soc": 21.1,
+   "nearKm": 1
+  },
+  "it-aglianico-del-vulture-superiore": {
+   "clay": 34,
+   "phh2o": 7.6,
+   "sand": 27.6,
+   "silt": 38.5,
+   "soc": 21.1,
+   "nearKm": 1
+  },
+  "it-alba": {
+   "clay": 23.9,
+   "phh2o": 7.7,
+   "sand": 33.6,
+   "silt": 42.6,
+   "soc": 20.5,
+   "nearKm": 1
+  },
   "it-albugnano": {
    "clay": 28.7,
    "phh2o": 6.7,
@@ -6903,6 +10551,14 @@
    "silt": 37.8,
    "soc": 23.8
   },
+  "it-aleatico-di-gradoli": {
+   "clay": 26.8,
+   "phh2o": 7.3,
+   "sand": 32.4,
+   "silt": 40.8,
+   "soc": 20.5,
+   "nearKm": 1
+  },
   "it-aleatico-di-puglia": {
    "clay": 31.5,
    "phh2o": 7.7,
@@ -6916,6 +10572,14 @@
    "sand": 44.5,
    "silt": 27.5,
    "soc": 22.5
+  },
+  "it-alghero": {
+   "clay": 27,
+   "phh2o": 7,
+   "sand": 41.1,
+   "silt": 32,
+   "soc": 42.7,
+   "nearKm": 1.4
   },
   "it-allerona": {
    "clay": 33.4,
@@ -6952,6 +10616,30 @@
    "silt": 36.3,
    "soc": 29.7
   },
+  "it-alto-livenza": {
+   "clay": 26,
+   "phh2o": 6.9,
+   "sand": 29.5,
+   "silt": 44.5,
+   "soc": 29.9,
+   "nearKm": 1
+  },
+  "it-alto-mincio": {
+   "clay": 30.3,
+   "phh2o": 7.6,
+   "sand": 27.7,
+   "silt": 42,
+   "soc": 23.8,
+   "nearKm": 1
+  },
+  "it-amarone-della-valpolicella": {
+   "clay": 27.6,
+   "phh2o": 7.1,
+   "sand": 25.9,
+   "silt": 46.5,
+   "soc": 25.9,
+   "nearKm": 2
+  },
   "it-amelia": {
    "clay": 32,
    "phh2o": 7.2,
@@ -6965,6 +10653,38 @@
    "sand": 23,
    "silt": 43.2,
    "soc": 30
+  },
+  "it-ansonica-costa-dell-argentario": {
+   "clay": 31.9,
+   "phh2o": 7.7,
+   "sand": 24.8,
+   "silt": 43.3,
+   "soc": 25.7,
+   "nearKm": 1
+  },
+  "it-aprilia": {
+   "clay": 30,
+   "phh2o": 7.4,
+   "sand": 32.4,
+   "silt": 37.6,
+   "soc": 22.8,
+   "nearKm": 1.4
+  },
+  "it-arborea": {
+   "clay": 33.1,
+   "phh2o": 7.1,
+   "sand": 35.8,
+   "silt": 31.1,
+   "soc": 30.5,
+   "nearKm": 1
+  },
+  "it-arcole": {
+   "clay": 23.4,
+   "phh2o": 7.4,
+   "sand": 30.7,
+   "silt": 46,
+   "soc": 24.4,
+   "nearKm": 1
   },
   "it-arghilla": {
    "clay": 27,
@@ -6980,12 +10700,68 @@
    "silt": 43.5,
    "soc": 23.8
   },
+  "it-asolo-prosecco": {
+   "clay": 31.2,
+   "phh2o": 6.2,
+   "sand": 25.6,
+   "silt": 43.3,
+   "soc": 31.6,
+   "nearKm": 1
+  },
+  "it-assisi": {
+   "clay": 29.6,
+   "phh2o": 7.4,
+   "sand": 22.3,
+   "silt": 48.1,
+   "soc": 23.6,
+   "nearKm": 1
+  },
+  "it-asti": {
+   "clay": 34,
+   "phh2o": 7.3,
+   "sand": 21.6,
+   "silt": 44.5,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
+  "it-atina": {
+   "clay": 29.9,
+   "phh2o": 7.4,
+   "sand": 24.2,
+   "silt": 45.9,
+   "soc": 25.6,
+   "nearKm": 1
+  },
+  "it-aversa": {
+   "clay": 27.4,
+   "phh2o": 7.2,
+   "sand": 31.1,
+   "silt": 41.6,
+   "soc": 22.1,
+   "nearKm": 1.4
+  },
   "it-avola": {
    "clay": 33.4,
    "phh2o": 7.6,
    "sand": 24.1,
    "silt": 42.5,
    "soc": 22.2
+  },
+  "it-bagnoli-di-sopra": {
+   "clay": 26.4,
+   "phh2o": 7.4,
+   "sand": 25.9,
+   "silt": 47.7,
+   "soc": 23.5,
+   "nearKm": 1
+  },
+  "it-bagnoli-friularo": {
+   "clay": 35.3,
+   "phh2o": 7.4,
+   "sand": 22.6,
+   "silt": 42.1,
+   "soc": 22.7,
+   "nearKm": 2.8
   },
   "it-barbagia": {
    "clay": 23.1,
@@ -7029,6 +10805,38 @@
    "silt": 52.6,
    "soc": 17.5
   },
+  "it-barco-reale-di-carmignano": {
+   "clay": 34.4,
+   "phh2o": 7.6,
+   "sand": 32.8,
+   "silt": 32.9,
+   "soc": 25.4,
+   "nearKm": 1
+  },
+  "it-bardolino": {
+   "clay": 32.6,
+   "phh2o": 6.8,
+   "sand": 33.4,
+   "silt": 34.1,
+   "soc": 59.5,
+   "nearKm": 1
+  },
+  "it-bardolino-superiore": {
+   "clay": 27.6,
+   "phh2o": 7.1,
+   "sand": 25.9,
+   "silt": 46.5,
+   "soc": 25.9,
+   "nearKm": 2
+  },
+  "it-barletta": {
+   "clay": 32.9,
+   "phh2o": 7.8,
+   "sand": 31.1,
+   "silt": 36,
+   "soc": 25.2,
+   "nearKm": 2
+  },
   "it-barolo": {
    "clay": 28.2,
    "phh2o": 7.6,
@@ -7043,12 +10851,44 @@
    "silt": 39.4,
    "soc": 20.4
   },
+  "it-benaco-bresciano": {
+   "clay": 32.7,
+   "phh2o": 6.8,
+   "sand": 25.3,
+   "silt": 42.1,
+   "soc": 28.7,
+   "nearKm": 1.4
+  },
+  "it-benevento": {
+   "clay": 31.2,
+   "phh2o": 7.4,
+   "sand": 25.7,
+   "silt": 43.2,
+   "soc": 21,
+   "nearKm": 1
+  },
+  "it-bergamasca": {
+   "clay": 28.9,
+   "phh2o": 6.5,
+   "sand": 27.3,
+   "silt": 43.9,
+   "soc": 30.6,
+   "nearKm": 2.8
+  },
   "it-bettona": {
    "clay": 34,
    "phh2o": 7.5,
    "sand": 24.4,
    "silt": 41.7,
    "soc": 22.3
+  },
+  "it-bianchello-del-metauro": {
+   "clay": 34.7,
+   "phh2o": 7.8,
+   "sand": 19.5,
+   "silt": 45.8,
+   "soc": 22.5,
+   "nearKm": 2.8
   },
   "it-bianco-del-sillaro": {
    "clay": 38.7,
@@ -7057,12 +10897,44 @@
    "silt": 48.6,
    "soc": 22.4
   },
+  "it-bianco-dell-empolese": {
+   "clay": 35.2,
+   "phh2o": 7.5,
+   "sand": 27.2,
+   "silt": 37.6,
+   "soc": 29.7,
+   "nearKm": 1
+  },
+  "it-bianco-di-pitigliano": {
+   "clay": 31.9,
+   "phh2o": 7.7,
+   "sand": 24.8,
+   "silt": 43.3,
+   "soc": 25.7,
+   "nearKm": 1
+  },
   "it-biferno": {
    "clay": 25.2,
    "phh2o": 7.2,
    "sand": 33.4,
    "silt": 41.4,
    "soc": 32.9
+  },
+  "it-bivongi": {
+   "clay": 28.3,
+   "phh2o": 6.7,
+   "sand": 34.7,
+   "silt": 37,
+   "soc": 29.8,
+   "nearKm": 1
+  },
+  "it-boca": {
+   "clay": 23.7,
+   "phh2o": 6.5,
+   "sand": 35.1,
+   "silt": 41.2,
+   "soc": 23.4,
+   "nearKm": 1.4
   },
   "it-bolgheri": {
    "clay": 31.5,
@@ -7078,12 +10950,28 @@
    "silt": 40.6,
    "soc": 42.7
   },
+  "it-bonarda-dell-oltrepo-pavese": {
+   "clay": 26.5,
+   "phh2o": 7,
+   "sand": 34.7,
+   "silt": 38.8,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "it-bosco-eliceo": {
    "clay": 44.2,
    "phh2o": 7.7,
    "sand": 7.5,
    "silt": 48.3,
    "soc": 26.6
+  },
+  "it-botticino": {
+   "clay": 31.3,
+   "phh2o": 6.7,
+   "sand": 29.1,
+   "silt": 39.7,
+   "soc": 35.6,
+   "nearKm": 1
   },
   "it-brachetto-d-acqui": {
    "clay": 30.5,
@@ -7099,6 +10987,22 @@
    "silt": 42.4,
    "soc": 34.2
   },
+  "it-breganze": {
+   "clay": 33.4,
+   "phh2o": 7.1,
+   "sand": 26.9,
+   "silt": 39.7,
+   "soc": 28.8,
+   "nearKm": 1
+  },
+  "it-brindisi": {
+   "clay": 30.5,
+   "phh2o": 7.5,
+   "sand": 34.2,
+   "silt": 35.2,
+   "soc": 27.5,
+   "nearKm": 1
+  },
   "it-brunello-di-montalcino": {
    "clay": 32,
    "phh2o": 7.7,
@@ -7106,12 +11010,28 @@
    "silt": 37.5,
    "soc": 22.4
   },
+  "it-buttafuoco-dell-oltrepo-pavese": {
+   "clay": 26.5,
+   "phh2o": 7,
+   "sand": 34.7,
+   "silt": 38.8,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "it-cacc-e-mmitte-di-lucera": {
    "clay": 31.5,
    "phh2o": 7.7,
    "sand": 18.7,
    "silt": 49.8,
    "soc": 20.3
+  },
+  "it-cagliari": {
+   "clay": 34.6,
+   "phh2o": 7.8,
+   "sand": 31.2,
+   "silt": 34.2,
+   "soc": 31.2,
+   "nearKm": 2
   },
   "it-calabria": {
    "clay": 25.2,
@@ -7127,12 +11047,44 @@
    "silt": 44.7,
    "soc": 24
   },
+  "it-camarro": {
+   "clay": 29.8,
+   "phh2o": 7.5,
+   "sand": 30.6,
+   "silt": 39.7,
+   "soc": 36.5,
+   "nearKm": 1
+  },
   "it-campania": {
    "clay": 29,
    "phh2o": 6.5,
    "sand": 33.5,
    "silt": 37.5,
    "soc": 38.3
+  },
+  "it-campi-flegrei": {
+   "clay": 32.9,
+   "phh2o": 6.8,
+   "sand": 31.3,
+   "silt": 35.8,
+   "soc": 30.3,
+   "nearKm": 1
+  },
+  "it-campidano-di-terralba": {
+   "clay": 29.7,
+   "phh2o": 7.1,
+   "sand": 39.4,
+   "silt": 30.9,
+   "soc": 26.6,
+   "nearKm": 1
+  },
+  "it-canavese": {
+   "clay": 25.3,
+   "phh2o": 6.7,
+   "sand": 29.1,
+   "silt": 45.5,
+   "soc": 25,
+   "nearKm": 1
   },
   "it-candia-dei-colli-apuani": {
    "clay": 22.9,
@@ -7141,12 +11093,60 @@
    "silt": 50.2,
    "soc": 43.1
   },
+  "it-canelli": {
+   "clay": 31.3,
+   "phh2o": 7.6,
+   "sand": 21.4,
+   "silt": 47.3,
+   "soc": 21.4,
+   "nearKm": 1
+  },
+  "it-cannara": {
+   "clay": 41.9,
+   "phh2o": 7.9,
+   "sand": 12.7,
+   "silt": 45.4,
+   "soc": 18.4,
+   "nearKm": 1
+  },
   "it-cannonau-di-sardegna": {
    "clay": 21.2,
    "phh2o": 6.7,
    "sand": 47.2,
    "silt": 31.6,
    "soc": 24.8
+  },
+  "it-capalbio": {
+   "clay": 28.4,
+   "phh2o": 6.6,
+   "sand": 30.9,
+   "silt": 40.7,
+   "soc": 34.6,
+   "nearKm": 1
+  },
+  "it-capri": {
+   "clay": 33.6,
+   "phh2o": 6.4,
+   "sand": 39.2,
+   "silt": 27.2,
+   "soc": 56.9,
+   "nearKm": 1
+  },
+  "it-capriano-del-colle": {
+   "clay": 28.6,
+   "phh2o": 7,
+   "sand": 29.5,
+   "silt": 41.9,
+   "soc": 23.4,
+   "nearKm": 1
+  },
+  "it-carema": {
+   "clay": 27,
+   "phh2o": 6.4,
+   "sand": 30.3,
+   "silt": 42.8,
+   "soc": 29.9,
+   "nearKm": 1
   },
   "it-carignano-del-sulcis": {
    "clay": 20.2,
@@ -7183,12 +11183,76 @@
    "silt": 41.3,
    "soc": 23.2
   },
+  "it-casteggio": {
+   "clay": 36.5,
+   "phh2o": 7.3,
+   "sand": 17.3,
+   "silt": 46.2,
+   "soc": 26,
+   "nearKm": 1
+  },
+  "it-castel-del-monte": {
+   "clay": 32.9,
+   "phh2o": 7.8,
+   "sand": 31.1,
+   "silt": 36,
+   "soc": 25.2,
+   "nearKm": 2
+  },
+  "it-castel-del-monte-bombino-nero": {
+   "clay": 32.9,
+   "phh2o": 7.8,
+   "sand": 31.1,
+   "silt": 36,
+   "soc": 25.2,
+   "nearKm": 2
+  },
+  "it-castel-del-monte-nero-di-troia-riserva": {
+   "clay": 32.9,
+   "phh2o": 7.8,
+   "sand": 31.1,
+   "silt": 36,
+   "soc": 25.2,
+   "nearKm": 2
+  },
+  "it-castel-del-monte-rosso-riserva": {
+   "clay": 32.9,
+   "phh2o": 7.8,
+   "sand": 31.1,
+   "silt": 36,
+   "soc": 25.2,
+   "nearKm": 2
+  },
   "it-castel-san-lorenzo": {
    "clay": 34.6,
    "phh2o": 7,
    "sand": 22.2,
    "silt": 43.2,
    "soc": 25.5
+  },
+  "it-castelfranco-emilia": {
+   "clay": 40.5,
+   "phh2o": 7.8,
+   "sand": 13.5,
+   "silt": 46.1,
+   "soc": 19.5,
+   "nearKm": 1
+  },
+  "it-casteller": {
+   "clay": 20.9,
+   "phh2o": 6.7,
+   "sand": 42.5,
+   "silt": 36.6,
+   "soc": 30.7,
+   "nearKm": 1
+  },
+  "it-castelli-di-jesi-verdicchio-riserva": {
+   "clay": 45.2,
+   "phh2o": 7.7,
+   "sand": 14.5,
+   "silt": 40.4,
+   "soc": 28.1,
+   "nearKm": 1.4
   },
   "it-castelli-romani": {
    "clay": 36,
@@ -7239,6 +11303,14 @@
    "silt": 41.3,
    "soc": 29.9
   },
+  "it-cesanese-di-olevano-romano": {
+   "clay": 27.6,
+   "phh2o": 7.1,
+   "sand": 28.7,
+   "silt": 43.7,
+   "soc": 41.1,
+   "nearKm": 1
+  },
   "it-chianti": {
    "clay": 34.8,
    "phh2o": 7.9,
@@ -7267,6 +11339,14 @@
    "silt": 38.8,
    "soc": 47.4
   },
+  "it-circeo": {
+   "clay": 30.7,
+   "phh2o": 7.1,
+   "sand": 35,
+   "silt": 34.3,
+   "soc": 25.2,
+   "nearKm": 1.4
+  },
   "it-ciro": {
    "clay": 31.5,
    "phh2o": 7.1,
@@ -7288,6 +11368,14 @@
    "silt": 48.4,
    "soc": 21.6
   },
+  "it-civitella-d-agliano": {
+   "clay": 33.1,
+   "phh2o": 7.1,
+   "sand": 26.4,
+   "silt": 40.6,
+   "soc": 26.9,
+   "nearKm": 1
+  },
   "it-colli-albani": {
    "clay": 31,
    "phh2o": 7.1,
@@ -7295,12 +11383,36 @@
    "silt": 39.7,
    "soc": 32.1
   },
+  "it-colli-altotiberini": {
+   "clay": 33.3,
+   "phh2o": 7.3,
+   "sand": 25.8,
+   "silt": 40.9,
+   "soc": 25.7,
+   "nearKm": 1
+  },
   "it-colli-berici": {
    "clay": 29,
    "phh2o": 6.5,
    "sand": 24.7,
    "silt": 46.3,
    "soc": 28
+  },
+  "it-colli-bolognesi": {
+   "clay": 43.3,
+   "phh2o": 6.7,
+   "sand": 15,
+   "silt": 41.7,
+   "soc": 30.4,
+   "nearKm": 1.4
+  },
+  "it-colli-bolognesi-pignoletto": {
+   "clay": 43.3,
+   "phh2o": 6.7,
+   "sand": 15,
+   "silt": 41.7,
+   "soc": 30.4,
+   "nearKm": 1.4
   },
   "it-colli-cimini": {
    "clay": 30.2,
@@ -7351,6 +11463,22 @@
    "silt": 48.1,
    "soc": 46.8
   },
+  "it-colli-di-conegliano": {
+   "clay": 30.9,
+   "phh2o": 7.3,
+   "sand": 24.8,
+   "silt": 44.4,
+   "soc": 24.8,
+   "nearKm": 1
+  },
+  "it-colli-di-faenza": {
+   "clay": 41.6,
+   "phh2o": 7.7,
+   "sand": 11.4,
+   "silt": 47.1,
+   "soc": 22,
+   "nearKm": 2
+  },
   "it-colli-di-luni": {
    "clay": 31.1,
    "phh2o": 6,
@@ -7365,12 +11493,28 @@
    "silt": 46.3,
    "soc": 21.7
   },
+  "it-colli-di-salerno": {
+   "clay": 32.7,
+   "phh2o": 6.9,
+   "sand": 32.1,
+   "silt": 35.3,
+   "soc": 30.8,
+   "nearKm": 1
+  },
   "it-colli-di-scandiano-e-di-canossa": {
    "clay": 38.6,
    "phh2o": 7.4,
    "sand": 18.3,
    "silt": 43.1,
    "soc": 29.3
+  },
+  "it-colli-etruschi-viterbesi": {
+   "clay": 26.8,
+   "phh2o": 7.3,
+   "sand": 32.4,
+   "silt": 40.8,
+   "soc": 20.5,
+   "nearKm": 1
   },
   "it-colli-euganei": {
    "clay": 33.9,
@@ -7379,12 +11523,44 @@
    "silt": 42.1,
    "soc": 25.3
   },
+  "it-colli-euganei-fior-d-arancio": {
+   "clay": 35.3,
+   "phh2o": 7.4,
+   "sand": 22.6,
+   "silt": 42.1,
+   "soc": 22.7,
+   "nearKm": 2.8
+  },
+  "it-colli-maceratesi": {
+   "clay": 36.7,
+   "phh2o": 7.7,
+   "sand": 17.9,
+   "silt": 45.5,
+   "soc": 20,
+   "nearKm": 1
+  },
   "it-colli-martani": {
    "clay": 32.6,
    "phh2o": 7.5,
    "sand": 24.4,
    "silt": 43,
    "soc": 22.6
+  },
+  "it-colli-orientali-del-friuli-picolit": {
+   "clay": 19.7,
+   "phh2o": 6.8,
+   "sand": 38.2,
+   "silt": 42.1,
+   "soc": 32.7,
+   "nearKm": 2
+  },
+  "it-colli-perugini": {
+   "clay": 33.3,
+   "phh2o": 7.3,
+   "sand": 25.8,
+   "silt": 40.9,
+   "soc": 25.7,
+   "nearKm": 1
   },
   "it-colli-pesaresi": {
    "clay": 36.9,
@@ -7393,12 +11569,28 @@
    "silt": 46.6,
    "soc": 27.1
   },
+  "it-colli-piacentini": {
+   "clay": 39.7,
+   "phh2o": 7.2,
+   "sand": 23.4,
+   "silt": 37,
+   "soc": 21.2,
+   "nearKm": 1.4
+  },
   "it-colli-romagna-centrale": {
    "clay": 38.4,
    "phh2o": 7.8,
    "sand": 10.2,
    "silt": 51.4,
    "soc": 21.4
+  },
+  "it-colli-tortonesi": {
+   "clay": 30.7,
+   "phh2o": 7.3,
+   "sand": 22.3,
+   "silt": 47,
+   "soc": 26.6,
+   "nearKm": 1.4
   },
   "it-colli-trevigiani": {
    "clay": 30.8,
@@ -7407,12 +11599,52 @@
    "silt": 43.6,
    "soc": 24.2
   },
+  "it-collina-torinese": {
+   "clay": 25.3,
+   "phh2o": 6.7,
+   "sand": 29.1,
+   "silt": 45.5,
+   "soc": 25,
+   "nearKm": 1
+  },
+  "it-colline-del-genovesato": {
+   "clay": 30.7,
+   "phh2o": 6.3,
+   "sand": 30.7,
+   "silt": 38.6,
+   "soc": 48.2,
+   "nearKm": 2
+  },
+  "it-colline-di-levanto": {
+   "clay": 33.7,
+   "phh2o": 7.2,
+   "sand": 36,
+   "silt": 30.4,
+   "soc": 39.2,
+   "nearKm": 1.4
+  },
   "it-colline-joniche-tarantine": {
    "clay": 32.2,
    "phh2o": 7.4,
    "sand": 26.6,
    "silt": 41.2,
    "soc": 24.2
+  },
+  "it-colline-lucchesi": {
+   "clay": 23.9,
+   "phh2o": 7.4,
+   "sand": 45.5,
+   "silt": 30.6,
+   "soc": 28.4,
+   "nearKm": 1.4
+  },
+  "it-colline-novaresi": {
+   "clay": 23.7,
+   "phh2o": 6.5,
+   "sand": 35.1,
+   "silt": 41.2,
+   "soc": 23.4,
+   "nearKm": 1.4
   },
   "it-colline-saluzzesi": {
    "clay": 26.7,
@@ -7421,12 +11653,44 @@
    "silt": 41.1,
    "soc": 22.1
   },
+  "it-colline-savonesi": {
+   "clay": 32.8,
+   "phh2o": 6.8,
+   "sand": 31.2,
+   "silt": 36,
+   "soc": 34.9,
+   "nearKm": 2.8
+  },
+  "it-colline-teramane-montepulciano-d-abruzzo": {
+   "clay": 38.4,
+   "phh2o": 7.7,
+   "sand": 21.4,
+   "silt": 40.4,
+   "soc": 22.5,
+   "nearKm": 1
+  },
   "it-collio-goriziano": {
    "clay": 29.9,
    "phh2o": 6.4,
    "sand": 26.6,
    "silt": 43.5,
    "soc": 36.4
+  },
+  "it-conegliano-valdobbiadene-prosecco": {
+   "clay": 30.9,
+   "phh2o": 7.3,
+   "sand": 24.8,
+   "silt": 44.4,
+   "soc": 24.8,
+   "nearKm": 1
+  },
+  "it-conero": {
+   "clay": 45.2,
+   "phh2o": 7.7,
+   "sand": 14.5,
+   "silt": 40.4,
+   "soc": 28.1,
+   "nearKm": 1.4
   },
   "it-conselvano": {
    "clay": 30.8,
@@ -7435,6 +11699,14 @@
    "silt": 43.6,
    "soc": 24.2
   },
+  "it-contessa-entellina": {
+   "clay": 34,
+   "phh2o": 7.3,
+   "sand": 28,
+   "silt": 38,
+   "soc": 26.1,
+   "nearKm": 1
+  },
   "it-controguerra": {
    "clay": 32.6,
    "phh2o": 7.9,
@@ -7442,12 +11714,52 @@
    "silt": 45.9,
    "soc": 21.5
   },
+  "it-copertino": {
+   "clay": 26.6,
+   "phh2o": 7.9,
+   "sand": 37.9,
+   "silt": 35.5,
+   "soc": 21.4,
+   "nearKm": 1.4
+  },
+  "it-cori": {
+   "clay": 30.7,
+   "phh2o": 7.1,
+   "sand": 35,
+   "silt": 34.3,
+   "soc": 25.2,
+   "nearKm": 1.4
+  },
+  "it-cortese-dell-alto-monferrato": {
+   "clay": 30.7,
+   "phh2o": 7.3,
+   "sand": 22.3,
+   "silt": 47,
+   "soc": 26.6,
+   "nearKm": 1.4
+  },
   "it-corti-benedettine-del-padovano": {
    "clay": 33.1,
    "phh2o": 7.6,
    "sand": 21.1,
    "silt": 45.8,
    "soc": 25.9
+  },
+  "it-cortona": {
+   "clay": 34.1,
+   "phh2o": 7.3,
+   "sand": 25.2,
+   "silt": 40.7,
+   "soc": 26.4,
+   "nearKm": 1
+  },
+  "it-costa-d-amalfi": {
+   "clay": 32.7,
+   "phh2o": 6.9,
+   "sand": 32.1,
+   "silt": 35.3,
+   "soc": 30.8,
+   "nearKm": 1
   },
   "it-costa-etrusco-romana": {
    "clay": 30.2,
@@ -7477,6 +11789,14 @@
    "silt": 42.4,
    "soc": 34.2
   },
+  "it-curtefranca": {
+   "clay": 32.7,
+   "phh2o": 6.8,
+   "sand": 25.3,
+   "silt": 42.1,
+   "soc": 28.7,
+   "nearKm": 1.4
+  },
   "it-custoza": {
    "clay": 25.7,
    "phh2o": 7.1,
@@ -7491,12 +11811,28 @@
    "silt": 47.1,
    "soc": 16.6
   },
+  "it-delia-nivolelli": {
+   "clay": 29.8,
+   "phh2o": 7.5,
+   "sand": 30.6,
+   "silt": 39.7,
+   "soc": 36.5,
+   "nearKm": 1
+  },
   "it-dell-emilia": {
    "clay": 43.5,
    "phh2o": 7.6,
    "sand": 8.9,
    "silt": 47.6,
    "soc": 22
+  },
+  "it-delle-venezie": {
+   "clay": 22.9,
+   "phh2o": 7.5,
+   "sand": 30.1,
+   "silt": 47.1,
+   "soc": 23.5,
+   "nearKm": 1
   },
   "it-dogliani": {
    "clay": 27.9,
@@ -7505,6 +11841,14 @@
    "silt": 43.9,
    "soc": 22.2
   },
+  "it-dolcetto-d-acqui": {
+   "clay": 30.7,
+   "phh2o": 7.3,
+   "sand": 22.3,
+   "silt": 47,
+   "soc": 26.6,
+   "nearKm": 1.4
+  },
   "it-dolcetto-d-alba": {
    "clay": 27.4,
    "phh2o": 7.6,
@@ -7512,12 +11856,36 @@
    "silt": 41.5,
    "soc": 20.6
   },
+  "it-dolcetto-d-asti": {
+   "clay": 34,
+   "phh2o": 7.3,
+   "sand": 21.6,
+   "silt": 44.5,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
   "it-dolcetto-di-diano-d-alba": {
    "clay": 27.8,
    "phh2o": 7.5,
    "sand": 27.7,
    "silt": 44.6,
    "soc": 24
+  },
+  "it-dolcetto-di-ovada": {
+   "clay": 30.7,
+   "phh2o": 7.3,
+   "sand": 22.3,
+   "silt": 47,
+   "soc": 26.6,
+   "nearKm": 1.4
+  },
+  "it-dolcetto-di-ovada-superiore": {
+   "clay": 32.6,
+   "phh2o": 7.3,
+   "sand": 23.4,
+   "silt": 44,
+   "soc": 32,
+   "nearKm": 1
   },
   "it-dugenta": {
    "clay": 23.9,
@@ -7547,12 +11915,52 @@
    "silt": 47.6,
    "soc": 22
   },
+  "it-erbaluce-di-caluso": {
+   "clay": 25.9,
+   "phh2o": 6.4,
+   "sand": 20.5,
+   "silt": 53.7,
+   "soc": 24.3,
+   "nearKm": 1
+  },
+  "it-erice": {
+   "clay": 36.8,
+   "phh2o": 7.1,
+   "sand": 31.9,
+   "silt": 31.3,
+   "soc": 30.5,
+   "nearKm": 1
+  },
   "it-esino": {
    "clay": 39.7,
    "phh2o": 7.8,
    "sand": 13.8,
    "silt": 46.5,
    "soc": 19.8
+  },
+  "it-est-est-est-di-montefiascone": {
+   "clay": 26.8,
+   "phh2o": 7.3,
+   "sand": 32.4,
+   "silt": 40.8,
+   "soc": 20.5,
+   "nearKm": 1
+  },
+  "it-etna": {
+   "clay": 18.1,
+   "phh2o": 6.4,
+   "sand": 49.1,
+   "silt": 32.9,
+   "soc": 70.3,
+   "nearKm": 2
+  },
+  "it-falanghina-del-sannio": {
+   "clay": 31.2,
+   "phh2o": 7.4,
+   "sand": 25.7,
+   "silt": 43.2,
+   "soc": 21,
+   "nearKm": 1
   },
   "it-falerio": {
    "clay": 38,
@@ -7567,6 +11975,38 @@
    "sand": 28.4,
    "silt": 41.3,
    "soc": 23.2
+  },
+  "it-fara": {
+   "clay": 23.7,
+   "phh2o": 6.5,
+   "sand": 35.1,
+   "silt": 41.2,
+   "soc": 23.4,
+   "nearKm": 1.4
+  },
+  "it-faro": {
+   "clay": 29.1,
+   "phh2o": 7,
+   "sand": 41.9,
+   "silt": 29,
+   "soc": 27.1,
+   "nearKm": 2
+  },
+  "it-fiano-di-avellino": {
+   "clay": 33.3,
+   "phh2o": 7,
+   "sand": 31.6,
+   "silt": 35.1,
+   "soc": 37.3,
+   "nearKm": 1.4
+  },
+  "it-forli": {
+   "clay": 37,
+   "phh2o": 7.8,
+   "sand": 16.9,
+   "silt": 46.1,
+   "soc": 20.7,
+   "nearKm": 1.4
   },
   "it-fortana-del-taro": {
    "clay": 38.7,
@@ -7589,6 +12029,22 @@
    "silt": 42.2,
    "soc": 23.6
   },
+  "it-freisa-d-asti": {
+   "clay": 34,
+   "phh2o": 7.3,
+   "sand": 21.6,
+   "silt": 44.5,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
+  "it-freisa-di-chieri": {
+   "clay": 25.3,
+   "phh2o": 6.7,
+   "sand": 29.1,
+   "silt": 45.5,
+   "soc": 25,
+   "nearKm": 1
+  },
   "it-friuli": {
    "clay": 18,
    "phh2o": 6.8,
@@ -7603,12 +12059,36 @@
    "silt": 45.1,
    "soc": 38.2
   },
+  "it-friuli-aquileia": {
+   "clay": 19.7,
+   "phh2o": 6.8,
+   "sand": 38.2,
+   "silt": 42.1,
+   "soc": 32.7,
+   "nearKm": 2
+  },
+  "it-friuli-colli-orientali": {
+   "clay": 19.7,
+   "phh2o": 6.8,
+   "sand": 38.2,
+   "silt": 42.1,
+   "soc": 32.7,
+   "nearKm": 2
+  },
   "it-friuli-grave": {
    "clay": 27,
    "phh2o": 7.1,
    "sand": 32.9,
    "silt": 40.1,
    "soc": 27.4
+  },
+  "it-friuli-isonzo": {
+   "clay": 29.2,
+   "phh2o": 6.3,
+   "sand": 28.3,
+   "silt": 42.5,
+   "soc": 41.6,
+   "nearKm": 1
   },
   "it-friuli-latisana": {
    "clay": 27,
@@ -7631,12 +12111,52 @@
    "silt": 48.2,
    "soc": 29.3
   },
+  "it-galatina": {
+   "clay": 25.3,
+   "phh2o": 7.6,
+   "sand": 44.3,
+   "silt": 30.5,
+   "soc": 18.3,
+   "nearKm": 1
+  },
   "it-galluccio": {
    "clay": 31.3,
    "phh2o": 7.1,
    "sand": 23.6,
    "silt": 45.2,
    "soc": 26.4
+  },
+  "it-gambellara": {
+   "clay": 31.2,
+   "phh2o": 6.8,
+   "sand": 30.2,
+   "silt": 38.6,
+   "soc": 26.8,
+   "nearKm": 1
+  },
+  "it-garda": {
+   "clay": 31.7,
+   "phh2o": 6.8,
+   "sand": 32.6,
+   "silt": 35.7,
+   "soc": 59.3,
+   "nearKm": 1.4
+  },
+  "it-garda-colli-mantovani": {
+   "clay": 30.3,
+   "phh2o": 7.6,
+   "sand": 27.7,
+   "silt": 42,
+   "soc": 23.8,
+   "nearKm": 1
+  },
+  "it-gattinara": {
+   "clay": 19.2,
+   "phh2o": 6,
+   "sand": 38,
+   "silt": 42.8,
+   "soc": 34.1,
+   "nearKm": 1
   },
   "it-gavi": {
    "clay": 32.5,
@@ -7651,6 +12171,14 @@
    "sand": 26.4,
    "silt": 42.9,
    "soc": 28.5
+  },
+  "it-ghemme": {
+   "clay": 19.7,
+   "phh2o": 6.2,
+   "sand": 35.7,
+   "silt": 44.7,
+   "soc": 31.2,
+   "nearKm": 1
   },
   "it-gioia-del-colle": {
    "clay": 29.5,
@@ -7680,12 +12208,60 @@
    "silt": 54.1,
    "soc": 21.4
   },
+  "it-greco-di-bianco": {
+   "clay": 24.6,
+   "phh2o": 7,
+   "sand": 51.8,
+   "silt": 23.7,
+   "soc": 29.3,
+   "nearKm": 1.4
+  },
+  "it-greco-di-tufo": {
+   "clay": 33.3,
+   "phh2o": 7,
+   "sand": 31.6,
+   "silt": 35.1,
+   "soc": 37.3,
+   "nearKm": 1.4
+  },
+  "it-grignolino-d-asti": {
+   "clay": 34,
+   "phh2o": 7.3,
+   "sand": 21.6,
+   "silt": 44.5,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
+  "it-grignolino-del-monferrato-casalese": {
+   "clay": 30.7,
+   "phh2o": 7.3,
+   "sand": 22.3,
+   "silt": 47,
+   "soc": 26.6,
+   "nearKm": 1.4
+  },
   "it-grottino-di-roccanova": {
    "clay": 31.5,
    "phh2o": 6.8,
    "sand": 31.8,
    "silt": 36.7,
    "soc": 29.9
+  },
+  "it-gutturnio": {
+   "clay": 39.7,
+   "phh2o": 7.2,
+   "sand": 23.4,
+   "silt": 37,
+   "soc": 21.2,
+   "nearKm": 1.4
+  },
+  "it-i-terreni-di-sanseverino": {
+   "clay": 36.7,
+   "phh2o": 7.7,
+   "sand": 17.9,
+   "silt": 45.5,
+   "soc": 20,
+   "nearKm": 1
   },
   "it-irpinia": {
    "clay": 37.5,
@@ -7694,12 +12270,44 @@
    "silt": 37.4,
    "soc": 22.8
   },
+  "it-ischia": {
+   "clay": 36.8,
+   "phh2o": 6.5,
+   "sand": 30.1,
+   "silt": 33.2,
+   "soc": 34.7,
+   "nearKm": 2
+  },
   "it-isola-dei-nuraghi": {
    "clay": 21.2,
    "phh2o": 6.7,
    "sand": 47.2,
    "silt": 31.6,
    "soc": 24.8
+  },
+  "it-lacrima-di-morro": {
+   "clay": 45.2,
+   "phh2o": 7.7,
+   "sand": 14.5,
+   "silt": 40.4,
+   "soc": 28.1,
+   "nearKm": 1.4
+  },
+  "it-lago-di-caldaro": {
+   "clay": 20.9,
+   "phh2o": 6.7,
+   "sand": 42.5,
+   "silt": 36.6,
+   "soc": 30.7,
+   "nearKm": 1
+  },
+  "it-lago-di-corbara": {
+   "clay": 34.1,
+   "phh2o": 7.6,
+   "sand": 25.8,
+   "silt": 40,
+   "soc": 24,
+   "nearKm": 1
   },
   "it-lambrusco-di-sorbara": {
    "clay": 38.7,
@@ -7715,12 +12323,28 @@
    "silt": 49.6,
    "soc": 23.6
   },
+  "it-lambrusco-mantovano": {
+   "clay": 30.3,
+   "phh2o": 7.6,
+   "sand": 27.7,
+   "silt": 42,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "it-lambrusco-salamino-di-santa-croce": {
    "clay": 38.1,
    "phh2o": 7.4,
    "sand": 17.3,
    "silt": 44.6,
    "soc": 21.8
+  },
+  "it-lamezia": {
+   "clay": 30.1,
+   "phh2o": 7.2,
+   "sand": 30.7,
+   "silt": 39.2,
+   "soc": 30.3,
+   "nearKm": 1
   },
   "it-langhe": {
    "clay": 25.6,
@@ -7743,12 +12367,36 @@
    "silt": 41.5,
    "soc": 26.5
   },
+  "it-lessona": {
+   "clay": 21,
+   "phh2o": 6.7,
+   "sand": 32.3,
+   "silt": 46.7,
+   "soc": 24.7,
+   "nearKm": 1
+  },
   "it-leverano": {
    "clay": 26.1,
    "phh2o": 7.7,
    "sand": 40.9,
    "silt": 33.1,
    "soc": 21.5
+  },
+  "it-liguria-di-levante": {
+   "clay": 33.7,
+   "phh2o": 7.2,
+   "sand": 36,
+   "silt": 30.4,
+   "soc": 39.2,
+   "nearKm": 1.4
+  },
+  "it-lipuda": {
+   "clay": 36.2,
+   "phh2o": 7.4,
+   "sand": 25.8,
+   "silt": 38,
+   "soc": 24.5,
+   "nearKm": 1
   },
   "it-lison": {
    "clay": 35.9,
@@ -7764,6 +12412,14 @@
    "silt": 41,
    "soc": 28
   },
+  "it-lizzano": {
+   "clay": 28.8,
+   "phh2o": 7.7,
+   "sand": 25.1,
+   "silt": 46.2,
+   "soc": 16.4,
+   "nearKm": 1
+  },
   "it-loazzolo": {
    "clay": 30.3,
    "phh2o": 7.1,
@@ -7777,6 +12433,30 @@
    "sand": 20.3,
    "silt": 47.4,
    "soc": 20.6
+  },
+  "it-locride": {
+   "clay": 24.6,
+   "phh2o": 7,
+   "sand": 51.8,
+   "silt": 23.7,
+   "soc": 29.3,
+   "nearKm": 1.4
+  },
+  "it-lugana": {
+   "clay": 32.7,
+   "phh2o": 6.8,
+   "sand": 25.3,
+   "silt": 42.1,
+   "soc": 28.7,
+   "nearKm": 1.4
+  },
+  "it-malvasia-delle-lipari": {
+   "clay": 29.1,
+   "phh2o": 7,
+   "sand": 41.9,
+   "silt": 29,
+   "soc": 27.1,
+   "nearKm": 2
   },
   "it-malvasia-di-bosa": {
    "clay": 27.1,
@@ -7798,6 +12478,14 @@
    "sand": 17.1,
    "silt": 56.5,
    "soc": 18.4
+  },
+  "it-mamertino": {
+   "clay": 29.1,
+   "phh2o": 7,
+   "sand": 41.9,
+   "silt": 29,
+   "soc": 27.1,
+   "nearKm": 2
   },
   "it-mandrolisai": {
    "clay": 23.7,
@@ -7827,12 +12515,84 @@
    "silt": 34.1,
    "soc": 30.8
   },
+  "it-marmilla": {
+   "clay": 29,
+   "phh2o": 7.3,
+   "sand": 35.3,
+   "silt": 35.7,
+   "soc": 18,
+   "nearKm": 1
+  },
+  "it-marsala": {
+   "clay": 36,
+   "phh2o": 7.2,
+   "sand": 33,
+   "silt": 31.1,
+   "soc": 46.4,
+   "nearKm": 2
+  },
+  "it-martina": {
+   "clay": 32.9,
+   "phh2o": 7.5,
+   "sand": 16.8,
+   "silt": 50.4,
+   "soc": 22.3,
+   "nearKm": 1
+  },
+  "it-matera": {
+   "clay": 35.4,
+   "phh2o": 7.6,
+   "sand": 25.3,
+   "silt": 39.4,
+   "soc": 22.4,
+   "nearKm": 1
+  },
+  "it-matino": {
+   "clay": 26.1,
+   "phh2o": 7.6,
+   "sand": 37.7,
+   "silt": 36.2,
+   "soc": 18.9,
+   "nearKm": 1
+  },
+  "it-melissa": {
+   "clay": 36.2,
+   "phh2o": 7.4,
+   "sand": 25.8,
+   "silt": 38,
+   "soc": 24.5,
+   "nearKm": 1
+  },
+  "it-menfi": {
+   "clay": 40.9,
+   "phh2o": 7.6,
+   "sand": 26.6,
+   "silt": 32.5,
+   "soc": 29.6,
+   "nearKm": 1
+  },
   "it-merlara": {
    "clay": 32.9,
    "phh2o": 7.6,
    "sand": 22.1,
    "silt": 45,
    "soc": 22.7
+  },
+  "it-mitterberg": {
+   "clay": 20.9,
+   "phh2o": 6.7,
+   "sand": 42.5,
+   "silt": 36.6,
+   "soc": 30.7,
+   "nearKm": 1
+  },
+  "it-modena": {
+   "clay": 38.4,
+   "phh2o": 7.6,
+   "sand": 12.9,
+   "silt": 48.8,
+   "soc": 23.6,
+   "nearKm": 2.8
   },
   "it-molise": {
    "clay": 39.6,
@@ -7855,6 +12615,14 @@
    "silt": 31.6,
    "soc": 24.8
   },
+  "it-monreale": {
+   "clay": 34.5,
+   "phh2o": 7.4,
+   "sand": 31.4,
+   "silt": 34.2,
+   "soc": 29.5,
+   "nearKm": 1
+  },
   "it-montecarlo": {
    "clay": 24.4,
    "phh2o": 7,
@@ -7869,6 +12637,38 @@
    "silt": 40,
    "soc": 24.5
   },
+  "it-montecucco": {
+   "clay": 31.9,
+   "phh2o": 7.7,
+   "sand": 24.8,
+   "silt": 43.3,
+   "soc": 25.7,
+   "nearKm": 1
+  },
+  "it-montecucco-sangiovese": {
+   "clay": 31.9,
+   "phh2o": 7.7,
+   "sand": 24.8,
+   "silt": 43.3,
+   "soc": 25.7,
+   "nearKm": 1
+  },
+  "it-montefalco": {
+   "clay": 33.3,
+   "phh2o": 7.8,
+   "sand": 23.4,
+   "silt": 43.3,
+   "soc": 21.3,
+   "nearKm": 1
+  },
+  "it-montefalco-sagrantino": {
+   "clay": 33.3,
+   "phh2o": 7.3,
+   "sand": 25.8,
+   "silt": 40.9,
+   "soc": 25.7,
+   "nearKm": 1
+  },
   "it-montello-rosso": {
    "clay": 34.9,
    "phh2o": 6.1,
@@ -7876,12 +12676,28 @@
    "silt": 39.1,
    "soc": 30.8
   },
+  "it-montenetto-di-brescia": {
+   "clay": 32.7,
+   "phh2o": 6.8,
+   "sand": 25.3,
+   "silt": 42.1,
+   "soc": 28.7,
+   "nearKm": 1.4
+  },
   "it-montepulciano-d-abruzzo": {
    "clay": 35.6,
    "phh2o": 7.3,
    "sand": 20.8,
    "silt": 43.6,
    "soc": 33.7
+  },
+  "it-monteregio-di-massa-marittima": {
+   "clay": 31.9,
+   "phh2o": 7.7,
+   "sand": 24.8,
+   "silt": 43.3,
+   "soc": 25.7,
+   "nearKm": 1
   },
   "it-montescudaio": {
    "clay": 32.4,
@@ -7896,6 +12712,14 @@
    "sand": 29.8,
    "silt": 41.5,
    "soc": 26.5
+  },
+  "it-morellino-di-scansano": {
+   "clay": 31.9,
+   "phh2o": 7.7,
+   "sand": 24.8,
+   "silt": 43.3,
+   "soc": 25.7,
+   "nearKm": 1
   },
   "it-moscadello-di-montalcino": {
    "clay": 31.2,
@@ -7932,6 +12756,22 @@
    "silt": 51.6,
    "soc": 23.2
   },
+  "it-nardo": {
+   "clay": 27.2,
+   "phh2o": 7.8,
+   "sand": 38.6,
+   "silt": 34.3,
+   "soc": 19.6,
+   "nearKm": 1
+  },
+  "it-narni": {
+   "clay": 34.5,
+   "phh2o": 7.5,
+   "sand": 27.1,
+   "silt": 38.3,
+   "soc": 27.1,
+   "nearKm": 1
+  },
   "it-nasco-di-cagliari": {
    "clay": 21.2,
    "phh2o": 6.7,
@@ -7959,6 +12799,22 @@
    "sand": 40.6,
    "silt": 30,
    "soc": 26.5
+  },
+  "it-nizza": {
+   "clay": 34,
+   "phh2o": 7.3,
+   "sand": 21.6,
+   "silt": 44.5,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
+  "it-noto": {
+   "clay": 33.4,
+   "phh2o": 7.4,
+   "sand": 27.4,
+   "silt": 39.2,
+   "soc": 59.9,
+   "nearKm": 2
   },
   "it-nuragus-di-cagliari": {
    "clay": 18.4,
@@ -7988,6 +12844,22 @@
    "silt": 34.9,
    "soc": 37.2
   },
+  "it-oltrepo-pavese": {
+   "clay": 34.4,
+   "phh2o": 7.2,
+   "sand": 19.5,
+   "silt": 46.1,
+   "soc": 21.9,
+   "nearKm": 1
+  },
+  "it-oltrepo-pavese-metodo-classico": {
+   "clay": 26.5,
+   "phh2o": 7,
+   "sand": 34.7,
+   "silt": 38.8,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "it-oltrepo-pavese-pinot-grigio": {
    "clay": 24.8,
    "phh2o": 6.8,
@@ -8002,12 +12874,60 @@
    "silt": 36.6,
    "soc": 24.4
   },
+  "it-orta-nova": {
+   "clay": 48.2,
+   "phh2o": 7.4,
+   "sand": 12.8,
+   "silt": 39,
+   "soc": 17.4,
+   "nearKm": 1
+  },
+  "it-ortona": {
+   "clay": 36.6,
+   "phh2o": 7.6,
+   "sand": 24.5,
+   "silt": 38.9,
+   "soc": 26.1,
+   "nearKm": 1
+  },
+  "it-ortrugo-dei-colli-piacentini": {
+   "clay": 39.7,
+   "phh2o": 7.2,
+   "sand": 23.4,
+   "silt": 37,
+   "soc": 21.2,
+   "nearKm": 1.4
+  },
+  "it-orvieto": {
+   "clay": 31.6,
+   "phh2o": 7.6,
+   "sand": 25.8,
+   "silt": 42.6,
+   "soc": 17.4,
+   "nearKm": 1
+  },
   "it-osco": {
    "clay": 37.5,
    "phh2o": 7.2,
    "sand": 19.8,
    "silt": 42.8,
    "soc": 24
+  },
+  "it-ostuni": {
+   "clay": 32.4,
+   "phh2o": 7.5,
+   "sand": 22.2,
+   "silt": 45.4,
+   "soc": 20,
+   "nearKm": 1
+  },
+  "it-paestum": {
+   "clay": 35.4,
+   "phh2o": 7.3,
+   "sand": 29.7,
+   "silt": 34.9,
+   "soc": 27.4,
+   "nearKm": 1
   },
   "it-palizzi": {
    "clay": 28.5,
@@ -8023,6 +12943,14 @@
    "silt": 32,
    "soc": 41.6
   },
+  "it-parrina": {
+   "clay": 31.9,
+   "phh2o": 7.7,
+   "sand": 24.8,
+   "silt": 43.3,
+   "soc": 25.7,
+   "nearKm": 1
+  },
   "it-parteolla": {
    "clay": 21.2,
    "phh2o": 6.7,
@@ -8036,6 +12964,14 @@
    "sand": 45.4,
    "silt": 27.9,
    "soc": 30.9
+  },
+  "it-penisola-sorrentina": {
+   "clay": 31.6,
+   "phh2o": 6.9,
+   "sand": 33.3,
+   "silt": 35.1,
+   "soc": 29.9,
+   "nearKm": 1
   },
   "it-pentro-di-isernia": {
    "clay": 36.7,
@@ -8072,6 +13008,22 @@
    "silt": 46.2,
    "soc": 28.3
   },
+  "it-pinerolese": {
+   "clay": 25.3,
+   "phh2o": 6.7,
+   "sand": 29.1,
+   "silt": 45.5,
+   "soc": 25,
+   "nearKm": 1
+  },
+  "it-pinot-nero-dell-oltrepo-pavese": {
+   "clay": 26.5,
+   "phh2o": 7,
+   "sand": 34.7,
+   "silt": 38.8,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "it-planargia": {
    "clay": 25.2,
    "phh2o": 6.7,
@@ -8093,6 +13045,14 @@
    "silt": 37.2,
    "soc": 31
   },
+  "it-portofino": {
+   "clay": 28.5,
+   "phh2o": 6.4,
+   "sand": 35,
+   "silt": 36.5,
+   "soc": 54.2,
+   "nearKm": 1
+  },
   "it-primitivo-di-manduria": {
    "clay": 34.5,
    "phh2o": 7.6,
@@ -8107,12 +13067,84 @@
    "silt": 36,
    "soc": 18.7
   },
+  "it-prosecco": {
+   "clay": 32.8,
+   "phh2o": 6.1,
+   "sand": 29.5,
+   "silt": 37.7,
+   "soc": 42,
+   "nearKm": 1
+  },
+  "it-provincia-di-mantova": {
+   "clay": 30.3,
+   "phh2o": 7.6,
+   "sand": 27.7,
+   "silt": 42,
+   "soc": 23.8,
+   "nearKm": 1
+  },
+  "it-provincia-di-nuoro": {
+   "clay": 21.9,
+   "phh2o": 7,
+   "sand": 47.9,
+   "silt": 30.2,
+   "soc": 25.1,
+   "nearKm": 1
+  },
+  "it-provincia-di-pavia": {
+   "clay": 26.5,
+   "phh2o": 7,
+   "sand": 34.7,
+   "silt": 38.8,
+   "soc": 23.8,
+   "nearKm": 1
+  },
   "it-puglia": {
    "clay": 31.4,
    "phh2o": 7.4,
    "sand": 20.6,
    "silt": 48,
    "soc": 20.4
+  },
+  "it-quistello": {
+   "clay": 43.6,
+   "phh2o": 7.4,
+   "sand": 10.6,
+   "silt": 45.9,
+   "soc": 26.6,
+   "nearKm": 1
+  },
+  "it-ramandolo": {
+   "clay": 19.7,
+   "phh2o": 6.8,
+   "sand": 38.2,
+   "silt": 42.1,
+   "soc": 32.7,
+   "nearKm": 2
+  },
+  "it-ravenna": {
+   "clay": 41.5,
+   "phh2o": 7.7,
+   "sand": 11.3,
+   "silt": 47.2,
+   "soc": 23.8,
+   "nearKm": 2
+  },
+  "it-recioto-della-valpolicella": {
+   "clay": 27.6,
+   "phh2o": 7.1,
+   "sand": 25.9,
+   "silt": 46.5,
+   "soc": 25.9,
+   "nearKm": 2
+  },
+  "it-recioto-di-gambellara": {
+   "clay": 30,
+   "phh2o": 7.2,
+   "sand": 26.8,
+   "silt": 43.2,
+   "soc": 28.4,
+   "nearKm": 2
   },
   "it-recioto-di-soave": {
    "clay": 28.6,
@@ -8135,6 +13167,22 @@
    "silt": 49.3,
    "soc": 21.8
   },
+  "it-riesi": {
+   "clay": 32.9,
+   "phh2o": 7.8,
+   "sand": 27.1,
+   "silt": 40,
+   "soc": 18.8,
+   "nearKm": 1
+  },
+  "it-rimini": {
+   "clay": 38.4,
+   "phh2o": 7.7,
+   "sand": 15.5,
+   "silt": 46.1,
+   "soc": 26.6,
+   "nearKm": 2
+  },
   "it-riviera-del-brenta": {
    "clay": 32.8,
    "phh2o": 7.6,
@@ -8148,6 +13196,14 @@
    "sand": 32.1,
    "silt": 35.3,
    "soc": 42.3
+  },
+  "it-roero": {
+   "clay": 25,
+   "phh2o": 7.2,
+   "sand": 27,
+   "silt": 48,
+   "soc": 21.6,
+   "nearKm": 1
   },
   "it-romagna": {
    "clay": 37.8,
@@ -8170,6 +13226,22 @@
    "silt": 31.6,
    "soc": 24.8
   },
+  "it-ronchi-di-brescia": {
+   "clay": 32.7,
+   "phh2o": 6.8,
+   "sand": 25.3,
+   "silt": 42.1,
+   "soc": 28.7,
+   "nearKm": 1.4
+  },
+  "it-ronchi-varesini": {
+   "clay": 21.6,
+   "phh2o": 5.9,
+   "sand": 40.7,
+   "silt": 37.7,
+   "soc": 33.2,
+   "nearKm": 1
+  },
   "it-rosazzo": {
    "clay": 24.9,
    "phh2o": 6.4,
@@ -8183,6 +13255,14 @@
    "sand": 32.7,
    "silt": 36.7,
    "soc": 32.8
+  },
+  "it-rosso-conero": {
+   "clay": 45.2,
+   "phh2o": 7.7,
+   "sand": 14.5,
+   "silt": 40.4,
+   "soc": 28.1,
+   "nearKm": 1.4
   },
   "it-rosso-di-cerignola": {
    "clay": 31.5,
@@ -8233,6 +13313,30 @@
    "silt": 48.6,
    "soc": 22.4
   },
+  "it-rubino-di-cantavenna": {
+   "clay": 30.7,
+   "phh2o": 7.3,
+   "sand": 22.3,
+   "silt": 47,
+   "soc": 26.6,
+   "nearKm": 1.4
+  },
+  "it-ruche-di-castagnole-monferrato": {
+   "clay": 34,
+   "phh2o": 7.3,
+   "sand": 21.6,
+   "silt": 44.5,
+   "soc": 19.1,
+   "nearKm": 1.4
+  },
+  "it-s-anna-di-isola-capo-rizzuto": {
+   "clay": 36.2,
+   "phh2o": 7.4,
+   "sand": 25.8,
+   "silt": 38,
+   "soc": 24.5,
+   "nearKm": 1
+  },
   "it-sabbioneta": {
    "clay": 34,
    "phh2o": 7.7,
@@ -8247,6 +13351,22 @@
    "silt": 39.5,
    "soc": 22.7
   },
+  "it-salento": {
+   "clay": 24.8,
+   "phh2o": 7.9,
+   "sand": 51.2,
+   "silt": 24,
+   "soc": 17.5,
+   "nearKm": 2
+  },
+  "it-salice-salentino": {
+   "clay": 33.1,
+   "phh2o": 7.8,
+   "sand": 35.6,
+   "silt": 31.3,
+   "soc": 17,
+   "nearKm": 1
+  },
   "it-salina": {
    "clay": 22.2,
    "phh2o": 6.4,
@@ -8254,12 +13374,92 @@
    "silt": 32.8,
    "soc": 35.9
   },
+  "it-sambuca-di-sicilia": {
+   "clay": 39.8,
+   "phh2o": 7.5,
+   "sand": 27.4,
+   "silt": 32.8,
+   "soc": 24.2,
+   "nearKm": 1
+  },
+  "it-san-colombano-al-lambro": {
+   "clay": 27.2,
+   "phh2o": 6.7,
+   "sand": 31.2,
+   "silt": 41.7,
+   "soc": 27.1,
+   "nearKm": 1
+  },
+  "it-san-gimignano": {
+   "clay": 32,
+   "phh2o": 7.6,
+   "sand": 29,
+   "silt": 39,
+   "soc": 25.2,
+   "nearKm": 1
+  },
+  "it-san-ginesio": {
+   "clay": 36.4,
+   "phh2o": 7.1,
+   "sand": 24.2,
+   "silt": 39.4,
+   "soc": 28,
+   "nearKm": 1
+  },
+  "it-san-martino-della-battaglia": {
+   "clay": 32.7,
+   "phh2o": 6.8,
+   "sand": 25.3,
+   "silt": 42.1,
+   "soc": 28.7,
+   "nearKm": 1.4
+  },
+  "it-san-severo": {
+   "clay": 35.2,
+   "phh2o": 7.7,
+   "sand": 25.5,
+   "silt": 39.3,
+   "soc": 16.4,
+   "nearKm": 1
+  },
+  "it-san-torpe": {
+   "clay": 28.1,
+   "phh2o": 7.1,
+   "sand": 33.3,
+   "silt": 38.7,
+   "soc": 39.8,
+   "nearKm": 1.4
+  },
+  "it-sangue-di-giuda": {
+   "clay": 26.5,
+   "phh2o": 7,
+   "sand": 34.7,
+   "silt": 38.8,
+   "soc": 23.8,
+   "nearKm": 1
+  },
+  "it-sannio": {
+   "clay": 31.2,
+   "phh2o": 7.4,
+   "sand": 25.7,
+   "silt": 43.2,
+   "soc": 21,
+   "nearKm": 1
+  },
   "it-sant-antimo": {
    "clay": 31.2,
    "phh2o": 7.7,
    "sand": 32.2,
    "silt": 36.6,
    "soc": 24.4
+  },
+  "it-santa-margherita-di-belice": {
+   "clay": 35,
+   "phh2o": 7.1,
+   "sand": 31,
+   "silt": 34.1,
+   "soc": 24.3,
+   "nearKm": 1
   },
   "it-sardegna-semidano": {
    "clay": 21.2,
@@ -8275,12 +13475,36 @@
    "silt": 39,
    "soc": 30.7
   },
+  "it-scanzo": {
+   "clay": 28.9,
+   "phh2o": 6.5,
+   "sand": 27.3,
+   "silt": 43.9,
+   "soc": 30.6,
+   "nearKm": 2.8
+  },
+  "it-scavigna": {
+   "clay": 30.1,
+   "phh2o": 7.2,
+   "sand": 30.7,
+   "silt": 39.2,
+   "soc": 30.3,
+   "nearKm": 1
+  },
   "it-sciacca": {
    "clay": 33.4,
    "phh2o": 7.2,
    "sand": 31.4,
    "silt": 35.2,
    "soc": 37.2
+  },
+  "it-scilla": {
+   "clay": 24.6,
+   "phh2o": 7,
+   "sand": 51.8,
+   "silt": 23.7,
+   "soc": 29.3,
+   "nearKm": 1.4
   },
   "it-sebino": {
    "clay": 30.1,
@@ -8296,6 +13520,14 @@
    "silt": 37.4,
    "soc": 32.5
   },
+  "it-sforzato-di-valtellina": {
+   "clay": 17.7,
+   "phh2o": 6.1,
+   "sand": 44.8,
+   "silt": 37.6,
+   "soc": 53.6,
+   "nearKm": 1
+  },
   "it-sibiola": {
    "clay": 21.2,
    "phh2o": 6.7,
@@ -8310,12 +13542,28 @@
    "silt": 36.8,
    "soc": 23.7
   },
+  "it-siracusa": {
+   "clay": 33.9,
+   "phh2o": 7.3,
+   "sand": 25.1,
+   "silt": 41.2,
+   "soc": 53.8,
+   "nearKm": 2.8
+  },
   "it-sizzano": {
    "clay": 20.7,
    "phh2o": 6.1,
    "sand": 35.4,
    "silt": 44,
    "soc": 27.9
+  },
+  "it-soave": {
+   "clay": 30.4,
+   "phh2o": 6.9,
+   "sand": 29.3,
+   "silt": 40.4,
+   "soc": 23.9,
+   "nearKm": 1
   },
   "it-soave-superiore": {
    "clay": 28.6,
@@ -8331,6 +13579,30 @@
    "silt": 39.3,
    "soc": 23.1
   },
+  "it-spello": {
+   "clay": 30.5,
+   "phh2o": 7.6,
+   "sand": 25.5,
+   "silt": 44,
+   "soc": 25.7,
+   "nearKm": 1
+  },
+  "it-spoleto": {
+   "clay": 37.2,
+   "phh2o": 7.2,
+   "sand": 23.6,
+   "silt": 39.2,
+   "soc": 31.4,
+   "nearKm": 1
+  },
+  "it-squinzano": {
+   "clay": 29.1,
+   "phh2o": 7.7,
+   "sand": 42,
+   "silt": 28.9,
+   "soc": 20.4,
+   "nearKm": 1
+  },
   "it-strevi": {
    "clay": 30.6,
    "phh2o": 7.2,
@@ -8345,6 +13617,14 @@
    "silt": 33.8,
    "soc": 29.4
   },
+  "it-tarquinia": {
+   "clay": 29.9,
+   "phh2o": 7.4,
+   "sand": 30,
+   "silt": 40.1,
+   "soc": 20.6,
+   "nearKm": 1
+  },
   "it-taurasi": {
    "clay": 35.7,
    "phh2o": 7.4,
@@ -8352,12 +13632,44 @@
    "silt": 40.8,
    "soc": 23.3
   },
+  "it-tavoliere-delle-puglie": {
+   "clay": 39.6,
+   "phh2o": 7.7,
+   "sand": 18.5,
+   "silt": 41.8,
+   "soc": 14.3,
+   "nearKm": 1.4
+  },
+  "it-teroldego-rotaliano": {
+   "clay": 20.9,
+   "phh2o": 6.7,
+   "sand": 42.5,
+   "silt": 36.6,
+   "soc": 30.7,
+   "nearKm": 1
+  },
   "it-terra-d-otranto": {
    "clay": 31.3,
    "phh2o": 7.6,
    "sand": 29.6,
    "silt": 39.1,
    "soc": 21.8
+  },
+  "it-terracina": {
+   "clay": 37.4,
+   "phh2o": 6.9,
+   "sand": 31,
+   "silt": 31.7,
+   "soc": 29.5,
+   "nearKm": 1.4
+  },
+  "it-terrazze-dell-imperiese": {
+   "clay": 25.1,
+   "phh2o": 7.1,
+   "sand": 32.9,
+   "silt": 42,
+   "soc": 27.6,
+   "nearKm": 1.4
   },
   "it-terre-abruzzesi": {
    "clay": 36.9,
@@ -8380,6 +13692,14 @@
    "silt": 47.5,
    "soc": 24.2
   },
+  "it-terre-del-colleoni": {
+   "clay": 28.9,
+   "phh2o": 6.5,
+   "sand": 27.3,
+   "silt": 43.9,
+   "soc": 30.6,
+   "nearKm": 2.8
+  },
   "it-terre-del-volturno": {
    "clay": 30.3,
    "phh2o": 7.1,
@@ -8400,6 +13720,14 @@
    "sand": 23,
    "silt": 43.4,
    "soc": 22.8
+  },
+  "it-terre-di-cosenza": {
+   "clay": 26.9,
+   "phh2o": 7.4,
+   "sand": 32.6,
+   "silt": 40.5,
+   "soc": 25.2,
+   "nearKm": 1
   },
   "it-terre-di-offida": {
    "clay": 38,
@@ -8436,12 +13764,52 @@
    "silt": 38.3,
    "soc": 25.9
   },
+  "it-terre-tollesi": {
+   "clay": 33.9,
+   "phh2o": 7.6,
+   "sand": 20.3,
+   "silt": 45.8,
+   "soc": 24.1,
+   "nearKm": 1
+  },
+  "it-tharros": {
+   "clay": 33.7,
+   "phh2o": 6.9,
+   "sand": 35,
+   "silt": 31.3,
+   "soc": 39.9,
+   "nearKm": 2
+  },
   "it-tintilia-del-molise": {
    "clay": 25.2,
    "phh2o": 7.2,
    "sand": 33.4,
    "silt": 41.4,
    "soc": 32.9
+  },
+  "it-todi": {
+   "clay": 37.4,
+   "phh2o": 7.8,
+   "sand": 24.6,
+   "silt": 38.1,
+   "soc": 19.9,
+   "nearKm": 1
+  },
+  "it-torgiano": {
+   "clay": 38.5,
+   "phh2o": 7.9,
+   "sand": 16.4,
+   "silt": 45.1,
+   "soc": 19.5,
+   "nearKm": 1
+  },
+  "it-torgiano-rosso-riserva": {
+   "clay": 33.3,
+   "phh2o": 7.3,
+   "sand": 25.8,
+   "silt": 40.9,
+   "soc": 25.7,
+   "nearKm": 1
   },
   "it-toscano": {
    "clay": 32.2,
@@ -8456,6 +13824,30 @@
    "sand": 15.4,
    "silt": 47.5,
    "soc": 24.2
+  },
+  "it-trentino": {
+   "clay": 20.9,
+   "phh2o": 6.7,
+   "sand": 42.5,
+   "silt": 36.6,
+   "soc": 30.7,
+   "nearKm": 1
+  },
+  "it-trento": {
+   "clay": 19.3,
+   "phh2o": 6.4,
+   "sand": 45.4,
+   "silt": 35.4,
+   "soc": 45.7,
+   "nearKm": 1
+  },
+  "it-trevenezie": {
+   "clay": 26,
+   "phh2o": 6.9,
+   "sand": 29.5,
+   "silt": 44.5,
+   "soc": 29.9,
+   "nearKm": 1
   },
   "it-trexenta": {
    "clay": 27.1,
@@ -8499,6 +13891,30 @@
    "silt": 36.7,
    "soc": 31.3
   },
+  "it-val-di-magra": {
+   "clay": 34.4,
+   "phh2o": 7,
+   "sand": 27.5,
+   "silt": 38.2,
+   "soc": 31,
+   "nearKm": 1
+  },
+  "it-val-di-neto": {
+   "clay": 36.2,
+   "phh2o": 7.4,
+   "sand": 25.8,
+   "silt": 38,
+   "soc": 24.5,
+   "nearKm": 1
+  },
+  "it-val-polcevera": {
+   "clay": 28.6,
+   "phh2o": 6.6,
+   "sand": 32.4,
+   "silt": 39.1,
+   "soc": 43,
+   "nearKm": 1.4
+  },
   "it-val-tidone": {
    "clay": 38.7,
    "phh2o": 7.7,
@@ -8533,6 +13949,14 @@
    "sand": 34.1,
    "silt": 40.7,
    "soc": 47
+  },
+  "it-valdamato": {
+   "clay": 30.1,
+   "phh2o": 7.2,
+   "sand": 30.7,
+   "silt": 39.2,
+   "soc": 30.3,
+   "nearKm": 1
   },
   "it-valdichiana-toscana": {
    "clay": 34.7,
@@ -8590,12 +14014,52 @@
    "silt": 31.6,
    "soc": 24.8
   },
+  "it-valli-ossolane": {
+   "clay": 23.6,
+   "phh2o": 5.7,
+   "sand": 39.9,
+   "silt": 36.5,
+   "soc": 44.6,
+   "nearKm": 1
+  },
   "it-valpolicella": {
    "clay": 32.2,
    "phh2o": 7,
    "sand": 24.6,
    "silt": 43.2,
    "soc": 25.6
+  },
+  "it-valpolicella-ripasso": {
+   "clay": 27.6,
+   "phh2o": 7.1,
+   "sand": 25.9,
+   "silt": 46.5,
+   "soc": 25.9,
+   "nearKm": 2
+  },
+  "it-valsusa": {
+   "clay": 25.3,
+   "phh2o": 6.7,
+   "sand": 29.1,
+   "silt": 45.5,
+   "soc": 25,
+   "nearKm": 1
+  },
+  "it-valtellina-rosso": {
+   "clay": 17.7,
+   "phh2o": 6.1,
+   "sand": 44.8,
+   "silt": 37.6,
+   "soc": 53.6,
+   "nearKm": 1
+  },
+  "it-valtellina-superiore": {
+   "clay": 17.7,
+   "phh2o": 6.1,
+   "sand": 44.8,
+   "silt": 37.6,
+   "soc": 53.6,
+   "nearKm": 1
   },
   "it-velletri": {
    "clay": 35.5,
@@ -8625,6 +14089,30 @@
    "silt": 43.7,
    "soc": 35
   },
+  "it-verdicchio-dei-castelli-di-jesi": {
+   "clay": 45.2,
+   "phh2o": 7.7,
+   "sand": 14.5,
+   "silt": 40.4,
+   "soc": 28.1,
+   "nearKm": 1.4
+  },
+  "it-verdicchio-di-matelica": {
+   "clay": 36.7,
+   "phh2o": 7.7,
+   "sand": 17.9,
+   "silt": 45.5,
+   "soc": 20,
+   "nearKm": 1
+  },
+  "it-verdicchio-di-matelica-riserva": {
+   "clay": 36.7,
+   "phh2o": 7.7,
+   "sand": 17.9,
+   "silt": 45.5,
+   "soc": 20,
+   "nearKm": 1
+  },
   "it-verduno-pelaverga": {
    "clay": 27.3,
    "phh2o": 7.7,
@@ -8632,12 +14120,60 @@
    "silt": 41.6,
    "soc": 21.2
   },
+  "it-vermentino-di-gallura": {
+   "clay": 26.7,
+   "phh2o": 7.2,
+   "sand": 41.4,
+   "silt": 31.9,
+   "soc": 22.9,
+   "nearKm": 1.4
+  },
   "it-vermentino-di-sardegna": {
    "clay": 21.2,
    "phh2o": 6.7,
    "sand": 47.2,
    "silt": 31.6,
    "soc": 24.8
+  },
+  "it-vernaccia-di-oristano": {
+   "clay": 36,
+   "phh2o": 7.3,
+   "sand": 28.2,
+   "silt": 35.8,
+   "soc": 27.2,
+   "nearKm": 1
+  },
+  "it-vernaccia-di-san-gimignano": {
+   "clay": 32,
+   "phh2o": 7.6,
+   "sand": 29,
+   "silt": 39,
+   "soc": 25.2,
+   "nearKm": 1
+  },
+  "it-vernaccia-di-serrapetrona": {
+   "clay": 36.7,
+   "phh2o": 7.7,
+   "sand": 17.9,
+   "silt": 45.5,
+   "soc": 20,
+   "nearKm": 1
+  },
+  "it-verona": {
+   "clay": 26.6,
+   "phh2o": 7,
+   "sand": 27.5,
+   "silt": 45.9,
+   "soc": 29.4,
+   "nearKm": 2
+  },
+  "it-vicenza": {
+   "clay": 30,
+   "phh2o": 7.2,
+   "sand": 26.8,
+   "silt": 43.2,
+   "soc": 28.4,
+   "nearKm": 2
   },
   "it-vignanello": {
    "clay": 33.3,
@@ -8660,6 +14196,14 @@
    "silt": 35.2,
    "soc": 29.7
   },
+  "it-villamagna": {
+   "clay": 31.2,
+   "phh2o": 7.9,
+   "sand": 26.9,
+   "silt": 41.9,
+   "soc": 23.7,
+   "nearKm": 1
+  },
   "it-vin-santo-del-chianti": {
    "clay": 31.8,
    "phh2o": 7.7,
@@ -8674,6 +14218,14 @@
    "silt": 37.1,
    "soc": 35
   },
+  "it-vin-santo-di-carmignano": {
+   "clay": 34.4,
+   "phh2o": 7.6,
+   "sand": 32.8,
+   "silt": 32.9,
+   "soc": 25.4,
+   "nearKm": 1
+  },
   "it-vin-santo-di-montepulciano": {
    "clay": 34.5,
    "phh2o": 7,
@@ -8687,6 +14239,14 @@
    "sand": 32.2,
    "silt": 36.6,
    "soc": 24.4
+  },
+  "it-vittoria": {
+   "clay": 29.9,
+   "phh2o": 7.7,
+   "sand": 29.9,
+   "silt": 40.2,
+   "soc": 21.1,
+   "nearKm": 1.4
   },
   "it-zagarolo": {
    "clay": 34.1,
@@ -8765,6 +14325,14 @@
    "silt": 46.6,
    "soc": 29.6
   },
+  "md-tigheci": {
+   "clay": 44,
+   "phh2o": 7.2,
+   "sand": 15.4,
+   "silt": 40.7,
+   "soc": 21.1,
+   "nearKm": 1
+  },
   "md-valul-lui-traian": {
    "clay": 40.6,
    "phh2o": 7.1,
@@ -8793,6 +14361,14 @@
    "silt": 36.5,
    "soc": 48.2
   },
+  "mx-la-laguna": {
+   "clay": 24.7,
+   "phh2o": 8.1,
+   "sand": 43.6,
+   "silt": 31.7,
+   "soc": 12.9,
+   "nearKm": 1
+  },
   "mx-queretaro": {
    "clay": 31.4,
    "phh2o": 6.9,
@@ -8814,6 +14390,14 @@
    "silt": 22.7,
    "soc": 7.6
   },
+  "mx-valle-de-parras": {
+   "clay": 24.7,
+   "phh2o": 8.1,
+   "sand": 43.6,
+   "silt": 31.7,
+   "soc": 12.9,
+   "nearKm": 1
+  },
   "mx-valle-de-san-vicente": {
    "clay": 17.2,
    "phh2o": 7.3,
@@ -8827,6 +14411,22 @@
    "sand": 60.6,
    "silt": 22.6,
    "soc": 8.1
+  },
+  "mx-valle-de-tecate": {
+   "clay": 14.1,
+   "phh2o": 6.8,
+   "sand": 67.4,
+   "silt": 18.5,
+   "soc": 6.8,
+   "nearKm": 1.4
+  },
+  "nl-achterhoek-winterswijk": {
+   "clay": 7.2,
+   "phh2o": 5.6,
+   "sand": 80.4,
+   "silt": 12.6,
+   "soc": 36.2,
+   "nearKm": 1
   },
   "nl-de-voerendaalse-bergen": {
    "clay": 19.1,
@@ -8849,12 +14449,28 @@
    "silt": 56.6,
    "soc": 71.1
   },
+  "nl-friesland": {
+   "clay": 35.5,
+   "phh2o": 6.3,
+   "sand": 16.6,
+   "silt": 47.9,
+   "soc": 99.2,
+   "nearKm": 2
+  },
   "nl-gelderland": {
    "clay": 5.8,
    "phh2o": 4.7,
    "sand": 75.4,
    "silt": 18.8,
    "soc": 60.8
+  },
+  "nl-groningen": {
+   "clay": 19.1,
+   "phh2o": 5.8,
+   "sand": 60.2,
+   "silt": 20.7,
+   "soc": 129,
+   "nearKm": 2.8
   },
   "nl-limburg": {
    "clay": 12.7,
@@ -8863,12 +14479,28 @@
    "silt": 24.5,
    "soc": 22.5
   },
+  "nl-mergelland": {
+   "clay": 22.8,
+   "phh2o": 6.4,
+   "sand": 14.9,
+   "silt": 62.4,
+   "soc": 19.7,
+   "nearKm": 1
+  },
   "nl-noord-brabant": {
    "clay": 10.5,
    "phh2o": 5,
    "sand": 76.7,
    "silt": 12.7,
    "soc": 44
+  },
+  "nl-noord-holland": {
+   "clay": 28.2,
+   "phh2o": 6.9,
+   "sand": 43.6,
+   "silt": 28.1,
+   "soc": 77.4,
+   "nearKm": 1
   },
   "nl-oolde": {
    "clay": 8.3,
@@ -8904,6 +14536,14 @@
    "sand": 74.8,
    "silt": 16.1,
    "soc": 46.6
+  },
+  "nl-utrecht": {
+   "clay": 23.9,
+   "phh2o": 6.5,
+   "sand": 51,
+   "silt": 25.1,
+   "soc": 48.4,
+   "nearKm": 2.8
   },
   "nl-vijlen": {
    "clay": 22.7,
@@ -8982,12 +14622,36 @@
    "silt": 28.8,
    "soc": 56.4
   },
+  "nz-kumeu": {
+   "clay": 25.9,
+   "phh2o": 5.4,
+   "sand": 49.6,
+   "silt": 24.6,
+   "soc": 72,
+   "nearKm": 1
+  },
   "nz-marlborough": {
    "clay": 23.5,
    "phh2o": 6.1,
    "sand": 52.2,
    "silt": 24.3,
    "soc": 42.3
+  },
+  "nz-martinborough": {
+   "clay": 22.9,
+   "phh2o": 6.2,
+   "sand": 55.9,
+   "silt": 21.1,
+   "soc": 60.3,
+   "nearKm": 1
+  },
+  "nz-matakana": {
+   "clay": 24.2,
+   "phh2o": 5.2,
+   "sand": 50.1,
+   "silt": 25.6,
+   "soc": 76.6,
+   "nearKm": 1
   },
   "nz-new-zealand": {
    "clay": 30.7,
@@ -9080,12 +14744,28 @@
    "silt": 23.7,
    "soc": 17.4
   },
+  "pt-algarve": {
+   "clay": 16.5,
+   "phh2o": 5.9,
+   "sand": 59.3,
+   "silt": 24.2,
+   "soc": 30.1,
+   "nearKm": 1.4
+  },
   "pt-arruda": {
    "clay": 17.9,
    "phh2o": 6.3,
    "sand": 61,
    "silt": 21.2,
    "soc": 28
+  },
+  "pt-bairrada": {
+   "clay": 24,
+   "phh2o": 6.5,
+   "sand": 40,
+   "silt": 36,
+   "soc": 25.7,
+   "nearKm": 1
   },
   "pt-beira-atlantico": {
    "clay": 20.4,
@@ -9108,6 +14788,22 @@
    "silt": 36.2,
    "soc": 37
   },
+  "pt-bucelas": {
+   "clay": 20,
+   "phh2o": 6.2,
+   "sand": 56.2,
+   "silt": 23.8,
+   "soc": 25.4,
+   "nearKm": 1
+  },
+  "pt-carcavelos": {
+   "clay": 15.1,
+   "phh2o": 5.2,
+   "sand": 62.4,
+   "silt": 22.5,
+   "soc": 27.1,
+   "nearKm": 2.8
+  },
   "pt-colares": {
    "clay": 17.1,
    "phh2o": 6.3,
@@ -9121,6 +14817,14 @@
    "sand": 55.3,
    "silt": 26.6,
    "soc": 47.6
+  },
+  "pt-dotejo": {
+   "clay": 14.3,
+   "phh2o": 5.9,
+   "sand": 63.2,
+   "silt": 22.5,
+   "soc": 29.8,
+   "nearKm": 1
   },
   "pt-douro": {
    "clay": 12.5,
@@ -9157,6 +14861,22 @@
    "silt": 24.8,
    "soc": 53.8
   },
+  "pt-lagoa": {
+   "clay": 18.9,
+   "phh2o": 5.6,
+   "sand": 54.8,
+   "silt": 26.3,
+   "soc": 29.5,
+   "nearKm": 1
+  },
+  "pt-lagos": {
+   "clay": 19.3,
+   "phh2o": 5.6,
+   "sand": 54.6,
+   "silt": 26.2,
+   "soc": 31.9,
+   "nearKm": 1.4
+  },
   "pt-madeira": {
    "clay": 34.8,
    "phh2o": 5.9,
@@ -9171,12 +14891,44 @@
    "silt": 39,
    "soc": 55.5
   },
+  "pt-minho": {
+   "clay": 15.3,
+   "phh2o": 5.6,
+   "sand": 54.9,
+   "silt": 29.8,
+   "soc": 42.9,
+   "nearKm": 2
+  },
   "pt-obidos": {
    "clay": 16.2,
    "phh2o": 5.9,
    "sand": 66,
    "silt": 17.8,
    "soc": 26.6
+  },
+  "pt-palmela": {
+   "clay": 16.4,
+   "phh2o": 5.5,
+   "sand": 59.4,
+   "silt": 24.2,
+   "soc": 31.1,
+   "nearKm": 1
+  },
+  "pt-peninsula-de-setubal": {
+   "clay": 11,
+   "phh2o": 5.7,
+   "sand": 72.1,
+   "silt": 16.9,
+   "soc": 29.4,
+   "nearKm": 1.4
+  },
+  "pt-portimao": {
+   "clay": 24.6,
+   "phh2o": 6,
+   "sand": 48,
+   "silt": 27.5,
+   "soc": 29.9,
+   "nearKm": 1
   },
   "pt-porto": {
    "clay": 14.7,
@@ -9185,12 +14937,36 @@
    "silt": 32.1,
    "soc": 32.6
   },
+  "pt-setubal": {
+   "clay": 11,
+   "phh2o": 5.7,
+   "sand": 72.1,
+   "silt": 16.9,
+   "soc": 29.4,
+   "nearKm": 1.4
+  },
+  "pt-tavira": {
+   "clay": 20.1,
+   "phh2o": 6.1,
+   "sand": 56.7,
+   "silt": 23.2,
+   "soc": 28,
+   "nearKm": 1
+  },
   "pt-tavora-varosa": {
    "clay": 14.7,
    "phh2o": 5.8,
    "sand": 53.3,
    "silt": 32.1,
    "soc": 32.6
+  },
+  "pt-tejo": {
+   "clay": 14.3,
+   "phh2o": 5.9,
+   "sand": 63.2,
+   "silt": 22.5,
+   "soc": 29.8,
+   "nearKm": 1
   },
   "pt-terras-da-beira": {
    "clay": 13,
@@ -9255,6 +15031,30 @@
    "silt": 54.4,
    "soc": 19.7
   },
+  "ro-aiud": {
+   "clay": 34.3,
+   "phh2o": 7.1,
+   "sand": 24.8,
+   "silt": 40.8,
+   "soc": 20.7,
+   "nearKm": 1
+  },
+  "ro-alba-iulia": {
+   "clay": 43.1,
+   "phh2o": 6.9,
+   "sand": 20.7,
+   "silt": 36.2,
+   "soc": 20.7,
+   "nearKm": 1
+  },
+  "ro-babadag": {
+   "clay": 39.3,
+   "phh2o": 7.9,
+   "sand": 10.7,
+   "silt": 50.1,
+   "soc": 17,
+   "nearKm": 1
+  },
   "ro-banat": {
    "clay": 46.4,
    "phh2o": 7.1,
@@ -9268,6 +15068,14 @@
    "sand": 23.9,
    "silt": 34,
    "soc": 17.1
+  },
+  "ro-bohotin": {
+   "clay": 30.8,
+   "phh2o": 6.9,
+   "sand": 24.1,
+   "silt": 45.1,
+   "soc": 20.9,
+   "nearKm": 1
   },
   "ro-colinele-dobrogei": {
    "clay": 33.5,
@@ -9395,12 +15203,52 @@
    "silt": 32,
    "soc": 16.9
   },
+  "ro-dragasani": {
+   "clay": 38.8,
+   "phh2o": 6.7,
+   "sand": 21.9,
+   "silt": 39.3,
+   "soc": 18.3,
+   "nearKm": 1
+  },
+  "ro-husi": {
+   "clay": 35.4,
+   "phh2o": 6.9,
+   "sand": 28.2,
+   "silt": 36.4,
+   "soc": 20.5,
+   "nearKm": 1
+  },
   "ro-iana": {
    "clay": 37.3,
    "phh2o": 6.9,
    "sand": 34.5,
    "silt": 28.4,
    "soc": 21.2
+  },
+  "ro-iasi": {
+   "clay": 44.4,
+   "phh2o": 7,
+   "sand": 17.9,
+   "silt": 37.8,
+   "soc": 22.2,
+   "nearKm": 2
+  },
+  "ro-insuratei": {
+   "clay": 41.4,
+   "phh2o": 7.7,
+   "sand": 16.5,
+   "silt": 42.1,
+   "soc": 16.9,
+   "nearKm": 1
+  },
+  "ro-jidvei": {
+   "clay": 40.3,
+   "phh2o": 7.1,
+   "sand": 19.2,
+   "silt": 40.5,
+   "soc": 23.8,
+   "nearKm": 1
   },
   "ro-lechinta": {
    "clay": 40.7,
@@ -9423,6 +15271,30 @@
    "silt": 36.5,
    "soc": 17.5
   },
+  "ro-murfatlar": {
+   "clay": 40.1,
+   "phh2o": 7.8,
+   "sand": 8.7,
+   "silt": 51.3,
+   "soc": 19.1,
+   "nearKm": 1
+  },
+  "ro-murfatlar-pdo": {
+   "clay": 40.1,
+   "phh2o": 7.8,
+   "sand": 8.7,
+   "silt": 51.3,
+   "soc": 19.1,
+   "nearKm": 1
+  },
+  "ro-nicoresti": {
+   "clay": 50.3,
+   "phh2o": 6.9,
+   "sand": 18.6,
+   "silt": 31.1,
+   "soc": 18.7,
+   "nearKm": 1
+  },
   "ro-odobesti": {
    "clay": 41.3,
    "phh2o": 7,
@@ -9430,12 +15302,52 @@
    "silt": 42.5,
    "soc": 18.8
   },
+  "ro-oltina": {
+   "clay": 34.5,
+   "phh2o": 7.7,
+   "sand": 11.2,
+   "silt": 54.3,
+   "soc": 16.5,
+   "nearKm": 2
+  },
+  "ro-panciu": {
+   "clay": 41.9,
+   "phh2o": 6.9,
+   "sand": 27.8,
+   "silt": 30.4,
+   "soc": 19.7,
+   "nearKm": 1
+  },
+  "ro-panciu-2": {
+   "clay": 41.9,
+   "phh2o": 6.9,
+   "sand": 27.8,
+   "silt": 30.4,
+   "soc": 19.7,
+   "nearKm": 1
+  },
+  "ro-panciu-pdo": {
+   "clay": 41.9,
+   "phh2o": 6.9,
+   "sand": 27.8,
+   "silt": 30.4,
+   "soc": 19.7,
+   "nearKm": 1
+  },
   "ro-pietroasa": {
    "clay": 44.7,
    "phh2o": 6.9,
    "sand": 19.3,
    "silt": 36,
    "soc": 21.8
+  },
+  "ro-recas": {
+   "clay": 48.2,
+   "phh2o": 6.3,
+   "sand": 17.5,
+   "silt": 34.4,
+   "soc": 18,
+   "nearKm": 1
   },
   "ro-samburesti": {
    "clay": 32.6,
@@ -9457,6 +15369,14 @@
    "sand": 28.8,
    "silt": 32.4,
    "soc": 22.3
+  },
+  "ro-segarcea": {
+   "clay": 42.9,
+   "phh2o": 6.6,
+   "sand": 23.1,
+   "silt": 34.1,
+   "soc": 18.7,
+   "nearKm": 1
   },
   "ro-stefanesti": {
    "clay": 42.2,
@@ -9492,6 +15412,14 @@
    "sand": 28.9,
    "silt": 32.8,
    "soc": 21.3
+  },
+  "ro-viile-timisului": {
+   "clay": 48.2,
+   "phh2o": 6.3,
+   "sand": 17.5,
+   "silt": 34.4,
+   "soc": 18,
+   "nearKm": 1
   },
   "si-bela-krajina": {
    "clay": 29.6,
@@ -9738,6 +15666,14 @@
    "silt": 32.6,
    "soc": 22
   },
+  "us-antelope-valley-of-the-california-high-desert": {
+   "clay": 19.4,
+   "phh2o": 8,
+   "sand": 51.6,
+   "silt": 29.1,
+   "soc": 3.5,
+   "nearKm": 1
+  },
   "us-appalachian-high-country": {
    "clay": 17.4,
    "phh2o": 4.7,
@@ -9850,6 +15786,14 @@
    "silt": 35.2,
    "soc": 14.6
   },
+  "us-calistoga": {
+   "clay": 25.5,
+   "phh2o": 6.1,
+   "sand": 34,
+   "silt": 40.5,
+   "soc": 23.1,
+   "nearKm": 1
+  },
   "us-candy-mountain": {
    "clay": 11.2,
    "phh2o": 7.4,
@@ -9884,6 +15828,14 @@
    "sand": 21.8,
    "silt": 51.2,
    "soc": 37.6
+  },
+  "us-cayuga-lake": {
+   "clay": 20.7,
+   "phh2o": 5.6,
+   "sand": 37.4,
+   "silt": 41.9,
+   "soc": 36,
+   "nearKm": 1
   },
   "us-central-coast": {
    "clay": 20.3,
@@ -9948,6 +15900,14 @@
    "silt": 42.7,
    "soc": 52.1
   },
+  "us-clear-lake": {
+   "clay": 25.3,
+   "phh2o": 6.6,
+   "sand": 37.7,
+   "silt": 37,
+   "soc": 26.9,
+   "nearKm": 1.4
+  },
   "us-clements-hills": {
    "clay": 27.2,
    "phh2o": 6,
@@ -9989,6 +15949,14 @@
    "sand": 35.2,
    "silt": 39.6,
    "soc": 32.3
+  },
+  "us-contra-costa": {
+   "clay": 33.5,
+   "phh2o": 7.2,
+   "sand": 28.8,
+   "silt": 37.7,
+   "soc": 14.1,
+   "nearKm": 1
   },
   "us-coombsville": {
    "clay": 30.8,
@@ -10221,6 +16189,14 @@
    "silt": 47.3,
    "soc": 31.5
   },
+  "us-grand-valley": {
+   "clay": 27.8,
+   "phh2o": 7.9,
+   "sand": 22.9,
+   "silt": 49.3,
+   "soc": 12.3,
+   "nearKm": 1
+  },
   "us-green-valley-of-russian-river-valley": {
    "clay": 22.1,
    "phh2o": 5.8,
@@ -10312,6 +16288,14 @@
    "silt": 30.1,
    "soc": 36.1
   },
+  "us-jahant": {
+   "clay": 20.6,
+   "phh2o": 6.3,
+   "sand": 35.9,
+   "silt": 43.5,
+   "soc": 11,
+   "nearKm": 1
+  },
   "us-kanawha-river-valley": {
    "clay": 30.6,
    "phh2o": 5.3,
@@ -10333,6 +16317,14 @@
    "silt": 38.6,
    "soc": 20
   },
+  "us-lake-chelan": {
+   "clay": 12.4,
+   "phh2o": 6.9,
+   "sand": 49.5,
+   "silt": 38.1,
+   "soc": 26.6,
+   "nearKm": 1
+  },
   "us-lake-erie": {
    "clay": 29,
    "phh2o": 5.6,
@@ -10353,6 +16345,14 @@
    "sand": 14.7,
    "silt": 62.6,
    "soc": 19.4
+  },
+  "us-lamorinda": {
+   "clay": 26.4,
+   "phh2o": 6.4,
+   "sand": 24.2,
+   "silt": 49.4,
+   "soc": 24,
+   "nearKm": 1
   },
   "us-lancaster-valley": {
    "clay": 21.5,
@@ -10430,6 +16430,14 @@
    "sand": 4.5,
    "silt": 65.9,
    "soc": 18.3
+  },
+  "us-long-island": {
+   "clay": 18.9,
+   "phh2o": 4.8,
+   "sand": 52.4,
+   "silt": 28.7,
+   "soc": 55.6,
+   "nearKm": 1.4
   },
   "us-long-valley-lake-county": {
    "clay": 26.2,
@@ -10570,6 +16578,14 @@
    "sand": 5.8,
    "silt": 63,
    "soc": 13.1
+  },
+  "us-mokelumne-river": {
+   "clay": 26.7,
+   "phh2o": 6.7,
+   "sand": 30.9,
+   "silt": 42.5,
+   "soc": 28.7,
+   "nearKm": 2.8
   },
   "us-monterey": {
    "clay": 20.5,
@@ -10753,6 +16769,14 @@
    "silt": 30.9,
    "soc": 16.1
   },
+  "us-palos-verdes-peninsula": {
+   "clay": 26.1,
+   "phh2o": 7.1,
+   "sand": 40.2,
+   "silt": 33.7,
+   "soc": 43.9,
+   "nearKm": 2
+  },
   "us-paso-robles": {
    "clay": 29.9,
    "phh2o": 7.1,
@@ -10815,6 +16839,14 @@
    "sand": 38.2,
    "silt": 37.9,
    "soc": 18.6
+  },
+  "us-puget-sound": {
+   "clay": 16.3,
+   "phh2o": 5.8,
+   "sand": 51,
+   "silt": 32.8,
+   "soc": 53.4,
+   "nearKm": 1
   },
   "us-ramona-valley": {
    "clay": 19.1,
@@ -10956,6 +16988,14 @@
    "silt": 40.6,
    "soc": 12.7
   },
+  "us-san-francisco-bay": {
+   "clay": 50.2,
+   "phh2o": 7.3,
+   "sand": 9.7,
+   "silt": 40.1,
+   "soc": 88.9,
+   "nearKm": 1
+  },
   "us-san-juan-creek": {
    "clay": 31.5,
    "phh2o": 7.2,
@@ -11004,6 +17044,14 @@
    "sand": 40.1,
    "silt": 36.4,
    "soc": 14.3
+  },
+  "us-santa-clara-valley": {
+   "clay": 24.9,
+   "phh2o": 6.6,
+   "sand": 35,
+   "silt": 40.2,
+   "soc": 19.2,
+   "nearKm": 1
   },
   "us-santa-cruz-mountains": {
    "clay": 20.6,
@@ -11221,6 +17269,14 @@
    "sand": 58,
    "silt": 26.1,
    "soc": 9
+  },
+  "us-templeton-gap-district": {
+   "clay": 25.1,
+   "phh2o": 6.7,
+   "sand": 38.1,
+   "silt": 36.8,
+   "soc": 14.6,
+   "nearKm": 1
   },
   "us-texas-davis-mountains": {
    "clay": 29.4,
@@ -11509,6 +17565,22 @@
    "silt": 37.5,
    "soc": 26.4
   },
+  "us-yountville": {
+   "clay": 34,
+   "phh2o": 6.2,
+   "sand": 26.3,
+   "silt": 39.8,
+   "soc": 25.1,
+   "nearKm": 1
+  },
+  "us-yucaipa-valley": {
+   "clay": 11.6,
+   "phh2o": 6.8,
+   "sand": 62.2,
+   "silt": 26.3,
+   "soc": 9.7,
+   "nearKm": 1
+  },
   "uy-canelones": {
    "clay": 40.3,
    "phh2o": 5.9,
@@ -11523,12 +17595,108 @@
    "silt": 37.6,
    "soc": 24.8
   },
+  "uy-montevideo": {
+   "clay": 22.3,
+   "phh2o": 6.3,
+   "sand": 55.3,
+   "silt": 22.5,
+   "soc": 55.5,
+   "nearKm": 2.8
+  },
   "uy-san-jose": {
    "clay": 29.6,
    "phh2o": 6.3,
    "sand": 26.5,
    "silt": 44,
    "soc": 27.5
+  },
+  "za-agter-paarl": {
+   "clay": 16,
+   "phh2o": 6.3,
+   "sand": 73.9,
+   "silt": 10.1,
+   "soc": 26.5,
+   "nearKm": 1
+  },
+  "za-agterkliphoogte": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
+  "za-ashton": {
+   "clay": 22,
+   "phh2o": 7.3,
+   "sand": 64,
+   "silt": 14,
+   "soc": 16.9,
+   "nearKm": 1
+  },
+  "za-bamboes-bay": {
+   "clay": 17.5,
+   "phh2o": 7.8,
+   "sand": 69.2,
+   "silt": 13.3,
+   "soc": 15.2,
+   "nearKm": 1
+  },
+  "za-banghoek": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
+  },
+  "za-blouvlei": {
+   "clay": 14,
+   "phh2o": 6.4,
+   "sand": 75.9,
+   "silt": 10.1,
+   "soc": 28,
+   "nearKm": 1
+  },
+  "za-boesmansrivier": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
+  "za-bonnievale": {
+   "clay": 20.9,
+   "phh2o": 7.4,
+   "sand": 66.3,
+   "silt": 12.9,
+   "soc": 18,
+   "nearKm": 1
+  },
+  "za-bot-river": {
+   "clay": 18.6,
+   "phh2o": 6.2,
+   "sand": 67.4,
+   "silt": 14.1,
+   "soc": 40.4,
+   "nearKm": 1
+  },
+  "za-bottelary": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
+  },
+  "za-bovlei": {
+   "clay": 14,
+   "phh2o": 6.4,
+   "sand": 75.9,
+   "silt": 10.1,
+   "soc": 28,
+   "nearKm": 1
   },
   "za-breede-river-valley": {
    "clay": 16.9,
@@ -11543,6 +17711,22 @@
    "sand": 74.7,
    "silt": 11,
    "soc": 21.8
+  },
+  "za-buffeljags": {
+   "clay": 25.4,
+   "phh2o": 6.9,
+   "sand": 61.7,
+   "silt": 13,
+   "soc": 20,
+   "nearKm": 1
+  },
+  "za-calitzdorp": {
+   "clay": 20.8,
+   "phh2o": 7.9,
+   "sand": 66.2,
+   "silt": 13,
+   "soc": 23.1,
+   "nearKm": 1
   },
   "za-cango-valley": {
    "clay": 22.6,
@@ -11572,6 +17756,14 @@
    "silt": 14,
    "soc": 18.8
   },
+  "za-cape-town": {
+   "clay": 19.8,
+   "phh2o": 6.5,
+   "sand": 70.5,
+   "silt": 9.6,
+   "soc": 54.2,
+   "nearKm": 1.4
+  },
   "za-cederberg": {
    "clay": 17.1,
    "phh2o": 7.2,
@@ -11585,6 +17777,22 @@
    "sand": 76.4,
    "silt": 9.1,
    "soc": 3.1
+  },
+  "za-ceres": {
+   "clay": 15,
+   "phh2o": 6.8,
+   "sand": 73.9,
+   "silt": 11.2,
+   "soc": 20.9,
+   "nearKm": 1
+  },
+  "za-ceres-plateau": {
+   "clay": 15,
+   "phh2o": 6.8,
+   "sand": 73.9,
+   "silt": 11.2,
+   "soc": 20.9,
+   "nearKm": 1
   },
   "za-citrusdal-mountain": {
    "clay": 12.9,
@@ -11614,12 +17822,52 @@
    "silt": 9.8,
    "soc": 32.9
   },
+  "za-darling": {
+   "clay": 13.8,
+   "phh2o": 6.6,
+   "sand": 81.6,
+   "silt": 4.6,
+   "soc": 17.7,
+   "nearKm": 1
+  },
+  "za-devon-valley": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
+  },
+  "za-douglas": {
+   "clay": 20.3,
+   "phh2o": 7.1,
+   "sand": 60.8,
+   "silt": 18.9,
+   "soc": 22.7,
+   "nearKm": 1
+  },
+  "za-durbanville": {
+   "clay": 16.3,
+   "phh2o": 6.3,
+   "sand": 75.1,
+   "silt": 8.7,
+   "soc": 33,
+   "nearKm": 1
+  },
   "za-eastern-cape": {
    "clay": 27,
    "phh2o": 6.7,
    "sand": 46.6,
    "silt": 26.4,
    "soc": 14.4
+  },
+  "za-eilandia": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
   },
   "za-elandskloof": {
    "clay": 19.3,
@@ -11642,6 +17890,14 @@
    "silt": 14.4,
    "soc": 22.5
   },
+  "za-franschhoek": {
+   "clay": 18.2,
+   "phh2o": 6.3,
+   "sand": 69,
+   "silt": 12.8,
+   "soc": 26.9,
+   "nearKm": 1
+  },
   "za-free-state": {
    "clay": 27.8,
    "phh2o": 6.9,
@@ -11656,12 +17912,36 @@
    "silt": 15.1,
    "soc": 31.4
   },
+  "za-goree": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
   "za-goudini": {
    "clay": 14.2,
    "phh2o": 6.4,
    "sand": 74.7,
    "silt": 11,
    "soc": 21.8
+  },
+  "za-goudmyn": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
+  "za-goukou-river-valley": {
+   "clay": 22.1,
+   "phh2o": 6.8,
+   "sand": 60.7,
+   "silt": 17.3,
+   "soc": 39.2,
+   "nearKm": 1
   },
   "za-greyton": {
    "clay": 17,
@@ -11670,12 +17950,36 @@
    "silt": 13.9,
    "soc": 25.6
   },
+  "za-groblershoop": {
+   "clay": 15.2,
+   "phh2o": 8,
+   "sand": 73.6,
+   "silt": 11.2,
+   "soc": 6.6,
+   "nearKm": 1
+  },
   "za-groenberg": {
    "clay": 16.1,
    "phh2o": 6.4,
    "sand": 70.7,
    "silt": 13.3,
    "soc": 28.7
+  },
+  "za-groenekloof": {
+   "clay": 13.8,
+   "phh2o": 6.6,
+   "sand": 81.6,
+   "silt": 4.6,
+   "soc": 17.7,
+   "nearKm": 1
+  },
+  "za-groenfontein": {
+   "clay": 20.8,
+   "phh2o": 7.9,
+   "sand": 66.2,
+   "silt": 13,
+   "soc": 23.1,
+   "nearKm": 1
   },
   "za-grootdrink": {
    "clay": 14.7,
@@ -11684,6 +17988,14 @@
    "silt": 12.5,
    "soc": 5.3
   },
+  "za-hartswater": {
+   "clay": 22.5,
+   "phh2o": 6.6,
+   "sand": 59.5,
+   "silt": 18.1,
+   "soc": 7.2,
+   "nearKm": 1
+  },
   "za-herbertsdale": {
    "clay": 23.8,
    "phh2o": 6.9,
@@ -11691,12 +18003,76 @@
    "silt": 18,
    "soc": 19.6
   },
+  "za-hex-river-valley": {
+   "clay": 14.3,
+   "phh2o": 6.7,
+   "sand": 75.8,
+   "silt": 9.9,
+   "soc": 27.8,
+   "nearKm": 2
+  },
+  "za-hoopsrivier": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
+  "za-hout-bay": {
+   "clay": 15,
+   "phh2o": 6.4,
+   "sand": 73.1,
+   "silt": 12,
+   "soc": 39.5,
+   "nearKm": 1
+  },
+  "za-jonkershoek-valley": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
+  },
+  "za-kakamas": {
+   "clay": 16.2,
+   "phh2o": 7.7,
+   "sand": 72.9,
+   "silt": 11,
+   "soc": 11.1,
+   "nearKm": 1
+  },
+  "za-karoo-hoogland": {
+   "clay": 20.2,
+   "phh2o": 8.1,
+   "sand": 62.9,
+   "silt": 17,
+   "soc": 21.1,
+   "nearKm": 1
+  },
   "za-keeromsberg": {
    "clay": 19.1,
    "phh2o": 6.9,
    "sand": 61.8,
    "silt": 19.1,
    "soc": 44.4
+  },
+  "za-keimoes": {
+   "clay": 15,
+   "phh2o": 8,
+   "sand": 76.6,
+   "silt": 8.5,
+   "soc": 6.1,
+   "nearKm": 1
+  },
+  "za-klaasvoogds": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
   },
   "za-klein-karoo": {
    "clay": 22.6,
@@ -11733,6 +18109,14 @@
    "silt": 17.9,
    "soc": 18.6
   },
+  "za-kweekvallei": {
+   "clay": 22.1,
+   "phh2o": 8.1,
+   "sand": 65.6,
+   "silt": 12.3,
+   "soc": 14.8,
+   "nearKm": 1
+  },
   "za-langeberg-garcia": {
    "clay": 22.6,
    "phh2o": 7.9,
@@ -11740,12 +18124,28 @@
    "silt": 15.9,
    "soc": 25.3
   },
+  "za-le-chasseur": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
   "za-leipoldtville-sandveld": {
    "clay": 12.4,
    "phh2o": 7.3,
    "sand": 80.9,
    "silt": 6.7,
    "soc": 13.8
+  },
+  "za-limietberg": {
+   "clay": 14,
+   "phh2o": 6.4,
+   "sand": 75.9,
+   "silt": 10.1,
+   "soc": 28,
+   "nearKm": 1
   },
   "za-limpopo": {
    "clay": 19.5,
@@ -11782,12 +18182,44 @@
    "silt": 16.9,
    "soc": 29.9
   },
+  "za-malmesbury": {
+   "clay": 14.1,
+   "phh2o": 6.5,
+   "sand": 79.4,
+   "silt": 6.5,
+   "soc": 21.8,
+   "nearKm": 1
+  },
   "za-mcgregor": {
    "clay": 18,
    "phh2o": 6.8,
    "sand": 68.7,
    "silt": 13.3,
    "soc": 17.8
+  },
+  "za-mid-berg-river": {
+   "clay": 14,
+   "phh2o": 6.4,
+   "sand": 75.9,
+   "silt": 10.1,
+   "soc": 28,
+   "nearKm": 1
+  },
+  "za-montagu": {
+   "clay": 21.4,
+   "phh2o": 7.4,
+   "sand": 64.8,
+   "silt": 13.9,
+   "soc": 18.3,
+   "nearKm": 1
+  },
+  "za-moordkuil": {
+   "clay": 14.3,
+   "phh2o": 6.7,
+   "sand": 75.8,
+   "silt": 9.9,
+   "soc": 27.8,
+   "nearKm": 2
   },
   "za-napier": {
    "clay": 20.8,
@@ -11816,6 +18248,14 @@
    "sand": 62.7,
    "silt": 14.5,
    "soc": 6.1
+  },
+  "za-nuy": {
+   "clay": 14.3,
+   "phh2o": 6.7,
+   "sand": 75.8,
+   "silt": 9.9,
+   "soc": 27.8,
+   "nearKm": 2
   },
   "za-olifants-river": {
    "clay": 12.9,
@@ -11852,6 +18292,14 @@
    "silt": 8.9,
    "soc": 15.6
   },
+  "za-paarl": {
+   "clay": 16,
+   "phh2o": 6.3,
+   "sand": 73.9,
+   "silt": 10.1,
+   "soc": 26.5,
+   "nearKm": 1
+  },
   "za-papegaaiberg": {
    "clay": 16.8,
    "phh2o": 6.5,
@@ -11880,12 +18328,52 @@
    "silt": 8.9,
    "soc": 15.6
   },
+  "za-plettenberg-bay": {
+   "clay": 19.9,
+   "phh2o": 5.9,
+   "sand": 53.8,
+   "silt": 26.4,
+   "soc": 33.8,
+   "nearKm": 1
+  },
+  "za-polkadraai-hills": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
+  },
   "za-porseleinberg": {
    "clay": 11.1,
    "phh2o": 6.9,
    "sand": 80,
    "silt": 8.9,
    "soc": 15.6
+  },
+  "za-prieska": {
+   "clay": 16.4,
+   "phh2o": 7.6,
+   "sand": 65.1,
+   "silt": 18.5,
+   "soc": 7.6,
+   "nearKm": 1
+  },
+  "za-prince-albert": {
+   "clay": 22.1,
+   "phh2o": 8.1,
+   "sand": 65.6,
+   "silt": 12.3,
+   "soc": 14.8,
+   "nearKm": 1
+  },
+  "za-prince-albert-valley": {
+   "clay": 22.1,
+   "phh2o": 8.1,
+   "sand": 65.6,
+   "silt": 12.3,
+   "soc": 14.8,
+   "nearKm": 1
   },
   "za-riebeekberg": {
    "clay": 11.1,
@@ -11901,6 +18389,14 @@
    "silt": 8.9,
    "soc": 15.6
   },
+  "za-robertson": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
   "za-rooikrans": {
    "clay": 18.7,
    "phh2o": 6.9,
@@ -11908,12 +18404,36 @@
    "silt": 15.4,
    "soc": 28.2
   },
+  "za-scherpenheuvel": {
+   "clay": 14.3,
+   "phh2o": 6.7,
+   "sand": 75.8,
+   "silt": 9.9,
+   "soc": 27.8,
+   "nearKm": 2
+  },
   "za-shaw-s-mountain": {
    "clay": 21.1,
    "phh2o": 6.1,
    "sand": 65.1,
    "silt": 13.9,
    "soc": 35.9
+  },
+  "za-simonsberg-paarl": {
+   "clay": 16,
+   "phh2o": 6.3,
+   "sand": 73.9,
+   "silt": 10.1,
+   "soc": 26.5,
+   "nearKm": 1
+  },
+  "za-simonsberg-stellenbosh": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
   },
   "za-slanghoek": {
    "clay": 14.2,
@@ -11929,12 +18449,44 @@
    "silt": 10,
    "soc": 16.7
   },
+  "za-st-francis-bay": {
+   "clay": 24.8,
+   "phh2o": 6.5,
+   "sand": 60.2,
+   "silt": 15,
+   "soc": 28.8,
+   "nearKm": 1
+  },
+  "za-st-helena-bay": {
+   "clay": 15.8,
+   "phh2o": 7.3,
+   "sand": 74.9,
+   "silt": 9.3,
+   "soc": 38.5,
+   "nearKm": 2.8
+  },
+  "za-stellenbosch": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
+  },
   "za-stettyn": {
    "clay": 17.1,
    "phh2o": 6.5,
    "sand": 72.3,
    "silt": 10.6,
    "soc": 20.6
+  },
+  "za-still-bay": {
+   "clay": 22.1,
+   "phh2o": 6.8,
+   "sand": 60.7,
+   "silt": 17.3,
+   "soc": 39.2,
+   "nearKm": 1
   },
   "za-stormsvlei": {
    "clay": 21.8,
@@ -11943,12 +18495,36 @@
    "silt": 11.1,
    "soc": 24.2
   },
+  "za-sutherland-karoo": {
+   "clay": 20.2,
+   "phh2o": 8.1,
+   "sand": 62.9,
+   "silt": 17,
+   "soc": 21.1,
+   "nearKm": 1
+  },
+  "za-swartberg": {
+   "clay": 22.1,
+   "phh2o": 8.1,
+   "sand": 65.6,
+   "silt": 12.3,
+   "soc": 14.8,
+   "nearKm": 1
+  },
   "za-swartland": {
    "clay": 11.1,
    "phh2o": 6.9,
    "sand": 80,
    "silt": 8.9,
    "soc": 15.6
+  },
+  "za-swellendam": {
+   "clay": 25.4,
+   "phh2o": 6.9,
+   "sand": 61.7,
+   "silt": 13,
+   "soc": 20,
+   "nearKm": 1
   },
   "za-theewater": {
    "clay": 19.3,
@@ -11971,6 +18547,14 @@
    "silt": 15.9,
    "soc": 25.3
   },
+  "za-tulbagh": {
+   "clay": 13.6,
+   "phh2o": 6.5,
+   "sand": 75.6,
+   "silt": 10.9,
+   "soc": 22,
+   "nearKm": 1
+  },
   "za-upington": {
    "clay": 20.2,
    "phh2o": 7.8,
@@ -11985,6 +18569,30 @@
    "silt": 15.9,
    "soc": 25.3
   },
+  "za-vinkrivier": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
+  },
+  "za-vlottenburg": {
+   "clay": 15.7,
+   "phh2o": 6.3,
+   "sand": 74.6,
+   "silt": 9.7,
+   "soc": 35.9,
+   "nearKm": 1
+  },
+  "za-voor-paardeberg": {
+   "clay": 16,
+   "phh2o": 6.3,
+   "sand": 73.9,
+   "silt": 10.1,
+   "soc": 26.5,
+   "nearKm": 1
+  },
   "za-vredendal": {
    "clay": 12.9,
    "phh2o": 7.6,
@@ -11992,12 +18600,36 @@
    "silt": 10,
    "soc": 16.7
   },
+  "za-wellington": {
+   "clay": 14,
+   "phh2o": 6.4,
+   "sand": 75.9,
+   "silt": 10.1,
+   "soc": 28,
+   "nearKm": 1
+  },
   "za-western-cape": {
    "clay": 24.3,
    "phh2o": 7.7,
    "sand": 61.1,
    "silt": 14.7,
    "soc": 37.3
+  },
+  "za-worcester": {
+   "clay": 14.3,
+   "phh2o": 6.7,
+   "sand": 75.8,
+   "silt": 9.9,
+   "soc": 27.8,
+   "nearKm": 2
+  },
+  "za-zandrivier": {
+   "clay": 20.1,
+   "phh2o": 7.3,
+   "sand": 67.7,
+   "silt": 12.2,
+   "soc": 18.5,
+   "nearKm": 1
   }
  }
 }

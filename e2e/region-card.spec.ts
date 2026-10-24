@@ -47,7 +47,8 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     .evaluateAll((items) => items.map((item) => item.getBoundingClientRect().top));
   expect(new Set(tops).size).toBe(1);
 
-  const climate = page.locator(".region-climate");
+  // The soil block shares the climate's list style, so name the section.
+  const climate = page.locator('section[aria-labelledby="region-climate"] .region-climate');
   await expect(climate).toContainText(`(${rioja.climate.koppen})`);
   await expect(climate).toContainText(`${spanish.format(rioja.climate.rainfall)} mm`);
   await expect(climate).toContainText(rioja.climate.winkler);
@@ -117,6 +118,12 @@ test("a region card shows its figures and its climate", async ({ page }) => {
   const soilAxe = await new AxeBuilder({ page }).include(".library-page").analyze();
   expect(soilAxe.violations).toEqual([]);
   await page.goto(`/library/regions/${rioja.id}`);
+  // Rioja's point falls in Logroño: its soil is read at the nearest point
+  // that has one, and the card says how far away.
+  await expect(page.locator('section[aria-labelledby="region-soil"]')).toContainText(
+    "Leído a 1,4 km",
+    { timeout: 15_000 },
+  );
   // On a wide screen the three figures stay on one row and the chart keeps
   // a phone's proportions.
   await page.setViewportSize({ height: 900, width: 1280 });

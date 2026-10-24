@@ -108,6 +108,7 @@ function publisherFor(url: string): string {
   }
   if (host.endsWith("archive.org")) return "Internet Archive";
   if (host === "ec.europa.eu") return "EU register of geographical indications (eAmbrosia)";
+  if (host === "www.mapa.gob.es") return "Spain's Ministry of Agriculture (MAPA)";
   return host;
 }
 
