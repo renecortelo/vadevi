@@ -67,7 +67,7 @@ overrides:
   # past it; this lifts the copies under firebase-tools too. Within the major.
   hono@4: ">=4.13.11 <5"
   # GHSA-mrhx-c7xc-m3w5 (zod before 4.6.6), in the copy
-  # @cloudflare/vitest-pool-workers pins for the test pool. Within the major.
+  # @cloudflare/vitest-plugin pins for the test pool. Within the major.
   zod@4: ">=4.6.7 <5"
   # Not overridden: stream-json (GHSA-528h-pc64-c93x, fixed in 3.x) and
   # csv-parse (GHSA-8cw4-87c7-c6xx, fixed in 7.x) under firebase-tools are
@@ -76,7 +76,7 @@ overrides:
 
 catalog:
   typescript: "6.0.3"
-  vitest: "^4.1.12"
+  vitest: "^5.0.5"
   # GHSA-mrhx-c7xc-m3w5: zod before 4.6.6 can exhaust memory validating an
   # oversized constrained collection, and the Worker validates requests with it.
   zod: "^4.6.7"
@@ -89,7 +89,6 @@ allowBuilds:
   workerd: true
 
 minimumReleaseAgeExclude:
-  - "@cloudflare/vitest-pool-workers@0.21.1"
   - miniflare@5.20260804.1-alpha || 5.20260916.0-alpha
   - wrangler@4.121.0 || 4.133.0
 

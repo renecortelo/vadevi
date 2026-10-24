@@ -49,6 +49,9 @@ has the reasons.
   other 48 locales were loaded with `z` and never used), so the first load
   is 221.9 KiB, down from 230.6. undici 7.30.1 under wrangler and miniflare
   (two development-only advisories).
+- Vitest 5 with `@cloudflare/vitest-plugin` (the renamed Workers test pool),
+  firebase 13, vite-plugin-pwa 2 and dotenv 18; TypeScript 7 waits for
+  typescript-eslint to support it.
 - Patch and minor releases at least a week old (eslint, prettier, i18next,
   react-router, firebase-tools, dexie…); React 19.3 and React Query 5.104
   are held, as they add 9 KiB to the first load.

@@ -18,7 +18,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "0.21.1",
+    "@cloudflare/vitest-plugin": "1.4.4",
     "@cloudflare/workers-types": "*",
     "typescript": "catalog:",
     "vitest": "catalog:",
