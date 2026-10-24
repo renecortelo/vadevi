@@ -1749,7 +1749,8 @@
       "region": "Region",
       "grape": "Rebsorte",
       "any": "Alle",
-      "clear": "Filter entfernen"
+      "clear": "Filter entfernen",
+      "label": "Filter"
     },
     "emptyNarrowed": "Nichts passt in diesem Zeitraum zu diesen Filtern.",
     "narrowHint": "Tippen Sie auf einen Namen, um das ganze Buch nur dafür zu sehen.",

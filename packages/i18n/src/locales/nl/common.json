@@ -1749,7 +1749,8 @@
       "region": "Regio",
       "grape": "Druif",
       "any": "Alle",
-      "clear": "Filters wissen"
+      "clear": "Filters wissen",
+      "label": "Filters"
     },
     "emptyNarrowed": "Niets past bij deze filters in deze periode.",
     "narrowHint": "Tik op een naam om het hele boek alleen daarvoor te zien.",

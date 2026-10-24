@@ -1749,7 +1749,8 @@
       "region": "Región",
       "grape": "Uva",
       "any": "Todos",
-      "clear": "Quitar filtros"
+      "clear": "Quitar filtros",
+      "label": "Filtros"
     },
     "emptyNarrowed": "Nada coincide con estos filtros en este periodo.",
     "narrowHint": "Toca un nombre para ver todo el libro solo de eso.",

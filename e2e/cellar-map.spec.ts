@@ -55,5 +55,8 @@ test("a wine from a registered name puts a point on the cellar map", async ({ pa
   await france.click();
   await expect(page).toHaveURL(/country=FR/);
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5);
-  await expect(page.locator('select[data-facet="country"]')).toBeFocused();
+  // Focus on the filters' group, never on a select: a phone opens a focused
+  // select as its picker, and it stayed open over the page.
+  await expect(page.getByRole("group", { name: "Filters" })).toBeFocused();
+  await expect(page.locator('select[data-facet="country"]')).not.toBeFocused();
 });

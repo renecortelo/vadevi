@@ -1749,7 +1749,8 @@
       "region": "Regió",
       "grape": "Raïm",
       "any": "Tots",
-      "clear": "Treu els filtres"
+      "clear": "Treu els filtres",
+      "label": "Filtres"
     },
     "emptyNarrowed": "Res no coincideix amb aquests filtres en aquest període.",
     "narrowHint": "Toca un nom per veure tot el llibre només d'això.",

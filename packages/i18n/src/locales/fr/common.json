@@ -1749,7 +1749,8 @@
       "region": "Région",
       "grape": "Cépage",
       "any": "Tous",
-      "clear": "Effacer les filtres"
+      "clear": "Effacer les filtres",
+      "label": "Filtres"
     },
     "emptyNarrowed": "Rien ne correspond à ces filtres sur cette période.",
     "narrowHint": "Touchez un nom pour voir tout le livre pour lui seul.",

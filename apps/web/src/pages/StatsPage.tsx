@@ -252,7 +252,8 @@ export function StatsPage() {
   // A bar narrows the counts to itself, unless they already are — and takes
   // the reader back to the top, where the filters say what is now shown,
   // rather than leaving them deep in a page that changed around them. Focus
-  // goes to that filter, so it is said as well as seen.
+  // goes to the filters, so it is said as well as seen: to their group, not
+  // to the select itself, which a phone opens as a picker when it is focused.
   const narrowTo = (facet: Facet, value: string) =>
     narrowed[facet] === value || value === "unknown"
       ? undefined
@@ -260,9 +261,7 @@ export function StatsPage() {
           update({ [facet]: value });
           const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
           window.scrollTo({ behavior: still ? "auto" : "smooth", top: 0 });
-          document
-            .querySelector<HTMLSelectElement>(`.stats-filters select[data-facet="${facet}"]`)
-            ?.focus({ preventScroll: true });
+          document.querySelector<HTMLElement>(".stats-filters")?.focus({ preventScroll: true });
         };
 
   return (
@@ -311,7 +310,12 @@ export function StatsPage() {
       </div>
 
       {stats === null ? null : (
-        <div className="stats-controls stats-filters">
+        <div
+          aria-label={t("stats.filter.label")}
+          className="stats-controls stats-filters"
+          role="group"
+          tabIndex={-1}
+        >
           {facets.map((facet) => {
             const options =
               facet === "type"

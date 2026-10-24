@@ -75,7 +75,8 @@ has the reasons.
 - **A bar in the cellar book takes you to the top**: touching «Red» or a
   country narrowed the whole book but left you deep in it, so it was not
   clear anything had changed; now the page goes back to the top, where the
-  filter shows the choice, and focus moves to that filter.
+  filter shows the choice, and focus moves to the filters (to their group:
+  a phone opens a focused select as its picker, which stayed open).
 
 - **Section tabs in even rows**: when a section's tabs do not fit on one row
   («Me» on a phone), they sit two and two rather than three and one; where

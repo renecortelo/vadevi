@@ -1749,7 +1749,8 @@
       "region": "Regione",
       "grape": "Vitigno",
       "any": "Tutti",
-      "clear": "Togli i filtri"
+      "clear": "Togli i filtri",
+      "label": "Filtri"
     },
     "emptyNarrowed": "Niente corrisponde a questi filtri in questo periodo.",
     "narrowHint": "Tocca un nome per vedere tutto il libro solo per quello.",

@@ -1749,7 +1749,8 @@
       "region": "Region",
       "grape": "Grape",
       "any": "All",
-      "clear": "Clear filters"
+      "clear": "Clear filters",
+      "label": "Filters"
     },
     "emptyNarrowed": "Nothing matches these filters in this period.",
     "narrowHint": "Tap a name to see the whole book for it alone.",
