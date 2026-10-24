@@ -45,4 +45,15 @@ test("a wine from a registered name puts a point on the cellar map", async ({ pa
   await expect(page).toHaveURL(/\/library\/regions\/fr-sauternes/);
   await page.getByRole("link", { name: /Back to Cellar book/ }).click();
   await expect(page).toHaveURL(/\/stats/);
+
+  // A bar narrows the book to itself and takes the reader back to the top,
+  // where the filter now says what is shown, with focus on it.
+  await page.setViewportSize({ height: 700, width: 390 });
+  const france = page.locator("button.stats-bars__label", { hasText: "France" }).first();
+  await france.scrollIntoViewIfNeeded();
+  expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+  await france.click();
+  await expect(page).toHaveURL(/country=FR/);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5);
+  await expect(page.locator('select[data-facet="country"]')).toBeFocused();
 });

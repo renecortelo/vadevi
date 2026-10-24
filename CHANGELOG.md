@@ -65,6 +65,34 @@ has the reasons.
 
 ### Finding your way
 
+- **From one country to the next on the atlas's map**: once a country was
+  chosen, no other could be; now touching another country with names moves
+  the map there and shows its points (the chosen one's own land still does
+  not, so a touch meant for a point never throws the map elsewhere).
+- **Room under a name's figures**: the credit under «At a glance» no longer
+  sits against the last figure.
+
+- **A bar in the cellar book takes you to the top**: touching «Red» or a
+  country narrowed the whole book but left you deep in it, so it was not
+  clear anything had changed; now the page goes back to the top, where the
+  filter shows the choice, and focus moves to that filter.
+
+- **Section tabs in even rows**: when a section's tabs do not fit on one row
+  («Me» on a phone), they sit two and two rather than three and one; where
+  they fit, they stay on one row.
+- **The home's group names set as labels**: «Log», «My wines», «Discover»
+  were small capitals in the display serif; they are now the app's label
+  style, like the eyebrow above them, muted.
+
+- **Dialogs scroll on a phone**: an edit window (correcting a wine, adopting
+  a photo, discarding a fact…) sat inside the page's own layer, so the bottom
+  bar covered its foot and a swipe scrolled the page behind it. Every dialog
+  is now drawn above the whole app, scrolls on its own from its top, and the
+  page behind holds still while it is open.
+- **Cellar, wishlist and prices without their cross-links**: the buttons to
+  the other two pages under each heading are gone; the section tabs at the
+  top already lead there.
+
 - **A wine's page, laid out like its card**: the photo is a tall column at the
   left, so the bottle shows whole, with the name, provenance, grapes, atlas
   and last tasting beside it, each fact on its own line at one size, and

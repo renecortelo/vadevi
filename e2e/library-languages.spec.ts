@@ -465,3 +465,24 @@ test("figures move only for a reader who welcomes motion", async ({ page }) => {
   await expect(bar).toBeAttached({ timeout: 15_000 });
   expect(await animation()).toBe("stats-bar-grow");
 });
+
+test("on the atlas's map, one country leads to the next", async ({ page }) => {
+  await signIn(page);
+  await completeOnboarding(page);
+  await page.goto("/library?tab=atlas");
+  await page.locator("#interface-locale").selectOption("en");
+  const land = (name: string) =>
+    page.locator("path.coverage-map__held", {
+      has: page.locator("title", { hasText: new RegExp(`^${name}:`) }),
+    });
+  // Sent to the country's own shape: the centre of Spain's box, with its
+  // islands, is sea.
+  await expect(land("Spain")).toBeAttached({ timeout: 15_000 });
+  await land("Spain").dispatchEvent("click");
+  await expect(land("Spain")).toHaveClass(/is-selected/);
+  await expect(page.locator(".coverage-map__point").first()).toBeAttached();
+  // From there, another country is still a touch away: the map moves to it.
+  await land("France").dispatchEvent("click");
+  await expect(land("France")).toHaveClass(/is-selected/);
+  await expect(land("Spain")).not.toHaveClass(/is-selected/);
+});

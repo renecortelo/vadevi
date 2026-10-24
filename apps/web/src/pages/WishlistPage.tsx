@@ -10,7 +10,6 @@ import {
 } from "@vadevi/contracts";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 
 import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
@@ -155,10 +154,6 @@ export function WishlistPage() {
           <h1>{t("wishlist.title")}</h1>
           <p>{t("wishlist.body")}</p>
         </div>
-        <nav aria-label={t("wishlist.relatedLabel")} className="phase5-links">
-          <Link to="/cellar">{t("wishlist.openCellar")}</Link>
-          <Link to="/shop">{t("wishlist.openShop")}</Link>
-        </nav>
       </header>
       {usingCache ? <p className="offline-banner">{t("wishlist.cached")}</p> : null}
       {response.hasMore ? (

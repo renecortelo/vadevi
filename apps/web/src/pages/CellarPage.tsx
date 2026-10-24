@@ -9,7 +9,6 @@ import {
 } from "@vadevi/contracts";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 
 import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
@@ -182,10 +181,6 @@ export function CellarPage() {
           <h1>{t("cellar.title")}</h1>
           <p>{t("cellar.body")}</p>
         </div>
-        <nav aria-label={t("cellar.relatedLabel")} className="phase5-links">
-          <Link to="/wishlist">{t("cellar.openWishlist")}</Link>
-          <Link to="/shop">{t("cellar.openShop")}</Link>
-        </nav>
       </header>
 
       {usingCache ? <p className="offline-banner">{t("cellar.cached")}</p> : null}

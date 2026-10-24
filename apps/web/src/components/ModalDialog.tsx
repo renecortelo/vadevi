@@ -1,4 +1,5 @@
 import { type ReactNode, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
 /**
  * A modal dialog that behaves like one.
@@ -14,9 +15,18 @@ import { type ReactNode, useEffect, useRef } from "react";
  * hands focus back to whatever opened it — so someone carries on from where they
  * were rather than from the top of the document.
  *
+ * It is also drawn on the document's body, not where it is declared. Inside
+ * the page it sat in the page's own layer (the page transition names it), so
+ * the bottom bar covered its foot and, on a phone, a swipe scrolled the page
+ * behind instead of the form. And while it is open the page behind is held
+ * still, so a swipe always moves the dialog.
+ *
  * It is a component rather than a hook so the next dialog cannot be written
  * without it.
  */
+
+/** How many dialogs are open: the page stays held until the last one closes. */
+let openDialogs = 0;
 
 /**
  * Elements that can hold focus. `:not([disabled])` matters because a disabled
@@ -93,8 +103,12 @@ export function ModalDialog({
 
     // Captured, so a handler inside the dialog cannot swallow Escape first.
     document.addEventListener("keydown", onKeyDown, true);
+    openDialogs += 1;
+    document.documentElement.classList.add("modal-open");
     return () => {
       document.removeEventListener("keydown", onKeyDown, true);
+      openDialogs -= 1;
+      if (openDialogs === 0) document.documentElement.classList.remove("modal-open");
       // `isConnected` guards the case where the dialog closed because the page
       // navigated away: the opener is gone and focusing it does nothing useful.
       if (opener?.isConnected === true) opener.focus();
@@ -102,7 +116,7 @@ export function ModalDialog({
   }, [open]);
 
   if (!open) return null;
-  return (
+  return createPortal(
     <div
       aria-labelledby={labelledBy}
       aria-modal="true"
@@ -112,6 +126,7 @@ export function ModalDialog({
       tabIndex={-1}
     >
       <div className={`${className}__card`}>{children}</div>
-    </div>
+    </div>,
+    document.body,
   );
 }

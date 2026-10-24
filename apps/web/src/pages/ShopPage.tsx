@@ -10,7 +10,6 @@ import {
 } from "@vadevi/contracts";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 
 import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
@@ -168,10 +167,6 @@ export function ShopPage() {
           <h1>{t("shop.title")}</h1>
           <p>{t("shop.body")}</p>
         </div>
-        <nav aria-label={t("shop.relatedLabel")} className="phase5-links">
-          <Link to="/cellar">{t("shop.openCellar")}</Link>
-          <Link to="/wishlist">{t("shop.openWishlist")}</Link>
-        </nav>
       </header>
       {usingCache ? <p className="offline-banner">{t("shop.cached")}</p> : null}
       {prices.data.hasMore ? (

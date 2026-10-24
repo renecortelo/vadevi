@@ -42,6 +42,17 @@ test.describe("correcting a wine", () => {
       .click();
     const dialog = page.getByRole("dialog");
     await expect(dialog).toBeVisible();
+    // Drawn on the body, above the shell, and a swipe over it scrolls the
+    // dialog, never the page held still behind it.
+    expect(await dialog.evaluate((element) => element.parentElement === document.body)).toBe(true);
+    await page.setViewportSize({ height: 600, width: 390 });
+    const pageBefore = await page.evaluate(() => window.scrollY);
+    const box = (await dialog.boundingBox())!;
+    await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    await page.mouse.wheel(0, 600);
+    await expect.poll(() => dialog.evaluate((element) => element.scrollTop)).toBeGreaterThan(0);
+    expect(await page.evaluate(() => window.scrollY)).toBe(pageBefore);
+    await page.setViewportSize({ height: 900, width: 1280 });
 
     await dialog.getByLabel(/vintage/i).fill("2021");
     await dialog.getByRole("button", { name: /save changes/i }).click();

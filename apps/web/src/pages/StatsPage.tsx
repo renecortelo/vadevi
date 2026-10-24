@@ -249,9 +249,21 @@ export function StatsPage() {
       label: t(`stats.answer.${key}`),
     }));
   const anyNarrowing = Object.keys(narrowed).length > 0;
-  // A bar narrows the counts to itself, unless they already are.
+  // A bar narrows the counts to itself, unless they already are — and takes
+  // the reader back to the top, where the filters say what is now shown,
+  // rather than leaving them deep in a page that changed around them. Focus
+  // goes to that filter, so it is said as well as seen.
   const narrowTo = (facet: Facet, value: string) =>
-    narrowed[facet] === value || value === "unknown" ? undefined : () => update({ [facet]: value });
+    narrowed[facet] === value || value === "unknown"
+      ? undefined
+      : () => {
+          update({ [facet]: value });
+          const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          window.scrollTo({ behavior: still ? "auto" : "smooth", top: 0 });
+          document
+            .querySelector<HTMLSelectElement>(`.stats-filters select[data-facet="${facet}"]`)
+            ?.focus({ preventScroll: true });
+        };
 
   return (
     <section className="library-page stats-page">
@@ -314,6 +326,7 @@ export function StatsPage() {
               <label key={facet}>
                 <span>{t(`stats.filter.${facet}`)}</span>
                 <select
+                  data-facet={facet}
                   disabled={options.length === 0 && current === ""}
                   onChange={(event) => update({ [facet]: event.target.value })}
                   value={current}

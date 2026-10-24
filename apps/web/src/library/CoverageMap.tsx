@@ -83,11 +83,13 @@ export function CoverageMap({
       (point.longitude - data.frame.lonMin) * data.squeeze * data.scale,
       (data.frame.latMax - point.latitude) * data.scale,
     ] as const;
-  // Once a country is chosen, its land is no longer a target: a touch meant
-  // for a point never throws the map elsewhere. «All countries» and «Show it
-  // all» lead back out.
+  // Once a country is chosen, its own land is no longer a target: a touch
+  // meant for one of its points never throws the map elsewhere (the points
+  // lie above it, each with a finger's reach). Another country with names
+  // still is — touching it moves the map there and shows its points.
+  // «All countries» and «Show it all» lead back out.
   const choose = (code: string) => {
-    if (selected !== null) return;
+    if (code === selected) return;
     setTag(null);
     onSelect(code);
     const box = data.boxes[code];
