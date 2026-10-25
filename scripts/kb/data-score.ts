@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 /**
  * How complete the wine library is, as one number to follow while looking for
  * more data: the plain mean of each field's coverage, ten for the grapes and
- * seven for the regions, every field weighing the same. Tannin counts against
+ * eight for the regions, every field weighing the same. Tannin counts against
  * red and pink grapes only — a white grape has none to find.
  *
  * Beside a field, the gaps that are not for want of looking: data whose
@@ -38,6 +38,7 @@ type Grape = {
 type Region = {
   countryCode: string;
   climate?: { elevation?: number | null } | null;
+  soil?: unknown;
   figures?: { planted: unknown; production: unknown } | null;
   grapes: unknown[];
   latitude: number | null;
@@ -103,6 +104,8 @@ const regionRows: Row[] = [
   row("climate", regions, (region) => region.climate),
   row("elevation", regions, (region) => typeof region.climate?.elevation === "number"),
   row("point on the map", regions, (region) => region.latitude !== null),
+  // At its point, or the nearest with soil a kilometre or two away (SoilGrids).
+  row("soil", regions, (region) => region.soil),
   row(
     "grapes",
     regions,

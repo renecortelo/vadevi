@@ -955,6 +955,17 @@
           "chicken"
         ],
         "quote": "Lighter, dry styles can pair well with light dishes such as salads, fish, and chicken."
+      },
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "value": "high",
+        "quote": "Vinos alcohólicos y con acidez total alta",
+        "source": {
+          "url": "https://web.archive.org/web/20230620050627/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/CHENIN_BLANC.pdf",
+          "volume": "mapa-vid-chenin-blanc",
+          "work": "mapa-vid"
+        }
       }
     ],
     "chinuri": [
@@ -2673,6 +2684,17 @@
           "volume": "cawiki-it-asti",
           "work": "wikipedia-ca"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "high",
+        "quote": "cierto retrogusto amargo, acidez alta, vino muy amplio y sabroso en boca.",
+        "source": {
+          "url": "https://web.archive.org/web/20250429171847/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/MOSCATEL_DE_GRANO_MENUDO.pdf",
+          "volume": "mapa-vid-moscatel-de-grano-menudo",
+          "work": "mapa-vid"
+        }
       }
     ],
     "muscat-of-alexandria": [
@@ -3041,6 +3063,17 @@
         "words": {
           "desserts": "dessert"
         }
+      },
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "value": "high",
+        "quote": "Mostos muy alcohólicos, con baja acidez.",
+        "source": {
+          "url": "https://web.archive.org/web/20230618142756/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/PEDRO_XIMENEZ.pdf",
+          "volume": "mapa-vid-pedro-ximenez",
+          "work": "mapa-vid"
+        }
       }
     ],
     "petit-manseng": [
@@ -3210,6 +3243,17 @@
           "lobster": "омари",
           "shellfish": "креветки",
           "lamb": "баранина"
+        }
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "medium",
+        "quote": "con acidez media que a veces es insuficiente.",
+        "source": {
+          "url": "https://web.archive.org/web/20230904004446/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/PINOT_NOIR.pdf",
+          "volume": "mapa-vid-pinot-noir",
+          "work": "mapa-vid"
         }
       }
     ],
@@ -3783,6 +3827,17 @@
         "lang": "de",
         "value": "high",
         "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine"
+      },
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "value": "medium",
+        "quote": "Grado alcohólico medio, color picota",
+        "source": {
+          "url": "https://web.archive.org/web/20250429182922/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/SOUSON.pdf",
+          "volume": "mapa-vid-souson",
+          "work": "mapa-vid"
+        }
       }
     ],
     "st-laurent": [
@@ -3816,6 +3871,17 @@
         "lang": "en",
         "value": "dry-medium",
         "quote": "Sultaniye wines are dry and semi-dry, light-bodied wines produced in Turkey."
+      },
+      {
+        "field": "acidity",
+        "lang": "es",
+        "value": "high",
+        "quote": "Vino neutro de acidez pronunciada, fresco.",
+        "source": {
+          "url": "https://web.archive.org/web/20250429154724/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/SULTANINA.pdf",
+          "volume": "mapa-vid-sultanina",
+          "work": "mapa-vid"
+        }
       }
     ],
     "sumoll": [
@@ -4109,6 +4175,17 @@
         "lang": "sh",
         "value": "low",
         "quote": "Niski procent šećera osigurava da će i vino napravljeno od njega imati niski procent alkohola."
+      },
+      {
+        "field": "sweetness",
+        "lang": "es",
+        "value": "dry",
+        "quote": "Vinos de color amarillo pálido, secos, finos y con nervio.",
+        "source": {
+          "url": "https://web.archive.org/web/20250429165803/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/UGNI_BLANC.pdf",
+          "volume": "mapa-vid-ugni-blanc",
+          "work": "mapa-vid"
+        }
       }
     ],
     "treixadura": [
@@ -4651,6 +4728,17 @@
           "url": "https://www.mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/valdeorras_2024_12_04_tcm30-210717.pdf",
           "volume": "mapa-pliego-valdeorras-2024",
           "work": "mapa-pliego"
+        }
+      },
+      {
+        "field": "alcohol",
+        "lang": "es",
+        "value": "high",
+        "quote": "Vinos varietales, alcohólicos y acidez total media elevada.",
+        "source": {
+          "url": "https://web.archive.org/web/20220629061959/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",
+          "volume": "mapa-vid-godello",
+          "work": "mapa-vid"
         }
       }
     ]

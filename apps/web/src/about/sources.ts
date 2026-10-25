@@ -72,6 +72,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Ministerio de Agricultura, Pesca y Alimentación, exposición «La vid»: fichas de variedades (copia del Internet Archive)",
+    terms: "reuseCiting",
+    url: "https://web.archive.org/web/2023/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministerio de Agricultura, Pesca y Alimentación, pliegos de condiciones de DOP",
     terms: "reuseCiting",
     url: "https://www.mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/valdeorras_2024_12_04_tcm30-210717.pdf",

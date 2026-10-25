@@ -98,6 +98,9 @@ async function ask(message: string, locale: string) {
 
 /** Who a cited address should be credited to, by its host. */
 function publisherFor(url: string): string {
+  // An Internet Archive copy is credited to the publisher of the page it keeps.
+  const archived = /^https?:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.exec(url);
+  if (archived?.[1] !== undefined) return publisherFor(archived[1]);
   const host = new URL(url).hostname;
   if (host.endsWith("wikipedia.org")) return "Wikipedia";
   if (host.endsWith("wikivoyage.org")) return "Wikivoyage";

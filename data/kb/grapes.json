@@ -1,7 +1,7 @@
 [
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "honey",
       "floral",
@@ -137,6 +137,12 @@
         "sourceUrl": "https://www.mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/valdeorras_2024_12_04_tcm30-210717.pdf",
         "place": "Valdeorras",
         "placeId": "es-valdeorras"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Vinos varietales, alcohólicos y acidez total media elevada.",
+        "value": "high",
+        "sourceUrl": "https://web.archive.org/web/20220629061959/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf"
       }
     ],
     "id": "godello",
@@ -2979,7 +2985,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "raisin"
     ],
@@ -3093,6 +3099,12 @@
         "quote": "Die spätreifende Sorte ergibt tiefrote, tanninreiche, herbrauhe säurebetonte fruchtige Weine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Vinh%C3%A3o"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Grado alcohólico medio, color picota",
+        "value": "medium",
+        "sourceUrl": "https://web.archive.org/web/20250429182922/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/SOUSON.pdf"
       }
     ],
     "id": "souzao",
@@ -13596,7 +13608,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cabernet_Sauvignon"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [
       "red fruit",
@@ -13700,6 +13712,12 @@
         "quote": "Завдяки легкому фруктовому характеру піно-нуар добре комбінується з ароматними стравами, такими як прошуто, сири, молода яловичина, омари, креветки, баранина",
         "value": "lamb",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE-%D0%BD%D1%83%D0%B0%D1%80"
+      },
+      {
+        "field": "acidity",
+        "quote": "con acidez media que a veces es insuficiente.",
+        "value": "medium",
+        "sourceUrl": "https://web.archive.org/web/20230904004446/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/PINOT_NOIR.pdf"
       }
     ],
     "id": "pinot-noir",
@@ -17074,7 +17092,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "quince",
       "apple",
@@ -17195,6 +17213,12 @@
         "field": "pairings",
         "quote": "Lighter, dry styles can pair well with light dishes such as salads, fish, and chicken.",
         "value": "chicken"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Vinos alcohólicos y con acidez total alta",
+        "value": "high",
+        "sourceUrl": "https://web.archive.org/web/20230620050627/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/CHENIN_BLANC.pdf"
       }
     ],
     "id": "chenin-blanc",
@@ -18982,7 +19006,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gamay"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [],
     "body": "low",
@@ -19022,6 +19046,12 @@
         "field": "sweetness",
         "quote": "Sultaniye wines are dry and semi-dry, light-bodied wines produced in Turkey.",
         "value": "dry-medium"
+      },
+      {
+        "field": "acidity",
+        "quote": "Vino neutro de acidez pronunciada, fresco.",
+        "value": "high",
+        "sourceUrl": "https://web.archive.org/web/20250429154724/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/SULTANINA.pdf"
       },
       {
         "field": "origin",
@@ -19667,6 +19697,12 @@
         "quote": "Niski procent šećera osigurava da će i vino napravljeno od njega imati niski procent alkohola.",
         "value": "low",
         "sourceUrl": "https://sh.wikipedia.org/wiki/Trebbiano"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Vinos de color amarillo pálido, secos, finos y con nervio.",
+        "value": "dry",
+        "sourceUrl": "https://web.archive.org/web/20250429165803/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/UGNI_BLANC.pdf"
       }
     ],
     "id": "trebbiano",
@@ -19722,7 +19758,10 @@
         "url": "https://pt.wikipedia.org/wiki/Trebbiano"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Albano",
@@ -30646,7 +30685,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "raisin",
       "fig",
@@ -30830,6 +30869,12 @@
         "quote": "Il vino prodotto da questo vitigno è dolce e scuro e viene usato per accompagnare i dessert.",
         "value": "desserts",
         "sourceUrl": "https://it.wikipedia.org/wiki/Pedro_xim%C3%A9nez"
+      },
+      {
+        "field": "alcohol",
+        "quote": "Mostos muy alcohólicos, con baja acidez.",
+        "value": "high",
+        "sourceUrl": "https://web.archive.org/web/20230618142756/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/PEDRO_XIMENEZ.pdf"
       }
     ],
     "id": "pedro-ximenez",
@@ -37464,7 +37509,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lagrein"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "low",
     "aromas": [
       "spice",
@@ -37698,6 +37743,12 @@
         "sourceUrl": "https://ca.wikipedia.org/wiki/Asti_spumante",
         "place": "Asti",
         "placeId": "it-asti"
+      },
+      {
+        "field": "acidity",
+        "quote": "cierto retrogusto amargo, acidez alta, vino muy amplio y sabroso en boca.",
+        "value": "high",
+        "sourceUrl": "https://web.archive.org/web/20250429171847/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/MOSCATEL_DE_GRANO_MENUDO.pdf"
       }
     ],
     "id": "muscat-blanc-a-petits-grains",

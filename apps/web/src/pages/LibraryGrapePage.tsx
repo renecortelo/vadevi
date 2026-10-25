@@ -22,6 +22,15 @@ import { getLibraryGrape, searchLibraryGrapes } from "../services/library";
  * Reached by id (`/library/grapes/:grapeId`) or by a name as a wine records it
  * (`/library/grape?name=Tinto%20Fino`), which is resolved to the card.
  */
+/**
+ * The site a source is from, as the reader would name it: an Internet Archive
+ * copy shows the site it keeps (the Ministry's, whose page is gone).
+ */
+function sourceHost(url: string): string {
+  const archived = /^https?:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/[^/]+)/.exec(url);
+  return new URL(archived?.[1] ?? url).hostname;
+}
+
 export function LibraryGrapePage() {
   const { i18n, t } = useTranslation();
   const locale = resolveSupportedLocale(i18n.language);
@@ -457,7 +466,7 @@ export function LibraryGrapePage() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      ({new URL(entry.sourceUrl).hostname})
+                      ({sourceHost(entry.sourceUrl)})
                     </a>
                   </>
                 )}

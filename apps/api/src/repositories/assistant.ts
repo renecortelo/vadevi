@@ -3087,11 +3087,24 @@ export async function runDeterministicAssistantTurn(
  * a grape's facts come from Wikipedia and Wikivoyage, from open-access papers,
  * from public-domain books and from the EU's register, not all from one.
  */
+/** The page an Internet Archive address keeps, or null for any other address. */
+function archivedUrl(url: string): string | null {
+  const match = /^https?:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(https?:\/\/.+)$/.exec(url);
+  return match?.[1] ?? null;
+}
+
 function librarySourceKind(
   url: string,
   name: string,
 ): { licenseIdentifier: string; publisher: string; title: string } {
   const host = new URL(url).hostname;
+  // A page kept by the Internet Archive because its publisher took it down
+  // (the Ministry's variety sheets): credited to that publisher, as a copy.
+  const archived = archivedUrl(url);
+  if (archived !== null) {
+    const kind = librarySourceKind(archived, name);
+    return { ...kind, title: `${kind.title} (Internet Archive copy)` };
+  }
   if (host.endsWith("wikipedia.org")) {
     return {
       licenseIdentifier: "CC-BY-SA-4.0",

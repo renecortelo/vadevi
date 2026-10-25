@@ -8,6 +8,15 @@ has the reasons.
 
 ### Library
 
+- **Eight grape facts from the Ministry's own variety sheets**: the
+  «potencial enológico» of its exhibition «La vid» (Godello and Chenin Blanc
+  alcoholic, Pedro Ximénez's must too, Sousón's alcohol medium, Pinot Noir's
+  acidity medium, Moscatel de grano menudo's and Sultanina's high, Ugni Blanc
+  dry). The Ministry has taken the sheets down; they are read and linked from
+  the Internet Archive's copy, credited to the Ministry.
+- **The soil counts in the library's score**, as an eighth field of a
+  registered name (97 %).
+
 - **Godello's body, from Valdeorras's specification**: «perfectamente
   estructurados… vinos plenos», as Spain's Ministry publishes the
   specification, shown as said of the wine of Valdeorras and credited to it
