@@ -93,6 +93,7 @@
       "high": "Alta"
     },
     "saidOfPlace": "Dit del vi de {{place}}",
+    "saidOfProducers": "Segons els vins de {{count}} cellers",
     "noSourceValue": "sense dada a les fonts",
     "kind": {
       "still": "vi tranquil",
@@ -2050,7 +2051,8 @@
       "officialFacts": "textos oficials: només se’n prenen els fets",
       "publicDomain": "domini públic",
       "reuseCiting": "reutilització permesa citant la font",
-      "usPublicDomain": "obres del govern federal dels EUA, de domini públic als Estats Units"
+      "usPublicDomain": "obres del govern federal dels EUA, de domini públic als Estats Units",
+      "factOnly": "només la dada i l'enllaç; el seu text no es reprodueix"
     },
     "rulesTitle": "Com s’utilitzen",
     "shareAlike": "El text pres o traduït de la Viquipèdia es comparteix amb la mateixa llicència, CC BY-SA 4.0.",

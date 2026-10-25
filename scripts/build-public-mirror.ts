@@ -44,6 +44,10 @@ const excluded = [
   "docs/backlog.md",
   // Draft letters asking publishers for permission, to be sent by the operator.
   "docs/permission-requests.md",
+  // Facts read from pages that are not openly licensed, with the sentence each
+  // was checked against: the library keeps the fact and its link, never the
+  // page's text, so the sentences stay in the private repository.
+  "data/kb/web-readings.json",
 ];
 
 /**

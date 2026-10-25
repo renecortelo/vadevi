@@ -93,6 +93,7 @@
       "high": "High"
     },
     "saidOfPlace": "Said of the wine of {{place}}",
+    "saidOfProducers": "According to the wines of {{count}} producers",
     "noSourceValue": "no figure in the sources",
     "kind": {
       "still": "still wine",
@@ -2050,7 +2051,8 @@
       "officialFacts": "official texts: only their facts are taken",
       "publicDomain": "public domain",
       "reuseCiting": "reuse allowed with the source named",
-      "usPublicDomain": "works of the US federal government, public domain in the United States"
+      "usPublicDomain": "works of the US federal government, public domain in the United States",
+      "factOnly": "the fact and its link only; its text is not reproduced"
     },
     "rulesTitle": "How they are used",
     "shareAlike": "Text taken or translated from Wikipedia is shared under the same licence, CC BY-SA 4.0.",

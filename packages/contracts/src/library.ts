@@ -18,6 +18,24 @@ export const LibraryEvidenceSchema = z
      */
     place: z.string().nullable(),
     placeId: z.string().nullable(),
+    /**
+     * From a page that is not openly licensed: shown as the value and its
+     * link only. Its sentence was checked when the library was built and is
+     * not carried (`quote` is empty).
+     */
+    factOnly: z.boolean(),
+    /** Who says it, where the address alone would not name them. */
+    publisher: z.string().nullable(),
+    /**
+     * Taken from the grape's single-variety wines, held only when at least
+     * three producers say the same of theirs: those wines, each linked.
+     */
+    basis: z.enum(["producers"]).nullable(),
+    wines: z
+      .array(
+        z.object({ producer: z.string(), sourceUrl: z.string().url(), wine: z.string() }).strict(),
+      )
+      .nullable(),
     quote: z.string(),
     sourceUrl: z.string().url(),
     value: z.string(),

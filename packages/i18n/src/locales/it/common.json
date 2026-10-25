@@ -93,6 +93,7 @@
       "high": "Alta"
     },
     "saidOfPlace": "Detto del vino di {{place}}",
+    "saidOfProducers": "Secondo i vini di {{count}} produttori",
     "noSourceValue": "nessun dato nelle fonti",
     "kind": {
       "still": "vino fermo",
@@ -2050,7 +2051,8 @@
       "officialFacts": "testi ufficiali: si prendono solo i loro fatti",
       "publicDomain": "pubblico dominio",
       "reuseCiting": "riutilizzo consentito citando la fonte",
-      "usPublicDomain": "opere del governo federale degli USA, di pubblico dominio negli Stati Uniti"
+      "usPublicDomain": "opere del governo federale degli USA, di pubblico dominio negli Stati Uniti",
+      "factOnly": "solo il dato e il link; il testo non è riprodotto"
     },
     "rulesTitle": "Come si usano",
     "shareAlike": "Il testo preso o tradotto da Wikipedia è condiviso con la stessa licenza, CC BY-SA 4.0.",

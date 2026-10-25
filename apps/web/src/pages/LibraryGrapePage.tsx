@@ -1,6 +1,6 @@
 import type { LibraryGrape } from "@vadevi/contracts";
 import { aromaFromTerm, resolveSupportedLocale } from "@vadevi/i18n/runtime";
-import { type CSSProperties, useEffect, useState } from "react";
+import { type CSSProperties, Fragment, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 
@@ -123,8 +123,22 @@ export function LibraryGrapePage() {
   // A fact said of one place's wine — a DOC's, the region where nearly all of
   // the grape grows — names the place beside it, linked where it is in the
   // atlas.
-  const placeNote = (entry: { place: string | null; placeId: string | null } | undefined) =>
-    entry?.place == null ? null : (
+  const placeNote = (
+    entry:
+      | {
+          basis: "producers" | null;
+          place: string | null;
+          placeId: string | null;
+          wines: unknown[] | null;
+        }
+      | undefined,
+  ) =>
+    entry?.basis === "producers" ? (
+      // Taken from the grape's single-variety wines: as many producers agree.
+      <span className="library-place">
+        {t("library.saidOfProducers", { count: entry.wines?.length ?? 3 })}
+      </span>
+    ) : entry?.place == null ? null : (
       <span className="library-place">
         {entry.placeId === null ? (
           t("library.saidOfPlace", { place: entry.place })
@@ -136,7 +150,11 @@ export function LibraryGrapePage() {
       </span>
     );
   const noteFor = (field: string) =>
-    placeNote(grape.evidence.find((entry) => entry.field === field && entry.place !== null));
+    placeNote(
+      grape.evidence.find(
+        (entry) => entry.field === field && (entry.place !== null || entry.basis === "producers"),
+      ),
+    );
   // Each fact's value in the reader's language, where the library has a label
   // for it; a dish or a name it has none for stays as the source wrote it.
   const shown = (entry: { field: string; value: string }) => {
@@ -454,10 +472,32 @@ export function LibraryGrapePage() {
           <ul>
             {grape.evidence.map((entry) => (
               <li key={`${entry.field}-${entry.value}`}>
-                <strong>{shown(entry)}</strong> — “{entry.quote}”{placeNote(entry)}
+                <strong>{shown(entry)}</strong>
+                {/* A page that is not openly licensed gives the fact, not its
+                    words: the value, then who says it, linked. */}
+                {entry.factOnly ? null : <> — “{entry.quote}”</>}
+                {placeNote(entry)}
+                {entry.wines === null ? null : (
+                  <>
+                    {": "}
+                    {entry.wines.map((wine, index) => (
+                      <Fragment key={wine.sourceUrl}>
+                        {index === 0 ? null : " · "}
+                        <a
+                          className="text-link"
+                          href={wine.sourceUrl}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          {wine.producer}, {wine.wine}
+                        </a>
+                      </Fragment>
+                    ))}
+                  </>
+                )}
                 {/* A fact read from another article — the grape's own
                     language's, a book, a paper — links that source. */}
-                {entry.sourceUrl === article ? null : (
+                {entry.sourceUrl === article || entry.wines !== null ? null : (
                   <>
                     {" "}
                     <a
@@ -466,7 +506,7 @@ export function LibraryGrapePage() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      ({sourceHost(entry.sourceUrl)})
+                      ({entry.publisher ?? sourceHost(entry.sourceUrl)})
                     </a>
                   </>
                 )}

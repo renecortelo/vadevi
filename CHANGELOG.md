@@ -8,6 +8,15 @@ has the reasons.
 
 ### Library
 
+- **Facts from pages that are not openly licensed, as the fact alone**: a
+  grape's fact may now come from an interprofessional body's page about it
+  (the Georgian Wine Association: Chinuri's alcohol medium, Khikhvi dry to
+  sweet) or from its single-variety wines when three producers or more say
+  the same of theirs (Grillo with fish, from four; Verdejo with cheese, from
+  three). The card and Vicenç give the value and who says it, linked, never
+  the page's sentence, and name the producers; a page whose terms forbid
+  extraction is not used.
+
 - **Eight grape facts from the Ministry's own variety sheets**: the
   «potencial enológico» of its exhibition «La vid» (Godello and Chenin Blanc
   alcoholic, Pedro Ximénez's must too, Sousón's alcohol medium, Pinot Noir's

@@ -4,11 +4,13 @@ import { resolve } from "node:path";
 import { leadIsAboutWine } from "./appellation-names";
 import {
   type GrapeEntry,
+  type Level,
   normalize,
   originNamed,
   quoteIsVerbatim,
   slug,
   summaryOf,
+  type Sweetness,
   validateExtraction,
 } from "./grape-validation";
 
@@ -148,6 +150,54 @@ const handReadings = (
     >;
   }
 ).readings;
+
+/**
+ * Facts read from pages that are not openly licensed (`data/kb/web-readings.json`,
+ * kept in the private repository only): an interprofessional body's, a
+ * school's or a merchant's page about the grape itself, or the grape's
+ * single-variety wines as their producers describe them. Each sentence is
+ * checked word for word against our copy of its page (`.kb-cache/web/<volume>.txt`)
+ * exactly as an article's is, and the fact is kept as its value and link
+ * alone: the operator's rule for such pages is the fact, never the text. A
+ * fact taken from wines stands only when at least three producers say the
+ * same of theirs. `KB_WEB=0` builds the library without any of them.
+ */
+type WebSource = { publisher: string; url: string; volume: string };
+type WebField = "acidity" | "alcohol" | "body" | "pairings" | "sweetness" | "tannin";
+type WebReading = {
+  field: WebField;
+  lang: string;
+  value: string | string[];
+  words?: Record<string, string>;
+  /** A page about the grape itself: one is enough. */
+  quote?: string;
+  source?: WebSource;
+  /** The grape's single-variety wines: three producers or more, agreeing. */
+  basis?: "producers";
+  wines?: {
+    lang: string;
+    producer: string;
+    quote: string;
+    source: WebSource;
+    wine: string;
+    words?: Record<string, string>;
+  }[];
+};
+const webReadingsFile = resolve("data/kb/web-readings.json");
+const webReadings: Record<string, WebReading[]> =
+  process.env.KB_WEB === "0" || !existsSync(webReadingsFile)
+    ? {}
+    : (
+        JSON.parse(readFileSync(webReadingsFile, "utf8")) as {
+          readings: Record<string, WebReading[]>;
+        }
+      ).readings;
+
+/** Our copy of a page's text, as fetched (`.kb-cache/web/<volume>.txt`). */
+function webPage(volume: string): string | null {
+  const path = resolve(cache, "web", `${volume}.txt`);
+  return existsSync(path) ? readFileSync(path, "utf8") : null;
+}
 
 /** A grape's cached article in another language, with its address. */
 function articleIn(qid: string, lang: string): { article: string; url: string } | null {
@@ -383,6 +433,104 @@ for (const qid of index) {
         .filter((entry) => entry.field === field)
         .map((entry) => (source.url === undefined ? entry : { ...entry, sourceUrl: source.url }))
         .map(placed),
+    );
+  }
+  // Read from pages that are not openly licensed (see `webReadings`): kept as
+  // the value and its link, never the page's sentence.
+  for (const reading of webReadings[slug(raw.labels.en ?? qid)] ?? []) {
+    const grape = `${raw.labels.en ?? qid} (web)`;
+    const field = reading.field;
+    const read = (
+      quote: string,
+      source: WebSource,
+      lang: string,
+      words?: Record<string, string>,
+    ) => {
+      const page = webPage(source.volume);
+      if (page === null) {
+        rejected.push({
+          field,
+          grape,
+          reason: `page not cached: ${source.volume}`,
+          value: [reading.value].flat().join(", "),
+        });
+        return null;
+      }
+      const found = validateExtraction(
+        { [field]: { quote, value: reading.value, ...(words === undefined ? {} : { words }) } },
+        page,
+        raw.wikidataOrigin,
+      );
+      rejected.push(...found.rejected.map((entry) => ({ ...entry, grape: `${grape} ${lang}` })));
+      return found;
+    };
+    if (reading.basis === "producers") {
+      const wines = reading.wines ?? [];
+      // Each wine's reading, kept only where it says what the reading says.
+      const agreeing = wines.flatMap((wine) => {
+        const found = read(wine.quote, wine.source, wine.lang, wine.words);
+        if (found === null) return [];
+        const values = found.evidence
+          .filter((entry) => entry.field === field)
+          .map((entry) => entry.value);
+        return values.length === 0 ? [] : [{ values, wine }];
+      });
+      const said =
+        field === "pairings"
+          ? [...new Set(agreeing.flatMap((one) => one.values))]
+          : [String(agreeing[0]?.values[0] ?? "")];
+      for (const value of said) {
+        const by = agreeing.filter((one) => one.values.includes(value));
+        const producers = new Set(by.map((one) => normalize(one.wine.producer)));
+        if (producers.size < 3) {
+          rejected.push({ field, grape, reason: `only ${producers.size} producers agree`, value });
+          continue;
+        }
+        const listed = by.map((one) => ({
+          producer: one.wine.producer,
+          sourceUrl: one.wine.source.url,
+          wine: one.wine.wine,
+        }));
+        if (field === "pairings") {
+          if (terms("pairing", result.pairings).length > 0 && !result.pairings.includes(value))
+            continue;
+          if (!result.pairings.includes(value)) result.pairings.push(value);
+        } else if (result[field] !== null) continue;
+        else if (field === "sweetness") {
+          const [from, to = from] = value.split("-") as [Sweetness, Sweetness?];
+          result.sweetness = { from, to };
+        } else result[field] = value as Level;
+        result.evidence.push({
+          basis: "producers",
+          factOnly: true,
+          field,
+          quote: "",
+          sourceUrl: listed[0]!.sourceUrl,
+          value,
+          wines: listed,
+        });
+      }
+      continue;
+    }
+    if (reading.quote === undefined || reading.source === undefined) continue;
+    const found = read(reading.quote, reading.source, reading.lang, reading.words);
+    if (found === null) continue;
+    if (field === "pairings") {
+      if (terms("pairing", result.pairings).length > 0 || found.pairings.length === 0) continue;
+      result.pairings = found.pairings;
+    } else if (result[field] !== null || found[field] === null) continue;
+    else if (field === "sweetness") result.sweetness = found.sweetness;
+    else result[field] = found[field];
+    result.evidence.push(
+      ...found.evidence
+        .filter((entry) => entry.field === field)
+        .map((entry) => ({
+          ...entry,
+          factOnly: true as const,
+          publisher: reading.source!.publisher,
+          quote: "",
+          sourceUrl: reading.source!.url,
+        })),
     );
   }
   // Where no article says where the grape comes from: the country of origin

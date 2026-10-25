@@ -121,4 +121,30 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
     "href",
     "/library/regions/hu-tokaj",
   );
+
+  // A fact from a page that is not openly licensed is the fact and who says
+  // it, linked, never the page's sentence: Chinuri's alcohol, from the
+  // Georgian Wine Association.
+  await page.goto("/library/grapes/chinuri");
+  const chinuri = page.locator(".library-evidence");
+  await expect(chinuri).toBeVisible({ timeout: 15_000 });
+  await chinuri.locator("summary").click();
+  const alcohol = chinuri.locator("li", { hasText: "Georgian Wine Association" });
+  await expect(alcohol.getByRole("link", { name: "(Georgian Wine Association)" })).toHaveAttribute(
+    "href",
+    "https://gwa.ge/en/yurdznis-jishebi/",
+  );
+  await expect(alcohol).not.toContainText("moderate alcohol levels");
+
+  // A fact the grape's single-variety wines agree on names how many producers
+  // say it, and lists their wines: Grillo with fish, from four.
+  await page.goto("/library/grapes/grillo");
+  await expect(page.getByText("Según los vinos de 4 bodegas").first()).toBeVisible({
+    timeout: 15_000,
+  });
+  const grillo = page.locator(".library-evidence");
+  await grillo.locator("summary").click();
+  await expect(
+    grillo.locator("li", { hasText: "Según los vinos de 4 bodegas" }).getByRole("link"),
+  ).toHaveCount(4);
 });

@@ -13,6 +13,8 @@ export type SourceTerms =
   | "crownFacts"
   | "euReuse"
   | "extract"
+  /** A page that is not openly licensed: the fact and its link, never its text. */
+  | "factOnly"
   | "officialFacts"
   | "publicDomain"
   | "reuseCiting"
@@ -68,6 +70,20 @@ export const sources: Source[] = [
     licence: "CC BY-SA 4.0",
     name: "Wikivoyage",
     url: "https://en.wikivoyage.org/wiki/Tokaj",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Georgian Wine Association, «Grape varieties»",
+    terms: "factOnly",
+    url: "https://gwa.ge/en/yurdznis-jishebi/",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Las fichas técnicas de las propias bodegas, por ejemplo Feudi del Pisciotto (un dato de una uva solo cuando tres bodegas o más dicen lo mismo de su vino de esa uva; cada una enlazada en la ficha de la uva)",
+    terms: "factOnly",
+    url: "https://www.castellare.it/wp-content/uploads/2025/04/Feudi-del-Pisciotto_Grillo_Colori-di-Sicilia_ita.pdf",
     what: "traits",
   },
   {

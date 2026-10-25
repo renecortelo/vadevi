@@ -807,6 +807,13 @@ async function loadLibraryStatements(
       card.summary?.sourceUrl ??
       null;
     const sourceIdByUrl = new Map<string, string>();
+    // Who says a fact taken from a page that is not openly licensed, where
+    // the card names them rather than the address.
+    const publisherOf = new Map(
+      card.evidence.flatMap((entry) =>
+        entry.publisher === null ? [] : [[entry.sourceUrl, entry.publisher] as const],
+      ),
+    );
     const sourceFor = async (url: string): Promise<string> => {
       const known = sourceIdByUrl.get(url);
       if (known !== undefined) return known;
@@ -818,7 +825,7 @@ async function loadLibraryStatements(
         createdByProvider: "wine-library",
         createdByUserId: null,
         id,
-        ...librarySourceKind(url, card.name),
+        ...librarySourceKind(url, card.name, publisherOf.get(url)),
         retrievedAt: now,
         sourceType: "open_dataset",
         updatedAt: now,
@@ -830,7 +837,8 @@ async function loadLibraryStatements(
         ...new Set(
           card.evidence
             .filter((entry) => fields.includes(entry.field))
-            .map((entry) => entry.sourceUrl),
+            // A fact taken from wines is cited to each of them.
+            .flatMap((entry) => entry.wines?.map((wine) => wine.sourceUrl) ?? [entry.sourceUrl]),
         ),
       ];
       // Every source a statement's facts come from, so each fact is cited to
@@ -859,12 +867,21 @@ async function loadLibraryStatements(
         await sourceFor(card.summary.sourceUrl),
       ]);
     }
-    // A value read from one place's wine says so: "said of the wine of Tokaj".
+    // A value read from one place's wine says so: "said of the wine of Tokaj";
+    // one taken from the grape's single-variety wines says how many agree.
     const placeOf = (field: string) =>
       card.evidence.find((entry) => entry.field === field && entry.place !== null)?.place ?? null;
+    const producersOf = (field: string) =>
+      card.evidence.find((entry) => entry.field === field && entry.basis === "producers")?.wines
+        ?.length ?? null;
     const placed = (field: string, text: string) => {
       const place = placeOf(field);
-      return place === null ? text : `${text} (said of the wine of ${place})`;
+      const producers = producersOf(field);
+      return place !== null
+        ? `${text} (said of the wine of ${place})`
+        : producers !== null
+          ? `${text} (according to the wines of ${producers} producers)`
+          : text;
     };
     const structure = (["acidity", "tannin", "body", "alcohol"] as const)
       .filter((axis) => card[axis] !== null)
@@ -3096,7 +3113,12 @@ function archivedUrl(url: string): string | null {
 function librarySourceKind(
   url: string,
   name: string,
+  /** Who says it, for a page that is not openly licensed: the fact, linked. */
+  publisher?: string,
 ): { licenseIdentifier: string; publisher: string; title: string } {
+  if (publisher !== undefined) {
+    return { licenseIdentifier: "fact-only", publisher, title: `${name} — ${publisher}` };
+  }
   const host = new URL(url).hostname;
   // A page kept by the Internet Archive because its publisher took it down
   // (the Ministry's variety sheets): credited to that publisher, as a copy.

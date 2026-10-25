@@ -12535,6 +12535,46 @@
                   "type": "string",
                   "nullable": true
                 },
+                "factOnly": {
+                  "type": "boolean"
+                },
+                "publisher": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "basis": {
+                  "type": "string",
+                  "nullable": true,
+                  "enum": [
+                    "producers",
+                    null
+                  ]
+                },
+                "wines": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "producer": {
+                        "type": "string"
+                      },
+                      "sourceUrl": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "wine": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "producer",
+                      "sourceUrl",
+                      "wine"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
                 "quote": {
                   "type": "string"
                 },
@@ -12550,6 +12590,10 @@
                 "field",
                 "place",
                 "placeId",
+                "factOnly",
+                "publisher",
+                "basis",
+                "wines",
                 "quote",
                 "sourceUrl",
                 "value"

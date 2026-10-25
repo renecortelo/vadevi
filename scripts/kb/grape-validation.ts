@@ -24,6 +24,19 @@ export type Evidence = {
    */
   place?: string;
   placeId?: string;
+  /**
+   * From a page that is not openly licensed: the value and the link are
+   * shown, never its sentence — the quote is checked at build and left empty.
+   */
+  factOnly?: true;
+  /** Who says it, as the card credits it. */
+  publisher?: string;
+  /**
+   * Taken from the grape's single-variety wines: held only when at least
+   * three producers say the same of theirs, each listed.
+   */
+  basis?: "producers";
+  wines?: { producer: string; sourceUrl: string; wine: string }[];
 };
 
 export type GrapeEntry = {

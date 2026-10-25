@@ -93,6 +93,7 @@
       "high": "Alta"
     },
     "saidOfPlace": "Dicho del vino de {{place}}",
+    "saidOfProducers": "Según los vinos de {{count}} bodegas",
     "noSourceValue": "sin dato en las fuentes",
     "kind": {
       "still": "vino tranquilo",
@@ -2050,7 +2051,8 @@
       "officialFacts": "textos oficiales: solo se toman sus hechos",
       "publicDomain": "dominio público",
       "reuseCiting": "reutilización permitida citando la fuente",
-      "usPublicDomain": "obras del gobierno federal de EE. UU., de dominio público en Estados Unidos"
+      "usPublicDomain": "obras del gobierno federal de EE. UU., de dominio público en Estados Unidos",
+      "factOnly": "solo el dato y el enlace; su texto no se reproduce"
     },
     "rulesTitle": "Cómo se usan",
     "shareAlike": "El texto tomado o traducido de Wikipedia se comparte con la misma licencia, CC BY-SA 4.0.",

@@ -326,6 +326,35 @@ The small map draws a country on its sheet: Europe's, North or South
 America's (from 6° S, for the Vale do São Francisco), Japan's, Oceania's or southern Africa's (`pnpm kb:build-map`, all from Natural
 Earth).
 
+## Facts from pages that are not openly licensed
+
+Where no open source says it, a grape's fact may come from a page whose
+rights are reserved — an interprofessional body's, or the grape's
+single-variety wines as their own producers describe them — under the
+operator's rule of the fact alone (24 October 2026). The library keeps the
+value and the link and names who says it; it never shows the page's
+sentence. A page whose terms forbid automated access, extraction, building a
+database or reusing its data is not used at all (Wine Folly, VinoVoss, the
+German Wine Institute's «private, non-commercial» copies), nor are rating or
+shop sites; a site that refuses scripts goes on the operator's list to read
+by hand.
+
+- **A page about the grape itself** (the Georgian Wine Association's
+  «Grape varieties»): one is enough, as an article is.
+- **The grape's own wines**: a fact a producer states of its wine made of
+  that grape alone («100 % Grillo», «in purezza», «monovarietal») is about
+  that wine, not the grape, so it stands only when **three producers or
+  more** say the same of theirs. Each counts once however many sites carry
+  its sheet (its own, an importer's); a shop's tasting note is not the
+  producer's and does not count. The card says «according to the wines of
+  three producers» and lists each wine, linked.
+
+The readings are in `data/kb/web-readings.json`, which stays in the private
+repository: each sentence is checked word for word against our copy of its
+page (`.kb-cache/web/`), exactly as an article's is, and only the fact
+reaches `grapes.json`. `KB_WEB=0 pnpm kb:build-grapes` builds the library
+without any of them, and `pnpm kb:score` says how many fields they fill.
+
 ## Climate, planted area and production
 
 Each name's card shows the climate at its point on the map and, where a

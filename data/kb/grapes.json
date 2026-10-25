@@ -9481,7 +9481,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -9570,6 +9570,14 @@
         "quote": "Вина з цього сорту винограду відрізняються підвищеною кислотністю та фруктовим букетом",
         "value": "fruity",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D1%96"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Georgian Wine Association",
+        "sourceUrl": "https://gwa.ge/en/yurdznis-jishebi/"
       }
     ],
     "id": "chinuri",
@@ -10091,6 +10099,14 @@
         "field": "alcohol",
         "quote": "Khikhvi wine is characterised by its moderate alcohol levels and soft acidity",
         "value": "medium"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry-sweet",
+        "factOnly": true,
+        "publisher": "Georgian Wine Association",
+        "sourceUrl": "https://gwa.ge/en/yurdznis-jishebi/"
       }
     ],
     "id": "khikhvi",
@@ -10171,7 +10187,10 @@
         "url": "https://en.wikipedia.org/wiki/Khikhvi"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q12871467",
@@ -37014,6 +37033,31 @@
         "quote": "Вердехо є автохтонним іспанським сортом, найбільш розповсюджений у регіоні Руеда у центральній частині Іспанії (Кастилія-Леон).",
         "value": "ES",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B5%D1%85%D0%BE"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://bodegalatarce.com/verdejo/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Bodega Latarce",
+            "sourceUrl": "https://bodegalatarce.com/verdejo/",
+            "wine": "Verdejo"
+          },
+          {
+            "producer": "Bodegas Barbadillo, S.L.",
+            "sourceUrl": "https://www.barbadillo.com/en/product/barbadillo-blanco-verdejo/",
+            "wine": "Barbadillo Blanco Verdejo"
+          },
+          {
+            "producer": "Bodegas Protos",
+            "sourceUrl": "https://www.bodegasprotos.com/es/notas-de-prensa/protos-verdejo-2017-criado-sobre-lias-finas-mejor-vino-blanco-joven-de-espana/",
+            "wine": "Protos Verdejo 2017 Criado Sobre Lias Finas Mejor Vino Blanco Joven De Espana"
+          }
+        ]
       }
     ],
     "id": "verdejo",
@@ -37028,7 +37072,9 @@
       "pt": "Verdejo"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -40875,6 +40921,36 @@
         "quote": "Die Weißweinsorte Grillo stammt aus Italien und wird heute vorwiegend auf Sizilien angebaut.",
         "value": "IT",
         "sourceUrl": "https://de.wikipedia.org/wiki/Grillo_(Rebsorte)"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.castellare.it/wp-content/uploads/2025/04/Feudi-del-Pisciotto_Grillo_Colori-di-Sicilia_ita.pdf",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Feudi del Pisciotto",
+            "sourceUrl": "https://www.castellare.it/wp-content/uploads/2025/04/Feudi-del-Pisciotto_Grillo_Colori-di-Sicilia_ita.pdf",
+            "wine": "Feudi Del Pisciotto Grillo Colori Di Sicilia Ita"
+          },
+          {
+            "producer": "Fazio",
+            "sourceUrl": "https://www.casavinicolafazio.it/wp-content/uploads/2022/03/ENG-MONT.-Scheda-tecnica-Grillo.pdf",
+            "wine": "Eng Mont. Scheda Tecnica Grillo"
+          },
+          {
+            "producer": "Alagna",
+            "sourceUrl": "https://vincod.com/V0UJ1E/get/print",
+            "wine": "Print"
+          },
+          {
+            "producer": "Maenza Vini",
+            "sourceUrl": "https://www.ice.it/en/my-home/repository/vetrine/572222/1678869914.709.pdf",
+            "wine": "1678869914.709"
+          }
+        ]
       }
     ],
     "id": "grillo",
@@ -40889,7 +40965,9 @@
       "pt": "Grillo"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 11,
     "regions": [
       {

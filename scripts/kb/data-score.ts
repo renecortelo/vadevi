@@ -26,7 +26,7 @@ type Grape = {
   aromas: string[];
   body: string | null;
   color: string | null;
-  evidence: { field: string; place?: string }[];
+  evidence: { basis?: string; factOnly?: boolean; field: string; place?: string }[];
   names: Record<string, string>;
   origin: string | null;
   pairings: string[];
@@ -143,6 +143,21 @@ const placed = grapes.flatMap((grape) => [
 if (placed.length > 0) {
   console.info(
     `  of which said of one place's wine (a DOC's, or the region of nearly all of it): ${placed.length} fields`,
+  );
+}
+// Facts kept as the value and link alone, from pages that are not openly
+// licensed — and, of them, those three producers' wines agree on.
+const factOnly = grapes.flatMap((grape) => [
+  ...new Set(grape.evidence.filter((entry) => entry.factOnly).map((entry) => entry.field)),
+]);
+const fromWines = grapes.flatMap((grape) => [
+  ...new Set(
+    grape.evidence.filter((entry) => entry.basis === "producers").map((entry) => entry.field),
+  ),
+]);
+if (factOnly.length > 0) {
+  console.info(
+    `  of which from pages that are not openly licensed, the fact alone: ${factOnly.length} fields (${fromWines.length} agreed by three producers' wines or more)`,
   );
 }
 print(`Regions (${regions.length})`, regionRows);

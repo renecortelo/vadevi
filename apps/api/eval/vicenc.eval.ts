@@ -171,14 +171,25 @@ describe("Vicenç's question bank", () => {
       const citedUrls = new Set(data.citations.map((source) => source.canonicalUrl));
       for (const entry of grape.evidence) {
         if (entry.field === "synonyms" || entry.field === "regions") continue;
-        sourced += 1;
-        const url = entry.sourceUrl ?? grape.wikipediaUrl;
-        if (url !== null && citedUrls.has(url)) sourcedCited += 1;
-        else misses.push(`source not cited: ${grape.id} ${entry.field}: ${url}`);
+        // A fact taken from wines comes from each of them.
+        for (const url of entry.wines?.map((wine) => wine.sourceUrl) ?? [
+          entry.sourceUrl ?? grape.wikipediaUrl,
+        ]) {
+          sourced += 1;
+          if (url !== null && citedUrls.has(url)) sourcedCited += 1;
+          else misses.push(`source not cited: ${grape.id} ${entry.field}: ${url}`);
+        }
       }
+      // A page that is not openly licensed is credited to who the card names.
+      const named = new Map(
+        grape.evidence.flatMap((entry) =>
+          entry.publisher == null ? [] : [[entry.sourceUrl, entry.publisher] as const],
+        ),
+      );
       for (const source of data.citations) {
         citations += 1;
-        if (source.publisher === publisherFor(source.canonicalUrl)) credited += 1;
+        const expected = named.get(source.canonicalUrl) ?? publisherFor(source.canonicalUrl);
+        if (source.publisher === expected) credited += 1;
         else misses.push(`miscredited: ${grape.id}: ${source.canonicalUrl} as ${source.publisher}`);
       }
     }

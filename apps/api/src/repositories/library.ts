@@ -170,7 +170,8 @@ export async function getLibraryGrape(
         .bind(grapeId),
       database
         .prepare(
-          `SELECT field, value, quote, source_url, place, place_id FROM kb_evidence
+          `SELECT field, value, quote, source_url, place, place_id, fact_only, basis, wines, publisher
+        FROM kb_evidence
         WHERE entity_type = 'grape' AND entity_id = ? ORDER BY field, value`,
         )
         .bind(grapeId),
@@ -266,20 +267,31 @@ export async function getLibraryGrape(
     color: grape.color,
     evidence: (
       (evidence?.results ?? []) as {
+        basis: string | null;
+        fact_only: number | null;
         field: string;
         place: string | null;
         place_id: string | null;
+        publisher: string | null;
         quote: string;
         source_url: string;
         value: string;
+        wines: string | null;
       }[]
     ).map((row) => ({
+      basis: row.basis === "producers" ? ("producers" as const) : null,
+      factOnly: row.fact_only === 1,
       field: row.field,
       place: row.place,
       placeId: row.place_id,
+      publisher: row.publisher,
       quote: row.quote,
       sourceUrl: row.source_url,
       value: row.value,
+      wines:
+        row.wines === null
+          ? null
+          : (JSON.parse(row.wines) as { producer: string; sourceUrl: string; wine: string }[]),
     })),
     id: grape.id,
     image:

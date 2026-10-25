@@ -93,6 +93,7 @@
       "high": "Hoch"
     },
     "saidOfPlace": "Gesagt vom Wein aus {{place}}",
+    "saidOfProducers": "Nach den Weinen von {{count}} Erzeugern",
     "noSourceValue": "keine Angabe in den Quellen",
     "kind": {
       "still": "Stillwein",
@@ -2050,7 +2051,8 @@
       "officialFacts": "amtliche Texte: nur ihre Fakten werden übernommen",
       "publicDomain": "gemeinfrei",
       "reuseCiting": "Weiterverwendung mit Quellenangabe erlaubt",
-      "usPublicDomain": "Werke der US-Bundesregierung, in den Vereinigten Staaten gemeinfrei"
+      "usPublicDomain": "Werke der US-Bundesregierung, in den Vereinigten Staaten gemeinfrei",
+      "factOnly": "nur die Angabe und der Link; der Text wird nicht wiedergegeben"
     },
     "rulesTitle": "Wie sie verwendet werden",
     "shareAlike": "Aus Wikipedia übernommener oder übersetzter Text wird unter derselben Lizenz geteilt, CC BY-SA 4.0.",

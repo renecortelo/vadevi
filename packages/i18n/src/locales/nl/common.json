@@ -93,6 +93,7 @@
       "high": "Hoog"
     },
     "saidOfPlace": "Gezegd van de wijn uit {{place}}",
+    "saidOfProducers": "Volgens de wijnen van {{count}} producenten",
     "noSourceValue": "geen gegeven in de bronnen",
     "kind": {
       "still": "stille wijn",
@@ -2050,7 +2051,8 @@
       "officialFacts": "officiële teksten: alleen hun feiten worden overgenomen",
       "publicDomain": "publiek domein",
       "reuseCiting": "hergebruik toegestaan met bronvermelding",
-      "usPublicDomain": "werken van de Amerikaanse federale overheid, publiek domein in de Verenigde Staten"
+      "usPublicDomain": "werken van de Amerikaanse federale overheid, publiek domein in de Verenigde Staten",
+      "factOnly": "alleen het gegeven en de link; de tekst wordt niet overgenomen"
     },
     "rulesTitle": "Hoe ze worden gebruikt",
     "shareAlike": "Tekst overgenomen of vertaald uit Wikipedia wordt gedeeld onder dezelfde licentie, CC BY-SA 4.0.",
