@@ -1288,8 +1288,12 @@ async function loadLibraryStatements(
     ] as const) {
       if (figure === null) continue;
       const figureId = await librarySourceId(`region-${suffix}:${region.id}`);
+      // An appellation body's page that is not openly licensed: the figure
+      // and who gives it.
       const credit =
-        figurePublishers[figure.publisher ?? "wikipedia"] ?? figurePublishers.wikipedia!;
+        figure.publisher === "web" && figure.by !== undefined
+          ? { license: "fact-only", publisher: figure.by }
+          : (figurePublishers[figure.publisher ?? "wikipedia"] ?? figurePublishers.wikipedia!);
       sources.push({
         canonicalUrl: figure.sourceUrl,
         createdAt: now,
@@ -1299,7 +1303,12 @@ async function loadLibraryStatements(
         licenseIdentifier: credit.license,
         publisher: credit.publisher,
         retrievedAt: now,
-        sourceType: credit.publisher === "Wikipedia" ? "open_dataset" : "regulator",
+        sourceType:
+          figure.publisher === "web"
+            ? "other_web"
+            : credit.publisher === "Wikipedia"
+              ? "open_dataset"
+              : "regulator",
         title: `${region.name} — ${what}`,
         updatedAt: now,
       });

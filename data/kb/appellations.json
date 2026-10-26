@@ -159746,7 +159746,14 @@
       "silt": 42.1
     },
     "figures": {
-      "planted": null,
+      "planted": {
+        "amount": 2560,
+        "by": "Consorzio Tutela Lugana DOC",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://www.consorziolugana.it/news/il-consorzio-tutela-lugana-doc-veleggia-sullonda-della-crescita",
+        "year": "2022"
+      },
       "production": {
         "amount": 139862,
         "quote": "Im Jahr 2017 wurden 139.862 Hektoliter Lugana hergestellt",
@@ -225465,6 +225472,17 @@
       "ph": 7.2,
       "sand": 27,
       "silt": 48
+    },
+    "figures": {
+      "planted": {
+        "amount": 1027.47,
+        "by": "Consorzio di Tutela del Roero",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://www.consorziodelroero.it/en/origins-and-history/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
@@ -321339,6 +321357,17 @@
       "ph": 7.5,
       "sand": 21.5,
       "silt": 52.1
+    },
+    "figures": {
+      "planted": {
+        "amount": 2500,
+        "by": "Wines of Greece (EDOAO)",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winesofgreece.org/nemea-disclosed/",
+        "year": null
+      },
+      "production": null
     }
   },
   {

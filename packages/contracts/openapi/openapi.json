@@ -11895,8 +11895,12 @@
                       "mapa",
                       "regione-lombardia",
                       "regione-umbria",
-                      "statistik-austria"
+                      "statistik-austria",
+                      "web"
                     ]
+                  },
+                  "by": {
+                    "type": "string"
                   },
                   "quote": {
                     "type": "string"
@@ -11941,8 +11945,12 @@
                       "mapa",
                       "regione-lombardia",
                       "regione-umbria",
-                      "statistik-austria"
+                      "statistik-austria",
+                      "web"
                     ]
+                  },
+                  "by": {
+                    "type": "string"
                   },
                   "quote": {
                     "type": "string"

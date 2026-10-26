@@ -284,6 +284,13 @@ export const sources: Source[] = [
   },
   {
     group: "figures",
+    terms: "factOnly",
+    name: "Los consorcios y consejos reguladores de cada denominación, por ejemplo el Consorzio di Tutela del Roero (solo donde ninguna fuente oficial da la cifra; cada una enlazada en la ficha)",
+    url: "https://www.consorziodelroero.it/en/origins-and-history/",
+    what: "areas",
+  },
+  {
+    group: "figures",
     terms: "reuseCiting",
     name: "Ministerio de Agricultura, Pesca y Alimentación",
     url: "https://www.mapa.gob.es/",

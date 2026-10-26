@@ -48,6 +48,7 @@ const excluded = [
   // was checked against: the library keeps the fact and its link, never the
   // page's text, so the sentences stay in the private repository.
   "data/kb/web-readings.json",
+  "data/kb/web-region-figures.json",
 ];
 
 /**

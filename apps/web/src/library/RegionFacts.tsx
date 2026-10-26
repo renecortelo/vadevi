@@ -99,52 +99,58 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
               <span key={figure.sourceUrl}>
                 {index === 0 ? "" : " · "}
                 <a className="text-link" href={figure.sourceUrl} rel="noreferrer" target="_blank">
-                  {figure.publisher === "mapa"
-                    ? t("library.glanceSourceMapa", { campaign: figure.year ?? "" })
-                    : figure.publisher === "douane"
-                      ? t("library.glanceSourceDouane", { campaign: figure.year ?? "" })
-                      : figure.publisher === "inv"
-                        ? t("library.glanceSourceInv", { campaign: figure.year ?? "" })
-                        : figure.publisher === "destatis"
-                          ? t("library.glanceSourceDestatis", { campaign: figure.year ?? "" })
-                          : figure.publisher === "statistik-austria"
-                            ? t(
-                                figure === production
-                                  ? "library.glanceSourceStatistikAustriaHarvest"
-                                  : "library.glanceSourceStatistikAustria",
-                                { campaign: figure.year ?? "" },
-                              )
-                            : figure.publisher === "artea"
-                              ? t("library.glanceSourceArtea", { campaign: figure.year ?? "" })
-                              : figure.publisher === "regione-umbria"
-                                ? t("library.glanceSourceUmbria", { campaign: figure.year ?? "" })
-                                : figure.publisher === "regione-lombardia"
-                                  ? t("library.glanceSourceLombardia", {
-                                      campaign: figure.year ?? "",
-                                    })
-                                  : figure.publisher === "ksh"
-                                    ? t("library.glanceSourceKsh", { campaign: figure.year ?? "" })
-                                    : figure.publisher === "federal-register"
-                                      ? t("library.glanceSourceFederalRegister", {
+                  {figure.publisher === "web" && figure.by !== undefined
+                    ? figure.year === null
+                      ? figure.by
+                      : t("library.glanceSourceWeb", { by: figure.by, campaign: figure.year })
+                    : figure.publisher === "mapa"
+                      ? t("library.glanceSourceMapa", { campaign: figure.year ?? "" })
+                      : figure.publisher === "douane"
+                        ? t("library.glanceSourceDouane", { campaign: figure.year ?? "" })
+                        : figure.publisher === "inv"
+                          ? t("library.glanceSourceInv", { campaign: figure.year ?? "" })
+                          : figure.publisher === "destatis"
+                            ? t("library.glanceSourceDestatis", { campaign: figure.year ?? "" })
+                            : figure.publisher === "statistik-austria"
+                              ? t(
+                                  figure === production
+                                    ? "library.glanceSourceStatistikAustriaHarvest"
+                                    : "library.glanceSourceStatistikAustria",
+                                  { campaign: figure.year ?? "" },
+                                )
+                              : figure.publisher === "artea"
+                                ? t("library.glanceSourceArtea", { campaign: figure.year ?? "" })
+                                : figure.publisher === "regione-umbria"
+                                  ? t("library.glanceSourceUmbria", { campaign: figure.year ?? "" })
+                                  : figure.publisher === "regione-lombardia"
+                                    ? t("library.glanceSourceLombardia", {
+                                        campaign: figure.year ?? "",
+                                      })
+                                    : figure.publisher === "ksh"
+                                      ? t("library.glanceSourceKsh", {
                                           campaign: figure.year ?? "",
                                         })
-                                      : figure.publisher === "blw"
-                                        ? t("library.glanceSourceBlw", {
+                                      : figure.publisher === "federal-register"
+                                        ? t("library.glanceSourceFederalRegister", {
                                             campaign: figure.year ?? "",
                                           })
-                                        : figure.publisher === "ine-portugal"
-                                          ? t("library.glanceSourceInePortugal", {
+                                        : figure.publisher === "blw"
+                                          ? t("library.glanceSourceBlw", {
                                               campaign: figure.year ?? "",
                                             })
-                                          : figure.publisher === "abs"
-                                            ? t("library.glanceSourceAbs", {
+                                          : figure.publisher === "ine-portugal"
+                                            ? t("library.glanceSourceInePortugal", {
                                                 campaign: figure.year ?? "",
                                               })
-                                            : figure.publisher === "adelaide"
-                                              ? t("library.glanceSourceAdelaide", {
+                                            : figure.publisher === "abs"
+                                              ? t("library.glanceSourceAbs", {
                                                   campaign: figure.year ?? "",
                                                 })
-                                              : t("library.summarySource")}
+                                              : figure.publisher === "adelaide"
+                                                ? t("library.glanceSourceAdelaide", {
+                                                    campaign: figure.year ?? "",
+                                                  })
+                                                : t("library.summarySource")}
                 </a>
               </span>
             ),

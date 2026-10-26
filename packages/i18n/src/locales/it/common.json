@@ -497,6 +497,7 @@
     "yoursTastings_other": "{{count}} degustazioni",
     "yoursAverage": "media {{score}}/100",
     "glanceSourceMapa": "Ministero spagnolo dell'Agricoltura (MAPA), campagna {{campaign}}",
+    "glanceSourceWeb": "{{by}}, {{campaign}} (solo il dato)",
     "glanceSourceDouane": "Dogane francesi, dichiarazioni di vendemmia {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Istituto nazionale di vitivinicoltura argentino (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceInePortugal": "Istituto nazionale di statistica portoghese (INE), vino dichiarato {{campaign}} (CC BY 4.0)",

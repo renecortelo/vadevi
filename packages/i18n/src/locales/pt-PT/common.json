@@ -497,6 +497,7 @@
     "yoursTastings_other": "{{count}} provas",
     "yoursAverage": "média {{score}}/100",
     "glanceSourceMapa": "Ministério da Agricultura de Espanha (MAPA), campanha {{campaign}}",
+    "glanceSourceWeb": "{{by}}, {{campaign}} (só o dado)",
     "glanceSourceDouane": "Alfândegas de França, declarações de colheita {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Instituto Nacional de Vitivinicultura da Argentina (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceInePortugal": "Instituto Nacional de Estatística (INE), vinho declarado {{campaign}} (CC BY 4.0)",

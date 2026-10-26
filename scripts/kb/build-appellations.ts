@@ -1996,8 +1996,69 @@ for (const entry of entries) {
   };
   abs += 1;
 }
+// Where no official source gives a figure, the appellation's own body may:
+// a consorzio's or a regulatory council's page, read under the operator's
+// rule of the fact alone (`data/kb/web-region-figures.json`, private: the
+// public mirror leaves it out). Each sentence must still be on our copy of
+// its page with the figure in it; the card shows the figure and who gives
+// it, never the sentence. `KB_WEB=0` builds without them.
+const webFiguresFile = resolve("data/kb/web-region-figures.json");
+const webFigures: Record<
+  string,
+  Partial<
+    Record<
+      "planted" | "production",
+      {
+        amount: number;
+        by: string;
+        quote: string;
+        sourceUrl: string;
+        volume: string;
+        year: string | null;
+      }
+    >
+  >
+> = process.env.KB_WEB === "0" || !existsSync(webFiguresFile)
+  ? {}
+  : (JSON.parse(readFileSync(webFiguresFile, "utf8")) as { regions: typeof webFigures }).regions;
+let fromBodies = 0;
+for (const entry of entries) {
+  for (const field of ["planted", "production"] as const) {
+    const figure = webFigures[entry.id]?.[field];
+    if (figure === undefined || entry.figures?.[field]) continue;
+    const page = resolve(".kb-cache/web", `${figure.volume}.txt`);
+    const flat = (text: string) => text.replace(/\s+/g, " ").toLowerCase();
+    const written = (amount: number) => [
+      String(amount),
+      amount.toLocaleString("en-US"),
+      amount.toLocaleString("de-DE"),
+      amount.toLocaleString("fr-FR").replace(/\u202f/g, " "),
+    ];
+    if (
+      !existsSync(page) ||
+      !flat(readFileSync(page, "utf8")).includes(flat(figure.quote)) ||
+      !written(figure.amount).some((form) => figure.quote.includes(form))
+    ) {
+      console.warn(`  ${entry.id} ${field}: the body's figure is not on its page; left out.`);
+      continue;
+    }
+    entry.figures = {
+      planted: entry.figures?.planted ?? null,
+      production: entry.figures?.production ?? null,
+      [field]: {
+        amount: figure.amount,
+        by: figure.by,
+        publisher: "web",
+        quote: "",
+        sourceUrl: figure.sourceUrl,
+        year: figure.year,
+      },
+    };
+    fromBodies += 1;
+  }
+}
 console.info(
-  `  ${withClimate} names with their climate (${withSoil} with their soil), ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE, ${blw} Swiss from the BLW, ${abs} Australian from the ABS.`,
+  `  ${withClimate} names with their climate (${withSoil} with their soil), ${withFigures} with area or production; ${official} Spanish areas from the Ministry, ${customs} French from the customs, ${institute} Argentine from the INV, ${destatis} German from Destatis, ${statistikAustria} Austrian from Statistik Austria, ${ksh} Hungarian from the KSH, ${italianRegional} Italian from Tuscany, Lombardy and Umbria, ${fromText} from articles' text, ${federalRegister} American from the Federal Register, ${fromAdelaide} from the University of Adelaide, ${inePortugal} Portuguese from the INE, ${blw} Swiss from the BLW, ${abs} Australian from the ABS, ${fromBodies} from appellation bodies' pages (the fact alone).`,
 );
 
 // Grapes a region's own article names as grown or made there — its opening,

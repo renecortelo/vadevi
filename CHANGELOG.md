@@ -16,6 +16,11 @@ has the reasons.
 
 ### Library
 
+- **An appellation's own body, where no official source gives a figure**:
+  the vineyard area of Roero and Lugana from their consorzi and of Nemea
+  from Wines of Greece, as the figure and who gives it, linked. An official
+  figure is never replaced by a body's.
+
 - **The last of the producers' pages read**: a deeper pass over the 1,632
   wineries' sites that had single-variety wines (up to 120 pages each, no
   PDFs) adds alcohol for Albana, Carménère and Sémillon (medium) and Pinotage

@@ -21,7 +21,14 @@ export type RegionFigureSource = {
     | "mapa"
     | "regione-lombardia"
     | "regione-umbria"
-    | "statistik-austria";
+    | "statistik-austria"
+    | "web";
+  /**
+   * For `web`: the appellation's own body (a consorzio, a regulatory
+   * council) on a page that is not openly licensed — the figure and who
+   * gives it, linked, never the page's sentence (`quote` is empty).
+   */
+  by?: string;
   quote: string;
   sourceUrl: string;
   year: string | null;

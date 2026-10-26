@@ -497,6 +497,7 @@
     "yoursTastings_other": "{{count}} Verkostungen",
     "yoursAverage": "Schnitt {{score}}/100",
     "glanceSourceMapa": "Spanisches Landwirtschaftsministerium (MAPA), Kampagne {{campaign}}",
+    "glanceSourceWeb": "{{by}}, {{campaign}} (nur die Zahl)",
     "glanceSourceDouane": "Französischer Zoll, Ernteerklärungen {{campaign}} · Licence Ouverte",
     "glanceSourceInv": "Argentiniens Nationales Weinbauinstitut (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceInePortugal": "Statistikamt Portugals (INE), gemeldeter Wein {{campaign}} (CC BY 4.0)",

@@ -101,6 +101,16 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     "Instituto Nacional de Estatística (INE) de Portugal, vino declarado 2025 (CC BY 4.0)",
     { timeout: 15_000 },
   );
+  // A name no official source gives a figure for: its own body's, the figure
+  // and who gives it, linked, never the page's sentence — Roero's vineyards,
+  // from its consorzio.
+  await page.goto("/library/regions/it-roero");
+  await expect(page.locator(".region-glance")).toContainText("ha", { timeout: 15_000 });
+  await expect(
+    page.locator("#region-glance ~ .section-help").getByRole("link", {
+      name: "Consorzio di Tutela del Roero",
+    }),
+  ).toHaveAttribute("href", "https://www.consorziodelroero.it/en/origins-and-history/");
   // An Australian GI zone: its vineyard area from the Australian Bureau of
   // Statistics.
   await page.goto("/library/regions/au-barossa");

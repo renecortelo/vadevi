@@ -394,7 +394,16 @@ Destatis, Statistik Austria, the KSH, ARTEA, Lombardy, Umbria, the Federal
 Register, Switzerland's BLW, Statistics Portugal), then its Wikipedia
 article's infobox or text, then the University of Adelaide's areas, then the
 Australian Bureau of Statistics' for Australian names still without one —
-each credited as «Licences» says.
+each credited as «Licences» says. Last, where none of them gives a figure,
+the appellation's own body may (a consorzio, a regulatory council, an
+interprofession), on a page that is not openly licensed, under the
+operator's rule of the fact alone: `data/kb/web-region-figures.json`
+(private; the public mirror leaves it out) holds the sentence, checked word
+for word against our copy of the page and holding the figure, and the card
+shows the figure and who gives it, linked, never the sentence (Roero and
+Lugana from their consorzi, Nemea from Wines of Greece). A body's figure
+never replaces an official one: where they differ (Friuli Grave's consorzio
+gives «circa 300.000 hl», the official source 73,800) the official stays.
 
 - `pnpm kb:fetch-climate` reads the monthly mean temperature and
   precipitation, 1981–2010, at every point from CHELSA V2.1 — only the rows

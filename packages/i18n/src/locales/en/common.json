@@ -497,6 +497,7 @@
     "yoursTastings_other": "{{count}} tastings",
     "yoursAverage": "mean score {{score}}/100",
     "glanceSourceMapa": "Spain's Ministry of Agriculture (MAPA), {{campaign}} campaign",
+    "glanceSourceWeb": "{{by}}, {{campaign}} (the figure alone)",
     "glanceSourceDouane": "French customs, {{campaign}} harvest declarations · Licence Ouverte",
     "glanceSourceInv": "Argentina's National Wine Institute (INV), {{campaign}} · CC BY 4.0",
     "glanceSourceInePortugal": "Statistics Portugal (INE), wine declared {{campaign}} (CC BY 4.0)",

@@ -311,8 +311,12 @@ const RegionFigureSchema = z
         "regione-lombardia",
         "regione-umbria",
         "statistik-austria",
+        // The appellation's own body, on a page that is not openly licensed:
+        // the figure and who gives it (`by`), never its sentence.
+        "web",
       ])
       .optional(),
+    by: z.string().optional(),
     /** The infobox line it was read from. */
     quote: z.string(),
     sourceUrl: z.string().url(),
