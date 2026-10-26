@@ -116,6 +116,17 @@ function searchTerms(message: string): string[] {
   ].slice(0, 8);
 }
 
+/**
+ * An answer's citations, in the order they were gathered: every library
+ * source its statements lean on (a grape's facts may come from nine), then
+ * the others while there is room, twelve at most.
+ */
+function cappedCitations(all: Map<string, Source>, library: { id: string }[]): Source[] {
+  const kept = new Set(library.map((source) => source.id));
+  let room = Math.max(0, 8 - kept.size);
+  return [...all.values()].filter((source) => kept.has(source.id) || room-- > 0).slice(0, 12);
+}
+
 function requestsTasteProfile(message: string): boolean {
   const normalized = normalizeWineText(message);
   // "What is my style?", "what kind of drinker am I?", "mi paladar": the
@@ -3008,7 +3019,7 @@ export async function runDeterministicAssistantTurn(
   const renderedClaims = languageResult?.claims ?? [];
   return {
     data: {
-      citations: [...citationMap.values()].slice(0, 8),
+      citations: cappedCitations(citationMap, library.sources),
       comparisons,
       evidence,
       libraryGrapes: library.grapes,

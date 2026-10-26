@@ -81,6 +81,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Ministero dell'agricoltura (MASAF), Registro nazionale delle varietà di vite: fichas de variedades",
+    terms: "factOnly",
+    url: "http://catalogoviti.politicheagricole.it/scheda.php?codice=285",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Las fichas técnicas de las propias bodegas, por ejemplo Feudi del Pisciotto (un dato de una uva solo cuando tres bodegas o más dicen lo mismo de su vino de esa uva; cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.castellare.it/wp-content/uploads/2025/04/Feudi-del-Pisciotto_Grillo_Colori-di-Sicilia_ita.pdf",

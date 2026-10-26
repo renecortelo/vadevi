@@ -2182,7 +2182,7 @@
                   ],
                   "additionalProperties": false
                 },
-                "maxItems": 8
+                "maxItems": 12
               },
               "comparisons": {
                 "type": "array",

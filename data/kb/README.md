@@ -340,20 +340,39 @@ shop sites; a site that refuses scripts goes on the operator's list to read
 by hand.
 
 - **A page about the grape itself** (the Georgian Wine Association's
-  «Grape varieties»): one is enough, as an article is.
+  «Grape varieties», the Italian ministry's register of vine varieties):
+  one is enough, as an article is.
 - **The grape's own wines**: a fact a producer states of its wine made of
   that grape alone («100 % Grillo», «in purezza», «monovarietal») is about
   that wine, not the grape, so it stands only when **three producers or
   more** say the same of theirs. Each counts once however many sites carry
   its sheet (its own, an importer's); a shop's tasting note is not the
   producer's and does not count. The card says «according to the wines of
-  three producers» and lists each wine, linked.
+  three producers» and lists each wine, linked. A sheet's label line naming
+  one grape alone («Rebsorte: Silvaner», «Varietal: Lagrein») counts as the
+  wine being that grape. A sentence that rules a dish out («con esclusione
+  della selvaggina») gives no pairing, and a name more than one variety
+  goes by (Trebbiano, Arvine) proves nothing.
+- **Sweetness across producers**: «dry» stands only where the grape's other
+  single-variety wines do not say otherwise; where three producers make it
+  dry and three others semi-dry (Blauer Portugieser «trocken» and
+  «halbtrocken», «lieblich»), the fact is the range, each end on three
+  producers' wines.
 
 The readings are in `data/kb/web-readings.json`, which stays in the private
 repository: each sentence is checked word for word against our copy of its
 page (`.kb-cache/web/`), exactly as an article's is, and only the fact
 reaches `grapes.json`. `KB_WEB=0 pnpm kb:build-grapes` builds the library
 without any of them, and `pnpm kb:score` says how many fields they fill.
+
+The producers' pages were found by visiting, politely (`robots.txt`
+honoured, one request every two seconds per site, technical-sheet PDFs
+within the operator's grant of 400), the official websites Wikidata lists
+for wineries (P856), those OpenStreetMap lists for its `craft=winery`
+places (only the address is used, to visit the site; nothing of
+OpenStreetMap's data enters the library), a hand list of producer groups
+and importers, and targeted searches. The tools stay outside the
+repository; each page is cached under `.kb-cache/web/`.
 
 ## Climate, planted area and production
 

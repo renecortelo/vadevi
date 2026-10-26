@@ -8,6 +8,18 @@ has the reasons.
 
 ### Library
 
+- **Twenty-two more grape facts agreed by producers' own wines**, found by
+  visiting the websites of some 9,000 wineries and importers (those Wikidata
+  and OpenStreetMap list, and a hand list), `robots.txt` honoured. Each
+  stands on three producers' single-variety wines or more: Chenin Blanc,
+  Fiano and Zweigelt medium-bodied, Montepulciano full-bodied, Refosco and
+  Sangiovese dry, Blauer Portugieser from dry to semi-dry (three producers'
+  «trocken», three others' «halbtrocken» or «lieblich»), and pairings for
+  Lagrein, Pignolo, Refosco, Tempranillo, Silvaner, Grenache, Verdelho,
+  Bastardo (Trousseau), Marselan, Petit Verdot, Godello, Grenache Blanc,
+  Pinotage and Roussanne. Pignolo's alcohol comes from the Italian
+  ministry's register of vine varieties. Vicenç now cites every source a
+  grape's facts come from, up to twelve.
 - **Facts from pages that are not openly licensed, as the fact alone**: a
   grape's fact may now come from an interprofessional body's page about it
   (the Georgian Wine Association: Chinuri's alcohol medium, Khikhvi dry to

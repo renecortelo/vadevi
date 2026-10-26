@@ -179,6 +179,9 @@ type WebReading = {
     producer: string;
     quote: string;
     source: WebSource;
+    /** The end of a range this wine stands for: «dry» for one producer's
+     * Portugieser, «medium» for another's. */
+    value?: string;
     wine: string;
     words?: Record<string, string>;
   }[];
@@ -445,6 +448,7 @@ for (const qid of index) {
       source: WebSource,
       lang: string,
       words?: Record<string, string>,
+      value: string | string[] = reading.value,
     ) => {
       const page = webPage(source.volume);
       if (page === null) {
@@ -457,7 +461,7 @@ for (const qid of index) {
         return null;
       }
       const found = validateExtraction(
-        { [field]: { quote, value: reading.value, ...(words === undefined ? {} : { words }) } },
+        { [field]: { quote, value, ...(words === undefined ? {} : { words }) } },
         page,
         raw.wikidataOrigin,
       );
@@ -468,7 +472,7 @@ for (const qid of index) {
       const wines = reading.wines ?? [];
       // Each wine's reading, kept only where it says what the reading says.
       const agreeing = wines.flatMap((wine) => {
-        const found = read(wine.quote, wine.source, wine.lang, wine.words);
+        const found = read(wine.quote, wine.source, wine.lang, wine.words, wine.value);
         if (found === null) return [];
         const values = found.evidence
           .filter((entry) => entry.field === field)
@@ -478,12 +482,24 @@ for (const qid of index) {
       const said =
         field === "pairings"
           ? [...new Set(agreeing.flatMap((one) => one.values))]
-          : [String(agreeing[0]?.values[0] ?? "")];
+          : [[reading.value].flat().join(", ")];
       for (const value of said) {
-        const by = agreeing.filter((one) => one.values.includes(value));
-        const producers = new Set(by.map((one) => normalize(one.wine.producer)));
-        if (producers.size < 3) {
-          rejected.push({ field, grape, reason: `only ${producers.size} producers agree`, value });
+        // A range stands when each of its ends does: three producers' dry
+        // wines of the grape, and three producers' semi-dry ones.
+        const ends = field === "sweetness" && value.includes("-") ? value.split("-") : [value];
+        const by = agreeing.filter((one) => ends.some((end) => one.values.includes(end)));
+        const fewest = Math.min(
+          ...ends.map(
+            (end) =>
+              new Set(
+                by
+                  .filter((one) => one.values.includes(end))
+                  .map((one) => normalize(one.wine.producer)),
+              ).size,
+          ),
+        );
+        if (fewest < 3) {
+          rejected.push({ field, grape, reason: `only ${fewest} producers agree`, value });
           continue;
         }
         const listed = by.map((one) => ({

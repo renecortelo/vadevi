@@ -147,4 +147,11 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await expect(
     grillo.locator("li", { hasText: "Según los vinos de 4 bodegas" }).getByRole("link"),
   ).toHaveCount(4);
+
+  // A range stands when each end does: three producers' dry Portugieser and
+  // three producers' semi-dry ones.
+  await page.goto("/library/grapes/blauer-portugieser");
+  const portugieser = page.locator(".library-bar", { hasText: "Seco o dulce" });
+  await expect(portugieser).toContainText("De seco a semiseco", { timeout: 15_000 });
+  await expect(portugieser).toContainText("Según los vinos de 6 bodegas");
 });

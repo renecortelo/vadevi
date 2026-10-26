@@ -143,6 +143,31 @@
         "quote": "Vinos varietales, alcohólicos y acidez total media elevada.",
         "value": "high",
         "sourceUrl": "https://web.archive.org/web/20220629061959/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://murviedro.es/vino/santerra-godello",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Bodegas Murviedro",
+            "sourceUrl": "https://murviedro.es/vino/santerra-godello",
+            "wine": "Santerra Godello"
+          },
+          {
+            "producer": "Adega Ponte da Boga",
+            "sourceUrl": "https://pontedaboga.es/tienda/godello/",
+            "wine": "Godello"
+          },
+          {
+            "producer": "Bodegas Loeda",
+            "sourceUrl": "https://bodegasloeda.com/catro-parroquias-godello/",
+            "wine": "Catro Parroquias Godello"
+          }
+        ]
       }
     ],
     "id": "godello",
@@ -157,7 +182,9 @@
       "pt": "Godello"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 5,
     "regions": [
       {
@@ -5495,7 +5522,7 @@
       "floral",
       "hazelnut"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -5671,6 +5698,31 @@
         "quote": "Гарно поєднуються зі стравами з риби, білого м'яса та м'якими сирами",
         "value": "soft cheese",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.hugowines.com.au/products/fiano",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Hugo",
+            "sourceUrl": "https://www.hugowines.com.au/products/fiano",
+            "wine": "Fiano"
+          },
+          {
+            "producer": "Campbells Wines",
+            "sourceUrl": "https://www.campbellswines.com.au/products/2024-fiano",
+            "wine": "2024 Fiano"
+          },
+          {
+            "producer": "Juniper Estate",
+            "sourceUrl": "https://juniperestate.com.au/products/2023-sun-dips-low-fiano",
+            "wine": "2023 Sun Dips Low Fiano"
+          }
+        ]
       },
       {
         "field": "origin",
@@ -7619,6 +7671,36 @@
         "quote": "Le grenache blanc donne des vins blancs secs puissants et chaleureux ... il sert également à l'élaboration des vins doux naturels.",
         "value": "dry-sweet",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Grenache_blanc"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.vinosiberian.com/producto/clos-badaceli-garnacha-blanca/",
+        "value": "seafood",
+        "wines": [
+          {
+            "producer": "Viñas del Jaro",
+            "sourceUrl": "https://www.vinosiberian.com/producto/clos-badaceli-garnacha-blanca/",
+            "wine": "Clos Badaceli Garnacha Blanca"
+          },
+          {
+            "producer": "Maxwell Wines",
+            "sourceUrl": "https://maxwellwines.com.au/products/grenache-blanc-2026",
+            "wine": "Grenache Blanc 2026"
+          },
+          {
+            "producer": "Elizabeth Spencer Winery",
+            "sourceUrl": "https://elizabethspencerwinery.com/shop/alexander-valley-grenache-blanc",
+            "wine": "Alexander Valley Grenache Blanc"
+          },
+          {
+            "producer": "Винарија Лазар",
+            "sourceUrl": "https://lazarwinery.mk/en/shop/product/belan-075-l",
+            "wine": "Belan 075 L"
+          }
+        ]
       }
     ],
     "id": "grenache-blanc",
@@ -7633,7 +7715,9 @@
       "pt": "Grenache Blanc"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "seafood"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -12519,7 +12603,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "plum",
       "blackberry"
@@ -12567,6 +12651,39 @@
         "quote": "Gusto: vinoso, abbastanza tannico.",
         "value": "high",
         "sourceUrl": "https://it.wikipedia.org/wiki/Pignolo"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Registro nazionale delle varietà di vite (MASAF)",
+        "sourceUrl": "http://catalogoviti.politicheagricole.it/scheda.php?codice=285"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.tunella.it/vini/pignolo/",
+        "value": "game",
+        "wines": [
+          {
+            "producer": "Azienda Agricola Tunella",
+            "sourceUrl": "https://www.tunella.it/vini/pignolo/",
+            "wine": "Pignolo"
+          },
+          {
+            "producer": "Gigante Wine",
+            "sourceUrl": "https://www.adrianogigante.it/vini/rossi/pignolo/",
+            "wine": "Pignolo"
+          },
+          {
+            "producer": "Ronchi di Sant'Egidio",
+            "sourceUrl": "https://ronchisantegidio.it/prodotto/pignolo-di-rosazzo/",
+            "wine": "Pignolo Di Rosazzo"
+          }
+        ]
       }
     ],
     "id": "pignolo",
@@ -12581,7 +12698,9 @@
       "pt": "Pignolo"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "game"
+    ],
     "prominence": 3,
     "regions": [
       {
@@ -12754,6 +12873,56 @@
         "quote": "Die Sorte erbringt einen granatfarbenen, säure- und tanninreichen Wein mit einem fruchtigen Bouquet.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://sturm.it/en/our-wines/refosco-dal-peduncolo-rosso/",
+        "value": "game",
+        "wines": [
+          {
+            "producer": "Azienda Agricola Sturm",
+            "sourceUrl": "https://sturm.it/en/our-wines/refosco-dal-peduncolo-rosso/",
+            "wine": "Refosco Dal Peduncolo Rosso"
+          },
+          {
+            "producer": "Gigante Wine",
+            "sourceUrl": "https://www.adrianogigante.it/vini/rossi/refosco-dal-peduncolo-rosso-riserva/",
+            "wine": "Refosco Dal Peduncolo Rosso Riserva"
+          },
+          {
+            "producer": "Altùris",
+            "sourceUrl": "https://alturis.it/refosco/",
+            "wine": "Refosco"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.tunella.it/vini/refosco-dal-peduncolo-rosso/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Azienda Agricola Tunella",
+            "sourceUrl": "https://www.tunella.it/vini/refosco-dal-peduncolo-rosso/",
+            "wine": "Refosco Dal Peduncolo Rosso"
+          },
+          {
+            "producer": "Gigante Wine",
+            "sourceUrl": "https://www.adrianogigante.it/vini/rossi/refosco-dal-peduncolo-rosso-riserva/",
+            "wine": "Refosco Dal Peduncolo Rosso Riserva"
+          },
+          {
+            "producer": "Altùris",
+            "sourceUrl": "https://alturis.it/refosco/",
+            "wine": "Refosco"
+          }
+        ]
       }
     ],
     "id": "refosco-dal-peduncolo-rosso",
@@ -12768,7 +12937,9 @@
       "pt": "Refosco dal Peduncolo Rosso"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "game"
+    ],
     "prominence": 5,
     "regions": [
       {
@@ -12831,7 +13002,10 @@
         "url": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Peteljcice",
@@ -16626,6 +16800,31 @@
         "field": "alcohol",
         "quote": "produces wine with a relatively high alcohol content",
         "value": "high"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.pala.it/vini/centosere-cannonau/",
+        "value": "cured meats",
+        "wines": [
+          {
+            "producer": "Pala",
+            "sourceUrl": "https://www.pala.it/vini/centosere-cannonau/",
+            "wine": "Centosere Cannonau"
+          },
+          {
+            "producer": "Bodega Mustiguillo",
+            "sourceUrl": "https://bodegamustiguillo.com/productos/la-garnacha/",
+            "wine": "La Garnacha"
+          },
+          {
+            "producer": "Bodegas Navajas",
+            "sourceUrl": "https://bodegasnavajas.es/tienda/producto/vinos-doc-rioja-navajas/monovarietales/navajas-tinto-garnacha/",
+            "wine": "Navajas Tinto Garnacha"
+          }
+        ]
       }
     ],
     "id": "grenache",
@@ -16640,7 +16839,9 @@
       "pt": "Grenache"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cured meats"
+    ],
     "prominence": 31,
     "regions": [],
     "styles": [
@@ -16945,6 +17146,31 @@
         "quote": "Esta casta origina vinhos de elevado teor alcoólico",
         "value": "high",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Aragonez"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://murviedro.es/vino/murviedro-coleccion-tempranillo",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Bodegas Murviedro",
+            "sourceUrl": "https://murviedro.es/vino/murviedro-coleccion-tempranillo",
+            "wine": "Murviedro Coleccion Tempranillo"
+          },
+          {
+            "producer": "Bodegas Ayuso",
+            "sourceUrl": "https://www.bodegasayuso.es/producto/estola-tempranillo-12meses/",
+            "wine": "Estola Tempranillo 12Meses"
+          },
+          {
+            "producer": "Cooperativa Santa Catalina",
+            "sourceUrl": "https://www.santacatalina.es/en/vino/los-galanes-tempranillo-en/",
+            "wine": "Los Galanes Tempranillo En"
+          }
+        ]
       }
     ],
     "id": "tempranillo",
@@ -16959,7 +17185,9 @@
       "pt": "Aragonez"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 31,
     "regions": [
       {
@@ -17124,7 +17352,7 @@
       "spice",
       "toast"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -17238,6 +17466,46 @@
         "quote": "Vinos alcohólicos y con acidez total alta",
         "value": "high",
         "sourceUrl": "https://web.archive.org/web/20230620050627/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/CHENIN_BLANC.pdf"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.warwickwine.com/product/warwick-the-old-vine-chenin-blanc/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Warwick",
+            "sourceUrl": "https://www.warwickwine.com/product/warwick-the-old-vine-chenin-blanc/",
+            "wine": "Warwick The Old Vine Chenin Blanc"
+          },
+          {
+            "producer": "Goedverwacht",
+            "sourceUrl": "https://goedverwacht.co.za/product/great-expectations-chenin-blanc/",
+            "wine": "Great Expectations Chenin Blanc"
+          },
+          {
+            "producer": "Leopard's Leap",
+            "sourceUrl": "https://www.leopardsleap.co.za/products/2021-chenin-blanc",
+            "wine": "2021 Chenin Blanc"
+          },
+          {
+            "producer": "Diemersfontein",
+            "sourceUrl": "https://www.diemersfontein.co.za/product/thokozani-chenin-blanc/",
+            "wine": "Thokozani Chenin Blanc"
+          },
+          {
+            "producer": "Jordan",
+            "sourceUrl": "https://www.jordanwines.com/product/jordan-inspector-peringuey-chenin-blanc-2025/",
+            "wine": "Jordan Inspector Peringuey Chenin Blanc 2025"
+          },
+          {
+            "producer": "Stellenbosch Hills Winery",
+            "sourceUrl": "https://stellenbosch-hills.co.za/product/chenin-blanc-wooded-2023/",
+            "wine": "Chenin Blanc Wooded 2023"
+          }
+        ]
       }
     ],
     "id": "chenin-blanc",
@@ -17849,6 +18117,36 @@
         "quote": "Vino, svetlo rumenkaste do rumenkasto zelenkaste barve ima srednjo vsebnost alkohola",
         "value": "medium",
         "sourceUrl": "https://sl.wikipedia.org/wiki/Zeleni_silvanec"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.3-zeilen.de/products/silvaner-schwanleite-2020",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Weinmanufaktur 3 Zeilen",
+            "sourceUrl": "https://www.3-zeilen.de/products/silvaner-schwanleite-2020",
+            "wine": "Silvaner Schwanleite 2020"
+          },
+          {
+            "producer": "Öko-Weingut Schmalzried",
+            "sourceUrl": "https://www.weingutschmalzried.de/produkt/silvaner/",
+            "wine": "Silvaner"
+          },
+          {
+            "producer": "Brüderlich Weingut",
+            "sourceUrl": "https://bruederlich-weingut.de/produkt/2022-silvaner/",
+            "wine": "2022 Silvaner"
+          },
+          {
+            "producer": "Weingut Christ",
+            "sourceUrl": "https://www.weingut-christ.de/products/silvaner-trocken-literwein",
+            "wine": "Silvaner Trocken Literwein"
+          }
+        ]
       }
     ],
     "id": "silvaner",
@@ -17863,7 +18161,9 @@
       "pt": "Silvaner"
     },
     "origin": "AT",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 29,
     "regions": [],
     "styles": [
@@ -19329,6 +19629,36 @@
         "field": "pairings",
         "quote": "One of the classic pairings in Italian cuisine is tomato-based pasta and pizza sauces with a Sangiovese-based Chianti.",
         "value": "pizza"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.dimajonorante.com/en/wines/sangiovese",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Di Majo Norante",
+            "sourceUrl": "https://www.dimajonorante.com/en/wines/sangiovese",
+            "wine": "Sangiovese"
+          },
+          {
+            "producer": "Vivalti Vinícola",
+            "sourceUrl": "https://www.vinicolavivalti.com.br/sangiovese-2752",
+            "wine": "Sangiovese 2752"
+          },
+          {
+            "producer": "Altezza Winery",
+            "sourceUrl": "https://www.altezzawinery.com/it/vini/sangiovese-igt-rosso-toscana/",
+            "wine": "Sangiovese Igt Rosso Toscana"
+          },
+          {
+            "producer": "Trentham Estate",
+            "sourceUrl": "https://www.trenthamestate.com.au/sangiovese-rose-2026.html",
+            "wine": "Sangiovese Rose 2026"
+          }
+        ]
       }
     ],
     "id": "sangiovese",
@@ -19423,7 +19753,10 @@
         "url": "https://pt.wikipedia.org/wiki/Sangiovese"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Brunello",
@@ -21919,6 +22252,31 @@
         "quote": "Вината направени от Пети Вердо са с висока плътност, с тъмен, дълбок цвят, високи танини и алкохол",
         "value": "high",
         "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%9F%D0%B5%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B4%D0%BE"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://pizzornowines.com/product/pizzorno-reserva-petit-verdot/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Pizzorno",
+            "sourceUrl": "https://pizzornowines.com/product/pizzorno-reserva-petit-verdot/",
+            "wine": "Pizzorno Reserva Petit Verdot"
+          },
+          {
+            "producer": "Bodegas Murviedro",
+            "sourceUrl": "https://murviedro.es/vino/murviedro-coleccion-petit-verdot",
+            "wine": "Murviedro Coleccion Petit Verdot"
+          },
+          {
+            "producer": "Vinícola Durigan",
+            "sourceUrl": "https://vinhosdurigan.com.br/produtos/petit-verdot-reserva/",
+            "wine": "Petit Verdot Reserva"
+          }
+        ]
       }
     ],
     "id": "petit-verdot",
@@ -21933,7 +22291,9 @@
       "pt": "Petit Verdot"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 21,
     "regions": [],
     "styles": [
@@ -25645,6 +26005,36 @@
         "quote": "Цей сорт винограду зазвичай використовується для виробництва сухих червоних",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE%D1%82%D0%B0%D0%B6"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://neethlingshof.co.za/product/pinotage/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Neethlingshof",
+            "sourceUrl": "https://neethlingshof.co.za/product/pinotage/",
+            "wine": "Pinotage"
+          },
+          {
+            "producer": "De Waal",
+            "sourceUrl": "https://www.dewaal.co.za/product-page/de-waal-top-of-the-hill-pinotage-2019",
+            "wine": "De Waal Top Of The Hill Pinotage 2019"
+          },
+          {
+            "producer": "Landskroon",
+            "sourceUrl": "https://www.landskroonwines.com/store-2/rhino-run-pinotage-6-x-750ml",
+            "wine": "Rhino Run Pinotage 6 X 750Ml"
+          },
+          {
+            "producer": "Dekkersvlei Vineyards",
+            "sourceUrl": "https://dekkersvlei.com/product/white-pinotage/",
+            "wine": "White Pinotage"
+          }
+        ]
       }
     ],
     "id": "pinotage",
@@ -25659,7 +26049,9 @@
       "pt": "Pinotage"
     },
     "origin": "ZA",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 19,
     "regions": [
       {
@@ -25986,7 +26378,7 @@
       "cherry",
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -26112,6 +26504,31 @@
         "quote": "Vína doprovázejí bez problémů nejrůznější masité pokrmy i vydatné sýry, případně těstoviny",
         "value": "pasta",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Zweigeltrebe"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://hahndorfhill.com.au/products/2023-zsa-zsa-zweigelt",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Hahndorf Hill Winery",
+            "sourceUrl": "https://hahndorfhill.com.au/products/2023-zsa-zsa-zweigelt",
+            "wine": "2023 Zsa Zsa Zweigelt"
+          },
+          {
+            "producer": "Weingut Gebrüder Nittnaus",
+            "sourceUrl": "https://www.nittnaus.net/en/weine/zweigelt-lieblich/",
+            "wine": "Zweigelt Lieblich"
+          },
+          {
+            "producer": "Fulkerson",
+            "sourceUrl": "https://www.fulkersonwinery.com/products/zweigelt",
+            "wine": "Zweigelt"
+          }
+        ]
       }
     ],
     "id": "zweigelt",
@@ -27266,6 +27683,46 @@
         "quote": "Ve vůni a chuti můžeme hledat květiny, čerstvé seno, třešně, cassis",
         "value": "blackcurrant",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Modr%C3%BD_Portugal"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.das-weingut-schmitt.de/products/blauer-portugieser-trocken-pfalz",
+        "value": "dry-medium",
+        "wines": [
+          {
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/blauer-portugieser-trocken-pfalz",
+            "wine": "Blauer Portugieser Trocken Pfalz"
+          },
+          {
+            "producer": "Landhaus Christmann",
+            "sourceUrl": "https://landhaus-christmann.de/produkt/portugieser-rotwein-trocken/",
+            "wine": "Portugieser Rotwein Trocken"
+          },
+          {
+            "producer": "Spielmann-Schindler",
+            "sourceUrl": "https://www.spielmann-schindler.de/products/spielmann-schindler-portugieser-trocken",
+            "wine": "Spielmann Schindler Portugieser Trocken"
+          },
+          {
+            "producer": "Weinhof Schreiber",
+            "sourceUrl": "https://weinhaus-schreiber.de/produkt/blauer-portugieser-qualitaetswein-halbtrocken/",
+            "wine": "Blauer Portugieser Qualitaetswein Halbtrocken"
+          },
+          {
+            "producer": "Weingut Andre",
+            "sourceUrl": "https://andre-wein.de/weinshop/portugieser-halbtrocken/",
+            "wine": "Portugieser Halbtrocken"
+          },
+          {
+            "producer": "Weingut Kopp",
+            "sourceUrl": "https://www.sternenfelserhof.de/shop/weine/rotweine/suesse-rotweine/2023-portugieser-lieblich/",
+            "wine": "2023 Portugieser Lieblich"
+          }
+        ]
       }
     ],
     "id": "blauer-portugieser",
@@ -27355,7 +27812,10 @@
         "url": "https://es.wikipedia.org/wiki/Blauer_portugieser"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Autrichien",
@@ -34417,6 +34877,31 @@
         "quote": "Die aus Roussanne gekelterten Weine sind säurereich und haben ein blumiges Aroma.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Roussanne"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.laurenthabrard.com/en/technical-sheets/vin-de-france-roussanne-2025",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "laurenthabrard.com",
+            "sourceUrl": "https://www.laurenthabrard.com/en/technical-sheets/vin-de-france-roussanne-2025",
+            "wine": "Vin De France Roussanne 2025"
+          },
+          {
+            "producer": "Domaine Saint Germain",
+            "sourceUrl": "https://www.domainesaintgermain.com/vin-de-savoie-bio/chignin-bergeron/",
+            "wine": "Chignin Bergeron"
+          },
+          {
+            "producer": "Domaine Jean Perrier & Fils",
+            "sourceUrl": "https://www.vins-perrier.com/chignin-bergeron-fleur-de-roussanne.html",
+            "wine": "Chignin Bergeron Fleur De Roussanne"
+          }
+        ]
       }
     ],
     "id": "roussanne",
@@ -34431,7 +34916,9 @@
       "pt": "Roussanne"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 13,
     "regions": [],
     "styles": [
@@ -35359,7 +35846,7 @@
     "aromas": [
       "cherry"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -35555,6 +36042,31 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Montepulciano_d%27Abruzzo",
         "place": "Montepulciano d'Abruzzo",
         "placeId": "it-montepulciano-d-abruzzo"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.filicaja.it/vini/montepulciano-d-abruzzo-doc.html",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Villa da Filicaja",
+            "sourceUrl": "https://www.filicaja.it/vini/montepulciano-d-abruzzo-doc.html",
+            "wine": "Montepulciano D Abruzzo Doc"
+          },
+          {
+            "producer": "Tenuta del Priore",
+            "sourceUrl": "https://tenutadelpriore.it/prodotto/sunnae-montepulciano-dabruzzo-doc/",
+            "wine": "Sunnae Montepulciano Dabruzzo Doc"
+          },
+          {
+            "producer": "Cantina Sociale \"San Zefferino\"",
+            "sourceUrl": "https://www.cantinasanzefferino.it/prodotti/montepulciano-d-abruzzo.html",
+            "wine": "Montepulciano D Abruzzo"
+          }
+        ]
       }
     ],
     "id": "montepulciano",
@@ -36473,6 +36985,31 @@
         "quote": "Il donne des vins à robe rubis, corsés, charpentés et chaleureux, qui se distinguent au nez par des notes de fruits rouges mais de couleur peu soutenue si les rendements sont élevés.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Trousseau"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.domaine-du-tausson.fr/produit-trousseau-25785.html",
+        "value": "red meat",
+        "wines": [
+          {
+            "producer": "Domaine du Tausson",
+            "sourceUrl": "https://www.domaine-du-tausson.fr/produit-trousseau-25785.html",
+            "wine": "Produit Trousseau 25785"
+          },
+          {
+            "producer": "Caveau des Byards",
+            "sourceUrl": "https://www.caveau-byards.fr/cotes-du-jura/8-cotes-du-jura-trousseau-2014-3504842230017.html",
+            "wine": "8 Cotes Du Jura Trousseau 2014 3504842230017"
+          },
+          {
+            "producer": "Domaine de Sainte-Marie",
+            "sourceUrl": "https://maison-de-sainte-marie.com/boutique/les-vins-rouges/trousseau/",
+            "wine": "Trousseau"
+          }
+        ]
       }
     ],
     "id": "bastardo",
@@ -36487,7 +37024,9 @@
       "pt": "Bastardo"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "red meat"
+    ],
     "prominence": 12,
     "regions": [],
     "styles": [
@@ -37466,6 +38005,31 @@
         "quote": "Лагрейн — сорт чёрного винограда, используемый для производства сухих красных вин",
         "value": "dry",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%B3%D1%80%D0%B5%D0%B9%D0%BD"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://cantinemonfort.com/wines/lagrein-trentino-doc/?lang=en",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Cantine Monfort",
+            "sourceUrl": "https://cantinemonfort.com/wines/lagrein-trentino-doc/?lang=en",
+            "wine": "Lagrein Trentino Doc"
+          },
+          {
+            "producer": "Castel Sallegg",
+            "sourceUrl": "https://www.castelsallegg.it/en/winery/wines/lagrein/",
+            "wine": "Lagrein"
+          },
+          {
+            "producer": "Cantina Terlano",
+            "sourceUrl": "https://www.cantina-terlano.com/en/wines/lagrein-24/",
+            "wine": "Lagrein 24"
+          }
+        ]
       }
     ],
     "id": "lagrein",
@@ -37480,7 +38044,9 @@
       "pt": "Lagrein"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -39576,6 +40142,31 @@
         "quote": "El raïm marselan produeix generalment vins aromàtics amb cos, de color fosc i tons porpra, rics en tanins",
         "value": "high",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Marselan"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://stagnari.com/los-vinos/seleccion-la-puebla/marselan/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "H. Stagnari",
+            "sourceUrl": "https://stagnari.com/los-vinos/seleccion-la-puebla/marselan/",
+            "wine": "Marselan"
+          },
+          {
+            "producer": "Viña Varela Zarranz",
+            "sourceUrl": "https://www.varelazarranz.com/catalogo-item/marselan-roble/",
+            "wine": "Marselan Roble"
+          },
+          {
+            "producer": "Domaine de la Catherinette",
+            "sourceUrl": "https://www.domainelacatherinette.com/nos-vins/vin-de-cepage-marselan/",
+            "wine": "Vin De Cepage Marselan"
+          }
+        ]
       }
     ],
     "id": "marselan",
@@ -39590,7 +40181,9 @@
       "pt": "Marselan"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -44160,6 +44753,31 @@
         "quote": "На родине — острове Мадейра входит в состав одного из двух официальных вин — Атлантис вайт.",
         "value": "PT",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B5%D0%BB%D1%8C%D1%8E"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://bacalhoa.pt/pt/bacalhoa-verdelho",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Bacalhôa",
+            "sourceUrl": "https://bacalhoa.pt/pt/bacalhoa-verdelho",
+            "wine": "Bacalhoa Verdelho"
+          },
+          {
+            "producer": "Quinta da Alorna",
+            "sourceUrl": "https://alorna.pt/produto/monocasta-verdelho-2024/",
+            "wine": "Monocasta Verdelho 2024"
+          },
+          {
+            "producer": "Cedar Creek Estate",
+            "sourceUrl": "https://cedarcreekestatewinery.com.au/product/verdelho/",
+            "wine": "Verdelho"
+          }
+        ]
       }
     ],
     "id": "verdelho",
@@ -44174,7 +44792,9 @@
       "pt": "Verdelho"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 10,
     "regions": [
       {
