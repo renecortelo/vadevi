@@ -16,6 +16,12 @@ has the reasons.
 
 ### Library
 
+- **The last of the producers' pages read**: a deeper pass over the 1,632
+  wineries' sites that had single-variety wines (up to 120 pages each, no
+  PDFs) adds alcohol for Albana, Carménère and Sémillon (medium) and Pinotage
+  (high), and fish for Assyrtiko and Loureiro. Distributors' and shops'
+  pages are left out of every count.
+
 - **A grape's bars read at a glance**: one line under each. Alcohol read
   from producers' sheets shows the degrees of most of its wines (the lowest
   and highest, a tenth of each end left out) under the two ends of its fill,

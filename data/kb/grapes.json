@@ -1642,7 +1642,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "buttercup",
       "toast",
@@ -1762,6 +1762,34 @@
         "quote": "I vini Sémillon sono piuttosto pesanti, con bassa acidità e una struttura quasi oleosa.",
         "value": "high",
         "sourceUrl": "https://it.wikipedia.org/wiki/S%C3%A9millon"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.suduiraut.com/en/vin/7/chateau-suduiraut-pur-semillon-grand-vin-blanc-sec",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.1,
+            "producer": "château Suduiraut",
+            "sourceUrl": "https://www.suduiraut.com/en/vin/7/chateau-suduiraut-pur-semillon-grand-vin-blanc-sec",
+            "wine": "Chateau Suduiraut Pur Semillon Grand Vin Blanc Sec"
+          },
+          {
+            "abv": 13.1,
+            "producer": "Dineen Vineyards",
+            "sourceUrl": "https://dineenvineyards.com/products/2025-semillon",
+            "wine": "2025 Semillon"
+          },
+          {
+            "abv": 12,
+            "producer": "Palatine Hills Estate Winery",
+            "sourceUrl": "https://www.palatinehillsestatewinery.com/products/2023-lakeshore-semillon",
+            "wine": "2023 Lakeshore Semillon"
+          }
+        ]
       }
     ],
     "id": "semillon",
@@ -2432,6 +2460,31 @@
         "quote": "Produce vinos poco alcohólicos",
         "value": "low",
         "sourceUrl": "https://es.wikipedia.org/wiki/Loureira"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://quintadalixa.pt/product/quinta-da-lixa-loureiro-pack-3un/",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Quinta da Lixa",
+            "sourceUrl": "https://quintadalixa.pt/product/quinta-da-lixa-loureiro-pack-3un/",
+            "wine": "Quinta Da Lixa Loureiro Pack 3Un"
+          },
+          {
+            "producer": "Anselmo Mendes Vinhos, Lda.",
+            "sourceUrl": "https://www.anselmomendes.pt/vinhos/tempo-loureiro-2019",
+            "wine": "Tempo Loureiro 2019"
+          },
+          {
+            "producer": "Quinta de Soalheiro",
+            "sourceUrl": "https://soalheiro.com/en/pages/soalheiro-germinar-loureiro-vinhas-velhas",
+            "wine": "Soalheiro Germinar Loureiro Vinhas Velhas"
+          }
+        ]
       }
     ],
     "id": "loureira",
@@ -2446,7 +2499,9 @@
       "nl": "Loureiro"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -22052,7 +22107,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "red fruit",
       "spice",
@@ -22203,6 +22258,40 @@
         "quote": "Aus der Carménère-Traube wird ein tanninarmer, dunkler, süffiger, nach Schokolade-, Tabak- und Lederaromen schmeckender Rotwein mit einem angenehmen Beerenaroma gekeltert.",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.puntozerowine.it/carmenere-rosso-igp-veneto/?lang=en",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14.5,
+            "producer": "Punto Zero",
+            "sourceUrl": "https://www.puntozerowine.it/carmenere-rosso-igp-veneto/?lang=en",
+            "wine": "Carmenere Rosso Igp Veneto"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina De Pra, Winery & Wine Tour",
+            "sourceUrl": "https://www.cantinadepra.com/en/carmenere/",
+            "wine": "Carmenere"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Château La Louvière",
+            "sourceUrl": "https://www.andrelurton.com/vin/trace-carmenere-rouge-2020/",
+            "wine": "Trace Carmenere Rouge 2020"
+          },
+          {
+            "abv": 13,
+            "producer": "Félix Solís Avantis S.A.",
+            "sourceUrl": "https://felixsolisavantis.com/wine/pico-andino-carmenere/",
+            "wine": "Pico Andino Carmenere"
+          }
+        ]
       }
     ],
     "id": "carmenere",
@@ -28200,7 +28289,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "smoky",
       "blackberry",
@@ -28387,6 +28476,34 @@
             "producer": "Dekkersvlei Vineyards",
             "sourceUrl": "https://dekkersvlei.com/product/white-pinotage/",
             "wine": "White Pinotage"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://boplaas.co.za/product/pinotage/",
+        "value": "high",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Boplaas",
+            "sourceUrl": "https://boplaas.co.za/product/pinotage/",
+            "wine": "Pinotage"
+          },
+          {
+            "abv": 14.47,
+            "producer": "Botha",
+            "sourceUrl": "https://bothakelder.co.za/product/pinotage-2019/",
+            "wine": "Pinotage 2019"
+          },
+          {
+            "abv": 14.49,
+            "producer": "Leopard's Leap",
+            "sourceUrl": "https://www.leopardsleap.co.za/products/2022-special-edition-pinotage",
+            "wine": "2022 Special Edition Pinotage"
           }
         ]
       }
@@ -32136,6 +32253,31 @@
             "wine": "2022"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://moraitiswines.gr/en/2020/12/15/moraitis-estate-assyrtiko/",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Οινοποιείο Μωραΐτη",
+            "sourceUrl": "https://moraitiswines.gr/en/2020/12/15/moraitis-estate-assyrtiko/",
+            "wine": "Moraitis Estate Assyrtiko"
+          },
+          {
+            "producer": "Domaine Florian",
+            "sourceUrl": "https://domaineflorian.com/de/wines/assyrtiko-fume/2022",
+            "wine": "2022"
+          },
+          {
+            "producer": "Κτήμα Κυρ-Γιάννη Γιαννακοχώρι",
+            "sourceUrl": "https://kiryianni.gr/wines/tarsanas/",
+            "wine": "Tarsanas"
+          }
+        ]
       }
     ],
     "id": "assyrtiko",
@@ -32150,7 +32292,9 @@
       "pt": "Assyrtiko"
     },
     "origin": "GR",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 16,
     "regions": [],
     "styles": [
@@ -49089,7 +49233,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -49202,6 +49346,40 @@
         "quote": "Albana is een oude witte druivensoort afkomstig uit Emilia-Romagna in Italië.",
         "value": "IT",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Albana_(druif)"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://vinigiovannini.it/prodotto/gioja-romagna-albana-docg-secco/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 15,
+            "producer": "Azienda agricola Giovannini",
+            "sourceUrl": "https://vinigiovannini.it/prodotto/gioja-romagna-albana-docg-secco/",
+            "wine": "Gioja Romagna Albana Docg Secco"
+          },
+          {
+            "abv": 12,
+            "producer": "Fattoria Zerbina",
+            "sourceUrl": "https://www.zerbina.com/en/wines/bianco-di-ceparano-romagna-albana-secco/",
+            "wine": "Bianco Di Ceparano Romagna Albana Secco"
+          },
+          {
+            "abv": 13,
+            "producer": "Donegato Winery",
+            "sourceUrl": "https://donegato.com/products/albana-secco",
+            "wine": "Albana Secco"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Celli",
+            "sourceUrl": "https://www.celli-vini.com/fr/i-croppi-albana-secco/",
+            "wine": "I Croppi Albana Secco"
+          }
+        ]
       }
     ],
     "id": "albana",
