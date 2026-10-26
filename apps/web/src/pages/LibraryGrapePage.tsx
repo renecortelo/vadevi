@@ -104,7 +104,6 @@ export function LibraryGrapePage() {
     ...axes.filter((axis) => grape[axis] !== null),
     ...(grape.sweetness === null ? [] : ["sweetness"]),
   ];
-  const sweetSteps = ["dry", "medium", "sweet"] as const;
   // Alcohol read from the producers' sheets: the lowest and highest figure of
   // most of its wines (the tenth at each end left out, so one sweet Mosel or
   // one fortified bottle does not stretch it), on an axis from 8 % to 17 %
@@ -199,12 +198,6 @@ export function LibraryGrapePage() {
           </Link>
         )}
       </span>
-    );
-  const noteFor = (field: string) =>
-    placeNote(
-      grape.evidence.find(
-        (entry) => entry.field === field && (entry.place !== null || entry.basis !== null),
-      ),
     );
   // A fact's wines, each linked, with the alcohol its sheet gives where that
   // is what the fact was read from.
@@ -438,31 +431,27 @@ export function LibraryGrapePage() {
                         </>
                       );
                     }
-                    const from = sweetSteps.indexOf(grape.sweetness.from) * 33;
-                    const to =
-                      (sweetSteps.indexOf(grape.sweetness.to) + 1) * 33 +
-                      (grape.sweetness.to === "sweet" ? 1 : 0);
+                    // A level like the others, filled from the left: dry
+                    // leaves it empty, semi-dry fills half, sweet all of it.
+                    // A grape made both ways (Riesling, dry to sweet) fills to
+                    // the middle of its range, and the line says the range.
+                    const reach = { dry: 0, medium: 50, sweet: 100 };
+                    const fill = (reach[grape.sweetness.from] + reach[grape.sweetness.to]) / 2;
                     const start = t(`library.sweetness.${grape.sweetness.from}`);
                     const end = t(`library.sweetness.${grape.sweetness.to}`);
                     return (
                       <>
                         <span aria-hidden="true" className="library-gauge">
-                          <i style={{ "--from": `${from}%`, "--to": `${to}%` } as CSSProperties} />
+                          <i style={{ "--from": "0%", "--to": `${fill}%` } as CSSProperties} />
                         </span>
-                        {ends(
-                          from,
-                          to,
-                          start,
-                          end,
-                          start === end
-                            ? start
-                            : sentence(
-                                t("library.sweetnessRange", {
-                                  from: start.toLocaleLowerCase(i18n.language),
-                                  to: end.toLocaleLowerCase(i18n.language),
-                                }),
-                              ),
-                        )}
+                        {start === end
+                          ? start
+                          : sentence(
+                              t("library.sweetnessRange", {
+                                from: start.toLocaleLowerCase(i18n.language),
+                                to: end.toLocaleLowerCase(i18n.language),
+                              }),
+                            )}
                       </>
                     );
                   })()}
@@ -484,7 +473,6 @@ export function LibraryGrapePage() {
                   <li key={food}>{food}</li>
                 ))}
               </ul>
-              {noteFor("pairings")}
             </div>
           )}
           {suggested === null ? null : (

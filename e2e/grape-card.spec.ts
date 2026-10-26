@@ -89,9 +89,11 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await expect(sweetness).toContainText("De seco a dulce", { timeout: 15_000 });
   await expect(page.locator(".library-bar")).toHaveCount(4);
   await expect(page.locator(".library-bars")).not.toContainText("Tanino");
+  // Dry or sweet is a level filled from the left: a grape made both ways
+  // fills to the middle of its range.
   await expect(sweetness.locator(".library-gauge i")).toHaveAttribute(
     "style",
-    /--from: 0%; --to: 100%/,
+    /--from: 0%; --to: 50%/,
   );
   await page.screenshot({ fullPage: true, path: test.info().outputPath("grape-range.png") });
 
@@ -147,11 +149,8 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   // A fact the grape's single-variety wines agree on names how many producers
   // say it, and lists their wines: Grillo with fish, from four.
   await page.goto("/library/grapes/grillo");
-  await expect(page.getByText("Según los vinos de 4 bodegas").first()).toBeVisible({
-    timeout: 15_000,
-  });
   const grillo = page.locator(".library-evidence");
-  await grillo.locator("summary").click();
+  await grillo.locator("summary").first().click({ timeout: 15_000 });
   await expect(
     grillo.locator("li", { hasText: "Según los vinos de 4 bodegas" }).getByRole("link"),
   ).toHaveCount(4);
@@ -159,13 +158,13 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   // A range stands when each end does: three producers' dry Portugieser and
   // three producers' semi-dry ones.
   await page.goto("/library/grapes/blauer-portugieser");
-  // Under the gauge, «Seco» where its fill starts and «Semiseco» where it ends.
+  // Filled to a quarter, the middle of dry to semi-dry; the line says so.
   const portugieser = page.locator(".library-bar", { hasText: "Seco o dulce" });
-  await expect(portugieser.locator(".library-bar__start")).toHaveText("Seco", {
-    timeout: 15_000,
-  });
-  await expect(portugieser.locator(".library-bar__end")).toHaveText("Semiseco");
-  await expect(portugieser.locator(".sr-only")).toHaveText("De seco a semiseco");
+  await expect(portugieser).toContainText("De seco a semiseco", { timeout: 15_000 });
+  await expect(portugieser.locator(".library-gauge i")).toHaveAttribute(
+    "style",
+    /--from: 0%; --to: 25%/,
+  );
   const portugieserSources = page.locator(".library-evidence");
   await portugieserSources.locator("summary").first().click();
   await expect(portugieserSources).toContainText("Según los vinos de 6 bodegas");

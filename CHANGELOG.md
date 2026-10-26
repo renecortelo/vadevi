@@ -11,11 +11,12 @@ has the reasons.
 - **A grape's bars read at a glance**: one line under each. Alcohol read
   from producers' sheets shows the degrees of most of its wines (the lowest
   and highest, a tenth of each end left out) under the two ends of its fill,
-  on an axis whose thirds are WSET's low, medium and high; dry or sweet
-  shows «Seco» under where the fill starts and «Dulce» or «Semiseco» under
-  where it ends. Where each value comes from («according to the wines of six
-  producers», «said of the wine of Tokaj») moves to the sources at the foot
-  of the card.
+  on an axis whose thirds are WSET's low, medium and high; dry or sweet is
+  a level filled from the left like the others (dry empty, semi-dry half,
+  sweet full; a grape made both ways fills to the middle of its range, and
+  the line says the range). Where each value comes from («according to the
+  wines of six producers», «said of the wine of Tokaj»), for the bars and the
+  pairings alike, moves to the sources at the foot of the card.
 - **Alcohol for thirty grapes, from their producers' technical sheets**: a
   sheet gives the alcohol as a figure («13,5 % vol»), which the library now
   turns into a level on WSET's scale (low below 11 %, medium to 13.9 %,
