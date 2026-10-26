@@ -4990,7 +4990,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "lemon"
     ],
@@ -5118,6 +5118,40 @@
         "quote": "Гарно поєднуються зі стравами з овочів та морепродуктів",
         "value": "seafood",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D1%96%D0%BD%D1%82%D0%BE"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://quintadopinto.pt/en/products/vinho-branco-quinta-do-pinto-limited-edition-arinto-reserva-2022",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Quinta do Pinto",
+            "sourceUrl": "https://quintadopinto.pt/en/products/vinho-branco-quinta-do-pinto-limited-edition-arinto-reserva-2022",
+            "wine": "Vinho Branco Quinta Do Pinto Limited Edition Arinto Reserva 2022"
+          },
+          {
+            "abv": 13,
+            "producer": "Quinta do Gradil",
+            "sourceUrl": "https://www.quintadogradil.wine/pt/vinho-arinto/",
+            "wine": "Vinho Arinto"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Quinta da Raza",
+            "sourceUrl": "https://quintadaraza.pt/produto/dom-diogo-arinto/",
+            "wine": "Dom Diogo Arinto"
+          },
+          {
+            "abv": 13,
+            "producer": "Menin Wine Company",
+            "sourceUrl": "https://menin.pt/products/grande-reserva-branco/",
+            "wine": "Grande Reserva Branco"
+          }
+        ]
       },
       {
         "field": "origin",
@@ -46724,6 +46758,51 @@
             "wine": "Auxerrois"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.apel-weingut.de/shop/auxerrois-trocken/",
+        "value": "dry-medium",
+        "wines": [
+          {
+            "producer": "Weingut Hubertus M. Apel",
+            "sourceUrl": "https://www.apel-weingut.de/shop/auxerrois-trocken/",
+            "wine": "Auxerrois Trocken"
+          },
+          {
+            "producer": "Weingut Matthias Dostert",
+            "sourceUrl": "https://www.culinarium-nittel.de/produkt/auxerrois/",
+            "wine": "Auxerrois"
+          },
+          {
+            "producer": "Weingut Stiftshof",
+            "sourceUrl": "https://weingut-stiftshof.com/produkt/2024er-auxerrois-enkircher-qualitaetswein-trocken/",
+            "wine": "2024Er Auxerrois Enkircher Qualitaetswein Trocken"
+          },
+          {
+            "producer": "Weinhof Scheu",
+            "sourceUrl": "https://weinhof-scheu.de/products/auxerrois",
+            "wine": "Auxerrois"
+          },
+          {
+            "producer": "Weingut Margarethenhof",
+            "sourceUrl": "https://margarethenhof-forst.de/produkt/auxerrois-kernstueck-feinherb/",
+            "wine": "Auxerrois Kernstueck Feinherb"
+          },
+          {
+            "producer": "Weingut & Gästehaus Hass-Jüngling",
+            "sourceUrl": "https://www.weingut-haas-juengling.de/product/auxerrois-halbtrocken/",
+            "wine": "Auxerrois Halbtrocken"
+          },
+          {
+            "producer": "Weingut Hubertus M. Apel",
+            "sourceUrl": "https://www.apel-weingut.de/shop/auxerrois-muschelkalk-feinherb/",
+            "wine": "Auxerrois Muschelkalk Feinherb"
+          }
+        ]
       }
     ],
     "id": "auxerrois-blanc",
@@ -46828,7 +46907,10 @@
         "url": "https://es.wikipedia.org/wiki/Auxerrois_blanc"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Auxerrois Blanc de Laquenexy",
@@ -51330,6 +51412,76 @@
         "quote": "s ovocitým aroma žlutých jablek, červeného rybízu, pomerančů, kmínu a vavřínu",
         "value": "apple",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Bacchus_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://weingut-melber.de/products/bacchus-2025",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/bacchus-2025",
+            "wine": "Bacchus 2025"
+          },
+          {
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2023-bacchus-kabinett/",
+            "wine": "2023 Bacchus Kabinett"
+          },
+          {
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/bacchus-2/",
+            "wine": "Bacchus 2"
+          },
+          {
+            "producer": "Goldener Löwe",
+            "sourceUrl": "https://www.lorey-gaibach.de/eCommerce/2025er-Bacchus-Dt-Landwein-Main-halbtrocken/",
+            "wine": "2025Er Bacchus Dt Landwein Main Halbtrocken"
+          },
+          {
+            "producer": "Weingut Rumsauer",
+            "sourceUrl": "https://www.rumsauer.de/produkt/bacchus-kabinett/",
+            "wine": "Bacchus Kabinett"
+          },
+          {
+            "producer": "Weingut Bistro Molitor",
+            "sourceUrl": "https://weingut-nordheim.de/produkt/bacchus-halbtrocken-2024/",
+            "wine": "Bacchus Halbtrocken 2024"
+          },
+          {
+            "producer": "Weingut Knierim",
+            "sourceUrl": "https://www.weingut-knierim.de/produkt/bacchus-2/",
+            "wine": "Bacchus 2"
+          },
+          {
+            "producer": "Weingut Christ",
+            "sourceUrl": "https://www.weingut-christ.de/products/bacchus-lieblich",
+            "wine": "Bacchus Lieblich"
+          },
+          {
+            "producer": "Weingut Martin",
+            "sourceUrl": "https://weingut-max-martin.de/products/bacchus-halbtrocken",
+            "wine": "Bacchus Halbtrocken"
+          },
+          {
+            "producer": "Weingut Margaretenhof",
+            "sourceUrl": "https://www.ahlwein.de/produkt/bacchus-2/",
+            "wine": "Bacchus 2"
+          },
+          {
+            "producer": "Weingut Stauffer",
+            "sourceUrl": "https://www.weingutstauffer.de/produkt/bacchus-2/",
+            "wine": "Bacchus 2"
+          },
+          {
+            "producer": "Weingut Jung",
+            "sourceUrl": "https://wein-macht-jung.de/products/2024-bacchus-gutswein-lieblich",
+            "wine": "2024 Bacchus Gutswein Lieblich"
+          }
+        ]
       }
     ],
     "id": "bacchus-weiss",
@@ -51402,7 +51554,10 @@
         "url": "https://en.wikipedia.org/wiki/Bacchus_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Weisser Bacchus",

@@ -16,6 +16,10 @@ has the reasons.
 
 ### Library
 
+- **More of the producers' technical sheets read** (321 PDFs from 1,153
+  wineries' sites): alcohol for Arinto (medium); Bacchus semi-dry, from
+  thirteen German producers; Auxerrois from dry to semi-dry.
+
 - **An appellation's own body, where no official source gives a figure**:
   the vineyard area of Roero and Lugana from their consorzi and of Nemea
   from Wines of Greece, as the figure and who gives it, linked. An official
