@@ -105,6 +105,51 @@ export function LibraryGrapePage() {
     ...(grape.sweetness === null ? [] : ["sweetness"]),
   ];
   const sweetSteps = ["dry", "medium", "sweet"] as const;
+  // Alcohol read from the producers' sheets: the lowest and highest figure of
+  // most of its wines (the tenth at each end left out, so one sweet Mosel or
+  // one fortified bottle does not stretch it), on an axis from 8 % to 17 %
+  // whose thirds are WSET's low, medium and high.
+  const figures = (
+    grape.evidence.find((entry) => entry.field === "alcohol" && entry.basis === "producers-abv")
+      ?.wines ?? []
+  )
+    .flatMap((wine) => (wine.abv === undefined ? [] : [wine.abv]))
+    .sort((one, other) => one - other);
+  const trimmed = figures.slice(
+    Math.floor(figures.length / 10),
+    figures.length - Math.floor(figures.length / 10),
+  );
+  const degrees = trimmed.length === 0 ? null : { high: trimmed.at(-1)!, low: trimmed[0]! };
+  const onAxis = (abv: number) => Math.min(100, Math.max(0, ((abv - 8) / 9) * 100));
+  const percent = (abv: number) =>
+    new Intl.NumberFormat(i18n.language, { maximumFractionDigits: 1, style: "percent" }).format(
+      abv / 100,
+    );
+  // Under a gauge, where its fill starts and where it ends: «Seco» under the
+  // start, «Dulce» under the end. A narrow fill takes both as one label
+  // («14,5 % – 14,8 %»), kept inside the bar.
+  const ends = (from: number, to: number, start: string, end: string, spoken: string) => {
+    const one = start === end ? start : to - from < 34 ? `${start} – ${end}` : null;
+    return (
+      <>
+        <span
+          aria-hidden="true"
+          className="library-bar__span"
+          style={{ "--from": `${from}%`, "--to": `${to}%` } as CSSProperties}
+        >
+          {one === null ? (
+            <>
+              <span className="library-bar__start">{start}</span>
+              <span className="library-bar__end">{end}</span>
+            </>
+          ) : (
+            <span className={from < 50 ? "library-bar__start" : "library-bar__end"}>{one}</span>
+          )}
+        </span>
+        <span className="sr-only">{spoken}</span>
+      </>
+    );
+  };
   // "Trocken bis süß": the range reads as a sentence, its first letter up.
   const sentence = (text: string) =>
     text.charAt(0).toLocaleUpperCase(i18n.language) + text.slice(1);
@@ -322,9 +367,18 @@ export function LibraryGrapePage() {
               {axes.map((axis) => {
                 const level = grape[axis];
                 // One continuous gauge, filled to where the level sits; the
-                // sources give three levels, and the gauge claims no more.
+                // sources give three levels, and the gauge claims no more —
+                // but for alcohol read from figures, which it shows as they are.
                 const reach =
                   level === null ? "0%" : { high: "85%", low: "25%", medium: "55%" }[level];
+                const span =
+                  axis === "alcohol" && degrees !== null
+                    ? {
+                        from: onAxis(degrees.low),
+                        // A single figure still shows as a mark.
+                        to: onAxis(Math.max(degrees.high, degrees.low + 0.2)),
+                      }
+                    : null;
                 return (
                   <div
                     className={level === null ? "library-bar library-bar--none" : "library-bar"}
@@ -333,10 +387,33 @@ export function LibraryGrapePage() {
                     <dt>{t(`library.axis.${axis}`)}</dt>
                     <dd>
                       <span aria-hidden="true" className="library-gauge">
-                        <i style={{ "--from": "0%", "--to": reach } as CSSProperties} />
+                        <i
+                          style={
+                            (span === null
+                              ? { "--from": "0%", "--to": reach }
+                              : {
+                                  "--from": `${span.from}%`,
+                                  "--to": `${span.to}%`,
+                                }) as CSSProperties
+                          }
+                        />
                       </span>
-                      {level === null ? t("library.noSourceValue") : t(`library.level.${level}`)}
-                      {level === null ? null : noteFor(axis)}
+                      {span === null || degrees === null
+                        ? level === null
+                          ? t("library.noSourceValue")
+                          : t(`library.level.${level}`)
+                        : ends(
+                            span.from,
+                            span.to,
+                            percent(degrees.low),
+                            percent(degrees.high),
+                            sentence(
+                              t("library.sweetnessRange", {
+                                from: percent(degrees.low),
+                                to: percent(degrees.high),
+                              }),
+                            ),
+                          )}
                     </dd>
                   </div>
                 );
@@ -352,37 +429,43 @@ export function LibraryGrapePage() {
                 <dd>
                   {/* Dry, off-dry and sweet are thirds of the gauge; the
                       range fills from one to the other. */}
-                  <span aria-hidden="true" className="library-gauge">
-                    {grape.sweetness === null ? null : (
-                      <i
-                        style={
-                          {
-                            "--from": `${sweetSteps.indexOf(grape.sweetness.from) * 33}%`,
-                            "--to": `${(sweetSteps.indexOf(grape.sweetness.to) + 1) * 33 + (grape.sweetness.to === "sweet" ? 1 : 0)}%`,
-                          } as CSSProperties
-                        }
-                      />
-                    )}
-                  </span>
-                  <span aria-hidden="true" className="library-bar__ends">
-                    <span>{t("library.sweetness.dry")}</span>
-                    <span>{t("library.sweetness.sweet")}</span>
-                  </span>
-                  {grape.sweetness === null
-                    ? t("library.noSourceValue")
-                    : grape.sweetness.from === grape.sweetness.to
-                      ? t(`library.sweetness.${grape.sweetness.from}`)
-                      : sentence(
-                          t("library.sweetnessRange", {
-                            from: t(`library.sweetness.${grape.sweetness.from}`).toLocaleLowerCase(
-                              i18n.language,
-                            ),
-                            to: t(`library.sweetness.${grape.sweetness.to}`).toLocaleLowerCase(
-                              i18n.language,
-                            ),
-                          }),
+                  {(() => {
+                    if (grape.sweetness === null) {
+                      return (
+                        <>
+                          <span aria-hidden="true" className="library-gauge" />
+                          {t("library.noSourceValue")}
+                        </>
+                      );
+                    }
+                    const from = sweetSteps.indexOf(grape.sweetness.from) * 33;
+                    const to =
+                      (sweetSteps.indexOf(grape.sweetness.to) + 1) * 33 +
+                      (grape.sweetness.to === "sweet" ? 1 : 0);
+                    const start = t(`library.sweetness.${grape.sweetness.from}`);
+                    const end = t(`library.sweetness.${grape.sweetness.to}`);
+                    return (
+                      <>
+                        <span aria-hidden="true" className="library-gauge">
+                          <i style={{ "--from": `${from}%`, "--to": `${to}%` } as CSSProperties} />
+                        </span>
+                        {ends(
+                          from,
+                          to,
+                          start,
+                          end,
+                          start === end
+                            ? start
+                            : sentence(
+                                t("library.sweetnessRange", {
+                                  from: start.toLocaleLowerCase(i18n.language),
+                                  to: end.toLocaleLowerCase(i18n.language),
+                                }),
+                              ),
                         )}
-                  {grape.sweetness === null ? null : noteFor("sweetness")}
+                      </>
+                    );
+                  })()}
                 </dd>
               </div>
             </dl>

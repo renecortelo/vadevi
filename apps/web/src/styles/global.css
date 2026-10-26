@@ -4659,6 +4659,31 @@ html.modal-open body {
   grid-template-columns: repeat(5, 1fr);
 }
 
+/* Under a gauge, what its fill's start and end stand for: «Seco» under where
+   it starts, «Dulce» under where it ends. */
+.library-bar__span {
+  --from: 0%;
+  --to: 100%;
+
+  block-size: 1.5em;
+  display: block;
+  position: relative;
+}
+
+.library-bar__start,
+.library-bar__end {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.library-bar__start {
+  inset-inline-start: var(--from);
+}
+
+.library-bar__end {
+  inset-inline-end: calc(100% - var(--to));
+}
+
 .library-bar__ends {
   display: flex;
   font-size: var(--text-xs, 0.75rem);

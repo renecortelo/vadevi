@@ -69,8 +69,10 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await expect(bars).toHaveCount(5);
   await expect(bars.nth(0)).toContainText("Baja");
   await expect(bars.nth(0).locator(".library-gauge i")).toHaveAttribute("style", /--to: 25%/);
+  // The bars carry the value alone; where it comes from is at the foot of
+  // the page, under «Fuente de cada dato».
   await expect(bars.nth(2)).toContainText("Media");
-  await expect(bars.nth(2)).toContainText("Según los vinos de 5 bodegas");
+  await expect(bars.nth(2)).not.toContainText("Según");
   // Alcohol, from its quote: "a relatively high alcohol content".
   await expect(bars.nth(3)).toContainText("Alta");
   await expect(bars.nth(4)).toContainText("Seco o dulce");
@@ -116,15 +118,17 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
     evidence.getByRole("link", { name: "Leer el artículo en Wikipedia" }),
   ).toHaveAttribute("href", /wikipedia\.org/);
 
-  // A fact said of one place's wine says so and links the place: Furmint's
-  // body, read from what Tokaj's dry varietal wines are.
+  // A fact said of one place's wine says so, where its source is listed, and
+  // links the place: Furmint's body, read from what Tokaj's dry varietal
+  // wines are.
   await page.goto("/library/grapes/furmint");
   const body = page.locator(".library-bar", { hasText: "Cuerpo" });
   await expect(body).toContainText("Alta", { timeout: 15_000 });
-  await expect(body.getByRole("link", { name: "Dicho del vino de Tokaj" })).toHaveAttribute(
-    "href",
-    "/library/regions/hu-tokaj",
-  );
+  const furmint = page.locator(".library-evidence");
+  await furmint.locator("summary").first().click();
+  await expect(
+    furmint.getByRole("link", { name: "Dicho del vino de Tokaj" }).first(),
+  ).toHaveAttribute("href", "/library/regions/hu-tokaj");
 
   // A fact from a page that is not openly licensed is the fact and who says
   // it, linked, never the page's sentence: Chinuri's alcohol, from the
@@ -155,21 +159,34 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   // A range stands when each end does: three producers' dry Portugieser and
   // three producers' semi-dry ones.
   await page.goto("/library/grapes/blauer-portugieser");
+  // Under the gauge, «Seco» where its fill starts and «Semiseco» where it ends.
   const portugieser = page.locator(".library-bar", { hasText: "Seco o dulce" });
-  await expect(portugieser).toContainText("De seco a semiseco", { timeout: 15_000 });
-  await expect(portugieser).toContainText("Según los vinos de 6 bodegas");
+  await expect(portugieser.locator(".library-bar__start")).toHaveText("Seco", {
+    timeout: 15_000,
+  });
+  await expect(portugieser.locator(".library-bar__end")).toHaveText("Semiseco");
+  await expect(portugieser.locator(".sr-only")).toHaveText("De seco a semiseco");
+  const portugieserSources = page.locator(".library-evidence");
+  await portugieserSources.locator("summary").first().click();
+  await expect(portugieserSources).toContainText("Según los vinos de 6 bodegas");
 
-  // Alcohol from the sheets' figures, a level on WSET's scale: the bar says
-  // so, and the list shows each wine's figure, the first six and the rest a
-  // tap away.
+  // Alcohol from the sheets' figures: the bar spans the lowest and highest
+  // degree of most of the wines, each under its end of the fill; the source
+  // list says it is WSET's level of N producers' wines and shows each wine's
+  // figure, the first six and the rest a tap away.
   await page.goto("/library/grapes/riesling");
   const rieslingAlcohol = page.locator(".library-bar", { hasText: "Alcohol" });
-  await expect(rieslingAlcohol).toContainText("Media", { timeout: 15_000 });
-  await expect(rieslingAlcohol).toContainText(
-    /Según el grado de los vinos de \d+ bodegas \(escala del WSET\)/,
+  // A narrow fill takes both degrees as one label: «10 % – 13 %».
+  await expect(rieslingAlcohol.locator(".library-bar__span")).toHaveText(
+    /^\d+(,\d)?\s%(\s–\s\d+(,\d)?\s%)?$/,
+    { timeout: 15_000 },
   );
+  await expect(rieslingAlcohol.locator(".sr-only")).toHaveText(/^De \d+(,\d)?\s% a \d+(,\d)?\s%$/);
   const riesling = page.locator(".library-evidence");
   await riesling.locator("summary").first().click();
+  await expect(riesling).toContainText(
+    /Según el grado de los vinos de \d+ bodegas \(escala del WSET\)/,
+  );
   const figures = riesling.locator("li", { hasText: "escala del WSET" });
   await expect(figures.getByRole("link").first()).toContainText(/\(\d+(,\d+)?\s%\)/);
   await expect(figures.locator(".library-more-wines summary")).toContainText(/vinos más/);
