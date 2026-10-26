@@ -52,6 +52,54 @@ textarea {
     box-shadow var(--motion-fast);
 }
 
+/*
+  On a touch screen, iOS zooms the whole page into any field whose text is
+  under 16 px, and leaves it zoomed and shifted when the keyboard closes. A
+  field inherits its label's size (often --text-sm), so on a coarse pointer
+  every typing field is at least 16 px; a larger one keeps its size. It wins
+  over the per-screen rules on purpose, so no new screen can bring it back.
+*/
+@media (pointer: coarse) {
+  input:not(
+    [type="button"],
+    [type="checkbox"],
+    [type="file"],
+    [type="radio"],
+    [type="range"],
+    [type="submit"]
+  ),
+  select,
+  textarea {
+    font-size: max(16px, 1em) !important;
+  }
+}
+
+/*
+  While the keyboard is up on a phone, the bottom bar would ride on top of
+  it, half-way up the screen: it steps aside while a field has focus and
+  comes back when the keyboard closes.
+*/
+@media (pointer: coarse) and (max-width: 759px) {
+  body:has(
+      :is(
+        input:not(
+          [type="button"],
+          [type="checkbox"],
+          [type="file"],
+          [type="radio"],
+          [type="range"],
+          [type="submit"]
+        ),
+        select,
+        textarea,
+        [contenteditable="true"]
+      ):focus
+    )
+    .primary-nav {
+    display: none;
+  }
+}
+
 /* A field answers the pointer before it is clicked, and says it has focus
    with a ring rather than only the outline the page uses for everything. */
 input:not([type="button"], [type="checkbox"], [type="file"], [type="radio"], [type="submit"]):hover,
@@ -4713,6 +4761,10 @@ html.modal-open body {
 }
 
 /* A value said of one place's wine, not of the variety everywhere. */
+.library-heading__facts > span {
+  display: block;
+}
+
 .library-place {
   display: block;
   font-size: var(--text-xs, 0.75rem);

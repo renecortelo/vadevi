@@ -6,6 +6,14 @@ has the reasons.
 
 ## Unreleased
 
+### On a phone
+
+- **Typing no longer zooms the page**: iOS zoomed into any field with text
+  under 16 px and left the screen shifted; on a touch screen every field is
+  now 16 px or more. While the keyboard is up, the bottom bar steps aside
+  instead of riding on top of it, and comes back when it closes.
+- **A grape's card names its colour and its origin on two lines.**
+
 ### Library
 
 - **A grape's bars read at a glance**: one line under each. Alcohol read

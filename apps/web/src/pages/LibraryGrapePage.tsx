@@ -268,18 +268,19 @@ export function LibraryGrapePage() {
         <div>
           <p className="eyebrow">{t("library.eyebrow")}</p>
           <h1>{grape.name}</h1>
-          <p>
+          {/* The grape's colour on one line, where it comes from on the next. */}
+          <p className="library-heading__facts">
             {grape.color === null ? null : (
-              <span aria-hidden="true" className={`grape-swatch grape-swatch--${grape.color}`} />
+              <span>
+                <span aria-hidden="true" className={`grape-swatch grape-swatch--${grape.color}`} />
+                {t(`library.color.${grape.color}`)}
+              </span>
             )}
-            {[
-              grape.color === null ? null : t(`library.color.${grape.color}`),
-              origin === null
-                ? null
-                : `${flagOf(grape.originCountryCode)} ${t("library.origin", { country: origin })}`,
-            ]
-              .filter(Boolean)
-              .join(" · ")}
+            {origin === null ? null : (
+              <span>
+                {`${flagOf(grape.originCountryCode)} ${t("library.origin", { country: origin })}`}
+              </span>
+            )}
           </p>
         </div>
         {grape.image === null ? null : (
