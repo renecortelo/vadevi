@@ -4693,6 +4693,19 @@ html.modal-open body {
   font-size: var(--text-xs, 0.75rem);
 }
 
+/* The rest of a fact's wines, after the first six: a link-sized line that
+   opens onto them. */
+.library-more-wines {
+  display: inline;
+}
+
+.library-more-wines summary {
+  cursor: pointer;
+  display: inline;
+  margin-inline-start: 0.5ch;
+  text-decoration: underline;
+}
+
 /* A registered name at a glance: a drawing, a figure, what it counts. */
 .region-glance {
   display: grid;

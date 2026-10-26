@@ -94,6 +94,9 @@
     },
     "saidOfPlace": "Dit del vi de {{place}}",
     "saidOfProducers": "Segons els vins de {{count}} cellers",
+    "saidOfProducersAbv": "Segons el grau dels vins de {{count}} cellers (escala del WSET)",
+    "moreWines_one": "{{count}} vi més",
+    "moreWines_other": "{{count}} vins més",
     "noSourceValue": "sense dada a les fonts",
     "kind": {
       "still": "vi tranquil",

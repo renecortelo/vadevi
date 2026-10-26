@@ -2182,7 +2182,7 @@
                   ],
                   "additionalProperties": false
                 },
-                "maxItems": 12
+                "maxItems": 16
               },
               "comparisons": {
                 "type": "array",
@@ -12547,6 +12547,7 @@
                   "nullable": true,
                   "enum": [
                     "producers",
+                    "producers-abv",
                     null
                   ]
                 },
@@ -12556,6 +12557,9 @@
                   "items": {
                     "type": "object",
                     "properties": {
+                      "abv": {
+                        "type": "number"
+                      },
                       "producer": {
                         "type": "string"
                       },

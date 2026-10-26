@@ -152,7 +152,9 @@ const factOnly = grapes.flatMap((grape) => [
 ]);
 const fromWines = grapes.flatMap((grape) => [
   ...new Set(
-    grape.evidence.filter((entry) => entry.basis === "producers").map((entry) => entry.field),
+    grape.evidence
+      .filter((entry) => entry.basis?.startsWith("producers") === true)
+      .map((entry) => entry.field),
   ),
 ]);
 if (factOnly.length > 0) {

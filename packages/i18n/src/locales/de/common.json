@@ -94,6 +94,9 @@
     },
     "saidOfPlace": "Gesagt vom Wein aus {{place}}",
     "saidOfProducers": "Nach den Weinen von {{count}} Erzeugern",
+    "saidOfProducersAbv": "Nach dem Alkoholgehalt der Weine von {{count}} Erzeugern (WSET-Skala)",
+    "moreWines_one": "{{count}} weiterer Wein",
+    "moreWines_other": "{{count}} weitere Weine",
     "noSourceValue": "keine Angabe in den Quellen",
     "kind": {
       "still": "Stillwein",

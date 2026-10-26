@@ -129,9 +129,9 @@ export const AssistantTurnResponseSchema = z
   .object({
     data: z
       .object({
-        // A grape's facts may come from nine sources (one agreed by six
-        // producers cites each wine), and every one is cited.
-        citations: z.array(SourceSchema).max(12),
+        // A grape's facts may come from fifteen sources (a sweetness range
+        // agreed by seven producers cites each wine), and every one is cited.
+        citations: z.array(SourceSchema).max(16),
         comparisons: z.array(AssistantWineComparisonSchema).max(6),
         evidence: z.array(AssistantEvidenceChipSchema).max(8),
         // The wine this turn was actually about — the one named, or resolved from

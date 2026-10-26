@@ -353,6 +353,17 @@ by hand.
   wine being that grape. A sentence that rules a dish out («con esclusione
   della selvaggina») gives no pairing, and a name more than one variety
   goes by (Trebbiano, Arvine) proves nothing.
+- **Alcohol from the sheets' figures** (the operator's decision of 26
+  October 2026): a sheet gives the alcohol as a number («13,5 % vol»), not
+  a word, so the build turns each into a level on WSET's scale (Level 3,
+  Systematic Approach to Tasting: low below 11 %, medium to 13.9 %, high
+  from 14 %). Only still, dry wines count — a page whose title or address
+  says sparkling, rosé, semi-dry, sweet or fortified does not, nor one that
+  gives two figures — and every producer's figure is listed, those that
+  disagree too: the level stands when three producers and two thirds of
+  them reach it (Pinot Noir: 93 medium, 16 high, 1 low → medium). The card
+  says «from the alcohol of the wines of N producers (WSET scale)» and
+  shows each wine's figure.
 - **Sweetness across producers**: «dry» stands only where the grape's other
   single-variety wines do not say otherwise; where three producers make it
   dry and three others semi-dry (Blauer Portugieser «trocken» and

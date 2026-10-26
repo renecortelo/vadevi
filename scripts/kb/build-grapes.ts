@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 
 import { leadIsAboutWine } from "./appellation-names";
 import {
+  alcoholFigure,
   type GrapeEntry,
   type Level,
   normalize,
@@ -12,6 +13,7 @@ import {
   summaryOf,
   type Sweetness,
   validateExtraction,
+  wsetAlcohol,
 } from "./grape-validation";
 
 /**
@@ -172,9 +174,15 @@ type WebReading = {
   /** A page about the grape itself: one is enough. */
   quote?: string;
   source?: WebSource;
-  /** The grape's single-variety wines: three producers or more, agreeing. */
-  basis?: "producers";
+  /**
+   * The grape's single-variety wines: three producers or more, agreeing —
+   * in words (`producers`) or, for alcohol, in the figure each sheet gives,
+   * a level on WSET's scale (`producers-abv`).
+   */
+  basis?: "producers" | "producers-abv";
   wines?: {
+    /** The alcohol the sheet gives, as `quote` says it. */
+    abv?: number;
     lang: string;
     producer: string;
     quote: string;
@@ -468,6 +476,57 @@ for (const qid of index) {
       rejected.push(...found.rejected.map((entry) => ({ ...entry, grape: `${grape} ${lang}` })));
       return found;
     };
+    if (reading.basis === "producers-abv") {
+      // Alcohol as the grape's still, dry single-variety wines give it: each
+      // sheet's figure, found on its page, turned into a level on WSET's
+      // scale (the operator's rule of 26 October 2026). The level stands
+      // when three producers and two thirds of all those listed reach it.
+      const read = (reading.wines ?? []).flatMap((wine) => {
+        const page = webPage(wine.source.volume);
+        const figure = alcoholFigure(wine.quote);
+        const flat = (text: string) => text.replace(/\s+/g, " ").toLowerCase();
+        if (
+          page === null ||
+          figure === null ||
+          figure !== wine.abv ||
+          !flat(page).includes(flat(wine.quote))
+        ) {
+          rejected.push({ field, grape, reason: "figure not on its page", value: wine.quote });
+          return [];
+        }
+        return [{ level: wsetAlcohol(figure), wine: { ...wine, abv: figure } }];
+      });
+      const value = String(reading.value) as Level;
+      const producers = (wanted?: Level) =>
+        new Set(
+          read
+            .filter((one) => wanted === undefined || one.level === wanted)
+            .map((one) => normalize(one.wine.producer)),
+        ).size;
+      const agreeing = producers(value);
+      if (agreeing < 3 || agreeing * 3 < producers() * 2) {
+        rejected.push({ field, grape, reason: `only ${agreeing} producers agree`, value });
+        continue;
+      }
+      if (result.alcohol !== null) continue;
+      result.alcohol = value;
+      result.evidence.push({
+        basis: "producers-abv",
+        factOnly: true,
+        field: "alcohol",
+        quote: "",
+        sourceUrl: read[0]!.wine.source.url,
+        value,
+        // Every wine with a figure, those that disagree too.
+        wines: read.map(({ wine }) => ({
+          abv: wine.abv,
+          producer: wine.producer,
+          sourceUrl: wine.source.url,
+          wine: wine.wine,
+        })),
+      });
+      continue;
+    }
     if (reading.basis === "producers") {
       const wines = reading.wines ?? [];
       // Each wine's reading, kept only where it says what the reading says.

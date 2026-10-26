@@ -8,7 +8,7 @@ import { completeOnboarding, signIn } from "./fixtures/sign-in";
  * A grape's card at a glance: its aromas drawn and named in the reader's
  * language, and as a small ring of their families, and acidity, tannin and body as three steps — a value no source
  * gives says so instead of showing an empty bar. Grenache's sources give low
- * acidity and tannin and no body.
+ * acidity and tannin, and five producers' wines a medium body.
  */
 test("a grape card shows its aromas and its structure at a glance", async ({ page }) => {
   test.setTimeout(120_000);
@@ -69,8 +69,8 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   await expect(bars).toHaveCount(5);
   await expect(bars.nth(0)).toContainText("Baja");
   await expect(bars.nth(0).locator(".library-gauge i")).toHaveAttribute("style", /--to: 25%/);
-  await expect(bars.nth(2)).toHaveClass(/library-bar--none/);
-  await expect(bars.nth(2)).toContainText("sin dato en las fuentes");
+  await expect(bars.nth(2)).toContainText("Media");
+  await expect(bars.nth(2)).toContainText("Según los vinos de 5 bodegas");
   // Alcohol, from its quote: "a relatively high alcohol content".
   await expect(bars.nth(3)).toContainText("Alta");
   await expect(bars.nth(4)).toContainText("Seco o dulce");
@@ -97,6 +97,10 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   // comes first: Cabernet Franc's acidity and tannins. The card's own article
   // is still Wikipedia's.
   await page.goto("/library/grapes/cabernet-franc");
+  // No source gives Cabernet Franc's alcohol: the bar says so.
+  const noAlcohol = page.locator(".library-bar", { hasText: "Alcohol" });
+  await expect(noAlcohol).toHaveClass(/library-bar--none/, { timeout: 15_000 });
+  await expect(noAlcohol).toContainText("sin dato en las fuentes");
   const evidence = page.locator(".library-evidence");
   await expect(evidence).toBeVisible({ timeout: 15_000 });
   await evidence.locator("summary").click();
@@ -154,4 +158,19 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   const portugieser = page.locator(".library-bar", { hasText: "Seco o dulce" });
   await expect(portugieser).toContainText("De seco a semiseco", { timeout: 15_000 });
   await expect(portugieser).toContainText("Según los vinos de 6 bodegas");
+
+  // Alcohol from the sheets' figures, a level on WSET's scale: the bar says
+  // so, and the list shows each wine's figure, the first six and the rest a
+  // tap away.
+  await page.goto("/library/grapes/riesling");
+  const rieslingAlcohol = page.locator(".library-bar", { hasText: "Alcohol" });
+  await expect(rieslingAlcohol).toContainText("Media", { timeout: 15_000 });
+  await expect(rieslingAlcohol).toContainText(
+    /Según el grado de los vinos de \d+ bodegas \(escala del WSET\)/,
+  );
+  const riesling = page.locator(".library-evidence");
+  await riesling.locator("summary").first().click();
+  const figures = riesling.locator("li", { hasText: "escala del WSET" });
+  await expect(figures.getByRole("link").first()).toContainText(/\(\d+(,\d+)?\s%\)/);
+  await expect(figures.locator(".library-more-wines summary")).toContainText(/vinos más/);
 });

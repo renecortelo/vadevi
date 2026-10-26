@@ -29,11 +29,20 @@ export const LibraryEvidenceSchema = z
     /**
      * Taken from the grape's single-variety wines, held only when at least
      * three producers say the same of theirs: those wines, each linked.
+     * `producers-abv`: the alcohol each sheet gives as a figure, a level on
+     * WSET's scale (low below 11 %, high from 14 %), with each wine's figure.
      */
-    basis: z.enum(["producers"]).nullable(),
+    basis: z.enum(["producers", "producers-abv"]).nullable(),
     wines: z
       .array(
-        z.object({ producer: z.string(), sourceUrl: z.string().url(), wine: z.string() }).strict(),
+        z
+          .object({
+            abv: z.number().optional(),
+            producer: z.string(),
+            sourceUrl: z.string().url(),
+            wine: z.string(),
+          })
+          .strict(),
       )
       .nullable(),
     quote: z.string(),

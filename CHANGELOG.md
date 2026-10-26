@@ -8,6 +8,17 @@ has the reasons.
 
 ### Library
 
+- **Alcohol for thirty grapes, from their producers' technical sheets**: a
+  sheet gives the alcohol as a figure («13,5 % vol»), which the library now
+  turns into a level on WSET's scale (low below 11 %, medium to 13.9 %,
+  high from 14 %), from still, dry single-variety wines only; a level stands
+  when three producers and two thirds of all those with a figure reach it
+  (Riesling medium, from 170 producers' wines; Durif and Graciano high;
+  Pinot Noir, split between medium and high, gets none). The card says so
+  and lists each wine with its figure, the first six and the rest a tap
+  away. Also: St. Laurent from dry to semi-dry, medium body for Grenache,
+  Riesling and Pecorino, and pairings for Bobal, Carignan, Monastrell,
+  Touriga Nacional and Frappato. Vicenç cites up to sixteen sources.
 - **Twenty-two more grape facts agreed by producers' own wines**, found by
   visiting the websites of some 9,000 wineries and importers (those Wikidata
   and OpenStreetMap list, and a hand list), `robots.txt` honoured. Each

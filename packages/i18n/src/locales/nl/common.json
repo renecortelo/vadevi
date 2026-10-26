@@ -94,6 +94,9 @@
     },
     "saidOfPlace": "Gezegd van de wijn uit {{place}}",
     "saidOfProducers": "Volgens de wijnen van {{count}} producenten",
+    "saidOfProducersAbv": "Volgens het alcoholgehalte van de wijnen van {{count}} producenten (WSET-schaal)",
+    "moreWines_one": "nog {{count}} wijn",
+    "moreWines_other": "nog {{count}} wijnen",
     "noSourceValue": "geen gegeven in de bronnen",
     "kind": {
       "still": "stille wijn",

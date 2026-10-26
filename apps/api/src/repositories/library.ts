@@ -279,7 +279,10 @@ export async function getLibraryGrape(
         wines: string | null;
       }[]
     ).map((row) => ({
-      basis: row.basis === "producers" ? ("producers" as const) : null,
+      basis:
+        row.basis === "producers" || row.basis === "producers-abv"
+          ? (row.basis as "producers" | "producers-abv")
+          : null,
       factOnly: row.fact_only === 1,
       field: row.field,
       place: row.place,
@@ -291,7 +294,12 @@ export async function getLibraryGrape(
       wines:
         row.wines === null
           ? null
-          : (JSON.parse(row.wines) as { producer: string; sourceUrl: string; wine: string }[]),
+          : (JSON.parse(row.wines) as {
+              abv?: number;
+              producer: string;
+              sourceUrl: string;
+              wine: string;
+            }[]),
     })),
     id: grape.id,
     image:

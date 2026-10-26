@@ -126,17 +126,23 @@ export function LibraryGrapePage() {
   const placeNote = (
     entry:
       | {
-          basis: "producers" | null;
+          basis: "producers" | "producers-abv" | null;
           place: string | null;
           placeId: string | null;
           wines: unknown[] | null;
         }
       | undefined,
   ) =>
-    entry?.basis === "producers" ? (
-      // Taken from the grape's single-variety wines: as many producers agree.
+    entry?.basis === "producers" || entry?.basis === "producers-abv" ? (
+      // Taken from the grape's single-variety wines: as many producers agree,
+      // in words or, for alcohol, in the figure on each sheet.
       <span className="library-place">
-        {t("library.saidOfProducers", { count: entry.wines?.length ?? 3 })}
+        {t(
+          entry.basis === "producers-abv"
+            ? "library.saidOfProducersAbv"
+            : "library.saidOfProducers",
+          { count: entry.wines?.length ?? 3 },
+        )}
       </span>
     ) : entry?.place == null ? null : (
       <span className="library-place">
@@ -152,9 +158,25 @@ export function LibraryGrapePage() {
   const noteFor = (field: string) =>
     placeNote(
       grape.evidence.find(
-        (entry) => entry.field === field && (entry.place !== null || entry.basis === "producers"),
+        (entry) => entry.field === field && (entry.place !== null || entry.basis !== null),
       ),
     );
+  // A fact's wines, each linked, with the alcohol its sheet gives where that
+  // is what the fact was read from.
+  const wineLinks = (
+    wines: { abv?: number | undefined; producer: string; sourceUrl: string; wine: string }[],
+  ) =>
+    wines.map((wine, index) => (
+      <Fragment key={wine.sourceUrl}>
+        {index === 0 ? null : " · "}
+        <a className="text-link" href={wine.sourceUrl} rel="noreferrer" target="_blank">
+          {wine.producer}, {wine.wine}
+          {wine.abv === undefined
+            ? null
+            : ` (${new Intl.NumberFormat(i18n.language, { maximumFractionDigits: 2, style: "percent" }).format(wine.abv / 100)})`}
+        </a>
+      </Fragment>
+    ));
   // Each fact's value in the reader's language, where the library has a label
   // for it; a dish or a name it has none for stays as the source wrote it.
   const shown = (entry: { field: string; value: string }) => {
@@ -480,19 +502,17 @@ export function LibraryGrapePage() {
                 {entry.wines === null ? null : (
                   <>
                     {": "}
-                    {entry.wines.map((wine, index) => (
-                      <Fragment key={wine.sourceUrl}>
-                        {index === 0 ? null : " · "}
-                        <a
-                          className="text-link"
-                          href={wine.sourceUrl}
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          {wine.producer}, {wine.wine}
-                        </a>
-                      </Fragment>
-                    ))}
+                    {wineLinks(entry.wines.slice(0, 6))}
+                    {/* A grape's alcohol may stand on 170 sheets: the first
+                        six, and the rest a tap away. */}
+                    {entry.wines.length > 6 ? (
+                      <details className="library-more-wines">
+                        <summary>
+                          {t("library.moreWines", { count: entry.wines.length - 6 })}
+                        </summary>
+                        {wineLinks(entry.wines.slice(6))}
+                      </details>
+                    ) : null}
                   </>
                 )}
                 {/* A fact read from another article — the grape's own

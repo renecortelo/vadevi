@@ -94,6 +94,9 @@
     },
     "saidOfPlace": "Said of the wine of {{place}}",
     "saidOfProducers": "According to the wines of {{count}} producers",
+    "saidOfProducersAbv": "From the alcohol of the wines of {{count}} producers (WSET scale)",
+    "moreWines_one": "{{count}} more wine",
+    "moreWines_other": "{{count}} more wines",
     "noSourceValue": "no figure in the sources",
     "kind": {
       "still": "still wine",

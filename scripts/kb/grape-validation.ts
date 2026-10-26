@@ -35,8 +35,9 @@ export type Evidence = {
    * Taken from the grape's single-variety wines: held only when at least
    * three producers say the same of theirs, each listed.
    */
-  basis?: "producers";
-  wines?: { producer: string; sourceUrl: string; wine: string }[];
+  basis?: "producers" | "producers-abv";
+  /** Each wine, and for `producers-abv` the alcohol its sheet gives. */
+  wines?: { abv?: number; producer: string; sourceUrl: string; wine: string }[];
 };
 
 export type GrapeEntry = {
@@ -121,6 +122,20 @@ export function quoteIsVerbatim(quote: string, article: string): boolean {
     (/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(piece) && piece.length >= 10);
   if (!pieces.some(substantial)) return false;
   return pieces.every((piece) => piece.length < 3 || haystack.includes(piece));
+}
+
+/** The alcohol a technical sheet gives, «13,5 % vol» or «Alcohol: 14%». */
+export function alcoholFigure(quote: string): number | null {
+  const found = /(\d{1,2}(?:[.,]\d{1,2})?)\s?%/.exec(quote);
+  return found === null ? null : Number(found[1]!.replace(",", "."));
+}
+
+/**
+ * A still wine's alcohol as a level on WSET's Level 3 scale (Systematic
+ * Approach to Tasting): low below 11 %, medium to 13.9 %, high from 14 %.
+ */
+export function wsetAlcohol(abv: number): Level {
+  return abv < 11 ? "low" : abv < 14 ? "medium" : "high";
 }
 
 /** The words of a value are in its quote (accent- and case-blind). */

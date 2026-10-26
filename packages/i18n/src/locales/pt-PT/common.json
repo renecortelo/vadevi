@@ -94,6 +94,9 @@
     },
     "saidOfPlace": "Dito do vinho de {{place}}",
     "saidOfProducers": "Segundo os vinhos de {{count}} produtores",
+    "saidOfProducersAbv": "Segundo o teor alcoólico dos vinhos de {{count}} produtores (escala do WSET)",
+    "moreWines_one": "mais {{count}} vinho",
+    "moreWines_other": "mais {{count}} vinhos",
     "noSourceValue": "sem dado nas fontes",
     "kind": {
       "still": "vinho tranquilo",

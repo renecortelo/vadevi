@@ -117,14 +117,33 @@ function searchTerms(message: string): string[] {
 }
 
 /**
+ * The wines a fact taken from them is cited to: each one, or, for alcohol
+ * read from the sheets' figures (a grape may have 170), the first three that
+ * reach the level on WSET's scale — enough to bear it, as the card lists all.
+ */
+function citedWines(entry: {
+  basis: "producers" | "producers-abv" | null;
+  value: string;
+  wines: { abv?: number | undefined; sourceUrl: string }[] | null;
+}): string[] | null {
+  if (entry.wines === null) return null;
+  if (entry.basis !== "producers-abv") return entry.wines.map((wine) => wine.sourceUrl);
+  const level = (abv: number) => (abv < 11 ? "low" : abv < 14 ? "medium" : "high");
+  return entry.wines
+    .filter((wine) => wine.abv !== undefined && level(wine.abv) === entry.value)
+    .slice(0, 3)
+    .map((wine) => wine.sourceUrl);
+}
+
+/**
  * An answer's citations, in the order they were gathered: every library
- * source its statements lean on (a grape's facts may come from nine), then
- * the others while there is room, twelve at most.
+ * source its statements lean on (a grape's facts may come from fifteen),
+ * then the others while there is room, sixteen at most.
  */
 function cappedCitations(all: Map<string, Source>, library: { id: string }[]): Source[] {
   const kept = new Set(library.map((source) => source.id));
   let room = Math.max(0, 8 - kept.size);
-  return [...all.values()].filter((source) => kept.has(source.id) || room-- > 0).slice(0, 12);
+  return [...all.values()].filter((source) => kept.has(source.id) || room-- > 0).slice(0, 16);
 }
 
 function requestsTasteProfile(message: string): boolean {
@@ -849,7 +868,7 @@ async function loadLibraryStatements(
           card.evidence
             .filter((entry) => fields.includes(entry.field))
             // A fact taken from wines is cited to each of them.
-            .flatMap((entry) => entry.wines?.map((wine) => wine.sourceUrl) ?? [entry.sourceUrl]),
+            .flatMap((entry) => citedWines(entry) ?? [entry.sourceUrl]),
         ),
       ];
       // Every source a statement's facts come from, so each fact is cited to
@@ -883,16 +902,18 @@ async function loadLibraryStatements(
     const placeOf = (field: string) =>
       card.evidence.find((entry) => entry.field === field && entry.place !== null)?.place ?? null;
     const producersOf = (field: string) =>
-      card.evidence.find((entry) => entry.field === field && entry.basis === "producers")?.wines
-        ?.length ?? null;
+      card.evidence.find((entry) => entry.field === field && entry.basis !== null) ?? null;
     const placed = (field: string, text: string) => {
       const place = placeOf(field);
       const producers = producersOf(field);
+      const count = producers?.wines?.length ?? 0;
       return place !== null
         ? `${text} (said of the wine of ${place})`
-        : producers !== null
-          ? `${text} (according to the wines of ${producers} producers)`
-          : text;
+        : producers?.basis === "producers-abv"
+          ? `${text} (from the alcohol of the wines of ${count} producers, on WSET's scale)`
+          : producers !== null
+            ? `${text} (according to the wines of ${count} producers)`
+            : text;
     };
     const structure = (["acidity", "tannin", "body", "alcohol"] as const)
       .filter((axis) => card[axis] !== null)

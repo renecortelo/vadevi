@@ -780,7 +780,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "citrus",
       "acacia",
@@ -954,6 +954,40 @@
         "quote": "Originaire du Languedoc, il se présente en blanc, noir et gris.",
         "value": "FR",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Picpoul"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.daumas-gassac.com/fr/vin/picpoul-de-pinet/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12,
+            "producer": "mas de Daumas Gassac",
+            "sourceUrl": "https://www.daumas-gassac.com/fr/vin/picpoul-de-pinet/",
+            "wine": "Picpoul De Pinet"
+          },
+          {
+            "abv": 12,
+            "producer": "Celler Martín Faixó",
+            "sourceUrl": "https://www.martinfaixo.com/ca/vins/perafita-picapoll-2024/",
+            "wine": "Perafita Picapoll 2024"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Heretat Oller del Mas",
+            "sourceUrl": "https://ollerdelmas.com/producto/especial-picapoll/",
+            "wine": "Especial Picapoll"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Mr. Riggs Wine Co.",
+            "sourceUrl": "https://mrriggs.com.au/products/mr-brightside-picpoul-2",
+            "wine": "Mr Brightside Picpoul 2"
+          }
+        ]
       }
     ],
     "id": "piquepoul",
@@ -1460,6 +1494,31 @@
         "quote": "торига-насионал придаёт сухим красным винам тело и танинную структуру … Помимо десертных вин (типа портвейна) торига-насионал всё чаще используется",
         "value": "dry-sweet",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D0%B8%D0%B3%D0%B0_%D0%9D%D0%B0%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://alorna.pt/produto/monocasta-touriga-nacional-tinto-2023/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Quinta da Alorna",
+            "sourceUrl": "https://alorna.pt/produto/monocasta-touriga-nacional-tinto-2023/",
+            "wine": "Monocasta Touriga Nacional Tinto 2023"
+          },
+          {
+            "producer": "Quinta do Casal Monteiro",
+            "sourceUrl": "https://casalmonteiro.pt/pt/wines/19",
+            "wine": "19"
+          },
+          {
+            "producer": "Tr3smano",
+            "sourceUrl": "https://www.tresmano.com/producto/touriga-nacional-carvalhas/",
+            "wine": "Touriga Nacional Carvalhas"
+          }
+        ]
       }
     ],
     "id": "touriga-nacional",
@@ -1474,7 +1533,9 @@
       "pt": "Touriga Nacional"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -5514,7 +5575,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "honey",
       "spice",
@@ -5725,6 +5786,88 @@
         ]
       },
       {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://fattorialarivolta.it/shop/fiano-dop-sannio-sottozona-taburno/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Fattoria La Rivolta",
+            "sourceUrl": "https://fattorialarivolta.it/shop/fiano-dop-sannio-sottozona-taburno/",
+            "wine": "Fiano Dop Sannio Sottozona Taburno"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Madrarossa Winery",
+            "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/fiano",
+            "wine": "Fiano"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Vigne di Malies",
+            "sourceUrl": "https://www.vignedimalies.it/prodotto/fiano_arte/",
+            "wine": "Fiano Arte"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Campbells Wines",
+            "sourceUrl": "https://www.campbellswines.com.au/products/2024-fiano",
+            "wine": "2024 Fiano"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Juniper Estate",
+            "sourceUrl": "https://juniperestate.com.au/products/2023-sun-dips-low-fiano",
+            "wine": "2023 Sun Dips Low Fiano"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantine San Marzano",
+            "sourceUrl": "https://sanmarzano.wine/prodotto/talo-fiano-salento-igp-box-da-6-bottiglie/",
+            "wine": "Talo Fiano Salento Igp Box Da 6 Bottiglie"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Sella delle Spine",
+            "sourceUrl": "https://www.selladellespine.com/products/fiano-di-avellino-docg-eugenia",
+            "wine": "Fiano Di Avellino Docg Eugenia"
+          },
+          {
+            "abv": 13,
+            "producer": "Gemtree Wines",
+            "sourceUrl": "https://gemtreewines.com/products/2026-gemtree-fiano",
+            "wine": "2026 Gemtree Fiano"
+          },
+          {
+            "abv": 13,
+            "producer": "Maxwell Wines",
+            "sourceUrl": "https://maxwellwines.com.au/products/fiano-2026",
+            "wine": "Fiano 2026"
+          },
+          {
+            "abv": 13,
+            "producer": "Nicola Estate",
+            "sourceUrl": "https://nikolaestate.com.au/products/estate-fiano-2025",
+            "wine": "Estate Fiano 2025"
+          },
+          {
+            "abv": 12.5,
+            "producer": "CANTINA LA GUARDIENSE -JANARE - SCA",
+            "sourceUrl": "https://www.laguardiense.it/collezioni/sannio-fiano-dop-mirata/",
+            "wine": "Sannio Fiano Dop Mirata"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantine Ermes Agr. Coop. Agr. stabilimento Torricella",
+            "sourceUrl": "https://cantineermes.it/brand/masseria-delle-stelle-fiano-puglia-igp/",
+            "wine": "Masseria Delle Stelle Fiano Puglia Igp"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Fiano: Italy",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -5893,7 +6036,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "peach",
       "herbs",
@@ -6098,6 +6241,52 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Greco_di_Tufo",
         "place": "Greco di Tufo",
         "placeId": "it-greco-di-tufo"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://fattorialarivolta.it/shop/greco-dop-sannio-sottozona-taburno/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Fattoria La Rivolta",
+            "sourceUrl": "https://fattorialarivolta.it/shop/greco-dop-sannio-sottozona-taburno/",
+            "wine": "Greco Dop Sannio Sottozona Taburno"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Vigne di Malies",
+            "sourceUrl": "https://www.vignedimalies.it/prodotto/greco-linea-arte/",
+            "wine": "Greco Linea Arte"
+          },
+          {
+            "abv": 13,
+            "producer": "Mustilli",
+            "sourceUrl": "https://mustilli.com/prodotto/greco-sannio-doc-2022/",
+            "wine": "Greco Sannio Doc 2022"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Sella delle Spine",
+            "sourceUrl": "https://www.selladellespine.com/products/vino-greco-di-tufo-docg-don-raffaele",
+            "wine": "Vino Greco Di Tufo Docg Don Raffaele"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Di Majo Norante",
+            "sourceUrl": "https://www.dimajonorante.com/en/wines/greco",
+            "wine": "Greco"
+          },
+          {
+            "abv": 12.5,
+            "producer": "CANTINA LA GUARDIENSE -JANARE - SCA",
+            "sourceUrl": "https://www.laguardiense.it/collezioni/sannio-greco-dop-mirata/",
+            "wine": "Sannio Greco Dop Mirata"
+          }
+        ]
       },
       {
         "field": "origin",
@@ -8601,6 +8790,31 @@
         "quote": "les vins à la fois corsés, colorés, riches, solides el droits, dont il esl le type",
         "value": "high",
         "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://murviedro.es/vino/sericis-monastrell-magnum",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Bodegas Murviedro",
+            "sourceUrl": "https://murviedro.es/vino/sericis-monastrell-magnum",
+            "wine": "Sericis Monastrell Magnum"
+          },
+          {
+            "producer": "Bodegas Trenza",
+            "sourceUrl": "https://bodegastrenza.com/site/stories-main/stories-all/storie-la-nymphina-monastrell",
+            "wine": "Storie La Nymphina Monastrell"
+          },
+          {
+            "producer": "Bodegas Luzón",
+            "sourceUrl": "https://www.bodegasluzon.com/monastrell-en-estado-puro-finca-luzon-sin-sulfitos/",
+            "wine": "Monastrell En Estado Puro Finca Luzon Sin Sulfitos"
+          }
+        ]
       }
     ],
     "id": "mourvedre",
@@ -8615,7 +8829,9 @@
       "pt": "Mourvèdre"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 20,
     "regions": [
       {
@@ -8916,6 +9132,31 @@
         "quote": "Бобаль використовують для виробництва червоних, рожевих сухих та ігристих вин",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://bodegamustiguillo.com/productos/pelaroques-2/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Bodega Mustiguillo",
+            "sourceUrl": "https://bodegamustiguillo.com/productos/pelaroques-2/",
+            "wine": "Pelaroques 2"
+          },
+          {
+            "producer": "Bodegas Murviedro",
+            "sourceUrl": "https://murviedro.es/vino/pugnus-bobal",
+            "wine": "Pugnus Bobal"
+          },
+          {
+            "producer": "Bodegas Vegalfaro",
+            "sourceUrl": "https://bodegasvegalfaro.es/products/caprasia-bobal-anfora-2021",
+            "wine": "Caprasia Bobal Anfora 2021"
+          }
+        ]
       }
     ],
     "id": "bobal",
@@ -8930,7 +9171,9 @@
       "pt": "Bobal"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -11890,7 +12133,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -12016,6 +12259,52 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Colli_Euganei_Fior_d%27Arancio",
         "place": "Colli Euganei Fior d'Arancio",
         "placeId": "it-colli-euganei-fior-d-arancio"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://monviert.com/vino/moscato-giallo/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 10,
+            "producer": "Azienda Agricola Monviert s.s.a.",
+            "sourceUrl": "https://monviert.com/vino/moscato-giallo/",
+            "wine": "Moscato Giallo"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina Bulfon",
+            "sourceUrl": "https://www.bulfon.it/prodotto/punta-gialla/",
+            "wine": "Punta Gialla"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina Martinelli",
+            "sourceUrl": "https://www.cantinamartinelliscanzo.it/de/shop/moscato-de/moscato-giallo/",
+            "wine": "Moscato Giallo"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vinícola Durigan",
+            "sourceUrl": "https://vinhosdurigan.com.br/produtos/nonna-rozalina-moscato-giallo-seco/",
+            "wine": "Nonna Rozalina Moscato Giallo Seco"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Manincor",
+            "sourceUrl": "https://www.manincor.com/de/moscato-giallo.html",
+            "wine": "Moscato Giallo"
+          },
+          {
+            "abv": 13,
+            "producer": "Giornata Winery",
+            "sourceUrl": "https://giornatawines.com/products/2022-moscato-giallo",
+            "wine": "2022 Moscato Giallo"
+          }
+        ]
       }
     ],
     "id": "moscato-giallo",
@@ -13388,7 +13677,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "cherry",
       "bell pepper"
@@ -13448,6 +13737,40 @@
         "quote": "avec les gibiers, les fromages forts, les salaisons",
         "value": "cheese",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Cabernet_dorsa"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://wein-macht-jung.de/products/2020-cabernet-dorsa-barrique-trocken",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Weingut Jung",
+            "sourceUrl": "https://wein-macht-jung.de/products/2020-cabernet-dorsa-barrique-trocken",
+            "wine": "2020 Cabernet Dorsa Barrique Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Frank Kühn",
+            "sourceUrl": "https://kuehn-wein.de/produkt/cabernet-dorsa-rotwein/",
+            "wine": "Cabernet Dorsa Rotwein"
+          },
+          {
+            "abv": 12.2,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/cabernet-dorsa-2/",
+            "wine": "Cabernet Dorsa 2"
+          },
+          {
+            "abv": 13,
+            "producer": "Winnica Korol",
+            "sourceUrl": "https://winnicakorol.pl/wina/w-sprzedazy/cabernet-dorsa-2022.html",
+            "wine": "Cabernet Dorsa 2022"
+          }
+        ]
       }
     ],
     "id": "cabernet-dorsa",
@@ -14692,7 +15015,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "apple",
       "citrus",
@@ -14702,7 +15025,7 @@
       "honey",
       "petrol"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -14795,6 +15118,1076 @@
         "quote": "Los vinos hechos a partir de esta uva cubren un amplio espectro de sabores, desde dulce al seco",
         "value": "dry-sweet",
         "sourceUrl": "https://es.wikipedia.org/wiki/Riesling_(uva)"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://aigner-wein.at/en/product/ried-frechau-kremstal-riesling-2019/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Weingut Aigner",
+            "sourceUrl": "https://aigner-wein.at/en/product/ried-frechau-kremstal-riesling-2019/",
+            "wine": "Ried Frechau Kremstal Riesling 2019"
+          },
+          {
+            "abv": 10,
+            "producer": "Chateau St. Jean",
+            "sourceUrl": "https://www.chateaustjean.com/wine/belle-terre-vineyard-riesling-375-ml/",
+            "wine": "Belle Terre Vineyard Riesling 375 Ml"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Luckett Vineyards",
+            "sourceUrl": "https://www.luckettvineyards.com/products/skin-contact-riesling",
+            "wine": "Skin Contact Riesling"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Stoney Ridge Estate Winery",
+            "sourceUrl": "https://www.stoneyridge.com/products/2019-riesling",
+            "wine": "2019 Riesling"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Albert Lambrich",
+            "sourceUrl": "https://www.weingut-albert-lambrich.de/produkt/riesling-2/",
+            "wine": "Riesling 2"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Lamm-Jung",
+            "sourceUrl": "https://lammjung-wein.de/products/riesling-alkoholfrei-rheingau-basis",
+            "wine": "Riesling Alkoholfrei Rheingau Basis"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Heise am Kranzberg",
+            "sourceUrl": "https://weinerlebniswelt-heise.de/shop/riesling-kranzberg-2024/",
+            "wine": "Riesling Kranzberg 2024"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Weingut Ferdinand Abel",
+            "sourceUrl": "https://www.weingut-abel.de/products/2025er-rheingau-riesling-fabelhaft-mild-2511",
+            "wine": "2025Er Rheingau Riesling Fabelhaft Mild 2511"
+          },
+          {
+            "abv": 10,
+            "producer": "Classisches Weingut & Gästehaus Hoffranzen",
+            "sourceUrl": "https://www.weingut-hoffranzen.com/produkt/guts-riesling-riesling/",
+            "wine": "Guts Riesling Riesling"
+          },
+          {
+            "abv": 9,
+            "producer": "Weingut Weckbecker",
+            "sourceUrl": "https://www.weingut-weckbecker.de/wein/riesling-fruchtig/",
+            "wine": "Riesling Fruchtig"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut - Gästehaus Melsheimer",
+            "sourceUrl": "https://melsheimer-riesling.de/produkt/melsheimer-riesling-2015-trocken/",
+            "wine": "Melsheimer Riesling 2015 Trocken"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Spieles-Fuchs",
+            "sourceUrl": "https://rieslingwinzer.de/products/leiwener-riesling-aus-2020-25cl",
+            "wine": "Leiwener Riesling Aus 2020 25Cl"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Adamy",
+            "sourceUrl": "https://weingut-adamy.de/produkt/2024-kinheimer-riesling-vom-grauen-schiefer/",
+            "wine": "2024 Kinheimer Riesling Vom Grauen Schiefer"
+          },
+          {
+            "abv": 9,
+            "producer": "Weingut Alois Hahn",
+            "sourceUrl": "https://hahnweinmosel.de/products/krover-nacktarsch-1987-riesling-hochgewachs",
+            "wine": "Krover Nacktarsch 1987 Riesling Hochgewachs"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Winzer von Erbach",
+            "sourceUrl": "https://winzer-von-erbach.de/shop/64-riesling-alte-reben-vom-loess-trocken",
+            "wine": "64 Riesling Alte Reben Vom Loess Trocken"
+          },
+          {
+            "abv": 9,
+            "producer": "Weingut Merz",
+            "sourceUrl": "https://www.weingut-merz.de/produkt/riesling-suess/",
+            "wine": "Riesling Suess"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Stahl",
+            "sourceUrl": "https://weingut.gasthaus-stahl.de/weine/handstreich-riesling/",
+            "wine": "Handstreich Riesling"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Michael Dixius",
+            "sourceUrl": "https://weingut-dixius.de/products/2024-riesling",
+            "wine": "2024 Riesling"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Sturm",
+            "sourceUrl": "https://www.sturm-weingut.de/weine/riesling-vom-schiefer-2024",
+            "wine": "Riesling Vom Schiefer 2024"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut \"Alter Weinhof\"",
+            "sourceUrl": "https://alter-weinhof.de/orange-wine-landwein-riesling-trocken/",
+            "wine": "Orange Wine Landwein Riesling Trocken"
+          },
+          {
+            "abv": 8.5,
+            "producer": "Weingut Ulrich Göbel",
+            "sourceUrl": "https://ferienweingut-goebel.de/product/2023-riesling-grauwacke-suess/",
+            "wine": "2023 Riesling Grauwacke Suess"
+          },
+          {
+            "abv": 8,
+            "producer": "Weingut Andre",
+            "sourceUrl": "https://andre-wein.de/weinshop/riesling-fruchtsuess/",
+            "wine": "Riesling Fruchtsuess"
+          },
+          {
+            "abv": 8,
+            "producer": "Moselweingut Arnoldi",
+            "sourceUrl": "https://weingut-arnoldi.de/product/2019-mesenicher-goldgrueblichen-riesling-hochgewaechs-aus-der-steillage-suess/",
+            "wine": "2019 Mesenicher Goldgrueblichen Riesling Hochgewaechs Aus Der Steillage Suess"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Kögler",
+            "sourceUrl": "https://weingut-koegler.de/products/koegler-rheingau-riesling-mild-2019",
+            "wine": "Koegler Rheingau Riesling Mild 2019"
+          },
+          {
+            "abv": 9,
+            "producer": "Hallgartener Weinkeller eG",
+            "sourceUrl": "https://www.hallgartener-wein.de/produkt/hallgartener-jungfer-riesling-3/",
+            "wine": "Hallgartener Jungfer Riesling 3"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Härle-Kerth",
+            "sourceUrl": "https://www.weinguthaerle-kerth.de/products/2023-konigsbacher-olberg-riesling-qualitatswein-trocken-kathrin-sophie-kerth",
+            "wine": "2023 Konigsbacher Olberg Riesling Qualitatswein Trocken Kathrin Sophie Kerth"
+          },
+          {
+            "abv": 10,
+            "producer": "Blinn Weine",
+            "sourceUrl": "https://blinn-weine.de/products/weisser-riesling-qualitatswein-r24-bruckstuck",
+            "wine": "Weisser Riesling Qualitatswein R24 Bruckstuck"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Karthäuserhof",
+            "sourceUrl": "https://karthaeuserhof.com/en/products/schieferkristall-riesling-2020",
+            "wine": "Schieferkristall Riesling 2020"
+          },
+          {
+            "abv": 7.5,
+            "producer": "Weingut Leos",
+            "sourceUrl": "https://www.weingut-leos.de/produkt/2022-niklas-k-riesling-fruchtsuess/",
+            "wine": "2022 Niklas K Riesling Fruchtsuess"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Weingut Masser",
+            "sourceUrl": "https://www.masser.cc/products/riesling-kommode-2025",
+            "wine": "Riesling Kommode 2025"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Campbells Wines",
+            "sourceUrl": "https://www.campbellswines.com.au/products/2025-riesling",
+            "wine": "2025 Riesling"
+          },
+          {
+            "abv": 9.8,
+            "producer": "Tantalus Vineyards",
+            "sourceUrl": "https://tantalus.ca/products/2022-dens-block-riesling",
+            "wine": "2022 Dens Block Riesling"
+          },
+          {
+            "abv": 10,
+            "producer": "Hay shed hill",
+            "sourceUrl": "https://hayshedhill.com.au/products/world-series-g40-riesling",
+            "wine": "World Series G40 Riesling"
+          },
+          {
+            "abv": 10.2,
+            "producer": "Colaneri Estate Winery",
+            "sourceUrl": "https://www.colaneriwines.com/product/riesling",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 9,
+            "producer": "Hans Herzog",
+            "sourceUrl": "https://www.herzog.co.nz/products/botrytis-riesling-2013",
+            "wine": "Botrytis Riesling 2013"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Vieni Estates",
+            "sourceUrl": "https://vieni.ca/products/2021-riesling-semi-dry-awards",
+            "wine": "2021 Riesling Semi Dry Awards"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Wescott Vineyards",
+            "sourceUrl": "https://www.westcottvineyards.com/products/2022-butlers-grant-riesling",
+            "wine": "2022 Butlers Grant Riesling"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Villa Romana Estate Winery",
+            "sourceUrl": "https://www.villaromana.ca/shop/2020-ricciolino-riesling-wine/",
+            "wine": "2020 Ricciolino Riesling Wine"
+          },
+          {
+            "abv": 10,
+            "producer": "Mr. Riggs Wine Co.",
+            "sourceUrl": "https://mrriggs.com.au/products/ein-riese-riesling-1",
+            "wine": "Ein Riese Riesling 1"
+          },
+          {
+            "abv": 9,
+            "producer": "The Foreign Affair Winery",
+            "sourceUrl": "https://foreignaffairwinery.com/products/appassimento-riesling-2025",
+            "wine": "Appassimento Riesling 2025"
+          },
+          {
+            "abv": 10.5,
+            "producer": "13th Street Winery",
+            "sourceUrl": "https://13thstreetwinery.com/product/expression-riesling-2024/",
+            "wine": "Expression Riesling 2024"
+          },
+          {
+            "abv": 10.8,
+            "producer": "Lightfoot & Wolfville Vineyards",
+            "sourceUrl": "https://lightfootandwolfville.com/products/2022-ancienne-riesling",
+            "wine": "2022 Ancienne Riesling"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Erben von Beulwitz",
+            "sourceUrl": "https://von-beulwitz.de/products/von-beulwitz-riesling",
+            "wine": "Von Beulwitz Riesling"
+          },
+          {
+            "abv": 9,
+            "producer": "Weingut Thielmann & Schinnen",
+            "sourceUrl": "https://www.weingut-thielmann.de/produkt/felsenfest-rieslingfruchtsuess/",
+            "wine": "Felsenfest Rieslingfruchtsuess"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Banfi Vintners",
+            "sourceUrl": "https://banfiusa.com/united-states/pacific-rim-riesling-2/",
+            "wine": "Pacific Rim Riesling 2"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Buena Vista Winery",
+            "sourceUrl": "https://buenavistawinery.com/shop/chateau-buena-vista-st-helena-riesling",
+            "wine": "Chateau Buena Vista St Helena Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Chateau Ste. Michelle",
+            "sourceUrl": "https://www.ste-michelle.com/2024-evergreen-vineyard-riesling/5637804580.p",
+            "wine": "5637804580.P"
+          },
+          {
+            "abv": 13.2,
+            "producer": "Chaberton Estate Winery",
+            "sourceUrl": "https://www.chabertonwinery.com/product/2024-riesling/",
+            "wine": "2024 Riesling"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Mission Estate Winery",
+            "sourceUrl": "https://www.missionestate.co.nz/products/estate-riesling",
+            "wine": "Estate Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Mountadam Vineyards",
+            "sourceUrl": "https://www.mountadam.com.au/shop/2018-mountadam-eden-valley-riesling/",
+            "wine": "2018 Mountadam Eden Valley Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Three Dog Winery",
+            "sourceUrl": "https://www.threedogwine.com/products/2022-foxcroft-riesling",
+            "wine": "2022 Foxcroft Riesling"
+          },
+          {
+            "abv": 11.4,
+            "producer": "Viewpointe Estate Winery",
+            "sourceUrl": "https://www.viewpointewinery.com/product/2020-riesling/",
+            "wine": "2020 Riesling"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Wente Vineyards",
+            "sourceUrl": "https://wentevineyards.com/product/2024-riva-ranch-riesling/",
+            "wine": "2024 Riva Ranch Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Lavradores de Feitoria",
+            "sourceUrl": "https://www.lavradoresdefeitoria.pt/products/bagos-riesling-branco-2019",
+            "wine": "Bagos Riesling Branco 2019"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Fulkerson",
+            "sourceUrl": "https://www.fulkersonwinery.com/products/dry-riesling",
+            "wine": "Dry Riesling"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/riesling-trocken",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Straußwirtschaft Dienst Dorotheenhof",
+            "sourceUrl": "https://weingut-dienst.de/products/riesling-classic",
+            "wine": "Riesling Classic"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Thürkind",
+            "sourceUrl": "https://www.weingut-thuerkind.de/produkt/riesling-2024/",
+            "wine": "Riesling 2024"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Hubertus M. Apel",
+            "sourceUrl": "https://www.apel-weingut.de/shop/riesling-muschelkalk-trocken/",
+            "wine": "Riesling Muschelkalk Trocken"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/riesling-trocken/",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Herber",
+            "sourceUrl": "https://www.weingut-herber.de/shop/2024-riesling-qualitaetswein-trocken/",
+            "wine": "2024 Riesling Qualitaetswein Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Kurt Erbeldinger und Sohn",
+            "sourceUrl": "https://weingut-erbeldinger.de/products/bechtheimer-geyersberg-riesling-trocken",
+            "wine": "Bechtheimer Geyersberg Riesling Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Horst Adams",
+            "sourceUrl": "https://www.weingut-adams.de/products/riesling-qualitatswein-trocken-0-75l",
+            "wine": "Riesling Qualitatswein Trocken 0 75L"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Rummel",
+            "sourceUrl": "https://rummel-biowein.de/products/riesling-trocken",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut-Brennerei Gutshof Zenz",
+            "sourceUrl": "https://www.gutshof-zenz.de/trockene-weine/id-2022-riesling-classic-83.html",
+            "wine": "Id 2022 Riesling Classic 83"
+          },
+          {
+            "abv": 11,
+            "producer": "Öko-Weingut Schmalzried",
+            "sourceUrl": "https://www.weingutschmalzried.de/produkt/riesling/",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Schedler Edmund",
+            "sourceUrl": "https://moselweingut-schedler.de/wein-shop/mosel-riesling-classic/",
+            "wine": "Mosel Riesling Classic"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Haus Burgblick",
+            "sourceUrl": "https://hausburgblick.de/produkt/riesling-mild/",
+            "wine": "Riesling Mild"
+          },
+          {
+            "abv": 13,
+            "producer": "Schlosshof  (Wein + Sekt  Mühlmichel )",
+            "sourceUrl": "https://weingut-muehlmichel.de/products/2023-pfalzer-herzblut-riesling-weisswein-trocken",
+            "wine": "2023 Pfalzer Herzblut Riesling Weisswein Trocken"
+          },
+          {
+            "abv": 12.8,
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/riesling-trocken-gutswein-schoppen-pfalz",
+            "wine": "Riesling Trocken Gutswein Schoppen Pfalz"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Otto Becker",
+            "sourceUrl": "https://weingut-ottobecker.de/products/riesling-trocken-rheinhessen",
+            "wine": "Riesling Trocken Rheinhessen"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Scholisch",
+            "sourceUrl": "https://weingutscholisch.de/produkt/2022-scholisch-riesling-trocken/",
+            "wine": "2022 Scholisch Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Knebelbrüder",
+            "sourceUrl": "https://www.knebelbrueder.de/product-page/2020-winninger-riesling",
+            "wine": "2020 Winninger Riesling"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Schwedhelm",
+            "sourceUrl": "https://www.schwedhelm-zellertal.de/products/riesling-kreuzberg-2021",
+            "wine": "Riesling Kreuzberg 2021"
+          },
+          {
+            "abv": 11.8,
+            "producer": "Weingut Stachel",
+            "sourceUrl": "https://www.weingut-stachel.de/produkt/riesling-2/",
+            "wine": "Riesling 2"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Schwahn-Fehlinger",
+            "sourceUrl": "https://schwahn-fehlinger.de/products/westhofener-steingrube-riesling-alter-wingert-2022-trocken",
+            "wine": "Westhofener Steingrube Riesling Alter Wingert 2022 Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Johann Müller",
+            "sourceUrl": "https://weingut-johann-mueller.de/produkt/steinreich-riesling-trocken/",
+            "wine": "Steinreich Riesling Trocken"
+          },
+          {
+            "abv": 12.2,
+            "producer": "Weingut Junker",
+            "sourceUrl": "https://www.weingut-junker.de/produkt/riesling-classic-2/",
+            "wine": "Riesling Classic 2"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/geils-riesling/",
+            "wine": "Geils Riesling"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Richard Scheid",
+            "sourceUrl": "https://scheid-wein.de/products/riesling-vom-schiefer-trocken-2024",
+            "wine": "Riesling Vom Schiefer Trocken 2024"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Butzbach",
+            "sourceUrl": "https://weingut-butzbach.de/produkt/2024er-riesling-trockennr-5021/",
+            "wine": "2024Er Riesling Trockennr 5021"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Jürgen Volk",
+            "sourceUrl": "https://www.weingutvolk.de/2025-Riesling-Hochgewaechs-trocken/10096",
+            "wine": "10096"
+          },
+          {
+            "abv": 11,
+            "producer": "weingut-martin-klein.de",
+            "sourceUrl": "https://weingut-martin-klein.de/produkt/2023-johannisberger-erntebringer-riesling-mild/",
+            "wine": "2023 Johannisberger Erntebringer Riesling Mild"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Stauffer",
+            "sourceUrl": "https://www.weingutstauffer.de/produkt/riesling-feuerberg/",
+            "wine": "Riesling Feuerberg"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Klein & Sohn",
+            "sourceUrl": "https://www.klein-und-sohn.de/2025-Riesling-vom-Vulkangestein/0225",
+            "wine": "0225"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut F.E. Schott",
+            "sourceUrl": "https://schottwein.de/products/johannisberg-riesling-trocken",
+            "wine": "Johannisberg Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Hundemer",
+            "sourceUrl": "https://www.weingut-hundemer.de/produkt/riesling-trocken/",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Landhaus Christmann",
+            "sourceUrl": "https://landhaus-christmann.de/produkt/riesling-feinfruchtig/",
+            "wine": "Riesling Feinfruchtig"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Mehling",
+            "sourceUrl": "https://weingut-mehling.de/wein/riesling/erste-lage/riesling-deidesheimer-kieselberg-bio",
+            "wine": "Riesling Deidesheimer Kieselberg Bio"
+          },
+          {
+            "abv": 12.7,
+            "producer": "Weingut Rumsauer",
+            "sourceUrl": "https://www.rumsauer.de/produkt/riesling/",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 11,
+            "producer": "Petershof",
+            "sourceUrl": "https://www.weinmanufaktur-petershof.de/products/2023-saar-riesling-trocken",
+            "wine": "2023 Saar Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Richard Rinck",
+            "sourceUrl": "https://www.weingut-richard-rinck.de/product-page/2018-riesling-element-trocken",
+            "wine": "2018 Riesling Element Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weinmanufaktur Stefan Breuer",
+            "sourceUrl": "https://breuer-wein.de/shop/riesling-handwerk-1-liter/",
+            "wine": "Riesling Handwerk 1 Liter"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Josef Rosch",
+            "sourceUrl": "https://www.weingut-rosch.de/produkt/bruderschaft-riesling-4/",
+            "wine": "Bruderschaft Riesling 4"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Walter Merk",
+            "sourceUrl": "https://www.weingutmerk.de/weine/kopie-von-riesling-m-2021",
+            "wine": "Kopie Von Riesling M 2021"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Heinrich Klohr",
+            "sourceUrl": "https://www.weingut-ck.de/shop/riesling-trocken/",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Isegrim",
+            "sourceUrl": "https://www.weingut-isegrim.de/de/der-shop/riesling-herrenberg",
+            "wine": "Riesling Herrenberg"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Doktor Heyden",
+            "sourceUrl": "https://www.heydenwein.de/products/riesling-alte-reben-gg",
+            "wine": "Riesling Alte Reben Gg"
+          },
+          {
+            "abv": 13.63,
+            "producer": "Weingut Frank Kühn",
+            "sourceUrl": "https://kuehn-wein.de/produkt/riesling/",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Lamberth",
+            "sourceUrl": "https://weingut-lamberth.de/products/2022-authental-riesling-trocken-1-5-l",
+            "wine": "2022 Authental Riesling Trocken 1 5 L"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Eugen Spindler - Lindenhof",
+            "sourceUrl": "https://www.spindler-lindenhof.de/wein-deidesheimer-riesling-trocken-01-1.html",
+            "wine": "Wein Deidesheimer Riesling Trocken 01 1"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Steffen Zelt",
+            "sourceUrl": "https://weingut-zelt.de/de/wine/2024er-riesling-kalkstein-trocken-2",
+            "wine": "2024Er Riesling Kalkstein Trocken 2"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Brüderlich Weingut",
+            "sourceUrl": "https://bruederlich-weingut.de/produkt/riesling-orange-2023/",
+            "wine": "Riesling Orange 2023"
+          },
+          {
+            "abv": 12,
+            "producer": "Spielmann-Schindler",
+            "sourceUrl": "https://www.spielmann-schindler.de/products/spielmann-schindler-riesling-trocken",
+            "wine": "Spielmann Schindler Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Maibachfarm",
+            "sourceUrl": "https://maibachfarm.de/shop/2024-dernauer-burggarten-riesling-qualitaetswein-trocken/",
+            "wine": "2024 Dernauer Burggarten Riesling Qualitaetswein Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Richard Weiler",
+            "sourceUrl": "https://www.weingut-weiler.de/product-page/krone-riesling",
+            "wine": "Krone Riesling"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Kress KG",
+            "sourceUrl": "https://weingut-kress.de/products/riesling-1",
+            "wine": "Riesling 1"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Martin",
+            "sourceUrl": "https://weingut-max-martin.de/products/riesling-trocken",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut C. H. Berres",
+            "sourceUrl": "https://www.berres.de/produkt/2021-erdener-treppchen-riesling-trocken/",
+            "wine": "2021 Erdener Treppchen Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weinhaus Schramm",
+            "sourceUrl": "https://weinhaus-schramm.de/produkt/riesling-classic/",
+            "wine": "Riesling Classic"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Margaretenhof",
+            "sourceUrl": "https://www.ahlwein.de/produkt/riesling-2025/",
+            "wine": "Riesling 2025"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Hof Rheinblick",
+            "sourceUrl": "https://hofrheinblick.de/produkt/riesling-gespraechstoff-2023-kopie/",
+            "wine": "Riesling Gespraechstoff 2023 Kopie"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Mossel Mentz",
+            "sourceUrl": "https://www.weingut-mossel-mentz.de/produkt/riesling-3/",
+            "wine": "Riesling 3"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/riesling-saphir-2/",
+            "wine": "Riesling Saphir 2"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Marc Josten GmbH",
+            "sourceUrl": "https://www.marcjosten.de/weine/2025er-schiefer-riesling/",
+            "wine": "2025Er Schiefer Riesling"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weinhof Scheu",
+            "sourceUrl": "https://weinhof-scheu.de/products/riesling-schweigen-kalkstein-trocken",
+            "wine": "Riesling Schweigen Kalkstein Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Andres",
+            "sourceUrl": "https://andres-deidesheim.de/wein/old-skool-riesling/",
+            "wine": "Old Skool Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Kopp",
+            "sourceUrl": "https://www.sternenfelserhof.de/shop/weine/weissweine/trockene-weissweine/2025-riesling-trocken/",
+            "wine": "2025 Riesling Trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "desoi-wein.de",
+            "sourceUrl": "https://www.desoi-wein.de/produkt/2023er-riesling-exclusive-trocken/",
+            "wine": "2023Er Riesling Exclusive Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "weingut-sohns.de",
+            "sourceUrl": "https://weingut-sohns.de/products/2024-se-riesling-trocken-bio",
+            "wine": "2024 Se Riesling Trocken Bio"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Puder",
+            "sourceUrl": "https://puder-wein.de/de/wine/riesling-alte-reben-zeller-schwarzer-herrgott-1",
+            "wine": "Riesling Alte Reben Zeller Schwarzer Herrgott 1"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Juwel Weinkellerei",
+            "sourceUrl": "https://juwel-weine.de/products/riesling",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Rings",
+            "sourceUrl": "https://weingut-rings.de/wine/2021-riesling-2/",
+            "wine": "2021 Riesling 2"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut & Gästehaus Vogt-Fehlinger",
+            "sourceUrl": "https://vogt-fehlinger.de/products/riesling-trocken",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Alexander Gysler",
+            "sourceUrl": "https://alexander-gysler.de/produkt/hoelle-riesling-2021/",
+            "wine": "Hoelle Riesling 2021"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingasthaus Wisser",
+            "sourceUrl": "https://www.weingasthaus-wisser.de/produkt/riesling-trocken/",
+            "wine": "Riesling Trocken"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Jung",
+            "sourceUrl": "https://wein-macht-jung.de/products/2024-riesling-gutswein-trocken",
+            "wine": "2024 Riesling Gutswein Trocken"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Sommer",
+            "sourceUrl": "https://sommer.wine/produkt/023-riesling-trocken/",
+            "wine": "023 Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Müller-Grossmann",
+            "sourceUrl": "https://www.mueller-grossmann.at/shop/produkt/weintypen/ortsweine/riesling-furth-2018/",
+            "wine": "Riesling Furth 2018"
+          },
+          {
+            "abv": 13,
+            "producer": "Vinophilia & Cetera",
+            "sourceUrl": "https://vinophilia.at/produkt/riesling-vom-urgestein-stift/",
+            "wine": "Riesling Vom Urgestein Stift"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Tom Dockner",
+            "sourceUrl": "https://docknertom.at/en/produkt/parapluiberg-riesling-2024-2/",
+            "wine": "Parapluiberg Riesling 2024 2"
+          },
+          {
+            "abv": 13,
+            "producer": "Weinhof Anderl",
+            "sourceUrl": "https://anderlwein.at/shop/produkt/riesling-kamptal-dac-2021/",
+            "wine": "Riesling Kamptal Dac 2021"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vi[no]trine",
+            "sourceUrl": "https://pratsch.at/produkt/riesling-heiligenberg-magnum/",
+            "wine": "Riesling Heiligenberg Magnum"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Huber",
+            "sourceUrl": "https://www.huberwein.at/riesling-wechselberg/",
+            "wine": "Riesling Wechselberg"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Mittelbach",
+            "sourceUrl": "https://www.weine-mittelbach.at/products/riesling-von-den-terrassen-2023-kremstal-dac",
+            "wine": "Riesling Von Den Terrassen 2023 Kremstal Dac"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Jordan",
+            "sourceUrl": "https://www.weingut-jordan.at/product/riesling-vom-urgestein/",
+            "wine": "Riesling Vom Urgestein"
+          },
+          {
+            "abv": 13,
+            "producer": "Domaine Etienne Simonis",
+            "sourceUrl": "https://www.vins-simonis.fr/riesling-grand-cru-alsace-kaefferkopf-bio-s5.html",
+            "wine": "Riesling Grand Cru Alsace Kaefferkopf Bio S5"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Enotéka Wildwines",
+            "sourceUrl": "https://www.wildwines.ch/products/lassak-riesling-gutswein",
+            "wine": "Lassak Riesling Gutswein"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Grillette Domaine de Cressier",
+            "sourceUrl": "https://grillette.ch/produit/riesling-premier-beauregards/",
+            "wine": "Riesling Premier Beauregards"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Round Barn Winery",
+            "sourceUrl": "https://drinkmichigan.com/products/taborhill-riesling",
+            "wine": "Taborhill Riesling"
+          },
+          {
+            "abv": 13.2,
+            "producer": "Harbinger Winery",
+            "sourceUrl": "https://www.harbingerwinery.com/products/white-riesling",
+            "wine": "White Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Weinbau Nils Hohnheit",
+            "sourceUrl": "https://weingut-nh.de/products/2020-abtsberg-riesling-zehntschluck",
+            "wine": "2020 Abtsberg Riesling Zehntschluck"
+          },
+          {
+            "abv": 12,
+            "producer": "City Winery",
+            "sourceUrl": "https://citywinery.com/products/2024-montgomery-mills-riesling",
+            "wine": "2024 Montgomery Mills Riesling"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Leo Lahm",
+            "sourceUrl": "https://weingutlahm.com/produkt/2025-riesling-trocken/",
+            "wine": "2025 Riesling Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Gebrüder Nittnaus",
+            "sourceUrl": "https://www.nittnaus.net/weine/riesling-selection/",
+            "wine": "Riesling Selection"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Winnica Korol",
+            "sourceUrl": "https://winnicakorol.pl/wina/w-sprzedazy/riesling-2023.html",
+            "wine": "Riesling 2023"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Luiz Argenta Vinhos Finos",
+            "sourceUrl": "https://www.luizargenta.com.br/produto/vinhos/la-design/riesling/11",
+            "wine": "11"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Dopff et Irion",
+            "sourceUrl": "https://www.dopff-irion.com/fr/boutique/000100010000000467/riesling-cuvee-rene-dopff-a-o-p-alsace",
+            "wine": "Riesling Cuvee Rene Dopff A O P Alsace"
+          },
+          {
+            "abv": 12,
+            "producer": "Dupuy Antoine et Vincent",
+            "sourceUrl": "https://www.lesgrappes.com/products/cattin-sauvage-riesling-bio",
+            "wine": "Cattin Sauvage Riesling Bio"
+          },
+          {
+            "abv": 12,
+            "producer": "Kyneton Ridge",
+            "sourceUrl": "https://kynetonridge.com.au/product/riesling-macedon-2025/",
+            "wine": "Riesling Macedon 2025"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Howard Park Wines",
+            "sourceUrl": "https://howardparkwines.com.au/what-does-a-15-year-old-riesling-taste-like/",
+            "wine": "What Does A 15 Year Old Riesling Taste Like"
+          },
+          {
+            "abv": 12,
+            "producer": "Wein- & Sektgut Frank Höhn",
+            "sourceUrl": "https://www.frank-hoehn.com/product-page/riesling",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 11.1,
+            "producer": "Sue-Ann Staff Estate Winery",
+            "sourceUrl": "https://www.sue-annstaff.com/products/2011-roberts-block-riesling-re-release",
+            "wine": "2011 Roberts Block Riesling Re Release"
+          },
+          {
+            "abv": 11,
+            "producer": "Haslev Vingård",
+            "sourceUrl": "https://www.haslevvingaard.dk/products/537-gutzler-riesling-gutswein-2023",
+            "wine": "537 Gutzler Riesling Gutswein 2023"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Georgetown Vineyards",
+            "sourceUrl": "https://storka.com/stores/corkscrew-wines-brooklyn/products/eva-fricke-mellifluous-rheingau-riesling-2018/750ml",
+            "wine": "750Ml"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Džervin",
+            "sourceUrl": "https://www.vinarijadzervin.rs/en/proizvodi/riesling",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Cantina La Vis",
+            "sourceUrl": "https://la-vis.com/i-nostri-vini/i-classici/riesling",
+            "wine": "Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Wine Mechanics",
+            "sourceUrl": "https://winemechanics.se/vara-viner/gimme-gimme-gimme-riesling/",
+            "wine": "Gimme Gimme Gimme Riesling"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Graf Adelmann",
+            "sourceUrl": "https://www.graf-adelmann.com/product-page/2018-das-lied-von-der-erde-riesling-gg",
+            "wine": "2018 Das Lied Von Der Erde Riesling Gg"
+          },
+          {
+            "abv": 11,
+            "producer": "JNT Group S.A. Sp.K.",
+            "sourceUrl": "https://jntgroup.com/en/kluczowi-dostawcy/carl-loewen/riesling-quant/",
+            "wine": "Riesling Quant"
+          },
+          {
+            "abv": 11,
+            "producer": "Wollersheim Winery",
+            "sourceUrl": "https://www.wollersheim.com/product/dry-riesling/",
+            "wine": "Dry Riesling"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Stonewall Estates",
+            "sourceUrl": "https://www.stonewallestates.ca/product-page/2023-riesling",
+            "wine": "2023 Riesling"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Caves René Bentz",
+            "sourceUrl": "https://cavesrenebentz.lu/vins/riesling-enschberg",
+            "wine": "Riesling Enschberg"
+          },
+          {
+            "abv": 12.4,
+            "producer": "Volcanic Hills Estate Winery",
+            "sourceUrl": "https://volcanichillswinery.com/products/2022-riesling-icewine-200ml",
+            "wine": "2022 Riesling Icewine 200Ml"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Stiftshof",
+            "sourceUrl": "https://weingut-stiftshof.com/produkt/2025er-guts-riesling-trocken/",
+            "wine": "2025Er Guts Riesling Trocken"
+          },
+          {
+            "abv": 12.2,
+            "producer": "The A-Frame Wintery on The Blufftop at Rocheport",
+            "sourceUrl": "https://missouriwine.com/product/blufftop-cellars-riesling/",
+            "wine": "Blufftop Cellars Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Giordano Vini",
+            "sourceUrl": "https://www.giordanovini.it/tuzko-riesling",
+            "wine": "Tuzko Riesling"
+          },
+          {
+            "abv": 12,
+            "producer": "Winzergenossenschaft Waldulm / Baden e.G.",
+            "sourceUrl": "https://www.waldulmer.de/products/riesling-qba-trocken",
+            "wine": "Riesling Qba Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weinhandel Regina Bernhard",
+            "sourceUrl": "https://www.vinogina.at/products/knoll-riesling-loibner-federspiel-wachau-dac-2025",
+            "wine": "Knoll Riesling Loibner Federspiel Wachau Dac 2025"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Steininger",
+            "sourceUrl": "https://www.weingut-steininger.at/online-vinothek/weine/riesling-novemberlese-2008/",
+            "wine": "Riesling Novemberlese 2008"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.sue-annstaff.com/products/2019-roberts-block-riesling",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Sue-Ann Staff Estate Winery",
+            "sourceUrl": "https://www.sue-annstaff.com/products/2019-roberts-block-riesling",
+            "wine": "2019 Roberts Block Riesling"
+          },
+          {
+            "producer": "Weingut Immich-Batterieberg",
+            "sourceUrl": "https://www.batterieberg.com/shop/ortsweine/2023-escheburg-riesling/",
+            "wine": "2023 Escheburg Riesling"
+          },
+          {
+            "producer": "Brooks Wine",
+            "sourceUrl": "https://www.brookswine.com/product/2022-brooks-estate-riesling/",
+            "wine": "2022 Brooks Estate Riesling"
+          },
+          {
+            "producer": "Adega Mãe",
+            "sourceUrl": "https://adegamae.pt/vinho/adegamae-riesling-late-release/",
+            "wine": "Adegamae Riesling Late Release"
+          },
+          {
+            "producer": "Round Barn Winery",
+            "sourceUrl": "https://drinkmichigan.com/products/roundbarn-riesling",
+            "wine": "Roundbarn Riesling"
+          },
+          {
+            "producer": "Frankland Estate",
+            "sourceUrl": "https://franklandestate.com.au/products/isolation-ridge-vineyard-riesling-2025",
+            "wine": "Isolation Ridge Vineyard Riesling 2025"
+          }
+        ]
       }
     ],
     "id": "riesling",
@@ -16742,7 +18135,7 @@
       "leather",
       "tar"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -16823,6 +18216,41 @@
             "producer": "Bodegas Navajas",
             "sourceUrl": "https://bodegasnavajas.es/tienda/producto/vinos-doc-rioja-navajas/monovarietales/navajas-tinto-garnacha/",
             "wine": "Navajas Tinto Garnacha"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://gemtreewines.com/products/2025-small-batch-grenache",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Gemtree Wines",
+            "sourceUrl": "https://gemtreewines.com/products/2025-small-batch-grenache",
+            "wine": "2025 Small Batch Grenache"
+          },
+          {
+            "producer": "Villa Creek Cellars",
+            "sourceUrl": "https://www.villacreek.com/wine/2023-garnacha",
+            "wine": "2023 Garnacha"
+          },
+          {
+            "producer": "Maxwell Wines",
+            "sourceUrl": "https://maxwellwines.com.au/products/fresca-grenache-2025",
+            "wine": "Fresca Grenache 2025"
+          },
+          {
+            "producer": "Viñas del Jaro",
+            "sourceUrl": "https://www.vinosiberian.com/producto/badaceli-garnacha-anfora/",
+            "wine": "Badaceli Garnacha Anfora"
+          },
+          {
+            "producer": "Nikola Estate",
+            "sourceUrl": "https://nikolaestate.com.au/products/2023-nikola-estate-regional-grenache",
+            "wine": "2023 Nikola Estate Regional Grenache"
           }
         ]
       }
@@ -18298,7 +19726,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "white pepper",
       "citrus",
@@ -18415,6 +19843,148 @@
         "quote": "Mladé sú vhodné k studenému mäsu, omáčkam a slaným predjedlám, vyzreté k hovädziemu, filé z morských rýb a neutrálnym omáčkam.",
         "value": "fish",
         "sourceUrl": "https://sk.wikipedia.org/wiki/Veltl%C3%ADnske_zelen%C3%A9"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://zillinger.bio/products/hirschenreyn-gruner-veltliner-2024",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Weingut  Herbert Zillinger",
+            "sourceUrl": "https://zillinger.bio/products/hirschenreyn-gruner-veltliner-2024",
+            "wine": "Hirschenreyn Gruner Veltliner 2024"
+          },
+          {
+            "abv": 14,
+            "producer": "Golser Wein GmbH",
+            "sourceUrl": "https://www.golserwein.at/products/gruner-veltliner-reserve-magnum",
+            "wine": "Gruner Veltliner Reserve Magnum"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Weingut Aigner",
+            "sourceUrl": "https://aigner-wein.at/produkt/ried-frechau-kremstal-gruener-veltliner-elitaer-2019/",
+            "wine": "Ried Frechau Kremstal Gruener Veltliner Elitaer 2019"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Wenzl-Kast",
+            "sourceUrl": "https://www.weingut-wenzl-kast.at/shop/gruenerveltliner-ried-gabarinza/",
+            "wine": "Gruenerveltliner Ried Gabarinza"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Haimel",
+            "sourceUrl": "https://www.weingut-haimel.at/shop/gruener-veltliner-dac-reserve-kellermeisterin/",
+            "wine": "Gruener Veltliner Dac Reserve Kellermeisterin"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Mittelbach",
+            "sourceUrl": "https://www.weine-mittelbach.at/products/gruner-veltliner-ried-gebling-kremstal-dac-reserve-2024",
+            "wine": "Gruner Veltliner Ried Gebling Kremstal Dac Reserve 2024"
+          },
+          {
+            "abv": 8,
+            "producer": "Vi[no]trine",
+            "sourceUrl": "https://pratsch.at/produkt/gruener-veltliner-8/",
+            "wine": "Gruener Veltliner 8"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut und Heuriger Zahel",
+            "sourceUrl": "https://www.zahel.at/produkt/gruener-veltliner-goldberg-2025/",
+            "wine": "Gruener Veltliner Goldberg 2025"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Müller-Grossmann",
+            "sourceUrl": "https://www.mueller-grossmann.at/shop/produkt/weintypen/lagenweine/bio-gruener-veltliner-ried-hoehlgraben-alte-reben-2025/",
+            "wine": "Bio Gruener Veltliner Ried Hoehlgraben Alte Reben 2025"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Geyerhof",
+            "sourceUrl": "https://www.geyerhof.at/weine-shop/gruener-veltliner-hofstudien/",
+            "wine": "Gruener Veltliner Hofstudien"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Christoph Hess",
+            "sourceUrl": "https://www.christophhess.at/products/gruener-veltliner",
+            "wine": "Gruener Veltliner"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Artner",
+            "sourceUrl": "https://weingut-artner.at/produkt/gruener-veltliner/",
+            "wine": "Gruener Veltliner"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Huber",
+            "sourceUrl": "https://www.huberwein.at/gr%C3%BCner-veltliner-strass/",
+            "wine": "Grüner Veltliner Strass"
+          },
+          {
+            "abv": 12,
+            "producer": "JNT Group S.A. Sp.K.",
+            "sourceUrl": "https://jntgroup.com/en/kluczowi-dostawcy/frank/zweigelt-2/",
+            "wine": "Zweigelt 2"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Kögler",
+            "sourceUrl": "https://weingut-koegler.de/products/koegler-gruener-veltiner-2020",
+            "wine": "Koegler Gruener Veltiner 2020"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Heinrich Klohr",
+            "sourceUrl": "https://www.weingut-ck.de/shop/ruppertsberger-gruener-veltliner-trocken-2025/",
+            "wine": "Ruppertsberger Gruener Veltliner Trocken 2025"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Salzl Seewinkelhof",
+            "sourceUrl": "https://salzl.at/produkt/gruener-veltliner-2025/",
+            "wine": "Gruener Veltliner 2025"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Tom Dockner",
+            "sourceUrl": "https://docknertom.at/en/produkt/tom-gruener-veltliner-2025/",
+            "wine": "Tom Gruener Veltliner 2025"
+          },
+          {
+            "abv": 13,
+            "producer": "Vinophilia & Cetera",
+            "sourceUrl": "https://vinophilia.at/produkt/gruener-veltliner-dac-vom-urgestein-stift/",
+            "wine": "Gruener Veltliner Dac Vom Urgestein Stift"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Wendelin",
+            "sourceUrl": "https://weingut-wendelin.at/weine/gruener-veltliner/",
+            "wine": "Gruener Veltliner"
+          },
+          {
+            "abv": 13,
+            "producer": "Weinhof Anderl",
+            "sourceUrl": "https://anderlwein.at/shop/produkt/gruener-veltliner-lengenfeld-kamptal-dac-2023/",
+            "wine": "Gruener Veltliner Lengenfeld Kamptal Dac 2023"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Jordan",
+            "sourceUrl": "https://www.weingut-jordan.at/product/gruener-veltliner-pulkau/",
+            "wine": "Gruener Veltliner Pulkau"
+          }
+        ]
       }
     ],
     "id": "gruner-veltliner",
@@ -18488,7 +20058,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -18667,6 +20237,202 @@
         "quote": "Il accompagne également les poissons, les viandes blanches et surtout les fromages doux.",
         "value": "cheese",
         "sourceUrl": "https://fr.wikipedia.org/wiki/M%C3%BCller-thurgau"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.weingut-albert-lambrich.de/produkt/rivaner-kopie/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 10,
+            "producer": "Weingut Albert Lambrich",
+            "sourceUrl": "https://www.weingut-albert-lambrich.de/produkt/rivaner-kopie/",
+            "wine": "Rivaner Kopie"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Richard Scheid",
+            "sourceUrl": "https://scheid-wein.de/products/rivaner-trocken-2024",
+            "wine": "Rivaner Trocken 2024"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/rivaner-trocken/",
+            "wine": "Rivaner Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Horst Adams",
+            "sourceUrl": "https://www.weingut-adams.de/products/rivaner-qualitatswein-0-75l",
+            "wine": "Rivaner Qualitatswein 0 75L"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut-Brennerei Gutshof Zenz",
+            "sourceUrl": "https://www.gutshof-zenz.de/trockene-weine/id-2023-rivaner-classic.html",
+            "wine": "Id 2023 Rivaner Classic"
+          },
+          {
+            "abv": 11,
+            "producer": "Schwahn-Fehlinger",
+            "sourceUrl": "https://schwahn-fehlinger.de/products/muller-thurgau",
+            "wine": "Muller Thurgau"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Merz",
+            "sourceUrl": "https://www.weingut-merz.de/produkt/rivaner/",
+            "wine": "Rivaner"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/rivaner/",
+            "wine": "Rivaner"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut \"Alter Weinhof\"",
+            "sourceUrl": "https://alter-weinhof.de/qualitaetswein-rivaner-trocken/",
+            "wine": "Qualitaetswein Rivaner Trocken"
+          },
+          {
+            "abv": 12.55,
+            "producer": "Weingut Rumsauer",
+            "sourceUrl": "https://www.rumsauer.de/produkt/2018-mueller-thurgau-trocken/",
+            "wine": "2018 Mueller Thurgau Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut und Appartementhotel Röhrenbach",
+            "sourceUrl": "https://roehrenbach.de/produkt/2024er-mueller-thurgau-trocken-075-liter/",
+            "wine": "2024Er Mueller Thurgau Trocken 075 Liter"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Doktor Heyden",
+            "sourceUrl": "https://www.heydenwein.de/products/rivaner-trocken-1l",
+            "wine": "Rivaner Trocken 1L"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Frank Kühn",
+            "sourceUrl": "https://kuehn-wein.de/produkt/rivaner/",
+            "wine": "Rivaner"
+          },
+          {
+            "abv": 11.32,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/rivaner/",
+            "wine": "Rivaner"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weinbau Nils Hohnheit",
+            "sourceUrl": "https://weingut-nh.de/products/2021-muller-thurgau-qualitaswein-trocken",
+            "wine": "2021 Muller Thurgau Qualitaswein Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Vogel",
+            "sourceUrl": "https://weingut-vogel.com/produkt/rivaner-2025-1-ltr/",
+            "wine": "Rivaner 2025 1 Ltr"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Caves René Bentz",
+            "sourceUrl": "https://cavesrenebentz.lu/vins/cotes-de-wellenstein",
+            "wine": "Cotes De Wellenstein"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/sommerwein-mueller-thurgau",
+            "wine": "Sommerwein Mueller Thurgau"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Pauly Arnold",
+            "sourceUrl": "https://www.ferienweingut-pauly.de/weinpakete/18er-2023-rivaner-classic?lang=en-gb",
+            "wine": "18Er 2023 Rivaner Classic"
+          },
+          {
+            "abv": 11.6,
+            "producer": "Weingut Stachel",
+            "sourceUrl": "https://www.weingut-stachel.de/produkt/mueller-thurgau-2/",
+            "wine": "Mueller Thurgau 2"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Johann Müller",
+            "sourceUrl": "https://weingut-johann-mueller.de/produkt/mueller-thurgau-trocken/",
+            "wine": "Mueller Thurgau Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Junker",
+            "sourceUrl": "https://www.weingut-junker.de/produkt/mueller-thurgau-2/",
+            "wine": "Mueller Thurgau 2"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Stauffer",
+            "sourceUrl": "https://www.weingutstauffer.de/produkt/mueller-thurgau/",
+            "wine": "Mueller Thurgau"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Hundemer",
+            "sourceUrl": "https://www.weingut-hundemer.de/produkt/mueller-thurgau/",
+            "wine": "Mueller Thurgau"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Kögler",
+            "sourceUrl": "https://weingut-koegler.de/products/koegler-muller-thurgau-2025",
+            "wine": "Koegler Muller Thurgau 2025"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Kress KG",
+            "sourceUrl": "https://weingut-kress.de/products/mueller-thurgau",
+            "wine": "Mueller Thurgau"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Winzergenossenschaft Waldulm / Baden e.G.",
+            "sourceUrl": "https://www.waldulmer.de/products/blanc-de-noirs-qba-kopie-1",
+            "wine": "Blanc De Noirs Qba Kopie 1"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weinhaus Schramm",
+            "sourceUrl": "https://weinhaus-schramm.de/produkt/mueller-thurgau-2/",
+            "wine": "Mueller Thurgau 2"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Margaretenhof",
+            "sourceUrl": "https://www.ahlwein.de/produkt/mueller-thurgau-2025/",
+            "wine": "Mueller Thurgau 2025"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Leos",
+            "sourceUrl": "https://www.weingut-leos.de/produkt/2020-rivaner-trocken/",
+            "wine": "2020 Rivaner Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Mossel Mentz",
+            "sourceUrl": "https://www.weingut-mossel-mentz.de/produkt/mueller-thurgau-2/",
+            "wine": "Mueller Thurgau 2"
+          }
+        ]
       }
     ],
     "id": "muller-thurgau",
@@ -19852,6 +21618,36 @@
         "quote": "Carignano is undoubtedly one of Sardinian oenology’s most interesting and prestigious grape varieties, with an intense ruby red color, vinous perfume, and dry, spicy, and harmonious taste",
         "value": "dry",
         "sourceUrl": "https://doi.org/10.3390/foods14132290"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.cambis.fr/products/trapanelles",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Domaine de Cambis",
+            "sourceUrl": "https://www.cambis.fr/products/trapanelles",
+            "wine": "Trapanelles"
+          },
+          {
+            "producer": "Cave les Coteaux de Saint-Christol",
+            "sourceUrl": "https://www.cave-saint-christol.com/produit/le-carignan-carton-de-6-bouteilles/",
+            "wine": "Le Carignan Carton De 6 Bouteilles"
+          },
+          {
+            "producer": "Viña Odfjell",
+            "sourceUrl": "https://odfjellvineyards.cl/en/producto/orzada-carignan-2021/",
+            "wine": "Orzada Carignan 2021"
+          },
+          {
+            "producer": "De Muller",
+            "sourceUrl": "https://demuller.es/producto/la-cresta/",
+            "wine": "La Cresta"
+          }
+        ]
       }
     ],
     "id": "carignan",
@@ -19866,7 +21662,9 @@
       "pt": "Carignan"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 25,
     "regions": [],
     "styles": [
@@ -21545,7 +23343,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "apple",
       "citrus",
@@ -21709,6 +23507,562 @@
         "quote": "Amint neve is mutatja, Burgundiából származik.",
         "value": "FR",
         "sourceUrl": "https://hu.wikipedia.org/wiki/Feh%C3%A9r_burgundi"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://weingutbecker.de/produkt/2023-weissburgunder-holzfass-trocken-bio/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14.5,
+            "producer": "Weingut Becker",
+            "sourceUrl": "https://weingutbecker.de/produkt/2023-weissburgunder-holzfass-trocken-bio/",
+            "wine": "2023 Weissburgunder Holzfass Trocken Bio"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Wenzl-Kast",
+            "sourceUrl": "https://www.weingut-wenzl-kast.at/shop/weissburgunder/",
+            "wine": "Weissburgunder"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Weinhof Anderl",
+            "sourceUrl": "https://anderlwein.at/shop/produkt/weisser-burgunder-weissburgunder-pinot-blance/",
+            "wine": "Weisser Burgunder Weissburgunder Pinot Blance"
+          },
+          {
+            "abv": 14,
+            "producer": "Zvonko Bogdan's Winery",
+            "sourceUrl": "https://www.vinarijazvonkobogdan.com/vina/pinot-blanc",
+            "wine": "Pinot Blanc"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Steininger",
+            "sourceUrl": "https://www.weingut-steininger.at/online-vinothek/weine/weissburgunder-novemberlese-2007/",
+            "wine": "Weissburgunder Novemberlese 2007"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Geyerhof",
+            "sourceUrl": "https://www.geyerhof.at/weine-shop/pinot-blanc-hofstudien/",
+            "wine": "Pinot Blanc Hofstudien"
+          },
+          {
+            "abv": 7,
+            "producer": "Weingut Feiler-Artinger",
+            "sourceUrl": "https://www.feiler-artinger.at/produkt/ruster-ausbruch-dac-essenz-weissburgunder/",
+            "wine": "Ruster Ausbruch Dac Essenz Weissburgunder"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Weingut Wendelin",
+            "sourceUrl": "https://weingut-wendelin.at/weine/weissburgunder/",
+            "wine": "Weissburgunder"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Weingut Ferdinand Abel",
+            "sourceUrl": "https://www.weingut-abel.de/products/2025er-abel-secco-pinot-blanc2520",
+            "wine": "2025Er Abel Secco Pinot Blanc2520"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Leos",
+            "sourceUrl": "https://www.weingut-leos.de/produkt/2023-weissburgunder-trocken/",
+            "wine": "2023 Weissburgunder Trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Dr. Wehrheim",
+            "sourceUrl": "https://weingut-wehrheim.de/products/mandelberg-weissburgunder-gg",
+            "wine": "Mandelberg Weissburgunder Gg"
+          },
+          {
+            "abv": 12,
+            "producer": "Conte Giordano Emo Capodilista",
+            "sourceUrl": "https://lamontecchia.it/en/colli-euganei-wines/white-wines/pinot-bianco-colli-euganei-doc/",
+            "wine": "Pinot Bianco Colli Euganei Doc"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina Sociale Bergamasca",
+            "sourceUrl": "https://www.cantinabergamasca.it/gdo/pinot-bianco-della-bergamasca-igt/",
+            "wine": "Pinot Bianco Della Bergamasca Igt"
+          },
+          {
+            "abv": 12,
+            "producer": "Punto Zero",
+            "sourceUrl": "https://www.puntozerowine.it/trasparenza-pinot-bianco-igp-veneto/?lang=en",
+            "wine": "Trasparenza Pinot Bianco Igp Veneto"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Thürkind",
+            "sourceUrl": "https://www.weingut-thuerkind.de/produkt/weissburgunder-2025/",
+            "wine": "Weissburgunder 2025"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2022er-weissburgunder-s-trocken/",
+            "wine": "2022Er Weissburgunder S Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Herber",
+            "sourceUrl": "https://www.weingut-herber.de/shop/2024-weissburgunder-qualitaetswein/",
+            "wine": "2024 Weissburgunder Qualitaetswein"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Horst Adams",
+            "sourceUrl": "https://www.weingut-adams.de/products/weissburgunder-qualitatswein-0-75l",
+            "wine": "Weissburgunder Qualitatswein 0 75L"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Rummel",
+            "sourceUrl": "https://rummel-biowein.de/products/weisser-burgunder-trocken",
+            "wine": "Weisser Burgunder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut-Brennerei Gutshof Zenz",
+            "sourceUrl": "https://www.gutshof-zenz.de/trockene-weine/id-2025-weissburgunder.html",
+            "wine": "Id 2025 Weissburgunder"
+          },
+          {
+            "abv": 12.53,
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/weissburgunder-trocken-pfalz",
+            "wine": "Weissburgunder Trocken Pfalz"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Otto Becker",
+            "sourceUrl": "https://weingut-ottobecker.de/products/weisser-burgunder-trocken-rheinhessen",
+            "wine": "Weisser Burgunder Trocken Rheinhessen"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Scholisch",
+            "sourceUrl": "https://weingutscholisch.de/produkt/2023-weissburgunder-trocken/",
+            "wine": "2023 Weissburgunder Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Schwedhelm",
+            "sourceUrl": "https://www.schwedhelm-zellertal.de/products/weissburgunder-zellertal-2025",
+            "wine": "Weissburgunder Zellertal 2025"
+          },
+          {
+            "abv": 13.7,
+            "producer": "Weingut Stachel",
+            "sourceUrl": "https://www.weingut-stachel.de/produkt/weissburgunder-2/",
+            "wine": "Weissburgunder 2"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Adamy",
+            "sourceUrl": "https://weingut-adamy.de/produkt/ufergeschichten-weissburgunder/",
+            "wine": "Ufergeschichten Weissburgunder"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Schwahn-Fehlinger",
+            "sourceUrl": "https://schwahn-fehlinger.de/products/weisser-burgunder",
+            "wine": "Weisser Burgunder"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Johann Müller",
+            "sourceUrl": "https://weingut-johann-mueller.de/produkt/weissburgunder-hartkopf-trocken/",
+            "wine": "Weissburgunder Hartkopf Trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Winzer von Erbach",
+            "sourceUrl": "https://winzer-von-erbach.de/shop/651-weissburgunder-trocken",
+            "wine": "651 Weissburgunder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Merz",
+            "sourceUrl": "https://www.weingut-merz.de/produkt/weissburgunder/",
+            "wine": "Weissburgunder"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Junker",
+            "sourceUrl": "https://www.weingut-junker.de/produkt/weissburgunder/",
+            "wine": "Weissburgunder"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Richard Scheid",
+            "sourceUrl": "https://scheid-wein.de/products/weissburgunder-trocken-2024",
+            "wine": "Weissburgunder Trocken 2024"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Michael Dixius",
+            "sourceUrl": "https://weingut-dixius.de/products/2024-weissburgunder",
+            "wine": "2024 Weissburgunder"
+          },
+          {
+            "abv": 13,
+            "producer": "Landhaus Christmann",
+            "sourceUrl": "https://landhaus-christmann.de/produkt/pinot-blanc-trocken/",
+            "wine": "Pinot Blanc Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Mehling",
+            "sourceUrl": "https://weingut-mehling.de/wein/rebsorte/weissburgunder-bio-weisswein-deidesheim-pfalz",
+            "wine": "Weissburgunder Bio Weisswein Deidesheim Pfalz"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut \"Alter Weinhof\"",
+            "sourceUrl": "https://alter-weinhof.de/orange-wine-landwein-weissburgunder/",
+            "wine": "Orange Wine Landwein Weissburgunder"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Ulrich Göbel",
+            "sourceUrl": "https://ferienweingut-goebel.de/product/2021-weissburgunder-classic/",
+            "wine": "2021 Weissburgunder Classic"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Andre",
+            "sourceUrl": "https://andre-wein.de/weinshop/feuerberg-weissburgunder-barrique/",
+            "wine": "Feuerberg Weissburgunder Barrique"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut und Appartementhotel Röhrenbach",
+            "sourceUrl": "https://roehrenbach.de/produkt/2024er-weissburgunder-trocken-075-liter/",
+            "wine": "2024Er Weissburgunder Trocken 075 Liter"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut A. Waigand",
+            "sourceUrl": "https://waigand-wein.de/products/2022er-weier-burgunder-fr-trocken",
+            "wine": "2022Er Weier Burgunder Fr Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weinmanufaktur Stefan Breuer",
+            "sourceUrl": "https://breuer-wein.de/shop/rotary-weissburgunder-2022/",
+            "wine": "Rotary Weissburgunder 2022"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut St. Nikolaus-Hof",
+            "sourceUrl": "https://www.st-nikolaus-hof.de/produkt/minis-vom-weissburgunder/",
+            "wine": "Minis Vom Weissburgunder"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Walter Merk",
+            "sourceUrl": "https://www.weingutmerk.de/weine/kopie-von-weissburgunder-2022",
+            "wine": "Kopie Von Weissburgunder 2022"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Heinrich Klohr",
+            "sourceUrl": "https://www.weingut-ck.de/shop/weissburgunder-trocken/",
+            "wine": "Weissburgunder Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Eugen Spindler - Lindenhof",
+            "sourceUrl": "https://www.spindler-lindenhof.de/wein-weissburgunder-trocken-20.html",
+            "wine": "Wein Weissburgunder Trocken 20"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut H. Beutel",
+            "sourceUrl": "https://www.weingut-beutel.de/produkt/2018-weissburgunder-075l/",
+            "wine": "2018 Weissburgunder 075L"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Steffen Zelt",
+            "sourceUrl": "https://weingut-zelt.de/de/wine/2025er-weissburgunder-trocken",
+            "wine": "2025Er Weissburgunder Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Blinn Weine",
+            "sourceUrl": "https://blinn-weine.de/products/weissburgunder-qualitatswein-wb25",
+            "wine": "Weissburgunder Qualitatswein Wb25"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Maibachfarm",
+            "sourceUrl": "https://maibachfarm.de/shop/2023-weissburgunder-qualitaetswein-trocken/",
+            "wine": "2023 Weissburgunder Qualitaetswein Trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Kress KG",
+            "sourceUrl": "https://weingut-kress.de/products/goldbach-pinot-blanc",
+            "wine": "Goldbach Pinot Blanc"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Karthäuserhof",
+            "sourceUrl": "https://karthaeuserhof.com/en/products/bruno-pinot-blanc-2022",
+            "wine": "Bruno Pinot Blanc 2022"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Martin",
+            "sourceUrl": "https://weingut-max-martin.de/products/weissburgunder-trocken",
+            "wine": "Weissburgunder Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weinhaus Schramm",
+            "sourceUrl": "https://weinhaus-schramm.de/produkt/weissburgunder-classic/",
+            "wine": "Weissburgunder Classic"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut B. Frieden",
+            "sourceUrl": "https://bernd-frieden.de/produkt/weissburgunder/",
+            "wine": "Weissburgunder"
+          },
+          {
+            "abv": 13.35,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/weissburgunder-kopie-3/",
+            "wine": "Weissburgunder Kopie 3"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Marc Josten GmbH",
+            "sourceUrl": "https://www.marcjosten.de/weine/2024er-schiefer-weissburgunder/",
+            "wine": "2024Er Schiefer Weissburgunder"
+          },
+          {
+            "abv": 13,
+            "producer": "Weinhof Scheu",
+            "sourceUrl": "https://weinhof-scheu.de/products/weissburgunder-schweigen-kalkstein",
+            "wine": "Weissburgunder Schweigen Kalkstein"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Andres",
+            "sourceUrl": "https://andres-deidesheim.de/wein/weissburgunder/",
+            "wine": "Weissburgunder"
+          },
+          {
+            "abv": 13,
+            "producer": "weingut-sohns.de",
+            "sourceUrl": "https://weingut-sohns.de/products/2023-monchspfad-geisenheim-weissburgunder",
+            "wine": "2023 Monchspfad Geisenheim Weissburgunder"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Juwel Weinkellerei",
+            "sourceUrl": "https://juwel-weine.de/products/weissburgunder",
+            "wine": "Weissburgunder"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Puder",
+            "sourceUrl": "https://puder-wein.de/de/wine/weissburgunder-trocken",
+            "wine": "Weissburgunder Trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut & Gästehaus Vogt-Fehlinger",
+            "sourceUrl": "https://vogt-fehlinger.de/products/weisser-burgunder-trocken",
+            "wine": "Weisser Burgunder Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Alexander Gysler",
+            "sourceUrl": "https://alexander-gysler.de/produkt/kirchenstueck-weissburgunder-2020-trocken/",
+            "wine": "Kirchenstueck Weissburgunder 2020 Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Jung",
+            "sourceUrl": "https://wein-macht-jung.de/products/2023-spiesheim-weissburgunder-trocken",
+            "wine": "2023 Spiesheim Weissburgunder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Sommer",
+            "sourceUrl": "https://sommer.wine/produkt/103-weissburgunder-trocken-bio/",
+            "wine": "103 Weissburgunder Trocken Bio"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Müller-Grossmann",
+            "sourceUrl": "https://www.mueller-grossmann.at/shop/produkt/rebsorten/weissburgunder/weissburgunder-ried-steinpoint-2025/",
+            "wine": "Weissburgunder Ried Steinpoint 2025"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Engel",
+            "sourceUrl": "https://www.weingut-engel.at/produkt/weissburgunder-tieschen/",
+            "wine": "Weissburgunder Tieschen"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Salzl Seewinkelhof",
+            "sourceUrl": "https://salzl.at/produkt/weissburgunder-2025/",
+            "wine": "Weissburgunder 2025"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Pichler-Krutzler",
+            "sourceUrl": "https://www.pichler-krutzler.at/weine/pinot-blanc/",
+            "wine": "Pinot Blanc"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Masser",
+            "sourceUrl": "https://www.masser.cc/products/weissburgunder-sand-mergel-2024",
+            "wine": "Weissburgunder Sand Mergel 2024"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Tement",
+            "sourceUrl": "https://www.tement.at/produkt/ton-mergel-weissburgunder-2/",
+            "wine": "Ton Mergel Weissburgunder 2"
+          },
+          {
+            "abv": 13,
+            "producer": "Domaine des Trois Étoiles",
+            "sourceUrl": "https://trois-etoiles.ch/products/pinot-blanc",
+            "wine": "Pinot Blanc"
+          },
+          {
+            "abv": 13.6,
+            "producer": "Weingut Diederik",
+            "sourceUrl": "https://diederik.ch/produkt/dw-pinot-blanc-kuesnacht-2023/",
+            "wine": "Dw Pinot Blanc Kuesnacht 2023"
+          },
+          {
+            "abv": 13,
+            "producer": "Agriloro SA",
+            "sourceUrl": "https://www.agriloro.ch/products/pinot-bianco-anfora",
+            "wine": "Pinot Bianco Anfora"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Leo Lahm",
+            "sourceUrl": "https://weingutlahm.com/produkt/2023-weissburgunder/",
+            "wine": "2023 Weissburgunder"
+          },
+          {
+            "abv": 12,
+            "producer": "Cantine Giacomo Montresor",
+            "sourceUrl": "https://vinimontresor.com/vini/pinot-bianco-trevenezie-igt/",
+            "wine": "Pinot Bianco Trevenezie Igt"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Graf Adelmann",
+            "sourceUrl": "https://www.graf-adelmann.com/product-page/2020-weissburgunder-1-lage",
+            "wine": "2020 Weissburgunder 1 Lage"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Wijndomein Ravenstein",
+            "sourceUrl": "https://wijndomein-ravenstein.be/en/wines/all-wines/white/pinot-blanc-barrique-eng/",
+            "wine": "Pinot Blanc Barrique Eng"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/roedelseer-schwanleite-weisserburgunder-2023-trocken",
+            "wine": "Roedelseer Schwanleite Weisserburgunder 2023 Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Hubertus M. Apel",
+            "sourceUrl": "https://www.apel-weingut.de/shop/weisser-burgunder-muschelkalk-trocken/",
+            "wine": "Weisser Burgunder Muschelkalk Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Albert Lambrich",
+            "sourceUrl": "https://www.weingut-albert-lambrich.de/produkt/weisser-burgunder-3/",
+            "wine": "Weisser Burgunder 3"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Erben von Beulwitz",
+            "sourceUrl": "https://von-beulwitz.de/products/2025-von-beulwitz-n-21-weissburgunder-trocken",
+            "wine": "2025 Von Beulwitz N 21 Weissburgunder Trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Heise am Kranzberg",
+            "sourceUrl": "https://weinerlebniswelt-heise.de/shop/weisser-burgunder-2025/",
+            "wine": "Weisser Burgunder 2025"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Classisches Weingut & Gästehaus Hoffranzen",
+            "sourceUrl": "https://www.weingut-hoffranzen.com/produkt/mehringer-goldkupp-weisser-burgunder-reserve/",
+            "wine": "Mehringer Goldkupp Weisser Burgunder Reserve"
+          },
+          {
+            "abv": 12,
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/monzernheimer/",
+            "wine": "Monzernheimer"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Hundemer",
+            "sourceUrl": "https://www.weingut-hundemer.de/produkt/weisser-burgunder/",
+            "wine": "Weisser Burgunder"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Thielmann & Schinnen",
+            "sourceUrl": "https://www.weingut-thielmann.de/produkt/weissburgundertrocken/",
+            "wine": "Weissburgundertrocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut C. H. Berres",
+            "sourceUrl": "https://www.berres.de/produkt/2025-uerziger-wuerzgarten-weissburgunder-fruchtig-trocken/",
+            "wine": "2025 Uerziger Wuerzgarten Weissburgunder Fruchtig Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Mossel Mentz",
+            "sourceUrl": "https://www.weingut-mossel-mentz.de/produkt/weisser-burgunder/",
+            "wine": "Weisser Burgunder"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingasthaus Wisser",
+            "sourceUrl": "https://www.weingasthaus-wisser.de/produkt/weisser-burgunder/",
+            "wine": "Weisser Burgunder"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Leitner Gernot",
+            "sourceUrl": "https://leitner-gols.at/weine/weisswein/pannobile-salzberg/",
+            "wine": "Pannobile Salzberg"
+          }
+        ]
       }
     ],
     "id": "pinot-blanc",
@@ -26153,7 +28507,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "black fruit",
       "spice",
@@ -26242,6 +28596,142 @@
         "quote": "melyből tipikusan savhangsúlyos, gyümölcsös, tanninban közepesen gazdag, fűszeres karakterű száraz vörösborokat készítenek",
         "value": "dry",
         "sourceUrl": "https://hu.wikipedia.org/wiki/K%C3%A9kfrankos"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://weingut-faschian.de/wein-shop/lemberger-gs-trocken/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Weingut Faschian",
+            "sourceUrl": "https://weingut-faschian.de/wein-shop/lemberger-gs-trocken/",
+            "wine": "Lemberger Gs Trocken"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Feiler-Artinger",
+            "sourceUrl": "https://www.feiler-artinger.at/produkt/bio-blaufraenkisch-ried-ruster-ludmaisch-leithabergdac/",
+            "wine": "Bio Blaufraenkisch Ried Ruster Ludmaisch Leithabergdac"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Wendelin",
+            "sourceUrl": "https://weingut-wendelin.at/weine/blaufraenkisch/",
+            "wine": "Blaufraenkisch"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Wenzl-Kast",
+            "sourceUrl": "https://www.weingut-wenzl-kast.at/shop/blaufraenkisch/",
+            "wine": "Blaufraenkisch"
+          },
+          {
+            "abv": 14,
+            "producer": "Gsellmann Ilse KG",
+            "sourceUrl": "https://www.gsellmann-weine.at/all-wines/blaufrnkisch",
+            "wine": "Blaufrnkisch"
+          },
+          {
+            "abv": 10.9,
+            "producer": "Fulkerson",
+            "sourceUrl": "https://www.fulkersonwinery.com/products/lemberger-blaufrankisch",
+            "wine": "Lemberger Blaufrankisch"
+          },
+          {
+            "abv": 12,
+            "producer": "Cantina Sociale Bergamasca",
+            "sourceUrl": "https://www.cantinabergamasca.it/product/terre-del-colleoni-doc-franconia-6-bottiglie/",
+            "wine": "Terre Del Colleoni Doc Franconia 6 Bottiglie"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Öko-Weingut Schmalzried",
+            "sourceUrl": "https://www.weingutschmalzried.de/produkt/lemberger-trocken-2/",
+            "wine": "Lemberger Trocken 2"
+          },
+          {
+            "abv": 12.81,
+            "producer": "Weingut und Appartementhotel Röhrenbach",
+            "sourceUrl": "https://roehrenbach.de/produkt/2024er-lemberger-trocken-075-liter/",
+            "wine": "2024Er Lemberger Trocken 075 Liter"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut H. Beutel",
+            "sourceUrl": "https://www.weingut-beutel.de/produkt/2019-lemberger-giovane-elber-stiftung/",
+            "wine": "2019 Lemberger Giovane Elber Stiftung"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Salzl Seewinkelhof",
+            "sourceUrl": "https://salzl.at/produkt/blaufraenkisch-2023/",
+            "wine": "Blaufraenkisch 2023"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Christoph Hess",
+            "sourceUrl": "https://www.christophhess.at/products/blaufraenkisch",
+            "wine": "Blaufraenkisch"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Artner",
+            "sourceUrl": "https://weingut-artner.at/produkt/blaufraenkisch-ried-mitterberg-mittelburgenland-dac/",
+            "wine": "Blaufraenkisch Ried Mitterberg Mittelburgenland Dac"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Azienda Agricola Monviert s.s.a.",
+            "sourceUrl": "https://monviert.com/vino/franconia/",
+            "wine": "Franconia"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina Gildo",
+            "sourceUrl": "https://www.gildovini.com/i-nostri-vini/franconia/",
+            "wine": "Franconia"
+          },
+          {
+            "abv": 11.2,
+            "producer": "Round Barn Winery",
+            "sourceUrl": "https://drinkmichigan.com/products/taborhill-lemberger",
+            "wine": "Taborhill Lemberger"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Gebrüder Nittnaus",
+            "sourceUrl": "https://www.nittnaus.net/en/weine/blaufraenkisch/",
+            "wine": "Blaufraenkisch"
+          },
+          {
+            "abv": 13,
+            "producer": "Wein- & Sektgut Frank Höhn",
+            "sourceUrl": "https://www.frank-hoehn.com/product-page/lemberger-kalkmergel",
+            "wine": "Lemberger Kalkmergel"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Graf Adelmann",
+            "sourceUrl": "https://www.graf-adelmann.com/product-page/2018-lemberger-garage",
+            "wine": "2018 Lemberger Garage"
+          },
+          {
+            "abv": 11.7,
+            "producer": "Lightfoot & Wolfville Vineyards",
+            "sourceUrl": "https://lightfootandwolfville.com/products/2024-terroir-series-kekfrankos",
+            "wine": "2024 Terroir Series Kekfrankos"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Gehlen-Cornelius",
+            "sourceUrl": "https://gehlen-cornelius.de/products/blaufrankisch",
+            "wine": "Blaufrankisch"
+          }
+        ]
       }
     ],
     "id": "blaufrankisch",
@@ -26372,7 +28862,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "vanilla",
       "cherry",
@@ -26527,6 +29017,184 @@
             "producer": "Fulkerson",
             "sourceUrl": "https://www.fulkersonwinery.com/products/zweigelt",
             "wine": "Zweigelt"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.weingut-beutel.de/produkt/2017-zweigelt/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Weingut H. Beutel",
+            "sourceUrl": "https://www.weingut-beutel.de/produkt/2017-zweigelt/",
+            "wine": "2017 Zweigelt"
+          },
+          {
+            "abv": 14,
+            "producer": "Gsellmann Ilse KG",
+            "sourceUrl": "https://www.gsellmann-weine.at/all-wines/zweigelt-heideboden",
+            "wine": "Zweigelt Heideboden"
+          },
+          {
+            "abv": 14.2,
+            "producer": "Weingut Familie Weiss",
+            "sourceUrl": "https://www.familieweiss.at/de/weine/zweigelt",
+            "wine": "Zweigelt"
+          },
+          {
+            "abv": 14,
+            "producer": "Vinophilia & Cetera",
+            "sourceUrl": "https://vinophilia.at/produkt/zweigelt-unplugged-hannes-reeh/",
+            "wine": "Zweigelt Unplugged Hannes Reeh"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Salzl Seewinkelhof",
+            "sourceUrl": "https://salzl.at/produkt/zweigelt-reserve-2022/",
+            "wine": "Zweigelt Reserve 2022"
+          },
+          {
+            "abv": 14,
+            "producer": "Hans Herzog",
+            "sourceUrl": "https://www.herzog.co.nz/products/zweigelt-2010-3l",
+            "wine": "Zweigelt 2010 3L"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Steininger",
+            "sourceUrl": "https://www.weingut-steininger.at/online-vinothek/weine/zweigelt-2002/",
+            "wine": "Zweigelt 2002"
+          },
+          {
+            "abv": 11.3,
+            "producer": "Fulkerson",
+            "sourceUrl": "https://www.fulkersonwinery.com/products/zweigelt",
+            "wine": "Zweigelt"
+          },
+          {
+            "abv": 12.7,
+            "producer": "Weingut Thürkind",
+            "sourceUrl": "https://www.weingut-thuerkind.de/produkt/blauer-zweigelt-2018/",
+            "wine": "Blauer Zweigelt 2018"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Kögler",
+            "sourceUrl": "https://weingut-koegler.de/products/koegler-blauer-zweigelt-2016",
+            "wine": "Koegler Blauer Zweigelt 2016"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Faschian",
+            "sourceUrl": "https://weingut-faschian.de/wein-shop/zweigelt-trocken-2/",
+            "wine": "Zweigelt Trocken 2"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut & Gästehaus Vogt-Fehlinger",
+            "sourceUrl": "https://vogt-fehlinger.de/products/blauer-zweigelt-trocken",
+            "wine": "Blauer Zweigelt Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Müller-Grossmann",
+            "sourceUrl": "https://www.mueller-grossmann.at/shop/produkt/rebsorten/zweigelt/zweigelt-no-make-up-2024/",
+            "wine": "Zweigelt No Make Up 2024"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Golser Wein GmbH",
+            "sourceUrl": "https://www.golserwein.at/products/zweigelt",
+            "wine": "Zweigelt"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Christoph Hess",
+            "sourceUrl": "https://www.christophhess.at/products/zweigelt-neusiedlersee-dac",
+            "wine": "Zweigelt Neusiedlersee Dac"
+          },
+          {
+            "abv": 13.1,
+            "producer": "Weingut Tom Dockner",
+            "sourceUrl": "https://docknertom.at/en/produkt/tom-zweigelt-2024/",
+            "wine": "Tom Zweigelt 2024"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Feiler-Artinger",
+            "sourceUrl": "https://www.feiler-artinger.at/produkt/zweigelt-more/",
+            "wine": "Zweigelt More"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Artner",
+            "sourceUrl": "https://weingut-artner.at/produkt/zweigelt-klassik/",
+            "wine": "Zweigelt Klassik"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weinhof Anderl",
+            "sourceUrl": "https://anderlwein.at/shop/produkt/zweigelt-2021/",
+            "wine": "Zweigelt 2021"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Vi[no]trine",
+            "sourceUrl": "https://pratsch.at/produkt/zweigelt-kittel/",
+            "wine": "Zweigelt Kittel"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Huber",
+            "sourceUrl": "https://www.huberwein.at/zweigelt-kirschbaum/",
+            "wine": "Zweigelt Kirschbaum"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Mittelbach",
+            "sourceUrl": "https://www.weine-mittelbach.at/products/zweigelt-fass-6",
+            "wine": "Zweigelt Fass 6"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Masser",
+            "sourceUrl": "https://www.masser.cc/products/blauer-zweigelt-steiermark-2023",
+            "wine": "Blauer Zweigelt Steiermark 2023"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Tement",
+            "sourceUrl": "https://www.tement.at/en/product/zweigelt-selektion/",
+            "wine": "Zweigelt Selektion"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Jordan",
+            "sourceUrl": "https://www.weingut-jordan.at/product/zweigelt-ried-haselparz/",
+            "wine": "Zweigelt Ried Haselparz"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Gebrüder Nittnaus",
+            "sourceUrl": "https://www.nittnaus.net/en/weine/zweigelt-selection/",
+            "wine": "Zweigelt Selection"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut  Herbert Zillinger",
+            "sourceUrl": "https://zillinger.bio/products/stein-zweigelt-2023",
+            "wine": "Stein Zweigelt 2023"
+          },
+          {
+            "abv": 12.2,
+            "producer": "Volcanic Hills Estate Winery",
+            "sourceUrl": "https://volcanichillswinery.com/products/2022-zweigelt-icewine-200ml",
+            "wine": "2022 Zweigelt Icewine 200Ml"
           }
         ]
       }
@@ -27473,7 +30141,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "floral",
       "cherry",
@@ -27721,6 +30389,118 @@
             "producer": "Weingut Kopp",
             "sourceUrl": "https://www.sternenfelserhof.de/shop/weine/rotweine/suesse-rotweine/2023-portugieser-lieblich/",
             "wine": "2023 Portugieser Lieblich"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.desoi-wein.de/produkt/2019er-bayrischer-bazi-blauer-portugieser-trocken-rotwein-qba/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 15,
+            "producer": "desoi-wein.de",
+            "sourceUrl": "https://www.desoi-wein.de/produkt/2019er-bayrischer-bazi-blauer-portugieser-trocken-rotwein-qba/",
+            "wine": "2019Er Bayrischer Bazi Blauer Portugieser Trocken Rotwein Qba"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Landhaus Christmann",
+            "sourceUrl": "https://landhaus-christmann.de/produkt/portugieser-rotwein/",
+            "wine": "Portugieser Rotwein"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Mossel Mentz",
+            "sourceUrl": "https://www.weingut-mossel-mentz.de/produkt/portugieser/",
+            "wine": "Portugieser"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut & Gästehaus Vogt-Fehlinger",
+            "sourceUrl": "https://vogt-fehlinger.de/products/blauer-portugieser-mild",
+            "wine": "Blauer Portugieser Mild"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Thürkind",
+            "sourceUrl": "https://www.weingut-thuerkind.de/produkt/blauer-portugieser-2022/",
+            "wine": "Blauer Portugieser 2022"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/blauer-portugieser-trocken-pfalz",
+            "wine": "Blauer Portugieser Trocken Pfalz"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Johann Müller",
+            "sourceUrl": "https://weingut-johann-mueller.de/produkt/portugieser-wh-trocken/",
+            "wine": "Portugieser Wh Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/geils-portugieser/",
+            "wine": "Geils Portugieser"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Stauffer",
+            "sourceUrl": "https://www.weingutstauffer.de/produkt/blauer-portugieser-goldberg/",
+            "wine": "Blauer Portugieser Goldberg"
+          },
+          {
+            "abv": 11.7,
+            "producer": "Weingut Rumsauer",
+            "sourceUrl": "https://www.rumsauer.de/produkt/portugieser/",
+            "wine": "Portugieser"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Richard Rinck",
+            "sourceUrl": "https://www.weingut-richard-rinck.de/product-page/2015-portugieser-herrenpfad-trocken",
+            "wine": "2015 Portugieser Herrenpfad Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut A. Waigand",
+            "sourceUrl": "https://waigand-wein.de/products/2019er-portugieser-qba-trocken",
+            "wine": "2019Er Portugieser Qba Trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Walter Merk",
+            "sourceUrl": "https://www.weingutmerk.de/weinpakete/2er-paket-portugieser-alte-reben",
+            "wine": "2Er Paket Portugieser Alte Reben"
+          },
+          {
+            "abv": 11,
+            "producer": "Spielmann-Schindler",
+            "sourceUrl": "https://www.spielmann-schindler.de/products/spielmann-schindler-portugieser",
+            "wine": "Spielmann Schindler Portugieser"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/jahreszeiten-edition-portugieser-alte-reben/",
+            "wine": "Jahreszeiten Edition Portugieser Alte Reben"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingasthaus Wisser",
+            "sourceUrl": "https://www.weingasthaus-wisser.de/produkt/portugieser-rotwein/",
+            "wine": "Portugieser Rotwein"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Jackfall Borászat",
+            "sourceUrl": "https://www.jackfall.com/product/gesztenyes-2022-portugieser/",
+            "wine": "Gesztenyes 2022 Portugieser"
           }
         ]
       }
@@ -28512,7 +31292,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "lemon",
       "almond",
@@ -28655,6 +31435,34 @@
         "quote": "Вината от Гарганега се отличават със структура, плътност и аромат на бадеми, зелена слива и цитруси.",
         "value": "high",
         "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%93%D0%B0%D1%80%D0%B3%D0%B0%D0%BD%D0%B5%D0%B3%D0%B0"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/grecanico-dorato",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Madrarossa Winery",
+            "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/grecanico-dorato",
+            "wine": "Grecanico Dorato"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina Settesoli",
+            "sourceUrl": "https://www.settesoli.it/it/vini/grecanico/",
+            "wine": "Grecanico"
+          },
+          {
+            "abv": 13,
+            "producer": "Punto Zero",
+            "sourceUrl": "https://www.puntozerowine.it/garga-garganega/?lang=en",
+            "wine": "Garga Garganega"
+          }
+        ]
       }
     ],
     "id": "garganega",
@@ -29199,7 +32007,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "savoury",
       "mineral",
@@ -29288,6 +32096,46 @@
         "quote": "Er ist ein säure- und körperreicher, meist blassgelber Wein",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Assyrtiko"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://kiryianni.gr/wines/tarsanas/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Κτήμα Κυρ-Γιάννη Γιαννακοχώρι",
+            "sourceUrl": "https://kiryianni.gr/wines/tarsanas/",
+            "wine": "Tarsanas"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Boutari",
+            "sourceUrl": "https://boutari.gr/en/wine/assyrtiko/",
+            "wine": "Assyrtiko"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Lafazanis Winery",
+            "sourceUrl": "https://lafazanis.gr/en/product/geometria-assyrtiko/",
+            "wine": "Geometria Assyrtiko"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Κτήμα Σιγάλα",
+            "sourceUrl": "https://sigalas-wine.com/tag/assyrtiko/",
+            "wine": "Assyrtiko"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Domaine Florian",
+            "sourceUrl": "https://domaineflorian.com/wines/assyrtiko-fume/2022",
+            "wine": "2022"
+          }
+        ]
       }
     ],
     "id": "assyrtiko",
@@ -34737,7 +37585,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "tea",
       "pear",
@@ -34887,7 +37735,7 @@
         "value": "fish",
         "wines": [
           {
-            "producer": "laurenthabrard.com",
+            "producer": "Domaine Laurent Habrard",
             "sourceUrl": "https://www.laurenthabrard.com/en/technical-sheets/vin-de-france-roussanne-2025",
             "wine": "Vin De France Roussanne 2025"
           },
@@ -34900,6 +37748,34 @@
             "producer": "Domaine Jean Perrier & Fils",
             "sourceUrl": "https://www.vins-perrier.com/chignin-bergeron-fleur-de-roussanne.html",
             "wine": "Chignin Bergeron Fleur De Roussanne"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.lepechdandre.fr/en/les-vins-coquins/42-zora-roussanne.html",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12,
+            "producer": "Le Pech d'André",
+            "sourceUrl": "https://www.lepechdandre.fr/en/les-vins-coquins/42-zora-roussanne.html",
+            "wine": "42 Zora Roussanne"
+          },
+          {
+            "abv": 13.9,
+            "producer": "City Winery",
+            "sourceUrl": "https://citywinery.com/products/2022-reserve-roussanne-cuvee-alder-springs",
+            "wine": "2022 Reserve Roussanne Cuvee Alder Springs"
+          },
+          {
+            "abv": 13.5,
+            "producer": "laurenthabrard.com",
+            "sourceUrl": "https://www.laurenthabrard.com/en/technical-sheets/vin-de-france-roussanne-2025",
+            "wine": "Vin De France Roussanne 2025"
           }
         ]
       }
@@ -35030,7 +37906,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "red berry",
       "black cherry"
@@ -35174,6 +38050,193 @@
         "sourceUrl": "https://cs.wikipedia.org/wiki/Svatovav%C5%99ineck%C3%A9"
       },
       {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.weingut-hundemer.de/produkt/st-laurent-reserve/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Weingut Hundemer",
+            "sourceUrl": "https://www.weingut-hundemer.de/produkt/st-laurent-reserve/",
+            "wine": "St Laurent Reserve"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Wenzl-Kast",
+            "sourceUrl": "https://www.weingut-wenzl-kast.at/shop/st-laurent/",
+            "wine": "St Laurent"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Heise am Kranzberg",
+            "sourceUrl": "https://weinerlebniswelt-heise.de/shop/saint-laurent-2024/",
+            "wine": "Saint Laurent 2024"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2022-saint-laurent-trocken/",
+            "wine": "2022 Saint Laurent Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Schlosshof  (Wein + Sekt  Mühlmichel )",
+            "sourceUrl": "https://weingut-muehlmichel.de/products/2022-saint-laurent-rotwein-trocken-19",
+            "wine": "2022 Saint Laurent Rotwein Trocken 19"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Junker",
+            "sourceUrl": "https://www.weingut-junker.de/produkt/saint-laurent/",
+            "wine": "Saint Laurent"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Richard Rinck",
+            "sourceUrl": "https://www.weingut-richard-rinck.de/product-page/2015-saint-laurent-trocken",
+            "wine": "2015 Saint Laurent Trocken"
+          },
+          {
+            "abv": 11.93,
+            "producer": "Weingut Frank Kühn",
+            "sourceUrl": "https://kuehn-wein.de/produkt/saint-laurent-rotwein/",
+            "wine": "Saint Laurent Rotwein"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Jung",
+            "sourceUrl": "https://wein-macht-jung.de/products/2022-selzen-sankt-laurent-trocken",
+            "wine": "2022 Selzen Sankt Laurent Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vi[no]trine",
+            "sourceUrl": "https://pratsch.at/produkt/sankt-laurent-erdpress/",
+            "wine": "Sankt Laurent Erdpress"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Caves René Bentz",
+            "sourceUrl": "https://cavesrenebentz.lu/vins/saint-laurent",
+            "wine": "Saint Laurent"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Herber",
+            "sourceUrl": "https://www.weingut-herber.de/shop/2022-st-laurent-trocken-online-kaufen-edition-1919-weingut-herber/",
+            "wine": "2022 St Laurent Trocken Online Kaufen Edition 1919 Weingut Herber"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/st-laurent-rotwein-trocken-pfalz",
+            "wine": "St Laurent Rotwein Trocken Pfalz"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Otto Becker",
+            "sourceUrl": "https://weingut-ottobecker.de/products/st-laurent-rotwein-trocken-rheinhessen",
+            "wine": "St Laurent Rotwein Trocken Rheinhessen"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Johann Müller",
+            "sourceUrl": "https://weingut-johann-mueller.de/produkt/st-laurent-rotwein/",
+            "wine": "St Laurent Rotwein"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/st-laurent/",
+            "wine": "St Laurent"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Walter Merk",
+            "sourceUrl": "https://www.weingutmerk.de/weine/22-st-laurent-dzuf",
+            "wine": "22 St Laurent Dzuf"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/st-laurent-2/",
+            "wine": "St Laurent 2"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Sommer",
+            "sourceUrl": "https://sommer.wine/produkt/006-st-laurent-trocken-bio/",
+            "wine": "006 St Laurent Trocken Bio"
+          },
+          {
+            "abv": 13,
+            "producer": "Gsellmann Ilse KG",
+            "sourceUrl": "https://www.gsellmann-weine.at/all-wines/st-laurent-heideboden",
+            "wine": "St Laurent Heideboden"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Wendelin",
+            "sourceUrl": "https://weingut-wendelin.at/weine/st-laurent/",
+            "wine": "St Laurent"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Jordan",
+            "sourceUrl": "https://www.weingut-jordan.at/product/st-laurent-ried-satzen/",
+            "wine": "St Laurent Ried Satzen"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.das-weingut-schmitt.de/products/st-laurent-rotwein-trocken-pfalz",
+        "value": "dry-medium",
+        "wines": [
+          {
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/st-laurent-rotwein-trocken-pfalz",
+            "wine": "St Laurent Rotwein Trocken Pfalz"
+          },
+          {
+            "producer": "Weingut Otto Becker",
+            "sourceUrl": "https://weingut-ottobecker.de/products/st-laurent-rotwein-trocken-rheinhessen",
+            "wine": "St Laurent Rotwein Trocken Rheinhessen"
+          },
+          {
+            "producer": "Weingut Oswald",
+            "sourceUrl": "https://mueller-oswald.shop/products/st-laurent-vom-porphyr-trocken-bio",
+            "wine": "St Laurent Vom Porphyr Trocken Bio"
+          },
+          {
+            "producer": "Weingut Junker",
+            "sourceUrl": "https://www.weingut-junker.de/produkt/saint-laurent/",
+            "wine": "Saint Laurent"
+          },
+          {
+            "producer": "Weingut Zimmermann",
+            "sourceUrl": "https://www.zimmermann-weine.de/weine/st-laurent-rotwein-6md2",
+            "wine": "St Laurent Rotwein 6Md2"
+          },
+          {
+            "producer": "Weingut Christ",
+            "sourceUrl": "https://www.weingut-christ.de/products/saint-laurent-feinherb",
+            "wine": "Saint Laurent Feinherb"
+          },
+          {
+            "producer": "Weingut Fischbach",
+            "sourceUrl": "https://www.fischbachwein.at/produkt/st-laurent-2020/",
+            "wine": "St Laurent 2020"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Sankt Laurent: Austria",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -35255,7 +38318,10 @@
         "url": "https://es.wikipedia.org/wiki/St._Laurent_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Blauer Saint Laurent",
@@ -36408,7 +39474,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -36556,6 +39622,310 @@
         "quote": "Svěží vína se hodí k těstovinám, plná vína podáváme k těžším či kořeněným úpravám masa, grilovaným pokrmům, zvěřině a výrazným sýrům",
         "value": "cheese",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Dornfelder"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.fulkersonwinery.com/products/dornfelder",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 10.5,
+            "producer": "Fulkerson",
+            "sourceUrl": "https://www.fulkersonwinery.com/products/dornfelder",
+            "wine": "Dornfelder"
+          },
+          {
+            "abv": 9.7,
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/winterzauber-gluehwein-dornfelder-winzergluehwein-pfalz",
+            "wine": "Winterzauber Gluehwein Dornfelder Winzergluehwein Pfalz"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Alois Hahn",
+            "sourceUrl": "https://hahnweinmosel.de/products/dornfelder-trocken",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Hundemer",
+            "sourceUrl": "https://www.weingut-hundemer.de/produkt/dornfelder-feinfruchtig/",
+            "wine": "Dornfelder Feinfruchtig"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Andre",
+            "sourceUrl": "https://andre-wein.de/weinshop/dornfelder-rotwein/",
+            "wine": "Dornfelder Rotwein"
+          },
+          {
+            "abv": 10.3,
+            "producer": "Weingut Frank Kühn",
+            "sourceUrl": "https://kuehn-wein.de/produkt/dornfelder-rotwein-2/",
+            "wine": "Dornfelder Rotwein 2"
+          },
+          {
+            "abv": 10,
+            "producer": "Weinhaus Schramm",
+            "sourceUrl": "https://weinhaus-schramm.de/produkt/dornfelder-4/",
+            "wine": "Dornfelder 4"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Margaretenhof",
+            "sourceUrl": "https://www.ahlwein.de/produkt/dornfelder-suess/",
+            "wine": "Dornfelder Suess"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/dornfelder-6/",
+            "wine": "Dornfelder 6"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Puder",
+            "sourceUrl": "https://puder-wein.de/de/wine/dornfelder-portugieser-mild-qualitaetswein-1",
+            "wine": "Dornfelder Portugieser Mild Qualitaetswein 1"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Jung",
+            "sourceUrl": "https://wein-macht-jung.de/products/2024-dornfelder-gutswein-mild",
+            "wine": "2024 Dornfelder Gutswein Mild"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/iphofer-dornfelder-2025",
+            "wine": "Iphofer Dornfelder 2025"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Thürkind",
+            "sourceUrl": "https://www.weingut-thuerkind.de/produkt/dornfelder-2021/",
+            "wine": "Dornfelder 2021"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Albert Lambrich",
+            "sourceUrl": "https://www.weingut-albert-lambrich.de/produkt/dornfelder/",
+            "wine": "Dornfelder"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2020-dornfelder-edition-trocken/",
+            "wine": "2020 Dornfelder Edition Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Heise am Kranzberg",
+            "sourceUrl": "https://weinerlebniswelt-heise.de/shop/dornfelder-trocken-2023/",
+            "wine": "Dornfelder Trocken 2023"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Herber",
+            "sourceUrl": "https://www.weingut-herber.de/shop/2022-dornfelder-qualitaetswein-trocken/",
+            "wine": "2022 Dornfelder Qualitaetswein Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Rummel",
+            "sourceUrl": "https://rummel-biowein.de/products/dornfelder-trocken",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Schedler Edmund",
+            "sourceUrl": "https://moselweingut-schedler.de/wein-shop/angebot-dornfelder/",
+            "wine": "Angebot Dornfelder"
+          },
+          {
+            "abv": 12,
+            "producer": "Haus Burgblick",
+            "sourceUrl": "https://hausburgblick.de/produkt/dornfelder-trocken/",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Otto Becker",
+            "sourceUrl": "https://weingut-ottobecker.de/products/dornfelder-rotwein-trocken-rheinhessen",
+            "wine": "Dornfelder Rotwein Trocken Rheinhessen"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Schlosshof  (Wein + Sekt  Mühlmichel )",
+            "sourceUrl": "https://weingut-muehlmichel.de/products/2022-dornfelder-rotwein-trocken-14-kopie",
+            "wine": "2022 Dornfelder Rotwein Trocken 14 Kopie"
+          },
+          {
+            "abv": 12.7,
+            "producer": "Weingut Stachel",
+            "sourceUrl": "https://www.weingut-stachel.de/produkt/dornfelder-2/",
+            "wine": "Dornfelder 2"
+          },
+          {
+            "abv": 13,
+            "producer": "Schwahn-Fehlinger",
+            "sourceUrl": "https://schwahn-fehlinger.de/products/dornfelder",
+            "wine": "Dornfelder"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Johann Müller",
+            "sourceUrl": "https://weingut-johann-mueller.de/produkt/dornfelder-trocken/",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Junker",
+            "sourceUrl": "https://www.weingut-junker.de/produkt/dornfelder-2/",
+            "wine": "Dornfelder 2"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Merz",
+            "sourceUrl": "https://www.weingut-merz.de/produkt/dornfelder/",
+            "wine": "Dornfelder"
+          },
+          {
+            "abv": 12,
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/dornfelder/",
+            "wine": "Dornfelder"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Richard Scheid",
+            "sourceUrl": "https://scheid-wein.de/products/dornfelder-rotwein-trocken-2024",
+            "wine": "Dornfelder Rotwein Trocken 2024"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Butzbach",
+            "sourceUrl": "https://weingut-butzbach.de/produkt/2024er-dornfelder-rotwein-trockennr-1323/",
+            "wine": "2024Er Dornfelder Rotwein Trockennr 1323"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut F.E. Schott",
+            "sourceUrl": "https://schottwein.de/products/72-dornfelder-trocken",
+            "wine": "72 Dornfelder Trocken"
+          },
+          {
+            "abv": 12.66,
+            "producer": "Weingut Rumsauer",
+            "sourceUrl": "https://www.rumsauer.de/produkt/dornfelder/",
+            "wine": "Dornfelder"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Ulrich Göbel",
+            "sourceUrl": "https://ferienweingut-goebel.de/product/2020-dornfelder-trocken/",
+            "wine": "2020 Dornfelder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Thielmann & Schinnen",
+            "sourceUrl": "https://www.weingut-thielmann.de/produkt/dornfelder-rocken/",
+            "wine": "Dornfelder Rocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Walter Merk",
+            "sourceUrl": "https://www.weingutmerk.de/weine/21-dornfelder-zrrj",
+            "wine": "21 Dornfelder Zrrj"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Heinrich Klohr",
+            "sourceUrl": "https://www.weingut-ck.de/shop/dornfelder-trocken/",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Lamberth",
+            "sourceUrl": "https://weingut-lamberth.de/products/2020-dornfelder-rotwein-trocken-1-5-l",
+            "wine": "2020 Dornfelder Rotwein Trocken 1 5 L"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Eugen Spindler - Lindenhof",
+            "sourceUrl": "https://www.spindler-lindenhof.de/wein-dornfelder-trocken-32-1.html",
+            "wine": "Wein Dornfelder Trocken 32 1"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Härle-Kerth",
+            "sourceUrl": "https://www.weinguthaerle-kerth.de/products/2021-alte-reben-dornfelder-qualitatswein-trocken",
+            "wine": "2021 Alte Reben Dornfelder Qualitatswein Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut B. Frieden",
+            "sourceUrl": "https://bernd-frieden.de/produkt/dornfelder-trocken/",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Kopp",
+            "sourceUrl": "https://www.sternenfelserhof.de/shop/weine/rotweine/2025-dornfelder-trocken/",
+            "wine": "2025 Dornfelder Trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "desoi-wein.de",
+            "sourceUrl": "https://www.desoi-wein.de/produkt/2022er-dornfelder-rotwein-trocken-qba-im-barrique-gereift/",
+            "wine": "2022Er Dornfelder Rotwein Trocken Qba Im Barrique Gereift"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut & Gästehaus Vogt-Fehlinger",
+            "sourceUrl": "https://vogt-fehlinger.de/products/dornfelder-trocken",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Sommer",
+            "sourceUrl": "https://sommer.wine/produkt/002-dornfelder-trocken-bio/",
+            "wine": "002 Dornfelder Trocken Bio"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Leo Lahm",
+            "sourceUrl": "https://weingutlahm.com/produkt/dornfelder-trocken/",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Wein- & Sektgut Frank Höhn",
+            "sourceUrl": "https://www.frank-hoehn.com/product-page/dornfelder-trocken",
+            "wine": "Dornfelder Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Georgetown Vineyards",
+            "sourceUrl": "https://storka.com/stores/corkscrew-wines-brooklyn/products/weingut-schlossmuhlenhof-dornfelder-trocken-2016/1.0l",
+            "wine": "1.0L"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Pauly Arnold",
+            "sourceUrl": "https://www.ferienweingut-pauly.de/weinpakete/18er-2022-dornfelder-qualitaetswein-trocken",
+            "wine": "18Er 2022 Dornfelder Qualitaetswein Trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "Öko-Weingut Schmalzried",
+            "sourceUrl": "https://www.weingutschmalzried.de/produkt/dornfelder/",
+            "wine": "Dornfelder"
+          }
+        ]
       }
     ],
     "id": "dornfelder",
@@ -37137,7 +40507,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "liquorice",
       "prune"
@@ -37333,6 +40703,34 @@
         "quote": "Czyste graciano cechuje się wysoką kwasowością i zawartością garbników",
         "value": "high",
         "sourceUrl": "https://pl.wikipedia.org/wiki/Graciano"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://bodegasnavajas.es/tienda/producto/vinos-doc-rioja-navajas/monovarietales/navajas-graciano-crianza/",
+        "value": "high",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Bodegas Navajas",
+            "sourceUrl": "https://bodegasnavajas.es/tienda/producto/vinos-doc-rioja-navajas/monovarietales/navajas-graciano-crianza/",
+            "wine": "Navajas Graciano Crianza"
+          },
+          {
+            "abv": 14,
+            "producer": "Bodegas Beronia",
+            "sourceUrl": "https://www.beronia.com/es-es/vinos/escasos/graciano",
+            "wine": "Graciano"
+          },
+          {
+            "abv": 16,
+            "producer": "Aridus Wine Company",
+            "sourceUrl": "https://www.ariduswineco.com/reviews/aridus-graciano-cochise-county-arizona-usa-2023-review-by-clive-pursehouse",
+            "wine": "Aridus Graciano Cochise County Arizona Usa 2023 Review By Clive Pursehouse"
+          }
+        ]
       }
     ],
     "id": "graciano",
@@ -37906,7 +41304,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "plum",
       "earthy",
@@ -38025,6 +41423,46 @@
             "wine": "Lagrein"
           },
           {
+            "producer": "Cantina Terlano",
+            "sourceUrl": "https://www.cantina-terlano.com/en/wines/lagrein-24/",
+            "wine": "Lagrein 24"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.villacorniole.com/product-page/lagrein-pietramontis?lang=en",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Villa Corniole",
+            "sourceUrl": "https://www.villacorniole.com/product-page/lagrein-pietramontis?lang=en",
+            "wine": "Lagrein Pietramontis"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina La Vis",
+            "sourceUrl": "https://la-vis.com/i-nostri-vini/i-classici/lagrein",
+            "wine": "Lagrein"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Manincor",
+            "sourceUrl": "https://www.manincor.com/de/lagrein-rubatsch.html",
+            "wine": "Lagrein Rubatsch"
+          },
+          {
+            "abv": 13,
+            "producer": "Castel Sallegg",
+            "sourceUrl": "https://www.castelsallegg.it/en/winery/wines/lagrein/",
+            "wine": "Lagrein"
+          },
+          {
+            "abv": 13.5,
             "producer": "Cantina Terlano",
             "sourceUrl": "https://www.cantina-terlano.com/en/wines/lagrein-24/",
             "wine": "Lagrein 24"
@@ -39001,7 +42439,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "blackcurrant",
       "grapefruit",
@@ -39161,6 +42599,148 @@
         "quote": "Les vins du cépage Scheurebe sont souvent destinés à accompagner les desserts.",
         "value": "desserts",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Scheurebe"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.weingut-stachel.de/produkt/scheurebe/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 10.7,
+            "producer": "Weingut Stachel",
+            "sourceUrl": "https://www.weingut-stachel.de/produkt/scheurebe/",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Weingut Merz",
+            "sourceUrl": "https://www.weingut-merz.de/produkt/scheurebe/",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Weingut Hundemer",
+            "sourceUrl": "https://www.weingut-hundemer.de/produkt/scheurebe-exclusiv/",
+            "wine": "Scheurebe Exclusiv"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weingut Franz Nippgen",
+            "sourceUrl": "https://www.nippgen.de/produkt/scheurebe-2/",
+            "wine": "Scheurebe 2"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Sommer",
+            "sourceUrl": "https://sommer.wine/produkt/107-scheurebe-mild-bio/",
+            "wine": "107 Scheurebe Mild Bio"
+          },
+          {
+            "abv": 10,
+            "producer": "Wein- & Sektgut Frank Höhn",
+            "sourceUrl": "https://www.frank-hoehn.com/product-page/scheurebe",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Lamberth",
+            "sourceUrl": "https://weingut-lamberth.de/products/2025-scheurebe-mild",
+            "wine": "2025 Scheurebe Mild"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/scheurebe-2023",
+            "wine": "Scheurebe 2023"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Albert Lambrich",
+            "sourceUrl": "https://www.weingut-albert-lambrich.de/produkt/max-scheurebe/",
+            "wine": "Max Scheurebe"
+          },
+          {
+            "abv": 12,
+            "producer": "Öko-Weingut Schmalzried",
+            "sourceUrl": "https://www.weingutschmalzried.de/produkt/scheurebe-trocken/",
+            "wine": "Scheurebe Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Schwedhelm",
+            "sourceUrl": "https://www.schwedhelm-zellertal.de/products/scheurebe-2025",
+            "wine": "Scheurebe 2025"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Johann Müller",
+            "sourceUrl": "https://weingut-johann-mueller.de/produkt/scheurebe/",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weinhaus Römerhof",
+            "sourceUrl": "https://geil.wine/produkt/scheurebe/",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Landhaus Christmann",
+            "sourceUrl": "https://landhaus-christmann.de/produkt/scheurebe-trocken/",
+            "wine": "Scheurebe Trocken"
+          },
+          {
+            "abv": 11.29,
+            "producer": "Weingut Rumsauer",
+            "sourceUrl": "https://www.rumsauer.de/produkt/scheurebe/",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Richard Rinck",
+            "sourceUrl": "https://www.weingut-richard-rinck.de/product-page/2018-scheurebe-trocken",
+            "wine": "2018 Scheurebe Trocken"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Frank Kühn",
+            "sourceUrl": "https://kuehn-wein.de/produkt/scheurebe/",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Eugen Spindler - Lindenhof",
+            "sourceUrl": "https://www.spindler-lindenhof.de/wein-scheurebe-trocken-17.html",
+            "wine": "Wein Scheurebe Trocken 17"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Mossel Mentz",
+            "sourceUrl": "https://www.weingut-mossel-mentz.de/produkt/scheurebe/",
+            "wine": "Scheurebe"
+          },
+          {
+            "abv": 13,
+            "producer": "Weinhof Scheu",
+            "sourceUrl": "https://weinhof-scheu.de/products/scheurebe-reserve",
+            "wine": "Scheurebe Reserve"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Alexander Gysler",
+            "sourceUrl": "https://alexander-gysler.de/produkt/sonnentau-scheurebe-trocken-2024/",
+            "wine": "Sonnentau Scheurebe Trocken 2024"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Leo Lahm",
+            "sourceUrl": "https://weingutlahm.com/produkt/2025-scheurebe/",
+            "wine": "2025 Scheurebe"
+          }
+        ]
       }
     ],
     "id": "scheurebe",
@@ -39301,7 +42881,7 @@
       "thyme",
       "mint"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -39524,6 +43104,31 @@
         "quote": "З Пекоріно виробляють сухі або ігристі вина категорій DOCG, DOC, IGT",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BA%D0%BE%D1%80%D1%96%D0%BD%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.agrifiorano.it/i-nostri-vini-biologici/offida-docg-pecorino-donna-orgilla/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Azienda Agricola Fiorano",
+            "sourceUrl": "https://www.agrifiorano.it/i-nostri-vini-biologici/offida-docg-pecorino-donna-orgilla/",
+            "wine": "Offida Docg Pecorino Donna Orgilla"
+          },
+          {
+            "producer": "Casa Vinicola Garofoli",
+            "sourceUrl": "https://garofolivini.it/prodotto/gale-2023-falerio-pecorino-doc/",
+            "wine": "Gale 2023 Falerio Pecorino Doc"
+          },
+          {
+            "producer": "Cantina Madonna dei Miracoli",
+            "sourceUrl": "https://vinicasalbordino.com/prodotto/terre-sabelli-pecorino/",
+            "wine": "Terre Sabelli Pecorino"
+          }
+        ]
       }
     ],
     "id": "pecorino",
@@ -40491,7 +44096,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "herbs",
       "black pepper",
@@ -40636,6 +44241,34 @@
         "quote": "על פי רוב מדובר ביין כהה מאוד (כהה יותר מאשר שיראז ובעל גוונים סגולים יותר), חומצי במקצת, ובעל גוף חזק ומודגש.",
         "value": "high",
         "sourceUrl": "https://he.wikipedia.org/wiki/%D7%93%D7%95%D7%A8%D7%99%D7%A3"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.campbellswines.com.au/products/2021-the-barkly-durif",
+        "value": "high",
+        "wines": [
+          {
+            "abv": 14.5,
+            "producer": "Campbells Wines",
+            "sourceUrl": "https://www.campbellswines.com.au/products/2021-the-barkly-durif",
+            "wine": "2021 The Barkly Durif"
+          },
+          {
+            "abv": 14.8,
+            "producer": "All Saints Winery",
+            "sourceUrl": "https://www.allsaintswine.com.au/wine/06-all-saints-estate-family-cellar-durif",
+            "wine": "06 All Saints Estate Family Cellar Durif"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Atze's Corner",
+            "sourceUrl": "https://atzes.com/products/the-giant-durif",
+            "wine": "The Giant Durif"
+          }
+        ]
       }
     ],
     "id": "durif",
@@ -41195,7 +44828,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "grape"
     ],
@@ -41282,6 +44915,65 @@
         "quote": "Вино має гранатовий колір, порівняно низький вміст танінів",
         "value": "low",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BF%D0%BF%D0%B0%D1%82%D0%BE"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/frappato",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Madrarossa Winery",
+            "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/frappato",
+            "wine": "Frappato"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/en/prodotto/frappato-bio-100-organic-wine/",
+            "wine": "Frappato Bio 100 Organic Wine"
+          },
+          {
+            "abv": 13,
+            "producer": "Poggio di Bortolone",
+            "sourceUrl": "https://www.poggiodibortolone.it/vini/frappato/",
+            "wine": "Frappato"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Planeta",
+            "sourceUrl": "https://app.planeta.it/pdf/vittoria/frappato-2024-it.pdf",
+            "wine": "Frappato 2024 It"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/frappato",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Madrarossa Winery",
+            "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/frappato",
+            "wine": "Frappato"
+          },
+          {
+            "producer": "Poggio di Bortolone",
+            "sourceUrl": "https://www.poggiodibortolone.it/vini/frappato/",
+            "wine": "Frappato"
+          },
+          {
+            "producer": "Feudi del Pisciotto",
+            "sourceUrl": "https://www.castellare.it/wp-content/uploads/2017/11/7-Frappato_eng.pdf",
+            "wine": "Frappato"
+          }
+        ]
       }
     ],
     "id": "frappato",
@@ -41296,7 +44988,9 @@
       "pt": "Frappato"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -42664,7 +46358,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "spice",
       "fruity"
@@ -42792,6 +46486,100 @@
         "quote": "Mladé víno Auxerrois je vhodné k předkrmům, k uzeným rybám nebo k plodům moře",
         "value": "seafood",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Auxerrois_Blanc"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.viewpointewinery.com/product/auxerrois-case-of-12/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Viewpointe Estate Winery",
+            "sourceUrl": "https://www.viewpointewinery.com/product/auxerrois-case-of-12/",
+            "wine": "Auxerrois Case Of 12"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Hubertus M. Apel",
+            "sourceUrl": "https://www.apel-weingut.de/shop/auxerrois-trocken/",
+            "wine": "Auxerrois Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Herber",
+            "sourceUrl": "https://www.weingut-herber.de/shop/2024-auxerrois-trocken-edition-1919/",
+            "wine": "2024 Auxerrois Trocken Edition 1919"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Stachel",
+            "sourceUrl": "https://www.weingut-stachel.de/produkt/auxerrois/",
+            "wine": "Auxerrois"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Becker",
+            "sourceUrl": "https://weingutbecker.de/produkt/2025-auxerrois-trocken-bio/",
+            "wine": "2025 Auxerrois Trocken Bio"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Stauffer",
+            "sourceUrl": "https://www.weingutstauffer.de/produkt/auxerrois-eppelsheim/",
+            "wine": "Auxerrois Eppelsheim"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut B. Frieden",
+            "sourceUrl": "https://bernd-frieden.de/produkt/auxerrois-trocken/",
+            "wine": "Auxerrois Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Jung",
+            "sourceUrl": "https://wein-macht-jung.de/products/2023-auxerrois-gutswein-trocken",
+            "wine": "2023 Auxerrois Gutswein Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Sommer",
+            "sourceUrl": "https://sommer.wine/produkt/104-auxerrois-trocken/",
+            "wine": "104 Auxerrois Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Wijngoed Thorn",
+            "sourceUrl": "https://wijngoed-thorn.nl/auxerrois/",
+            "wine": "Auxerrois"
+          },
+          {
+            "abv": 13,
+            "producer": "Wein- & Sektgut Frank Höhn",
+            "sourceUrl": "https://www.frank-hoehn.com/product-page/auxerrois-trocken-buntsandstein",
+            "wine": "Auxerrois Trocken Buntsandstein"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Caves René Bentz",
+            "sourceUrl": "https://cavesrenebentz.lu/vins/bech-macher-enschberg",
+            "wine": "Bech Macher Enschberg"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Stiftshof",
+            "sourceUrl": "https://weingut-stiftshof.com/produkt/2024er-auxerrois-enkircher-qualitaetswein-trocken/",
+            "wine": "2024Er Auxerrois Enkircher Qualitaetswein Trocken"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weinhof Scheu",
+            "sourceUrl": "https://weinhof-scheu.de/products/auxerrois",
+            "wine": "Auxerrois"
+          }
+        ]
       }
     ],
     "id": "auxerrois-blanc",
@@ -43318,7 +47106,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [],
     "body": "high",
     "color": "white",
@@ -43465,6 +47253,82 @@
         "quote": "musts generally have high acidity",
         "value": "high",
         "sourceUrl": "https://doi.org/10.3390/horticulturae8090829"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://fattorialarivolta.it/shop/falanghina-del-sannio-dop-sottozona-taburno/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Fattoria La Rivolta",
+            "sourceUrl": "https://fattorialarivolta.it/shop/falanghina-del-sannio-dop-sottozona-taburno/",
+            "wine": "Falanghina Del Sannio Dop Sottozona Taburno"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Vigne di Malies",
+            "sourceUrl": "https://www.vignedimalies.it/prodotto/creanzia-falanghina/",
+            "wine": "Creanzia Falanghina"
+          },
+          {
+            "abv": 13,
+            "producer": "Poderi Constantini",
+            "sourceUrl": "https://www.podericostantini.it/prodotto/falanghina-igp-linea-fogliosei/",
+            "wine": "Falanghina Igp Linea Fogliosei"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Ca' Lunae",
+            "sourceUrl": "https://www.spaghettiemandolino.it/es/p4438-secutor-falanghina-del-sannio-vino-bio-doc-2019-750ml",
+            "wine": "P4438 Secutor Falanghina Del Sannio Vino Bio Doc 2019 750Ml"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Mustilli",
+            "sourceUrl": "https://mustilli.com/prodotto/vigna-segreta-falanghina-del-sannio-doc-2021/",
+            "wine": "Vigna Segreta Falanghina Del Sannio Doc 2021"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Sella delle Spine",
+            "sourceUrl": "https://www.selladellespine.com/products/benevento-falanghina-igp",
+            "wine": "Benevento Falanghina Igp"
+          },
+          {
+            "abv": 13,
+            "producer": "Giornata Winery",
+            "sourceUrl": "https://giornatawines.com/products/2023-falanghina",
+            "wine": "2023 Falanghina"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Di Majo Norante",
+            "sourceUrl": "https://www.dimajonorante.com/en/wines/falanghina",
+            "wine": "Falanghina"
+          },
+          {
+            "abv": 13,
+            "producer": "Terresacre",
+            "sourceUrl": "https://www.terresacre.com/en/i-vini/falanghina/",
+            "wine": "Falanghina"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina Madonna dei Miracoli",
+            "sourceUrl": "https://vinicasalbordino.com/prodotto/villa-adami-falanghina/",
+            "wine": "Villa Adami Falanghina"
+          },
+          {
+            "abv": 12,
+            "producer": "CANTINA LA GUARDIENSE -JANARE - SCA",
+            "sourceUrl": "https://www.laguardiense.it/collezioni/falanghina-beneventano-igp/",
+            "wine": "Falanghina Beneventano Igp"
+          }
+        ]
       }
     ],
     "id": "falanghina",
@@ -43621,7 +47485,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "strawberry",
       "smoky"
@@ -43793,6 +47657,40 @@
         "value": "medium",
         "place": "Württemberg",
         "placeId": "de-wurttemberg"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.weingutschmalzried.de/produkt/trollinger-10l/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Öko-Weingut Schmalzried",
+            "sourceUrl": "https://www.weingutschmalzried.de/produkt/trollinger-10l/",
+            "wine": "Trollinger 10L"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut H. Beutel",
+            "sourceUrl": "https://www.weingut-beutel.de/produkt/2018-trollinger-1l/",
+            "wine": "2018 Trollinger 1L"
+          },
+          {
+            "abv": 12,
+            "producer": "Brüderlich Weingut",
+            "sourceUrl": "https://bruederlich-weingut.de/produkt/2023-trollinger/",
+            "wine": "2023 Trollinger"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Faschian",
+            "sourceUrl": "https://weingut-faschian.de/wein-shop/trollinger-trocken-2/",
+            "wine": "Trollinger Trocken 2"
+          }
+        ]
       }
     ],
     "id": "trollinger",
@@ -44265,7 +48163,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [],
     "body": null,
     "color": "red",
@@ -44405,6 +48303,34 @@
         "field": "origin",
         "quote": "Black Muscat (or Muscat Hamburg) is a red Vitis vinifera grape variety derived from the crossing of the Schiava Grossa and Muscat of Alexandria by Seward Snow, Head Gardener to Earl de Grey at Wrest Park, Bedfordshire UK in 1850, according to the Vitis International Variety Catalogue.",
         "value": "GB"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.weingutschmalzried.de/produkt/muskat-trollinger/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Öko-Weingut Schmalzried",
+            "sourceUrl": "https://www.weingutschmalzried.de/produkt/muskat-trollinger/",
+            "wine": "Muskat Trollinger"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Faschian",
+            "sourceUrl": "https://weingut-faschian.de/wein-shop/muskat-trollinger-terrasse/",
+            "wine": "Muskat Trollinger Terrasse"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Graf Adelmann",
+            "sourceUrl": "https://www.graf-adelmann.com/product-page/muskattrollinger-1",
+            "wine": "Muskattrollinger 1"
+          }
+        ]
       }
     ],
     "id": "black-muscat",
@@ -46259,7 +50185,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "floral",
       "nutty"
@@ -46404,6 +50330,64 @@
         "quote": "Сорт слугує основою для виробництва сухих та ігристих вин",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B1%D0%BE%D0%BB%D0%BB%D0%B0_%D0%B4%D0%B6%D0%B0%D0%BB%D0%BB%D0%B0"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.gildovini.com/i-nostri-vini/ribolla-gialla/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Cantina Gildo",
+            "sourceUrl": "https://www.gildovini.com/i-nostri-vini/ribolla-gialla/",
+            "wine": "Ribolla Gialla"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Azienda Agricola Sturm",
+            "sourceUrl": "https://sturm.it/negozio/tproduct/391597956-270617582782-ribolla-gialla-bio-dop-collio-2023",
+            "wine": "391597956 270617582782 Ribolla Gialla Bio Dop Collio 2023"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Azienda Agricola Tunella",
+            "sourceUrl": "https://www.tunella.it/vini/col-de-bliss-ribolla-gialla/",
+            "wine": "Col De Bliss Ribolla Gialla"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Altùris",
+            "sourceUrl": "https://alturis.it/ribolla-gialla/",
+            "wine": "Ribolla Gialla"
+          },
+          {
+            "abv": 13,
+            "producer": "Azienda Agricola Monviert s.s.a.",
+            "sourceUrl": "https://monviert.com/vino/ribolla-gialla-2/",
+            "wine": "Ribolla Gialla 2"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Ca' Lovisotto",
+            "sourceUrl": "https://en.calovisotto.it/elenco-vini/ribolla-gialla/",
+            "wine": "Ribolla Gialla"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Ca' Lovisotto",
+            "sourceUrl": "https://de.calovisotto.it/elenco-vini/ribolla-gialla/",
+            "wine": "Ribolla Gialla"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Georgetown Vineyards",
+            "sourceUrl": "https://storka.com/stores/corkscrew-wines-brooklyn/products/fiegl-ribolla-gialla-di-oslavia-2018/750ml",
+            "wine": "750Ml"
+          }
+        ]
       }
     ],
     "id": "ribolla-gialla",
@@ -46550,7 +50534,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "nutty"
     ],
@@ -46723,6 +50707,34 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Ansonica_Costa_dell%27Argentario",
         "place": "Ansonica Costa dell'Argentario",
         "placeId": "it-ansonica-costa-dell-argentario"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.settesoli.it/it/vini/inzolia/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Cantina Settesoli",
+            "sourceUrl": "https://www.settesoli.it/it/vini/inzolia/",
+            "wine": "Inzolia"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/prodotto/insolia-igt-terre-siciliane-2/",
+            "wine": "Insolia Igt Terre Siciliane 2"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantine Ermes Agr. Coop. Agr. stabilimento Torricella",
+            "sourceUrl": "https://cantineermes.it/brand/epicentro-orange-inzolia-bio/",
+            "wine": "Epicentro Orange Inzolia Bio"
+          }
+        ]
       }
     ],
     "id": "ansonica",
@@ -49808,7 +53820,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "floral"
     ],
@@ -49917,6 +53929,34 @@
         "quote": "The Ploussard yields a wine of very light tint and body, with little tannin, but of high quality",
         "value": "low",
         "sourceUrl": "https://archive.org/details/reportviticultu01biolgoog"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.domaine-badoz.fr/fr_FR/rubis-poulsard",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Domaine Benoît Badoz",
+            "sourceUrl": "https://www.domaine-badoz.fr/fr_FR/rubis-poulsard",
+            "wine": "Rubis Poulsard"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Caveau des Byards",
+            "sourceUrl": "https://www.caveau-byards.fr/cotes-du-jura/6-cotes-du-jura-poulsard-2015-3504842210018.html",
+            "wine": "6 Cotes Du Jura Poulsard 2015 3504842210018"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Domaine de la Pinte",
+            "sourceUrl": "https://lapinte.fr/produit/poulsard-pinte-bien-2023/",
+            "wine": "Poulsard Pinte Bien 2023"
+          }
+        ]
       }
     ],
     "id": "poulsard",
@@ -50411,7 +54451,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "black fruit",
       "blackberry",
@@ -50488,6 +54528,40 @@
         "quote": "acolon係一種專門釀酒用嘅提子。 acolon 主要用來釀造紅酒,係由葡萄品種 dornfelder同lemberger(又叫做 blaufrankisch)雜交而成。佢顏色深紅、皮薄、果實大小中等,擁有豐富嘅果香同輕至中等嘅單寧。 acolon 主要喺德國葡萄酒產區種植,尤其係巴登(baden)地區。德國嘅巴登地區出名生產優質紅酒,而 acolon 係嗰度嘅重要品種之一。 acolon 釀造嘅紅酒通常具有濃郁嘅黑色水果風味,例如係黑莓同黑櫻桃,重帶有一定嘅香料同辛香味道。爾種葡萄酒通常具有中至高等嘅酸度同單寧,可以嚮陳年後發展出更複雜嘅風味。 不過,葡萄品種喺唔同產區或者唔同釀酒風格中可能會有唔同特點,所以 acolon 紅酒風格會因為酒廠同產區而有唔同。",
         "value": "spice",
         "sourceUrl": "https://zh_yue.wikipedia.org/wiki/Acolon"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://weingut-melber.de/products/roedelseer-acolon-2023-trocken",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/roedelseer-acolon-2023-trocken",
+            "wine": "Roedelseer Acolon 2023 Trocken"
+          },
+          {
+            "abv": 13.29,
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/acolon-edition-m-2021-trocken-pfalz",
+            "wine": "Acolon Edition M 2021 Trocken Pfalz"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Heinrich Klohr",
+            "sourceUrl": "https://www.weingut-ck.de/shop/acolon-trocken/",
+            "wine": "Acolon Trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Sommer",
+            "sourceUrl": "https://sommer.wine/produkt/004-acolon-trocken-bio/",
+            "wine": "004 Acolon Trocken Bio"
+          }
+        ]
       }
     ],
     "id": "acolon",

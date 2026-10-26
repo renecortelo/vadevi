@@ -94,6 +94,9 @@
     },
     "saidOfPlace": "Dicho del vino de {{place}}",
     "saidOfProducers": "Según los vinos de {{count}} bodegas",
+    "saidOfProducersAbv": "Según el grado de los vinos de {{count}} bodegas (escala del WSET)",
+    "moreWines_one": "{{count}} vino más",
+    "moreWines_other": "{{count}} vinos más",
     "noSourceValue": "sin dato en las fuentes",
     "kind": {
       "still": "vino tranquilo",

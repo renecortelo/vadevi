@@ -94,6 +94,9 @@
     },
     "saidOfPlace": "Detto del vino di {{place}}",
     "saidOfProducers": "Secondo i vini di {{count}} produttori",
+    "saidOfProducersAbv": "Secondo la gradazione dei vini di {{count}} produttori (scala del WSET)",
+    "moreWines_one": "{{count}} altro vino",
+    "moreWines_other": "altri {{count}} vini",
     "noSourceValue": "nessun dato nelle fonti",
     "kind": {
       "still": "vino fermo",
