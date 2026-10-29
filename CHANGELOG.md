@@ -25,6 +25,9 @@ has the reasons.
   directories (Wines of South Africa, Lodi, Sonoma, Wine BC, Hawke's Bay
   and others): Marselan and Nero d'Avola medium in alcohol, Fiano high in
   acidity, Pinotage medium-bodied, Cinsaut with duck.
+- **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
+  taninos dulces», as the EU register's document describes its red wines;
+  the card says it is said of the Ribeira Sacra's wine.
 - **Aromas from producers' tasting notes**, each on three producers'
   wines, for grapes no other source gives aromas for: Falanghina's citrus,
   peach, pineapple and floral notes.

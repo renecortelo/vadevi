@@ -9704,6 +9704,14 @@
         "quote": "El alto grado alcohólico y la moderada acidez de la Mencía",
         "value": "high",
         "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
+      },
+      {
+        "field": "tannin",
+        "quote": "con una ligera acidez y con un final de boca con ligeros taninos dulces",
+        "value": "low",
+        "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006870",
+        "place": "Ribeira Sacra",
+        "placeId": "es-ribeira-sacra"
       }
     ],
     "id": "mencia",
@@ -9841,7 +9849,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1293271",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
   },

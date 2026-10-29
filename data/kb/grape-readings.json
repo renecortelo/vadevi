@@ -2358,6 +2358,21 @@
         "lang": "es",
         "value": "high",
         "quote": "El alto grado alcohólico y la moderada acidez de la Mencía"
+      },
+      {
+        "field": "tannin",
+        "lang": "es",
+        "value": "low",
+        "quote": "con una ligera acidez y con un final de boca con ligeros taninos dulces",
+        "scope": {
+          "place": "Ribeira Sacra",
+          "regionId": "es-ribeira-sacra"
+        },
+        "source": {
+          "url": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006870",
+          "volume": "eambrosia-29166",
+          "work": "eambrosia-single-document"
+        }
       }
     ],
     "merlot": [
