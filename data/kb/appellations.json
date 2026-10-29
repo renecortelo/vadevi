@@ -385558,7 +385558,20 @@
     "countryCode": "NZ",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/auckland/"
+      },
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/auckland/"
+      }
+    ],
     "id": "nz-matakana",
     "latitude": -36.3523938,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/matakana/",
@@ -386386,7 +386399,20 @@
     "countryCode": "NZ",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/wairarapa/"
+      },
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/wairarapa/"
+      }
+    ],
     "id": "nz-gladstone",
     "latitude": -41.0773358,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/gladstone/",
@@ -386494,7 +386520,26 @@
     "countryCode": "NZ",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/wairarapa/"
+      },
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/wairarapa/"
+      },
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/wairarapa/"
+      }
+    ],
     "id": "nz-martinborough",
     "latitude": -41.2183252,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/martinborough/",
@@ -387145,7 +387190,26 @@
     "countryCode": "NZ",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/northcanterbury/"
+      },
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/northcanterbury/"
+      },
+      {
+        "by": "New Zealand Winegrowers",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/en/regions/northcanterbury/"
+      }
+    ],
     "id": "nz-waipara-valley",
     "latitude": -43.056,
     "legalUrl": "https://www.iponz.govt.nz/get-ip/geographical-indications/register/waipara-valley/",
@@ -389249,7 +389313,38 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-elgin",
     "latitude": -34.1486111,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -389669,7 +389764,20 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-walker-bay",
     "latitude": -34.51833,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -390778,7 +390886,14 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-tulbagh",
     "latitude": -33.285059,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -392113,7 +392228,68 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "chenin-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "colombard",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "pinotage",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "petit-verdot",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "tannat",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "muscat-of-alexandria",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-central-orange-river",
     "latitude": -28.708951,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -393090,7 +393266,32 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "chenin-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "pinotage",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-bot-river",
     "latitude": -34.226759,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -393815,7 +394016,14 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-constantia",
     "latitude": -34.0283333,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -393930,7 +394138,32 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-durbanville",
     "latitude": -33.8402778,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -394125,7 +394358,20 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-philadelphia",
     "latitude": -33.666635,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -394200,7 +394446,14 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-groenekloof",
     "latitude": -33.376426,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -396318,7 +396571,14 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-bamboes-bay",
     "latitude": -31.7959209,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -399581,7 +399841,20 @@
     "countryCode": "ZA",
     "eambrosiaId": null,
     "giType": "WO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      },
+      {
+        "by": "Wines of South Africa (WoSA)",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.wosa.co.za/The-Industry/Winegrowing-Areas/Winelands-of-South-Africa/"
+      }
+    ],
     "id": "za-cederberg",
     "latitude": -32.5005556,
     "legalUrl": "https://www.sawis.co.za/cert/download/Production_areas_-_Eng_&_Afr_-_Feb26.pdf",
@@ -428403,7 +428676,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "bacchus-weiss",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/vancouver-island/cowichan-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/vancouver-island/cowichan-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/vancouver-island/cowichan-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/vancouver-island/cowichan-valley/"
+      }
+    ],
     "id": "ca-cowichan-valley",
     "latitude": 48.8359655,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -428514,7 +428812,38 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/east-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/east-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/east-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/east-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/east-kelowna-slopes/"
+      }
+    ],
     "id": "ca-east-kelowna-slopes",
     "latitude": 49.8879177,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -428585,7 +428914,38 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/fraser-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "bacchus-weiss",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/fraser-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "siegerrebe",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/fraser-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/fraser-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/fraser-valley/"
+      }
+    ],
     "id": "ca-fraser-valley",
     "latitude": 49.5723178,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -428650,13 +429010,68 @@
       "ph": 5.3,
       "sand": 41.2,
       "silt": 41.4
+    },
+    "figures": {
+      "planted": {
+        "acres": 194,
+        "amount": 78.5,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/fraser-valley/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-bench/"
+      }
+    ],
     "id": "ca-golden-mile-bench",
     "latitude": 49.6,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -428727,7 +429142,38 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/golden-mile-slopes/"
+      }
+    ],
     "id": "ca-golden-mile-slopes",
     "latitude": 49.6,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -428798,7 +429244,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/gulf-islands/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/gulf-islands/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/gulf-islands/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/gulf-islands/"
+      }
+    ],
     "id": "ca-gulf-islands",
     "latitude": 55.001251,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -428863,13 +429334,50 @@
       "ph": 6,
       "sand": 36.9,
       "silt": 38.9
+    },
+    "figures": {
+      "planted": {
+        "acres": 110,
+        "amount": 44.5,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/gulf-islands/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/lake-country/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/lake-country/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/lake-country/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/lake-country/"
+      }
+    ],
     "id": "ca-lake-country",
     "latitude": 50.0302364,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -428940,7 +429448,44 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/lillooet/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/lillooet/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/lillooet/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/lillooet/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/lillooet/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/lillooet/"
+      }
+    ],
     "id": "ca-lillooet",
     "latitude": 50.693938,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429045,13 +429590,62 @@
       "ph": 7.2,
       "sand": 43.3,
       "silt": 36.7
+    },
+    "figures": {
+      "planted": {
+        "acres": 51,
+        "amount": 20.6,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/lillooet/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/kootenays/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/kootenays/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/kootenays/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/kootenays/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/kootenays/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gamay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/kootenays/"
+      }
+    ],
     "id": "ca-kootenays",
     "latitude": 55.001251,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429116,13 +429710,50 @@
       "ph": 6,
       "sand": 36.9,
       "silt": 38.9
+    },
+    "figures": {
+      "planted": {
+        "acres": 117,
+        "amount": 47.3,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/kootenays/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/naramata-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/naramata-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/naramata-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/naramata-bench/"
+      }
+    ],
     "id": "ca-naramata-bench",
     "latitude": 49.5981383,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429193,7 +429824,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/okanagan-falls/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/okanagan-falls/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/okanagan-falls/"
+      }
+    ],
     "id": "ca-okanagan-falls",
     "latitude": 49.3454662,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429430,7 +430080,44 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "siegerrebe",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/shuswap/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/shuswap/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/shuswap/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "kerner",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/shuswap/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "zweigelt",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/shuswap/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "bacchus-weiss",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/shuswap/"
+      }
+    ],
     "id": "ca-shuswap",
     "latitude": 55.001251,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429495,6 +430182,18 @@
       "ph": 6,
       "sand": 36.9,
       "silt": 38.9
+    },
+    "figures": {
+      "planted": {
+        "acres": 107,
+        "amount": 43.3,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/shuswap/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
@@ -429572,13 +430271,74 @@
       "ph": 6,
       "sand": 36.9,
       "silt": 38.9
+    },
+    "figures": {
+      "planted": {
+        "acres": 768,
+        "amount": 310.8,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/similkameen-valley/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-blanc",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/skaha-bench/"
+      }
+    ],
     "id": "ca-skaha-bench",
     "latitude": 49.6,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429649,7 +430409,44 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/south-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/south-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/south-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/south-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gamay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/south-kelowna-slopes/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/south-kelowna-slopes/"
+      }
+    ],
     "id": "ca-south-kelowna-slopes",
     "latitude": 49.8879177,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429720,7 +430517,38 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-bench/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-bench/"
+      }
+    ],
     "id": "ca-summerland-bench",
     "latitude": 49.6,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429791,7 +430619,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-lakefront/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-lakefront/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-lakefront/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-lakefront/"
+      }
+    ],
     "id": "ca-summerland-lakefront",
     "latitude": 49.6,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429862,7 +430715,38 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-valleys/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-valleys/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "kerner",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-valleys/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-valleys/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/okanagan-valley/summerland-valleys/"
+      }
+    ],
     "id": "ca-summerland-valleys",
     "latitude": 49.6,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429933,7 +430817,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/thompson-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/thompson-valley/"
+      },
+      {
+        "by": "Wine Growers British Columbia",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/thompson-valley/"
+      }
+    ],
     "id": "ca-thompson-valley",
     "latitude": 55.001251,
     "legalUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_2018",
@@ -429998,6 +430901,18 @@
       "ph": 6,
       "sand": 36.9,
       "silt": 38.9
+    },
+    "figures": {
+      "planted": {
+        "acres": 93,
+        "amount": 37.6,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/thompson-valley/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
@@ -430120,6 +431035,18 @@
       "ph": 5.2,
       "sand": 39.5,
       "silt": 42.8
+    },
+    "figures": {
+      "planted": {
+        "acres": 321,
+        "amount": 129.9,
+        "by": "Wine Growers British Columbia",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://winebc.com/wine-regions/vancouver-island/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
@@ -430194,7 +431121,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/prince-edward-county/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/prince-edward-county/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/prince-edward-county/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/prince-edward-county/"
+      }
+    ],
     "id": "ca-prince-edward-county",
     "latitude": 44.031827,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430302,7 +431254,44 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/"
+      }
+    ],
     "id": "ca-niagara-peninsula",
     "latitude": 43.0631891,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430404,13 +431393,50 @@
       "ph": 6.7,
       "sand": 31,
       "silt": 43.2
+    },
+    "figures": {
+      "planted": {
+        "acres": 13600,
+        "amount": 5503.7,
+        "by": "VQA Ontario",
+        "publisher": "web",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/",
+        "year": null
+      },
+      "production": null
     }
   },
   {
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-escarpment/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-escarpment/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "gamay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-escarpment/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-escarpment/"
+      }
+    ],
     "id": "ca-niagara-escarpment",
     "latitude": 43.155285,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430478,7 +431504,38 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-on-the-lake/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-on-the-lake/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-on-the-lake/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-on-the-lake/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-on-the-lake/"
+      }
+    ],
     "id": "ca-niagara-on-the-lake",
     "latitude": 43.2556116,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430546,7 +431603,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/west-niagara/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/west-niagara/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "gamay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/west-niagara/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/west-niagara/"
+      }
+    ],
     "id": "ca-west-niagara",
     "latitude": 43.172272500000005,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430614,7 +431696,14 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/lake-erie-north-shore/south-islands/"
+      }
+    ],
     "id": "ca-south-islands",
     "latitude": 42.41833,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430685,7 +431774,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-river/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-river/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-river/"
+      }
+    ],
     "id": "ca-niagara-river",
     "latitude": 43.2556116,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430756,7 +431864,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-lakeshore/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-lakeshore/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-lakeshore/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/niagara-lakeshore/"
+      }
+    ],
     "id": "ca-niagara-lakeshore",
     "latitude": 43.2556116,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430827,7 +431960,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/four-mile-creek/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/four-mile-creek/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/four-mile-creek/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "gamay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/four-mile-creek/"
+      }
+    ],
     "id": "ca-four-mile-creek",
     "latitude": 43.2556116,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430898,7 +432056,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/st-davids-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/st-davids-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/st-davids-bench/"
+      }
+    ],
     "id": "ca-st-davids-bench",
     "latitude": 43.15667,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -430970,7 +432147,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/lincoln-lakeshore/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/lincoln-lakeshore/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/lincoln-lakeshore/"
+      }
+    ],
     "id": "ca-lincoln-lakeshore",
     "latitude": 43.19347500000001,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -431041,7 +432237,32 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/creek-shores/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/creek-shores/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/creek-shores/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/creek-shores/"
+      }
+    ],
     "id": "ca-creek-shores",
     "latitude": 43.178745000000006,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -431112,7 +432333,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/beamsville-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/beamsville-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/beamsville-bench/"
+      }
+    ],
     "id": "ca-beamsville-bench",
     "latitude": 43.1658,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -431184,7 +432424,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/twenty-mile-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/twenty-mile-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/twenty-mile-bench/"
+      }
+    ],
     "id": "ca-twenty-mile-bench",
     "latitude": 43.1539,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -431256,7 +432515,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/short-hills-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/short-hills-bench/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/short-hills-bench/"
+      }
+    ],
     "id": "ca-short-hills-bench",
     "latitude": 43.112,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -431368,7 +432646,26 @@
     "countryCode": "CA",
     "eambrosiaId": null,
     "giType": "VQA",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "VQA Ontario",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/vinemount-ridge/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/vinemount-ridge/"
+      },
+      {
+        "by": "VQA Ontario",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://vqaontario.ca/ontario-appellations/niagara-peninsula/vinemount-ridge/"
+      }
+    ],
     "id": "ca-vinemount-ridge",
     "latitude": 43.19806,
     "legalUrl": "https://www.ontario.ca/laws/regulation/000406",
@@ -454122,7 +455419,26 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Australia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.wineaustralia.com/market-insights/regions-and-varieties/victoria-wines/murray-darling"
+      },
+      {
+        "by": "Wine Australia",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.wineaustralia.com/market-insights/regions-and-varieties/victoria-wines/murray-darling"
+      },
+      {
+        "by": "Wine Australia",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://www.wineaustralia.com/market-insights/regions-and-varieties/victoria-wines/murray-darling"
+      }
+    ],
     "id": "au-murray-darling",
     "latitude": -34.25477327275739,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-murray-darling",
@@ -454585,7 +455901,26 @@
     "countryCode": "AU",
     "eambrosiaId": null,
     "giType": "GI",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Wine Australia",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://www.wineaustralia.com/market-insights/regions-and-varieties/victoria-wines/swan-hill"
+      },
+      {
+        "by": "Wine Australia",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://www.wineaustralia.com/market-insights/regions-and-varieties/victoria-wines/swan-hill"
+      },
+      {
+        "by": "Wine Australia",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://www.wineaustralia.com/market-insights/regions-and-varieties/victoria-wines/swan-hill"
+      }
+    ],
     "id": "au-swan-hill",
     "latitude": -35.29605538519532,
     "legalUrl": "https://www.wineaustralia.com/labelling/geographical-indicators/labelling-gi-swan-hill",

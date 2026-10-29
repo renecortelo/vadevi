@@ -352,7 +352,23 @@ export function LibraryRegionPage() {
             <ul>
               {region.grapes.map((grape) => (
                 <li key={grape.id}>
-                  <strong>{grape.name}</strong> — “{grape.quote}”
+                  <strong>{grape.name}</strong> —{" "}
+                  {grape.by === undefined ? (
+                    `“${grape.quote}”`
+                  ) : (
+                    // A body's page: who gives it, linked, never its sentence.
+                    <>
+                      <a
+                        className="text-link"
+                        href={grape.sourceUrl}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {grape.by}
+                      </a>{" "}
+                      ({t("library.grapeFactAlone")})
+                    </>
+                  )}
                 </li>
               ))}
             </ul>

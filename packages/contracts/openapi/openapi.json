@@ -11902,6 +11902,9 @@
                   "by": {
                     "type": "string"
                   },
+                  "acres": {
+                    "type": "number"
+                  },
                   "quote": {
                     "type": "string"
                   },
@@ -11952,6 +11955,9 @@
                   "by": {
                     "type": "string"
                   },
+                  "acres": {
+                    "type": "number"
+                  },
                   "quote": {
                     "type": "string"
                   },
@@ -12001,6 +12007,9 @@
             "items": {
               "type": "object",
               "properties": {
+                "by": {
+                  "type": "string"
+                },
                 "id": {
                   "type": "string"
                 },
@@ -12556,6 +12565,7 @@
                   "enum": [
                     "producers",
                     "producers-abv",
+                    "producers-sugar",
                     null
                   ]
                 },
@@ -12574,6 +12584,9 @@
                       "sourceUrl": {
                         "type": "string",
                         "format": "uri"
+                      },
+                      "sugar": {
+                        "type": "number"
                       },
                       "wine": {
                         "type": "string"

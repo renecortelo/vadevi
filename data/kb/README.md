@@ -369,6 +369,26 @@ by hand.
   dry and three others semi-dry (Blauer Portugieser «trocken» and
   «halbtrocken», «lieblich»), the fact is the range, each end on three
   producers' wines.
+- **Dry or sweet from the sheets' residual sugar** (the operator's decision
+  of 28 October 2026): a sheet's «zucchero residuo 1,5 g/l» is turned into
+  the term the EU's labelling rules define for it (Regulation (EU) 2019/33,
+  Annex III, Part B): dry up to 4 g/l, semi-dry («medium dry», «medium») to
+  45, sweet above. Between 4 and 9 g/l a wine is dry only if its acidity is
+  high enough, which a sheet rarely says, so it gets no level and counts
+  against any; an upper bound («< 1,5 g/l») is read only when it is dry's.
+  Sparkling and rosé pages are left out, as for alcohol. A level, or a range
+  of two, stands when three producers reach each end and two thirds of all
+  those listed fall within it. Red wines rarely write «dry» on their sheets
+  but often give the figure (Garnacha: five producers, 0.2–3 g/l). The card
+  says «from the residual sugar of the wines of N producers (EU terms)» and
+  shows each wine's grams a litre.
+- **Aromas** from the producers' tasting notes («al naso…», «on the nose…»)
+  in the library's aroma words: each aroma on three producers' wines, only
+  for a grape no other source gives aromas for (Falanghina: citrus, peach,
+  pineapple, floral). «Rosé», the wine, is not «rose», the flower; an aroma
+  named after the grape (Muscat's «musk») proves nothing.
+- **A body's page about one place's wine** — a single-variety DOC's — may
+  carry its place (`scope`), labelled on the card as a hand reading's is.
 
 The readings are in `data/kb/web-readings.json`, which stays in the private
 repository: each sentence is checked word for word against our copy of its
@@ -403,7 +423,21 @@ for word against our copy of the page and holding the figure, and the card
 shows the figure and who gives it, linked, never the sentence (Roero and
 Lugana from their consorzi, Nemea from Wines of Greece). A body's figure
 never replaces an official one: where they differ (Friuli Grave's consorzio
-gives «circa 300.000 hl», the official source 73,800) the official stays.
+gives «circa 300.000 hl», the official source 73,800) the official stays. A
+body that gives acres (Wine Growers British Columbia, VQA Ontario) has its
+figure marked `acres`: the build converts it to hectares and keeps the acres,
+and the card says «≈ … ha, converted from acres».
+
+A name with no grapes from any source above may take them from its own
+body's page, under the same rule (`data/kb/web-region-grapes.json`, private):
+the list or sentence, checked against our copy of the page and naming each
+grape by one of its names in the library, and the card lists the grapes with
+who gives them, linked (`kb_region_grapes.publisher`, `0048`), never the
+sentence. Wine Growers British Columbia's «Varietals» of each sub-region,
+VQA Ontario's «Common Varieties» of each appellation, and sentences from Wines
+of South Africa, Wine Australia and New Zealand Winegrowers that say a grape
+is grown or known there — not that a place is «ideal for» or «promising for»
+it, and not a bare «Cabernet», which names no one grape.
 
 - `pnpm kb:fetch-climate` reads the monthly mean temperature and
   precipitation, 1981–2010, at every point from CHELSA V2.1 — only the rows

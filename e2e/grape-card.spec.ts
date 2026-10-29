@@ -175,11 +175,17 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   // figure, the first six and the rest a tap away.
   await page.goto("/library/grapes/riesling");
   const rieslingAlcohol = page.locator(".library-bar", { hasText: "Alcohol" });
-  // A narrow fill takes both degrees as one label: «10 % – 13 %».
-  await expect(rieslingAlcohol.locator(".library-bar__span")).toHaveText(
-    /^\d+(,\d)?\s%(\s–\s\d+(,\d)?\s%)?$/,
-    { timeout: 15_000 },
-  );
+  // Each degree under its end of the fill, «9,8 %» and «13 %»; a narrow fill
+  // takes both as one label, «10 % – 13 %».
+  const degree = /^\d+(,\d)?\s%$/;
+  const span = rieslingAlcohol.locator(".library-bar__span");
+  await expect(span).toBeVisible({ timeout: 15_000 });
+  if ((await span.locator(".library-bar__start").count()) > 0) {
+    await expect(span.locator(".library-bar__start")).toHaveText(degree);
+    await expect(span.locator(".library-bar__end")).toHaveText(degree);
+  } else {
+    await expect(span).toHaveText(/^\d+(,\d)?\s%(\s–\s\d+(,\d)?\s%)?$/);
+  }
   await expect(rieslingAlcohol.locator(".sr-only")).toHaveText(/^De \d+(,\d)?\s% a \d+(,\d)?\s%$/);
   const riesling = page.locator(".library-evidence");
   await riesling.locator("summary").first().click();
@@ -189,4 +195,13 @@ test("a grape card shows its aromas and its structure at a glance", async ({ pag
   const figures = riesling.locator("li", { hasText: "escala del WSET" });
   await expect(figures.getByRole("link").first()).toContainText(/\(\d+(,\d+)?\s%\)/);
   await expect(figures.locator(".library-more-wines summary")).toContainText(/vinos más/);
+
+  // Dry or sweet from the sheets' residual sugar, by the EU's labelling
+  // terms: Garnacha dry, each wine with its grams a litre.
+  await page.goto("/library/grapes/grenache");
+  const grenacheSources = page.locator(".library-evidence");
+  await grenacheSources.locator("summary").first().click({ timeout: 15_000 });
+  const sugar = grenacheSources.locator("li", { hasText: "términos de la UE" });
+  await expect(sugar).toContainText(/Según el azúcar residual de los vinos de \d+ bodegas/);
+  await expect(sugar.getByRole("link").first()).toContainText(/\(\d+(,\d+)?\sg\/l\)/);
 });

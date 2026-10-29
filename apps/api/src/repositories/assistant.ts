@@ -117,22 +117,35 @@ function searchTerms(message: string): string[] {
 }
 
 /**
- * The wines a fact taken from them is cited to: each one, or, for alcohol
- * read from the sheets' figures (a grape may have 170), the first three that
- * reach the level on WSET's scale — enough to bear it, as the card lists all.
+ * The wines a fact taken from them is cited to: the first three that bear
+ * it — for a level read from the sheets' figures (a grape may have 170), the
+ * first three that reach it, alcohol on WSET's scale, residual sugar by the
+ * EU's labelling terms — enough to bear it, as the card lists all.
  */
 function citedWines(entry: {
-  basis: "producers" | "producers-abv" | null;
+  basis: "producers" | "producers-abv" | "producers-sugar" | null;
   value: string;
-  wines: { abv?: number | undefined; sourceUrl: string }[] | null;
+  wines: { abv?: number | undefined; sourceUrl: string; sugar?: number | undefined }[] | null;
 }): string[] | null {
   if (entry.wines === null) return null;
-  if (entry.basis !== "producers-abv") return entry.wines.map((wine) => wine.sourceUrl);
-  const level = (abv: number) => (abv < 11 ? "low" : abv < 14 ? "medium" : "high");
-  return entry.wines
-    .filter((wine) => wine.abv !== undefined && level(wine.abv) === entry.value)
-    .slice(0, 3)
-    .map((wine) => wine.sourceUrl);
+  if (entry.basis === "producers-abv") {
+    const level = (abv: number) => (abv < 11 ? "low" : abv < 14 ? "medium" : "high");
+    return entry.wines
+      .filter((wine) => wine.abv !== undefined && level(wine.abv) === entry.value)
+      .slice(0, 3)
+      .map((wine) => wine.sourceUrl);
+  }
+  if (entry.basis === "producers-sugar") {
+    const level = (grams: number) =>
+      grams <= 4 ? "dry" : grams <= 9 ? null : grams <= 45 ? "medium" : "sweet";
+    const ends = entry.value.split("-");
+    return entry.wines
+      .filter((wine) => wine.sugar !== undefined && ends.includes(level(wine.sugar) ?? ""))
+      .slice(0, 3)
+      .map((wine) => wine.sourceUrl);
+  }
+  // Words three producers or more agree on: the first three bear the fact.
+  return entry.wines.slice(0, 3).map((wine) => wine.sourceUrl);
 }
 
 /**
@@ -911,9 +924,11 @@ async function loadLibraryStatements(
         ? `${text} (said of the wine of ${place})`
         : producers?.basis === "producers-abv"
           ? `${text} (from the alcohol of the wines of ${count} producers, on WSET's scale)`
-          : producers !== null
-            ? `${text} (according to the wines of ${count} producers)`
-            : text;
+          : producers?.basis === "producers-sugar"
+            ? `${text} (from the residual sugar of the wines of ${count} producers, by the EU's terms)`
+            : producers !== null
+              ? `${text} (according to the wines of ${count} producers)`
+              : text;
     };
     const structure = (["acidity", "tannin", "body", "alcohol"] as const)
       .filter((axis) => card[axis] !== null)
@@ -1266,9 +1281,10 @@ async function loadLibraryStatements(
               createdByProvider: "wine-library",
               createdByUserId: null,
               id,
-              ...librarySourceKind(grape.sourceUrl, grape.name),
+              // A body's page that is not openly licensed: the fact, linked.
+              ...librarySourceKind(grape.sourceUrl, grape.name, grape.by),
               retrievedAt: now,
-              sourceType: "open_dataset",
+              sourceType: grape.by === undefined ? "open_dataset" : "other_web",
               updatedAt: now,
             });
           }
@@ -1277,7 +1293,7 @@ async function loadLibraryStatements(
       );
       say(
         "grapes",
-        `grapes whose own articles say they are grown there: ${region.grapes.map((grape) => grape.name).join(", ")}`,
+        `grapes its sources (articles, laws, vineyard tables or its own body) say are grown there: ${region.grapes.map((grape) => grape.name).join(", ")}`,
         grapeSources,
       );
     }

@@ -49,6 +49,7 @@ const excluded = [
   // page's text, so the sentences stay in the private repository.
   "data/kb/web-readings.json",
   "data/kb/web-region-figures.json",
+  "data/kb/web-region-grapes.json",
 ];
 
 /**

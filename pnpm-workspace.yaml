@@ -33,6 +33,9 @@ overrides:
   # GHSA-pqg4-j6r4-53mv (shell-quote), under concurrently, which runs the two
   # dev servers with fixed commands. Local development only.
   shell-quote: ">=1.11.0 <2"
+  # GHSA-gg6h-894w-4m9c (re2js lookbehind matching, quadratic time), under
+  # firebase > @firebase/firestore in the web app; patched in 2.8.7, same major.
+  re2js: ">=2.8.7 <3"
   # GHSA-2883-xcg3-v3hh (js-yaml CPU), under firebase-tools. Emulator only.
   js-yaml@4: ">=4.3.2"
   # GHSA-x5fp-wj9c-mxmx and GHSA-4mjr-xmp4-gh2g (qs), GHSA-jxfw-x594-9x9m

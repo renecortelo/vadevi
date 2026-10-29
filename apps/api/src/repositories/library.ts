@@ -280,8 +280,10 @@ export async function getLibraryGrape(
       }[]
     ).map((row) => ({
       basis:
-        row.basis === "producers" || row.basis === "producers-abv"
-          ? (row.basis as "producers" | "producers-abv")
+        row.basis === "producers" ||
+        row.basis === "producers-abv" ||
+        row.basis === "producers-sugar"
+          ? (row.basis as "producers" | "producers-abv" | "producers-sugar")
           : null,
       factOnly: row.fact_only === 1,
       field: row.field,
@@ -298,6 +300,7 @@ export async function getLibraryGrape(
               abv?: number;
               producer: string;
               sourceUrl: string;
+              sugar?: number;
               wine: string;
             }[]),
     })),
@@ -723,7 +726,7 @@ export async function getLibraryRegion(
       .bind(regionId),
     database
       .prepare(
-        `SELECT link.grape_id, link.quote, link.source_url,
+        `SELECT link.grape_id, link.quote, link.source_url, link.publisher,
           coalesce(
             (SELECT name FROM kb_names WHERE entity_type = 'grape' AND entity_id = link.grape_id
               AND kind = 'primary' AND locale = ?),
@@ -805,10 +808,13 @@ export async function getLibraryRegion(
       (grapes?.results ?? []) as {
         grape_id: string;
         name: string;
+        publisher: string | null;
         quote: string;
         source_url: string;
       }[]
     ).map((row) => ({
+      // A body's page under the rule of the fact alone: who gives it, no quote.
+      ...(row.publisher === null ? {} : { by: row.publisher }),
       id: row.grape_id,
       name: row.name,
       quote: row.quote,

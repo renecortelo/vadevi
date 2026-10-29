@@ -4,12 +4,14 @@ import { resolve } from "node:path";
 import { leadIsAboutWine } from "./appellation-names";
 import {
   alcoholFigure,
+  euSweetness,
   type GrapeEntry,
   type Level,
   normalize,
   originNamed,
   quoteIsVerbatim,
   slug,
+  sugarFigure,
   summaryOf,
   type Sweetness,
   validateExtraction,
@@ -165,9 +167,11 @@ const handReadings = (
  * same of theirs. `KB_WEB=0` builds the library without any of them.
  */
 type WebSource = { publisher: string; url: string; volume: string };
-type WebField = "acidity" | "alcohol" | "body" | "pairings" | "sweetness" | "tannin";
+type WebField = "acidity" | "alcohol" | "aromas" | "body" | "pairings" | "sweetness" | "tannin";
 type WebReading = {
   field: WebField;
+  /** As a hand reading's: the place whose wine the page describes. */
+  scope?: { place: string; regionId?: string };
   lang: string;
   value: string | string[];
   words?: Record<string, string>;
@@ -179,17 +183,20 @@ type WebReading = {
    * in words (`producers`) or, for alcohol, in the figure each sheet gives,
    * a level on WSET's scale (`producers-abv`).
    */
-  basis?: "producers" | "producers-abv";
+  basis?: "producers" | "producers-abv" | "producers-sugar";
   wines?: {
     /** The alcohol the sheet gives, as `quote` says it. */
     abv?: number;
+    /** The residual sugar the sheet gives, g/l, as `quote` says it. */
+    sugar?: number;
     lang: string;
     producer: string;
     quote: string;
     source: WebSource;
     /** The end of a range this wine stands for: «dry» for one producer's
-     * Portugieser, «medium» for another's. */
-    value?: string;
+     * Portugieser, «medium» for another's; or, in a list, the terms its
+     * sentence was accepted for. */
+    value?: string | string[];
     wine: string;
     words?: Record<string, string>;
   }[];
@@ -451,6 +458,9 @@ for (const qid of index) {
   for (const reading of webReadings[slug(raw.labels.en ?? qid)] ?? []) {
     const grape = `${raw.labels.en ?? qid} (web)`;
     const field = reading.field;
+    if (reading.scope?.regionId !== undefined && !atlasIds.has(reading.scope.regionId)) {
+      throw new Error(`${grape}: no atlas entry ${reading.scope.regionId}.`);
+    }
     const read = (
       quote: string,
       source: WebSource,
@@ -527,6 +537,66 @@ for (const qid of index) {
       });
       continue;
     }
+    if (reading.basis === "producers-sugar") {
+      // Dry or sweet as the grape's still single-variety wines give it: each
+      // sheet's residual sugar, found on its page, turned into a level by
+      // the EU's labelling terms (the operator's rule of 28 October 2026). A
+      // level, or a range of two, stands when three producers reach each end
+      // and two thirds of all those listed fall within it.
+      const read = (reading.wines ?? []).flatMap((wine) => {
+        const page = webPage(wine.source.volume);
+        const figure = sugarFigure(wine.quote);
+        const flat = (text: string) => text.replace(/\s+/g, " ").toLowerCase();
+        if (
+          page === null ||
+          figure === null ||
+          figure !== wine.sugar ||
+          !flat(page).includes(flat(wine.quote))
+        ) {
+          rejected.push({ field, grape, reason: "figure not on its page", value: wine.quote });
+          return [];
+        }
+        return [
+          {
+            level: euSweetness(figure, /<\s?\d/.test(wine.quote)),
+            wine: { ...wine, sugar: figure },
+          },
+        ];
+      });
+      const value = String(reading.value);
+      const ends = value.split("-") as Sweetness[];
+      const order: Sweetness[] = ["dry", "medium", "sweet"];
+      const within = (level: Sweetness | null) =>
+        level !== null &&
+        order.indexOf(level) >= order.indexOf(ends[0]!) &&
+        order.indexOf(level) <= order.indexOf(ends.at(-1)!);
+      const producers = (keep: (level: Sweetness | null) => boolean) =>
+        new Set(read.filter((one) => keep(one.level)).map((one) => normalize(one.wine.producer)))
+          .size;
+      const fewest = Math.min(...ends.map((end) => producers((level) => level === end)));
+      if (fewest < 3 || producers(within) * 3 < producers(() => true) * 2) {
+        rejected.push({ field, grape, reason: `only ${fewest} producers agree`, value });
+        continue;
+      }
+      if (result.sweetness !== null) continue;
+      result.sweetness = { from: ends[0]!, to: ends.at(-1)! };
+      result.evidence.push({
+        basis: "producers-sugar",
+        factOnly: true,
+        field: "sweetness",
+        quote: "",
+        sourceUrl: read[0]!.wine.source.url,
+        value,
+        // Every wine with a figure, those that disagree too.
+        wines: read.map(({ wine }) => ({
+          producer: wine.producer,
+          sourceUrl: wine.source.url,
+          sugar: wine.sugar,
+          wine: wine.wine,
+        })),
+      });
+      continue;
+    }
     if (reading.basis === "producers") {
       const wines = reading.wines ?? [];
       // Each wine's reading, kept only where it says what the reading says.
@@ -539,9 +609,15 @@ for (const qid of index) {
         return values.length === 0 ? [] : [{ values, wine }];
       });
       const said =
-        field === "pairings"
+        field === "pairings" || field === "aromas"
           ? [...new Set(agreeing.flatMap((one) => one.values))]
           : [[reading.value].flat().join(", ")];
+      // A list only fills a grape that had none before this reading; then
+      // every term three producers agree on goes in.
+      const listedBefore =
+        field === "pairings" || field === "aromas"
+          ? terms(field === "aromas" ? "aroma" : "pairing", result[field]).length > 0
+          : false;
       for (const value of said) {
         // A range stands when each of its ends does: three producers' dry
         // wines of the grape, and three producers' semi-dry ones.
@@ -566,10 +642,9 @@ for (const qid of index) {
           sourceUrl: one.wine.source.url,
           wine: one.wine.wine,
         }));
-        if (field === "pairings") {
-          if (terms("pairing", result.pairings).length > 0 && !result.pairings.includes(value))
-            continue;
-          if (!result.pairings.includes(value)) result.pairings.push(value);
+        if (field === "pairings" || field === "aromas") {
+          if (listedBefore && !result[field].includes(value)) continue;
+          if (!result[field].includes(value)) result[field].push(value);
         } else if (result[field] !== null) continue;
         else if (field === "sweetness") {
           const [from, to = from] = value.split("-") as [Sweetness, Sweetness?];
@@ -590,9 +665,10 @@ for (const qid of index) {
     if (reading.quote === undefined || reading.source === undefined) continue;
     const found = read(reading.quote, reading.source, reading.lang, reading.words);
     if (found === null) continue;
-    if (field === "pairings") {
-      if (terms("pairing", result.pairings).length > 0 || found.pairings.length === 0) continue;
-      result.pairings = found.pairings;
+    if (field === "pairings" || field === "aromas") {
+      const kind = field === "aromas" ? "aroma" : "pairing";
+      if (terms(kind, result[field]).length > 0 || found[field].length === 0) continue;
+      result[field] = found[field];
     } else if (result[field] !== null || found[field] === null) continue;
     else if (field === "sweetness") result.sweetness = found.sweetness;
     else result[field] = found[field];
@@ -605,6 +681,16 @@ for (const qid of index) {
           publisher: reading.source!.publisher,
           quote: "",
           sourceUrl: reading.source!.url,
+          // Said of one place's wine — a single-variety DOC's, on its own
+          // body's page: the card names the place beside the fact.
+          ...(reading.scope === undefined
+            ? {}
+            : {
+                place: reading.scope.place,
+                ...(reading.scope.regionId === undefined
+                  ? {}
+                  : { placeId: reading.scope.regionId }),
+              }),
         })),
     );
   }

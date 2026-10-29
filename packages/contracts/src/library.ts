@@ -31,8 +31,11 @@ export const LibraryEvidenceSchema = z
      * three producers say the same of theirs: those wines, each linked.
      * `producers-abv`: the alcohol each sheet gives as a figure, a level on
      * WSET's scale (low below 11 %, high from 14 %), with each wine's figure.
+     * `producers-sugar`: the residual sugar each sheet gives, dry or sweet by
+     * the EU's labelling terms (dry to 4 g/l, sweet above 45), with each
+     * wine's figure.
      */
-    basis: z.enum(["producers", "producers-abv"]).nullable(),
+    basis: z.enum(["producers", "producers-abv", "producers-sugar"]).nullable(),
     wines: z
       .array(
         z
@@ -40,6 +43,8 @@ export const LibraryEvidenceSchema = z
             abv: z.number().optional(),
             producer: z.string(),
             sourceUrl: z.string().url(),
+            /** Residual sugar, grams a litre. */
+            sugar: z.number().optional(),
             wine: z.string(),
           })
           .strict(),
@@ -317,6 +322,8 @@ const RegionFigureSchema = z
       ])
       .optional(),
     by: z.string().optional(),
+    /** For `web`: the figure as the body gives it, in acres; `amount` is converted to hectares. */
+    acres: z.number().optional(),
     /** The infobox line it was read from. */
     quote: z.string(),
     sourceUrl: z.string().url(),
@@ -378,6 +385,11 @@ export const LibraryRegionSchema = z
     grapes: z.array(
       z
         .object({
+          /**
+           * The body whose page gives the grape, under the rule of the fact
+           * alone: shown with its link, and `quote` is empty.
+           */
+          by: z.string().optional(),
           id: z.string(),
           name: z.string(),
           quote: z.string(),

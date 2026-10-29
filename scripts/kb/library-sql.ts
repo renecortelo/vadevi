@@ -405,13 +405,13 @@ export function libraryTables(
     ),
     table(
       "kb_region_grapes",
-      ["region_id", "grape_id", "quote", "source_url"],
+      ["region_id", "grape_id", "quote", "source_url", "publisher"],
       ["region_id", "grape_id"],
       2,
       regions.flatMap((region) =>
         region.grapes
           .filter((link) => grapes.some((grape) => grape.id === link.grapeId))
-          .map((link) => [region.id, link.grapeId, link.quote, link.sourceUrl]),
+          .map((link) => [region.id, link.grapeId, link.quote, link.sourceUrl, link.by ?? null]),
       ),
     ),
     table(

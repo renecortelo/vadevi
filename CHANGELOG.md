@@ -16,6 +16,33 @@ has the reasons.
 
 ### Library
 
+- **Dry or sweet from the residual sugar on producers' sheets**: a sheet's
+  «1,5 g/l» read by the EU's own labelling terms (dry up to 4 g/l, sweet
+  above 45), on three producers' wines and two thirds of all those that
+  give one. Garnacha and Petit Verdot are dry; the card lists each wine
+  with its grams a litre.
+- **Aromas from producers' tasting notes**, each on three producers'
+  wines, for grapes no other source gives aromas for: Falanghina's citrus,
+  peach, pineapple and floral notes.
+
+- **The grapes of 51 regions that had none, from their own wine bodies**:
+  Wine BC's varietals for 18 British Columbia sub-regions, VQA Ontario's
+  common varieties for 16 Ontario appellations, and what Wines of South
+  Africa, Wine Australia and New Zealand Winegrowers say is grown in 17
+  more (Elgin, Constantia, Murray Darling, Martinborough…). The card lists
+  them with who gives them, linked, never their sentence. Nine British
+  Columbia regions and the Niagara Peninsula gain their vineyard area too,
+  given in acres and shown converted.
+
+- **The wineries of each appellation's own members' list**: some 4,900
+  producers' sites the library had never read, found through their
+  consorzi and regulatory councils. Alcohol for Marzemino, Refosco,
+  Vernaccia, Kerner and Canaiolo (medium); pairings for Negroamaro (lamb),
+  Canaiolo (soups), Ciliegiolo and Marzemino (cured meats), Alicante
+  Bouschet (cheese) and Macabeo (fish); Siegerrebe semi-dry. Producers are
+  named as their own pages name them, and shops are left out of every
+  count.
+
 - **More of the producers' technical sheets read** (321 PDFs from 1,153
   wineries' sites): alcohol for Arinto (medium); Bacchus semi-dry, from
   thirteen German producers; Auxerrois from dry to semi-dry.

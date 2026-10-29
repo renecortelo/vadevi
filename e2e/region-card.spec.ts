@@ -111,6 +111,18 @@ test("a region card shows its figures and its climate", async ({ page }) => {
       name: "Consorzio di Tutela del Roero",
     }),
   ).toHaveAttribute("href", "https://www.consorziodelroero.it/en/origins-and-history/");
+  // A Canadian region: its vineyards in acres from Wine BC, shown converted,
+  // and its grapes from the same body's page, credited with the fact alone.
+  await page.goto("/library/regions/ca-kootenays");
+  await expect(page.locator(".region-glance")).toContainText("≈ 47,3 ha", { timeout: 15_000 });
+  await expect(page.locator(".region-glance")).toContainText("convertido de acres");
+  await expect(page.getByRole("link", { name: "Pinot Noir", exact: true })).toBeVisible();
+  const grapesHere = page.locator('section[aria-labelledby="region-grapes"]');
+  await grapesHere.locator("summary").click();
+  await expect(
+    grapesHere.getByRole("link", { name: "Wine Growers British Columbia" }).first(),
+  ).toHaveAttribute("href", "https://winebc.com/wine-regions/kootenays/");
+  await expect(grapesHere.locator(".library-evidence")).toContainText("(solo el dato)");
   // An Australian GI zone: its vineyard area from the Australian Bureau of
   // Statistics.
   await page.goto("/library/regions/au-barossa");

@@ -88,7 +88,7 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Las fichas técnicas de las propias bodegas, por ejemplo Feudi del Pisciotto (un dato de una uva solo cuando tres bodegas o más dicen lo mismo de su vino de esa uva; el alcohol, de la cifra de cada ficha pasada a nivel con la escala del WSET; cada una enlazada en la ficha de la uva)",
+    name: "Las fichas técnicas de las propias bodegas, por ejemplo Feudi del Pisciotto (un dato de una uva solo cuando tres bodegas o más dicen lo mismo de su vino de esa uva; el alcohol, de la cifra de cada ficha pasada a nivel con la escala del WSET; seco o dulce, del azúcar residual de cada ficha con los términos de etiquetado de la UE; cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.castellare.it/wp-content/uploads/2025/04/Feudi-del-Pisciotto_Grillo_Colori-di-Sicilia_ita.pdf",
     what: "traits",
@@ -288,6 +288,13 @@ export const sources: Source[] = [
     name: "Los consorcios y consejos reguladores de cada denominación, por ejemplo el Consorzio di Tutela del Roero (solo donde ninguna fuente oficial da la cifra; cada una enlazada en la ficha)",
     url: "https://www.consorziodelroero.it/en/origins-and-history/",
     what: "areas",
+  },
+  {
+    group: "registers",
+    terms: "factOnly",
+    name: "Wine Growers British Columbia, VQA Ontario, Wines of South Africa, Wine Australia y New Zealand Winegrowers: las uvas de sus regiones y los viñedos en acres de Columbia Británica y Niagara (solo donde ninguna otra fuente los da; cada una enlazada en la ficha)",
+    url: "https://winebc.com/wine-regions/",
+    what: "varieties",
   },
   {
     group: "figures",

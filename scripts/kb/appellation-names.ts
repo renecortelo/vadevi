@@ -29,6 +29,8 @@ export type RegionFigureSource = {
    * gives it, linked, never the page's sentence (`quote` is empty).
    */
   by?: string;
+  /** For `web`: the figure as the body gives it, in acres; `amount` is converted. */
+  acres?: number;
   quote: string;
   sourceUrl: string;
   year: string | null;
@@ -43,7 +45,11 @@ export type RegionEntry = {
    * the United States' AVA, New Zealand's GI, South Africa's Wine of Origin.
    */
   giType: "PDO" | "PGI" | "AVA" | "GI" | "WO" | "DO" | "IG" | "IP" | "DOC" | "AOC" | "VQA" | "WR";
-  grapes: { grapeId: string; quote: string; sourceUrl: string }[];
+  /**
+   * `by` names the body whose page gives the grape under the rule of the
+   * fact alone; its `quote` is then empty.
+   */
+  grapes: { by?: string; grapeId: string; quote: string; sourceUrl: string }[];
   id: string;
   latitude: number | null;
   legalUrl: string | null;

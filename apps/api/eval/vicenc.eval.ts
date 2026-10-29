@@ -171,15 +171,26 @@ describe("Vicenç's question bank", () => {
       const citedUrls = new Set(data.citations.map((source) => source.canonicalUrl));
       for (const entry of grape.evidence) {
         if (entry.field === "synonyms" || entry.field === "regions") continue;
-        // A fact taken from wines comes from each of them; one read from the
-        // sheets' alcohol figures, from the first three that reach its level.
+        // A fact taken from wines is cited to the first three that bear it;
+        // one read from the sheets' figures (alcohol, residual sugar), to the
+        // first three that reach its level.
         const level = (abv: number) => (abv < 11 ? "low" : abv < 14 ? "medium" : "high");
+        const sugar = (grams: number) =>
+          grams <= 4 ? "dry" : grams <= 9 ? "" : grams <= 45 ? "medium" : "sweet";
         const wines =
           entry.basis === "producers-abv"
             ? entry.wines
                 ?.filter((wine) => wine.abv !== undefined && level(wine.abv) === entry.value)
                 .slice(0, 3)
-            : entry.wines;
+            : entry.basis === "producers-sugar"
+              ? entry.wines
+                  ?.filter(
+                    (wine) =>
+                      wine.sugar !== undefined &&
+                      entry.value.split("-").includes(sugar(wine.sugar)),
+                  )
+                  .slice(0, 3)
+              : entry.wines?.slice(0, 3);
         for (const url of wines?.map((wine) => wine.sourceUrl) ?? [
           entry.sourceUrl ?? grape.wikipediaUrl,
         ]) {

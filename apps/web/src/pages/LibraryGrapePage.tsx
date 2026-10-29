@@ -170,21 +170,25 @@ export function LibraryGrapePage() {
   const placeNote = (
     entry:
       | {
-          basis: "producers" | "producers-abv" | null;
+          basis: "producers" | "producers-abv" | "producers-sugar" | null;
           place: string | null;
           placeId: string | null;
           wines: unknown[] | null;
         }
       | undefined,
   ) =>
-    entry?.basis === "producers" || entry?.basis === "producers-abv" ? (
+    entry?.basis === "producers" ||
+    entry?.basis === "producers-abv" ||
+    entry?.basis === "producers-sugar" ? (
       // Taken from the grape's single-variety wines: as many producers agree,
-      // in words or, for alcohol, in the figure on each sheet.
+      // in words or in the figure on each sheet (alcohol, residual sugar).
       <span className="library-place">
         {t(
           entry.basis === "producers-abv"
             ? "library.saidOfProducersAbv"
-            : "library.saidOfProducers",
+            : entry.basis === "producers-sugar"
+              ? "library.saidOfProducersSugar"
+              : "library.saidOfProducers",
           { count: entry.wines?.length ?? 3 },
         )}
       </span>
@@ -199,10 +203,16 @@ export function LibraryGrapePage() {
         )}
       </span>
     );
-  // A fact's wines, each linked, with the alcohol its sheet gives where that
-  // is what the fact was read from.
+  // A fact's wines, each linked, with the alcohol or residual sugar its
+  // sheet gives where that is what the fact was read from.
   const wineLinks = (
-    wines: { abv?: number | undefined; producer: string; sourceUrl: string; wine: string }[],
+    wines: {
+      abv?: number | undefined;
+      producer: string;
+      sourceUrl: string;
+      sugar?: number | undefined;
+      wine: string;
+    }[],
   ) =>
     wines.map((wine, index) => (
       <Fragment key={wine.sourceUrl}>
@@ -212,6 +222,9 @@ export function LibraryGrapePage() {
           {wine.abv === undefined
             ? null
             : ` (${new Intl.NumberFormat(i18n.language, { maximumFractionDigits: 2, style: "percent" }).format(wine.abv / 100)})`}
+          {wine.sugar === undefined
+            ? null
+            : ` (${new Intl.NumberFormat(i18n.language, { maximumFractionDigits: 1 }).format(wine.sugar)} g/l)`}
         </a>
       </Fragment>
     ));

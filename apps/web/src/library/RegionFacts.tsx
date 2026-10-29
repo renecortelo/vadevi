@@ -45,7 +45,9 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
   if (varieties === 0 && planted === null && production === null) return null;
   // Only a figure the article gives in acres: "{{convert|65326|ha|acres}}"
   // gives hectares, and converts them for its own readers.
-  const converted = (quote: string) =>
+  // A body's figure in acres carries them itself: its sentence is not kept.
+  const converted = ({ acres, quote }: { acres?: number | undefined; quote: string }) =>
+    acres !== undefined ||
     /\{\{\s*convert\s*\|\s*[\d.,]+\s*\|\s*acres?\b|\d\s*acres?\b/i.test(quote);
   const year = (value: string | null) =>
     value === null ? null : ` · ${t("library.glanceYear", { year: value })}`;
@@ -66,13 +68,13 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
           <li>
             <GlanceIcon name="vineyard" />
             <strong title={`${number.format(planted.amount)} ha`}>
-              {converted(planted.quote) ? "≈ " : ""}
+              {converted(planted) ? "≈ " : ""}
               {amount(Math.round(planted.amount * 10) / 10)} ha
             </strong>
             <span>
               {t("library.glancePlanted")}
               {year(planted.year)}
-              {converted(planted.quote) ? ` · ${t("library.glanceConverted")}` : ""}
+              {converted(planted) ? ` · ${t("library.glanceConverted")}` : ""}
             </span>
           </li>
         )}

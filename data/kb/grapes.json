@@ -8551,6 +8551,31 @@
         "quote": "This variety has shown itself to be one of the most \" solid \" wines yet tested. With a good amount of sugar, it has high acid, tannin, and body",
         "value": "high",
         "sourceUrl": "https://archive.org/details/reportviticultu02biolgoog"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.bodegasluzon.com/en/garnacha-tintorera-red-fleshed-grenache/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Bodegas Luzón",
+            "sourceUrl": "https://www.bodegasluzon.com/en/garnacha-tintorera-red-fleshed-grenache/",
+            "wine": "Garnacha Tintorera Red Fleshed Grenache"
+          },
+          {
+            "producer": "Bodegas Vegalfaro",
+            "sourceUrl": "https://bodegasvegalfaro.es/products/pago-balagueses-garnacha-tintorera-2021",
+            "wine": "Pago Balagueses Garnacha Tintorera 2021"
+          },
+          {
+            "producer": "Bodegas Campoameno",
+            "sourceUrl": "https://bodegascampoameno.es/producto/mar-y-luna-garnacha-tintorera/",
+            "wine": "Mar Y Luna Garnacha Tintorera"
+          }
+        ]
       }
     ],
     "id": "alicante-bouschet",
@@ -8565,7 +8590,9 @@
       "pt": "Alicante Bouschet"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 18,
     "regions": [
       {
@@ -13138,7 +13165,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "plum",
       "almond"
@@ -13298,6 +13325,58 @@
           {
             "producer": "Altùris",
             "sourceUrl": "https://alturis.it/refosco/",
+            "wine": "Refosco"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://sturm.it/negozio/tproduct/391597956-222542808302-refosco-dal-peduncolo-rosso-dop-friuli-2",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14.5,
+            "producer": "Azienda Agricola Sturm",
+            "sourceUrl": "https://sturm.it/negozio/tproduct/391597956-222542808302-refosco-dal-peduncolo-rosso-dop-friuli-2",
+            "wine": "391597956 222542808302 Refosco Dal Peduncolo Rosso Dop Friuli 2"
+          },
+          {
+            "abv": 14,
+            "producer": "Azienda Agricola Monviert s.s.a.",
+            "sourceUrl": "https://monviert.com/vino/refosco-dal-peduncolo-rosso/",
+            "wine": "Refosco Dal Peduncolo Rosso"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Azienda Agricola Tunella",
+            "sourceUrl": "https://www.tunella.it/vini/refosco-dal-peduncolo-rosso/",
+            "wine": "Refosco Dal Peduncolo Rosso"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina Bulfon",
+            "sourceUrl": "https://www.bulfon.it/prodotto/refosco-dal-peduncolo-rosso-igp/",
+            "wine": "Refosco Dal Peduncolo Rosso Igp"
+          },
+          {
+            "abv": 12,
+            "producer": "Cantina di Conegliano e Vittorio Veneto",
+            "sourceUrl": "https://cantinadiconeglianoevittorioveneto.it/refosco-dal-peduncolo-rosso-igt-tre-venezie/",
+            "wine": "Refosco Dal Peduncolo Rosso Igt Tre Venezie"
+          },
+          {
+            "abv": 12,
+            "producer": "Cantina Ramuscello",
+            "sourceUrl": "https://www.cantinaramuscello.it/vini/refosco",
+            "wine": "Refosco"
+          },
+          {
+            "abv": 12,
+            "producer": "Forchir",
+            "sourceUrl": "https://www.forchir.it/vini/refosco/",
             "wine": "Refosco"
           }
         ]
@@ -13674,6 +13753,31 @@
         "quote": "produkuje odrůda silně aromatická, zelenožlutá až zlatožlutá vína … s vyšším alkoholem a extraktem",
         "value": "high",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Siegerrebe"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://weingut-muehlmichel.de/products/2024-siegerrebe-weisswein-lieblich-36",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Schlosshof  (Wein + Sekt  Mühlmichel )",
+            "sourceUrl": "https://weingut-muehlmichel.de/products/2024-siegerrebe-weisswein-lieblich-36",
+            "wine": "2024 Siegerrebe Weisswein Lieblich 36"
+          },
+          {
+            "producer": "Chaberton Estate Winery",
+            "sourceUrl": "https://www.chabertonwinery.com/about-our-wines/siegerrebe/",
+            "wine": "Siegerrebe"
+          },
+          {
+            "producer": "Weingut Göhring",
+            "sourceUrl": "https://goehring-weine.de/produkt/artikel-nr-12024er-siegerrebe-auslese-lieblich-075l-weisswein-rheinhessen/",
+            "wine": "Artikel Nr 12024Er Siegerrebe Auslese Lieblich 075L Weisswein Rheinhessen"
+          }
+        ]
       }
     ],
     "id": "siegerrebe",
@@ -13753,7 +13857,10 @@
         "url": "https://en.wikipedia.org/wiki/Siegerrebe"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "medium",
+      "to": "medium"
+    },
     "synonyms": [
       {
         "name": "Sieger",
@@ -15710,7 +15817,7 @@
           },
           {
             "abv": 11,
-            "producer": "weingut-martin-klein.de",
+            "producer": "Weingut Martin Klein",
             "sourceUrl": "https://weingut-martin-klein.de/produkt/2023-johannisberger-erntebringer-riesling-mild/",
             "wine": "2023 Johannisberger Erntebringer Riesling Mild"
           },
@@ -15925,14 +16032,8 @@
             "wine": "2025 Riesling Trocken"
           },
           {
-            "abv": 13,
-            "producer": "desoi-wein.de",
-            "sourceUrl": "https://www.desoi-wein.de/produkt/2023er-riesling-exclusive-trocken/",
-            "wine": "2023Er Riesling Exclusive Trocken"
-          },
-          {
             "abv": 11.5,
-            "producer": "weingut-sohns.de",
+            "producer": "Weingut Sohns",
             "sourceUrl": "https://weingut-sohns.de/products/2024-se-riesling-trocken-bio",
             "wine": "2024 Se Riesling Trocken Bio"
           },
@@ -18342,6 +18443,46 @@
             "wine": "2023 Nikola Estate Regional Grenache"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://bodegamustiguillo.com/productos/la-garnacha/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Bodega Mustiguillo",
+            "sourceUrl": "https://bodegamustiguillo.com/productos/la-garnacha/",
+            "sugar": 1.5,
+            "wine": "La Garnacha"
+          },
+          {
+            "producer": "Heretat Oller del Mas",
+            "sourceUrl": "https://ollerdelmas.com/en/producto/especial-garnacha/",
+            "sugar": 0.5,
+            "wine": "Especial Garnacha"
+          },
+          {
+            "producer": "Croma Vera Wines",
+            "sourceUrl": "https://cromavera.com/products/2017-grenache",
+            "sugar": 0.18,
+            "wine": "2017 Grenache"
+          },
+          {
+            "producer": "Maxwell Wines",
+            "sourceUrl": "https://maxwellwines.com.au/products/fresca-grenache-2025",
+            "sugar": 2.98,
+            "wine": "Fresca Grenache 2025"
+          },
+          {
+            "producer": "bodegasmontecillo.com",
+            "sourceUrl": "https://www.bodegasmontecillo.com/vinos/vina-monty/garnacha-reserva/",
+            "sugar": 1.5,
+            "wine": "Garnacha Reserva"
+          }
+        ]
       }
     ],
     "id": "grenache",
@@ -18398,7 +18539,10 @@
         "url": "https://pt.wikipedia.org/wiki/Grenache"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "garnacha",
@@ -23989,7 +24133,7 @@
           },
           {
             "abv": 13,
-            "producer": "weingut-sohns.de",
+            "producer": "Weingut Sohns",
             "sourceUrl": "https://weingut-sohns.de/products/2023-monchspfad-geisenheim-weissburgunder",
             "wine": "2023 Monchspfad Geisenheim Weissburgunder"
           },
@@ -24754,6 +24898,34 @@
             "wine": "Petit Verdot Reserva"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://pizzornowines.com/product/pizzorno-reserva-petit-verdot/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Pizzorno",
+            "sourceUrl": "https://pizzornowines.com/product/pizzorno-reserva-petit-verdot/",
+            "sugar": 1.9,
+            "wine": "Pizzorno Reserva Petit Verdot"
+          },
+          {
+            "producer": "Mythology",
+            "sourceUrl": "https://www.mythologyvineyard.ca/products/mythology-petit-verdot-2019",
+            "sugar": 2.6,
+            "wine": "Mythology Petit Verdot 2019"
+          },
+          {
+            "producer": "Thelema",
+            "sourceUrl": "https://www.thelema.co.za/wines/sutherland-petit-verdot-reserve-2015",
+            "sugar": 2.3,
+            "wine": "Sutherland Petit Verdot Reserve 2015"
+          }
+        ]
       }
     ],
     "id": "petit-verdot",
@@ -24811,7 +24983,10 @@
         "url": "https://pt.wikipedia.org/wiki/Petit_Verdot"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Bouton",
@@ -29834,6 +30009,31 @@
         "quote": "És una varietat autòctona de Catalunya que avui es conrea, sobretot, al Penedès, el Camp de Tarragona, el Rosselló, la Plana d'Utiel, Mallorca i a l'Empordà, a més de La Rioja, Navarra i Califòrnia.",
         "value": "ES",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Macabeu_(ra%C3%AFm)"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.santalba.com/vinos/que-vida-viura",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Bodegas Santalba",
+            "sourceUrl": "https://www.santalba.com/vinos/que-vida-viura",
+            "wine": "Que Vida Viura"
+          },
+          {
+            "producer": "Sociedad Cooperativa Agrícola Santa Marta",
+            "sourceUrl": "https://cooperativasantamarta.com/producto/blason-del-turra-macabeo/",
+            "wine": "Blason Del Turra Macabeo"
+          },
+          {
+            "producer": "Valdequemao",
+            "sourceUrl": "https://valdequemao.com/tienda/vino/blanco/valdequemao-macabeo/",
+            "wine": "Valdequemao Macabeo"
+          }
+        ]
       }
     ],
     "id": "macabeo",
@@ -29848,7 +30048,9 @@
       "pt": "Macabeo"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 18,
     "regions": [
       {
@@ -30142,6 +30344,41 @@
         "quote": "the Negroamaro variety is also strongly linked to the Apulia region, especially in the neighboring areas of Alezio, Brindisi, Copertino, Galatina, Gioia del Colle, Lizzano, Leverano and Terra d’Otranto; it is used to produce full-bodied and aromatic wines",
         "value": "high",
         "sourceUrl": "https://doi.org/10.3390/antiox11050859"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://schenk-wine.ch/en/products/masso-antico-negroamaro-salento-igt-bio",
+        "value": "lamb",
+        "wines": [
+          {
+            "producer": "Schenk",
+            "sourceUrl": "https://schenk-wine.ch/en/products/masso-antico-negroamaro-salento-igt-bio",
+            "wine": "Masso Antico Negroamaro Salento Igt Bio"
+          },
+          {
+            "producer": "Schenk",
+            "sourceUrl": "https://www.schenkitalia.it/en/wines/negroamaro-salento-igt-da-uve-leggermente-appassite/",
+            "wine": "Negroamaro Salento Igt Da Uve Leggermente Appassite"
+          },
+          {
+            "producer": "Apollonio Vini",
+            "sourceUrl": "https://www.apolloniovini.it/vini/forte-incanto/negroamaro-rosso/",
+            "wine": "Negroamaro Rosso"
+          },
+          {
+            "producer": "Masseria Borgo dei Trulli",
+            "sourceUrl": "https://masseriaborgodeitrulli.com/prodotti/negroamaro-salento/",
+            "wine": "Negroamaro Salento"
+          },
+          {
+            "producer": "Claudio Quarta",
+            "sourceUrl": "https://claudioquarta.it/it/vino/anima-di-negroamaro",
+            "wine": "Anima Di Negroamaro"
+          }
+        ]
       }
     ],
     "id": "negroamaro",
@@ -30156,7 +30393,9 @@
       "pt": "Negroamaro"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "lamb"
+    ],
     "prominence": 17,
     "regions": [
       {
@@ -30548,15 +30787,9 @@
         "factOnly": true,
         "field": "alcohol",
         "quote": "",
-        "sourceUrl": "https://www.desoi-wein.de/produkt/2019er-bayrischer-bazi-blauer-portugieser-trocken-rotwein-qba/",
+        "sourceUrl": "https://landhaus-christmann.de/produkt/portugieser-rotwein/",
         "value": "medium",
         "wines": [
-          {
-            "abv": 15,
-            "producer": "desoi-wein.de",
-            "sourceUrl": "https://www.desoi-wein.de/produkt/2019er-bayrischer-bazi-blauer-portugieser-trocken-rotwein-qba/",
-            "wine": "2019Er Bayrischer Bazi Blauer Portugieser Trocken Rotwein Qba"
-          },
           {
             "abv": 10.5,
             "producer": "Landhaus Christmann",
@@ -32631,7 +32864,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "grape"
     ],
@@ -32780,6 +33013,142 @@
         "quote": "lepo pa se prilega k sladicam, sirom in jedem iz svinjine, teletine in jangjetine",
         "value": "lamb",
         "sourceUrl": "https://sl.wikipedia.org/wiki/Kerner"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.silveradovineyards.com/wine/borreo-ranch-kerner/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14.4,
+            "producer": "Silverado Vineyards Winery",
+            "sourceUrl": "https://www.silveradovineyards.com/wine/borreo-ranch-kerner/",
+            "wine": "Borreo Ranch Kerner"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut Thürkind",
+            "sourceUrl": "https://www.weingut-thuerkind.de/produkt/kerner-trocken-2024/",
+            "wine": "Kerner Trocken 2024"
+          },
+          {
+            "abv": 9.5,
+            "producer": "Weingut Sturm",
+            "sourceUrl": "https://www.sturm-weingut.de/weine/kerner-2022",
+            "wine": "Kerner 2022"
+          },
+          {
+            "abv": 8.5,
+            "producer": "Weingut Andre",
+            "sourceUrl": "https://andre-wein.de/weinshop/kerner/",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 10.5,
+            "producer": "Weinhaus Schramm",
+            "sourceUrl": "https://weinhaus-schramm.de/produkt/kerner-2/",
+            "wine": "Kerner 2"
+          },
+          {
+            "abv": 10,
+            "producer": "Weingut B. Frieden",
+            "sourceUrl": "https://bernd-frieden.de/produkt/mosel-kerner/",
+            "wine": "Mosel Kerner"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Rummel",
+            "sourceUrl": "https://rummel-biowein.de/products/kerner",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 13,
+            "producer": "Schlosshof  (Wein + Sekt  Mühlmichel )",
+            "sourceUrl": "https://weingut-muehlmichel.de/products/2023-fruchtspiel-kerner-weisswein-trocken",
+            "wine": "2023 Fruchtspiel Kerner Weisswein Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Junker",
+            "sourceUrl": "https://www.weingut-junker.de/produkt/kerner/",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 13,
+            "producer": "Landhaus Christmann",
+            "sourceUrl": "https://landhaus-christmann.de/produkt/kerner-trocken/",
+            "wine": "Kerner Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut H. Beutel",
+            "sourceUrl": "https://www.weingut-beutel.de/produkt/2023-kerner-075l/",
+            "wine": "2023 Kerner 075L"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Kress KG",
+            "sourceUrl": "https://weingut-kress.de/products/kerner",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 12.3,
+            "producer": "Cantina Sociale Mendrisio",
+            "sourceUrl": "https://cantinamendrisio.ch/prodotto/kerner/",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Wein- & Sektgut Frank Höhn",
+            "sourceUrl": "https://www.frank-hoehn.com/product-page/kerner-trocken",
+            "wine": "Kerner Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Vina Kos & Jurišić",
+            "sourceUrl": "https://vina-kos-jurisic.eu/kerner/",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Scheffer",
+            "sourceUrl": "https://www.weingutscheffer.de/produkt/kerner-2/",
+            "wine": "Kerner 2"
+          },
+          {
+            "abv": 11.3,
+            "producer": "Weingut Nett",
+            "sourceUrl": "https://www.weingut-nett.de/weine/kopie-von-kerner-2023",
+            "wine": "Kopie Von Kerner 2023"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Roth",
+            "sourceUrl": "https://www.weingut-gaestehaus-roth.de/kerner.html",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Gerhard Hauck",
+            "sourceUrl": "https://weingut-gerhard-hauck.de/produkt/kerner/",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Weingut Möwes",
+            "sourceUrl": "https://www.weingut-moewes.de/shop/gutswein/weisswein/kerner/",
+            "wine": "Kerner"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Glaser",
+            "sourceUrl": "https://www.weingut-glaser.de/produkt/kerner-2022er/",
+            "wine": "Kerner 2022Er"
+          }
+        ]
       }
     ],
     "id": "kerner",
@@ -36553,7 +36922,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -36711,6 +37080,77 @@
         "quote": "I vini in cui ne è consentito l'utilizzo dai capitolati DOC e DOCG sono ... Carmignano ... Chianti ... Morellino di Scansano ... Rosso di Montepulciano",
         "value": "IT: Morellino di Scansano",
         "sourceUrl": "https://it.wikipedia.org/wiki/Canaiolo"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.tiberiowine.com/vini/canaiolo/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Agriturismo Tiberio",
+            "sourceUrl": "https://www.tiberiowine.com/vini/canaiolo/",
+            "wine": "Canaiolo"
+          },
+          {
+            "abv": 13,
+            "producer": "San Giorgio a Lapi",
+            "sourceUrl": "https://sangiorgioalapi.it/prodotto/turan/",
+            "wine": "Turan"
+          },
+          {
+            "abv": 13,
+            "producer": "Casa alle Vacche",
+            "sourceUrl": "https://www.casaallevacche.it/en/wines/canaiolo/",
+            "wine": "Canaiolo"
+          },
+          {
+            "abv": 13,
+            "producer": "La Torre alle Tolfe",
+            "sourceUrl": "https://latorrealletolfe.com/info-canaiolo-2024/",
+            "wine": "Info Canaiolo 2024"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Tenuta Ormanni",
+            "sourceUrl": "https://www.ormanni.net/en/i-vini-vino-chianti/canaiolo-vino-chianti/",
+            "wine": "Canaiolo Vino Chianti"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Sine Felle",
+            "sourceUrl": "https://sinefelle.it/prodotti/canaiolo-100/",
+            "wine": "Canaiolo 100"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.casaallevacche.it/en/wines/canaiolo/",
+        "value": "soups",
+        "wines": [
+          {
+            "producer": "Casa alle Vacche",
+            "sourceUrl": "https://www.casaallevacche.it/en/wines/canaiolo/",
+            "wine": "Canaiolo"
+          },
+          {
+            "producer": "Conte Guicciardini",
+            "sourceUrl": "https://www.guicciardini1199.it/canaiolo/",
+            "wine": "Canaiolo"
+          },
+          {
+            "producer": "Sine Felle",
+            "sourceUrl": "https://sinefelle.it/prodotti/canaiolo-100/",
+            "wine": "Canaiolo 100"
+          }
+        ]
       }
     ],
     "id": "canaiolo",
@@ -36725,7 +37165,9 @@
       "pt": "Canaiolo"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "soups"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -37951,7 +38393,7 @@
           },
           {
             "abv": 13.5,
-            "producer": "laurenthabrard.com",
+            "producer": "Domaine Laurent Habrard",
             "sourceUrl": "https://www.laurenthabrard.com/en/technical-sheets/vin-de-france-roussanne-2025",
             "wine": "Vin De France Roussanne 2025"
           }
@@ -40054,12 +40496,6 @@
             "producer": "Weingut Kopp",
             "sourceUrl": "https://www.sternenfelserhof.de/shop/weine/rotweine/2025-dornfelder-trocken/",
             "wine": "2025 Dornfelder Trocken"
-          },
-          {
-            "abv": 13,
-            "producer": "desoi-wein.de",
-            "sourceUrl": "https://www.desoi-wein.de/produkt/2022er-dornfelder-rotwein-trocken-qba-im-barrique-gereift/",
-            "wine": "2022Er Dornfelder Rotwein Trocken Qba Im Barrique Gereift"
           },
           {
             "abv": 12.5,
@@ -46228,7 +46664,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "plum",
       "cherry",
@@ -46381,6 +46817,71 @@
         "field": "regions",
         "quote": "primarily grown around Isera, south of Trentino ... most notably in the Lombardia, Trentino, Veneto and Friuli-Venezia Giulia wine region. In Lombardy it is often used as a blending grape",
         "value": "IT: Friuli-Venezia Giulia"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://turinavini.it/wine-shop/vini-rossi/marzemino/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Turina",
+            "sourceUrl": "https://turinavini.it/wine-shop/vini-rossi/marzemino/",
+            "wine": "Marzemino"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina La Vis",
+            "sourceUrl": "https://la-vis.com/i-nostri-vini/i-classici/marzemino",
+            "wine": "Marzemino"
+          },
+          {
+            "abv": 13,
+            "producer": "Cavit",
+            "sourceUrl": "https://shoponline.cavit.it/prodotto/maso-romani-trentino-superiore-doc-marzemino/",
+            "wine": "Maso Romani Trentino Superiore Doc Marzemino"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina Bernardi",
+            "sourceUrl": "https://www.cantinabernardi.it/it/shop/marzemino/",
+            "wine": "Marzemino"
+          },
+          {
+            "abv": 13,
+            "producer": "Borgo Antico Vini",
+            "sourceUrl": "https://www.borgoanticovini.com/product/20818442/marzemino-secco-colli-trevigiani-igp",
+            "wine": "Marzemino Secco Colli Trevigiani Igp"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://shoponline.cavit.it/prodotto/maso-romani-trentino-superiore-doc-marzemino/",
+        "value": "cured meats",
+        "wines": [
+          {
+            "producer": "Cavit",
+            "sourceUrl": "https://shoponline.cavit.it/prodotto/maso-romani-trentino-superiore-doc-marzemino/",
+            "wine": "Maso Romani Trentino Superiore Doc Marzemino"
+          },
+          {
+            "producer": "Borgo Antico Vini",
+            "sourceUrl": "https://www.borgoanticovini.com/product/20818442/marzemino-secco-colli-trevigiani-igp",
+            "wine": "Marzemino Secco Colli Trevigiani Igp"
+          },
+          {
+            "producer": "Prosecco Toffoli",
+            "sourceUrl": "https://www.proseccotoffoli.it/prodotto/marzemino-veneto/",
+            "wine": "Marzemino Veneto"
+          }
+        ]
       }
     ],
     "id": "marzemino",
@@ -46395,7 +46896,9 @@
       "pt": "Marzemino"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "cured meats"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -47333,7 +47836,12 @@
   {
     "acidity": "high",
     "alcohol": "medium",
-    "aromas": [],
+    "aromas": [
+      "citrus",
+      "peach",
+      "pineapple",
+      "floral"
+    ],
     "body": "high",
     "color": "white",
     "evidence": [
@@ -47553,6 +48061,146 @@
             "producer": "CANTINA LA GUARDIENSE -JANARE - SCA",
             "sourceUrl": "https://www.laguardiense.it/collezioni/falanghina-beneventano-igp/",
             "wine": "Falanghina Beneventano Igp"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "aromas",
+        "quote": "",
+        "sourceUrl": "https://www.tenimentigrieco.it/en/product/i-costali-falanghina-igt-terre-degli-osci-2022/",
+        "value": "citrus",
+        "wines": [
+          {
+            "producer": "Cantine Tenimenti Grieco",
+            "sourceUrl": "https://www.tenimentigrieco.it/en/product/i-costali-falanghina-igt-terre-degli-osci-2022/",
+            "wine": "I Costali Falanghina Igt Terre Degli Osci 2022"
+          },
+          {
+            "producer": "Fosso degli Angeli",
+            "sourceUrl": "https://www.fossodegliangeli.it/prodotti/cese-falanghina-bio/",
+            "wine": "Cese Falanghina Bio"
+          },
+          {
+            "producer": "Vigne di Malies",
+            "sourceUrl": "https://www.vignedimalies.it/prodotto/creanzia-falanghina/",
+            "wine": "Creanzia Falanghina"
+          },
+          {
+            "producer": "Mustilli",
+            "sourceUrl": "https://mustilli.com/prodotto/regina-isabella-sui-lieviti-falanghina-frizzante-beneventano-igt/",
+            "wine": "Regina Isabella Sui Lieviti Falanghina Frizzante Beneventano Igt"
+          },
+          {
+            "producer": "Sella delle Spine",
+            "sourceUrl": "https://www.selladellespine.com/products/benevento-falanghina-igp",
+            "wine": "Benevento Falanghina Igp"
+          },
+          {
+            "producer": "Cantina Madonna dei Miracoli",
+            "sourceUrl": "https://vinicasalbordino.com/prodotto/villa-adami-falanghina/",
+            "wine": "Villa Adami Falanghina"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "aromas",
+        "quote": "",
+        "sourceUrl": "https://www.fossodegliangeli.it/prodotti/cese-falanghina-bio/",
+        "value": "peach",
+        "wines": [
+          {
+            "producer": "Fosso degli Angeli",
+            "sourceUrl": "https://www.fossodegliangeli.it/prodotti/cese-falanghina-bio/",
+            "wine": "Cese Falanghina Bio"
+          },
+          {
+            "producer": "Poderi Constantini",
+            "sourceUrl": "https://www.podericostantini.it/prodotto/falanghina-igp-linea-fogliosei/",
+            "wine": "Falanghina Igp Linea Fogliosei"
+          },
+          {
+            "producer": "Mustilli",
+            "sourceUrl": "https://mustilli.com/prodotto/regina-isabella-sui-lieviti-falanghina-frizzante-beneventano-igt/",
+            "wine": "Regina Isabella Sui Lieviti Falanghina Frizzante Beneventano Igt"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "aromas",
+        "quote": "",
+        "sourceUrl": "https://www.fossodegliangeli.it/prodotti/cese-falanghina-bio/",
+        "value": "pineapple",
+        "wines": [
+          {
+            "producer": "Fosso degli Angeli",
+            "sourceUrl": "https://www.fossodegliangeli.it/prodotti/cese-falanghina-bio/",
+            "wine": "Cese Falanghina Bio"
+          },
+          {
+            "producer": "Poderi Constantini",
+            "sourceUrl": "https://www.podericostantini.it/prodotto/falanghina-igp-linea-fogliosei/",
+            "wine": "Falanghina Igp Linea Fogliosei"
+          },
+          {
+            "producer": "Vigne di Malies",
+            "sourceUrl": "https://www.vignedimalies.it/prodotto/falanghina-linea-arte/",
+            "wine": "Falanghina Linea Arte"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "aromas",
+        "quote": "",
+        "sourceUrl": "https://www.vignedimalies.it/prodotto/creanzia-falanghina/",
+        "value": "floral",
+        "wines": [
+          {
+            "producer": "Vigne di Malies",
+            "sourceUrl": "https://www.vignedimalies.it/prodotto/creanzia-falanghina/",
+            "wine": "Creanzia Falanghina"
+          },
+          {
+            "producer": "Sella delle Spine",
+            "sourceUrl": "https://www.selladellespine.com/products/benevento-falanghina-igp",
+            "wine": "Benevento Falanghina Igp"
+          },
+          {
+            "producer": "Di Majo Norante",
+            "sourceUrl": "https://www.dimajonorante.com/en/wines/falanghina-biorganic",
+            "wine": "Falanghina Biorganic"
+          },
+          {
+            "producer": "Cantine Tenimenti Grieco",
+            "sourceUrl": "https://www.tenimentigrieco.it/product/i-costali-falanghina-igt-terre-degli-osci/",
+            "wine": "I Costali Falanghina Igt Terre Degli Osci"
+          },
+          {
+            "producer": "Mustilli",
+            "sourceUrl": "https://mustilli.com/prodotto/falanghina-del-sannio-doc-magnum/",
+            "wine": "Falanghina Del Sannio Doc Magnum"
+          },
+          {
+            "producer": "Azienda Agricola Elena Catalano",
+            "sourceUrl": "https://www.elenacatalano.it/en/wines/falanghina-doc-sannio-en/",
+            "wine": "Falanghina Doc Sannio En"
+          },
+          {
+            "producer": "La Masseria di Maria",
+            "sourceUrl": "https://lamasseriadimaria.it/products/taburno-falanghina-del-sannio",
+            "wine": "Taburno Falanghina Del Sannio"
+          },
+          {
+            "producer": "36 Casali",
+            "sourceUrl": "https://www.36casali.it/prodotto/spumante-di-falanghina-extra-dry/",
+            "wine": "Spumante Di Falanghina Extra Dry"
           }
         ]
       }
@@ -54004,7 +54652,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "citrus"
     ],
@@ -54068,6 +54716,70 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Vernaccia_di_San_Gimignano",
         "place": "Vernaccia di San Gimignano",
         "placeId": "it-vernaccia-di-san-gimignano"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.bonacchi.it/vini/vernaccia-di-san-gimignano-bonacchi/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Cantine Bonacchi",
+            "sourceUrl": "https://www.bonacchi.it/vini/vernaccia-di-san-gimignano-bonacchi/",
+            "wine": "Vernaccia Di San Gimignano Bonacchi"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Salcheto",
+            "sourceUrl": "https://salcheto.it/en/product/vernaccia-di-san-gimignano-2023-casa-lucii-biologico/",
+            "wine": "Vernaccia Di San Gimignano 2023 Casa Lucii Biologico"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Casa alle Vacche",
+            "sourceUrl": "https://www.casaallevacche.it/en/wines/vernaccia/",
+            "wine": "Vernaccia"
+          },
+          {
+            "abv": 13,
+            "producer": "Podere Le Volute",
+            "sourceUrl": "https://www.levolute.it/prodotti/vernaccia-di-san-gimignano",
+            "wine": "Vernaccia Di San Gimignano"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantine Coli",
+            "sourceUrl": "https://coli.it/en/vernaccia-3/",
+            "wine": "Vernaccia 3"
+          },
+          {
+            "abv": 13,
+            "producer": "Fratelli Vagnoni",
+            "sourceUrl": "http://www.fratellivagnoni.com/en/agriturismo_siena_vagnoni/categoria/galleria/vernaccia-134.html",
+            "wine": "Vernaccia 134"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Sensi Vini",
+            "sourceUrl": "https://www.sensivini.it/en/collegiata-vernaccia-sangimignano-en/",
+            "wine": "Collegiata Vernaccia Sangimignano En"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Macinatico 1332",
+            "sourceUrl": "https://www.macinatico.com/shop/vini-bianchi/vino-biologico-vernaccia-di-san-gimignano-riserva-docg-macinatico-1332/",
+            "wine": "Vino Biologico Vernaccia Di San Gimignano Riserva Docg Macinatico 1332"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Guicciardini Strozzi",
+            "sourceUrl": "https://guicciardinistrozzi.it/en/vini/vernaccia-guicciardini-strozzi-en/",
+            "wine": "Vernaccia Guicciardini Strozzi En"
+          }
+        ]
       }
     ],
     "id": "vernaccia",
@@ -56729,6 +57441,31 @@
         "quote": "Також можуть вироблятись сухі рожеві вина та десертні за технологією «пасито»",
         "value": "dry-sweet",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BB%D1%8C%D1%94%D0%B4%D0%B6%D0%BE%D0%BB%D0%BE"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://mocali.eu/product/ciliegiolo-maremma-toscana/",
+        "value": "cured meats",
+        "wines": [
+          {
+            "producer": "Cantina Mocali",
+            "sourceUrl": "https://mocali.eu/product/ciliegiolo-maremma-toscana/",
+            "wine": "Ciliegiolo Maremma Toscana"
+          },
+          {
+            "producer": "Casa alle Vacche",
+            "sourceUrl": "https://www.casaallevacche.it/wines/ciliegiolo/",
+            "wine": "Ciliegiolo"
+          },
+          {
+            "producer": "Cantina Colli Fiorentini",
+            "sourceUrl": "https://www.collifiorentini.it/shop/ciliegiolo-toscana-igt/",
+            "wine": "Ciliegiolo Toscana Igt"
+          }
+        ]
       }
     ],
     "id": "ciliegiolo",
@@ -56743,7 +57480,9 @@
       "pt": "Ciliegiolo"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "cured meats"
+    ],
     "prominence": 8,
     "regions": [
       {

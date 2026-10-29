@@ -2009,6 +2009,8 @@ const webFigures: Record<
     Record<
       "planted" | "production",
       {
+        /** Given in acres: `amount` is then the acres, converted to hectares here. */
+        acres?: boolean;
         amount: number;
         by: string;
         quote: string;
@@ -2046,7 +2048,11 @@ for (const entry of entries) {
       planted: entry.figures?.planted ?? null,
       production: entry.figures?.production ?? null,
       [field]: {
-        amount: figure.amount,
+        ...(figure.acres === true ? { acres: figure.amount } : {}),
+        amount:
+          figure.acres === true
+            ? Math.round(figure.amount * 0.40468564224 * 10) / 10
+            : figure.amount,
         by: figure.by,
         publisher: "web",
         quote: "",
@@ -2179,6 +2185,48 @@ for (const [id, region] of Object.entries(adelaide.regions)) {
   }
 }
 console.info(`  ${fromAdelaideGrapes} grape links from the University of Adelaide.`);
+
+// Where nothing above names a grape, the varieties a name's own body gives
+// on its pages (Wine Growers British Columbia, VQA Ontario, Wines of South
+// Africa), under the operator's rule of the fact alone
+// (`data/kb/web-region-grapes.json`, private like the bodies' figures): the
+// sentence or list must still be on our copy of the page and name each grape;
+// the card shows the grapes and who gives them, never the sentence.
+// `KB_WEB=0` builds without them.
+const webGrapesFile = resolve("data/kb/web-region-grapes.json");
+const webGrapes: Record<
+  string,
+  { by: string; grapes: string[]; quote: string; sourceUrl: string; volume: string }
+> =
+  process.env.KB_WEB === "0" || !existsSync(webGrapesFile)
+    ? {}
+    : (JSON.parse(readFileSync(webGrapesFile, "utf8")) as { regions: typeof webGrapes }).regions;
+const plain = (text: string) =>
+  text.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").toLowerCase();
+let fromBodyGrapes = 0;
+for (const [id, { by, grapes: listed, quote, sourceUrl, volume }] of Object.entries(webGrapes)) {
+  const entry = entryById.get(id);
+  if (entry === undefined) throw new Error(`web-region-grapes: no name ${id}`);
+  if ((entry.register?.grapes.length ?? 0) > 0 || entry.grapes.length > 0) continue;
+  const page = resolve(".kb-cache/web", `${volume}.txt`);
+  if (!existsSync(page) || !plain(readFileSync(page, "utf8")).includes(plain(quote))) {
+    console.warn(`  ${id}: the body's list is not on its page; left out.`);
+    continue;
+  }
+  for (const grapeId of listed) {
+    const grape = grapeById.get(grapeId);
+    if (grape === undefined) throw new Error(`web-region-grapes: no grape ${grapeId}`);
+    const named = [...Object.values(grape.names), ...grape.synonyms.map(({ name }) => name)].some(
+      (name) => plain(quote).includes(plain(name)),
+    );
+    if (!named) throw new Error(`web-region-grapes: ${id}'s quote does not name ${grapeId}`);
+    if (entry.grapes.some((known) => known.grapeId === grapeId)) continue;
+    entry.grapes.push({ by, grapeId, quote: "", sourceUrl });
+    fromBodyGrapes += 1;
+    links += 1;
+  }
+}
+console.info(`  ${fromBodyGrapes} grape links from appellation bodies' pages (the fact alone).`);
 
 writeFileSync(resolve("data/kb/appellations.json"), `${JSON.stringify(entries, null, 2)}\n`);
 const withSummary = entries.filter((entry) => Object.keys(entry.summaries).length > 0).length;

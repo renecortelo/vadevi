@@ -35,9 +35,12 @@ export type Evidence = {
    * Taken from the grape's single-variety wines: held only when at least
    * three producers say the same of theirs, each listed.
    */
-  basis?: "producers" | "producers-abv";
-  /** Each wine, and for `producers-abv` the alcohol its sheet gives. */
-  wines?: { abv?: number; producer: string; sourceUrl: string; wine: string }[];
+  basis?: "producers" | "producers-abv" | "producers-sugar";
+  /**
+   * Each wine, and for `producers-abv` the alcohol its sheet gives, for
+   * `producers-sugar` its residual sugar in g/l.
+   */
+  wines?: { abv?: number; producer: string; sourceUrl: string; sugar?: number; wine: string }[];
 };
 
 export type GrapeEntry = {
@@ -136,6 +139,26 @@ export function alcoholFigure(quote: string): number | null {
  */
 export function wsetAlcohol(abv: number): Level {
   return abv < 11 ? "low" : abv < 14 ? "medium" : "high";
+}
+
+/** The residual sugar a technical sheet gives, in grams a litre: «2,5 g/l». */
+export function sugarFigure(quote: string): number | null {
+  const found =
+    /(\d{1,3}(?:[.,]\d{1,2})?)\s?(?:g|gr|gramm?i?|grams?)\s?(?:\/\s?l|\/lt|per lit)/i.exec(quote);
+  return found === null ? null : Number(found[1]!.replace(",", "."));
+}
+
+/**
+ * A still wine's residual sugar as a level, by the terms the EU's labelling
+ * rules define (Regulation (EU) 2019/33, Annex III, Part B): dry up to 4 g/l,
+ * semi-dry («medium dry» and «medium») to 45, sweet above. Between 4 and 9
+ * a wine is dry only if its acidity is high enough, which a sheet rarely
+ * says: no level, and the wine counts against any.
+ */
+export function euSweetness(grams: number, bound = false): Sweetness | null {
+  if (grams <= 4) return "dry";
+  if (bound || grams <= 9) return null;
+  return grams <= 45 ? "medium" : "sweet";
 }
 
 /** The words of a value are in its quote (accent- and case-blind). */
