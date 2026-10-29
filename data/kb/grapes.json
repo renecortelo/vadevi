@@ -5663,7 +5663,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Fern%C3%A3o_Pires"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "honey",
@@ -5953,6 +5953,31 @@
             "producer": "Cantine Ermes Agr. Coop. Agr. stabilimento Torricella",
             "sourceUrl": "https://cantineermes.it/brand/masseria-delle-stelle-fiano-puglia-igp/",
             "wine": "Masseria Delle Stelle Fiano Puglia Igp"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://www.hugowines.com.au/products/fiano",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Hugo",
+            "sourceUrl": "https://www.hugowines.com.au/products/fiano",
+            "wine": "Fiano"
+          },
+          {
+            "producer": "Campbells Wines",
+            "sourceUrl": "https://www.campbellswines.com.au/products/2024-fiano",
+            "wine": "2024 Fiano"
+          },
+          {
+            "producer": "Oliver's Taranga",
+            "sourceUrl": "https://oliverstaranga.com/products/2025-anfore-fiano",
+            "wine": "2025 Anfore Fiano"
           }
         ]
       },
@@ -8931,6 +8956,34 @@
             "wine": "Monastrell En Estado Puro Finca Luzon Sin Sulfitos"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://kleingraniet.co.za/product/klein-graniet-mourvedre-single-block-2020/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Klein Graniet",
+            "sourceUrl": "https://kleingraniet.co.za/product/klein-graniet-mourvedre-single-block-2020/",
+            "sugar": 2.3,
+            "wine": "Klein Graniet Mourvedre Single Block 2020"
+          },
+          {
+            "producer": "Kleinood",
+            "sourceUrl": "https://www.kleinood.com/product/tamboerskloof-mourvedre-meevaller/",
+            "sugar": 1.2,
+            "wine": "Tamboerskloof Mourvedre Meevaller"
+          },
+          {
+            "producer": "Down the Rabbit Hole",
+            "sourceUrl": "https://downtherabbitholewines.com.au/products/2024-mataro",
+            "sugar": 1.2,
+            "wine": "2024 Mataro"
+          }
+        ]
       }
     ],
     "id": "mourvedre",
@@ -9013,7 +9066,10 @@
         "url": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Monestrell",
@@ -18477,7 +18533,7 @@
             "wine": "Fresca Grenache 2025"
           },
           {
-            "producer": "bodegasmontecillo.com",
+            "producer": "Bodegas Montecillo",
             "sourceUrl": "https://www.bodegasmontecillo.com/vinos/vina-monty/garnacha-reserva/",
             "sugar": 1.5,
             "wine": "Garnacha Reserva"
@@ -18832,6 +18888,46 @@
             "wine": "Los Galanes Tempranillo En"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://cromavera.com/products/2018-tempranillo-joven-1",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Croma Vera Wines",
+            "sourceUrl": "https://cromavera.com/products/2018-tempranillo-joven-1",
+            "sugar": 0.3,
+            "wine": "2018 Tempranillo Joven 1"
+          },
+          {
+            "producer": "Hans Herzog",
+            "sourceUrl": "https://www.herzog.co.nz/products/tempranillo-2014",
+            "sugar": 1,
+            "wine": "Tempranillo 2014"
+          },
+          {
+            "producer": "Nativo",
+            "sourceUrl": "https://nativo.co.za/product/nativo-tempranillo-2021/",
+            "sugar": 1.2,
+            "wine": "Nativo Tempranillo 2021"
+          },
+          {
+            "producer": "Niel Joubert",
+            "sourceUrl": "https://nieljoubert.co.za/product/reserve-tempranillo-2021/",
+            "sugar": 3.3,
+            "wine": "Reserve Tempranillo 2021"
+          },
+          {
+            "producer": "Down the Rabbit Hole",
+            "sourceUrl": "https://downtherabbitholewines.com.au/products/down-the-rabbit-hole-2025-tempranillo",
+            "sugar": 0.11,
+            "wine": "Down The Rabbit Hole 2025 Tempranillo"
+          }
+        ]
       }
     ],
     "id": "tempranillo",
@@ -18935,7 +19031,10 @@
         "url": "https://pt.wikipedia.org/wiki/Aragonez"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Ull de Llebre",
@@ -20999,6 +21098,58 @@
         "quote": "Краще за все мальбек пасує до традиційних страв аргентинської кухні: свинячих ковбасок чорісо, м'яса на грилі (асадо) та стейку",
         "value": "steak",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8C%D0%B1%D0%B5%D0%BA"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.vnl.co.za/product/malbec/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Vrede en Lust",
+            "sourceUrl": "https://www.vnl.co.za/product/malbec/",
+            "sugar": 1.5,
+            "wine": "Malbec"
+          },
+          {
+            "producer": "Mythology",
+            "sourceUrl": "https://www.mythologyvineyard.ca/products/mythology-malbec-2021",
+            "sugar": 2.9,
+            "wine": "Mythology Malbec 2021"
+          },
+          {
+            "producer": "Withington Wines",
+            "sourceUrl": "https://www.withington.co.za/malbec/",
+            "sugar": 2.17,
+            "wine": "Malbec"
+          },
+          {
+            "producer": "Hermanuspietersfontein",
+            "sourceUrl": "https://www.hpf1855.com/products/b-sondagskloof-malbec-2022",
+            "sugar": 1.2,
+            "wine": "B Sondagskloof Malbec 2022"
+          },
+          {
+            "producer": "Niel Joubert",
+            "sourceUrl": "https://nieljoubert.co.za/product/the-proprietor-malbec-2018/",
+            "sugar": 2.4,
+            "wine": "The Proprietor Malbec 2018"
+          },
+          {
+            "producer": "Post House",
+            "sourceUrl": "https://www.posthousewines.co.za/product/holy-grail-malbec-reserve-2022/",
+            "sugar": 1.3,
+            "wine": "Holy Grail Malbec Reserve 2022"
+          },
+          {
+            "producer": "Château du Cèdre",
+            "sourceUrl": "https://www.chateauducedre.com/en/cuvee/sweet-malbec-2",
+            "sugar": 110,
+            "wine": "Sweet Malbec 2"
+          }
+        ]
       }
     ],
     "id": "malbec",
@@ -21078,7 +21229,10 @@
         "url": "https://pt.wikipedia.org/wiki/Malbec"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Côt",
@@ -26822,7 +26976,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "blackberry",
       "fruity",
@@ -26940,6 +27094,40 @@
         "quote": "Вино має повне тіло, відносно невелику кислотність та м'які таніни.",
         "value": "low",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://musita.it/prodotto/rabah-nero-davola/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Musita",
+            "sourceUrl": "https://musita.it/prodotto/rabah-nero-davola/",
+            "wine": "Rabah Nero Davola"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Madrarossa Winery",
+            "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/nero-davola",
+            "wine": "Nero Davola"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/prodotto/nero-davola-doc-sicilia/",
+            "wine": "Nero Davola Doc Sicilia"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Orbis Wines",
+            "sourceUrl": "https://www.orbiswines.com.au/products/2024-nero-d-avola",
+            "wine": "2024 Nero D Avola"
+          }
+        ]
       }
     ],
     "id": "nero-d-avola",
@@ -28341,6 +28529,31 @@
         "quote": "Зазвичай він використовується для створення купажів сухих червоних вин",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BD%D1%81%D0%BE_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.cambis.fr/en/products/barroco",
+        "value": "duck",
+        "wines": [
+          {
+            "producer": "Domaine de Cambis",
+            "sourceUrl": "https://www.cambis.fr/en/products/barroco",
+            "wine": "Barroco"
+          },
+          {
+            "producer": "Naudé Wines",
+            "sourceUrl": "https://www.naudewines.co.za/werfdans-cinsault-2017",
+            "wine": "Werfdans Cinsault 2017"
+          },
+          {
+            "producer": "Perdeberg",
+            "sourceUrl": "https://perdeberg.co.za/shop/old-vine/cinsault/",
+            "wine": "Cinsault"
+          }
+        ]
       }
     ],
     "id": "cinsaut",
@@ -28355,7 +28568,9 @@
       "pt": "Cinsault"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "duck"
+    ],
     "prominence": 19,
     "regions": [
       {
@@ -28508,7 +28723,7 @@
       "mulberry",
       "damson"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -28713,6 +28928,51 @@
             "producer": "Leopard's Leap",
             "sourceUrl": "https://www.leopardsleap.co.za/products/2022-special-edition-pinotage",
             "wine": "2022 Special Edition Pinotage"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.warwickwine.com/product/the-black-lady-pinotage/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Warwick",
+            "sourceUrl": "https://www.warwickwine.com/product/the-black-lady-pinotage/",
+            "wine": "The Black Lady Pinotage"
+          },
+          {
+            "producer": "Niel Joubert",
+            "sourceUrl": "https://nieljoubert.co.za/product/pinotage-2024/",
+            "wine": "Pinotage 2024"
+          },
+          {
+            "producer": "Orange River Cellars",
+            "sourceUrl": "https://orangerivercellar.com/product/die-kerkmuis-pinotage/?v=91991b101943",
+            "wine": "Die Kerkmuis Pinotage"
+          },
+          {
+            "producer": "De Waal",
+            "sourceUrl": "https://www.dewaal.co.za/product-page/de-waal-pinotage-2022",
+            "wine": "De Waal Pinotage 2022"
+          },
+          {
+            "producer": "Leopard's Leap",
+            "sourceUrl": "https://www.leopardsleap.co.za/products/2025-pinotage",
+            "wine": "2025 Pinotage"
+          },
+          {
+            "producer": "Alvi's Drift",
+            "sourceUrl": "https://alvisdrift.co.za/products/icon-black-eagle-verreaux-pinotage",
+            "wine": "Icon Black Eagle Verreaux Pinotage"
+          },
+          {
+            "producer": "Windmeul",
+            "sourceUrl": "https://windmeul.com/shop-wine/the-red-cellar-range/2024-pinotage/",
+            "wine": "2024 Pinotage"
           }
         ]
       }
@@ -44250,7 +44510,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "spice",
       "fruity"
@@ -44384,6 +44644,40 @@
             "producer": "Domaine de la Catherinette",
             "sourceUrl": "https://www.domainelacatherinette.com/nos-vins/vin-de-cepage-marselan/",
             "wine": "Vin De Cepage Marselan"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://pizzornowines.com/product/mayusculas-marselan/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.5,
+            "producer": "Pizzorno",
+            "sourceUrl": "https://pizzornowines.com/product/mayusculas-marselan/",
+            "wine": "Mayusculas Marselan"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Vivalti Vinícola",
+            "sourceUrl": "https://www.vinicolavivalti.com.br/marselan-2020",
+            "wine": "Marselan 2020"
+          },
+          {
+            "abv": 13,
+            "producer": "Zubizarreta",
+            "sourceUrl": "https://www.bodegazubizarreta.com.uy/vinos/marselan_ag.html",
+            "wine": "Marselan Ag"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Toscanini",
+            "sourceUrl": "https://www.toscaniniwines.com/es/vinos/reserva/marselan/marselan/",
+            "wine": "Marselan"
           }
         ]
       }

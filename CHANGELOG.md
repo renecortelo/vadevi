@@ -19,8 +19,12 @@ has the reasons.
 - **Dry or sweet from the residual sugar on producers' sheets**: a sheet's
   «1,5 g/l» read by the EU's own labelling terms (dry up to 4 g/l, sweet
   above 45), on three producers' wines and two thirds of all those that
-  give one. Garnacha and Petit Verdot are dry; the card lists each wine
-  with its grams a litre.
+  give one. Garnacha, Petit Verdot, Malbec, Mourvèdre and Tempranillo are
+  dry; the card lists each wine with its grams a litre.
+- **More from New World producers**, found through their regions' own
+  directories (Wines of South Africa, Lodi, Sonoma, Wine BC, Hawke's Bay
+  and others): Marselan and Nero d'Avola medium in alcohol, Fiano high in
+  acidity, Pinotage medium-bodied, Cinsaut with duck.
 - **Aromas from producers' tasting notes**, each on three producers'
   wines, for grapes no other source gives aromas for: Falanghina's citrus,
   peach, pineapple and floral notes.
