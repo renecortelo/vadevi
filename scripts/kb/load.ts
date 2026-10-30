@@ -47,7 +47,12 @@ const topicImagesSource = readFileSync(resolve("data/kb/topic-images.json"), "ut
 const wineriesSource = existsSync(resolve("data/kb/wineries.json"))
   ? readFileSync(resolve("data/kb/wineries.json"), "utf8")
   : '{"wineries":[]}';
+// The tables the library is written into, and their columns: a new table
+// or column (`kb_region_within`, 0049) changes the version too, so the next
+// deploy fills it even when the data is the same.
+const layout = libraryTables([], "").map(({ columns, table }) => `${table}(${columns.join(",")})`);
 const version = createHash("sha256")
+  .update(JSON.stringify(layout))
   .update(source)
   .update(vocabularySource)
   .update(regionsSource)
