@@ -27,6 +27,15 @@ import regionsSample from "./regions-sample.json";
  * grape library and asks some 450 questions).
  */
 const grapes = grapesFile as unknown as GrapeEntry[];
+// A page that is not openly licensed is credited to who the card names — on
+// any grape's card: a reply about Goruli Mtsvane may cite Mtsvane Kakhuri's.
+const named = new Map(
+  grapes.flatMap((grape) =>
+    grape.evidence.flatMap((entry) =>
+      entry.publisher == null ? [] : [[entry.sourceUrl, entry.publisher] as const],
+    ),
+  ),
+);
 const regions = regionsSample as unknown as RegionEntry[];
 const topics = topicsFile as unknown as TopicEntry[];
 
@@ -199,12 +208,6 @@ describe("Vicenç's question bank", () => {
           else misses.push(`source not cited: ${grape.id} ${entry.field}: ${url}`);
         }
       }
-      // A page that is not openly licensed is credited to who the card names.
-      const named = new Map(
-        grape.evidence.flatMap((entry) =>
-          entry.publisher == null ? [] : [[entry.sourceUrl, entry.publisher] as const],
-        ),
-      );
       for (const source of data.citations) {
         citations += 1;
         const expected = named.get(source.canonicalUrl) ?? publisherFor(source.canonicalUrl);

@@ -38666,6 +38666,14 @@
             "wine": "Vin De France Roussanne 2025"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry-sweet",
+        "factOnly": true,
+        "publisher": "Inter Rhône",
+        "sourceUrl": "https://www.vins-rhone.com/en/roussanne-grape-variety"
       }
     ],
     "id": "roussanne",
@@ -38725,7 +38733,10 @@
         "url": "https://es.wikipedia.org/wiki/Roussanne"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Barbin",
@@ -41950,8 +41961,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Verdejo"
   },
   {
-    "acidity": null,
-    "alcohol": null,
+    "acidity": "medium",
+    "alcohol": "high",
     "aromas": [
       "caramel",
       "chocolate",
@@ -42094,6 +42105,22 @@
         "quote": "Diese tanninreiche Sorte ergibt im klassischen Weinausbau tiefrote Weine",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mavrodaphne_(Rebsorte)"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Wines of Greece",
+        "sourceUrl": "https://winesofgreece.org/varieties/mavrodaphne/"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wines of Greece",
+        "sourceUrl": "https://winesofgreece.org/varieties/mavrodaphne/"
       }
     ],
     "id": "mavrodafni",
@@ -44688,6 +44715,14 @@
             "wine": "Marselan"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Inter Rhône",
+        "sourceUrl": "https://www.vins-rhone.com/en/marselan-grape-variety"
       }
     ],
     "id": "marselan",
@@ -44797,7 +44832,10 @@
         "url": "https://en.wikipedia.org/wiki/Marselan"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": "high",
     "wikidataId": "Q833144",
@@ -46704,7 +46742,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "fruity"
     ],
@@ -46830,6 +46868,14 @@
         "quote": "Уточнение «кахури» указывает на происхождение из Кахетии.",
         "value": "GE",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Georgian Wine Association",
+        "sourceUrl": "https://gwa.ge/yurdznisjishebi_/mtsvane-kakhuri/"
       }
     ],
     "id": "mtsvane",
@@ -52113,7 +52159,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "fruity"
     ],
@@ -52189,6 +52235,14 @@
         "quote": "Tsolikouri har hög syra och gjord enligt europeisk metod producerar den ett aromatiskt lätt syrligt vin.",
         "value": "high",
         "sourceUrl": "https://sv.wikipedia.org/wiki/Tsolikouri"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Georgian Wine Association",
+        "sourceUrl": "https://gwa.ge/yurdznisjishebi_/tsolikouri/"
       }
     ],
     "id": "tsolikouri",
@@ -53722,12 +53776,12 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ancellotta"
   },
   {
-    "acidity": null,
-    "alcohol": null,
+    "acidity": "low",
+    "alcohol": "medium",
     "aromas": [
       "lemon"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -53797,6 +53851,30 @@
         "quote": "Athiri (griechisch Αθήρι) ist eine in Griechenland heimische Weißweinsorte.",
         "value": "GR",
         "sourceUrl": "https://de.wikipedia.org/wiki/Athiri"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wines of Greece",
+        "sourceUrl": "https://winesofgreece.org/varieties/athiri/"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Wines of Greece",
+        "sourceUrl": "https://winesofgreece.org/varieties/athiri/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wines of Greece",
+        "sourceUrl": "https://winesofgreece.org/varieties/athiri/"
       }
     ],
     "id": "athiri",
@@ -57120,7 +57198,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "citrus",
       "smoky"
@@ -57172,6 +57250,22 @@
         "field": "regions",
         "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
         "value": "FR: Châteauneuf-du-Pape"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Inter Rhône",
+        "sourceUrl": "https://www.vins-rhone.com/en/bourboulenc-grape-variety"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Inter Rhône",
+        "sourceUrl": "https://www.vins-rhone.com/en/bourboulenc-grape-variety"
       },
       {
         "field": "origin",
@@ -57257,7 +57351,10 @@
         "url": "https://en.wikipedia.org/wiki/Bourboulenc"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q358780",
@@ -58233,6 +58330,22 @@
         "field": "regions",
         "quote": "Gamaret was developed for cultivation in French Switzerland",
         "value": "CH: French Switzerland"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "grilled meats",
+        "factOnly": true,
+        "publisher": "Swiss Wine Promotion",
+        "sourceUrl": "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/gamaret-en"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "desserts",
+        "factOnly": true,
+        "publisher": "Swiss Wine Promotion",
+        "sourceUrl": "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/gamaret-en"
       }
     ],
     "id": "gamaret",
@@ -58247,7 +58360,10 @@
       "pt": "Gamaret"
     },
     "origin": "CH",
-    "pairings": [],
+    "pairings": [
+      "grilled meats",
+      "desserts"
+    ],
     "prominence": 8,
     "regions": [
       {

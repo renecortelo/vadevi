@@ -42,6 +42,13 @@ has the reasons.
   directories (Wines of South Africa, Lodi, Sonoma, Wine BC, Hawke's Bay
   and others): Marselan and Nero d'Avola medium in alcohol, Fiano high in
   acidity, Pinotage medium-bodied, Cinsaut with duck.
+- **Traits from the grape pages of the wine bodies themselves**: Wines of
+  Greece (Athiri medium-bodied, moderate in alcohol, soft in acidity;
+  Mavrodafni high in alcohol, medium in acidity), Inter Rhône (Bourboulenc
+  low in alcohol and dry, Marselan dry, Roussanne dry to sweet), the
+  Georgian Wine Association (Mtsvane and Tsolikouri high in alcohol) and
+  Swiss Wine (Gamaret with grilled meats and desserts) — the fact and its
+  link, as for every page that is not openly licensed.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.

@@ -81,6 +81,27 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Wines of Greece (EDOAO), «Varieties»",
+    terms: "factOnly",
+    url: "https://winesofgreece.org/varieties/",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Inter Rhône, grape varieties",
+    terms: "factOnly",
+    url: "https://www.vins-rhone.com/en/",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Swiss Wine Promotion, «Wine grapes»",
+    terms: "factOnly",
+    url: "https://www.swisswine.com/en/swiss-vineyards/wine-grapes",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministero dell'agricoltura (MASAF), Registro nazionale delle varietà di vite: fichas de variedades",
     terms: "factOnly",
     url: "http://catalogoviti.politicheagricole.it/scheda.php?codice=285",
