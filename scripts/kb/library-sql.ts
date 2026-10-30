@@ -414,6 +414,19 @@ export function libraryTables(
           .map((link) => [region.id, link.grapeId, link.quote, link.sourceUrl, link.by ?? null]),
       ),
     ),
+    // The names each name lies within, as pairs: a card finds the names inside
+    // it by its key (`0049`).
+    table(
+      "kb_region_within",
+      ["within_id", "region_id"],
+      ["within_id", "region_id"],
+      0,
+      regions.flatMap((region) =>
+        (region.within ?? [])
+          .filter((holder) => regions.some((other) => other.id === holder))
+          .map((holder) => [holder, region.id]),
+      ),
+    ),
     table(
       "kb_images",
       ["entity_type", "entity_id", "path", "author", "license", "license_url", "source_url"],

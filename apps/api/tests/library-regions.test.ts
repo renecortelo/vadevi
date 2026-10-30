@@ -249,6 +249,31 @@ describe("the wine atlas", () => {
     }
   });
 
+  it("keeps the atlas figures once per library version, and counts again for a new one", async () => {
+    await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers });
+    const coverage = async () =>
+      LibraryAtlasCoverageResponseSchema.parse(
+        await (
+          await SELF.fetch("https://vadevi.test/api/v1/library/atlas/coverage?locale=es", {
+            headers,
+          })
+        ).json(),
+      ).data;
+    const first = await coverage();
+    const kept = await env.DB.prepare(`SELECT value FROM kb_meta WHERE key = ?`)
+      .bind("atlas-coverage:es")
+      .first<{ value: string }>();
+    expect(JSON.parse(kept!.value)).toEqual(first);
+    // A figure kept from another version is not served: it is counted again.
+    await env.DB.prepare(`UPDATE kb_meta SET value = ? WHERE key = ?`)
+      .bind(
+        JSON.stringify({ ...first, countries: [], libraryVersion: "older" }),
+        "atlas-coverage:es",
+      )
+      .run();
+    expect(await coverage()).toEqual(first);
+  });
+
   it("answers a registered name's entry, its summary in the reader's language and its grapes", async () => {
     await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers });
     const response = await SELF.fetch(

@@ -52,7 +52,7 @@ export async function libraryGrapeIds(
     const rows = await database
       .prepare(
         `SELECT normalized_name AS name, COUNT(DISTINCT entity_id) AS grapes, MIN(entity_id) AS id
-        FROM kb_names
+        FROM kb_names INDEXED BY idx_kb_names_lookup
         WHERE entity_type = 'grape' AND normalized_name IN (SELECT value FROM json_each(?))
         GROUP BY normalized_name`,
       )
@@ -79,7 +79,7 @@ export async function readGrapes(
     const rows = await database
       .prepare(
         `SELECT normalized_name AS name, COUNT(DISTINCT entity_id) AS grapes, MIN(entity_id) AS id
-        FROM kb_names
+        FROM kb_names INDEXED BY idx_kb_names_lookup
         WHERE entity_type = 'grape' AND normalized_name IN (SELECT value FROM json_each(?))
         GROUP BY normalized_name`,
       )

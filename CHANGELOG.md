@@ -22,6 +22,15 @@ has the reasons.
   file the browser fetches the first time the field is used and searches
   itself, so typing a producer no longer asks the server anything.
 
+### Lighter on the database
+
+- **The library reads up to a thousand times fewer rows**: a grape's card,
+  the library search, linking a wine to its registered name and the
+  assistant's reading of names now use the indexes they were meant to (a
+  grape's regions: 18,000 rows read before, 29 now); a region's card finds
+  the names inside it from a table of its own; and «The atlas in figures» is
+  counted once per library version and language, not on every visit.
+
 ### Library
 
 - **Dry or sweet from the residual sugar on producers' sheets**: a sheet's

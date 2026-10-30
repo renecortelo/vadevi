@@ -44,7 +44,7 @@ export async function findGrapesByName(
   const rows = await database
     .prepare(
       `SELECT DISTINCT name.entity_id AS id, grape.prominence
-      FROM kb_names name
+      FROM kb_names name INDEXED BY idx_kb_names_lookup
       JOIN kb_grapes grape ON grape.id = name.entity_id
       WHERE name.entity_type = 'grape'
         AND name.normalized_name >= ? AND name.normalized_name < ? || '~'
@@ -94,7 +94,7 @@ async function namedIn(
         .prepare(
           `SELECT entity_id AS id, max(length(normalized_name)) AS matched,
             max(CASE WHEN kind = 'primary' THEN length(normalized_name) ELSE 0 END) AS own
-          FROM kb_names
+          FROM kb_names INDEXED BY idx_kb_names_lookup
           WHERE normalized_name IN (${chunk.map(() => "?").join(", ")}) AND entity_type = ?
           GROUP BY entity_id`,
         )
@@ -190,8 +190,8 @@ export async function getLibraryGrape(
         .prepare(
           `SELECT region.id, region.country_code, name.normalized_name
         FROM kb_region_grapes link
-        JOIN kb_regions region ON region.id = link.region_id
-        JOIN kb_names name ON name.entity_type = 'region' AND name.entity_id = region.id
+        CROSS JOIN kb_regions region ON region.id = link.region_id
+        CROSS JOIN kb_names name ON name.entity_type = 'region' AND name.entity_id = region.id
         WHERE link.grape_id = ?`,
         )
         .bind(grapeId),
@@ -432,11 +432,41 @@ export async function regionsMentionedIn(database: D1Database, message: string):
  * oldest way the EU atlas was placed.
  */
 export async function libraryAtlasCoverage(database: D1Database, locale: string) {
-  const [version, rows] = await database.batch([
+  // The figures change only with the library, and counting them reads some
+  // 40,000 rows: they are kept in `kb_meta` once per version and language.
+  // The next `kb:load` removes them with every other row it did not write.
+  const cacheKey = `atlas-coverage:${locale}`;
+  const [version, cached] = await database.batch([
     database.prepare(`SELECT value FROM kb_meta WHERE key = 'version'`),
-    database
+    database.prepare(`SELECT value FROM kb_meta WHERE key = ?`).bind(cacheKey),
+  ]);
+  const libraryVersion = (version!.results[0] as { value: string } | undefined)?.value ?? null;
+  const stored = (cached!.results[0] as { value: string } | undefined)?.value;
+  if (stored !== undefined && libraryVersion !== null) {
+    const kept = JSON.parse(stored) as Awaited<ReturnType<typeof countAtlasCoverage>>;
+    if (kept.libraryVersion === libraryVersion) return kept;
+  }
+  const coverage = await countAtlasCoverage(database, locale, libraryVersion);
+  if (libraryVersion !== null) {
+    await database
       .prepare(
-        `SELECT region.country_code AS country, COUNT(*) AS names,
+        `INSERT INTO kb_meta (key, value) VALUES (?, ?)
+        ON CONFLICT (key) DO UPDATE SET value = excluded.value`,
+      )
+      .bind(cacheKey, JSON.stringify(coverage))
+      .run();
+  }
+  return coverage;
+}
+
+async function countAtlasCoverage(
+  database: D1Database,
+  locale: string,
+  libraryVersion: string | null,
+) {
+  const rows = await database
+    .prepare(
+      `SELECT region.country_code AS country, COUNT(*) AS names,
           SUM(EXISTS (SELECT 1 FROM kb_summaries summary WHERE summary.entity_type = 'region'
             AND summary.entity_id = region.id AND summary.locale = ?)) AS described,
           SUM((SELECT COUNT(DISTINCT summary.locale) FROM kb_summaries summary
@@ -456,9 +486,9 @@ export async function libraryAtlasCoverage(database: D1Database, locale: string)
         -- the atlas, not in its count of registered names.
         WHERE region.gi_type <> 'WR'
         GROUP BY region.country_code ORDER BY names DESC, country`,
-      )
-      .bind(locale, JSON.stringify(fallbackOrder), fallbackOrder.length),
-  ]);
+    )
+    .bind(locale, JSON.stringify(fallbackOrder), fallbackOrder.length)
+    .all();
   type Row = {
     area: number;
     boundary: number;
@@ -472,7 +502,7 @@ export async function libraryAtlasCoverage(database: D1Database, locale: string)
     with_grapes: number;
   };
   return {
-    countries: (rows!.results as Row[]).map((row) => ({
+    countries: (rows.results as Row[]).map((row) => ({
       countryCode: row.country,
       described: row.described,
       describedInEveryLanguage: row.every_language,
@@ -486,7 +516,7 @@ export async function libraryAtlasCoverage(database: D1Database, locale: string)
       },
       withGrapes: row.with_grapes,
     })),
-    libraryVersion: (version!.results[0] as { value: string } | undefined)?.value ?? null,
+    libraryVersion,
   };
 }
 
@@ -649,7 +679,7 @@ export async function searchLibraryRegions(
     database
       .prepare(
         `SELECT DISTINCT region.id, region.name, region.country_code, region.gi_type, region.prominence
-        FROM kb_names name
+        FROM kb_names name INDEXED BY idx_kb_names_lookup
         JOIN kb_regions region ON region.id = name.entity_id
         WHERE name.entity_type = 'region'
           AND name.normalized_name >= ? AND name.normalized_name < ? || '~'
@@ -749,9 +779,11 @@ export async function getLibraryRegion(
     // Every name inside this one, to keep those directly inside it.
     database
       .prepare(
-        `SELECT id, name, register_level, within FROM kb_regions
-        WHERE within IS NOT NULL AND EXISTS (SELECT 1 FROM json_each(within) WHERE value = ?)
-        ORDER BY name`,
+        `SELECT region.id, region.name, region.register_level, region.within
+        FROM kb_region_within inside
+        CROSS JOIN kb_regions region ON region.id = inside.region_id
+        WHERE inside.within_id = ?
+        ORDER BY region.name`,
       )
       .bind(regionId),
   ]);

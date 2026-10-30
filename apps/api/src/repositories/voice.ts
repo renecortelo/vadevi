@@ -107,8 +107,9 @@ export async function placeHeardRegion(
   const rows = await database
     .prepare(
       `SELECT DISTINCT name.normalized_name AS form, region.id, region.name
-      FROM kb_names name JOIN kb_regions region ON region.id = name.entity_id
-      WHERE name.entity_type = 'region' AND region.country_code = ?`,
+      FROM kb_regions region
+      CROSS JOIN kb_names name ON name.entity_type = 'region' AND name.entity_id = region.id
+      WHERE region.country_code = ?`,
     )
     .bind(countryCode)
     .all<{ form: string; id: string; name: string }>();
@@ -136,7 +137,7 @@ export async function knownGrapes(database: D1Database, names: readonly string[]
   const forms = names.map((name) => normalizeWineText(name));
   const rows = await database
     .prepare(
-      `SELECT DISTINCT normalized_name AS form FROM kb_names
+      `SELECT DISTINCT normalized_name AS form FROM kb_names INDEXED BY idx_kb_names_lookup
       WHERE entity_type = 'grape' AND normalized_name IN (SELECT value FROM json_each(?))`,
     )
     .bind(JSON.stringify(forms))

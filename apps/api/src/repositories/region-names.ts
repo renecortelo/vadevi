@@ -144,7 +144,7 @@ export async function readPlaces(
       .prepare(
         `SELECT name.normalized_name AS name, region.country_code AS code,
           COUNT(DISTINCT region.id) AS entries, MIN(region.name) AS label, MIN(region.id) AS id
-        FROM kb_names name JOIN kb_regions region ON region.id = name.entity_id
+        FROM kb_names name INDEXED BY idx_kb_names_lookup JOIN kb_regions region ON region.id = name.entity_id
         WHERE name.entity_type = 'region'
           AND name.normalized_name IN (SELECT value FROM json_each(?))
         GROUP BY name.normalized_name, region.country_code`,
