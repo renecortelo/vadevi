@@ -2012,6 +2012,8 @@ const webFigures: Record<
         /** Given in acres: `amount` is then the acres, converted to hectares here. */
         acres?: boolean;
         amount: number;
+        /** Production as tonnes of grapes harvested: kept as tonnes, never turned into hl. */
+        tonnes?: boolean;
         by: string;
         quote: string;
         sourceUrl: string;
@@ -2055,6 +2057,7 @@ for (const entry of entries) {
             : figure.amount,
         by: figure.by,
         publisher: "web",
+        ...(field === "production" && figure.tonnes === true ? { tonnes: true as const } : {}),
         quote: "",
         sourceUrl: figure.sourceUrl,
         year: figure.year,

@@ -281,7 +281,11 @@ describe("Vicenç's question bank", () => {
       const expected = [
         ...(region.figures?.planted ? [`vineyard area: ${region.figures.planted.amount} ha`] : []),
         ...(region.figures?.production
-          ? [`wine produced: ${region.figures.production.amount} hl`]
+          ? [
+              region.figures.production.tonnes === true
+                ? `grapes harvested: ${region.figures.production.amount} t`
+                : `wine produced: ${region.figures.production.amount} hl`,
+            ]
           : []),
         ...(region.climate ? [`Köppen ${region.climate.koppen}`] : []),
         ...(region.soil ? [`clay ${region.soil.clay} %`] : []),

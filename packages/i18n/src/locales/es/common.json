@@ -432,6 +432,7 @@
     "glanceVarieties_other": "variedades en su pliego",
     "glancePlanted": "de viñedo plantado",
     "glanceProduction": "de vino al año",
+    "glanceProductionTonnes": "de uva vendimiada",
     "glanceYear": "en {{year}}",
     "glanceConverted": "convertido de acres",
     "glanceSource": "Superficie y producción:",

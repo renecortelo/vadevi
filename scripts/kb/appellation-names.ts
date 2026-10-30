@@ -6,6 +6,8 @@ import type { ClimateSummary, MonthlyClimate } from "./climate";
 
 export type RegionFigureSource = {
   amount: number;
+  /** Production as tonnes of grapes harvested, not hectolitres of wine. */
+  tonnes?: true;
   /** Who gives it, where not Wikipedia: Spain's Ministry, France's customs. */
   publisher?:
     | "abs"

@@ -324,6 +324,12 @@ const RegionFigureSchema = z
     by: z.string().optional(),
     /** For `web`: the figure as the body gives it, in acres; `amount` is converted to hectares. */
     acres: z.number().optional(),
+    /**
+     * Production given as tonnes of grapes harvested (crushed), as New
+     * Zealand's and Australia's surveys count it: `amount` is tonnes, not
+     * hectolitres of wine, and is never converted to them.
+     */
+    tonnes: z.literal(true).optional(),
     /** The infobox line it was read from. */
     quote: z.string(),
     sourceUrl: z.string().url(),

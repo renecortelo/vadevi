@@ -432,6 +432,7 @@
     "glanceVarieties_other": "cépages dans son cahier des charges",
     "glancePlanted": "de vignes plantées",
     "glanceProduction": "de vin par an",
+    "glanceProductionTonnes": "de raisin récolté",
     "glanceYear": "en {{year}}",
     "glanceConverted": "converti d'acres",
     "glanceSource": "Superficie et production :",

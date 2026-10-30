@@ -432,6 +432,7 @@
     "glanceVarieties_other": "castas no seu caderno",
     "glancePlanted": "de vinha plantada",
     "glanceProduction": "de vinho por ano",
+    "glanceProductionTonnes": "de uva vindimada",
     "glanceYear": "em {{year}}",
     "glanceConverted": "convertido de acres",
     "glanceSource": "Área e produção:",

@@ -81,11 +81,19 @@ export function RegionGlance({ region }: { region: LibraryRegion }) {
         {production === null ? null : (
           <li>
             <GlanceIcon name="glass" />
-            <strong title={`${number.format(production.amount)} hl`}>
-              {amount(production.amount)} hl
+            {/* Tonnes of grapes where a survey counts them so (New Zealand),
+                never turned into hectolitres of wine. */}
+            <strong
+              title={`${number.format(production.amount)} ${production.tonnes === true ? "t" : "hl"}`}
+            >
+              {amount(production.amount)} {production.tonnes === true ? "t" : "hl"}
             </strong>
             <span>
-              {t("library.glanceProduction")}
+              {t(
+                production.tonnes === true
+                  ? "library.glanceProductionTonnes"
+                  : "library.glanceProduction",
+              )}
               {year(production.year)}
             </span>
           </li>

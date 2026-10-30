@@ -1300,7 +1300,10 @@ async function loadLibraryStatements(
     // Its vineyards and wine, each figure cited to whoever gives it.
     for (const [suffix, figure, unit, what] of [
       ["planted", region.figures.planted, "ha", "vineyard area"],
-      ["production", region.figures.production, "hl", "wine produced"],
+      // Tonnes of grapes where a survey counts them so, never hl of wine.
+      region.figures.production?.tonnes === true
+        ? (["production", region.figures.production, "t", "grapes harvested"] as const)
+        : (["production", region.figures.production, "hl", "wine produced"] as const),
     ] as const) {
       if (figure === null) continue;
       const figureId = await librarySourceId(`region-${suffix}:${region.id}`);

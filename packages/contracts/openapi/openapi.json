@@ -11905,6 +11905,12 @@
                   "acres": {
                     "type": "number"
                   },
+                  "tonnes": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
                   "quote": {
                     "type": "string"
                   },
@@ -11957,6 +11963,12 @@
                   },
                   "acres": {
                     "type": "number"
+                  },
+                  "tonnes": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
                   },
                   "quote": {
                     "type": "string"

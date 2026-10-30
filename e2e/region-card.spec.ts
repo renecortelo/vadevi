@@ -130,6 +130,12 @@ test("a region card shows its figures and its climate", async ({ page }) => {
     "Oficina de Estadística de Australia (ABS), viñedos 2014-15 (CC BY 4.0)",
     { timeout: 15_000 },
   );
+  // A New Zealand GI: its harvest in tonnes of grapes, as its vintage survey
+  // counts it — never turned into hectolitres of wine.
+  await page.goto("/library/regions/nz-marlborough");
+  await expect(page.locator(".region-glance")).toContainText("355 mil t", { timeout: 15_000 });
+  await expect(page.locator(".region-glance")).toContainText("de uva vendimiada");
+  await expect(page.locator(".region-glance")).not.toContainText(" hl");
   // The soil at a name's point: clay, silt and sand, and its pH in words.
   await page.goto("/library/regions/ar-angaco");
   const soil = page.locator('section[aria-labelledby="region-soil"]');

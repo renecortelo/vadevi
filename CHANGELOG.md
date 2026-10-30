@@ -42,6 +42,10 @@ has the reasons.
   directories (Wines of South Africa, Lodi, Sonoma, Wine BC, Hawke's Bay
   and others): Marselan and Nero d'Avola medium in alcohol, Fiano high in
   acidity, Pinotage medium-bodied, Cinsaut with duck.
+- **New Zealand's 2026 harvest, region by region**: tonnes of grapes, as
+  New Zealand Winegrowers' vintage survey counts them — Marlborough 354,521 t,
+  the country 440,000 t — shown as tonnes of grapes, never turned into
+  hectolitres of wine.
 - **Traits from the grape pages of the wine bodies themselves**: Wines of
   Greece (Athiri medium-bodied, moderate in alcohol, soft in acidity;
   Mavrodafni high in alcohol, medium in acidity), Inter Rhône (Bourboulenc

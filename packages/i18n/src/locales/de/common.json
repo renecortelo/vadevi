@@ -432,6 +432,7 @@
     "glanceVarieties_other": "Rebsorten in ihrer Spezifikation",
     "glancePlanted": "Rebfläche bestockt",
     "glanceProduction": "Wein im Jahr",
+    "glanceProductionTonnes": "Trauben geerntet",
     "glanceYear": "{{year}}",
     "glanceConverted": "aus Acres umgerechnet",
     "glanceSource": "Fläche und Erzeugung:",

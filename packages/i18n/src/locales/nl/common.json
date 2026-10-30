@@ -432,6 +432,7 @@
     "glanceVarieties_other": "druivenrassen in het productdossier",
     "glancePlanted": "wijngaard aangeplant",
     "glanceProduction": "wijn per jaar",
+    "glanceProductionTonnes": "druiven geoogst",
     "glanceYear": "in {{year}}",
     "glanceConverted": "omgerekend uit acres",
     "glanceSource": "Oppervlakte en productie:",

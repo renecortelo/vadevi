@@ -432,6 +432,7 @@
     "glanceVarieties_other": "varietats al seu plec",
     "glancePlanted": "de vinya plantada",
     "glanceProduction": "de vi l'any",
+    "glanceProductionTonnes": "de raïm collit",
     "glanceYear": "el {{year}}",
     "glanceConverted": "convertit d'acres",
     "glanceSource": "Superfície i producció:",

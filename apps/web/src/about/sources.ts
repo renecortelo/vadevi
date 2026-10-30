@@ -321,7 +321,7 @@ export const sources: Source[] = [
   {
     group: "registers",
     terms: "factOnly",
-    name: "Wine Growers British Columbia, VQA Ontario, Wines of South Africa, Wine Australia y New Zealand Winegrowers: las uvas de sus regiones y los viñedos en acres de Columbia Británica y Niagara (solo donde ninguna otra fuente los da; cada una enlazada en la ficha)",
+    name: "Wine Growers British Columbia, VQA Ontario, Wines of South Africa, Wine Australia y New Zealand Winegrowers: las uvas de sus regiones, los viñedos en acres de Columbia Británica y Niagara y la vendimia de 2026 de las regiones de Nueva Zelanda en toneladas de uva (solo donde ninguna otra fuente los da; cada una enlazada en la ficha)",
     url: "https://winebc.com/wine-regions/",
     what: "varieties",
   },

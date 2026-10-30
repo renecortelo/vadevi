@@ -385162,7 +385162,15 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/New_Zealand_wine",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 440000,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -385393,7 +385401,15 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/New_Zealand_wine",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 162,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -385551,7 +385567,15 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Auckland_wine_region",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 921,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -386022,7 +386046,15 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2023"
       },
-      "production": null
+      "production": {
+        "amount": 10248,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -386180,7 +386212,15 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Hawke's_Bay_wine_region",
         "year": "2018"
       },
-      "production": null
+      "production": {
+        "amount": 27332,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -386392,7 +386432,15 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2023"
       },
-      "production": null
+      "production": {
+        "amount": 6263,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -386804,7 +386852,15 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2023"
       },
-      "production": null
+      "production": {
+        "amount": 7959,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -386941,7 +386997,15 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Marlborough_wine_region",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 354521,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -387183,7 +387247,15 @@
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
         "year": "2023"
       },
-      "production": null
+      "production": {
+        "amount": 7022,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -387477,7 +387549,15 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Waitaki_Valley_wine_region",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 103,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {
@@ -387614,7 +387694,15 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Central_Otago_wine_region",
         "year": null
       },
-      "production": null
+      "production": {
+        "amount": 8693,
+        "by": "New Zealand Winegrowers",
+        "publisher": "web",
+        "tonnes": true,
+        "quote": "",
+        "sourceUrl": "https://www.nzwine.com/media/gzejco0t/nzw-annual-report_2026_final_v4_web.pdf",
+        "year": "2026"
+      }
     }
   },
   {

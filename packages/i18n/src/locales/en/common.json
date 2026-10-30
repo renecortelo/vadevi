@@ -432,6 +432,7 @@
     "glanceVarieties_other": "varieties in its specification",
     "glancePlanted": "of vineyard planted",
     "glanceProduction": "of wine a year",
+    "glanceProductionTonnes": "of grapes harvested",
     "glanceYear": "in {{year}}",
     "glanceConverted": "converted from acres",
     "glanceSource": "Area and production:",

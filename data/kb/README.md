@@ -427,7 +427,7 @@ never replaces an official one: where they differ (Friuli Grave's consorzio
 gives «circa 300.000 hl», the official source 73,800) the official stays. A
 body that gives acres (Wine Growers British Columbia, VQA Ontario) has its
 figure marked `acres`: the build converts it to hectares and keeps the acres,
-and the card says «≈ … ha, converted from acres».
+and the card says «≈ … ha, converted from acres». A body that counts production as tonnes of grapes harvested (New Zealand Winegrowers' Annual Report 2026, «By region (tonnes)», from its vintage survey; the country as its «Industry total») has its figure marked `tonnes`: the card and Vicenç give it in tonnes of grapes, never converted to hectolitres of wine.
 
 A name with no grapes from any source above may take them from its own
 body's page, under the same rule (`data/kb/web-region-grapes.json`, private):
