@@ -175,6 +175,14 @@ export const sources: Source[] = [
     what: "wineries",
   },
   {
+    group: "texts",
+    credit: "© OpenStreetMap contributors",
+    licence: "ODbL 1.0",
+    name: "OpenStreetMap",
+    url: "https://www.openstreetmap.org/copyright",
+    what: "wineries",
+  },
+  {
     group: "registers",
     credit: "© European Union",
     terms: "euReuse",

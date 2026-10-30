@@ -14,6 +14,14 @@ has the reasons.
   instead of riding on top of it, and comes back when it closes.
 - **A grape's card names its colour and its origin on two lines.**
 
+### Logging a wine
+
+- **The producer field knows seven times as many wineries**: 13,303, from
+  Wikidata and now OpenStreetMap (© OpenStreetMap contributors, ODbL), not
+  shops, bars or restaurants that also carry the tag. The list is one small
+  file the browser fetches the first time the field is used and searches
+  itself, so typing a producer no longer asks the server anything.
+
 ### Library
 
 - **Dry or sweet from the residual sugar on producers' sheets**: a sheet's

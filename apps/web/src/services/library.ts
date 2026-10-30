@@ -12,7 +12,6 @@ import {
   LibraryRegionNamesResponseSchema,
   LibraryRegionResponseSchema,
   LibraryRegionSearchResponseSchema,
-  LibraryWinerySearchResponseSchema,
   type LibrarySearchResponse,
   LibrarySearchResponseSchema,
   type LibraryTopic,
@@ -229,20 +228,13 @@ export async function getLibraryRegionNames(
   return LibraryRegionNamesResponseSchema.parse(await response.json()).data;
 }
 
-/** Wineries by name, for the producer field — in a country, if one is chosen. */
-export async function searchLibraryWineries(
-  tokenSource: TokenSource,
-  query: string,
-  country: string | null,
-  signal?: AbortSignal,
-): Promise<{ countryCode: string; id: string; name: string }[]> {
-  const response = await authenticatedFetch(
-    tokenSource,
-    `/api/v1/library/wineries?query=${encodeURIComponent(query)}${
-      country === null ? "" : `&country=${encodeURIComponent(country.toUpperCase())}`
-    }`,
-    signal === undefined ? {} : { signal },
-  );
-  if (!response.ok) throw await apiError(response);
-  return LibraryWinerySearchResponseSchema.parse(await response.json()).data;
+/**
+ * Every winery the producer field may suggest, as `[name, country]` pairs
+ * (Wikidata and OpenStreetMap; `pnpm kb:build-wineries`): one static file,
+ * fetched the first time the field is used and searched in the browser.
+ */
+export async function loadWineryList(signal?: AbortSignal): Promise<[string, string][]> {
+  const response = await fetch("/library/wineries.json", signal === undefined ? {} : { signal });
+  if (!response.ok) throw new Error(`Winery list: ${response.status}`);
+  return ((await response.json()) as { wineries: [string, string][] }).wineries;
 }

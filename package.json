@@ -66,6 +66,8 @@
     "kb:fetch-soil": "tsx scripts/kb/fetch-soil.ts",
     "kb:fetch-topic-images": "tsx scripts/kb/fetch-topic-images.ts",
     "kb:fetch-wineries": "tsx scripts/kb/fetch-wineries.ts",
+    "kb:fetch-osm-wineries": "tsx scripts/kb/fetch-osm-wineries.ts",
+    "kb:build-wineries": "tsx scripts/kb/build-wineries-list.ts",
     "kb:build-map": "tsx scripts/kb/build-map.ts",
     "kb:check-pairing-sources": "tsx scripts/kb/check-pairing-sources.ts",
     "kb:load": "tsx scripts/kb/load.ts",
