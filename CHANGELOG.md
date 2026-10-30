@@ -51,7 +51,7 @@ has the reasons.
   Mavrodafni high in alcohol, medium in acidity), Inter Rhône (Bourboulenc
   low in alcohol and dry, Marselan dry, Roussanne dry to sweet), the
   Georgian Wine Association (Mtsvane and Tsolikouri high in alcohol) and
-  Swiss Wine (Gamaret with grilled meats and desserts) — the fact and its
+  Swiss Wine (Gamaret with grilled meats and desserts) and Magyar Bor (Irsai Olivér light in body and alcohol, Zierfandler high in alcohol with spicy and Asian dishes, Kadarka with vegetables, stews, pasta, pizza and soups, Hárslevelű soft in acidity) — the fact and its
   link, as for every page that is not openly licensed.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;

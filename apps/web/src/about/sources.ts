@@ -95,6 +95,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Magyar Bor (Wines of Hungary), grape varieties",
+    terms: "factOnly",
+    url: "https://bor.hu/en/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Swiss Wine Promotion, «Wine grapes»",
     terms: "factOnly",
     url: "https://www.swisswine.com/en/swiss-vineyards/wine-grapes",

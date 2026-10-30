@@ -26058,6 +26058,46 @@
         "quote": "Odlikuje se elegancijom, lakoćom, pitkošću, rafiniranošću i umerenim prisustvom odgovarajuće kiseline",
         "value": "medium",
         "sourceUrl": "https://sr.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "vegetables",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "stews",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pasta",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pizza",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soups",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/kadarka/"
       }
     ],
     "id": "kadarka",
@@ -26072,7 +26112,13 @@
       "pt": "Kadarka"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "vegetables",
+      "stews",
+      "pasta",
+      "pizza",
+      "soups"
+    ],
     "prominence": 20,
     "regions": [
       {
@@ -34175,7 +34221,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Arneis"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "high",
     "aromas": [
       "spice",
@@ -34348,6 +34394,14 @@
         "sourceUrl": "https://en.wikivoyage.org/wiki/Tokaj",
         "place": "Tokaj",
         "placeId": "hu-tokaj"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/harslevelu/"
       }
     ],
     "id": "harslevelu",
@@ -50938,13 +50992,13 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "grape",
       "tropical fruit",
       "lemon"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -51055,6 +51109,22 @@
         "quote": "doporučováno k chodům jako dezertní přípitek, eventuálně k těžkým a hutným sýrům či k dezertům",
         "value": "desserts",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Irsai_Oliver"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/irsai-oliver/"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/irsai-oliver/"
       }
     ],
     "id": "irsai-oliver",
@@ -55684,7 +55754,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "nutty",
       "pistachio",
@@ -55770,6 +55840,38 @@
         "value": "sweet"
       },
       {
+        "field": "alcohol",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/cirfandli/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "spicy dishes",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/cirfandli/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "indian cuisine",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/cirfandli/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "asian cuisine",
+        "factOnly": true,
+        "publisher": "Magyar Bor (Wines of Hungary)",
+        "sourceUrl": "https://bor.hu/en/cirfandli/"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Zierfandler: Austria",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -55788,7 +55890,11 @@
       "pt": "Zierfandler"
     },
     "origin": "AT",
-    "pairings": [],
+    "pairings": [
+      "spicy dishes",
+      "indian cuisine",
+      "asian cuisine"
+    ],
     "prominence": 8,
     "regions": [
       {
