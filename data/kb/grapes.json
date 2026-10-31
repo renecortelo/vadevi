@@ -7603,7 +7603,7 @@
       "pear",
       "exotic fruit"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -7710,6 +7710,30 @@
         "field": "alcohol",
         "quote": "with notable acidity and a medium to moderate alcohol content",
         "value": "medium"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Berry Bros. & Rudd",
+        "sourceUrl": "https://www.bbr.com/grape-hz-hondarribi-zuri"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Berry Bros. & Rudd",
+        "sourceUrl": "https://www.bbr.com/grape-hz-hondarribi-zuri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Berry Bros. & Rudd",
+        "sourceUrl": "https://www.bbr.com/grape-hz-hondarribi-zuri"
       }
     ],
     "id": "hondarrabi-zuri",
@@ -7724,7 +7748,9 @@
       "nl": "Hondarrabi zuri"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "seafood"
+    ],
     "prominence": 6,
     "regions": [
       {
@@ -7787,7 +7813,10 @@
         "url": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Hondarribi Zuri",
@@ -9528,7 +9557,7 @@
       "mineral",
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -9712,6 +9741,14 @@
         "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006870",
         "place": "Ribeira Sacra",
         "placeId": "es-ribeira-sacra"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vinissimus",
+        "sourceUrl": "https://www.vinissimus.com/es/uva/mencia/"
       }
     ],
     "id": "mencia",
@@ -14385,7 +14422,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "red fruit",
       "cherry",
@@ -14494,6 +14531,14 @@
         "quote": "con acidez media que a veces es insuficiente.",
         "value": "medium",
         "sourceUrl": "https://web.archive.org/web/20230904004446/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/PINOT_NOIR.pdf"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wine.com",
+        "sourceUrl": "https://www.wine.com/content/article/pinot-noir-varieties"
       }
     ],
     "id": "pinot-noir",
@@ -24629,7 +24674,7 @@
       "apricot",
       "peach"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -24765,6 +24810,14 @@
         "quote": "Sus vinos tienen una graduación alcohólica elevada y una acidez notable.",
         "value": "high",
         "sourceUrl": "https://es.wikipedia.org/wiki/Albari%C3%B1o"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "The Wine Society",
+        "sourceUrl": "https://www.thewinesociety.com/discover/wine-basics/grape-varieties/albarino-the-ultimate-grape-guide"
       }
     ],
     "id": "albarino",
@@ -28608,6 +28661,14 @@
             "wine": "Cinsault"
           }
         ]
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Weinfreunde",
+        "sourceUrl": "https://www.weinfreunde.de/c/rebsorte/cinsault/"
       }
     ],
     "id": "cinsaut",
@@ -28761,7 +28822,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1092578",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cinsaut"
   },
@@ -32289,7 +32350,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Garganega"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "floral",
@@ -32524,6 +32585,14 @@
         "quote": "Ses grappes produisent un vin sec",
         "value": "dry",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Vermentino"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Weinfreunde",
+        "sourceUrl": "https://www.weinfreunde.de/c/rebsorte/vermentino/"
       }
     ],
     "id": "vermentino",
@@ -36220,6 +36289,14 @@
         "quote": "a ridosso del lago di Garda e della Valpolicella ... che nel Valpolicella e nel Bardolino.",
         "value": "IT: Garda",
         "sourceUrl": "https://it.wikipedia.org/wiki/Rondinella_(vitigno)"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinissimus",
+        "sourceUrl": "https://www.vinissimus.com/es/uva/rondinella/"
       }
     ],
     "id": "rondinella",
@@ -36297,7 +36374,7 @@
     },
     "sweetness": null,
     "synonyms": [],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q860892",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rondinella"
   },
@@ -37633,7 +37710,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Canaiolo"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "nutty",
@@ -37844,6 +37921,14 @@
         "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
         "value": "duck",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Société des alcools du Québec (SAQ)",
+        "sourceUrl": "https://www.saq.com/fr/contenu/inspiration/culture-vigne/cepage-savagnin"
       }
     ],
     "id": "savagnin",
@@ -45835,7 +45920,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sercial"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "grape"
@@ -45982,6 +46067,14 @@
             "wine": "Frappato"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Berry Bros. & Rudd",
+        "sourceUrl": "https://www.bbr.com/grape-fp-frappato"
       }
     ],
     "id": "frappato",
@@ -46246,6 +46339,14 @@
             "wine": "1678869914.709"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry-sweet",
+        "factOnly": true,
+        "publisher": "Berry Bros. & Rudd",
+        "sourceUrl": "https://www.bbr.com/grape-gb-grillo"
       }
     ],
     "id": "grillo",
@@ -46348,7 +46449,10 @@
         "url": "https://en.wikipedia.org/wiki/Grillo"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Riddu",
@@ -51859,7 +51963,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "medium",
     "aromas": [
       "nutty"
@@ -52061,6 +52165,14 @@
             "wine": "Epicentro Orange Inzolia Bio"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "iDealwine",
+        "sourceUrl": "https://www.idealwine.com/fr/acheter-du-vin/cepage-ansonica"
       }
     ],
     "id": "ansonica",

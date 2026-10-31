@@ -53,6 +53,15 @@ has the reasons.
   Georgian Wine Association (Mtsvane and Tsolikouri high in alcohol) and
   Swiss Wine (Gamaret with grilled meats and desserts) and Magyar Bor (Irsai Olivér light in body and alcohol, Zierfandler high in alcohol with spicy and Asian dishes, Kadarka with vegetables, stews, pasta, pizza and soups, Hárslevelű soft in acidity) — the fact and its
   link, as for every page that is not openly licensed.
+- **Traits from wine merchants' grape guides**, the shop's page on the
+  grape itself, never a bottle's: The Wine Society (Albariño light-bodied),
+  Berry Bros. & Rudd (Hondarribi Zuri light-bodied, dry, with seafood;
+  Grillo dry to sweet; Frappato high in acidity), Weinfreunde (Cinsault low
+  in tannin, Vermentino high in acidity), the SAQ (Savagnin high in
+  acidity), Vinissimus (Mencía medium-bodied, Rondinella firm in tannin),
+  iDealwine (Ansonica soft in acidity) and Wine.com (Pinot Noir moderate in
+  alcohol) — the fact and its link. Where two shops disagree (Dolcetto's
+  tannin) or give a range, nothing is taken.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.

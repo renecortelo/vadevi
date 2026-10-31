@@ -109,6 +109,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Las guías de uvas de los comerciantes: The Wine Society, Berry Bros. & Rudd, Weinfreunde, la SAQ, Vinissimus, iDealwine y Wine.com (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
+    terms: "factOnly",
+    url: "https://www.bbr.com/grape-hz-hondarribi-zuri",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministero dell'agricoltura (MASAF), Registro nazionale delle varietà di vite: fichas de variedades",
     terms: "factOnly",
     url: "http://catalogoviti.politicheagricole.it/scheda.php?codice=285",
