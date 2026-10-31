@@ -60,8 +60,18 @@ has the reasons.
   in tannin, Vermentino high in acidity), the SAQ (Savagnin high in
   acidity), Vinissimus (Mencía medium-bodied, Rondinella firm in tannin),
   iDealwine (Ansonica soft in acidity) and Wine.com (Pinot Noir moderate in
-  alcohol) — the fact and its link. Where two shops disagree (Dolcetto's
-  tannin) or give a range, nothing is taken.
+  alcohol), Mövenpick Wein (Tempranillo high in tannin; Müller-Thurgau and
+  Palomino light-bodied; Marsanne and Grillo full-bodied) and Vinatis
+  (Colombard full-bodied, Trebbiano with fish, shellfish, pork and poultry)
+  — the fact and its link. Where two shops disagree (Dolcetto's tannin,
+  Merlot's) or give a range, nothing is taken.
+- **And from producers' and wine routes' pages on a grape**, not on one of
+  their wines: Quinta da Alameda (Alfrocheiro medium-bodied, with game, red
+  meat, sausages and cheese; Arinto and Fernão Pires medium-bodied; Baga
+  with suckling pig; Encruzado with seafood and fish), Douloufakis (Mandilari
+  high in acidity), Winemakers of Northern Greece (Xinomavro with lamb, beef
+  and game) and the Península de Setúbal's wine route (Castelão full-bodied,
+  with red meat, game, stews, cheese and sausages).
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.

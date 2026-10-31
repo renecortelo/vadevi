@@ -3899,6 +3899,14 @@
         "quote": "Ist eine alte autochthone Sorte aus Portugal.",
         "value": "PT",
         "sourceUrl": "https://de.wikipedia.org/wiki/Baga_(Rebsorte)"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/baga-caracterizacao-completa-da-casta"
       }
     ],
     "id": "baga",
@@ -3913,7 +3921,9 @@
       "nl": "Baga"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "pork"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -4032,7 +4042,7 @@
     "acidity": "high",
     "alcohol": "medium",
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -4174,6 +4184,54 @@
         "quote": "die jung genießbar, aber auch lagerfähig sind, da sie über eine kräftige Säure verfügen.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Castel%C3%A3o_(Rebsorte)"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Rota de Vinhos da Península de Setúbal",
+        "sourceUrl": "https://loja.rotavinhospsetubal.com/castas-vinho/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Rota de Vinhos da Península de Setúbal",
+        "sourceUrl": "https://loja.rotavinhospsetubal.com/castas-vinho/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Rota de Vinhos da Península de Setúbal",
+        "sourceUrl": "https://loja.rotavinhospsetubal.com/castas-vinho/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "stews",
+        "factOnly": true,
+        "publisher": "Rota de Vinhos da Península de Setúbal",
+        "sourceUrl": "https://loja.rotavinhospsetubal.com/castas-vinho/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Rota de Vinhos da Península de Setúbal",
+        "sourceUrl": "https://loja.rotavinhospsetubal.com/castas-vinho/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "sausages",
+        "factOnly": true,
+        "publisher": "Rota de Vinhos da Península de Setúbal",
+        "sourceUrl": "https://loja.rotavinhospsetubal.com/castas-vinho/"
       }
     ],
     "id": "castelao",
@@ -4188,7 +4246,13 @@
       "pt": "Castelão"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "game",
+      "stews",
+      "cheese",
+      "sausages"
+    ],
     "prominence": 6,
     "regions": [
       {
@@ -4507,7 +4571,7 @@
       "strawberry",
       "spice"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -4643,6 +4707,46 @@
         "quote": "De smaak wordt gedomineerd door zachte tannines, waardoor de wijn makkelijk te drinken is.",
         "value": "low",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Alfrocheiro"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/en/vinho-e-saber/alfrocheiro-grape-variety"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/en/vinho-e-saber/alfrocheiro-grape-variety"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/en/vinho-e-saber/alfrocheiro-grape-variety"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "sausages",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/en/vinho-e-saber/alfrocheiro-grape-variety"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/en/vinho-e-saber/alfrocheiro-grape-variety"
       }
     ],
     "id": "alfrocheiro-preto",
@@ -4657,7 +4761,12 @@
       "pt": "Alfrocheiro Preto"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "game",
+      "red meat",
+      "sausages",
+      "cheese"
+    ],
     "prominence": 7,
     "regions": [
       {
@@ -4994,7 +5103,7 @@
     "aromas": [
       "lemon"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -5152,6 +5261,14 @@
             "wine": "Grande Reserva Branco"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/casta-arinto-a-embaixadora-da-frescura-dos-vinhos-brancos-portugueses"
       },
       {
         "field": "origin",
@@ -5369,6 +5486,22 @@
         "sourceUrl": "https://pt.wikipedia.org/wiki/Encruzado"
       },
       {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/casta-encruzado"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/casta-encruzado"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Encruzado: Portugal",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -5387,7 +5520,10 @@
       "pt": "Encruzado"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "seafood",
+      "fish"
+    ],
     "prominence": 3,
     "regions": [
       {
@@ -5456,7 +5592,7 @@
       "spice",
       "exotic fruit"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -5550,6 +5686,14 @@
         "quote": "De oorsprong ligt in de buurt van de gemeente Bairradas in het westen van de noordelijke regio Beira Baixa.",
         "value": "PT",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Fern%C3%A3o_Pires"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quinta da Alameda",
+        "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/infografia-o-perfil-das-castas-brancas-do-dao"
       }
     ],
     "id": "fernao-pires",
@@ -18981,6 +19125,14 @@
             "wine": "Down The Rabbit Hole 2025 Tempranillo"
           }
         ]
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Mövenpick Wein",
+        "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/tempranillo.html"
       }
     ],
     "id": "tempranillo",
@@ -19146,7 +19298,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q519874",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tempranillo"
   },
@@ -20447,7 +20599,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -20818,6 +20970,14 @@
             "wine": "Mueller Thurgau 2"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Mövenpick Wein",
+        "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/rivaner.html"
       }
     ],
     "id": "muller-thurgau",
@@ -22293,6 +22453,38 @@
         "quote": "Vinos de color amarillo pálido, secos, finos y con nervio.",
         "value": "dry",
         "sourceUrl": "https://web.archive.org/web/20250429165803/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/UGNI_BLANC.pdf"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Vinatis",
+        "sourceUrl": "https://www.vinatis.com/ugni-blanc-cepage"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Vinatis",
+        "sourceUrl": "https://www.vinatis.com/ugni-blanc-cepage"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Vinatis",
+        "sourceUrl": "https://www.vinatis.com/ugni-blanc-cepage"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Vinatis",
+        "sourceUrl": "https://www.vinatis.com/ugni-blanc-cepage"
       }
     ],
     "id": "trebbiano",
@@ -22307,7 +22499,12 @@
       "pt": "Trebbiano"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "shellfish",
+      "pork",
+      "poultry"
+    ],
     "prominence": 25,
     "regions": [],
     "styles": [
@@ -31427,7 +31624,7 @@
     "aromas": [
       "floral"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -31524,6 +31721,14 @@
         "quote": "The dry fortified wines are made from Palomino grapes",
         "value": "dry",
         "sourceUrl": "https://doi.org/10.3390/foods12091911"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Mövenpick Wein",
+        "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/palomino-fino.html"
       }
     ],
     "id": "palomino",
@@ -34623,7 +34828,7 @@
     "aromas": [
       "guava"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -34783,6 +34988,14 @@
         "quote": "c'est le Colombard qui a l'immense avantage de donner, nous le verrons plus loin, presque autant que la Folle, et dont le vin très alcoolique fera à volonté un bon vin de table ou un bon vin de chaudière.",
         "value": "high",
         "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinatis",
+        "sourceUrl": "https://www.vinatis.com/colombard-cepage"
       }
     ],
     "id": "colombard",
@@ -35437,6 +35650,30 @@
         "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007267",
         "place": "Νάουσα",
         "placeId": "gr-naousa"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Winemakers of Northern Greece",
+        "sourceUrl": "https://winemakersofnorthgreece.gr/en/xinomavro-the-greek-ambassador-variety-2/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "beef",
+        "factOnly": true,
+        "publisher": "Winemakers of Northern Greece",
+        "sourceUrl": "https://winemakersofnorthgreece.gr/en/xinomavro-the-greek-ambassador-variety-2/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Winemakers of Northern Greece",
+        "sourceUrl": "https://winemakersofnorthgreece.gr/en/xinomavro-the-greek-ambassador-variety-2/"
       }
     ],
     "id": "xinomavro",
@@ -35451,7 +35688,11 @@
       "nl": "Xinomavro"
     },
     "origin": "GR",
-    "pairings": [],
+    "pairings": [
+      "lamb",
+      "beef",
+      "game"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -43082,7 +43323,7 @@
       "pear",
       "quince"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -43301,6 +43542,14 @@
         "quote": "De wijn past meestal goed bij visgerechten.",
         "value": "fish",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Marsanne_(wit_druivenras)"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Mövenpick Wein",
+        "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/marsanne.html"
       }
     ],
     "id": "marsanne",
@@ -46190,7 +46439,7 @@
       "floral",
       "citrus"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -46347,6 +46596,14 @@
         "factOnly": true,
         "publisher": "Berry Bros. & Rudd",
         "sourceUrl": "https://www.bbr.com/grape-gb-grillo"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Mövenpick Wein",
+        "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/grillo.html"
       }
     ],
     "id": "grillo",
@@ -53229,7 +53486,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "low",
     "aromas": [],
     "body": "low",
@@ -53353,6 +53610,14 @@
         "quote": "Die spätreifende Sorte mit ihren dickschaligen, harten und dunklen Beeren erbringt alkoholarme Weine mit wenig Körper und Struktur, die trocken bis süß ausgebaut werden können.",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Mandilaria"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Douloufakis",
+        "sourceUrl": "https://douloufakis.wine/en/mandilari-variety/"
       },
       {
         "field": "origin",

@@ -158,8 +158,9 @@ const handReadings = (
 /**
  * Facts read from pages that are not openly licensed (`data/kb/web-readings.json`,
  * kept in the private repository only): an interprofessional body's, a
- * school's or a merchant's page about the grape itself, or the grape's
- * single-variety wines as their producers describe them. Each sentence is
+ * school's, a merchant's or a producer's page about the grape itself (never
+ * a page about one of its wines), or the grape's single-variety wines as
+ * their producers describe them. Each sentence is
  * checked word for word against our copy of its page (`.kb-cache/web/<volume>.txt`)
  * exactly as an article's is, and the fact is kept as its value and link
  * alone: the operator's rule for such pages is the fact, never the text. A
