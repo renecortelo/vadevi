@@ -71,7 +71,10 @@ has the reasons.
   with suckling pig; Encruzado with seafood and fish), Douloufakis (Mandilari
   high in acidity), Winemakers of Northern Greece (Xinomavro with lamb, beef
   and game) and the Península de Setúbal's wine route (Castelão full-bodied,
-  with red meat, game, stews, cheese and sausages).
+  with red meat, game, stews, cheese and sausages). Then Bodegas Monje
+  (Listán Negro with aged cheese and grilled meats), Siston Brook (Rondo
+  medium in tannin), Bulgaria's Institute of Vine and Wine (Pamid dry),
+  BurdiVino (Mauzac dry to sweet) and Martel (Malbec medium in acidity).
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.

@@ -3650,6 +3650,22 @@
         "quote": "Автохтонный сорт Канарских островов, где широко распространён, особенно на севере острова Тенерифе.",
         "value": "ES",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%81%D1%82%D0%B0%D0%BD_%D0%9D%D0%B5%D0%B3%D1%80%D0%BE"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Bodegas Monje",
+        "sourceUrl": "https://bodegasmonje.com/en/blog/black-listan-the-red-grape-of-wine/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "grilled meats",
+        "factOnly": true,
+        "publisher": "Bodegas Monje",
+        "sourceUrl": "https://bodegasmonje.com/en/blog/black-listan-the-red-grape-of-wine/"
       }
     ],
     "id": "listan-negro",
@@ -3664,7 +3680,10 @@
       "nl": "Listán negro"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "grilled meats"
+    ],
     "prominence": 6,
     "regions": [
       {
@@ -7155,6 +7174,14 @@
         "sourceUrl": "https://fr.wikipedia.org/wiki/Mauzac_(c%C3%A9page)"
       },
       {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry-sweet",
+        "factOnly": true,
+        "publisher": "BurdiVino",
+        "sourceUrl": "https://www.burdivino.fr/cepage-mauzac/"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Mauzac Blanc: France",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -7232,7 +7259,10 @@
         "url": "https://es.wikipedia.org/wiki/Mauzac_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "Mauzac blanc",
@@ -13828,6 +13858,14 @@
         "sourceUrl": "https://de.wikipedia.org/wiki/Rondo_(Rebsorte)"
       },
       {
+        "field": "tannin",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Siston Brook Vineyard",
+        "sourceUrl": "https://forestlarder.com/our-grapes/"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Rondo: Germany",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -13930,7 +13968,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "medium",
     "wikidataId": "Q116985",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rondo_(grape)"
   },
@@ -21162,7 +21200,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/M%C3%BCller-Thurgau"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [
       "damson",
@@ -21363,6 +21401,14 @@
             "wine": "Sweet Malbec 2"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Martel",
+        "sourceUrl": "https://www.martel.ch/cms/weinwissen/rebsorten/malbec/"
       }
     ],
     "id": "malbec",
@@ -58502,6 +58548,14 @@
         "field": "regions",
         "quote": "It has been cultivated in Bulgaria since the times of the ancient Thracians ... Pamid is also cultivated in North Macedonia, Serbia, Albania, Turkey, Greece, Hungary and Romania.",
         "value": "RO: Romania"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Institute of Vine and Wine – Pleven",
+        "sourceUrl": "https://ive.bg/en/sortove/pamid/"
       }
     ],
     "id": "pamid",
@@ -58582,7 +58636,10 @@
         "url": "https://en.wikipedia.org/wiki/Pamid"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q1099124",
