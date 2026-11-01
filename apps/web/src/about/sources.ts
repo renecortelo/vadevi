@@ -109,7 +109,7 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Las guías de uvas de los comerciantes: The Wine Society, Berry Bros. & Rudd, Weinfreunde, la SAQ, Vinissimus, iDealwine, Wine.com, Mövenpick Wein, Vinatis, BurdiVino y Martel (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
+    name: "Las guías de uvas de los comerciantes: The Wine Society, Berry Bros. & Rudd, Weinfreunde, la SAQ, Vinissimus, iDealwine, Wine.com, Mövenpick Wein, Vinatis, BurdiVino, Martel, House of Townend, Martinez Wines y Baur au Lac Vins (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.bbr.com/grape-hz-hondarribi-zuri",
     what: "traits",

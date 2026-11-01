@@ -83,6 +83,11 @@ has the reasons.
   Concord, Rondo, Croatina, Mencía, Airén, Colombard, Sémillon, Ancellotta
   and Fetească Neagră go with. Ranges («light to medium», «13–15 %»), a
   region's style and two levels for one grape on the same site are left out.
+- **More merchants' grape pages**: House of Townend (Touriga Franca
+  full-bodied and high in acidity; Monica low in acidity, high in alcohol;
+  Žilavka dry), Martinez Wines (Molinara high in acidity, Bobal full-bodied,
+  Boal — Malvasia Fina — moderate in acidity) and Baur au Lac Vins (Grenache
+  Gris full-bodied). Their bottles' notes on the same pages are not used.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.
