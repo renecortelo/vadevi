@@ -31931,7 +31931,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "floral"
     ],
@@ -32040,6 +32040,14 @@
         "factOnly": true,
         "publisher": "Mövenpick Wein",
         "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/palomino-fino.html"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Consejo Regulador D.O. Ribeiro",
+        "sourceUrl": "https://www.ribeiro.wine/types-of-grapes/palomino-en"
       }
     ],
     "id": "palomino",
@@ -36458,7 +36466,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "floral",
       "jasmine"
@@ -36632,6 +36640,14 @@
         "quote": "Bora diszkréten muskotályos illatú vagy virágillatú (jázmin, petúnia, kökörcsin)",
         "value": "jasmine",
         "sourceUrl": "https://hu.wikipedia.org/wiki/Kir%C3%A1lyle%C3%A1nyka"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Indigene Wines",
+        "sourceUrl": "https://indigenewines.com/feteasca-regala-grape/"
       }
     ],
     "id": "feteasca-regala",
@@ -37782,6 +37798,14 @@
         "quote": "Az egri leánykát szárnyasokhoz, borjú- és báránysülthöz ajánlják",
         "value": "lamb",
         "sourceUrl": "https://hu.wikipedia.org/wiki/Le%C3%A1nyka"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Indigene Wines",
+        "sourceUrl": "https://indigenewines.com/feteasca-alba-grape/"
       }
     ],
     "id": "feteasca-alba",
@@ -37862,7 +37886,10 @@
         "url": "https://en.wikipedia.org/wiki/Feteasc%C4%83_alb%C4%83"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Baratik",
@@ -46466,7 +46493,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -46522,6 +46549,16 @@
         "quote": "Diese Rebsorte erbringt die trockensten Weine Madeiras.",
         "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Sercial"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Madeira Wine Company",
+        "sourceUrl": "https://madeirawinecompany.com/en/madeira/grape-varieties.html",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
       }
     ],
     "id": "sercial",
@@ -48098,6 +48135,16 @@
             "wine": "Marzemino Veneto"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Trentino Marketing (Taste Trentino)",
+        "sourceUrl": "https://pimcore.tastetrentino.it/en/products/marzemino",
+        "place": "Trentino",
+        "placeId": "it-trentino"
       }
     ],
     "id": "marzemino",
@@ -48182,7 +48229,10 @@
         "url": "https://en.wikipedia.org/wiki/Marzemino"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Balsamina nera",
@@ -57938,7 +57988,7 @@
       "apricot",
       "dried fruit"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -58038,6 +58088,16 @@
         "factOnly": true,
         "publisher": "Martinez Wines",
         "sourceUrl": "https://martinez.co.uk/browse/grape_variety/malvasia-fina/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Madeira Wine Company",
+        "sourceUrl": "https://madeirawinecompany.com/en/madeira/grape-varieties.html",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
       }
     ],
     "id": "boal",

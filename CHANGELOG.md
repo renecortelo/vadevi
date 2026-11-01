@@ -88,6 +88,11 @@ has the reasons.
   Žilavka dry), Martinez Wines (Molinara high in acidity, Bobal full-bodied,
   Boal — Malvasia Fina — moderate in acidity) and Baur au Lac Vins (Grenache
   Gris full-bodied). Their bottles' notes on the same pages are not used.
+- **And from wine bodies, a producer and a merchant on a grape**: Madeira
+  Wine Company (Sercial light-bodied and Boal medium-bodied, as Madeira's),
+  Taste Trentino (Marzemino dry, as Trentino's), the D.O. Ribeiro's
+  regulating council (Palomino low in alcohol) and Indigene Wines (Fetească
+  Albă dry, Fetească Regală low in alcohol).
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.
