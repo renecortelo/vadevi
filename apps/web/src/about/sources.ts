@@ -123,6 +123,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Vinerra, perfiles de uvas y de vinos de su escuela (cada uno enlazado en la ficha de la uva)",
+    terms: "factOnly",
+    url: "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministero dell'agricoltura (MASAF), Registro nazionale delle varietà di vite: fichas de variedades",
     terms: "factOnly",
     url: "http://catalogoviti.politicheagricole.it/scheda.php?codice=285",

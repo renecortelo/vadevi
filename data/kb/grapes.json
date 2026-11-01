@@ -1790,6 +1790,30 @@
             "wine": "2023 Lakeshore Semillon"
           }
         ]
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/semillon-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/semillon-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/semillon-an-in-depth-wine-profile"
       }
     ],
     "id": "semillon",
@@ -1804,7 +1828,11 @@
       "pt": "Sémillon"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "seafood",
+      "shellfish",
+      "fish"
+    ],
     "prominence": 26,
     "regions": [],
     "styles": [
@@ -1890,7 +1918,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "low",
     "aromas": [
       "fruity"
     ],
@@ -2041,6 +2069,14 @@
         "quote": "Сік має досить високу кислотність.",
         "value": "high",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B5%D1%80%D0%B0"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/glera-an-in-depth-wine-profile"
       }
     ],
     "id": "glera",
@@ -7322,7 +7358,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mauzac_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "red fruit",
@@ -7429,6 +7465,14 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Montefalco_Sagrantino",
         "place": "Montefalco Sagrantino",
         "placeId": "it-montefalco-sagrantino"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/sagrantino-discovering-the-bold-flavors-of-umbrias-finest-wine"
       }
     ],
     "id": "sagrantino",
@@ -9923,6 +9967,38 @@
         "factOnly": true,
         "publisher": "Vinissimus",
         "sourceUrl": "https://www.vinissimus.com/es/uva/mencia/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "duck",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
       }
     ],
     "id": "mencia",
@@ -9937,7 +10013,12 @@
       "pt": "Mencia"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "lamb",
+      "pork",
+      "duck",
+      "game"
+    ],
     "prominence": 13,
     "regions": [
       {
@@ -11864,6 +11945,30 @@
         "field": "sweetness",
         "quote": "Traditionally, most commercially produced Concord wines are sweet, but dry versions are possible",
         "value": "dry-sweet"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/concord-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "grilled meats",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/concord-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "sausages",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/concord-an-in-depth-wine-profile"
       }
     ],
     "id": "concord",
@@ -11878,7 +11983,10 @@
       "it": "Concord"
     },
     "origin": "US",
-    "pairings": [],
+    "pairings": [
+      "grilled meats",
+      "sausages"
+    ],
     "prominence": 16,
     "regions": [
       {
@@ -11948,7 +12056,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q393047",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Concord_grape"
   },
@@ -12023,6 +12131,46 @@
         "field": "regions",
         "quote": "They are most commonly found in the United States in New York, Pennsylvania, New Jersey, Michigan, Washington, and Ohio, and are also grown in Ontario in Canada ... principally in the states of São Paulo, where the variety first occurred in 1933, and Rio Grande do Sul",
         "value": "BR: Rio Grande do Sul"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "medium-sweet",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soft cheese",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "desserts",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "chicken",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
       }
     ],
     "id": "niagara",
@@ -12037,7 +12185,12 @@
       "it": "Niagara"
     },
     "origin": "US",
-    "pairings": [],
+    "pairings": [
+      "soft cheese",
+      "desserts",
+      "chicken",
+      "seafood"
+    ],
     "prominence": 7,
     "regions": [
       {
@@ -12105,7 +12258,10 @@
         "url": "https://en.wikipedia.org/wiki/Niagara_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "medium",
+      "to": "sweet"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q392699",
@@ -13787,7 +13943,7 @@
       "cherry",
       "blackberry"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -13866,6 +14022,46 @@
         "sourceUrl": "https://forestlarder.com/our-grapes/"
       },
       {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "beef",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Rondo: Germany",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -13884,7 +14080,12 @@
       "pt": "Rondo"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "beef",
+      "lamb",
+      "game"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -18029,7 +18230,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "black pepper",
       "tobacco",
@@ -18217,6 +18418,14 @@
         "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001301",
         "place": "Orléans-Cléry",
         "placeId": "fr-orleans-clery"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/cabernet-franc-an-in-depth-wine-profile"
       }
     ],
     "id": "cabernet-franc",
@@ -25231,7 +25440,7 @@
       "violet",
       "leather"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -25384,6 +25593,14 @@
             "wine": "Sutherland Petit Verdot Reserve 2015"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-petit-verdot-grape-varietal-main-characteristics-and-styles"
       }
     ],
     "id": "petit-verdot",
@@ -33386,6 +33603,14 @@
         "quote": "Estes vinhos acompanham muito bem pratos de carnes vermelhas, com molhos fortes.",
         "value": "red meat",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Tannat"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/tannat-an-in-depth-wine-profile"
       }
     ],
     "id": "tannat",
@@ -33485,7 +33710,10 @@
         "url": "https://es.wikipedia.org/wiki/Tannat_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Harriague",
@@ -35042,6 +35270,22 @@
         "factOnly": true,
         "publisher": "Vinatis",
         "sourceUrl": "https://www.vinatis.com/colombard-cepage"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/colombard-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "sushi",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/colombard-an-in-depth-wine-profile"
       }
     ],
     "id": "colombard",
@@ -35056,7 +35300,10 @@
       "pt": "Colombard"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "seafood",
+      "sushi"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -37105,6 +37352,30 @@
         "quote": "wird Airén auch zu frischen, trockenen, schnell zu trinkenden Weißweinen vergoren",
         "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Air%C3%A9n"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "white fish",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/discover-the-secrets-of-airen-the-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soft cheese",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/discover-the-secrets-of-airen-the-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "chicken",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/discover-the-secrets-of-airen-the-in-depth-wine-profile"
       }
     ],
     "id": "airen",
@@ -37119,7 +37390,11 @@
       "pt": "Airén"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "white fish",
+      "soft cheese",
+      "chicken"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -40627,7 +40902,7 @@
       "bitter almond",
       "citrus"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -40714,6 +40989,14 @@
         "quote": "Сухі вина вживаються у вигляді аперитиву, гарно поєднуються з ризото, м'якими сирами, рибними стравами та стравами з морепродуктів",
         "value": "seafood",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D1%96%D0%BE"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/verdicchio-an-in-depth-wine-profile-g73kq"
       }
     ],
     "id": "verdicchio",
@@ -41434,6 +41717,46 @@
         "quote": "Son raisin donne des vins colorés, tanniques, assez intenses en saveurs, et souvent aptes à la garde.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "stews",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "duck",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
       }
     ],
     "id": "feteasca-neagra",
@@ -41448,7 +41771,13 @@
       "pt": "Fetească neagră"
     },
     "origin": "RO",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "lamb",
+      "stews",
+      "game",
+      "duck"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -46370,6 +46699,14 @@
         "factOnly": true,
         "publisher": "Berry Bros. & Rudd",
         "sourceUrl": "https://www.bbr.com/grape-fp-frappato"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/frappato-an-in-depth-wine-profile"
       }
     ],
     "id": "frappato",
@@ -46435,7 +46772,10 @@
         "url": "https://en.wikipedia.org/wiki/Frappato"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Frappato di Vittoria",
@@ -48315,7 +48655,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cardinal_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [],
     "body": null,
@@ -48355,6 +48695,38 @@
         "field": "regions",
         "quote": "is an indigenous red grape cultivated on the island of Cyprus",
         "value": "CY: Cyprus"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "grilled meats",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "sausages",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
       }
     ],
     "id": "mavro",
@@ -48369,7 +48741,11 @@
       "nl": "Mavro"
     },
     "origin": "CY",
-    "pairings": [],
+    "pairings": [
+      "grilled meats",
+      "lamb",
+      "sausages"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -51085,6 +51461,38 @@
         "field": "regions",
         "quote": "on the south slopes of the Troodos mountain range are planted with this grape variety ... in the hotter wine regions in Australia like the Barossa and the Riverland",
         "value": "AU: Riverland"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry-sweet",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soft cheese",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
       }
     ],
     "id": "xynisteri",
@@ -51099,7 +51507,11 @@
       "pt": "Xynisteri"
     },
     "origin": "CY",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "shellfish",
+      "soft cheese"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -51157,7 +51569,10 @@
         "url": "https://es.wikipedia.org/wiki/Xynisteri"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "xinisteri",
@@ -54005,7 +54420,7 @@
     "acidity": "low",
     "alcohol": "medium",
     "aromas": [],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -54126,6 +54541,38 @@
         "quote": "Le cépage « Ancellotta » provient du nord de l’Italie.",
         "value": "IT",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Ancellotta"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "steak",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "beef",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
       }
     ],
     "id": "ancellotta",
@@ -54140,7 +54587,11 @@
       "pt": "Ancellotta"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "steak",
+      "beef"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -54473,7 +54924,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -54552,6 +55003,38 @@
         "quote": "Le cépage Croatina provient du nord de l'Italie.",
         "value": "IT",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Croatina"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pizza",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pasta",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "vegetables",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
       }
     ],
     "id": "croatina",
@@ -54566,7 +55049,11 @@
       "pt": "Croatina"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "pizza",
+      "pasta",
+      "vegetables"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -56516,6 +57003,14 @@
             "wine": "004 Acolon Trocken Bio"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry-medium",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/wines/acolon-an-in-depth-wine-profile"
       }
     ],
     "id": "acolon",
@@ -56582,7 +57077,10 @@
         "url": "https://es.wikipedia.org/wiki/Acolon"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "medium"
+    },
     "synonyms": [],
     "tannin": "low",
     "wikidataId": "Q342037",

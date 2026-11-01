@@ -75,6 +75,14 @@ has the reasons.
   (Listán Negro with aged cheese and grilled meats), Siston Brook (Rondo
   medium in tannin), Bulgaria's Institute of Vine and Wine (Pamid dry),
   BurdiVino (Mauzac dry to sweet) and Martel (Malbec medium in acidity).
+- **And from Vinerra's school profiles of a grape and its wines**: body for
+  Rondo, Croatina and Verdicchio (medium), Petit Verdot and Ancellotta
+  (full); Mavro and Sagrantino's acidity, Concord's low tannin, Cabernet
+  Franc's moderate alcohol and Glera's low; dry or sweet for Xynisteri,
+  Niagara, Acolon, Frappato and Tannat; and what Mavro, Xynisteri, Niagara,
+  Concord, Rondo, Croatina, Mencía, Airén, Colombard, Sémillon, Ancellotta
+  and Fetească Neagră go with. Ranges («light to medium», «13–15 %»), a
+  region's style and two levels for one grape on the same site are left out.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.
