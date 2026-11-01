@@ -13195,7 +13195,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "herbs",
@@ -13344,6 +13344,14 @@
         "quote": "Сухі вина з грекетто гарно поєднуються з супами, пастою, морепродуктами, білим м'ясом",
         "value": "white meat",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D0%BA%D0%B5%D1%82%D1%82%D0%BE"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinissimus",
+        "sourceUrl": "https://www.vinissimus.com/es/uva/grechetto/"
       },
       {
         "field": "origin",
@@ -32746,6 +32754,14 @@
             "wine": "Garga Garganega"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry-sweet",
+        "factOnly": true,
+        "publisher": "Vinissimus",
+        "sourceUrl": "https://www.vinissimus.com/es/uva/garganega/"
       }
     ],
     "id": "garganega",
@@ -32806,7 +32822,10 @@
         "url": "https://es.wikipedia.org/wiki/Garganega"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
     "synonyms": [
       {
         "name": "D'Oro",
@@ -47499,7 +47518,7 @@
     "aromas": [
       "mineral"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -47558,6 +47577,14 @@
         "factOnly": true,
         "publisher": "Martinez Wines",
         "sourceUrl": "https://martinez.co.uk/browse/grape_variety/molinara/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Vinissimus",
+        "sourceUrl": "https://www.vinissimus.com/es/uva/molinara/"
       }
     ],
     "id": "molinara",
@@ -55036,7 +55063,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Athiri"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": null,
     "aromas": [
       "fruity"
@@ -55152,6 +55179,14 @@
         "factOnly": true,
         "publisher": "Vinerra",
         "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "AIS Lombardia (Associazione Italiana Sommelier), ViniPlus",
+        "sourceUrl": "https://www.aislombardia.it/media2/libreria/allegati/ViniPlus24_specialeVitigni_Croatina.pdf"
       }
     ],
     "id": "croatina",
@@ -57887,6 +57922,14 @@
         "field": "regions",
         "quote": "around the villages of Castagnole Monferrato ... The grape is also grown to some extent in the neighboring province of Alessandria",
         "value": "IT: Alessandria"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Vinissimus",
+        "sourceUrl": "https://www.vinissimus.com/es/uva/ruche/"
       }
     ],
     "id": "ruche",
@@ -57954,7 +57997,10 @@
         "url": "https://en.wikipedia.org/wiki/Ruch%C3%A9"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Rouche",

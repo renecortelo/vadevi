@@ -93,6 +93,10 @@ has the reasons.
   Taste Trentino (Marzemino dry, as Trentino's), the D.O. Ribeiro's
   regulating council (Palomino low in alcohol) and Indigene Wines (Fetească
   Albă dry, Fetească Regală low in alcohol).
+- **And Vinissimus's grape pages and the Lombardy sommeliers**: Grechetto
+  high in acidity, Molinara light-bodied, Ruché dry and Garganega dry to
+  sweet (Vinissimus); Croatina low in acidity, from AIS Lombardia's
+  ViniPlus magazine.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.

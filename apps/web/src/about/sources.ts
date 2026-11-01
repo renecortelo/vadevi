@@ -130,6 +130,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "AIS Lombardia (Associazione Italiana Sommelier), revista ViniPlus: artículos sobre una uva (cada uno enlazado en la ficha de la uva)",
+    terms: "factOnly",
+    url: "https://www.aislombardia.it/media2/libreria/allegati/ViniPlus24_specialeVitigni_Croatina.pdf",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministero dell'agricoltura (MASAF), Registro nazionale delle varietà di vite: fichas de variedades",
     terms: "factOnly",
     url: "http://catalogoviti.politicheagricole.it/scheda.php?codice=285",
