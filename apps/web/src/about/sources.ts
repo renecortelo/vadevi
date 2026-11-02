@@ -165,6 +165,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Decanter World Wine Awards, resultados: solo las cifras que cada bodega declaró al inscribir su vino (grado alcohólico, uva al 100 %), nunca la nota ni la medalla del jurado; un vino por bodega y un dato de la uva solo cuando tres bodegas o más y dos tercios de ellas coinciden",
+    terms: "factOnly",
+    url: "https://awards.decanter.com/DWWA/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministerio de Agricultura, Pesca y Alimentación, exposición «La vid»: fichas de variedades (copia del Internet Archive)",
     terms: "reuseCiting",
     url: "https://web.archive.org/web/2023/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",

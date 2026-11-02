@@ -106,6 +106,13 @@ has the reasons.
   producers' sheets or more: Vinchio Vaglio, La Miraja and Tenuta Montemagno
   (14–15 %); six Szekszárd and other Hungarian wineries' Kadarka in Wines of
   Hungary's fair catalogues (11–13.2 %, under 1.5 g/l of sugar).
+- **Alcohol for eighteen more grapes, from the figures wineries entered in
+  the Decanter World Wine Awards**: one single-variety wine per producer, up
+  to 25, and a level only when two thirds of them or more agree. High for
+  Aglianico, Malbec, Mavrud and Tinta Amarela; moderate for Arneis, Bacchus,
+  Encruzado, Erbaluce, Fernão Pires, Gamaret, Goruli Mtsvane, Grechetto,
+  Kisi, Mavro, Neuburger, Pinot Meunier, Xinomavro and Xynisteri. The jury's
+  notes and medals are not used.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.
