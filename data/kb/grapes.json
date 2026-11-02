@@ -567,7 +567,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Parellada"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "red fruit"
@@ -668,6 +668,14 @@
         "quote": "Produce vinos de color intenso y graduación alcohólica alta.",
         "value": "high",
         "sourceUrl": "https://es.wikipedia.org/wiki/Sumoll"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Institut d'Estudis Catalans (IEC), Dossiers Agraris",
+        "sourceUrl": "https://revistes.iec.cat/index.php/DA/article/download/78875/135139"
       }
     ],
     "id": "sumoll",
@@ -3434,7 +3442,9 @@
   {
     "acidity": "high",
     "alcohol": "high",
-    "aromas": [],
+    "aromas": [
+      "black pepper"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -3501,6 +3511,14 @@
         "quote": "Es una variedad con mucha materia colorante, con una acidez notable y con gran cantidad de azúcar y tanino.",
         "value": "high",
         "sourceUrl": "https://es.wikipedia.org/wiki/Prieto_picudo"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "black pepper",
+        "factOnly": true,
+        "publisher": "Vine to Wine Circle",
+        "sourceUrl": "https://www.vinetowinecircle.com/en/castas_post/prieto-picudo-3/"
       },
       {
         "field": "origin",
@@ -3868,7 +3886,11 @@
   {
     "acidity": "high",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity",
+      "mulberry",
+      "honey"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -3986,6 +4008,30 @@
         "factOnly": true,
         "publisher": "Quinta da Alameda",
         "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/baga-caracterizacao-completa-da-casta"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "fruity",
+        "factOnly": true,
+        "publisher": "Vine to Wine Circle",
+        "sourceUrl": "https://www.vinetowinecircle.com/en/castas_post/baga-3/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "mulberry",
+        "factOnly": true,
+        "publisher": "Vine to Wine Circle",
+        "sourceUrl": "https://www.vinetowinecircle.com/en/castas_post/baga-3/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "honey",
+        "factOnly": true,
+        "publisher": "Vine to Wine Circle",
+        "sourceUrl": "https://www.vinetowinecircle.com/en/castas_post/baga-3/"
       }
     ],
     "id": "baga",

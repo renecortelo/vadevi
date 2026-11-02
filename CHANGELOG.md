@@ -97,6 +97,11 @@ has the reasons.
   high in acidity, Molinara light-bodied, Ruché dry and Garganega dry to
   sweet (Vinissimus); Croatina low in acidity, from AIS Lombardia's
   ViniPlus magazine.
+- **Sumoll's high acidity**, from the Institut d'Estudis Catalans' Dossiers
+  Agraris («l'elevada acidesa», one of the two traits that define it), and
+  **aromas for Baga and Prieto Picudo** from Vine to Wine Circle's variety
+  sheets. Their «potential alcohol» is the grape's, not the wine's, and is
+  left out.
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.

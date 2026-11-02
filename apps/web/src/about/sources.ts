@@ -137,6 +137,20 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Institut d'Estudis Catalans, Dossiers Agraris: «Descripció del tast de vins elaborats amb la varietat sumoll»",
+    terms: "factOnly",
+    url: "https://revistes.iec.cat/index.php/DA/article/view/78875",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Vine to Wine Circle, fichas de variedades de la península ibérica (cada una enlazada en la ficha de la uva)",
+    terms: "factOnly",
+    url: "https://www.vinetowinecircle.com/en/castas_post/baga-3/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministero dell'agricoltura (MASAF), Registro nazionale delle varietà di vite: fichas de variedades",
     terms: "factOnly",
     url: "http://catalogoviti.politicheagricole.it/scheda.php?codice=285",
