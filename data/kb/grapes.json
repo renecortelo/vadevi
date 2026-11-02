@@ -26518,7 +26518,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity",
       "spice"
@@ -26713,6 +26713,98 @@
         "factOnly": true,
         "publisher": "Magyar Bor (Wines of Hungary)",
         "sourceUrl": "https://bor.hu/en/kadarka/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/sebestyen-kadarka-2023/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 11,
+            "producer": "Sebestyén",
+            "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/sebestyen-kadarka-2023/",
+            "wine": "Sebestyén Kadarka 2023"
+          },
+          {
+            "abv": 13,
+            "producer": "Lajvér",
+            "sourceUrl": "https://2025.wineparis.bor.hu/wines/lajver-kadarka-2023",
+            "wine": "Lajvér Kadarka 2023"
+          },
+          {
+            "abv": 13,
+            "producer": "Takler",
+            "sourceUrl": "https://wineparis.bor.hu/wines/takler-orokseg-heritage-kadarka-2024",
+            "wine": "Takler Örökség (Heritage) Kadarka 2024"
+          },
+          {
+            "abv": 13.18,
+            "producer": "Eszterbauer",
+            "sourceUrl": "https://wineparis.bor.hu/wines/eszterbauer-nagyapam-kadarka-2024",
+            "wine": "Eszterbauer Nagyapám Kadarka 2024"
+          },
+          {
+            "abv": 12.95,
+            "producer": "Vida",
+            "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/vida-bonsai-100-year-old-vines-kadarka-2017/",
+            "wine": "Vida Bonsai 100 Year Old Vines Kadarka 2017"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vesztergombi",
+            "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/vesztergombi-kadarka-2022/",
+            "wine": "Vesztergombi Kadarka 2022"
+          }
+        ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/sebestyen-kadarka-2023/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Sebestyén",
+            "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/sebestyen-kadarka-2023/",
+            "sugar": 1.1,
+            "wine": "Sebestyén Kadarka 2023"
+          },
+          {
+            "producer": "Lajvér",
+            "sourceUrl": "https://2025.wineparis.bor.hu/wines/lajver-kadarka-2023",
+            "sugar": 1.4,
+            "wine": "Lajvér Kadarka 2023"
+          },
+          {
+            "producer": "Takler",
+            "sourceUrl": "https://wineparis.bor.hu/wines/takler-orokseg-heritage-kadarka-2024",
+            "sugar": 0.9,
+            "wine": "Takler Örökség (Heritage) Kadarka 2024"
+          },
+          {
+            "producer": "Eszterbauer",
+            "sourceUrl": "https://wineparis.bor.hu/wines/eszterbauer-nagyapam-kadarka-2024",
+            "sugar": 1.1,
+            "wine": "Eszterbauer Nagyapám Kadarka 2024"
+          },
+          {
+            "producer": "Vida",
+            "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/vida-bonsai-100-year-old-vines-kadarka-2017/",
+            "sugar": 1.1,
+            "wine": "Vida Bonsai 100 Year Old Vines Kadarka 2017"
+          },
+          {
+            "producer": "Vesztergombi",
+            "sourceUrl": "https://osakaexpo.winesofhungary.hu/wines/vesztergombi-kadarka-2022/",
+            "sugar": 0.8,
+            "wine": "Vesztergombi Kadarka 2022"
+          }
+        ]
       }
     ],
     "id": "kadarka",
@@ -26798,7 +26890,10 @@
         "url": "https://es.wikipedia.org/wiki/Kadarka"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Backator-Szőlő",
@@ -57880,7 +57975,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "black pepper",
       "wild berries",
@@ -57976,6 +58071,34 @@
         "factOnly": true,
         "publisher": "Vinissimus",
         "sourceUrl": "https://www.vinissimus.com/es/uva/ruche/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://cdn.vinchio.com/wp-content/uploads/2023/09/VV-scheda-Rebus-ITA-1.pdf",
+        "value": "high",
+        "wines": [
+          {
+            "abv": 14.5,
+            "producer": "Vinchio Vaglio",
+            "sourceUrl": "https://cdn.vinchio.com/wp-content/uploads/2023/09/VV-scheda-Rebus-ITA-1.pdf",
+            "wine": "Rebus, Ruchè di Castagnole Monferrato"
+          },
+          {
+            "abv": 14,
+            "producer": "La Miraja",
+            "sourceUrl": "https://static1.squarespace.com/static/554fbb77e4b0425f6a89841f/t/5f616d8c6cae573293ae34e2/1600220557907/La+Miraja+Ruche+Tech+Sheet.pdf",
+            "wine": "Ruché di Castagnole Monferrato"
+          },
+          {
+            "abv": 15,
+            "producer": "Tenuta Montemagno",
+            "sourceUrl": "https://www.ice.it/en/my-home/repository/vetrine/384282/1605887346.9371.pdf",
+            "wine": "Nobilis, Ruchè di Castagnole Monferrato"
+          }
+        ]
       }
     ],
     "id": "ruche",

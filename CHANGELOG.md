@@ -102,6 +102,10 @@ has the reasons.
   **aromas for Baga and Prieto Picudo** from Vine to Wine Circle's variety
   sheets. Their «potential alcohol» is the grape's, not the wine's, and is
   left out.
+- **Ruché high in alcohol, Kadarka moderate and dry**, each from three
+  producers' sheets or more: Vinchio Vaglio, La Miraja and Tenuta Montemagno
+  (14–15 %); six Szekszárd and other Hungarian wineries' Kadarka in Wines of
+  Hungary's fair catalogues (11–13.2 %, under 1.5 g/l of sugar).
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.
