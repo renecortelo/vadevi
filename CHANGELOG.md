@@ -131,6 +131,8 @@ has the reasons.
   least three producers' sheets for their single-variety Freisa say: Terre
   dei Santi, Cascina Gilli, Cascina Quarino, La Montagnetta and Tamburnin, as
   the Più Freisa producers' association publishes them, and Vinchio Vaglio.
+- **Castelão's aromas, from the Península de Setúbal wine commission's page
+  on its grapes**: cherry, plum, blackberry and raspberry.
 - **Pairings for six more grapes, each from three producers' sheets or
   more**: Graciano with red meat (Marqués del Atrio, Bodegas Paiva,
   Navajas); Fernão Pires with fish and seafood (Casal Monteiro, Quinta Vale

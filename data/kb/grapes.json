@@ -4288,7 +4288,12 @@
   {
     "acidity": "high",
     "alcohol": "medium",
-    "aromas": [],
+    "aromas": [
+      "cherry",
+      "plum",
+      "blackberry",
+      "raspberry"
+    ],
     "body": "high",
     "color": "red",
     "evidence": [
@@ -4479,6 +4484,38 @@
         "factOnly": true,
         "publisher": "Rota de Vinhos da Península de Setúbal",
         "sourceUrl": "https://loja.rotavinhospsetubal.com/castas-vinho/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "cherry",
+        "factOnly": true,
+        "publisher": "Comissão Vitivinícola Regional da Península de Setúbal",
+        "sourceUrl": "https://vinhosdapeninsuladesetubal.org/vinhos/castas/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "plum",
+        "factOnly": true,
+        "publisher": "Comissão Vitivinícola Regional da Península de Setúbal",
+        "sourceUrl": "https://vinhosdapeninsuladesetubal.org/vinhos/castas/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "blackberry",
+        "factOnly": true,
+        "publisher": "Comissão Vitivinícola Regional da Península de Setúbal",
+        "sourceUrl": "https://vinhosdapeninsuladesetubal.org/vinhos/castas/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "raspberry",
+        "factOnly": true,
+        "publisher": "Comissão Vitivinícola Regional da Península de Setúbal",
+        "sourceUrl": "https://vinhosdapeninsuladesetubal.org/vinhos/castas/"
       }
     ],
     "id": "castelao",

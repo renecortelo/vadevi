@@ -221,6 +221,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Comissão Vitivinícola Regional da Península de Setúbal, «Castas»: solo el dato (aromas del Castelão), con su enlace",
+    terms: "factOnly",
+    url: "https://vinhosdapeninsuladesetubal.org/vinhos/castas/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministerio de Agricultura, Pesca y Alimentación, exposición «La vid»: fichas de variedades (copia del Internet Archive)",
     terms: "reuseCiting",
     url: "https://web.archive.org/web/2023/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",
