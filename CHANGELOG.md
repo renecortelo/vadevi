@@ -112,7 +112,23 @@ has the reasons.
   Aglianico, Malbec, Mavrud and Tinta Amarela; moderate for Arneis, Bacchus,
   Encruzado, Erbaluce, Fernão Pires, Gamaret, Goruli Mtsvane, Grechetto,
   Kisi, Mavro, Neuburger, Pinot Meunier, Xinomavro and Xynisteri. The jury's
-  notes and medals are not used.
+  notes and medals are not used. Three more by the same rule, found under
+  other names: Aligoté, Garnacha Roja (Grenache Gris) and Mauzac, all
+  moderate.
+- **Dry, from the residual sugar on producers' technical sheets**, three
+  producers or more for each and every figure under 4 g/l but one: Arinto,
+  Alicante Bouschet, Trincadeira, Encruzado, Baga and Carmenère. Some come
+  from the sheets wineries publish in Vinhos do Alentejo's wine catalogue and
+  on the Rota da Bairrada. Sheets that give the sugar in g/dm³, the same as
+  g/l, now count.
+- **And from merchants' and a wine body's grape pages**: Enotria&Coe
+  (Ciliegiolo and Marzemino medium-bodied with low tannin, Dolcetto's firm
+  tannin, Trepat's low tannin, Grillo's high acidity, Loureira light and dry,
+  Petit Manseng with foie gras, cheese and spicy dishes), Stanley's Wet Goods
+  (aromas for Grolleau and Listán Prieto, low tannin for Listán Prieto and
+  Agiorgitiko, Souzão light-bodied), Italy Abroad (Rondinella medium-bodied),
+  Tannico (Monica's low tannin and blackberry and plum) and Wines of Germany
+  (Dornfelder full-bodied).
 - **Mencía's tannin, from the Ribeira Sacra's own specification**: «ligeros
   taninos dulces», as the EU register's document describes its red wines;
   the card says it is said of the Ribeira Sacra's wine.

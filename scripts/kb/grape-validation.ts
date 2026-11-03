@@ -141,10 +141,15 @@ export function wsetAlcohol(abv: number): Level {
   return abv < 11 ? "low" : abv < 14 ? "medium" : "high";
 }
 
-/** The residual sugar a technical sheet gives, in grams a litre: «2,5 g/l». */
+/**
+ * The residual sugar a technical sheet gives, in grams a litre: «2,5 g/l»,
+ * or a cubic decimetre, the same volume: «1,4 gr / dm3».
+ */
 export function sugarFigure(quote: string): number | null {
   const found =
-    /(\d{1,3}(?:[.,]\d{1,2})?)\s?(?:g|gr|gramm?i?|grams?)\s?(?:\/\s?l|\/lt|per lit)/i.exec(quote);
+    /(\d{1,3}(?:[.,]\d{1,2})?)\s?(?:g|gr|gramm?i?|grams?)\s?(?:\/\s?(?:l|dm3|dm³)|\/lt|per lit)/i.exec(
+      quote,
+    );
   return found === null ? null : Number(found[1]!.replace(",", "."));
 }
 

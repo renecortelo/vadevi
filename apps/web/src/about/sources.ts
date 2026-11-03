@@ -102,6 +102,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Wines of Germany (Deutsches Weininstitut en el Reino Unido), German grape varieties",
+    terms: "factOnly",
+    url: "https://winesofgermany.co.uk/grape/dornfelder/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Swiss Wine Promotion, «Wine grapes»",
     terms: "factOnly",
     url: "https://www.swisswine.com/en/swiss-vineyards/wine-grapes",
@@ -109,7 +116,7 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Las guías de uvas de los comerciantes: The Wine Society, Berry Bros. & Rudd, Weinfreunde, la SAQ, Vinissimus, iDealwine, Wine.com, Mövenpick Wein, Vinatis, BurdiVino, Martel, House of Townend, Martinez Wines, Baur au Lac Vins e Indigene Wines (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
+    name: "Las guías de uvas de los comerciantes: The Wine Society, Berry Bros. & Rudd, Weinfreunde, la SAQ, Vinissimus, iDealwine, Wine.com, Mövenpick Wein, Vinatis, BurdiVino, Martel, House of Townend, Martinez Wines, Baur au Lac Vins, Indigene Wines, Enotria&Coe, Italy Abroad, Stanley's Wet Goods y Tannico (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.bbr.com/grape-hz-hondarribi-zuri",
     what: "traits",
@@ -168,6 +175,13 @@ export const sources: Source[] = [
     name: "Decanter World Wine Awards, resultados: solo las cifras que cada bodega declaró al inscribir su vino (grado alcohólico, uva al 100 %), nunca la nota ni la medalla del jurado; un vino por bodega y un dato de la uva solo cuando tres bodegas o más y dos tercios de ellas coinciden",
     terms: "factOnly",
     url: "https://awards.decanter.com/DWWA/",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Comissão Vitivinícola Regional Alentejana (Vinhos do Alentejo), catálogo de vinos: solo las cifras de la ficha que cada bodega publica (uva, azúcar, grado), un vino por bodega y un dato de la uva solo cuando tres bodegas o más y dos tercios de ellas coinciden",
+    terms: "factOnly",
+    url: "https://www.vinhosdoalentejo.pt/en/wines/wine-search/",
     what: "traits",
   },
   {

@@ -1173,7 +1173,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity",
       "raspberry",
@@ -1281,6 +1281,166 @@
         "factOnly": true,
         "publisher": "Baur au Lac Vins",
         "sourceUrl": "https://www.bauraulacvins.ch/en/grenache-gris-_content---1--669--11105713.html"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592086",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 15.5,
+            "producer": "Gourgazaud",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592086",
+            "wine": "Grenache Gris 2017"
+          },
+          {
+            "abv": 13,
+            "producer": "Fortant",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/538060",
+            "wine": "Grenache Gris 2017"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vranken Estates",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/550375",
+            "wine": "Domaine Royal de Jarras Pink Flamingo 2015"
+          },
+          {
+            "abv": 12,
+            "producer": "Vignobles Jeanjean",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/533486",
+            "wine": "Domaine le Pive Vie de Bohème Rosé 2016"
+          },
+          {
+            "abv": 12,
+            "producer": "Couleurs du Sud",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/530345",
+            "wine": "Grenache Rosé 2016"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Les Jamelles",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/579094",
+            "wine": "Clair de Gris Grenache Gris 2019"
+          },
+          {
+            "abv": 13,
+            "producer": "Gérard Bertrand",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/620225",
+            "wine": "Gris Blanc 2010"
+          },
+          {
+            "abv": 13,
+            "producer": "Boutinot South Africa",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/625535",
+            "wine": "Percheron 2011"
+          },
+          {
+            "abv": 13,
+            "producer": "Domaine Jones",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/621249",
+            "wine": "Grenache Gris 2011"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Mont Tauch",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/668559",
+            "wine": "Le Village du Sud Rosé 2009"
+          },
+          {
+            "abv": 13,
+            "producer": "Domaine du Joncas",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/633400",
+            "wine": "Alba 2014"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Espelt",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/631518",
+            "wine": "Lledoner Roig 2013"
+          },
+          {
+            "abv": 14.95,
+            "producer": "Jeff Carrel",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/719304",
+            "wine": "Chatgris NV"
+          },
+          {
+            "abv": 12,
+            "producer": "Domaine Le Pive",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/711463",
+            "wine": "Ma Bohème 2021"
+          },
+          {
+            "abv": 13,
+            "producer": "Benjamin Darnault",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/715503",
+            "wine": "Grenache Gris Plus 2020"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Domaine Royal De Jarras",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/715535",
+            "wine": "Téte De Cuveé Gris De Gris Bio 2021"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Mas Gabinèle",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/705757",
+            "wine": "Rarissime 2020"
+          },
+          {
+            "abv": 14,
+            "producer": "Château Maris",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/726029",
+            "wine": "Brama 2020"
+          },
+          {
+            "abv": 14,
+            "producer": "BORN ROSÉ Barcelona",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/756558",
+            "wine": "503 2021"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Donkiesbaai",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/775870",
+            "wine": "Grenache Noir 2023"
+          },
+          {
+            "abv": 12,
+            "producer": "Les Embruns",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/766585",
+            "wine": "Sauvage Par Nature NV"
+          },
+          {
+            "abv": 14,
+            "producer": "Domaine de Jau",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/762904",
+            "wine": "Jaujau 1er 2023"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Domaine Terres De Sable",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/762864",
+            "wine": "La Sagne Gris De Gris 2024"
+          },
+          {
+            "abv": 14,
+            "producer": "Domaine De La Lause",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/792241",
+            "wine": "Chemin Sainte-Colombe Grenache Gris 2024"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Château De L'ou",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/782522",
+            "wine": "Secret De Schistes 2023"
+          }
+        ]
       }
     ],
     "id": "garnacha-roja",
@@ -2219,7 +2379,10 @@
   {
     "acidity": "low",
     "alcohol": "high",
-    "aromas": [],
+    "aromas": [
+      "blackberry",
+      "plum"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -2293,6 +2456,30 @@
         "factOnly": true,
         "publisher": "House of Townend",
         "sourceUrl": "https://www.houseoftownend.com/wines/grape/monica"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Tannico",
+        "sourceUrl": "https://www.tannico.it/blogs/tannico/vitigni-autoctoni-della-sardegna-nasco-monica"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "blackberry",
+        "factOnly": true,
+        "publisher": "Tannico",
+        "sourceUrl": "https://www.tannico.it/blogs/tannico/vitigni-autoctoni-della-sardegna-nasco-monica"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "plum",
+        "factOnly": true,
+        "publisher": "Tannico",
+        "sourceUrl": "https://www.tannico.it/blogs/tannico/vitigni-autoctoni-della-sardegna-nasco-monica"
       }
     ],
     "id": "monica",
@@ -2380,7 +2567,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1764651",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Monica_(grape)"
   },
@@ -2392,7 +2579,7 @@
       "mineral",
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -2553,6 +2740,22 @@
             "wine": "Soalheiro Germinar Loureiro Vinhas Velhas"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/loureiro/"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/loureiro/"
       }
     ],
     "id": "loureira",
@@ -2632,7 +2835,10 @@
         "url": "https://en.wikipedia.org/wiki/Loureiro_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Branco Redondo",
@@ -3200,7 +3406,7 @@
     "aromas": [
       "raisin"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -3316,6 +3522,14 @@
         "quote": "Grado alcohólico medio, color picota",
         "value": "medium",
         "sourceUrl": "https://web.archive.org/web/20250429182922/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/SOUSON.pdf"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/souzao"
       }
     ],
     "id": "souzao",
@@ -4032,6 +4246,40 @@
         "factOnly": true,
         "publisher": "Vine to Wine Circle",
         "sourceUrl": "https://www.vinetowinecircle.com/en/castas_post/baga-3/"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/996/17539826561112T.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Campolargo",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/996/17539826561112T.pdf",
+            "sugar": 1,
+            "wine": "Campolargo Baga 2019"
+          },
+          {
+            "producer": "Quinta da Lagoa Velha",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1780/ftquintadalagoavelhatintobagagrandereservarotadabairradapdf.pdf",
+            "sugar": 1.8,
+            "wine": "Quinta da Lagoa Velha Baga Grande Reserva"
+          },
+          {
+            "producer": "Mata Fidalga",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1363/9932936561809c.pdf",
+            "sugar": 1.5,
+            "wine": "Mata Fidalga 4 Patamares 2015"
+          },
+          {
+            "producer": "Adega Cooperativa de Cantanhede",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/984/17646538281343n.pdf",
+            "sugar": 4,
+            "wine": "Baga Reserva 2018"
+          }
+        ]
       }
     ],
     "id": "baga",
@@ -4096,7 +4344,10 @@
         "url": "https://en.wikipedia.org/wiki/Baga_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Baga de Louro",
@@ -4673,6 +4924,34 @@
             "wine": "Trincadeira 2024"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://esporao.com/media/pages/wine/trincadeira/2024/f1b3479ed6-1773314787/ft_esporao-trincadeira-24-eng.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Esporão",
+            "sourceUrl": "https://esporao.com/media/pages/wine/trincadeira/2024/f1b3479ed6-1773314787/ft_esporao-trincadeira-24-eng.pdf",
+            "sugar": 0.5,
+            "wine": "Esporão Trincadeira 2024"
+          },
+          {
+            "producer": "Plansel",
+            "sourceUrl": "https://www.vinhosdoalentejo.pt/en/wines/detalhe/plansel-selecta-homenagem-ao-thomas-trincadeira/",
+            "sugar": 1.7,
+            "wine": "Plansel Selecta Homenagem ao Thomas Trincadeira"
+          },
+          {
+            "producer": "Adega do Monte Branco",
+            "sourceUrl": "https://www.vinhosdoalentejo.pt/en/wines/detalhe/trincadeira-red/",
+            "sugar": 0.4,
+            "wine": "Trincadeira Red 2021"
+          }
+        ]
       }
     ],
     "id": "tinta-amarela",
@@ -4740,7 +5019,10 @@
         "url": "https://en.wikipedia.org/wiki/Tinta_Amarela"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Trincadeira",
@@ -5500,6 +5782,46 @@
         "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/casta-arinto-a-embaixadora-da-frescura-dos-vinhos-brancos-portugueses"
       },
       {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0054/7350/1266/files/APW_PortalegreDOCBrancoArinto_2023_PT.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Adega de Portalegre",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0054/7350/1266/files/APW_PortalegreDOCBrancoArinto_2023_PT.pdf",
+            "sugar": 1.2,
+            "wine": "Portalegre DOC Alentejo Branco Arinto 2023"
+          },
+          {
+            "producer": "Companhia das Lezírias",
+            "sourceUrl": "https://vinhoazeite.cl.pt/wp-content/uploads/2026/03/Series-Singulares-Arinto-2023.pdf",
+            "sugar": 0.8,
+            "wine": "Séries Singulares Arinto 2023"
+          },
+          {
+            "producer": "Encostas de Xira",
+            "sourceUrl": "https://www.cm-vfxira.pt/cmvfxira/uploads/writer_file/document/20178/encostas_de_xira___arinto.pdf",
+            "sugar": 1.7,
+            "wine": "Encostas de Xira Arinto 2017"
+          },
+          {
+            "producer": "Caves São Domingos",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1315/16621635312178H.pdf",
+            "sugar": 0.7,
+            "wine": "Reserva Arinto 2021"
+          },
+          {
+            "producer": "Campolargo",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1259/18382778756592h.pdf",
+            "sugar": 1.4,
+            "wine": "Campolargo Arinto 2017"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Arinto de Bucelas: Portugal",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -5576,7 +5898,10 @@
         "url": "https://es.wikipedia.org/wiki/Arinto"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Arintho",
@@ -5891,6 +6216,34 @@
         ]
       },
       {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0527/9439/2772/files/FT_CAMINHOS_CRUZADOS_RESERVA_ENCRUZADO_2022.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Caminhos Cruzados",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0527/9439/2772/files/FT_CAMINHOS_CRUZADOS_RESERVA_ENCRUZADO_2022.pdf",
+            "sugar": 2,
+            "wine": "Caminhos Cruzados Reserva Encruzado 2022"
+          },
+          {
+            "producer": "Sogrape (Quinta dos Carvalhais)",
+            "sourceUrl": "https://evaton.com/wp-content/uploads/2018/05/quinta-dos-carvalhais-encruzado-white-2016-Tech-Sheet.pdf",
+            "sugar": 2,
+            "wine": "Quinta dos Carvalhais Encruzado 2016"
+          },
+          {
+            "producer": "Quinta da Bordaleira",
+            "sourceUrl": "https://sites.google.com/view/quintadabordaleira/qb-1993-branco-2020",
+            "sugar": 0.7,
+            "wine": "QB 1993 Branco 2020"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Encruzado: Portugal",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -5963,7 +6316,10 @@
         "url": "https://en.wikipedia.org/wiki/Encruzado"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Salgueirinho",
@@ -7513,7 +7869,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "apple"
     ],
@@ -7644,6 +8000,46 @@
         "factOnly": true,
         "publisher": "BurdiVino",
         "sourceUrl": "https://www.burdivino.fr/cepage-mauzac/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/541348",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Château Rives-Blanques",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/541348",
+            "wine": "Occitania Mauzac 2016"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Domaine Sarrabelle",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/619608",
+            "wine": "Mauzac Sarrabelle 2009"
+          },
+          {
+            "abv": 12.2,
+            "producer": "Château Lecusse",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/621688",
+            "wine": "Grande Cuvée Prestige Mauzac 2011"
+          },
+          {
+            "abv": 13,
+            "producer": "Clos Rocailleux",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/641674",
+            "wine": "Vieilles Vignes 2012"
+          },
+          {
+            "abv": 13,
+            "producer": "Domaine Vayssette",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/784394",
+            "wine": "Cuvée Clémence 2024"
+          }
+        ]
       },
       {
         "field": "origin",
@@ -7994,7 +8390,12 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "strawberry",
+      "cherry",
+      "raspberry",
+      "herbs"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -8103,6 +8504,46 @@
         "quote": "Its total lack of character and low acid render it unfit for any other purpose than blending where a neutral ingredient is desired.",
         "value": "low",
         "sourceUrl": "https://archive.org/details/reportofviticult8793cali"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "strawberry",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "cherry",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "raspberry",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "herbs",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
       }
     ],
     "id": "listan-prieto",
@@ -8234,7 +8675,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q60790190",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Listan_Prieto"
   },
@@ -9276,6 +9717,34 @@
             "wine": "Mar Y Luna Garnacha Tintorera"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.vinhosdoalentejo.pt/en/wines/detalhe/alicante-bouschet-monsaraz/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "CARMIM",
+            "sourceUrl": "https://www.vinhosdoalentejo.pt/en/wines/detalhe/alicante-bouschet-monsaraz/",
+            "sugar": 1.3,
+            "wine": "Monsaraz Alicante Bouschet 2017"
+          },
+          {
+            "producer": "Quinta do Vallado",
+            "sourceUrl": "https://www.quintadovallado.com/xms/files/Fichas_Tecnicas/31_Alicante_Bouschet/30._Alicante_Bouchet_2021.pdf",
+            "sugar": 0.9,
+            "wine": "Vallado Alicante Bouschet 2021"
+          },
+          {
+            "producer": "Esporão",
+            "sourceUrl": "https://esporao.com/media/pages/wine/esporao-alicante-bouschet/2021/3e480ce54b-1774003731/ft_esporao-alicante-bouschet-21-eng.pdf",
+            "sugar": 1,
+            "wine": "Esporão Alicante Bouschet 2021"
+          }
+        ]
       }
     ],
     "id": "alicante-bouschet",
@@ -9395,7 +9864,10 @@
         "url": "https://en.wikipedia.org/wiki/Alicante_Bouschet"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Alicant de Pays",
@@ -13170,6 +13642,30 @@
         "quote": "two white varieties known for their high acidity: Alvarinho and Petit Manseng",
         "value": "high",
         "sourceUrl": "https://doi.org/10.3389/fpls.2024.1439114"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "foie gras",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/petit-manseng/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/petit-manseng/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "spicy dishes",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/petit-manseng/"
       }
     ],
     "id": "petit-manseng",
@@ -13184,7 +13680,11 @@
       "pt": "Petit Manseng"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "foie gras",
+      "cheese",
+      "spicy dishes"
+    ],
     "prominence": 7,
     "regions": [
       {
@@ -24075,6 +24575,40 @@
             "wine": "Pico Andino Carmenere"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.tabali.com/fichas-vinos/eng/micas.2020.ing.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Tabalí",
+            "sourceUrl": "https://www.tabali.com/fichas-vinos/eng/micas.2020.ing.pdf",
+            "sugar": 3.19,
+            "wine": "Micas Carmenère 2020"
+          },
+          {
+            "producer": "Emiliana",
+            "sourceUrl": "https://emiliana.cl/cms/wp-content/uploads/2023/06/ADOBE-CR-2022-ING.pdf",
+            "sugar": 3.6,
+            "wine": "Adobe Carmenere 2022"
+          },
+          {
+            "producer": "Los Vascos",
+            "sourceUrl": "https://lafite.vin.co/Q394GE/get/tech-sheet/543PF3VXDN",
+            "sugar": 2.74,
+            "wine": "Los Vascos Carmenere Grande Reserve 2015"
+          },
+          {
+            "producer": "Evaton",
+            "sourceUrl": "https://evaton.com/wp-content/uploads/2016/12/ficha_mom_ca22_eng.pdf",
+            "sugar": 4.43,
+            "wine": "Momentos Reserva Carmenere 2022"
+          }
+        ]
       }
     ],
     "id": "carmenere",
@@ -24154,7 +24688,10 @@
         "url": "https://pt.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Grande Vidure",
@@ -28303,7 +28840,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "apple",
       "lemon",
@@ -28487,6 +29024,76 @@
         "quote": "Obecně je Aligoté živější víno středního těla s vyšší aciditou",
         "value": "medium",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Aligot%C3%A9"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591526",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12,
+            "producer": "Maison Chanzy",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591526",
+            "wine": "Clos de la Fortune Monopole 2016"
+          },
+          {
+            "abv": 13,
+            "producer": "François Martenot",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/562106",
+            "wine": "L'Or de la Terre 2014"
+          },
+          {
+            "abv": 13,
+            "producer": "Caii de la Letea",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/583362",
+            "wine": "Editie Limitata Aligote 2019"
+          },
+          {
+            "abv": 13,
+            "producer": "Viticola Sarica Niculitel",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/572403",
+            "wine": "Caii de la Letea Aligote 2018"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vignerons de Buxy",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/669097",
+            "wine": "Sainsbury's Taste The Difference 2009"
+          },
+          {
+            "abv": 14,
+            "producer": "Château Le Grand Vostock",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/687386",
+            "wine": "Aligote 2018"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Nuiton-Beaunoy",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/771461",
+            "wine": "Équilibre Biologique 2023"
+          },
+          {
+            "abv": 12,
+            "producer": "Pascal Bouchard",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/770975",
+            "wine": "Réserve Saint-Pierre 2024"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cramele Recaș",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/775994",
+            "wine": "Implicit Aligoté 2024"
+          },
+          {
+            "abv": 12,
+            "producer": "Terres Secrètes",
+            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/787806",
+            "wine": "Les Petits Bourgeons 2024"
+          }
+        ]
       }
     ],
     "id": "aligote",
@@ -33762,6 +34369,14 @@
         "quote": "Ottiensene vino da pasto, pieno, ricco di colore, abboccato, mediocremente spiritoso",
         "value": "medium",
         "sourceUrl": "https://archive.org/details/ampelografiadel00leargoog"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/dolcetto/"
       }
     ],
     "id": "dolcetto",
@@ -33898,7 +34513,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q1235396",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dolcetto"
   },
@@ -35664,6 +36279,14 @@
         "field": "sweetness",
         "quote": "The grape is most widely associated with the dry and sweet red wines of Nemea",
         "value": "dry-sweet"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/agiorgitiko"
       }
     ],
     "id": "agiorgitiko",
@@ -35819,7 +36442,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q393911",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Agiorgitiko"
   },
@@ -38473,7 +39096,7 @@
     "aromas": [
       "cherry"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -38555,6 +39178,14 @@
         "factOnly": true,
         "publisher": "Vinissimus",
         "sourceUrl": "https://www.vinissimus.com/es/uva/rondinella/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Italy Abroad",
+        "sourceUrl": "https://www.italyabroad.com/grapes/rondinella"
       }
     ],
     "id": "rondinella",
@@ -42832,7 +43463,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -43274,6 +43905,14 @@
             "wine": "Dornfelder"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Wines of Germany (UK)",
+        "sourceUrl": "https://winesofgermany.co.uk/grape/dornfelder/"
       }
     ],
     "id": "dornfelder",
@@ -48575,7 +49214,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Frappato"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "floral",
@@ -48746,6 +49385,14 @@
         "factOnly": true,
         "publisher": "Mövenpick Wein",
         "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/grillo.html"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/grillo/"
       }
     ],
     "id": "grillo",
@@ -49591,7 +50238,7 @@
       "cherry",
       "grass"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -49813,6 +50460,22 @@
         "sourceUrl": "https://pimcore.tastetrentino.it/en/products/marzemino",
         "place": "Trentino",
         "placeId": "it-trentino"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/marzemino/"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/marzemino/"
       }
     ],
     "id": "marzemino",
@@ -49967,7 +50630,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q770908",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Marzemino"
   },
@@ -55610,7 +56273,12 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "strawberry",
+      "raspberry",
+      "cherry",
+      "rose"
+    ],
     "body": "low",
     "color": "red",
     "evidence": [
@@ -55739,6 +56407,38 @@
         "field": "sweetness",
         "quote": "It is often produced in off-dry to medium sweet style",
         "value": "medium"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "strawberry",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "raspberry",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "cherry",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "rose",
+        "factOnly": true,
+        "publisher": "Stanley's Wet Goods, grape dictionary",
+        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
       }
     ],
     "id": "grolleau",
@@ -61100,7 +61800,7 @@
     "aromas": [
       "cherry"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -61206,6 +61906,22 @@
             "wine": "Ciliegiolo Toscana Igt"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/ciliegiolo/"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/ciliegiolo/"
       }
     ],
     "id": "ciliegiolo",
@@ -61305,7 +62021,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1091950",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ciliegiolo"
   },
@@ -61944,6 +62660,14 @@
         "quote": "Der Trepat oder Trepadell ist eine einheimische Rotweinsorte aus dem Weinanbaugebiet Conca de Barberà in Katalonien (Spanien).",
         "value": "ES",
         "sourceUrl": "https://de.wikipedia.org/wiki/Trepat"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/trepat/"
       }
     ],
     "id": "trepat",
@@ -62044,7 +62768,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q660955",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trepat"
   }
