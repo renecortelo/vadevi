@@ -26191,6 +26191,156 @@
         "nl": "Het territorium omvat ook landbouwgrond (schapen, melkvee, wijngaarden en kleine hoeveelheden akkerbouw) en een groot nationaal park (Namadgi National Park), grotendeels bergachtig en bebost.",
         "pt-PT": "O território compreende também terras agrícolas (ovelhas, gado leiteiro, vinhas e pequenas quantidades de culturas) e uma grande área de parque nacional (Namadgi National Park), em boa parte montanhosa e arborizada."
       }
+    },
+    "ca-lake-erie-north-shore": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "The land within the political boundaries of the Township of Pelee and Essex, Kent and Elgin counties, except the part of Kent County lying to the north of the Thames River",
+      "texts": {
+        "es": "El territorio dentro de los límites políticos del municipio de Pelee y de los condados de Essex, Kent y Elgin, salvo la parte del condado de Kent situada al norte del río Thames",
+        "ca": "El territori dins dels límits polítics del municipi de Pelee i dels comtats d'Essex, Kent i Elgin, excepte la part del comtat de Kent situada al nord del riu Thames",
+        "fr": "Les terres situées dans les limites politiques du canton de Pelee et des comtés d'Essex, de Kent et d'Elgin, à l'exception de la partie du comté de Kent située au nord de la rivière Thames",
+        "de": "Das Land innerhalb der politischen Grenzen der Gemeinde Pelee und der Countys Essex, Kent und Elgin, ausgenommen der Teil des Kent County nördlich des Thames River",
+        "it": "Il territorio entro i confini politici della municipalità di Pelee e delle contee di Essex, Kent ed Elgin, eccetto la parte della contea di Kent a nord del fiume Thames",
+        "nl": "Het land binnen de politieke grenzen van de gemeente Pelee en de county's Essex, Kent en Elgin, met uitzondering van het deel van Kent County ten noorden van de Thames River",
+        "pt-PT": "O território dentro dos limites políticos do município de Pelee e dos condados de Essex, Kent e Elgin, exceto a parte do condado de Kent situada a norte do rio Thames"
+      }
+    },
+    "ca-niagara-escarpment": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "All the lands within the Beamsville Bench, Twenty Mile Bench, Short Hills Bench and St. David’s Bench sub-viticultural areas described in this Table",
+      "texts": {
+        "es": "Todas las tierras comprendidas en las subzonas vitícolas Beamsville Bench, Twenty Mile Bench, Short Hills Bench y St. David’s Bench descritas en esta tabla",
+        "ca": "Totes les terres compreses en les subzones vitícoles Beamsville Bench, Twenty Mile Bench, Short Hills Bench i St. David’s Bench descrites en aquesta taula",
+        "fr": "Toutes les terres situées dans les sous-zones viticoles Beamsville Bench, Twenty Mile Bench, Short Hills Bench et St. David’s Bench décrites dans ce tableau",
+        "de": "Alle Flächen innerhalb der in dieser Tabelle beschriebenen Weinbau-Teilgebiete Beamsville Bench, Twenty Mile Bench, Short Hills Bench und St. David’s Bench",
+        "it": "Tutti i terreni compresi nelle sottozone viticole Beamsville Bench, Twenty Mile Bench, Short Hills Bench e St. David’s Bench descritte in questa tabella",
+        "nl": "Alle gronden binnen de in deze tabel beschreven wijnbouwsubgebieden Beamsville Bench, Twenty Mile Bench, Short Hills Bench en St. David’s Bench",
+        "pt-PT": "Todas as terras compreendidas nas subzonas vitícolas Beamsville Bench, Twenty Mile Bench, Short Hills Bench e St. David’s Bench descritas neste quadro"
+      }
+    },
+    "ca-niagara-on-the-lake": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "All the lands within the Niagara River, Niagara Lakeshore, Four Mile Creek and St. David’s Bench sub-viticultural areas described in this Table",
+      "texts": {
+        "es": "Todas las tierras comprendidas en las subzonas vitícolas Niagara River, Niagara Lakeshore, Four Mile Creek y St. David’s Bench descritas en esta tabla",
+        "ca": "Totes les terres compreses en les subzones vitícoles Niagara River, Niagara Lakeshore, Four Mile Creek i St. David’s Bench descrites en aquesta taula",
+        "fr": "Toutes les terres situées dans les sous-zones viticoles Niagara River, Niagara Lakeshore, Four Mile Creek et St. David’s Bench décrites dans ce tableau",
+        "de": "Alle Flächen innerhalb der in dieser Tabelle beschriebenen Weinbau-Teilgebiete Niagara River, Niagara Lakeshore, Four Mile Creek und St. David’s Bench",
+        "it": "Tutti i terreni compresi nelle sottozone viticole Niagara River, Niagara Lakeshore, Four Mile Creek e St. David’s Bench descritte in questa tabella",
+        "nl": "Alle gronden binnen de in deze tabel beschreven wijnbouwsubgebieden Niagara River, Niagara Lakeshore, Four Mile Creek en St. David’s Bench",
+        "pt-PT": "Todas as terras compreendidas nas subzonas vitícolas Niagara River, Niagara Lakeshore, Four Mile Creek e St. David’s Bench descritas neste quadro"
+      }
+    },
+    "ca-west-niagara": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "All the lands within the Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore and Vinemount Ridge sub-viticultural areas described in this Table",
+      "texts": {
+        "es": "Todas las tierras comprendidas en las subzonas vitícolas Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore y Vinemount Ridge descritas en esta tabla",
+        "ca": "Totes les terres compreses en les subzones vitícoles Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore i Vinemount Ridge descrites en aquesta taula",
+        "fr": "Toutes les terres situées dans les sous-zones viticoles Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore et Vinemount Ridge décrites dans ce tableau",
+        "de": "Alle Flächen innerhalb der in dieser Tabelle beschriebenen Weinbau-Teilgebiete Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore und Vinemount Ridge",
+        "it": "Tutti i terreni compresi nelle sottozone viticole Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore e Vinemount Ridge descritte in questa tabella",
+        "nl": "Alle gronden binnen de in deze tabel beschreven wijnbouwsubgebieden Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore en Vinemount Ridge",
+        "pt-PT": "Todas as terras compreendidas nas subzonas vitícolas Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore e Vinemount Ridge descritas neste quadro"
+      }
+    },
+    "ca-south-islands": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "The land within the political boundaries of the Township of Pelee",
+      "texts": {
+        "es": "El territorio dentro de los límites políticos del municipio de Pelee",
+        "ca": "El territori dins dels límits polítics del municipi de Pelee",
+        "fr": "Les terres situées dans les limites politiques du canton de Pelee",
+        "de": "Das Land innerhalb der politischen Grenzen der Gemeinde Pelee",
+        "it": "Il territorio entro i confini politici della municipalità di Pelee",
+        "nl": "Het land binnen de politieke grenzen van de gemeente Pelee",
+        "pt-PT": "O território dentro dos limites políticos do município de Pelee"
+      }
+    },
+    "ca-niagara-river": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "The land within the following boundaries: North: John Street between Concession 1 Road (Railroad Street) and the Niagara River South: Dee Road between Concession 1 Road and the Niagara River East: The Niagara River West: Concession 1 Road",
+      "texts": {
+        "es": "El territorio dentro de los siguientes límites: Norte: John Street, entre Concession 1 Road (Railroad Street) y el río Niágara. Sur: Dee Road, entre Concession 1 Road y el río Niágara. Este: el río Niágara. Oeste: Concession 1 Road",
+        "ca": "El territori dins dels límits següents: Nord: John Street, entre Concession 1 Road (Railroad Street) i el riu Niàgara. Sud: Dee Road, entre Concession 1 Road i el riu Niàgara. Est: el riu Niàgara. Oest: Concession 1 Road",
+        "fr": "Les terres situées dans les limites suivantes : Nord : John Street, entre Concession 1 Road (Railroad Street) et la rivière Niagara. Sud : Dee Road, entre Concession 1 Road et la rivière Niagara. Est : la rivière Niagara. Ouest : Concession 1 Road",
+        "de": "Das Land innerhalb folgender Grenzen: Norden: John Street zwischen Concession 1 Road (Railroad Street) und dem Niagara River. Süden: Dee Road zwischen Concession 1 Road und dem Niagara River. Osten: der Niagara River. Westen: Concession 1 Road",
+        "it": "Il territorio entro i seguenti confini: Nord: John Street, tra Concession 1 Road (Railroad Street) e il fiume Niagara. Sud: Dee Road, tra Concession 1 Road e il fiume Niagara. Est: il fiume Niagara. Ovest: Concession 1 Road",
+        "nl": "Het land binnen de volgende grenzen: Noord: John Street, tussen Concession 1 Road (Railroad Street) en de Niagara River. Zuid: Dee Road, tussen Concession 1 Road en de Niagara River. Oost: de Niagara River. West: Concession 1 Road",
+        "pt-PT": "O território dentro dos seguintes limites: Norte: John Street, entre Concession 1 Road (Railroad Street) e o rio Niágara. Sul: Dee Road, entre Concession 1 Road e o rio Niágara. Este: o rio Niágara. Oeste: Concession 1 Road"
+      }
+    },
+    "ca-niagara-lakeshore": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "The land within the following boundaries: North: Lake Ontario South: Scott Street, Niagara Town Line Road, Line 1 Road East: Niagara River, John Street West, Concession 1 Road West: Welland Canal",
+      "texts": {
+        "es": "El territorio dentro de los siguientes límites: Norte: el lago Ontario. Sur: Scott Street, Niagara Town Line Road, Line 1 Road. Este: el río Niágara, John Street West, Concession 1 Road. Oeste: el canal Welland",
+        "ca": "El territori dins dels límits següents: Nord: el llac Ontàrio. Sud: Scott Street, Niagara Town Line Road, Line 1 Road. Est: el riu Niàgara, John Street West, Concession 1 Road. Oest: el canal Welland",
+        "fr": "Les terres situées dans les limites suivantes : Nord : le lac Ontario. Sud : Scott Street, Niagara Town Line Road, Line 1 Road. Est : la rivière Niagara, John Street West, Concession 1 Road. Ouest : le canal Welland",
+        "de": "Das Land innerhalb folgender Grenzen: Norden: der Ontariosee. Süden: Scott Street, Niagara Town Line Road, Line 1 Road. Osten: der Niagara River, John Street West, Concession 1 Road. Westen: der Welland-Kanal",
+        "it": "Il territorio entro i seguenti confini: Nord: il lago Ontario. Sud: Scott Street, Niagara Town Line Road, Line 1 Road. Est: il fiume Niagara, John Street West, Concession 1 Road. Ovest: il canale Welland",
+        "nl": "Het land binnen de volgende grenzen: Noord: het Ontariomeer. Zuid: Scott Street, Niagara Town Line Road, Line 1 Road. Oost: de Niagara River, John Street West, Concession 1 Road. West: het Wellandkanaal",
+        "pt-PT": "O território dentro dos seguintes limites: Norte: o lago Ontário. Sul: Scott Street, Niagara Town Line Road, Line 1 Road. Este: o rio Niágara, John Street West, Concession 1 Road. Oeste: o canal Welland"
+      }
+    },
+    "ca-lincoln-lakeshore": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "The land within the following boundaries: North: Lake Ontario South: Regional Road 81 between Twenty Mile Creek and Park Road, then south along Park Road, then west along the northern boundary of the ENA between Park Road and Winona Road East: Twenty Mile Creek and Jordan Harbour West: Winona Road",
+      "texts": {
+        "es": "El territorio dentro de los siguientes límites: Norte: el lago Ontario. Sur: Regional Road 81, entre Twenty Mile Creek y Park Road; después, hacia el sur por Park Road, y después, hacia el oeste por el límite norte del ENA entre Park Road y Winona Road. Este: Twenty Mile Creek y Jordan Harbour. Oeste: Winona Road",
+        "ca": "El territori dins dels límits següents: Nord: el llac Ontàrio. Sud: Regional Road 81, entre Twenty Mile Creek i Park Road; després, cap al sud per Park Road, i després, cap a l'oest pel límit nord de l'ENA entre Park Road i Winona Road. Est: Twenty Mile Creek i Jordan Harbour. Oest: Winona Road",
+        "fr": "Les terres situées dans les limites suivantes : Nord : le lac Ontario. Sud : Regional Road 81, entre Twenty Mile Creek et Park Road, puis vers le sud le long de Park Road, puis vers l'ouest le long de la limite nord de l'ENA entre Park Road et Winona Road. Est : Twenty Mile Creek et Jordan Harbour. Ouest : Winona Road",
+        "de": "Das Land innerhalb folgender Grenzen: Norden: der Ontariosee. Süden: Regional Road 81 zwischen Twenty Mile Creek und Park Road, dann nach Süden entlang der Park Road, dann nach Westen entlang der Nordgrenze der ENA zwischen Park Road und Winona Road. Osten: Twenty Mile Creek und Jordan Harbour. Westen: Winona Road",
+        "it": "Il territorio entro i seguenti confini: Nord: il lago Ontario. Sud: Regional Road 81, tra Twenty Mile Creek e Park Road, poi verso sud lungo Park Road, poi verso ovest lungo il confine settentrionale dell'ENA tra Park Road e Winona Road. Est: Twenty Mile Creek e Jordan Harbour. Ovest: Winona Road",
+        "nl": "Het land binnen de volgende grenzen: Noord: het Ontariomeer. Zuid: Regional Road 81 tussen Twenty Mile Creek en Park Road, dan zuidwaarts langs Park Road, dan westwaarts langs de noordgrens van de ENA tussen Park Road en Winona Road. Oost: Twenty Mile Creek en Jordan Harbour. West: Winona Road",
+        "pt-PT": "O território dentro dos seguintes limites: Norte: o lago Ontário. Sul: Regional Road 81, entre Twenty Mile Creek e Park Road; depois, para sul ao longo de Park Road, e depois, para oeste ao longo do limite norte da ENA entre Park Road e Winona Road. Este: Twenty Mile Creek e Jordan Harbour. Oeste: Winona Road"
+      }
+    },
+    "ca-creek-shores": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "The land within the following boundaries: North: Lake Ontario South: Regional Road 81 East: Twelve Mile Creek West: Twenty Mile Creek, Jordan Harbour",
+      "texts": {
+        "es": "El territorio dentro de los siguientes límites: Norte: el lago Ontario. Sur: Regional Road 81. Este: Twelve Mile Creek. Oeste: Twenty Mile Creek, Jordan Harbour",
+        "ca": "El territori dins dels límits següents: Nord: el llac Ontàrio. Sud: Regional Road 81. Est: Twelve Mile Creek. Oest: Twenty Mile Creek, Jordan Harbour",
+        "fr": "Les terres situées dans les limites suivantes : Nord : le lac Ontario. Sud : Regional Road 81. Est : Twelve Mile Creek. Ouest : Twenty Mile Creek, Jordan Harbour",
+        "de": "Das Land innerhalb folgender Grenzen: Norden: der Ontariosee. Süden: Regional Road 81. Osten: Twelve Mile Creek. Westen: Twenty Mile Creek, Jordan Harbour",
+        "it": "Il territorio entro i seguenti confini: Nord: il lago Ontario. Sud: Regional Road 81. Est: Twelve Mile Creek. Ovest: Twenty Mile Creek, Jordan Harbour",
+        "nl": "Het land binnen de volgende grenzen: Noord: het Ontariomeer. Zuid: Regional Road 81. Oost: Twelve Mile Creek. West: Twenty Mile Creek, Jordan Harbour",
+        "pt-PT": "O território dentro dos seguintes limites: Norte: o lago Ontário. Sul: Regional Road 81. Este: Twelve Mile Creek. Oeste: Twenty Mile Creek, Jordan Harbour"
+      }
+    },
+    "ca-beamsville-bench": {
+      "from": "en",
+      "license": "CA-ON-official-text",
+      "sourceUrl": "https://www.ontario.ca/laws/regulation/000406",
+      "original": "The land within the following boundaries: North: Regional Road 81 South: Northern boundary of the ENA East: Beginning at Tintern Road and northern boundary of ENA, continuing northeast along northern boundary of ENA to intersection with Regional Road 81 West: Park Road",
+      "texts": {
+        "es": "El territorio dentro de los siguientes límites: Norte: Regional Road 81. Sur: El límite norte del ENA. Este: desde Tintern Road y el límite norte del ENA, siguiendo hacia el nordeste por el límite norte del ENA hasta el cruce con Regional Road 81. Oeste: Park Road",
+        "ca": "El territori dins dels límits següents: Nord: Regional Road 81. Sud: El límit nord de l'ENA. Est: des de Tintern Road i el límit nord de l'ENA, seguint cap al nord-est pel límit nord de l'ENA fins a la intersecció amb Regional Road 81. Oest: Park Road",
+        "fr": "Les terres situées dans les limites suivantes : Nord : Regional Road 81. Sud : La limite nord de l'ENA. Est : à partir de Tintern Road et de la limite nord de l'ENA, en continuant vers le nord-est le long de la limite nord de l'ENA jusqu'à l'intersection avec Regional Road 81. Ouest : Park Road",
+        "de": "Das Land innerhalb folgender Grenzen: Norden: Regional Road 81. Süden: Die Nordgrenze der ENA. Osten: beginnend an der Tintern Road und der Nordgrenze der ENA, weiter nach Nordosten entlang der Nordgrenze der ENA bis zur Kreuzung mit der Regional Road 81. Westen: Park Road",
+        "it": "Il territorio entro i seguenti confini: Nord: Regional Road 81. Sud: Il confine settentrionale dell'ENA. Est: a partire da Tintern Road e dal confine settentrionale dell'ENA, proseguendo verso nord-est lungo il confine settentrionale dell'ENA fino all'incrocio con Regional Road 81. Ovest: Park Road",
+        "nl": "Het land binnen de volgende grenzen: Noord: Regional Road 81. Zuid: De noordgrens van de ENA. Oost: beginnend bij Tintern Road en de noordgrens van de ENA, verder noordoostwaarts langs de noordgrens van de ENA tot de kruising met Regional Road 81. West: Park Road",
+        "pt-PT": "O território dentro dos seguintes limites: Norte: Regional Road 81. Sul: O limite norte da ENA. Este: a partir de Tintern Road e do limite norte da ENA, seguindo para nordeste ao longo do limite norte da ENA até ao cruzamento com Regional Road 81. Oeste: Park Road"
+      }
     }
   }
 }

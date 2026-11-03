@@ -15,7 +15,13 @@
       "ref": "Table 1, item 1",
       "states": ["Ontario"],
       "placeByName": false,
-      "spread": ["Essex County", "Chatham-Kent", "Elgin County"]
+      "spread": ["Essex County", "Chatham-Kent", "Elgin County"],
+      "summary": {
+        "locale": "en",
+        "text": "The land within the political boundaries of the Township of Pelee and Essex, Kent and Elgin counties, except the part of Kent County lying to the north of the Thames River",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "prince-edward-county",
@@ -39,21 +45,39 @@
       "type": "VQA",
       "ref": "Table 1, item 4",
       "states": ["Ontario"],
-      "placeByName": false
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "All the lands within the Beamsville Bench, Twenty Mile Bench, Short Hills Bench and St. David’s Bench sub-viticultural areas described in this Table",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "niagara-on-the-lake",
       "names": ["Niagara-on-the-Lake"],
       "type": "VQA",
       "ref": "Table 1, item 5",
-      "states": ["Ontario"]
+      "states": ["Ontario"],
+      "summary": {
+        "locale": "en",
+        "text": "All the lands within the Niagara River, Niagara Lakeshore, Four Mile Creek and St. David’s Bench sub-viticultural areas described in this Table",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "west-niagara",
       "names": ["West Niagara"],
       "type": "VQA",
       "ref": "Table 1, item 6",
-      "states": ["Ontario"]
+      "states": ["Ontario"],
+      "summary": {
+        "locale": "en",
+        "text": "All the lands within the Beamsville Bench, Twenty Mile Bench, Short Hills Bench, Creek Shores, Lincoln Lakeshore and Vinemount Ridge sub-viticultural areas described in this Table",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "south-islands",
@@ -63,7 +87,13 @@
       "states": ["Ontario"],
       "within": ["lake-erie-north-shore"],
       "placeByName": false,
-      "spread": ["Pelee"]
+      "spread": ["Pelee"],
+      "summary": {
+        "locale": "en",
+        "text": "The land within the political boundaries of the Township of Pelee",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "niagara-river",
@@ -72,7 +102,13 @@
       "ref": "Table 1, item 8",
       "states": ["Ontario"],
       "within": ["niagara-on-the-lake"],
-      "placeByName": false
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The land within the following boundaries: North: John Street between Concession 1 Road (Railroad Street) and the Niagara River South: Dee Road between Concession 1 Road and the Niagara River East: The Niagara River West: Concession 1 Road",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "niagara-lakeshore",
@@ -81,7 +117,13 @@
       "ref": "Table 1, item 9",
       "states": ["Ontario"],
       "within": ["niagara-on-the-lake"],
-      "placeByName": false
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The land within the following boundaries: North: Lake Ontario South: Scott Street, Niagara Town Line Road, Line 1 Road East: Niagara River, John Street West, Concession 1 Road West: Welland Canal",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "four-mile-creek",
@@ -107,7 +149,13 @@
       "ref": "Table 1, item 12",
       "states": ["Ontario"],
       "within": ["west-niagara"],
-      "placeByName": false
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The land within the following boundaries: North: Lake Ontario South: Regional Road 81 between Twenty Mile Creek and Park Road, then south along Park Road, then west along the northern boundary of the ENA between Park Road and Winona Road East: Twenty Mile Creek and Jordan Harbour West: Winona Road",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "creek-shores",
@@ -116,7 +164,13 @@
       "ref": "Table 1, item 13",
       "states": ["Ontario"],
       "within": ["west-niagara"],
-      "placeByName": false
+      "placeByName": false,
+      "summary": {
+        "locale": "en",
+        "text": "The land within the following boundaries: North: Lake Ontario South: Regional Road 81 East: Twelve Mile Creek West: Twenty Mile Creek, Jordan Harbour",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "beamsville-bench",
@@ -124,7 +178,13 @@
       "type": "VQA",
       "ref": "Table 1, item 14",
       "states": ["Ontario"],
-      "within": ["niagara-escarpment", "west-niagara"]
+      "within": ["niagara-escarpment", "west-niagara"],
+      "summary": {
+        "locale": "en",
+        "text": "The land within the following boundaries: North: Regional Road 81 South: Northern boundary of the ENA East: Beginning at Tintern Road and northern boundary of ENA, continuing northeast along northern boundary of ENA to intersection with Regional Road 81 West: Park Road",
+        "url": "https://www.ontario.ca/laws/regulation/000406",
+        "license": "CA-ON-official-text"
+      }
     },
     {
       "key": "twenty-mile-bench",

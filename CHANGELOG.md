@@ -122,6 +122,11 @@ has the reasons.
   wine commission, and from the figures entered in Wines from Spain's
   Bottlebooks tasting catalogue (figures only). Sheets that give the sugar in g/dm³, the same as g/l, now
   count.
+- **Ten Ontario sub-appellations described by their own regulation**: Lake
+  Erie North Shore, Niagara-on-the-Lake, Niagara River, Beamsville Bench and
+  six more take, as their summary, the description of the area in Table 1
+  of O. Reg. 406/00 (© King's Printer for Ontario; not an official version),
+  translated into the app's other languages and marked as translated.
 - **Freisa with cured meats, cheese, white meat and antipasti**, as at
   least three producers' sheets for their single-variety Freisa say: Terre
   dei Santi, Cascina Gilli, Cascina Quarino, La Montagnetta and Tamburnin, as

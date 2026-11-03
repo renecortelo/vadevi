@@ -384,7 +384,7 @@ export const sources: Source[] = [
   {
     group: "registers",
     terms: "officialFacts",
-    name: "VQA Ontario (e-Laws) · BC Laws",
+    name: "VQA Ontario (e-Laws, O. Reg. 406/00; © King's Printer for Ontario, 2000; la descripción de cada zona, copiada tal cual, no es una versión oficial) · BC Laws",
     url: "https://www.ontario.ca/laws/regulation/000406",
     what: "registerNames",
   },

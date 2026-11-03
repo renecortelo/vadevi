@@ -293,6 +293,12 @@ leaves out:
   denominations of origin for wine (see Brazil above).
 - `ca.json` — Canada, Ontario: the 17 viticultural areas of Table 1 of
   O. Reg. 406/00 (VQA), nested where the table says one comprises others.
+  Ten that no article describes take the table's own description of the
+  area as their summary, word for word (`CA-ON-official-text`; the four
+  whose description runs road by road for 600 characters or more are left
+  without). Ontario lets anyone reproduce its statutes and regulations
+  without permission, commercial use included, if accurately and with
+  «© King's Printer for Ontario»; this is not an official version.
 - `mx-regions.json` — Mexico's wine regions that no register protects (the
   Valle de Guadalupe, the Parras Valley…), each named as a wine-growing area
   by a sentence of Wikipedia's articles on Mexican wine; marked in the app as
