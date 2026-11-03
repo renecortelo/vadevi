@@ -6533,6 +6533,52 @@
             "wine": "Fernão Pires 2023"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.cvrtejo.pt/media/vinhos-do-tejo-brindam-a-rentree-com-6-monocastas-de-fernao-pires",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Quinta da Atela",
+            "sourceUrl": "https://www.cvrtejo.pt/media/vinhos-do-tejo-brindam-a-rentree-com-6-monocastas-de-fernao-pires",
+            "sugar": 0.6,
+            "wine": "Casa da Atela Fernão Pires branco 2021"
+          },
+          {
+            "producer": "Herdade Tinto e Branco",
+            "sourceUrl": "https://www.cvrtejo.pt/media/vinhos-do-tejo-brindam-a-rentree-com-6-monocastas-de-fernao-pires",
+            "sugar": 0.7,
+            "wine": "Gutta Supera branco 2020"
+          },
+          {
+            "producer": "Casal da Coelheira",
+            "sourceUrl": "https://www.cvrtejo.pt/media/vinhos-do-tejo-brindam-a-rentree-com-6-monocastas-de-fernao-pires",
+            "sugar": 2,
+            "wine": "Casal da Coelheira Private Collection Fernão Pires branco 2021"
+          },
+          {
+            "producer": "Encosta do Sobral",
+            "sourceUrl": "https://www.cvrtejo.pt/media/vinhos-do-tejo-brindam-a-rentree-com-6-monocastas-de-fernao-pires",
+            "sugar": 0.7,
+            "wine": "Encosta do Sobral Fernão Pires Vinhas Velhas branco 2020"
+          },
+          {
+            "producer": "Casal Branco",
+            "sourceUrl": "https://www.cvrtejo.pt/vinhos/falcoaria-fernao-pires-vinhas-velhas",
+            "sugar": 1,
+            "wine": "Falcoaria Fernão Pires Vinhas Velhas"
+          },
+          {
+            "producer": "Casca Wines",
+            "sourceUrl": "https://www.cvrtejo.pt/vinhos/monte-cascas-single-vineyard-fernao-pires-branco-2013",
+            "sugar": 2.3,
+            "wine": "Monte Cascas Single Vineyard Fernão Pires branco 2013"
+          }
+        ]
       }
     ],
     "id": "fernao-pires",
@@ -6602,7 +6648,10 @@
         "url": "https://es.wikipedia.org/wiki/Fern%C3%A3o_pires"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Camarate",
