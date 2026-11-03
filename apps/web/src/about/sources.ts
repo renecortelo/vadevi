@@ -186,6 +186,20 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Comissão Vitivinícola Regional do Tejo (Vinhos do Tejo), fichas de sus vinos y notas de prensa: solo las cifras que da de cada bodega, con la misma regla de tres bodegas",
+    terms: "factOnly",
+    url: "https://www.cvrtejo.pt/media/vinhos-do-tejo-brindam-a-rentree-com-6-monocastas-de-fernao-pires",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Rota da Bairrada, fichas técnicas que publica de sus bodegas socias: solo las cifras, con la misma regla de tres bodegas",
+    terms: "factOnly",
+    url: "https://www.rotadabairrada.pt/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministerio de Agricultura, Pesca y Alimentación, exposición «La vid»: fichas de variedades (copia del Internet Archive)",
     terms: "reuseCiting",
     url: "https://web.archive.org/web/2023/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",
