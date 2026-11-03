@@ -58112,6 +58112,126 @@
         "field": "sweetness",
         "quote": "Wines made from the Freisa grape are red and usually somewhat sweet and lightly sparkling, or foaming. ... ferment the wine fully dry.",
         "value": "dry-sweet"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=1&az=La%20Montagnetta",
+        "value": "white meat",
+        "wines": [
+          {
+            "producer": "La Montagnetta",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=1&az=La%20Montagnetta",
+            "wine": "Freisa d’Asti Frizzante I Ronchi"
+          },
+          {
+            "producer": "Cascina Gilli",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=2&az=Cascina%20Gilli",
+            "wine": "Il Forno Freisa d’Asti"
+          },
+          {
+            "producer": "Vinchio Vaglio",
+            "sourceUrl": "https://cdn.vinchio.com/wp-content/uploads/2023/09/VV-scheda-La-Martana-ITA-1.pdf",
+            "wine": "La Martana Piemonte Freisa"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=1&az=La%20Montagnetta",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "La Montagnetta",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=1&az=La%20Montagnetta",
+            "wine": "Freisa d’Asti Superiore Bugianen"
+          },
+          {
+            "producer": "Terre dei Santi",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=12&az=Cantine%20Terre%20dei%20Santi",
+            "wine": "Finibus Terrae Piemonte Freisa"
+          },
+          {
+            "producer": "Cascina Gilli",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=2&az=Cascina%20Gilli",
+            "wine": "Il Forno Freisa d’Asti"
+          },
+          {
+            "producer": "Cascina Quarino",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=7&az=Cascina%20Quarino",
+            "wine": "Ecclesia Freisa d’Asti"
+          },
+          {
+            "producer": "Vinchio Vaglio",
+            "sourceUrl": "https://cdn.vinchio.com/wp-content/uploads/2023/09/VV-scheda-La-Martana-ITA-1.pdf",
+            "wine": "La Martana Piemonte Freisa"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=12&az=Cantine%20Terre%20dei%20Santi",
+        "value": "cured meats",
+        "wines": [
+          {
+            "producer": "Terre dei Santi",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=12&az=Cantine%20Terre%20dei%20Santi",
+            "wine": "Finibus Terrae Piemonte Freisa"
+          },
+          {
+            "producer": "Cascina Gilli",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=2&az=Cascina%20Gilli",
+            "wine": "Luna di Maggio Freisa d’Asti Frizzante"
+          },
+          {
+            "producer": "Cascina Quarino",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=7&az=Cascina%20Quarino",
+            "wine": "Ecclesia Freisa d’Asti"
+          },
+          {
+            "producer": "Vinchio Vaglio",
+            "sourceUrl": "https://cdn.vinchio.com/wp-content/uploads/2023/09/VV-scheda-La-Martana-ITA-1.pdf",
+            "wine": "La Martana Piemonte Freisa"
+          },
+          {
+            "producer": "Tamburnin",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=4&az=Tamburnin",
+            "wine": "La Giulietta Freisa vivace"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=12&az=Cantine%20Terre%20dei%20Santi",
+        "value": "appetizers",
+        "wines": [
+          {
+            "producer": "Terre dei Santi",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=12&az=Cantine%20Terre%20dei%20Santi",
+            "wine": "Freisa d’Asti Frizzante"
+          },
+          {
+            "producer": "Cascina Gilli",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=2&az=Cascina%20Gilli",
+            "wine": "Luna di Maggio Freisa d’Asti Frizzante"
+          },
+          {
+            "producer": "Cascina Quarino",
+            "sourceUrl": "https://www.piufreisa.it/scheda.asp?t=7&az=Cascina%20Quarino",
+            "wine": "Ecclesia Freisa d’Asti"
+          }
+        ]
       }
     ],
     "id": "freisa",
@@ -58126,7 +58246,12 @@
       "pt": "Freisa"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "white meat",
+      "cheese",
+      "cured meats",
+      "appetizers"
+    ],
     "prominence": 9,
     "regions": [
       {

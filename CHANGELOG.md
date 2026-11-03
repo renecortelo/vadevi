@@ -122,6 +122,10 @@ has the reasons.
   wine commission, and from the figures entered in Wines from Spain's
   Bottlebooks tasting catalogue (figures only). Sheets that give the sugar in g/dm³, the same as g/l, now
   count.
+- **Freisa with cured meats, cheese, white meat and antipasti**, as at
+  least three producers' sheets for their single-variety Freisa say: Terre
+  dei Santi, Cascina Gilli, Cascina Quarino, La Montagnetta and Tamburnin, as
+  the Più Freisa producers' association publishes them, and Vinchio Vaglio.
 - **Xarel·lo with fish and white meat**, as three producers' sheets for
   their single-variety still wines say: Segura Viudas, Covides (Duc de Foix)
   and Fermí Bohigas.

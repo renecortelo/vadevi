@@ -207,6 +207,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Associazione Più Freisa, fichas de los vinos de sus productores socios: solo el dato (los platos que cada bodega propone para su Freisa), con la regla de tres bodegas",
+    terms: "factOnly",
+    url: "https://www.piufreisa.it/cantine.asp",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministerio de Agricultura, Pesca y Alimentación, exposición «La vid»: fichas de variedades (copia del Internet Archive)",
     terms: "reuseCiting",
     url: "https://web.archive.org/web/2023/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",
