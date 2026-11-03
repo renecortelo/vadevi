@@ -123,6 +123,9 @@ has the reasons.
   wine commission, and from the figures entered in Wines from Spain's
   Bottlebooks tasting catalogue (figures only). Sheets that give the sugar in g/dm³, the same as g/l, now
   count.
+- **Xarel·lo with fish and white meat**, as three producers' sheets for
+  their single-variety still wines say: Segura Viudas, Covides (Duc de Foix)
+  and Fermí Bohigas.
 - **And from merchants' and a wine body's grape pages**: Enotria&Coe
   (Ciliegiolo and Marzemino medium-bodied with low tannin, Dolcetto's firm
   tannin, Trepat's low tannin, Grillo's high acidity, Loureira light and dry,

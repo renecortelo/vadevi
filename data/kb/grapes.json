@@ -39516,6 +39516,56 @@
         "quote": "Lo Xarel·lo è un vitigno a bacca bianca di origine spagnola coltivato appositamente in Catalogna.",
         "value": "ES",
         "sourceUrl": "https://it.wikipedia.org/wiki/Xarel%C2%B7lo"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://seguraviudas.com/cat/wp-content/uploads/sites/5/2021/04/segura-viudas-xarelo-cat.pdf",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Segura Viudas",
+            "sourceUrl": "https://seguraviudas.com/cat/wp-content/uploads/sites/5/2021/04/segura-viudas-xarelo-cat.pdf",
+            "wine": "Segura Viudas Xarel·lo"
+          },
+          {
+            "producer": "Covides",
+            "sourceUrl": "https://www.covides.com/en/duc-de-foix/dry-white/",
+            "wine": "Duc de Foix Xarel·lo"
+          },
+          {
+            "producer": "Fermí Bohigas",
+            "sourceUrl": "https://www.fermibohigas.com/ca/productes/vins/xarel-lo/",
+            "wine": "Fermí Bohigas Xarel·lo"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://seguraviudas.com/cat/wp-content/uploads/sites/5/2021/04/segura-viudas-xarelo-cat.pdf",
+        "value": "white meat",
+        "wines": [
+          {
+            "producer": "Segura Viudas",
+            "sourceUrl": "https://seguraviudas.com/cat/wp-content/uploads/sites/5/2021/04/segura-viudas-xarelo-cat.pdf",
+            "wine": "Segura Viudas Xarel·lo"
+          },
+          {
+            "producer": "Covides",
+            "sourceUrl": "https://www.covides.com/en/duc-de-foix/dry-white/",
+            "wine": "Duc de Foix Xarel·lo"
+          },
+          {
+            "producer": "Fermí Bohigas",
+            "sourceUrl": "https://www.fermibohigas.com/ca/productes/vins/xarel-lo/",
+            "wine": "Fermí Bohigas Xarel·lo"
+          }
+        ]
       }
     ],
     "id": "xarel-lo",
@@ -39530,7 +39580,10 @@
       "pt": "Xarel·lo"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "white meat"
+    ],
     "prominence": 14,
     "regions": [
       {
