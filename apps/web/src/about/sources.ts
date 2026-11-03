@@ -200,6 +200,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Wines from Spain (ICEX), catálogo de su cata anual en Bottlebooks: solo las cifras de cada vino (uva, grado, azúcar residual), nunca notas ni precios; un vino por bodega y la misma regla de tres bodegas",
+    terms: "factOnly",
+    url: "https://wfs.bottlebooks.me/products/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministerio de Agricultura, Pesca y Alimentación, exposición «La vid»: fichas de variedades (copia del Internet Archive)",
     terms: "reuseCiting",
     url: "https://web.archive.org/web/2023/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",

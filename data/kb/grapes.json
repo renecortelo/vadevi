@@ -168,6 +168,34 @@
             "wine": "Catro Parroquias Godello"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://wfs.bottlebooks.me/partners/5abc97b89b2ce70a7e0b48cb/products/6050e53d19ebb61a4ff307db",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "La Poda Collection",
+            "sourceUrl": "https://wfs.bottlebooks.me/partners/5abc97b89b2ce70a7e0b48cb/products/6050e53d19ebb61a4ff307db",
+            "sugar": 1.21,
+            "wine": "La Poda Collection La Poda Godello, Valdeorras 2019"
+          },
+          {
+            "producer": "Rafael Palacios",
+            "sourceUrl": "https://wfs.bottlebooks.me/partners/57051b7db7edb7e055619150/products/605496b431bede1a0890d098",
+            "sugar": 1.4,
+            "wine": "Rafael Palacios `Louro Do Bolo` Valdeorras Godello 2019"
+          },
+          {
+            "producer": "Quinta do Sil",
+            "sourceUrl": "https://bodegasbaigorri.com/wp-content/uploads/2025/02/AGRO-448-Ficha_Quinta-Do-Sil-Godello-2023_ING.pdf",
+            "sugar": 1.4,
+            "wine": "Quinta do Sil Godello 2023"
+          }
+        ]
       }
     ],
     "id": "godello",
@@ -237,7 +265,10 @@
         "url": "https://en.wikipedia.org/wiki/Godello"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Agodello",
@@ -10956,6 +10987,34 @@
         "factOnly": true,
         "publisher": "Vinerra",
         "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://wfs.bottlebooks.me/partners/57051b7db7edb7e055619150/products/60546ceed26fbe1a6c062929",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Cuatro Pasos",
+            "sourceUrl": "https://wfs.bottlebooks.me/partners/57051b7db7edb7e055619150/products/60546ceed26fbe1a6c062929",
+            "sugar": 3,
+            "wine": "Cuatro Pasos Bierzo Mencía 2018"
+          },
+          {
+            "producer": "La Poda Collection",
+            "sourceUrl": "https://wfs.bottlebooks.me/partners/5abc97b89b2ce70a7e0b48cb/products/6050e729d2c2da1a49f94b58",
+            "sugar": 3.19,
+            "wine": "La Poda Collection La Poda Mencía, Valdeorras 2019"
+          },
+          {
+            "producer": "Virgen del Galir",
+            "sourceUrl": "https://wfs.bottlebooks.me/partners/56fd0c92b7edb7e055618cf9/products/604f3f30c3d33f1a0df43118",
+            "sugar": 1.5,
+            "wine": "Virgen del Galir  Pagos del Galir Mencía 2018"
+          }
+        ]
       }
     ],
     "id": "mencia",
@@ -11051,7 +11110,10 @@
         "url": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Fernao Pires Tinta",

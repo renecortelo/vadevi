@@ -117,10 +117,11 @@ has the reasons.
   moderate.
 - **Dry, from the residual sugar on producers' technical sheets**, three
   producers or more for each and every figure under 4 g/l but one: Arinto,
-  Alicante Bouschet, Trincadeira, Encruzado, Baga, Fernão Pires and
-  Carmenère. Some come from the sheets wineries publish in Vinhos do
+  Alicante Bouschet, Trincadeira, Encruzado, Baga, Fernão Pires, Carmenère,
+  Godello and Mencía. Some come from the sheets wineries publish in Vinhos do
   Alentejo's wine catalogue, on the Rota da Bairrada and with the Tejo's
-  wine commission. Sheets that give the sugar in g/dm³, the same as g/l, now
+  wine commission, and from the figures entered in Wines from Spain's
+  Bottlebooks tasting catalogue (figures only). Sheets that give the sugar in g/dm³, the same as g/l, now
   count.
 - **And from merchants' and a wine body's grape pages**: Enotria&Coe
   (Ciliegiolo and Marzemino medium-bodied with low tannin, Dolcetto's firm
