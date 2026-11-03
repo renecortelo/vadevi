@@ -214,6 +214,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Casa do Vinho de Almeirim, catálogo de los vinos de sus bodegas: solo el dato (los platos que cada bodega propone), con la regla de tres bodegas",
+    terms: "factOnly",
+    url: "https://casadovinhodealmeirim.pt/catalogo",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Ministerio de Agricultura, Pesca y Alimentación, exposición «La vid»: fichas de variedades (copia del Internet Archive)",
     terms: "reuseCiting",
     url: "https://web.archive.org/web/2023/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/GODELLO.pdf",

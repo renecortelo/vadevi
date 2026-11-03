@@ -6438,6 +6438,61 @@
             "wine": "Monte Cascas Single Vineyard Fernão Pires branco 2013"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://casalmonteiro.pt/pt/wines/6",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Quinta do Casal Monteiro",
+            "sourceUrl": "https://casalmonteiro.pt/pt/wines/6",
+            "wine": "Quinta do Casal Monteiro Grande Reserva Fernão Pires"
+          },
+          {
+            "producer": "Quinta Vale Benfeito",
+            "sourceUrl": "https://quintavalebenfeito.pt/product/carlota-a-imperatriz-fernao-pires-2022-0-75cl/",
+            "wine": "Carlota a Imperatriz Fernão Pires 2022"
+          },
+          {
+            "producer": "Casal Branco",
+            "sourceUrl": "https://casadovinhodealmeirim.pt/catalogo/casal-branco/casal-branco-fernao-pires",
+            "wine": "Casal Branco Fernão Pires"
+          },
+          {
+            "producer": "Casal Branco",
+            "sourceUrl": "https://casadovinhodealmeirim.pt/catalogo/casal-branco/falcoaria-branco",
+            "wine": "Falcoaria Branco"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://casalmonteiro.pt/en/wines/6",
+        "value": "seafood",
+        "wines": [
+          {
+            "producer": "Quinta do Casal Monteiro",
+            "sourceUrl": "https://casalmonteiro.pt/en/wines/6",
+            "wine": "Quinta do Casal Monteiro Grande Reserva Fernão Pires 2022"
+          },
+          {
+            "producer": "Quinta Vale Benfeito",
+            "sourceUrl": "https://quintavalebenfeito.pt/product/carlota-a-imperatriz-fernao-pires-2022-0-75cl/",
+            "wine": "Carlota a Imperatriz Fernão Pires 2022"
+          },
+          {
+            "producer": "Casal Branco",
+            "sourceUrl": "https://casadovinhodealmeirim.pt/catalogo/casal-branco/falcoaria-branco",
+            "wine": "Falcoaria Branco"
+          }
+        ]
       }
     ],
     "id": "fernao-pires",
@@ -6452,7 +6507,10 @@
       "pt": "Fernão-Pires"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -7950,6 +8008,31 @@
         ]
       },
       {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.vinovalie-boutique.com/catalogue/vins/blanc/hominia-mauzac/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Vinovalie (Cave Labastide)",
+            "sourceUrl": "https://www.vinovalie-boutique.com/catalogue/vins/blanc/hominia-mauzac/",
+            "wine": "Hominia Mauzac"
+          },
+          {
+            "producer": "Domaine de Labarthe",
+            "sourceUrl": "https://domaine-labarthe.com/en/products/methode-ancestrale-gaillacoise-brut-gaillac-aoc-bio-labarthe",
+            "wine": "Méthode Ancestrale Gaillacoise Brut (100% Mauzac)"
+          },
+          {
+            "producer": "Mas d'Aurel",
+            "sourceUrl": "https://masdaurel.fr/produit/mauzac/",
+            "wine": "100% Mauzac Blanc Sec Fût"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Mauzac Blanc: France",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -7968,7 +8051,9 @@
       "pt": "Mauzac"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "cheese"
+    ],
     "prominence": 5,
     "regions": [
       {
@@ -15487,6 +15572,56 @@
             "wine": "Artikel Nr 12024Er Siegerrebe Auslese Lieblich 075L Weisswein Rheinhessen"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.chabertonwinery.com/product/2024-siegerrebe/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Chaberton Estate Winery",
+            "sourceUrl": "https://www.chabertonwinery.com/product/2024-siegerrebe/",
+            "wine": "Chaberton Siegerrebe 2024"
+          },
+          {
+            "producer": "Schlosshof Mühlmichel",
+            "sourceUrl": "https://weingut-muehlmichel.de/products/2024-siegerrebe-weisswein-lieblich-36",
+            "wine": "Siegerrebe Weißwein lieblich 2024"
+          },
+          {
+            "producer": "Weingut Fuchs",
+            "sourceUrl": "https://www.weingut-fuchs.de/online-shop/sieger-white-wine-m-29.html",
+            "wine": "Siegerrebe Weißwein"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://weingut-muehlmichel.de/products/2024-siegerrebe-weisswein-lieblich-36",
+        "value": "desserts",
+        "wines": [
+          {
+            "producer": "Schlosshof Mühlmichel",
+            "sourceUrl": "https://weingut-muehlmichel.de/products/2024-siegerrebe-weisswein-lieblich-36",
+            "wine": "Siegerrebe Weißwein lieblich 2024"
+          },
+          {
+            "producer": "Weingut Fuchs",
+            "sourceUrl": "https://www.weingut-fuchs.de/online-shop/sieger-white-wine-m-29.html",
+            "wine": "Siegerrebe Weißwein"
+          },
+          {
+            "producer": "Weingut Cleres",
+            "sourceUrl": "https://weingut.cleres.de/weisswein/siegerrebe-wein-suess-rheinhessen-wein",
+            "wine": "Siegerrebe süß 2025"
+          }
+        ]
       }
     ],
     "id": "siegerrebe",
@@ -15501,7 +15636,10 @@
       "pt": "Siegerrebe"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "desserts"
+    ],
     "prominence": 7,
     "regions": [
       {
@@ -27825,6 +27963,56 @@
         "field": "aromas",
         "quote": "The grapes' naturally high acidity can make the wine somewhat tart with a slight, bitter almond note.",
         "value": "bitter almond"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.albinopiona.it/prodotto/corvina-campo-massimo/",
+        "value": "mushrooms",
+        "wines": [
+          {
+            "producer": "Albino Piona",
+            "sourceUrl": "https://www.albinopiona.it/prodotto/corvina-campo-massimo/",
+            "wine": "Corvina Campo Massimo"
+          },
+          {
+            "producer": "Cantine Giacomo Montresor",
+            "sourceUrl": "https://vinimontresor.com/vini/corvina-igp/",
+            "wine": "Corvina IGP"
+          },
+          {
+            "producer": "Monte del Frà",
+            "sourceUrl": "https://www.montedelfrashop.it/product/corvina-veronese/",
+            "wine": "Corvina Veronese 2021"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.schenkitalia.it/en/wines/corvina-verona-igt-edizione-limitata/",
+        "value": "game",
+        "wines": [
+          {
+            "producer": "Schenk",
+            "sourceUrl": "https://www.schenkitalia.it/en/wines/corvina-verona-igt-edizione-limitata/",
+            "wine": "Corvina Verona IGT Edizione Limitata"
+          },
+          {
+            "producer": "Giarola",
+            "sourceUrl": "https://www.vinigiarola.com/it/prodotti/24-corvina-veronese.html",
+            "wine": "Corvina Veronese"
+          },
+          {
+            "producer": "Alser Vini",
+            "sourceUrl": "https://www.alservini.eu/prodotto/veronese-rosso-igt-corvina/",
+            "wine": "Veronese Rosso IGT Corvina"
+          }
+        ]
       }
     ],
     "id": "corvina",
@@ -27839,7 +28027,10 @@
       "pt": "Corvina"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "mushrooms",
+      "game"
+    ],
     "prominence": 20,
     "regions": [
       {
@@ -44756,6 +44947,31 @@
             "wine": "Aridus Graciano Cochise County Arizona Usa 2023 Review By Clive Pursehouse"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://grupomarquesdelatrio.com/collections/graciano",
+        "value": "red meat",
+        "wines": [
+          {
+            "producer": "Marqués del Atrio",
+            "sourceUrl": "https://grupomarquesdelatrio.com/collections/graciano",
+            "wine": "Marqués del Atrio Graciano"
+          },
+          {
+            "producer": "Bodegas Paiva",
+            "sourceUrl": "https://www.bodegasmartinezpaiva.com/producto/soloi-graciano-2/",
+            "wine": "Paiva Graciano 2024"
+          },
+          {
+            "producer": "Bodegas Navajas",
+            "sourceUrl": "https://bodegasnavajas.es/tienda/producto/vinos-doc-rioja-navajas/monovarietales/navajas-graciano-crianza/",
+            "wine": "Navajas Graciano Crianza"
+          }
+        ]
       }
     ],
     "id": "graciano",
@@ -44770,7 +44986,9 @@
       "pt": "Graciano"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "red meat"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -56168,6 +56386,56 @@
             "wine": "Bacchus 2019"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://weingutkrollmann.de/produkt/nr-172025-rheinhessen-bacchus-spaetlese-suess-075l/",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Weingut Krollmann",
+            "sourceUrl": "https://weingutkrollmann.de/produkt/nr-172025-rheinhessen-bacchus-spaetlese-suess-075l/",
+            "wine": "Rheinhessen Bacchus Spätlese süß 2025"
+          },
+          {
+            "producer": "Woodchester Valley Vineyard",
+            "sourceUrl": "https://www.woodchestervalleyvineyard.co.uk/products/bacchus-2023",
+            "wine": "Woodchester Valley Bacchus 2023"
+          },
+          {
+            "producer": "Schloss Wackerbarth",
+            "sourceUrl": "https://shop.schloss-wackerbarth.de/bacchus-trocken.html",
+            "wine": "Bacchus trocken 2025"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://shop.schloss-wackerbarth.de/bacchus-trocken.html",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Schloss Wackerbarth",
+            "sourceUrl": "https://shop.schloss-wackerbarth.de/bacchus-trocken.html",
+            "wine": "Bacchus trocken 2025"
+          },
+          {
+            "producer": "Weingut Christ",
+            "sourceUrl": "https://www.weingut-christ.de/products/bacchus-feinherb-literwein",
+            "wine": "Bacchus feinherb 2025"
+          },
+          {
+            "producer": "Weingut Merz",
+            "sourceUrl": "https://www.weingut-merz.de/produkt/hanna/",
+            "wine": "Hanna Bacchus"
+          }
+        ]
       }
     ],
     "id": "bacchus-weiss",
@@ -56182,7 +56450,10 @@
       "pt": "Bacchus Weiss"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "cheese"
+    ],
     "prominence": 9,
     "regions": [
       {

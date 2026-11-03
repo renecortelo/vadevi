@@ -131,6 +131,15 @@ has the reasons.
   least three producers' sheets for their single-variety Freisa say: Terre
   dei Santi, Cascina Gilli, Cascina Quarino, La Montagnetta and Tamburnin, as
   the Più Freisa producers' association publishes them, and Vinchio Vaglio.
+- **Pairings for six more grapes, each from three producers' sheets or
+  more**: Graciano with red meat (Marqués del Atrio, Bodegas Paiva,
+  Navajas); Fernão Pires with fish and seafood (Casal Monteiro, Quinta Vale
+  Benfeito, Casal Branco, from the Casa do Vinho de Almeirim's catalogue);
+  Bacchus with fish and cheese (Krollmann, Woodchester Valley, Schloss
+  Wackerbarth, Christ, Merz); Siegerrebe with cheese and desserts (Chaberton,
+  Mühlmichel, Fuchs, Cleres); Corvina with mushrooms and game (Albino Piona,
+  Montresor, Monte del Frà, Schenk, Giarola, Alser); Mauzac with cheese
+  (Vinovalie, Labarthe, Mas d'Aurel).
 - **Xarel·lo with fish and white meat**, as three producers' sheets for
   their single-variety still wines say: Segura Viudas, Covides (Duc de Foix)
   and Fermí Bohigas.
