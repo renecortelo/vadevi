@@ -112,9 +112,8 @@ has the reasons.
   Aglianico, Malbec, Mavrud and Tinta Amarela; moderate for Arneis, Bacchus,
   Encruzado, Erbaluce, Fernão Pires, Gamaret, Goruli Mtsvane, Grechetto,
   Kisi, Mavro, Neuburger, Pinot Meunier, Xinomavro and Xynisteri. The jury's
-  notes and medals are not used. Three more by the same rule, found under
-  other names: Aligoté, Garnacha Roja (Grenache Gris) and Mauzac, all
-  moderate.
+  notes and medals are not used. Two more by the same rule, found under
+  other names: Aligoté and Mauzac, both moderate.
 - **Dry, from the residual sugar on producers' technical sheets**, three
   producers or more for each and every figure under 4 g/l but one: Arinto,
   Alicante Bouschet, Trincadeira, Encruzado, Baga, Fernão Pires, Carmenère,

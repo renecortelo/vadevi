@@ -1204,7 +1204,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "fruity",
       "raspberry",
@@ -1312,166 +1312,6 @@
         "factOnly": true,
         "publisher": "Baur au Lac Vins",
         "sourceUrl": "https://www.bauraulacvins.ch/en/grenache-gris-_content---1--669--11105713.html"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592086",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 15.5,
-            "producer": "Gourgazaud",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592086",
-            "wine": "Grenache Gris 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Fortant",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/538060",
-            "wine": "Grenache Gris 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Vranken Estates",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/550375",
-            "wine": "Domaine Royal de Jarras Pink Flamingo 2015"
-          },
-          {
-            "abv": 12,
-            "producer": "Vignobles Jeanjean",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/533486",
-            "wine": "Domaine le Pive Vie de Bohème Rosé 2016"
-          },
-          {
-            "abv": 12,
-            "producer": "Couleurs du Sud",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/530345",
-            "wine": "Grenache Rosé 2016"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Les Jamelles",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/579094",
-            "wine": "Clair de Gris Grenache Gris 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Gérard Bertrand",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/620225",
-            "wine": "Gris Blanc 2010"
-          },
-          {
-            "abv": 13,
-            "producer": "Boutinot South Africa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/625535",
-            "wine": "Percheron 2011"
-          },
-          {
-            "abv": 13,
-            "producer": "Domaine Jones",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/621249",
-            "wine": "Grenache Gris 2011"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Mont Tauch",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/668559",
-            "wine": "Le Village du Sud Rosé 2009"
-          },
-          {
-            "abv": 13,
-            "producer": "Domaine du Joncas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/633400",
-            "wine": "Alba 2014"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Espelt",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/631518",
-            "wine": "Lledoner Roig 2013"
-          },
-          {
-            "abv": 14.95,
-            "producer": "Jeff Carrel",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/719304",
-            "wine": "Chatgris NV"
-          },
-          {
-            "abv": 12,
-            "producer": "Domaine Le Pive",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/711463",
-            "wine": "Ma Bohème 2021"
-          },
-          {
-            "abv": 13,
-            "producer": "Benjamin Darnault",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/715503",
-            "wine": "Grenache Gris Plus 2020"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Domaine Royal De Jarras",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/715535",
-            "wine": "Téte De Cuveé Gris De Gris Bio 2021"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Mas Gabinèle",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/705757",
-            "wine": "Rarissime 2020"
-          },
-          {
-            "abv": 14,
-            "producer": "Château Maris",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/726029",
-            "wine": "Brama 2020"
-          },
-          {
-            "abv": 14,
-            "producer": "BORN ROSÉ Barcelona",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/756558",
-            "wine": "503 2021"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Donkiesbaai",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/775870",
-            "wine": "Grenache Noir 2023"
-          },
-          {
-            "abv": 12,
-            "producer": "Les Embruns",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/766585",
-            "wine": "Sauvage Par Nature NV"
-          },
-          {
-            "abv": 14,
-            "producer": "Domaine de Jau",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/762904",
-            "wine": "Jaujau 1er 2023"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Domaine Terres De Sable",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/762864",
-            "wine": "La Sagne Gris De Gris 2024"
-          },
-          {
-            "abv": 14,
-            "producer": "Domaine De La Lause",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/792241",
-            "wine": "Chemin Sainte-Colombe Grenache Gris 2024"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Château De L'ou",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/782522",
-            "wine": "Secret De Schistes 2023"
-          }
-        ]
       }
     ],
     "id": "garnacha-roja",
@@ -4889,12 +4729,6 @@
             "wine": "Trincadeira 2014"
           },
           {
-            "abv": 13.5,
-            "producer": "Casa Relvas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/578862",
-            "wine": "Herdade São Miguel Trincadeira 2017"
-          },
-          {
             "abv": 14,
             "producer": "Esporão",
             "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/571582",
@@ -6177,12 +6011,6 @@
             "producer": "Sociedade Agrícola Boas Quintas",
             "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/580592",
             "wine": "Fonte do Ouro Reserva Especial Encruzado 2019"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Casa de Santar",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/596664",
-            "wine": "Vinha dos Amores Encruzado 2016"
           },
           {
             "abv": 13,
