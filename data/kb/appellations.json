@@ -2581,7 +2581,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -2593,7 +2593,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -3124,7 +3124,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -4030,7 +4030,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "xarel-lo",
           "name": "Xarello"
         },
         {
@@ -26697,7 +26697,7 @@
           "name": "Cserszegi fűszeres"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -26713,7 +26713,7 @@
           "name": "Szürkebarát"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -26721,11 +26721,11 @@
           "name": "Rózsakő"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -28529,7 +28529,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -28585,7 +28585,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -28712,7 +28712,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -28760,7 +28760,7 @@
           "name": "Pátria"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -28788,7 +28788,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -28804,7 +28804,7 @@
           "name": "Turán"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -28991,7 +28991,7 @@
           "name": "Cabernet franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -28999,7 +28999,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -29235,7 +29235,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -29263,7 +29263,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -29271,7 +29271,7 @@
           "name": "Rozália"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -29279,7 +29279,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -29434,11 +29434,11 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zöld szilváni"
         },
         {
@@ -29586,7 +29586,7 @@
           "name": "Hárslevelű"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Hamburgi muskotály"
         },
         {
@@ -29618,7 +29618,7 @@
           "name": "Pátria"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -29642,7 +29642,7 @@
           "name": "Menoire"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -29678,7 +29678,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -29706,7 +29706,7 @@
           "name": "Turán"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -29714,7 +29714,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -29917,7 +29917,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -35425,19 +35425,19 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -35457,23 +35457,23 @@
           "name": "Laški rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Šentlovrenka"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -35481,7 +35481,7 @@
           "name": "Rdeca Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -35501,7 +35501,7 @@
           "name": "Gamay"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -35821,11 +35821,11 @@
           "name": "Kraljevina"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -35845,11 +35845,11 @@
           "name": "Rumeni Muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         }
       ],
@@ -39718,11 +39718,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -39730,11 +39730,11 @@
           "name": "Šipon"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -39754,7 +39754,7 @@
           "name": "Laški rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
@@ -39766,19 +39766,19 @@
           "name": "Rumeni Muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Šentlovrenka"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -39790,7 +39790,7 @@
           "name": "Kraljevina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -39814,7 +39814,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -39957,11 +39957,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -39969,11 +39969,11 @@
           "name": "Šipon"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -39993,7 +39993,7 @@
           "name": "Laški rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
@@ -40009,19 +40009,19 @@
           "name": "Rumeni Muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Šentlovrenka"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -40033,7 +40033,7 @@
           "name": "Kraljevina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -40057,7 +40057,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -47794,7 +47794,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -47870,7 +47870,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -47886,7 +47886,7 @@
           "name": "Menoire"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -47906,7 +47906,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -47914,7 +47914,7 @@
           "name": "Turán"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -58953,7 +58953,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "xarel-lo",
           "name": "Xarello"
         },
         {
@@ -59139,7 +59139,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "xarel-lo",
           "name": "Xarello"
         },
         {
@@ -67898,7 +67898,7 @@
           "name": "Columna"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -67922,7 +67922,7 @@
           "name": "Iordana"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Rkatiteli"
         },
         {
@@ -67938,7 +67938,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -78748,7 +78748,7 @@
           "name": "Pedro Ximenez"
         },
         {
-          "grapeId": null,
+          "grapeId": "palomino",
           "name": "Palomino Fino"
         },
         {
@@ -89572,7 +89572,7 @@
           "name": "Plavaie"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -89608,7 +89608,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -89769,7 +89769,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -90393,7 +90393,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -90401,7 +90401,7 @@
           "name": "Riesling Italian"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -92070,7 +92070,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -92138,7 +92138,7 @@
           "name": "Sauvignon blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -92146,7 +92146,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -93029,11 +93029,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -93041,11 +93041,11 @@
           "name": "Šipon"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -93065,7 +93065,7 @@
           "name": "Laški rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
@@ -93077,19 +93077,19 @@
           "name": "Rizvanec"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Šentlovrenka"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -93097,7 +93097,7 @@
           "name": "Rdeca Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -93121,7 +93121,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -102191,7 +102191,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Rkaciteli"
         },
         {
@@ -102203,15 +102203,15 @@
           "name": "Plavina"
         },
         {
-          "grapeId": null,
+          "grapeId": "plavac-mali",
           "name": "Plavac mali crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -103143,7 +103143,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -103191,7 +103191,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -103376,7 +103376,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -103392,7 +103392,7 @@
           "name": "Burgund Mare"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -103573,7 +103573,7 @@
           "name": "Burgund Mare"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -103875,7 +103875,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -103907,7 +103907,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -104096,7 +104096,7 @@
           "name": "Plavaie"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -104148,7 +104148,7 @@
           "name": "Aromat de Iasi"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Rkatiteli"
         },
         {
@@ -104168,7 +104168,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -104353,7 +104353,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -104405,7 +104405,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -104594,7 +104594,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -104610,7 +104610,7 @@
           "name": "Burgund Mare"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -104811,7 +104811,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -104980,7 +104980,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -105012,7 +105012,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -105189,7 +105189,7 @@
           "name": "Traminer aromat"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -105225,7 +105225,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -105410,7 +105410,7 @@
           "name": "Plavaie"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -105462,7 +105462,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -105635,7 +105635,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -105675,7 +105675,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -105828,7 +105828,7 @@
           "name": "Olasz rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         }
       ],
@@ -106651,7 +106651,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "plavac-mali",
           "name": "Plavac mali crni"
         }
       ],
@@ -108440,19 +108440,19 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -108472,7 +108472,7 @@
           "name": "Laški rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
@@ -108484,19 +108484,19 @@
           "name": "Scheurebe"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Šentlovrenka"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -108504,7 +108504,7 @@
           "name": "Rdeca Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -108528,7 +108528,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -110546,7 +110546,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -110594,7 +110594,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -110723,7 +110723,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -110851,7 +110851,7 @@
           "name": "Sauvignon blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -110859,7 +110859,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -111005,11 +111005,11 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zöld szilváni"
         },
         {
@@ -111157,7 +111157,7 @@
           "name": "Hárslevelű"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Hamburgi muskotály"
         },
         {
@@ -111189,7 +111189,7 @@
           "name": "Pátria"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -111213,7 +111213,7 @@
           "name": "Menoire"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -111249,7 +111249,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -111277,7 +111277,7 @@
           "name": "Turán"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -111285,7 +111285,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -112655,7 +112655,7 @@
           "name": "Hárslevelű"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Hamburgi muskotály"
         },
         {
@@ -112699,7 +112699,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -116425,7 +116425,7 @@
           "name": "Cabernet franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -116433,7 +116433,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -117944,7 +117944,7 @@
           "name": "Zöldszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -118048,7 +118048,7 @@
           "name": "Hárslevelű"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Hamburgi muskotály"
         },
         {
@@ -118076,7 +118076,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -118104,7 +118104,7 @@
           "name": "Mátrai muskotály"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -118128,7 +118128,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -118136,7 +118136,7 @@
           "name": "Turán"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -118144,7 +118144,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -129299,11 +129299,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -129351,7 +129351,7 @@
           "name": "Barbera"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
@@ -133725,7 +133725,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -133749,7 +133749,7 @@
           "name": "Sauvignon blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -137298,11 +137298,11 @@
           "name": "Refošk"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -137334,7 +137334,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -137350,7 +137350,7 @@
           "name": "Manzoni bijeli"
         },
         {
-          "grapeId": null,
+          "grapeId": "croatina",
           "name": "Hrvatica"
         },
         {
@@ -137358,7 +137358,7 @@
           "name": "Gamay bojadiser"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -137541,7 +137541,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -137561,19 +137561,19 @@
           "name": "Rizvanac"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -137593,7 +137593,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -137629,7 +137629,7 @@
           "name": "Gamay crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -137849,15 +137849,15 @@
           "name": "Plavčina"
         },
         {
-          "grapeId": null,
+          "grapeId": "plavac-mali",
           "name": "Plavac mali crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -137913,7 +137913,7 @@
           "name": "Jarbola"
         },
         {
-          "grapeId": null,
+          "grapeId": "croatina",
           "name": "Hrvatica"
         },
         {
@@ -137933,7 +137933,7 @@
           "name": "Gamay bojadiser"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -138150,7 +138150,7 @@
           "name": "Plavaie"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -138692,7 +138692,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -140742,7 +140742,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -140766,7 +140766,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -140774,15 +140774,15 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -140814,7 +140814,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -140854,7 +140854,7 @@
           "name": "Gamay crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -141505,7 +141505,7 @@
           "name": "Pedro Ximenez"
         },
         {
-          "grapeId": null,
+          "grapeId": "palomino",
           "name": "Palomino Fino"
         },
         {
@@ -143029,11 +143029,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -143077,7 +143077,7 @@
           "name": "Barbera"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
@@ -143396,7 +143396,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -143456,7 +143456,7 @@
           "name": "Hárslevelű"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Hamburgi muskotály"
         },
         {
@@ -143496,7 +143496,7 @@
           "name": "Sauvignon blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -143504,7 +143504,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -143687,7 +143687,7 @@
           "name": "Cabernet franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -143695,7 +143695,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -154135,7 +154135,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "palomino",
           "name": "Palomino Fino"
         },
         {
@@ -154296,7 +154296,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -157447,7 +157447,7 @@
           "name": "Neuburské"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
@@ -157455,11 +157455,11 @@
           "name": "Modrý Portugal"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
@@ -157479,11 +157479,11 @@
           "name": "Zweigeltrebe"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
@@ -157491,11 +157491,11 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -157543,7 +157543,7 @@
           "name": "Agni"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské Zelené"
         },
         {
@@ -157571,7 +157571,7 @@
           "name": "Pálava"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavrinecké"
         },
         {
@@ -157587,11 +157587,11 @@
           "name": "Aurelius"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvanské Zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín Cervený"
         },
         {
@@ -157599,11 +157599,11 @@
           "name": "Rulandské Bílé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské Modré"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink Rýnský"
         },
         {
@@ -162677,7 +162677,7 @@
           "name": "Liatiko"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -162828,7 +162828,7 @@
           "name": "Assyrtiko"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -163562,7 +163562,7 @@
           "name": "Pedro Ximenez"
         },
         {
-          "grapeId": null,
+          "grapeId": "palomino",
           "name": "Palomino Fino"
         },
         {
@@ -169017,7 +169017,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
@@ -169025,15 +169025,15 @@
           "name": "Žametovka"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Šentlovrenka"
         },
         {
@@ -169340,7 +169340,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -169348,15 +169348,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -169376,15 +169376,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -169456,7 +169456,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -169472,7 +169472,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -170275,7 +170275,7 @@
           "name": "Fetească regală"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -170299,7 +170299,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -173000,7 +173000,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -173052,7 +173052,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -173076,7 +173076,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -178082,7 +178082,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -178090,15 +178090,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -178118,15 +178118,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -178198,7 +178198,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -178214,7 +178214,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -180407,7 +180407,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -180431,7 +180431,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -180439,7 +180439,7 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
@@ -180447,11 +180447,11 @@
           "name": "Plavec žuti"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -180479,7 +180479,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -180531,7 +180531,7 @@
           "name": "Gamay crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -181572,7 +181572,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -184225,7 +184225,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -184269,7 +184269,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -184281,7 +184281,7 @@
           "name": "Merlot"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -184297,11 +184297,11 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -184309,7 +184309,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -185503,7 +185503,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -185543,7 +185543,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -185555,7 +185555,7 @@
           "name": "Merlot"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -185567,11 +185567,11 @@
           "name": "Sauvignon blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -185579,7 +185579,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         }
       ],
@@ -185732,7 +185732,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -185740,15 +185740,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -185768,15 +185768,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -185848,7 +185848,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -185864,7 +185864,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -186089,7 +186089,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -186185,7 +186185,7 @@
           "name": "Pátria"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -186221,7 +186221,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -186233,7 +186233,7 @@
           "name": "Rozália"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -186241,7 +186241,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -188591,7 +188591,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -188603,7 +188603,7 @@
           "name": "Merlot"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -188615,7 +188615,7 @@
           "name": "Sauvignon blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -188623,7 +188623,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -190666,7 +190666,7 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
@@ -190674,7 +190674,7 @@
           "name": "Neuburské"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -190682,7 +190682,7 @@
           "name": "Ryzlink Vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink Rýnský"
         },
         {
@@ -191861,7 +191861,7 @@
           "name": "Plavaie"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -191893,7 +191893,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -197312,7 +197312,7 @@
           "name": "Plavaie"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -197356,7 +197356,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -197529,11 +197529,11 @@
           "name": "Cabernet franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -197695,7 +197695,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -197751,7 +197751,7 @@
           "name": "Pátria"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -197763,7 +197763,7 @@
           "name": "Merlot"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -197779,7 +197779,7 @@
           "name": "Sauvignon blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
@@ -197787,7 +197787,7 @@
           "name": "Turán"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -197795,7 +197795,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -200954,7 +200954,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "xarel-lo",
           "name": "Xarello"
         },
         {
@@ -206548,7 +206548,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -206572,7 +206572,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -206580,7 +206580,7 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
@@ -206588,11 +206588,11 @@
           "name": "Plavec žuti"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -206624,7 +206624,7 @@
           "name": "Muškat morio"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -206648,7 +206648,7 @@
           "name": "Lovrijenac"
         },
         {
-          "grapeId": null,
+          "grapeId": "harslevelu",
           "name": "Lipovina"
         },
         {
@@ -206684,7 +206684,7 @@
           "name": "Gamay crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -206853,11 +206853,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -206865,11 +206865,11 @@
           "name": "Šipon"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -206889,7 +206889,7 @@
           "name": "Laški rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
@@ -206901,15 +206901,15 @@
           "name": "Muškat Ottonel"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -206917,7 +206917,7 @@
           "name": "Rdeca Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -206941,7 +206941,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -207108,7 +207108,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -207132,7 +207132,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -207140,7 +207140,7 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
@@ -207148,11 +207148,11 @@
           "name": "Plavec žuti"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -207176,7 +207176,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -207216,7 +207216,7 @@
           "name": "Graševina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -208150,7 +208150,7 @@
           "name": "Maraština"
         },
         {
-          "grapeId": null,
+          "grapeId": "plavac-mali",
           "name": "Plavac mali crni"
         },
         {
@@ -209483,11 +209483,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -209495,11 +209495,11 @@
           "name": "Šipon"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -209519,7 +209519,7 @@
           "name": "Laški rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugalka"
         },
         {
@@ -209535,19 +209535,19 @@
           "name": "Scheurebe"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Šentlovrenka"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -209555,7 +209555,7 @@
           "name": "Rdeca Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -209579,7 +209579,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -210614,11 +210614,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -210626,11 +210626,11 @@
           "name": "Šipon"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -210654,15 +210654,15 @@
           "name": "Muškat Ottonel"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -210670,7 +210670,7 @@
           "name": "Rdeca Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -210686,7 +210686,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -211023,7 +211023,7 @@
           "name": "Solaris"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -211047,7 +211047,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -211055,7 +211055,7 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
@@ -211063,11 +211063,11 @@
           "name": "Plavec žuti"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -211087,7 +211087,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -211143,7 +211143,7 @@
           "name": "Gamay crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -211643,11 +211643,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -211699,7 +211699,7 @@
           "name": "Barbera"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
@@ -211991,7 +211991,7 @@
           "name": "Rušljin crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Rkaciteli"
         },
         {
@@ -212027,15 +212027,15 @@
           "name": "Plavac mali sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "plavac-mali",
           "name": "Plavac mali crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -212079,7 +212079,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -212147,7 +212147,7 @@
           "name": "Jarbola"
         },
         {
-          "grapeId": null,
+          "grapeId": "croatina",
           "name": "Hrvatica"
         },
         {
@@ -215224,7 +215224,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -215296,7 +215296,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Ottonel muskotály"
         },
         {
@@ -215328,7 +215328,7 @@
           "name": "Rubintos"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
@@ -215336,7 +215336,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -217554,7 +217554,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -241977,7 +241977,7 @@
           "name": "Cabernet Franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Rkatiteli"
         },
         {
@@ -241989,7 +241989,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -245106,7 +245106,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -245114,7 +245114,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -245743,7 +245743,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -248726,7 +248726,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Rkaciteli"
         },
         {
@@ -248738,7 +248738,7 @@
           "name": "Plavina"
         },
         {
-          "grapeId": null,
+          "grapeId": "plavac-mali",
           "name": "Plavac mali crni"
         },
         {
@@ -249054,11 +249054,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svätovavrinecké"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka modrá"
         },
         {
@@ -249229,7 +249229,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -249253,7 +249253,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -249261,15 +249261,15 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -249301,7 +249301,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -249341,7 +249341,7 @@
           "name": "Gamay crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -249503,11 +249503,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -249531,7 +249531,7 @@
           "name": "Chardonnay"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
@@ -249842,7 +249842,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -249850,15 +249850,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -249878,15 +249878,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -249958,7 +249958,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -249974,7 +249974,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -250678,7 +250678,7 @@
           "name": "Olasz rizling"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         }
       ],
@@ -251044,7 +251044,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -251100,7 +251100,7 @@
           "name": "Merlot"
         },
         {
-          "grapeId": null,
+          "grapeId": "feteasca-alba",
           "name": "Leányka"
         },
         {
@@ -251112,15 +251112,15 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Sárga muskotály"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramini"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -252321,7 +252321,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Rkaciteli"
         },
         {
@@ -252345,7 +252345,7 @@
           "name": "Plavac mali sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "plavac-mali",
           "name": "Plavac mali crni"
         },
         {
@@ -254118,7 +254118,7 @@
           "name": "Cabernet franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -254126,7 +254126,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -255092,11 +255092,11 @@
           "name": "Kövérszőlő"
         },
         {
-          "grapeId": null,
+          "grapeId": "harslevelu",
           "name": "Lipovina"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškát žltý"
         },
         {
@@ -257856,7 +257856,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -257892,7 +257892,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -266692,7 +266692,7 @@
           "name": "Cabernet franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -266700,7 +266700,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -271327,7 +271327,7 @@
           "name": "Syrah"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -271500,7 +271500,7 @@
           "name": "Iordana"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -284236,7 +284236,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -284244,15 +284244,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -284272,15 +284272,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -284352,7 +284352,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -284368,7 +284368,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -289779,7 +289779,7 @@
           "name": "Fetească albă"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminer Roz"
         },
         {
@@ -289811,7 +289811,7 @@
           "name": "Cadarca"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -290008,7 +290008,7 @@
           "name": "Portugais Bleu"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Riesling de Rhin"
         },
         {
@@ -290503,7 +290503,7 @@
           "name": "Pedro Ximenez"
         },
         {
-          "grapeId": null,
+          "grapeId": "palomino",
           "name": "Palomino Fino"
         },
         {
@@ -290697,7 +290697,7 @@
           "name": "Cabernet franc"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -290705,7 +290705,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -293480,11 +293480,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -293528,7 +293528,7 @@
           "name": "Barbera"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
@@ -298827,7 +298827,7 @@
           "name": "Sokol"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -298851,7 +298851,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -298859,15 +298859,15 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -298891,7 +298891,7 @@
           "name": "Muškat crveni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -298923,7 +298923,7 @@
           "name": "Lovrijenac"
         },
         {
-          "grapeId": null,
+          "grapeId": "harslevelu",
           "name": "Lipovina"
         },
         {
@@ -298951,7 +298951,7 @@
           "name": "Gamay bojadiser"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -299115,7 +299115,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Zöld veltelini"
         },
         {
@@ -299163,7 +299163,7 @@
           "name": "Rizlingszilváni"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnai rizling"
         },
         {
@@ -299376,7 +299376,7 @@
           "name": "Sokol"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Silvanac zeleni"
         },
         {
@@ -299400,7 +299400,7 @@
           "name": "Ranfol"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Rajnski rizling"
         },
         {
@@ -299408,7 +299408,7 @@
           "name": "Radgonska ranina"
         },
         {
-          "grapeId": null,
+          "grapeId": "blauer-portugieser",
           "name": "Portugizac"
         },
         {
@@ -299416,11 +299416,11 @@
           "name": "Plavec žuti"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Pinot sivi"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Pinot crni"
         },
         {
@@ -299452,7 +299452,7 @@
           "name": "Muškat morio"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Muškat bijeli"
         },
         {
@@ -299484,7 +299484,7 @@
           "name": "Lovrijenac"
         },
         {
-          "grapeId": null,
+          "grapeId": "harslevelu",
           "name": "Lipovina"
         },
         {
@@ -299524,7 +299524,7 @@
           "name": "Gamay crni"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -299977,7 +299977,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -299985,15 +299985,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -300013,15 +300013,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -300093,7 +300093,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -300109,7 +300109,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -300322,7 +300322,7 @@
       "categories": [],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -300330,15 +300330,15 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink Rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské Zelené"
         }
       ],
@@ -301065,7 +301065,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -301073,15 +301073,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -301101,15 +301101,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -301181,7 +301181,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -301197,7 +301197,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -302499,7 +302499,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -302507,15 +302507,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -302535,15 +302535,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -302615,7 +302615,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -302631,7 +302631,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -302856,7 +302856,7 @@
           "name": "Veritas"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -302864,15 +302864,15 @@
           "name": "Veltlínské červené rané"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Sylvánské zelené"
         },
         {
-          "grapeId": null,
+          "grapeId": "st-laurent",
           "name": "Svatovavřinecké"
         },
         {
@@ -302892,15 +302892,15 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
@@ -302972,7 +302972,7 @@
           "name": "Kerner"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir-precoce",
           "name": "Jakubské"
         },
         {
@@ -302988,7 +302988,7 @@
           "name": "Fratava"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Frankovka"
         },
         {
@@ -303365,15 +303365,15 @@
       "categories": [],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín červený"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské modré"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Rulandské šedé"
         },
         {
@@ -303385,7 +303385,7 @@
           "name": "Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink rýnský"
         },
         {
@@ -303393,7 +303393,7 @@
           "name": "Ryzlink vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské zelené"
         },
         {
@@ -303401,7 +303401,7 @@
           "name": "Ryzlink Vlašský"
         },
         {
-          "grapeId": null,
+          "grapeId": "gruner-veltliner",
           "name": "Veltlínské Zelené"
         },
         {
@@ -303409,7 +303409,7 @@
           "name": "Pálava"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Tramín Cervený"
         },
         {
@@ -303417,11 +303417,11 @@
           "name": "Rulandské Bílé"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Rulandské Modré"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ryzlink Rýnský"
         }
       ],
@@ -303563,11 +303563,11 @@
           "name": "Rumeni muškat"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-gris",
           "name": "Sivi pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-blanc",
           "name": "Beli pinot"
         },
         {
@@ -303575,11 +303575,11 @@
           "name": "Šipon"
         },
         {
-          "grapeId": null,
+          "grapeId": "blaufrankisch",
           "name": "Modra frankinja"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Renski rizling"
         },
         {
@@ -303607,15 +303607,15 @@
           "name": "Muškat Ottonel"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Dišeci Traminec"
         },
         {
-          "grapeId": null,
+          "grapeId": "pinot-noir",
           "name": "Modri Pinot"
         },
         {
-          "grapeId": null,
+          "grapeId": "chasselas",
           "name": "Bela Zlahtnina"
         },
         {
@@ -303623,7 +303623,7 @@
           "name": "Rdeca Zlahtnina"
         },
         {
-          "grapeId": null,
+          "grapeId": "silvaner",
           "name": "Zeleni Silvanec"
         },
         {
@@ -303639,7 +303639,7 @@
           "name": "Zweigelt"
         },
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Traminec"
         }
       ],
@@ -305222,7 +305222,7 @@
           "name": "Begleri"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -306543,7 +306543,7 @@
           "name": "Mavrodafni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -306923,7 +306923,7 @@
           "name": "Roditis"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -307161,7 +307161,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -308235,7 +308235,7 @@
           "name": "Cabernet Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -308437,7 +308437,7 @@
           "name": "Sauvignon Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Moschato Amvourgou"
         },
         {
@@ -309715,7 +309715,7 @@
           "name": "Liatiko"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -310297,7 +310297,7 @@
           "name": "Agrioglykadi"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -310650,7 +310650,7 @@
           "name": "Sauvignon Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Moschato Amvourgou"
         },
         {
@@ -313284,7 +313284,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -313444,7 +313444,7 @@
           "name": "Cabernet Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -314002,7 +314002,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -314244,7 +314244,7 @@
           "name": "Μαραθευτικο"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -314450,7 +314450,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -314682,7 +314682,7 @@
           "name": "Voidomatis"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -315316,11 +315316,11 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "sultana",
           "name": "Σουλτανινα"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -315456,7 +315456,7 @@
           "name": "Moschato Samou"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -316102,7 +316102,7 @@
           "name": "Cabernet Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -316344,7 +316344,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -316639,7 +316639,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "sultana",
           "name": "Σουλτανινα"
         },
         {
@@ -316647,7 +316647,7 @@
           "name": "Καρινιαν Νουαρ"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -316807,7 +316807,7 @@
           "name": "Moschato Samou"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -317277,7 +317277,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -318386,7 +318386,7 @@
           "name": "Mavrodafni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -320284,7 +320284,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         }
       ],
@@ -320423,7 +320423,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         }
       ],
@@ -320701,7 +320701,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         }
       ],
@@ -320840,7 +320840,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         }
       ],
@@ -321996,7 +321996,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "sultana",
           "name": "Σουλτανινα"
         },
         {
@@ -322004,7 +322004,7 @@
           "name": "Καρινιαν Νουαρ"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -322176,7 +322176,7 @@
           "name": "Moschato Samou"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -323237,7 +323237,7 @@
           "name": "Mavrodafni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -323920,7 +323920,7 @@
           "name": "Καπερνε Φραν"
         },
         {
-          "grapeId": null,
+          "grapeId": "xynisteri",
           "name": "Ξυνιστερι"
         },
         {
@@ -324142,7 +324142,7 @@
           "name": "Mavrodafni"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -324555,7 +324555,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         }
       ],
@@ -326091,7 +326091,7 @@
           "name": "Liatiko"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -329054,7 +329054,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         }
       ],
@@ -329411,7 +329411,7 @@
           "name": "Roditis"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -329954,7 +329954,7 @@
           "name": "Sauvignon Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Moschato Amvourgou"
         },
         {
@@ -330340,7 +330340,7 @@
           "name": "Savatiano"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -330939,7 +330939,7 @@
           "name": "Sauvignon Blanc"
         },
         {
-          "grapeId": null,
+          "grapeId": "black-muscat",
           "name": "Moschato Amvourgou"
         },
         {
@@ -331720,7 +331720,7 @@
           "name": "Savatiano"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -332202,7 +332202,7 @@
           "name": "Cabernet Sauvignon"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-blanc-a-petits-grains",
           "name": "Moschato Aspro"
         },
         {
@@ -332392,19 +332392,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -332542,11 +332542,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -332684,15 +332684,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -332830,15 +332830,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -332846,15 +332846,15 @@
           "name": "Димят"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -332984,15 +332984,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -333004,15 +333004,15 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -333150,39 +333150,39 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "aligote",
           "name": "Алиготе"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -333320,11 +333320,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -333462,7 +333462,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -333600,7 +333600,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
@@ -333608,11 +333608,11 @@
           "name": "Широка мелнишка лоза"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -333624,19 +333624,19 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -333774,23 +333774,23 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -333916,23 +333916,23 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "aligote",
           "name": "Алиготе"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
@@ -333940,15 +333940,15 @@
           "name": "Широка мелнишка лоза"
         },
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -333960,19 +333960,19 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -334110,15 +334110,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -334264,19 +334264,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -334414,7 +334414,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
@@ -334422,11 +334422,11 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -334564,27 +334564,27 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -334592,15 +334592,15 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -334738,11 +334738,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -334880,7 +334880,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -335018,27 +335018,27 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -335176,11 +335176,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
@@ -335188,23 +335188,23 @@
           "name": "Широка мелнишка лоза"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -335342,15 +335342,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "aligote",
           "name": "Алиготе"
         },
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
@@ -335358,11 +335358,11 @@
           "name": "Димят"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -335488,7 +335488,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         }
       ],
@@ -335626,19 +335626,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -335765,19 +335765,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -335785,15 +335785,15 @@
           "name": "Димят"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -335931,7 +335931,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         }
       ],
@@ -336069,15 +336069,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -336215,11 +336215,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -336357,7 +336357,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         }
       ],
@@ -336495,15 +336495,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -336641,11 +336641,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -336783,19 +336783,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -336933,15 +336933,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -336949,15 +336949,15 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -337095,19 +337095,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -337237,19 +337237,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -337257,15 +337257,15 @@
           "name": "Димят"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -337573,7 +337573,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -337711,15 +337711,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -337857,11 +337857,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -337999,7 +337999,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         }
       ],
@@ -338137,19 +338137,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "aligote",
           "name": "Алиготе"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -338161,19 +338161,19 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -338311,15 +338311,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -338457,23 +338457,23 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -338597,23 +338597,23 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -338621,15 +338621,15 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -338767,15 +338767,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -338913,23 +338913,23 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "aligote",
           "name": "Алиготе"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
@@ -338937,15 +338937,15 @@
           "name": "Широка мелнишка лоза"
         },
         {
-          "grapeId": null,
+          "grapeId": "kadarka",
           "name": "Гъмза"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -338957,19 +338957,19 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -339107,15 +339107,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -339123,19 +339123,19 @@
           "name": "Димят"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -339273,11 +339273,11 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         }
       ],
@@ -339419,15 +339419,15 @@
           "name": "Димят"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -339565,15 +339565,15 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "aligote",
           "name": "Алиготе"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
@@ -339853,23 +339853,23 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -339881,19 +339881,19 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -340031,23 +340031,23 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -340185,19 +340185,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],
@@ -340335,31 +340335,31 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "gewurztraminer",
           "name": "Траминер"
         },
         {
-          "grapeId": null,
+          "grapeId": "aligote",
           "name": "Алиготе"
         },
         {
-          "grapeId": null,
+          "grapeId": "riesling",
           "name": "Ризлинг"
         },
         {
-          "grapeId": null,
+          "grapeId": "trebbiano",
           "name": "Юни блан"
         },
         {
-          "grapeId": null,
+          "grapeId": "mavrud",
           "name": "Мавруд"
         },
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
@@ -340371,19 +340371,19 @@
           "name": "Мискет червен"
         },
         {
-          "grapeId": null,
+          "grapeId": "rkatsiteli",
           "name": "Ркацители"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         },
         {
-          "grapeId": null,
+          "grapeId": "pamid",
           "name": "Памид"
         }
       ],
@@ -340521,19 +340521,19 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "chardonnay",
           "name": "Шардоне"
         },
         {
-          "grapeId": null,
+          "grapeId": "muscat-ottonel",
           "name": "Мускат отонел"
         },
         {
-          "grapeId": null,
+          "grapeId": "merlot",
           "name": "Мерло"
         },
         {
-          "grapeId": null,
+          "grapeId": "cabernet-sauvignon",
           "name": "Каберне совиньон"
         }
       ],

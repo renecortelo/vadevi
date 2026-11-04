@@ -1,0 +1,3827 @@
+{
+  "$comment": "Each library grape's labels and aliases in every language, from Wikidata (CC0), by pnpm kb:fetch-grape-labels. Used only to link the varieties registers name to their cards.",
+  "grapes": {
+    "abouriou": {
+      "aliases": [],
+      "labels": [
+        "Abouriou",
+        "アヴリュー"
+      ]
+    },
+    "acolon": {
+      "aliases": [],
+      "labels": [
+        "Acolon",
+        "アコロン"
+      ]
+    },
+    "agiorgitiko": {
+      "aliases": [
+        "Aghiorghitiko",
+        "Agiorigtiko",
+        "Agioritiko",
+        "Mavro",
+        "Mavro Nemea",
+        "Mavro nemea",
+        "Mavro nemeas",
+        "Mavronemeas",
+        "Mavrostaphylo mavraki",
+        "Mavroudi nemeas",
+        "Nemeas mavro",
+        "Nemeas mavroudi",
+        "St. George (blauw druivenras)",
+        "St. George (wijndruif)",
+        "St. Georgs-Rebe",
+        "アギオルギティコ",
+        "アギオルティコ",
+        "アギヨルギティコ"
+      ],
+      "labels": [
+        "Agiorgitiko",
+        "Agiorgítiko",
+        "Αγιωργίτικο",
+        "Агиоргитико",
+        "Агіоргітико",
+        "アギォルギティコ"
+      ]
+    },
+    "aglianico": {
+      "aliases": [
+        "Aglianco di Puglia",
+        "Aglianica",
+        "Aglianichella",
+        "Aglianichello",
+        "Aglianico amaro",
+        "Aglianico di Castellaneta",
+        "Aglianico di Taurasi",
+        "Aglianico femminile",
+        "Aglianico mascolino",
+        "Aglianico nero",
+        "Aglianico tringarulo",
+        "Aglianico zerpoluso",
+        "Aglianicone",
+        "Aglianicuccia",
+        "Agliatica",
+        "Agliatico",
+        "Agnanico",
+        "Agnanico di Castellaneta",
+        "Cascavoglia",
+        "Cerasole",
+        "ELLANICO",
+        "ELLENICO",
+        "Ellanico",
+        "Ellenico",
+        "Fiano rosso",
+        "Fresella",
+        "GLIANICA",
+        "GLIANICO",
+        "Ghiandara",
+        "Ghianna",
+        "Ghiannara",
+        "Glianica",
+        "Gnanica",
+        "Gnanico",
+        "Olivella di San Cosmo",
+        "Ruopolo",
+        "Sprierna",
+        "Tringarulo",
+        "Uva Nera",
+        "Uva dei Cani",
+        "Uva di Castellaneta",
+        "アリアニコ"
+      ],
+      "labels": [
+        "Aglianico",
+        "aglianico",
+        "Αλιάνικο",
+        "Альянико",
+        "Альяніко",
+        "アリアーニコ"
+      ]
+    },
+    "airen": {
+      "aliases": [
+        "Aiden (druif)",
+        "Airen",
+        "Blancon",
+        "Forcallada",
+        "Forcallat",
+        "Forcallat Blanca",
+        "Forcallat blanca",
+        "Forcellat bianca",
+        "Forcellat blanca",
+        "Laeren del Rey",
+        "Lairen",
+        "Lairén",
+        "Layren",
+        "Manchega",
+        "Mantuo laeren",
+        "Uva airen",
+        "Uva airén",
+        "Valdepenera blanca",
+        "Valdepenero",
+        "阿依蓮"
+      ],
+      "labels": [
+        "Airén",
+        "airén",
+        "forcallat",
+        "Айрен",
+        "Айрен (виноград)",
+        "アイレン",
+        "阿依仑",
+        "阿依侖"
+      ]
+    },
+    "albana": {
+      "aliases": [],
+      "labels": [
+        "Albana",
+        "Альбана",
+        "アルバーナ"
+      ]
+    },
+    "albarino": {
+      "aliases": [
+        "Albarino",
+        "Albariña",
+        "Albariňo",
+        "Alvarin blanc",
+        "Alvarinha",
+        "Alvarinho grape",
+        "Alvariño",
+        "Azal Blanco",
+        "Azal blanc",
+        "Cainho blanc",
+        "Galego",
+        "Galego (wit druivenras)",
+        "Galeguinho"
+      ],
+      "labels": [
+        "Albarinyo",
+        "Albariño",
+        "Alvarinho",
+        "Nho Albariño",
+        "Албариньо",
+        "Альбариньо",
+        "Альбаріньйо",
+        "アルバリーニョ",
+        "阿尔巴利诺",
+        "알바리뇨"
+      ]
+    },
+    "aleatico": {
+      "aliases": [],
+      "labels": [
+        "Aleatico",
+        "Aleatiko sortu",
+        "Алеатико"
+      ]
+    },
+    "alexandrouli": {
+      "aliases": [
+        "Aleksandroouly",
+        "Aleksandrouli Shavi",
+        "Aleksandrouliy",
+        "Alexandreouli",
+        "Kabistona",
+        "Kabistoni"
+      ],
+      "labels": [
+        "Aleksandrouli",
+        "Alexandrouli",
+        "aleksandrouli",
+        "Александроули",
+        "Александроулі",
+        "ალექსანდროული"
+      ]
+    },
+    "alfrocheiro-preto": {
+      "aliases": [
+        "Alfrocheiro",
+        "アルフロシェイロ・プレト"
+      ],
+      "labels": [
+        "Alfrocheiro Preto",
+        "Alfrocheiro preto",
+        "アルフロシェイロ"
+      ]
+    },
+    "alicante-bouschet": {
+      "aliases": [
+        "Alentejo",
+        "Alicante",
+        "Alicante Henri Bouschet",
+        "Alicante Henri Bouschet N",
+        "Alicante-henri-bouschet",
+        "Garnacha tintorera (uva)",
+        "アリカンテ・ブーシェ",
+        "ガルナッチャ・ティントレラ"
+      ],
+      "labels": [
+        "Alicante Bouchet",
+        "Alicante Bouschet",
+        "Alicante bouschet",
+        "Alikant Buşe",
+        "Garnacha tintera",
+        "Garnacha tintorera",
+        "Garnatxa tintera",
+        "Аликант Буше",
+        "Аликанте",
+        "Алікант Буше",
+        "アリカント・ブーシェ",
+        "阿利坎特"
+      ]
+    },
+    "aligote": {
+      "aliases": [
+        "aligote",
+        "阿里格特"
+      ],
+      "labels": [
+        "Aligote",
+        "Aligoté",
+        "Aliqote sortu",
+        "aligoté",
+        "Алиготе",
+        "Аліготе",
+        "אליגוטה",
+        "ალიგოტე",
+        "アリゴテ",
+        "阿利戈特"
+      ]
+    },
+    "ancellotta": {
+      "aliases": [
+        "Ancelota",
+        "LANCELLOTTA"
+      ],
+      "labels": [
+        "Ancellotta",
+        "Ancelotta",
+        "Анчелотта",
+        "Анчэлёта",
+        "ანჩელოტა"
+      ]
+    },
+    "ansonica": {
+      "aliases": [
+        "INSOLIA",
+        "INZOLIA",
+        "インソリア"
+      ],
+      "labels": [
+        "Ansonica",
+        "Inzolia",
+        "Ансоника",
+        "Ансоніка",
+        "Инзолия",
+        "アンソニカ"
+      ]
+    },
+    "aramon": {
+      "aliases": [
+        "Aramon (blauw druivenras)",
+        "Aramon grape",
+        "Aramon noir",
+        "Aramonen",
+        "Burchard's pride",
+        "Burchard´s pride",
+        "Eromoul",
+        "Gros Bouteillan",
+        "Pisse-vin",
+        "Plante riche",
+        "Rabalaire",
+        "Rabalairé",
+        "Romonen",
+        "Ugni noir"
+      ],
+      "labels": [
+        "Aramon",
+        "Aramon (uva)",
+        "Aramon Noir",
+        "アーメン・ノワール"
+      ]
+    },
+    "arinto": {
+      "aliases": [
+        "Arinto de Bucelas",
+        "Pedernã",
+        "Pedreña",
+        "Аринту"
+      ],
+      "labels": [
+        "Arinto",
+        "Аринто",
+        "Арінто",
+        "アリント"
+      ]
+    },
+    "arneis": {
+      "aliases": [],
+      "labels": [
+        "Arneis",
+        "Arnèis",
+        "Арнеис",
+        "Арнеїс",
+        "آرنیس",
+        "アルネイス"
+      ]
+    },
+    "assyrtiko": {
+      "aliases": [
+        "Assirtico",
+        "Assyrtico",
+        "Asurtico",
+        "Asyrtiko",
+        "‘Assyrtiko’",
+        "アシリティコ"
+      ],
+      "labels": [
+        "Asirtiko",
+        "Assyrtiko",
+        "Asýrtiko",
+        "Ασύρτικο",
+        "Асиртико",
+        "Ассиртико",
+        "アシルティコ"
+      ]
+    },
+    "athiri": {
+      "aliases": [
+        "アティリ"
+      ],
+      "labels": [
+        "Athiri",
+        "Athíri",
+        "Atiri uzum navi",
+        "Αθήρι",
+        "Атири",
+        "アシリ"
+      ]
+    },
+    "auxerrois-blanc": {
+      "aliases": [
+        "Auxerrois B",
+        "Auxerrois Blanc de Laquenexy"
+      ],
+      "labels": [
+        "Auxerrois",
+        "Auxerrois (Riefzort)",
+        "Auxerrois Blanc",
+        "Auxerrois blanc",
+        "オーセロワ",
+        "白欧塞尔"
+      ]
+    },
+    "babeasca-neagra": {
+      "aliases": [
+        "Babeasca Neagra",
+        "Рара Нягрэ"
+      ],
+      "labels": [
+        "Băbească Neagră",
+        "Băbească neagră",
+        "Bǎbeascǎ Neagrǎ",
+        "Серексия чёрная",
+        "בבאסקה שחורה",
+        "ララ・ネアグラ",
+        "버베아스커 네아그러"
+      ]
+    },
+    "bacchus-weiss": {
+      "aliases": [
+        "Bacchus Weiss grape",
+        "Bacchus grape",
+        "Frühe Scheurebe",
+        "Geilweilerhof 33-29-133",
+        "バッフス"
+      ],
+      "labels": [
+        "Bacchus",
+        "Bacchus Weiss",
+        "Бахус",
+        "バフース"
+      ]
+    },
+    "baga": {
+      "aliases": [],
+      "labels": [
+        "Baga",
+        "Бага",
+        "バガ"
+      ]
+    },
+    "barbera": {
+      "aliases": [
+        "Barbera a Raspo Rosso",
+        "Barbera a Raspo verde",
+        "Barbera a peduncolo rosso",
+        "Barbera a peduncolo verde",
+        "Barbera amaro",
+        "Barbera d'Asti",
+        "Barbera dolce",
+        "Barbera fina",
+        "Barbera fine",
+        "Barbera forte",
+        "Barbera grossa",
+        "Barbera mercantile",
+        "Bardera Crna",
+        "バルベラ"
+      ],
+      "labels": [
+        "Barbera",
+        "barbera",
+        "Барбера",
+        "בארברה",
+        "バルベーラ",
+        "巴貝拉",
+        "바르베라"
+      ]
+    },
+    "bastardo": {
+      "aliases": [
+        "Bastardo grape"
+      ],
+      "labels": [
+        "Bastardo",
+        "Trousseau",
+        "Бастардо",
+        "バスタルド"
+      ]
+    },
+    "black-muscat": {
+      "aliases": [
+        "Aleatico",
+        "Black Hamburg",
+        "Black Hamburg grape",
+        "Black Muscat grape",
+        "Black Muscat of Alexandria",
+        "Black of Alexandria",
+        "Ceuro",
+        "Esperione",
+        "Fekete Muskotaly",
+        "Gamburg",
+        "Gulabi",
+        "Mai gui san",
+        "Moschato Amvourgou",
+        "Muscat Hamburg grape",
+        "Muskat Hamburg",
+        "Muskat Hambursky",
+        "Muskat Trollinger",
+        "Muskateller Trollinger",
+        "Muskattrollinger",
+        "Myrodato",
+        "Trollinger Muscateller Blau",
+        "Trollinger Muskat",
+        "マスカット・ハンブルク"
+      ],
+      "labels": [
+        "Black Muscat",
+        "Hamburgi muskotály",
+        "Moscatel de Hamburgo",
+        "Moscatel negro",
+        "Moscato d'Amburgo",
+        "Muscat Hamburg",
+        "Muscat de Hambourg",
+        "Muskat-Trollinger",
+        "Muškat Hamburg",
+        "Μοσχάτο Αμβούργου",
+        "Мускат гамбурзький",
+        "Хамбургски мискет",
+        "ブラック・マスカット",
+        "黑麝香葡萄"
+      ]
+    },
+    "blatina": {
+      "aliases": [
+        "Blatina crna",
+        "Blaue Blatina",
+        "Praznobačva",
+        "Tribidrag",
+        "Zlorod"
+      ],
+      "labels": [
+        "Blatina",
+        "Blatina (vein)",
+        "Блатина",
+        "блатина",
+        "Բլատինա"
+      ]
+    },
+    "blauer-portugieser": {
+      "aliases": [
+        "Portugalka",
+        "Блауэр Португизер",
+        "ブラウアー・ポルトギーザー"
+      ],
+      "labels": [
+        "Blauer Portugieser",
+        "Blauer portugieser",
+        "Kékoportó",
+        "Modra portugalka",
+        "Modrý Portugal",
+        "Portoghese",
+        "Portugais bleu",
+        "Portugieser",
+        "Portugizac",
+        "Португалско синьо",
+        "Португизер",
+        "בלאואר פורטוגיזר",
+        "ポルトギーザー"
+      ]
+    },
+    "blaufrankisch": {
+      "aliases": [
+        "Blauer Limberger",
+        "Blauer limberger",
+        "Blaufraenkisch",
+        "Blaufrankisch",
+        "Burgund Mare",
+        "Crna Frankovka",
+        "Frankinja",
+        "Frankonia (blauw druivenras)",
+        "Gamé",
+        "Kekfrankos",
+        "Lemberger",
+        "Limberger",
+        "ブラウアー・リンブルガー",
+        "ブラウフレンキッシュ",
+        "レンベルガー"
+      ],
+      "labels": [
+        "Blaufränkisch",
+        "Franconia",
+        "Frankovka",
+        "Frankovka modrá",
+        "Kékfrankos",
+        "Modra frankinja",
+        "Блауфранкиш",
+        "Блуфранкіш",
+        "Франківка синя",
+        "ブラオフレンキッシュ"
+      ]
+    },
+    "boal": {
+      "aliases": [
+        "Malvasia Fina",
+        "Malvasia Fina grape",
+        "ボアル",
+        "マルヴァジア・フィナ"
+      ],
+      "labels": [
+        "Boal",
+        "Boal Branco",
+        "Bual",
+        "Боал",
+        "ブアル"
+      ]
+    },
+    "bobal": {
+      "aliases": [
+        "Provechon",
+        "Provechón",
+        "Requena (blauw druivenras)",
+        "Tinto de Requena",
+        "Uva bobal"
+      ],
+      "labels": [
+        "Bobal",
+        "Boval",
+        "boval",
+        "Бобаль",
+        "بوبال"
+      ]
+    },
+    "bourboulenc": {
+      "aliases": [],
+      "labels": [
+        "Bourboulenc",
+        "Бурбуленк",
+        "ブールブラン",
+        "布布兰克"
+      ]
+    },
+    "cabernet-dorsa": {
+      "aliases": [],
+      "labels": [
+        "Cabernet Dorsa",
+        "Cabernet dorsa"
+      ]
+    },
+    "cabernet-franc": {
+      "aliases": [
+        "Bordò",
+        "Bouchy",
+        "Cabernet-franc",
+        "Capbreton",
+        "Capbretón",
+        "Plant Breton",
+        "Plant Bretón",
+        "קברנה פרנק"
+      ],
+      "labels": [
+        "Cabernet Franc",
+        "Cabernet franc",
+        "Franc cabernet",
+        "Kaberna-fran",
+        "cabernet franc",
+        "Каберне Фран",
+        "Каберне фран",
+        "Каберне-фран",
+        "קברנה פראן",
+        "കാബെർനെ ഫ്രാങ്",
+        "カベルネ・フラン",
+        "卡本內弗朗",
+        "品麗珠",
+        "카베르네 프랑"
+      ]
+    },
+    "cabernet-sauvignon": {
+      "aliases": [
+        "Burdeos Tinto",
+        "Cab Sauv",
+        "Cabernet-Sauvignon",
+        "Cabernet-sauvignion",
+        "Cabernet-sauvignon N",
+        "Carbouet",
+        "Carmenet",
+        "Kaberne",
+        "Petit Cabernet",
+        "Petit Vidure",
+        "Taglio bordolese",
+        "Vidure",
+        "Каберне",
+        "Каберне Совињон",
+        "Каберне Совіньон",
+        "Каберне-Совіньйон",
+        "Совињон",
+        "קברנה",
+        "カベルネ",
+        "カベルネ・ソービニョン",
+        "カベルネ・ソービニヨン",
+        "カベルネ・ソーヴィニョン",
+        "ヴィドゥーレ",
+        "ヴェデーレ",
+        "解百纳"
+      ],
+      "labels": [
+        "Cabernet Sauvignon",
+        "Cabernet Sauvinhon",
+        "Cabernet sauvignon",
+        "Kaberne sovinjon",
+        "Kaberne-sovinyon",
+        "Kabernet Sauviqnon",
+        "cabernet sauvignon",
+        "Καμπερνέ Σοβινιόν",
+        "Каберне Совиньон",
+        "Каберне Совіньйон",
+        "Каберне совиньон",
+        "Каберне совињон",
+        "Каберне-совиньон",
+        "Կաբիրնե-սավինիոն",
+        "קברנה סוביניון",
+        "كابيرنت ساوفيجنون",
+        "کابرنه سوویگنون",
+        "கெபேர்னெட் சுவிக்னோன்",
+        "കാബെർനെ സോവിഞ്യോൺ",
+        "พระธรรมโครินธ์ฉบับที่หนึ่ง",
+        "ແວງກາແບກເນໂຊວີຍົງ",
+        "カベルネ・ソーヴィニヨン",
+        "卡本內蘇維濃",
+        "赤霞珠",
+        "카베르네 소비뇽"
+      ]
+    },
+    "caino-tinto": {
+      "aliases": [],
+      "labels": [
+        "Borraçal",
+        "Caiño tinto",
+        "Caíño Tinto",
+        "Caíño tinto",
+        "カイーニョ・ティント"
+      ]
+    },
+    "campbell-early": {
+      "aliases": [
+        "Boscoso",
+        "Campbell Early grape",
+        "Campbell’s Early",
+        "Early Campbell",
+        "Island Belle"
+      ],
+      "labels": [
+        "Campbell Early",
+        "キャンベル・アーリー",
+        "캠벨포도"
+      ]
+    },
+    "canaiolo": {
+      "aliases": [],
+      "labels": [
+        "Canaiolo",
+        "Canaiolo neir",
+        "Canaiolo nero",
+        "canaiolo",
+        "Канайоло",
+        "カナイオーロ・ネーロ"
+      ]
+    },
+    "cardinal": {
+      "aliases": [
+        "Cardinal grape"
+      ],
+      "labels": [
+        "Cardinal",
+        "Kardinal",
+        "Uva cardinal",
+        "Кардинал"
+      ]
+    },
+    "carignan": {
+      "aliases": [
+        "Bovale Grande",
+        "Carignan grape",
+        "Samsó",
+        "カリニャン"
+      ],
+      "labels": [
+        "Carignan",
+        "Carinyena",
+        "Cariñena",
+        "Karinyeno",
+        "carignan",
+        "carignan N",
+        "carinyena",
+        "cariñena",
+        "Кариньян",
+        "Каринян",
+        "קריניאן",
+        "كارنيان",
+        "カリニエナ",
+        "佳利酿",
+        "까리냥"
+      ]
+    },
+    "carmenere": {
+      "aliases": [
+        "CABERNET NOSTRANO",
+        "Camenere",
+        "Camenère",
+        "Carmeniere",
+        "Carmenière",
+        "Carmenére",
+        "Carménere",
+        "カルムネール",
+        "佳美娜"
+      ],
+      "labels": [
+        "Anggor Carménère",
+        "Carmenere",
+        "Carmenère",
+        "Carménère",
+        "Karmener",
+        "Карменер",
+        "カルメネール",
+        "卡門內葡萄",
+        "卡门內葡萄",
+        "까르메네"
+      ]
+    },
+    "castelao": {
+      "aliases": [
+        "カステラン"
+      ],
+      "labels": [
+        "Castelão",
+        "Periquita",
+        "Каштелау",
+        "ペリキータ"
+      ]
+    },
+    "chardonnay": {
+      "aliases": [
+        "Auvernat blanc",
+        "Auxois Blanc",
+        "Beaunois",
+        "Blanc",
+        "Chardonnay-druen",
+        "Chardonnè",
+        "Chardonné",
+        "Feinburgunder",
+        "Gamay Blanc",
+        "Gentil Blanc",
+        "Klevanjka Biela",
+        "Melon Blanc",
+        "Melon blanc",
+        "Melón Blanc",
+        "Morillon",
+        "Morillon Blanc",
+        "Morillón",
+        "Morillón Blanc",
+        "Negret Blanc",
+        "Pinot Chardonnay",
+        "Pinot blanc",
+        "Rulander",
+        "Weisser",
+        "Weisser klevner",
+        "Шардонне",
+        "霞多丽"
+      ],
+      "labels": [
+        "Chardonnay",
+        "Chardonnay (nho)",
+        "Chardonnay (vitatge)",
+        "chardonnay",
+        "Şardone",
+        "Šardone",
+        "Σαρντονέ",
+        "Шардоне",
+        "Շարդոնե",
+        "שרדונה",
+        "شاردونی",
+        "ชาร์ดอแน",
+        "シャルドネ",
+        "夏多內",
+        "莎当妮",
+        "莎當妮",
+        "霞多麗",
+        "샤르도네"
+      ]
+    },
+    "chasselas": {
+      "aliases": [
+        "Chasselas blanc",
+        "Fendant",
+        "Saszla",
+        "Weißer Gutedel",
+        "グーテーデル",
+        "グートエーデル",
+        "シャスラ"
+      ],
+      "labels": [
+        "Bela žlahtnina",
+        "Chasselas",
+        "Chasselas Blanc",
+        "Chasselas dorato",
+        "Chasselas doré",
+        "Chrupka biela",
+        "Chrupka bílá",
+        "Fehér chasselas",
+        "Gutedel",
+        "Plemenka Bijela",
+        "chasselas",
+        "Шасла",
+        "Шасла Доре",
+        "シャセラ",
+        "莎斯拉",
+        "샤슬라"
+      ]
+    },
+    "chenin-blanc": {
+      "aliases": [
+        "Cugnette",
+        "Pineau de la Loire",
+        "Pinot de la Loire",
+        "Steen"
+      ],
+      "labels": [
+        "Chenin",
+        "Chenin Blanc",
+        "Chenin blanc",
+        "Şenin Blan",
+        "Шенен Блан",
+        "Шенен блан",
+        "Шенин блан",
+        "שנין בלאן",
+        "شونن بلان",
+        "シュナン・ブラン",
+        "白诗南",
+        "슈냉 블랑"
+      ]
+    },
+    "chinuri": {
+      "aliases": [],
+      "labels": [
+        "Chinuri",
+        "Чинури",
+        "Чинурі",
+        "ჩინური"
+      ]
+    },
+    "ciliegiolo": {
+      "aliases": [
+        "MORETTONE"
+      ],
+      "labels": [
+        "Ciliegiolo",
+        "Чільєджоло",
+        "チリエジオーロ"
+      ]
+    },
+    "cinsaut": {
+      "aliases": [
+        "Blue imperial",
+        "Hermitage (blauw druivenras)",
+        "Picardan noir",
+        "Plant d'Arles",
+        "Plant d´Arles",
+        "samsó"
+      ],
+      "labels": [
+        "Cinsault",
+        "Cinsaut",
+        "Ottavianello",
+        "Samsó (raïm)",
+        "Сензо",
+        "Сенсо",
+        "Сенсо (виноград)",
+        "サンソー"
+      ]
+    },
+    "clairette-blanche": {
+      "aliases": [],
+      "labels": [
+        "Clairette",
+        "Clairette Blanche",
+        "Clairette blanche",
+        "Клерет белый",
+        "クレレット・ブランシュ"
+      ]
+    },
+    "colombard": {
+      "aliases": [
+        "Colombar",
+        "French Colombard",
+        "French colombard",
+        "Tourterelle",
+        "フレンチ・コロンバード",
+        "フレンチ・コロンバール"
+      ],
+      "labels": [
+        "Colombard",
+        "colombard",
+        "Коломбар",
+        "קולומבאר",
+        "コロンバール",
+        "哥倫白",
+        "鴿籠白",
+        "鸽笼白",
+        "콜롱바르"
+      ]
+    },
+    "concord": {
+      "aliases": [
+        "Concord grape",
+        "Ripatella"
+      ],
+      "labels": [
+        "Concord",
+        "Конкорд",
+        "Конкорд (виноград)",
+        "גפן קונקורד",
+        "انگور کونکورد",
+        "コンコード (ブドウ)",
+        "康歌葡萄",
+        "康科德葡萄",
+        "콩코드 포도"
+      ]
+    },
+    "cortese": {
+      "aliases": [
+        "Cortese (Cépage)",
+        "Cortese (cepage)"
+      ],
+      "labels": [
+        "Cortese",
+        "Cortese (cépage)",
+        "Кортезе",
+        "コルテーゼ"
+      ]
+    },
+    "corvina": {
+      "aliases": [
+        "CRUINA"
+      ],
+      "labels": [
+        "Corvina",
+        "Corvina Veronese",
+        "Corvina veronese",
+        "Nho Corvina",
+        "Корвина",
+        "Корвіна",
+        "コルヴィーナ"
+      ]
+    },
+    "croatina": {
+      "aliases": [
+        "クロアチーナ"
+      ],
+      "labels": [
+        "Croatina",
+        "Cruatëina",
+        "Hrvatica",
+        "Кроатина",
+        "Кроатіна",
+        "クロアティーナ"
+      ]
+    },
+    "delaware": {
+      "aliases": [
+        "Delaware grape"
+      ],
+      "labels": [
+        "Delavári",
+        "Delaware",
+        "Делавер",
+        "デラウェア",
+        "德拉瓦葡萄",
+        "델라웨어"
+      ]
+    },
+    "dolcetto": {
+      "aliases": [
+        "Dolcetto grape",
+        "Dossèt",
+        "Douce Noir",
+        "Douce noir",
+        "ORMEASCO",
+        "Ormeasco",
+        "dolcetto N"
+      ],
+      "labels": [
+        "Dolcetto",
+        "Dosset",
+        "Долчето",
+        "Дольчетто",
+        "ドルチェット"
+      ]
+    },
+    "dornfelder": {
+      "aliases": [],
+      "labels": [
+        "Dornfelder",
+        "Uva Dornfelder",
+        "uva Dornfelder",
+        "Дорнфельдер",
+        "ドルンフェルダー"
+      ]
+    },
+    "durif": {
+      "aliases": [
+        "Bas Plant",
+        "Dure",
+        "Duret",
+        "Dureza",
+        "Durif noir",
+        "Dyurif",
+        "Gros Beclan",
+        "Gros Noir",
+        "Gros noir",
+        "Kek Durif",
+        "Nerin",
+        "Nérin",
+        "Pareux Noir",
+        "Pareux noir",
+        "Petit Duret",
+        "Petit Syrah",
+        "Petit sirah",
+        "Petit syrah",
+        "Petite Serine",
+        "Petite Sirah",
+        "Petite Syrah",
+        "Petite sirah",
+        "Petite syrah",
+        "Pineau de Romans",
+        "Pinot Fourcat",
+        "Pinot de L'ermitage",
+        "Pinot de Romans",
+        "Pinot de l'hermitage",
+        "Pinot de l’Hermitage",
+        "Plant Durif",
+        "Plant Fourchu",
+        "Serine (druif)",
+        "Sirane Fourchu",
+        "Sirane Fourchue",
+        "Sirane de Tain",
+        "Syrah Forchue",
+        "פטיט סירה"
+      ],
+      "labels": [
+        "Durif",
+        "Дюриф",
+        "Дюріф",
+        "דוריף",
+        "プティ・シラー",
+        "小西拉"
+      ]
+    },
+    "elbling": {
+      "aliases": [
+        "Elbling grape",
+        "Rhäifrensch",
+        "Weißer Elbling",
+        "埃尔布灵"
+      ],
+      "labels": [
+        "Elbling",
+        "elbling",
+        "Эльблинг",
+        "אלבלינג",
+        "エルプリング",
+        "皑葡岭",
+        "皚葡嶺"
+      ]
+    },
+    "encruzado": {
+      "aliases": [],
+      "labels": [
+        "Encruzado",
+        "エンクルザード"
+      ]
+    },
+    "erbaluce": {
+      "aliases": [
+        "Erbaluce bianca",
+        "Greco bianco di Novara",
+        "Greco del Novarese",
+        "Greco novarese"
+      ],
+      "labels": [
+        "Erbaluce",
+        "Ербалуче",
+        "エルバルーチェ"
+      ]
+    },
+    "falanghina": {
+      "aliases": [
+        "Biancazita",
+        "Biancozita",
+        "Biancuzita",
+        "Falaghina",
+        "Falanchina",
+        "Falanchina Bianca",
+        "Falanghina Verace",
+        "Falenghina",
+        "Falernina",
+        "Falerno Veronese",
+        "Fallanchina",
+        "Fallanghina",
+        "Folanghina",
+        "Montecalvo",
+        "Montellese",
+        "Uva Falerna"
+      ],
+      "labels": [
+        "Falanghina",
+        "falanghina",
+        "Фалангина",
+        "Фалангіна",
+        "פאלאנגינה",
+        "ファランギーナ"
+      ]
+    },
+    "fernao-pires": {
+      "aliases": [
+        "Maria Gomes",
+        "Maria-Gomes",
+        "Марія Гоміш",
+        "マリアゴメス"
+      ],
+      "labels": [
+        "Fernão Pires",
+        "Fernão pires",
+        "Fernão-Pires",
+        "Фернан Піріш",
+        "פרנאו פירס",
+        "フェルナン・ピレス"
+      ]
+    },
+    "feteasca-alba": {
+      "aliases": [
+        "フェティアスカ・アルバ"
+      ],
+      "labels": [
+        "Fetească Alba",
+        "Fetească Albă",
+        "Fetească alba",
+        "Fetească albă",
+        "Leányka",
+        "Фетяска",
+        "Фетяска алба",
+        "レアーニカ"
+      ]
+    },
+    "feteasca-neagra": {
+      "aliases": [
+        "Feteasca Neagra",
+        "Fetească",
+        "Pucelle noire",
+        "Schwarze Mädchentraube",
+        "Фетяска негра",
+        "Фетяска нягрэ"
+      ],
+      "labels": [
+        "Fetească Neagră",
+        "Fetească neagră",
+        "Фетяска нягра",
+        "Фетяска чёрная",
+        "פטאסקה שחורה",
+        "フェティアスカ・ネアグラ",
+        "黑姑娘"
+      ]
+    },
+    "feteasca-regala": {
+      "aliases": [
+        "Kiralyleanyka",
+        "キラーイレアーニカ",
+        "フェティアスカ・レガーラ"
+      ],
+      "labels": [
+        "Fetească Regală",
+        "Fetească regală",
+        "Királyleányka",
+        "Königsast",
+        "Pesecká leánka",
+        "Фетяска регала",
+        "キラリレアニカ"
+      ]
+    },
+    "fiano": {
+      "aliases": [],
+      "labels": [
+        "Fiano",
+        "Фиано",
+        "Фіано",
+        "フィアーノ"
+      ]
+    },
+    "folle-blanche": {
+      "aliases": [
+        "Folle blanc",
+        "Gros-Plant"
+      ],
+      "labels": [
+        "Folle Blanche",
+        "Folle blanche",
+        "Folle-blanche",
+        "folle blanche",
+        "Фоль-бланш",
+        "פול בלאנש",
+        "فول بلانش",
+        "白福儿",
+        "白福兒"
+      ]
+    },
+    "frappato": {
+      "aliases": [
+        "FRAPPATO D' ITALIA"
+      ],
+      "labels": [
+        "Frappato",
+        "Фраппато",
+        "フラッパート"
+      ]
+    },
+    "freisa": {
+      "aliases": [
+        "フレイザ"
+      ],
+      "labels": [
+        "Freisa",
+        "Frèisa",
+        "Фрейза",
+        "フレイサ"
+      ]
+    },
+    "furmint": {
+      "aliases": [
+        "Grasa",
+        "Mosler",
+        "Posip",
+        "Sipon",
+        "Zapfner",
+        "furmin",
+        "mosler",
+        "モスラーヴァッツ"
+      ],
+      "labels": [
+        "Furmint",
+        "Moslavac",
+        "furmint",
+        "šipon",
+        "Фурминт",
+        "Фурмінт",
+        "フルミント"
+      ]
+    },
+    "gamaret": {
+      "aliases": [
+        "Pully B-13"
+      ],
+      "labels": [
+        "Gamaret",
+        "ギャマレ",
+        "가마레"
+      ]
+    },
+    "gamay": {
+      "aliases": [
+        "ガメイ",
+        "ガメ・ノワール・ア・ジュ・ブラン"
+      ],
+      "labels": [
+        "Borgonja",
+        "Gamay",
+        "Gamay (nho)",
+        "Gamay Noir",
+        "Gamay üzümü",
+        "gamay",
+        "Гаме",
+        "Гаме ноар",
+        "Гамэ",
+        "גמאי",
+        "گامای",
+        "ガメ",
+        "佳美",
+        "가메"
+      ]
+    },
+    "garganega": {
+      "aliases": [],
+      "labels": [
+        "Garganega",
+        "Гарганега",
+        "ガルガネガ",
+        "卡尔卡耐卡"
+      ]
+    },
+    "garnacha-roja": {
+      "aliases": [
+        "Garnacha Roja grape",
+        "Garnatxa roja"
+      ],
+      "labels": [
+        "Garnacha Roja",
+        "Grenache Gris",
+        "Grenache gris",
+        "garnatxa roja",
+        "グルナッシュ・グリ"
+      ]
+    },
+    "gewurztraminer": {
+      "aliases": [
+        "Gewuerztraminer",
+        "Gewurtztraminer",
+        "Gewustraminer",
+        "Gewürtztraminer",
+        "Klevner",
+        "Roter Traminer",
+        "Traminec",
+        "Traminer",
+        "Tramín kořenný",
+        "klevner",
+        "ゲヴュルツトラミナー",
+        "トラミニ",
+        "トラミネール アロマティコ",
+        "トラミーナー",
+        "ローター・トラミーナ"
+      ],
+      "labels": [
+        "Gevirctraminer",
+        "Gewurztraminer",
+        "Gewürztraminer",
+        "Traminac",
+        "Traminer aromatico",
+        "Traminer roz",
+        "Tramini",
+        "Tramín červený",
+        "dišeči traminec",
+        "gewürztraminer",
+        "tramín červený",
+        "Гевирцтраминер",
+        "Гевюрцтраминер",
+        "Траминер",
+        "Ґевюрцтрамінер",
+        "גווירצטרמינר",
+        "गवुर्त्सट्रामीनर",
+        "ゲヴュルツトラミネール",
+        "琼瑶浆",
+        "瓊瑤漿",
+        "게뷔르츠트라미너"
+      ]
+    },
+    "glera": {
+      "aliases": [
+        "Prosecco Tondo",
+        "薄賽珂"
+      ],
+      "labels": [
+        "Glera",
+        "glera",
+        "Глера",
+        "グレーラ",
+        "格雷拉",
+        "글레라"
+      ]
+    },
+    "godello": {
+      "aliases": [
+        "ゴデーリョ"
+      ],
+      "labels": [
+        "Godello",
+        "godello",
+        "ゴデージョ"
+      ]
+    },
+    "goruli-mtsvane": {
+      "aliases": [
+        "Goruli Mtsvane grape"
+      ],
+      "labels": [
+        "Goruli Mtsvane",
+        "Горули Мцване",
+        "გორული მწვანე"
+      ]
+    },
+    "gouais-blanc": {
+      "aliases": [
+        "Gwäss",
+        "Heunisch weiss",
+        "Hünsch",
+        "クラインベルガー"
+      ],
+      "labels": [
+        "Gouais",
+        "Gouais Blanc",
+        "Gouais blanc",
+        "Heunisch",
+        "Hünsches",
+        "Rebula Stara",
+        "Гуе блан",
+        "Гуэ блан",
+        "גואה בלאן",
+        "グーエ・ブラン",
+        "白高維斯",
+        "白高维斯"
+      ]
+    },
+    "graciano": {
+      "aliases": [
+        "Bovale Sardo",
+        "CAGNIULARI",
+        "ウバ・グラシアーノ"
+      ],
+      "labels": [
+        "Cagnulari",
+        "Graciano",
+        "Graciano (uga)",
+        "Грасиано",
+        "Грасіано",
+        "グラシアーノ"
+      ]
+    },
+    "grechetto": {
+      "aliases": [],
+      "labels": [
+        "Grechetto",
+        "Грекетто",
+        "Гречетто",
+        "グレケット"
+      ]
+    },
+    "greco": {
+      "aliases": [
+        "グレーコ"
+      ],
+      "labels": [
+        "Greco",
+        "Greco Bianco",
+        "Greco bianco",
+        "گرکو (انگور)",
+        "グレコ"
+      ]
+    },
+    "grenache": {
+      "aliases": [
+        "Alicante",
+        "CANNONAO",
+        "Cannonau.",
+        "GARNACHA TINTA",
+        "GRANACCIA",
+        "GRENACHE",
+        "Garnacha,",
+        "Garnatxa",
+        "Guarnaccia",
+        "Lledoner",
+        "grenache N",
+        "Гренаш ноар",
+        "カンノナウ",
+        "ガルナチャ",
+        "ガルナチャ・ティンタ",
+        "ガルナッチャ",
+        "グルナッシュ・グリ",
+        "グルナッシュ・ノワール",
+        "格那希"
+      ],
+      "labels": [
+        "Cannonau",
+        "Garnacha",
+        "Garnacha (uga)",
+        "Grenache",
+        "Grenache noir",
+        "Qrenaş",
+        "garnacha",
+        "garnatxa",
+        "grenache",
+        "Гренаш",
+        "גרנאש",
+        "グルナッシュ",
+        "格納希",
+        "格纳希",
+        "歌海娜",
+        "그르나쉬"
+      ]
+    },
+    "grenache-blanc": {
+      "aliases": [
+        "Garnacha Blanca",
+        "Garnatxa Blanca",
+        "ガルナッチャ・ブランカ"
+      ],
+      "labels": [
+        "Garnacha blanca",
+        "Grenache Blanc",
+        "Grenache blanc",
+        "garnatxa blanca",
+        "Гренаш блан",
+        "Гренаше бланк",
+        "グルナッシュ・ブラン"
+      ]
+    },
+    "grillo": {
+      "aliases": [
+        "Riddu",
+        "Грилло (виноград)",
+        "Ридду",
+        "Россезе бьянко"
+      ],
+      "labels": [
+        "Grillo",
+        "Grillo (Rebsorte)",
+        "Grillo (druva)",
+        "Grillo (vitspeco)",
+        "grillo",
+        "Грилло",
+        "Грілло",
+        "グリッロ"
+      ]
+    },
+    "grolleau": {
+      "aliases": [
+        "グロロ・ノワール",
+        "グロロー"
+      ],
+      "labels": [
+        "Grolleau",
+        "グロロ",
+        "果若",
+        "그롤로"
+      ]
+    },
+    "gruner-veltliner": {
+      "aliases": [
+        "Gruner Veltliner",
+        "グリューナー・フェルトリーナー",
+        "グリューナー・ヴェルトリーナー",
+        "ヴァイスギプフラー",
+        "ヴェルトリーンスケー・ゼレネー"
+      ],
+      "labels": [
+        "Grénge Veltliner",
+        "Grüner Veltliner",
+        "Grüner veltliner",
+        "Veltlínske zelené",
+        "Veltlínské zelené",
+        "zöld veltelini",
+        "Грюнер Велтлинер",
+        "Грюнер Вельтлинер",
+        "Грюнер Вельтлінер",
+        "גרינר ולטלינר",
+        "グリュナー・フェルトリナー",
+        "绿维特利纳",
+        "그뤼너 펠트리너"
+      ]
+    },
+    "harslevelu": {
+      "aliases": [
+        "Frunză de Tei",
+        "harslevelu",
+        "Гарс Левелю",
+        "Гарш Левелю",
+        "ハーシュレベルー",
+        "ハーシュレヴェリ",
+        "ハールシュレヴェリュー"
+      ],
+      "labels": [
+        "Hárslevelü",
+        "Hárslevelű",
+        "Lindenblättriger",
+        "Lipovina",
+        "Харш Лавелю",
+        "Харшлевелю",
+        "リポヴィナ"
+      ]
+    },
+    "hondarrabi-zuri": {
+      "aliases": [
+        "Courbu blanc",
+        "Courbu blanc grape",
+        "Txakoli"
+      ],
+      "labels": [
+        "Hondarrabi Zuri",
+        "Hondarrabi zuri",
+        "Hondarribi Zuri",
+        "Hondarribi zuri",
+        "オンダラビ・スリ"
+      ]
+    },
+    "irsai-oliver": {
+      "aliases": [],
+      "labels": [
+        "Irsai Oliver",
+        "Irsai Olivér",
+        "Oliver Irsay",
+        "Іршаї Олівер",
+        "Иршаи Оливер",
+        "イルサイ・オリベル"
+      ]
+    },
+    "italian-riesling": {
+      "aliases": [
+        "Grašac",
+        "Graševina Italijanska",
+        "オラスリズリング",
+        "リースリング・イタリコ",
+        "ヴェルシュリースリング"
+      ],
+      "labels": [
+        "Graševina",
+        "Italian Riesling",
+        "Laški rizling",
+        "Olaszrizling",
+        "Riesling Italian",
+        "Riesling Italico",
+        "Rizling vlašský",
+        "Ryzlink vlašský",
+        "Welschriesling",
+        "Вельшрислинг",
+        "Вельшрислінг",
+        "Грашевина",
+        "Ризлинг италиански",
+        "ولشریلسینگ",
+        "ウェルシュリースリング"
+      ]
+    },
+    "kadarka": {
+      "aliases": [
+        "Kadarka Kek",
+        "ガムザ"
+      ],
+      "labels": [
+        "Cadarcă de Miniș",
+        "Kadarka",
+        "Nho Kadarka",
+        "kadarka",
+        "Гъмза",
+        "Кадарка",
+        "カダルカ"
+      ]
+    },
+    "kerner": {
+      "aliases": [],
+      "labels": [
+        "Kerner",
+        "Кернер",
+        "ケルナー",
+        "肯納",
+        "肯纳"
+      ]
+    },
+    "khikhvi": {
+      "aliases": [
+        "Januara"
+      ],
+      "labels": [
+        "Chichwi",
+        "Khikhvi",
+        "Xixvi",
+        "Хихви",
+        "Хіхві",
+        "Խիխվի",
+        "ხიხვი"
+      ]
+    },
+    "kisi": {
+      "aliases": [
+        "Kisi grape",
+        "ქისი (ყურძენი)"
+      ],
+      "labels": [
+        "Kisi",
+        "Киси",
+        "ქისი"
+      ]
+    },
+    "koshu": {
+      "aliases": [],
+      "labels": [
+        "Koshu",
+        "Koshu (anggur)",
+        "Koshu (üzüm)",
+        "Kōshū",
+        "Косю",
+        "Կոշու (խաղող)",
+        "甲州",
+        "甲州葡萄"
+      ]
+    },
+    "lagrein": {
+      "aliases": [],
+      "labels": [
+        "Lagrein",
+        "Лагрейн"
+      ]
+    },
+    "lambrusco-viadanese": {
+      "aliases": [
+        "Grappello Ruberti",
+        "Grappello ruberti",
+        "Lambrusco viadanese"
+      ],
+      "labels": [
+        "Lambrusco Viadanese",
+        "Ламбруско виаданезе",
+        "Ламбруско віаданезе"
+      ]
+    },
+    "listan-negro": {
+      "aliases": [
+        "Almuñeco",
+        "Listan Negro",
+        "Listan negro",
+        "Mission",
+        "Mollar cano",
+        "Uva listan negro",
+        "Uva listán negro",
+        "mission"
+      ],
+      "labels": [
+        "Listan prieto",
+        "Listán Negro",
+        "Listán negro",
+        "Listán negro (uva)",
+        "listán negro",
+        "Листан негро"
+      ]
+    },
+    "listan-prieto": {
+      "aliases": [
+        "Mission"
+      ],
+      "labels": [
+        "Listan Prieto",
+        "Listan prieto"
+      ]
+    },
+    "loureira": {
+      "aliases": [
+        "Loureira marqués",
+        "Loureiro (casta)",
+        "Loureiro Blanco",
+        "Loureiro Blanco grape",
+        "Loureiro Branco",
+        "Loureiro blanco",
+        "Marqués",
+        "Uva marques",
+        "Uva marqués",
+        "ロウレイラ",
+        "ロウレイロ"
+      ],
+      "labels": [
+        "Loureira",
+        "Loureira branca",
+        "Loureiro",
+        "Лоурейру",
+        "ローレイロ"
+      ]
+    },
+    "macabeo": {
+      "aliases": [
+        "Alcañon",
+        "Alcañón",
+        "Maccabeu",
+        "Uva macabeo",
+        "Виура"
+      ],
+      "labels": [
+        "Macabeo",
+        "Macabeu",
+        "Viura",
+        "macabeo",
+        "macabeu",
+        "makabeo",
+        "Макабео",
+        "Макабеу",
+        "マカベオ"
+      ]
+    },
+    "malbec": {
+      "aliases": [
+        "Auxerrois",
+        "Côt",
+        "Malbec N",
+        "Noir de Pressac",
+        "uva malbec"
+      ],
+      "labels": [
+        "Malbec",
+        "Malbek",
+        "malbec",
+        "Малбек",
+        "Мальбек",
+        "מלבק",
+        "マルベック",
+        "馬爾貝克",
+        "말벡"
+      ]
+    },
+    "mandilaria": {
+      "aliases": [
+        "マンディラリア"
+      ],
+      "labels": [
+        "Mandilaria",
+        "Mandilariya",
+        "Mandilariá",
+        "Μαντηλάρι",
+        "Мандилария",
+        "Манділарія",
+        "ماندیلاریا (انگور)",
+        "マンディラリ"
+      ]
+    },
+    "marsanne": {
+      "aliases": [],
+      "labels": [
+        "Marsanne",
+        "Marsanne blanche",
+        "Марсан",
+        "מרסאן",
+        "मार्सान",
+        "マルサンヌ",
+        "玛珊",
+        "마르산"
+      ]
+    },
+    "marselan": {
+      "aliases": [
+        "INRA 1810-68"
+      ],
+      "labels": [
+        "Marselan",
+        "Марселан",
+        "マルスラン",
+        "馬賽蘭"
+      ]
+    },
+    "marzemino": {
+      "aliases": [
+        "BERZAMINO",
+        "BERZEMINO"
+      ],
+      "labels": [
+        "Marzemino",
+        "Nho Marzemino",
+        "Марземино",
+        "Марцемино",
+        "Марцеміно",
+        "マルツェミーノ"
+      ]
+    },
+    "mauzac": {
+      "aliases": [
+        "Mauzac B",
+        "Mauzac blanc",
+        "mauzac blanc"
+      ],
+      "labels": [
+        "Mauzac",
+        "モーザック"
+      ]
+    },
+    "mavro": {
+      "aliases": [],
+      "labels": [
+        "Kypreiko",
+        "Mavro",
+        "mavro",
+        "Μαύρο",
+        "Мavro uzum",
+        "Мавро",
+        "Мавро (виноград)"
+      ]
+    },
+    "mavrodafni": {
+      "aliases": [],
+      "labels": [
+        "Mavrodafni",
+        "Mavrodaphne",
+        "Mavrodáfni",
+        "Mawrodafni",
+        "Μαυροδάφνη",
+        "Мавродафни",
+        "Мавродафні",
+        "マヴロダフネ"
+      ]
+    },
+    "mavrud": {
+      "aliases": [
+        "mavrud"
+      ],
+      "labels": [
+        "Mavrud",
+        "Mawrud",
+        "Мавруд",
+        "Маўруд",
+        "マヴルッド"
+      ]
+    },
+    "melon-de-bourgogne": {
+      "aliases": [
+        "ムロン"
+      ],
+      "labels": [
+        "Melon",
+        "Melon de Bourgogne",
+        "Melon de bourgogne",
+        "Melón de Borgoña",
+        "Мелон де Бургонь",
+        "Мелон де бургані",
+        "מלון דה בורגון",
+        "ムロン・ド・ブルゴーニュ",
+        "勃艮第香瓜"
+      ]
+    },
+    "mencia": {
+      "aliases": [
+        "Jaen",
+        "Jaen du Dão",
+        "Jaén",
+        "Jaén du Dão",
+        "Mencia grape",
+        "ジャエン",
+        "ハエン"
+      ],
+      "labels": [
+        "Mencia",
+        "Mencía",
+        "Nho Mencia",
+        "mencía",
+        "Менсия",
+        "Менсія",
+        "メンシア (ブドウ)"
+      ]
+    },
+    "merlot": {
+      "aliases": [
+        "Alicante",
+        "Alicante noir",
+        "Begney",
+        "Bidal",
+        "Bidalhe",
+        "Bigney",
+        "Bigney rouge",
+        "Bini",
+        "Bini Ruzh",
+        "Bioney",
+        "Black Alicante",
+        "Bordeleza belcha",
+        "Bégney",
+        "Crabutet",
+        "Crabutet noir",
+        "Crabutet noir merlau",
+        "Hebigney",
+        "Higney",
+        "Higney rouge",
+        "Langon",
+        "Lecchumskij",
+        "Medoc noir",
+        "Merlau",
+        "Merlaut",
+        "Merlaut noir",
+        "Merle",
+        "Merle Petite",
+        "Merleau",
+        "Merlot N",
+        "Merlot black",
+        "Merlot blauer",
+        "Merlot crni",
+        "Merlot nero",
+        "Merlot noir",
+        "Merlot rouge",
+        "Merlott",
+        "Merlou",
+        "Merlô",
+        "Médoc noir",
+        "Odzalesi",
+        "Odzhaleshi",
+        "Odzhaleshi Legkhumskii",
+        "Petit Merle",
+        "Picard",
+        "Pikard",
+        "Plan medre",
+        "Planet Medok",
+        "Plant Medoc",
+        "Plant Médoc",
+        "Plant du Medoc",
+        "Plant du Médoc",
+        "Raïm merlot",
+        "Saint-Macaire",
+        "Same de la Canan",
+        "Same dou Flaube",
+        "Seme Dou Flube",
+        "Seme de la Canau",
+        "Semilhon rouge",
+        "Semilhoum rouge",
+        "Semilhoun rouge",
+        "Semillon rouge",
+        "Sud des Graves",
+        "Sème Dou Flube",
+        "Sème de la Canau",
+        "Sémillon rouge",
+        "Uva merlot",
+        "Vidal",
+        "Vini Ticinesi",
+        "Vitrai",
+        "Vitraille",
+        "メルロ"
+      ],
+      "labels": [
+        "Merlo",
+        "Merlot",
+        "merlot",
+        "Μερλό",
+        "Мерло",
+        "Мерлот",
+        "מרלו",
+        "مرلو",
+        "मर्लो",
+        "മെർലോ",
+        "メルロー",
+        "梅洛葡萄",
+        "메를로"
+      ]
+    },
+    "molinara": {
+      "aliases": [
+        "ROSSANELLA",
+        "ROSSANO"
+      ],
+      "labels": [
+        "Molinara",
+        "Молинара",
+        "Молинара (виноград)",
+        "Молінара (виноград)"
+      ]
+    },
+    "monica": {
+      "aliases": [
+        "Monica Nera"
+      ],
+      "labels": [
+        "Monica",
+        "Mónica",
+        "Моника",
+        "Моніка",
+        "モニカ"
+      ]
+    },
+    "montepulciano": {
+      "aliases": [
+        "CORDISCO",
+        "モンテプルチャーノ",
+        "モンテプルチャーノ（ブドウ）"
+      ],
+      "labels": [
+        "Montepulciano",
+        "Монтепульчано",
+        "モンテプルチアーノ"
+      ]
+    },
+    "moscato-giallo": {
+      "aliases": [
+        "Goldmuskateller",
+        "Moscato sirio",
+        "Yellow Muscat",
+        "イエロー・マスカット"
+      ],
+      "labels": [
+        "Moscato Giallo",
+        "Moscato giallo",
+        "Muškat Žuti",
+        "Rumeni muškat",
+        "Москато джалло",
+        "モスカート・ジャッロ"
+      ]
+    },
+    "mourvedre": {
+      "aliases": [
+        "Catalan",
+        "Espagnen",
+        "Espar",
+        "Garrut",
+        "Mataró",
+        "Mourvedon",
+        "Mourvedre",
+        "マタロー",
+        "モナストレル"
+      ],
+      "labels": [
+        "Monastrel",
+        "Monastrell",
+        "Monestrell",
+        "Mourvèdre",
+        "Murvedr",
+        "Uva monastrell",
+        "mourvèdre",
+        "Мурведр",
+        "Мурведър",
+        "ムールヴェードル",
+        "慕合怀特"
+      ]
+    },
+    "mtsvane": {
+      "aliases": [
+        "Dedali Mtsvane",
+        "Dedali Mtzvane",
+        "Dedam Kourdzeni",
+        "Dedat Kourdzeni",
+        "Dedat Kurdzeni",
+        "Dedate Koudzeni",
+        "Mamali Mtsvane",
+        "Mamali Mtsvani",
+        "Mamali Mtzvane",
+        "Matsvane Kaxetinskii",
+        "Matsvani, Mchxara",
+        "Mchknara, Mciknara",
+        "Mcvane Kachetinskij",
+        "Mcvane Kahetinski",
+        "Mtchknara",
+        "Mtsvane Kakhetian",
+        "Mtsvane Kaxetinskii",
+        "Mtzvane Kachuri",
+        "Mtzvane Kaxetinsky",
+        "Mzibani",
+        "Sapena",
+        "ムツバネ"
+      ],
+      "labels": [
+        "Mtsvane",
+        "Mzwane",
+        "mtsvanet",
+        "Мцване",
+        "Մցվանե",
+        "მწვანე კახური",
+        "ムツヴァネ"
+      ]
+    },
+    "mujuretuli": {
+      "aliases": [
+        "Keduretuli",
+        "Mudjuretuli",
+        "Mudshurestuli",
+        "Mudzhuretuli"
+      ],
+      "labels": [
+        "Mujuretuli",
+        "Муджуретули",
+        "მუჯურეთული"
+      ]
+    },
+    "muller-thurgau": {
+      "aliases": [
+        "Mueller-Thurgau",
+        "Muller-Thurgau",
+        "Myller-Thurgau",
+        "Müller Thurgau bianco",
+        "Müller–Thurgau",
+        "Riesling x Silvaner",
+        "Riesling x Sylvaner",
+        "Riesling × Sylvaner",
+        "Riesling-Silvaner",
+        "Riesling-Sylvaner",
+        "Riesling×Silvaner",
+        "Rieszling-Sylvaner",
+        "Rizlingszilvani",
+        "WEISSER RIESLING X MADELEINE ROYALE",
+        "ミュラー・トゥルガウ",
+        "リヴァーナー"
+      ],
+      "labels": [
+        "Muller-thurgau",
+        "Müller Thurgau",
+        "Müller-Thurgau",
+        "Müller-thurgau",
+        "Rivaner",
+        "Rizlingszilváni",
+        "Rizvanec",
+        "Мюлер-Тургау",
+        "Мюллер-Тургау",
+        "מילר תורגאו",
+        "ミュラー＝トゥールガウ",
+        "米勒-吐尔高",
+        "米勒-吐爾高",
+        "米勒-图高",
+        "뮐러 투르가우"
+      ]
+    },
+    "muscadelle": {
+      "aliases": [
+        "Sauvignon vert"
+      ],
+      "labels": [
+        "Muscadelle",
+        "מוסקאדל",
+        "ミュスカデル",
+        "密斯卡岱"
+      ]
+    },
+    "muscat-blanc-a-petits-grains": {
+      "aliases": [
+        "Frontignac",
+        "GELBER MUSKATELLER",
+        "MUSCAT BLANC A PETIT GRAIN",
+        "MUSCAT DE CHAMBAVE",
+        "Moscatel Morisco",
+        "Moscatel morisco",
+        "Moschato Aspro",
+        "Mosxato Aspro",
+        "Muscat Blanc a Petits Grains",
+        "Muscat Canelli",
+        "Muscat blanc a petit grains",
+        "Muscat blanc a petits grains",
+        "Muscat blanc à petit grains",
+        "Muscat blanc à petits grains",
+        "Muscat de Beaumes-de-Venise",
+        "Muscat de Frontignan",
+        "Muscat lunell",
+        "Muscat à Petits Grains Blancs",
+        "Weißer Muskateller",
+        "White Frontignan",
+        "シャルガ・ムシュコタイ",
+        "マスカット・カネッリ",
+        "ミュスカ・ブラン",
+        "ミュスカ・ブラン・ア・プティ・グラン",
+        "ミュスカ・ブラン・ア・プティ･グラン",
+        "モスカテル・デ・グラノ・メヌド",
+        "モスカート・ビアンコ"
+      ],
+      "labels": [
+        "Gelber Muskateller",
+        "Moscatel Galego Branco",
+        "Moscatel de grano menudo",
+        "Moscato Bianco",
+        "Muscat Blanc à Petits Grains",
+        "Muškat Bijeli",
+        "Muškát žltý",
+        "Muškát žlutý",
+        "Rumeni muškat",
+        "Sárga muskotály",
+        "Tămâioasă albă românească",
+        "muscat blanc à petits grains",
+        "Μοσχάτο Άσπρο",
+        "Мускат белый",
+        "Мускат білий",
+        "Тамянка",
+        "מוסקט לבן",
+        "マスカット・カネリ",
+        "白麝香葡萄"
+      ]
+    },
+    "muscat-of-alexandria": {
+      "aliases": [
+        "Aleksandriya Muskati",
+        "Moscatel de Alejandria",
+        "Moscato di Alessandria",
+        "Moscato d’Alessandria",
+        "Uva salamanna",
+        "Uva zibibbo",
+        "モスカテル・デ・アレハンドリア"
+      ],
+      "labels": [
+        "Aleksandria muskatelo",
+        "Aleksandriya muskati",
+        "Aleksandriya muskatı",
+        "Moscatel de Alejandría",
+        "Muscat d´Alexandria",
+        "Muscat d’Alexandrie",
+        "Muscat of Alexandria",
+        "Muskaatdruif",
+        "Zibbibbu",
+        "Zibibbo",
+        "muscat d'Alexandrie",
+        "İskenderiye misketi",
+        "Александрийски мускат",
+        "Мускат Александрийски",
+        "Мускат александрийский",
+        "מוסקט אלכסנדרוני",
+        "マスカット・オブ・アレキサンドリア",
+        "亚历山大麝香葡萄",
+        "亞歷山大麝香",
+        "亞歷山大麝香葡萄",
+        "머스캣 오브 알렉산드리아"
+      ]
+    },
+    "muscat-ottonel": {
+      "aliases": [
+        "オットネル・ムシュコターイ",
+        "ムスカット・オットネル"
+      ],
+      "labels": [
+        "Misket Ottonel",
+        "Muscat",
+        "Muscat Ottonel",
+        "Muscat ottonel",
+        "Muskat-Ottonel",
+        "Muškat otonel",
+        "Muškát Ottonel",
+        "Ottonel muskotály",
+        "Мускат Отонел",
+        "Мускат Оттонель",
+        "マスカット・オットネル",
+        "奥托奈麝香葡萄",
+        "奧托奈麝香葡萄"
+      ]
+    },
+    "nebbiolo": {
+      "aliases": [
+        "CHIAVENNASCA",
+        "SPANNA",
+        "內比奧羅"
+      ],
+      "labels": [
+        "Nebbiolo",
+        "Nebieul",
+        "Неббиоло",
+        "Неббіоло",
+        "Небиоло",
+        "נביולו",
+        "ネッビオーロ",
+        "內比歐露",
+        "内比奥罗",
+        "네비올로"
+      ]
+    },
+    "negrette": {
+      "aliases": [
+        "Negrette"
+      ],
+      "labels": [
+        "Négrette",
+        "ネグレット",
+        "内格雷特葡萄"
+      ]
+    },
+    "negroamaro": {
+      "aliases": [
+        "NEGROAMARO",
+        "NERO AMARO",
+        "Negramaro",
+        "Negro Amaro"
+      ],
+      "labels": [
+        "Negroamaro",
+        "Негроамаро",
+        "ネグロアマーロ"
+      ]
+    },
+    "nero-d-avola": {
+      "aliases": [
+        "Calabrese Montenuovo",
+        "Principe Siciliano"
+      ],
+      "labels": [
+        "Calavrisi",
+        "Neir d'Avole",
+        "Nero d'Avola",
+        "Nero d'Avolak",
+        "Nero d'avola",
+        "Nero d’Avola",
+        "Nero d’avola",
+        "Nho Nero d'Avola",
+        "Неро д'Авола",
+        "נרו ד'אבולה",
+        "نيرو دافولا",
+        "ネロ・ダヴォラ"
+      ]
+    },
+    "neuburger": {
+      "aliases": [],
+      "labels": [
+        "Neuburger",
+        "Neuburské",
+        "Нойбургер"
+      ]
+    },
+    "niagara": {
+      "aliases": [
+        "Niagara grape"
+      ],
+      "labels": [
+        "Niagara",
+        "Uva niagara",
+        "Ніагара",
+        "ナイアガラ",
+        "尼加拉葡萄"
+      ]
+    },
+    "ojaleshi": {
+      "aliases": [],
+      "labels": [
+        "Ocaleşi",
+        "Odjaleschi",
+        "Ojaleshi",
+        "Оджалеши",
+        "Оджалеші",
+        "ოჯალეში"
+      ]
+    },
+    "okuzgozu": {
+      "aliases": [
+        "Okuezgoezue",
+        "Okuzgozu",
+        "オクズギョズ"
+      ],
+      "labels": [
+        "Tiriyê çavga",
+        "Öküzgözü",
+        "öküzgözü",
+        "چاڤگا",
+        "იოქიუზგიოზიუ",
+        "オキュズギョズ"
+      ]
+    },
+    "palomino": {
+      "aliases": [
+        "帕罗米诺葡萄"
+      ],
+      "labels": [
+        "Palomino",
+        "Palomino (mahatsa)",
+        "Palomino fino",
+        "Паломино",
+        "Паломіно",
+        "パロミノ",
+        "帕羅米諾"
+      ]
+    },
+    "pamid": {
+      "aliases": [],
+      "labels": [
+        "Pamid",
+        "pamid",
+        "Памид",
+        "Памід",
+        "パミド"
+      ]
+    },
+    "parellada": {
+      "aliases": [
+        "''Martorella, Montonec, Montonech, Montonega, Montoneo, Montonero, Montonet, Parellada blanc, Perelada'' e ''Perellada''",
+        "Montonec",
+        "Montonega",
+        "Montonet",
+        "Uva parellada",
+        "パレリャダ"
+      ],
+      "labels": [
+        "Parellada",
+        "Vitis vinifera 'Parellada'",
+        "parellada",
+        "パレリャーダ"
+      ]
+    },
+    "pecorino": {
+      "aliases": [
+        "VISSANELLO",
+        "arquitano",
+        "dolcipappola",
+        "moscianello",
+        "mosciolo",
+        "norcino",
+        "pecorina",
+        "pecorina arquatanella",
+        "pecorino di Arquata",
+        "pecorino di Osimo",
+        "promotico",
+        "vecià",
+        "vissanello"
+      ],
+      "labels": [
+        "Pecorino",
+        "pecorino",
+        "Пекорино",
+        "Пекоріно",
+        "پکورینو (انگور)",
+        "ペコリーノ"
+      ]
+    },
+    "pedro-ximenez": {
+      "aliases": [
+        "Alamis",
+        "Pedro Jiménez",
+        "Pedro Ximen",
+        "Pedro Ximènez",
+        "Pedro jimenez",
+        "Pedro ximenes",
+        "Pedro ximenez",
+        "Uva Pedro Ximenez",
+        "Педро-хименес"
+      ],
+      "labels": [
+        "Pedro Ximenez",
+        "Pedro Ximénez",
+        "Pedro ximénez",
+        "Uva Pedro Ximénez",
+        "pedro ximenes",
+        "Πέδρο Σιμένεθ",
+        "Педро Хименес",
+        "Педро Хіменес",
+        "ペドロ・ヒメネス",
+        "佩德罗·希梅内斯",
+        "페드로 히메네스"
+      ]
+    },
+    "petit-manseng": {
+      "aliases": [
+        "プティ・マンサン"
+      ],
+      "labels": [
+        "Ixkiriot ttipi",
+        "Petit Manseng",
+        "Petit manseng",
+        "Petit-Manseng",
+        "プチ・マンサン",
+        "小满胜"
+      ]
+    },
+    "petit-verdot": {
+      "aliases": [
+        "פטיט ורדו",
+        "プティ・ベルド",
+        "プティ・ヴェルド"
+      ],
+      "labels": [
+        "Petit Verdot",
+        "Petit Verdot üzümü",
+        "Petit verdot",
+        "Пети Вердо",
+        "Петіт вердо",
+        "Пти Вердо",
+        "Пти вердо",
+        "פטי ורדו",
+        "プチ・ヴェルド",
+        "小維多",
+        "프티 베르도"
+      ]
+    },
+    "pignolo": {
+      "aliases": [],
+      "labels": [
+        "Pignolo",
+        "Пиньоло",
+        "Піньоло"
+      ]
+    },
+    "pinot-blanc": {
+      "aliases": [
+        "WEI",
+        "WEISSBURGUNDER",
+        "Weissburgunder",
+        "Weißer Burgunder",
+        "ピノ・ビアンコ",
+        "ヴァイサーブルグンダー",
+        "ヴァイスブルグンダー",
+        "白皮諾",
+        "白皮诺"
+      ],
+      "labels": [
+        "Beli pinot",
+        "Fehér burgundi",
+        "Pinot Blanc",
+        "Pinot bianco",
+        "Pinot bijeli",
+        "Pinot blanc",
+        "Rulandské biele",
+        "Rulandské bílé",
+        "Weißburgunder",
+        "Пино блан",
+        "Пино-блан",
+        "Піно Блан",
+        "פינו בלאן",
+        "ピノ・ブラン",
+        "白比诺"
+      ]
+    },
+    "pinot-gris": {
+      "aliases": [
+        "GRAUBURGUNDER",
+        "GRAUER BURGUNDER",
+        "Grauer Burgunder",
+        "Szürkebarát",
+        "Tokay d’Alsace",
+        "グラウブルグンダー",
+        "スルケバラート",
+        "ピノ・グリージョ",
+        "ピノ・グリーリョ",
+        "ピノ･グリ",
+        "ルーレンダー"
+      ],
+      "labels": [
+        "Grauburgunder",
+        "Pinot Grigio",
+        "Pinot Gris",
+        "Pinot grigio",
+        "Pinot gris",
+        "Pinot grisi",
+        "Pinot sivi",
+        "Pinòt gris",
+        "Rulandské sivé",
+        "Rulandské šedé",
+        "Ruländer",
+        "Sivi pinot",
+        "szürkebarát",
+        "Πινό γκρι",
+        "Пинă Гри",
+        "Пино гри",
+        "Пино-гри",
+        "Піно-грі",
+        "פינו גרי",
+        "پینو گری",
+        "ピノ・グリ",
+        "灰比諾",
+        "灰皮諾",
+        "灰皮诺",
+        "피노 그리"
+      ]
+    },
+    "pinot-meunier": {
+      "aliases": [
+        "Meunier",
+        "pinot meunier N",
+        "シュヴァルツリースリング",
+        "ミュラーレーベ"
+      ],
+      "labels": [
+        "Mlynářka",
+        "Müllerrebe",
+        "Pinot Meunier",
+        "Pinot meunier",
+        "Postič",
+        "Пинă Менье",
+        "Пино Мьоние",
+        "Пино менье",
+        "ピノ・ムニエ",
+        "莫尼耶皮諾",
+        "피노 뫼니에"
+      ]
+    },
+    "pinot-noir": {
+      "aliases": [
+        "Auvernat noir",
+        "Blauburgunder",
+        "Blauer Burgunder",
+        "Blauer Spätburgunder",
+        "Burgundac",
+        "Clevner",
+        "Helvenacia Minor",
+        "Pinot",
+        "Pinot Nero",
+        "Salvagnin",
+        "Salvagnin Noir",
+        "Schwarzburgunder",
+        "Spatburgunder",
+        "modri burgundec",
+        "pinot noir",
+        "plavi pinot",
+        "Пино нуар",
+        "پینو نوآر",
+        "پینونوار",
+        "シュペートブルグンダー",
+        "ピノ・ネロ",
+        "ピノ・ビアンコ",
+        "皮诺瓦",
+        "黑品乐",
+        "黑皮諾",
+        "黑皮诺",
+        "피노누아",
+        "피노누아르"
+      ],
+      "labels": [
+        "Nei' pinot (chépage)",
+        "Noért pinot",
+        "Pino noar",
+        "Pinot Noir",
+        "Pinot crni",
+        "Pinot nero",
+        "Pinot noir",
+        "Pint noir",
+        "Rulandské modré",
+        "Spätburgunder",
+        "modri pinot",
+        "pinot negre",
+        "uva Pinot Noir",
+        "Πινό Νουάρ",
+        "Пинă Нуар",
+        "Пино ноар",
+        "Пино-нуар",
+        "Піно Нуар",
+        "Պինո-նուար",
+        "פינו נואר",
+        "پینونوآر",
+        "ピノ・ノワール",
+        "黑比諾",
+        "黑比诺",
+        "피노 누아르"
+      ]
+    },
+    "pinot-noir-precoce": {
+      "aliases": [
+        "Pinot Noir Precoce"
+      ],
+      "labels": [
+        "Frühburgunder",
+        "Jakubské",
+        "Pinot Noir Précoce",
+        "Pinot noir précoce",
+        "Пино-нуар прекос",
+        "フリューブルグンダー"
+      ]
+    },
+    "pinotage": {
+      "aliases": [],
+      "labels": [
+        "Pinotage",
+        "Пинотаж",
+        "Пінотаж",
+        "ピノタージュ",
+        "皮諾塔吉"
+      ]
+    },
+    "piquepoul": {
+      "aliases": [
+        "Folle Blanche",
+        "Picapolla",
+        "Piquepoul noir",
+        "ピクプール・ブラン"
+      ],
+      "labels": [
+        "Picapoll",
+        "Picapoll negro",
+        "Picpoul",
+        "Piquepoul",
+        "picapoll",
+        "Пикпуль",
+        "Пікаполь",
+        "グロ・プラン"
+      ]
+    },
+    "plavac-mali": {
+      "aliases": [
+        "Dingač",
+        "Plavac",
+        "Plavac mali crni",
+        "Plavač mali",
+        "Postup",
+        "плавац малі"
+      ],
+      "labels": [
+        "Mali Plavac",
+        "Plavac Mali",
+        "Plavac mali",
+        "Плавац Мали",
+        "Плавац Малі",
+        "Плавец мал"
+      ]
+    },
+    "posip": {
+      "aliases": [],
+      "labels": [
+        "Pošip",
+        "Пошип",
+        "ポシップ"
+      ]
+    },
+    "poulsard": {
+      "aliases": [],
+      "labels": [
+        "Poulsard",
+        "Poulsard Blanc",
+        "プールサール"
+      ]
+    },
+    "prieto-picudo": {
+      "aliases": [],
+      "labels": [
+        "Prieto Picudo",
+        "Prieto picudo",
+        "prieto picudo"
+      ]
+    },
+    "raboso": {
+      "aliases": [
+        "Friularo",
+        "Raboso Veronese"
+      ],
+      "labels": [
+        "Raboso",
+        "Raboxo Piave",
+        "raboso",
+        "Рабосо",
+        "רבוסו (ענב)"
+      ]
+    },
+    "refosco-dal-peduncolo-rosso": {
+      "aliases": [],
+      "labels": [
+        "Refosco dal Peduncolo Rosso",
+        "Refosco dal peduncolo rosso",
+        "Рефоско даль педунколо россо"
+      ]
+    },
+    "ribolla-gialla": {
+      "aliases": [],
+      "labels": [
+        "Rebula",
+        "Ribolla Gialla",
+        "Ribolla gialla",
+        "Ribuele Zale",
+        "Rosazzo",
+        "Риболла джалла",
+        "Ріболла джалла",
+        "リボラ・ジャッラ"
+      ]
+    },
+    "riesling": {
+      "aliases": [
+        "Edelriesling",
+        "Gelber Riesling",
+        "Johannisberg riesling",
+        "Johannisberger",
+        "RHEINRIESLING",
+        "Rheinriesling",
+        "Riesling Renano",
+        "Riesling-Hochgewächs",
+        "Rossling",
+        "Uva riesling",
+        "Weißer Riesling",
+        "White Riesling",
+        "Рајнски ризлинг",
+        "Ризлинг рајнски",
+        "ريسلينج",
+        "ホワイト・リースリング",
+        "ライン・リースリング",
+        "リースリング・レナーノ"
+      ],
+      "labels": [
+        "Rajnski Rizling",
+        "Renski rizling",
+        "Riesling",
+        "Riesling de Rhin",
+        "Risling",
+        "Rislingo",
+        "Rislinq",
+        "Rizling",
+        "Rizling rýnsky",
+        "Ryzlink rýnský",
+        "rajnai rizling",
+        "riesling",
+        "riisling",
+        "Ρίσλινγκ",
+        "Ризлинг",
+        "Рислинг",
+        "Рислінг",
+        "ריזלינג",
+        "ريزلنغ",
+        "ریزلینگ",
+        "রিয়েজলিং আঙুর",
+        "リースリング",
+        "雷司令",
+        "麗絲玲",
+        "리슬링"
+      ]
+    },
+    "rkatsiteli": {
+      "aliases": [
+        "Dedali Rkatsiteli",
+        "Mamali Rkatsiteli",
+        "Rkatiteli",
+        "Rkaţiteli",
+        "רכּאציתלי",
+        "リカツィーテリ",
+        "卡齐特利"
+      ],
+      "labels": [
+        "Rkaciteli",
+        "Rkasiteli",
+        "Rkatsiteli",
+        "Rkaziteli",
+        "Rkațiteli",
+        "Ркацители",
+        "Ркацителі",
+        "ռքածիթելի",
+        "רכאציתלי",
+        "რქაწითელი",
+        "ルカツィテリ",
+        "白羽"
+      ]
+    },
+    "rondinella": {
+      "aliases": [],
+      "labels": [
+        "Rondinella",
+        "Рондинела",
+        "Рондинелла",
+        "ロンディネッラ"
+      ]
+    },
+    "rondo": {
+      "aliases": [
+        "Ambros Rot",
+        "Geisenheim 6494-5"
+      ],
+      "labels": [
+        "Nho Rondo",
+        "Rondo",
+        "ロンド"
+      ]
+    },
+    "roussanne": {
+      "aliases": [
+        "Bergeron"
+      ],
+      "labels": [
+        "Roussanne",
+        "Русан",
+        "רוסאן",
+        "रुसान",
+        "ルーサンヌ",
+        "瑚珊",
+        "루산"
+      ]
+    },
+    "ruby-cabernet": {
+      "aliases": [],
+      "labels": [
+        "Cabernet Ruby",
+        "Ruby Cabernet",
+        "Ruby cabernet",
+        "ルビー・カベルネ"
+      ]
+    },
+    "ruche": {
+      "aliases": [
+        "Moscatellina",
+        "Romitagi",
+        "Rouche",
+        "Rouchet",
+        "Ruchè"
+      ],
+      "labels": [
+        "Roché",
+        "Ruche",
+        "Ruché",
+        "Руке"
+      ]
+    },
+    "sagrantino": {
+      "aliases": [
+        "Sagrantino di Montefalco",
+        "Sagratino di Montefalco"
+      ],
+      "labels": [
+        "Sagrantino",
+        "sagrantino",
+        "Сагрантино"
+      ]
+    },
+    "sangiovese": {
+      "aliases": [
+        "Brunello",
+        "Brunello grape",
+        "Prugnolo",
+        "Prugnolo Gentile",
+        "Prugnolo Gentile di Montepulciano",
+        "Prugnolo Rosso",
+        "SANGIOVETO",
+        "サンジョベーゼ",
+        "ニエルッキオ",
+        "山吉歐維榭",
+        "桑嬌維塞葡萄"
+      ],
+      "labels": [
+        "Sangiovese",
+        "Sanđioveze",
+        "Санджовезе",
+        "סנג'ובזה",
+        "سانچوویزه",
+        "サンジョヴェーゼ",
+        "桑娇维塞",
+        "桑嬌維賽",
+        "산지오베제"
+      ]
+    },
+    "saperavi": {
+      "aliases": [],
+      "labels": [
+        "Saperavi",
+        "Saperawi",
+        "Саперави",
+        "Сапераві",
+        "сапэраві",
+        "Սափերավի",
+        "ספראווי",
+        "ساپراوی",
+        "საფერავი",
+        "サペラヴィ",
+        "薩博維",
+        "사페라비"
+      ]
+    },
+    "sauvignon-blanc": {
+      "aliases": [
+        "Blanc Fumé",
+        "Muskat-Sylvaner",
+        "Muškatni silvanec",
+        "Sauvignon Jaune",
+        "Uva sauvignon",
+        "Совиньон-блан",
+        "ソーヴィニヨン・ブラン",
+        "长相思"
+      ],
+      "labels": [
+        "Sauvignon",
+        "Sauvignon Blanc",
+        "Sauvignon blanc",
+        "Vitis vinifera ’Sauvignon Blanc’",
+        "sauvignon blanc",
+        "Σοβινιόν Μπλαν",
+        "Совиньон Блан",
+        "Совиньон блан",
+        "Совињон блан",
+        "Совіньйон Блан",
+        "Սովինյոն Բլան",
+        "סוביניון בלאן",
+        "ساوفيجنون بلانك",
+        "সভিগনন ব্লাঙ্ক আঙুর",
+        "ソーヴィニョン・ブラン",
+        "白蘇維濃",
+        "长相思葡萄酒",
+        "소비뇽 블랑"
+      ]
+    },
+    "sauvignon-vert": {
+      "aliases": [
+        "Sauvignonasse",
+        "Tocai Friulano",
+        "Tocai friulano"
+      ],
+      "labels": [
+        "Friulano",
+        "Furlanski tokaj",
+        "Sauvignon vert",
+        "Tocai",
+        "friulano",
+        "Совиньон зелёный",
+        "Совіньйон зелений",
+        "ソーヴィニヨン・ヴェール"
+      ]
+    },
+    "savagnin": {
+      "aliases": [
+        "Christkindlestraube",
+        "Frenschen Weiss",
+        "Gelber Traminer",
+        "Heida",
+        "Païen",
+        "Prinč bílý",
+        "Savagnin jaune",
+        "Savagnin vert",
+        "Traminer",
+        "Vigne du Marechal",
+        "トラミネール"
+      ],
+      "labels": [
+        "Savagnin",
+        "Savagnin blanc",
+        "Tramín bílý",
+        "beli traminec",
+        "Саваньен",
+        "サヴァニャン"
+      ]
+    },
+    "scheurebe": {
+      "aliases": [
+        "Sämling 8"
+      ],
+      "labels": [
+        "Scheurebe",
+        "Шойребе",
+        "ショイレーベ",
+        "施埃博"
+      ]
+    },
+    "semillon": {
+      "aliases": [
+        "Gros Semillon",
+        "Gros Sémillon",
+        "Semillion",
+        "Semillon grape",
+        "Sémillion",
+        "Teisor",
+        "Wyndruif",
+        "セミョン",
+        "セミョーン"
+      ],
+      "labels": [
+        "Nho Sémillon",
+        "Semijon",
+        "Semillon",
+        "Semillón",
+        "Sémillon",
+        "Teișor",
+        "Σεμιλιόν",
+        "Семийон",
+        "Семильон",
+        "Семијон",
+        "Семільйон",
+        "סמיון",
+        "セミヨン",
+        "賽美蓉",
+        "세미용"
+      ]
+    },
+    "sercial": {
+      "aliases": [],
+      "labels": [
+        "Sercial",
+        "Sersial",
+        "Серсиаль",
+        "Серсіаль",
+        "セルシアル"
+      ]
+    },
+    "siegerrebe": {
+      "aliases": [
+        "Sieger"
+      ],
+      "labels": [
+        "Siegerrebe",
+        "ジーガーレーベ"
+      ]
+    },
+    "silvaner": {
+      "aliases": [
+        "Grüner Silvaner",
+        "Johannisberger",
+        "Silvanac",
+        "Silvanec",
+        "Silvaner grün",
+        "Sylvaner verde",
+        "Uva Silvaner",
+        "Zeleni plešec",
+        "szilváni",
+        "グリューナー・シルヴァーナー",
+        "ドイツ版Wikipedia"
+      ],
+      "labels": [
+        "Silvanac zeleni",
+        "Silvaner",
+        "Silvánske zelené",
+        "Sylvaner",
+        "Sylvánské zelené",
+        "Zeleni silvanec",
+        "zöld szilváni",
+        "Силванер",
+        "Сильванер",
+        "սիլվաներ",
+        "סילבאנר",
+        "シルヴァーナー",
+        "西万尼",
+        "西萬尼",
+        "실바너"
+      ]
+    },
+    "souzao": {
+      "aliases": [
+        "Sezão",
+        "Souson",
+        "Souzón",
+        "ソウジャオ",
+        "ヴィーニャオ"
+      ],
+      "labels": [
+        "Sousão",
+        "Sousón",
+        "Souzão",
+        "Vinhão",
+        "Сузао",
+        "סזאו",
+        "ソウソン"
+      ]
+    },
+    "st-laurent": {
+      "aliases": [
+        "Saint-Laurent",
+        "Svättova Vrinecké",
+        "ザンクト・ラウレント"
+      ],
+      "labels": [
+        "Muscat Saint-Laurent",
+        "Nho St. Laurent",
+        "Saint Laurent",
+        "Sankt laurent",
+        "St. Laurent",
+        "Svatovavřinecké",
+        "Szent Lőrinc",
+        "Šentlovrenka",
+        "Санкт Лаурент",
+        "Сен Лоран",
+        "サン・ローラン"
+      ]
+    },
+    "sultana": {
+      "aliases": [
+        "Banati",
+        "Cekirdeksiz Sultani",
+        "Kishmish Safet",
+        "Sultanina Alba",
+        "Sultanina Bela",
+        "Sultanina Bianca",
+        "Sultanina Bijela",
+        "Sultanina Blanca",
+        "Sultanina Blanche",
+        "Sultanina grape",
+        "Thompson Seedless",
+        "Uva de Passa",
+        "Uva sultana",
+        "swltana",
+        "syltana",
+        "Кишмиш белый овальный",
+        "سولتانا",
+        "湯普森無籽",
+        "蘇丹娜"
+      ],
+      "labels": [
+        "Kishmish",
+        "Sulltana",
+        "Sultana",
+        "Sultanina",
+        "Sultaniye üzümü",
+        "Syltana",
+        "panses sultanes",
+        "sabhdánach",
+        "sultana",
+        "sultanina",
+        "sultanine",
+        "uva sultanina",
+        "σουλτανίνα",
+        "Белый кишмиш",
+        "Кишмиш",
+        "Султанина",
+        "белы кішміш",
+        "סולטנה",
+        "العنب الكشمشي",
+        "انگور سلطانی",
+        "द्राक्षा",
+        "सुल्ताना",
+        "ಸುಲ್ತಾನ",
+        "සුල්තානා",
+        "サルタナ",
+        "苏丹娜",
+        "蘇丹娜葡萄",
+        "설태너"
+      ]
+    },
+    "sumoll": {
+      "aliases": [],
+      "labels": [
+        "Sumoll",
+        "sumoll",
+        "Сумоль"
+      ]
+    },
+    "syrah": {
+      "aliases": [
+        "Balsamia",
+        "SHIRAZ",
+        "Shiraz",
+        "Shiraz Cabernet",
+        "Shiraz grape",
+        "Sirah",
+        "Uva shiraz",
+        "Uva syrah",
+        "Vitis vinifera 'Syrah'",
+        "shiraz",
+        "shiraz mahats",
+        "Шираз",
+        "シラーズ",
+        "希哈",
+        "设拉子",
+        "设拉子葡萄"
+      ],
+      "labels": [
+        "Shiraz/Syrah",
+        "Sira",
+        "Sjiraz",
+        "Syrah",
+        "sirà",
+        "syrah",
+        "Şiraz üzümü",
+        "Σιρά",
+        "Сира",
+        "Сіра",
+        "Սիրա",
+        "שיראז",
+        "شیراز",
+        "シラー",
+        "希哈葡萄",
+        "西拉葡萄",
+        "시라"
+      ]
+    },
+    "tannat": {
+      "aliases": [
+        "タナット",
+        "塔那葡萄"
+      ],
+      "labels": [
+        "Tannat",
+        "Танат",
+        "Танна",
+        "Таннат",
+        "タナ",
+        "塔那"
+      ]
+    },
+    "tavkveri": {
+      "aliases": [],
+      "labels": [
+        "Tavkveri",
+        "Тавквери",
+        "Тавквері",
+        "თავკვერი"
+      ]
+    },
+    "tempranillo": {
+      "aliases": [
+        "Aragones",
+        "Tinta roriz"
+      ],
+      "labels": [
+        "Aragonez",
+        "Araúxo",
+        "Tempranillo",
+        "tempranillo",
+        "ull de llebre",
+        "Темпранийо",
+        "Темпранильо",
+        "Темпранільйо",
+        "テンプラニーリョ",
+        "丹魄",
+        "田帕尼優",
+        "藤伯兰尼尤",
+        "템프라니요"
+      ]
+    },
+    "tinta-amarela": {
+      "aliases": [
+        "Crato Preto",
+        "Espadeiro",
+        "Preto Martinho",
+        "Tinta Amarella",
+        "Tinta amarela",
+        "Tinta amarella",
+        "Trincadeira Preta",
+        "Trincadeira Preto",
+        "ティンタ・アマレーラ",
+        "トリンガデイラ"
+      ],
+      "labels": [
+        "Tinta Amarela",
+        "Trincadeira",
+        "Трінкадейра",
+        "טינטה אמראלה",
+        "ティンタ・アマレラ"
+      ]
+    },
+    "tinta-barroca": {
+      "aliases": [
+        "Tinta Grossa",
+        "Tinta barocca"
+      ],
+      "labels": [
+        "Tinta Barroca",
+        "Tinta barroca",
+        "tinta barroca",
+        "Тинта Барока",
+        "טיטה בחוקה",
+        "ティンタ・バロッカ"
+      ]
+    },
+    "tinta-cao": {
+      "aliases": [
+        "Padeiro",
+        "Tinta Cao",
+        "Tinta cao",
+        "Tinto Cao",
+        "Tinto cao",
+        "ティント・カン"
+      ],
+      "labels": [
+        "Tinta Cão",
+        "Tinta cão",
+        "Tinto Cão",
+        "Tinto cão",
+        "Тинта Као",
+        "טינטה קאו",
+        "ティンタ・カン"
+      ]
+    },
+    "torrontes": {
+      "aliases": [
+        "Torrontes",
+        "Torrontés Sanjuanino"
+      ],
+      "labels": [
+        "Salcenyo",
+        "Torrontés",
+        "Торонтес",
+        "Торронтес",
+        "Տոռոնտես",
+        "トロンテス",
+        "托龍特",
+        "托龙特",
+        "토론테스"
+      ]
+    },
+    "touriga-francesa": {
+      "aliases": [
+        "Touriga Frances",
+        "Touriga frances",
+        "Touriga francesa"
+      ],
+      "labels": [
+        "Touriga Franca",
+        "Touriga Francesa",
+        "Touriga Francesca",
+        "Touriga franca",
+        "Турига Франка",
+        "טוריגה פרנצזה",
+        "トウリガ・フランカ"
+      ]
+    },
+    "touriga-nacional": {
+      "aliases": [
+        "Mortágua",
+        "Preto Mortágua",
+        "Tourigo"
+      ],
+      "labels": [
+        "Touriga Nacional",
+        "Touriga nacional",
+        "Торига Насионал",
+        "Торига Насьйональ",
+        "Турига Насионал",
+        "טוריגה נסיונל",
+        "トゥリガ・ナシオナル",
+        "国产多瑞加",
+        "투리가 나시오날"
+      ]
+    },
+    "trebbiano": {
+      "aliases": [
+        "Branquinha",
+        "Castillone",
+        "Chator",
+        "Engana rapazes",
+        "Espadeiro branco",
+        "Procanico",
+        "Rossetto",
+        "Rossola",
+        "Shiraz white",
+        "Spoletino",
+        "Talia",
+        "Trebbianello",
+        "Trebbiano Giallo",
+        "Trebbiano fiorentino",
+        "Trebbiano gallo",
+        "Trebbiano toscano",
+        "Trebbianone",
+        "Tribbiano",
+        "Ugni Blanc",
+        "Ugni blanc",
+        "サンテミリオン",
+        "トレッビアーノ・トスカーノ",
+        "ユニ・ブラン"
+      ],
+      "labels": [
+        "Trebbiano",
+        "Trebbiano Toscano",
+        "trebbiano",
+        "Треббиано",
+        "Треббьяно",
+        "Треббіано",
+        "Трэб’яна",
+        "Юни блан",
+        "יוני בלאן",
+        "تریبیانو (انگور)",
+        "トレッビアーノ",
+        "白玉霓",
+        "트레비아노"
+      ]
+    },
+    "treixadura": {
+      "aliases": [
+        "Teixadura Blanca,  Tragadura,  Trajadura, Trinca Dente,  Trincadeira,  Trincadente,  Verdello Rubio",
+        "トラジャドゥラ"
+      ],
+      "labels": [
+        "Trajadura",
+        "Treixadura",
+        "treixadura",
+        "トレイシャドゥーラ"
+      ]
+    },
+    "trepat": {
+      "aliases": [],
+      "labels": [
+        "Bonicaire",
+        "Trepat",
+        "trepat",
+        "Трапат",
+        "トレパット"
+      ]
+    },
+    "trollinger": {
+      "aliases": [
+        "Black Hamburg",
+        "Frankentaler",
+        "Großvernatsch",
+        "Vernatsch",
+        "Мускат-Троллингер"
+      ],
+      "labels": [
+        "Blauer Trollinger",
+        "Frankenthal",
+        "Schiava Grossa",
+        "Schiava grossa",
+        "Trollinger",
+        "Trolínské",
+        "Тролингер",
+        "Троллингер",
+        "トロリンガー",
+        "托林格"
+      ]
+    },
+    "tsolikouri": {
+      "aliases": [],
+      "labels": [
+        "Tsolikouri",
+        "Zolikouri",
+        "Цоликоури",
+        "Цолікоурі",
+        "ცოლიკოური",
+        "ツォリカウリ"
+      ]
+    },
+    "usakhelauri": {
+      "aliases": [],
+      "labels": [
+        "Usakhelauri",
+        "Усахелоури",
+        "უსახელოური"
+      ]
+    },
+    "verdejo": {
+      "aliases": [
+        "Uva verdejo"
+      ],
+      "labels": [
+        "Verdejo",
+        "Вердехо",
+        "ベルデホ",
+        "弗德乔"
+      ]
+    },
+    "verdelho": {
+      "aliases": [
+        "Verdelho Branco",
+        "ゴウヴェイオ",
+        "ベルデホ"
+      ],
+      "labels": [
+        "Gouveio",
+        "Verdelho",
+        "Verdelho blanc",
+        "esperó de gall",
+        "Верделлю",
+        "Вердельо",
+        "ヴェルデーリョ",
+        "华帝露",
+        "華帝露"
+      ]
+    },
+    "verdicchio": {
+      "aliases": [],
+      "labels": [
+        "Verdicchio",
+        "verdicchio",
+        "Вердеккио",
+        "Вердиккио",
+        "Вердикіо",
+        "ヴェルディッキオ"
+      ]
+    },
+    "vermentino": {
+      "aliases": [
+        "ヴェルメンティーノ"
+      ],
+      "labels": [
+        "Bermentinu",
+        "Vermentino",
+        "Vërmentin",
+        "Верментино",
+        "ヴェルマンチノ"
+      ]
+    },
+    "vernaccia": {
+      "aliases": [
+        "Vernaccia di San Gimignano"
+      ],
+      "labels": [
+        "Vernaccia",
+        "vernaccia",
+        "Верначча",
+        "ヴェルナッチャ"
+      ]
+    },
+    "viognier": {
+      "aliases": [
+        "維歐尼-夏多內",
+        "维欧尼"
+      ],
+      "labels": [
+        "Viognier",
+        "viognier",
+        "Вионие",
+        "Вионье",
+        "Віоньє",
+        "ויונייה",
+        "ヴィオニエ",
+        "維歐尼爾",
+        "비오니에"
+      ]
+    },
+    "vranec": {
+      "aliases": [],
+      "labels": [
+        "Nho Vranac",
+        "Vranac",
+        "Vranec",
+        "Вранац",
+        "Вранец",
+        "弗拉纳茨"
+      ]
+    },
+    "xarel-lo": {
+      "aliases": [
+        "チャレッロ"
+      ],
+      "labels": [
+        "Xarel-lo",
+        "Xarello",
+        "Xarel·lo",
+        "Шареллу",
+        "シャレロ"
+      ]
+    },
+    "xinomavro": {
+      "aliases": [
+        "Xynomavro",
+        "クシノマブロ"
+      ],
+      "labels": [
+        "Ksinomavro",
+        "Mavro Naoussis",
+        "Xinomavro",
+        "Xinómavro",
+        "Ξινόμαυρο",
+        "Ксеномавро",
+        "Ксиномавро",
+        "Ксіномавро",
+        "Пополка",
+        "クシノマヴロ",
+        "黑喜诺",
+        "시노마브로"
+      ]
+    },
+    "xynisteri": {
+      "aliases": [],
+      "labels": [
+        "Ksinisteri uzum",
+        "Xynisteri",
+        "Ξυνιστέρι",
+        "Ксинистери",
+        "Ксиністері"
+      ]
+    },
+    "zierfandler": {
+      "aliases": [
+        "チルファンドリ"
+      ],
+      "labels": [
+        "Cirfandli",
+        "Zierfandler",
+        "ツィアファンドラー"
+      ]
+    },
+    "zilavka": {
+      "aliases": [
+        "Jilavka",
+        "Mostarska",
+        "Zilavka Mostarska"
+      ],
+      "labels": [
+        "Zilavka",
+        "Žilavka",
+        "žilavka",
+        "Жилавка",
+        "жилавка",
+        "Ժիլավկա",
+        "ジラフカ"
+      ]
+    },
+    "zinfandel": {
+      "aliases": [
+        "Crljenak Kaštelanski",
+        "ZINFANDEL",
+        "ZPC",
+        "Zin",
+        "crljenak kaštelanski",
+        "primitivo",
+        "primitivodrue",
+        "zinfandeldrue",
+        "פרימיטיבו",
+        "פרימיטיבו די ג'ויה",
+        "ジンファンデル"
+      ],
+      "labels": [
+        "Crljenak",
+        "Primitivo",
+        "Primitivu",
+        "Zinfandel",
+        "zinfandel",
+        "Зинфандел",
+        "Зинфандель",
+        "Примітиво",
+        "זינפנדל",
+        "زینفندل",
+        "சின்பான்டெல்",
+        "プリミティーヴォ",
+        "金芬黛",
+        "진판델"
+      ]
+    },
+    "zweigelt": {
+      "aliases": [
+        "Blauer Zweigelt",
+        "Rotburger"
+      ],
+      "labels": [
+        "Nho Zweigelt",
+        "Zwaigelt",
+        "Zweigelt",
+        "Zweigeltrebe",
+        "Цвайгельт",
+        "ツヴァイゲルトレーベ",
+        "茨威格",
+        "츠바이겔트"
+      ]
+    }
+  }
+}

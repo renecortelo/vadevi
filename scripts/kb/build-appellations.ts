@@ -1291,8 +1291,17 @@ const notTheSameVariety = new Set(
     "Padeiro",
     "Perrum",
     "Précoce Noir",
+    // Wikidata aliases the variety catalogues give to a variety of its own.
+    "Forcallat Blanca",
+    "Pinot",
+    "Preto Martinho",
   ].map((name) => matchKey(name)),
 );
+const wikidataNames = (
+  JSON.parse(readFileSync(resolve("data/kb/grape-wikidata-labels.json"), "utf8")) as {
+    grapes: Record<string, { aliases: string[]; labels: string[] }>;
+  }
+).grapes;
 const grapeById = new Map(grapes.map((grape) => [grape.id, grape]));
 const primaryName = new Map<string, string | null>();
 const synonymName = new Map<string, string | null>();
@@ -1305,6 +1314,23 @@ for (const grape of grapes) {
   };
   for (const name of Object.values(grape.names)) add(primaryName, name);
   for (const synonym of grape.synonyms) add(synonymName, synonym.name);
+}
+// Its names in the registers' own languages (Wikidata, CC0): a label is the
+// variety's name there, an alias no more than a synonym. They come after the
+// grape's own names and synonyms and never stand in for one: where Wikidata
+// gives another grape a name the articles already use, that name keeps its link.
+const labelName = new Map<string, string | null>();
+const wikidataSynonym = new Map<string, string | null>();
+for (const grape of grapes) {
+  const add = (target: Map<string, string | null>, name: string) => {
+    const key = matchKey(name);
+    if (key.length < 3 || primaryName.has(key) || synonymName.has(key)) return;
+    const known = target.get(key);
+    target.set(key, known === undefined || known === grape.id ? grape.id : null);
+  };
+  const wikidata = wikidataNames[grape.id];
+  for (const label of wikidata?.labels ?? []) add(labelName, label);
+  for (const alias of wikidata?.aliases ?? []) add(wikidataSynonym, alias);
 }
 const allVarieties = new Set<string>();
 const colourWords = {
@@ -1330,9 +1356,9 @@ function colourAgrees(name: string, grapeId: string): boolean {
 }
 function linkVariety(name: string, listed: Set<string>, families: Set<string>): string | null {
   const key = matchKey(name);
-  const primary = primaryName.get(key);
+  const primary = primaryName.get(key) || labelName.get(key);
   if (primary) return primary;
-  const synonym = synonymName.get(key);
+  const synonym = synonymName.get(key) ?? wikidataSynonym.get(key);
   if (!synonym) return null;
   if (families.has(key) || notTheSameVariety.has(key)) return null;
   if (!colourAgrees(name, synonym) || listed.has(synonym)) return null;

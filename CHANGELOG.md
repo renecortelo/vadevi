@@ -33,6 +33,13 @@ has the reasons.
 
 ### Library
 
+- **A region's grapes link to their cards in the register's own language**:
+  «Каберне совиньон», «Frankovka», «Rulandské šedé», «Гъмза» and 64 more
+  names now open Cabernet Sauvignon, Blaufränkisch, Pinot Gris or Kadarka —
+  787 more links across Bulgarian, Czech, Slovak, Croatian, Slovenian,
+  Hungarian, Romanian and Greek regions. The names are the grapes' own
+  labels and aliases on Wikidata (CC0), never ahead of a name the articles
+  give another grape.
 - **Dry or sweet from the residual sugar on producers' sheets**: a sheet's
   «1,5 g/l» read by the EU's own labelling terms (dry up to 4 g/l, sweet
   above 45), on three producers' wines and two thirds of all those that

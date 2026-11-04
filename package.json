@@ -36,6 +36,7 @@
     "kb:extract-grapes": "tsx scripts/kb/extract-grapes.ts",
     "kb:fetch-grape-articles": "tsx scripts/kb/fetch-grape-articles.ts",
     "kb:build-grapes": "tsx scripts/kb/build-grapes.ts",
+    "kb:fetch-grape-labels": "tsx scripts/kb/fetch-grape-labels.ts",
     "kb:score": "tsx scripts/kb/data-score.ts",
     "kb:fetch-appellation-areas": "tsx scripts/kb/fetch-appellation-areas.ts",
     "kb:fetch-register-documents": "tsx scripts/kb/fetch-register-documents.ts",
