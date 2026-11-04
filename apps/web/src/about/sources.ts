@@ -123,9 +123,23 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Las páginas de bodegas y rutas del vino sobre una uva, no sobre uno de sus vinos: Quinta da Alameda, Bodegas Monje, Siston Brook Vineyard, Douloufakis, Winemakers of Northern Greece, la Rota de Vinhos da Península de Setúbal, el Instituto de la Vid y el Vino de Pleven, Madeira Wine Company, Taste Trentino (Trentino Marketing) y el Consejo Regulador de la D.O. Ribeiro (cada una enlazada en la ficha de la uva)",
+    name: "Las páginas de bodegas y rutas del vino sobre una uva, no sobre uno de sus vinos: Quinta da Alameda, Bodegas Monje, Siston Brook Vineyard, Douloufakis, Winemakers of Northern Greece, la Rota de Vinhos da Península de Setúbal, el Instituto de la Vid y el Vino de Pleven, Madeira Wine Company, Taste Trentino (Trentino Marketing), Mezzacorona y el Consejo Regulador de la D.O. Ribeiro (cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.quintadaalameda.com/en/vinho-e-saber/alfrocheiro-grape-variety",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Wine Paradigm (Pocket Wine), fichas de uvas: solo el nivel que da la ficha (cuerpo, acidez), con su enlace",
+    terms: "factOnly",
+    url: "https://wineparadigm.com/zweigelt/",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Grand Cru Wijnen, páginas de uvas de la tienda: solo el dato (acidez del Teroldego, seco y dulce del Gros Manseng), con su enlace",
+    terms: "factOnly",
+    url: "https://www.grandcruwijnen.nl/en/wines/druif/teroldego",
     what: "traits",
   },
   {

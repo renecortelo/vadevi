@@ -81,3 +81,6 @@ Regent
 Q116985 Rondo
 Siegerrebe
 Cabernet Dorsa
+# Named by many registers; added one by one as their cards come out complete
+# (4 Nov 2026).
+Teroldego

@@ -4756,6 +4756,28 @@
           "work": "mapa-vid"
         }
       }
+    ],
+    "teroldego": [
+      {
+        "field": "sweetness",
+        "lang": "it",
+        "value": "dry",
+        "quote": "Dalle uve Teroldego si ottiene un vino di colore rubino carico con riflessi porpora; il profumo è vinoso, e si possono percepire odori di viola e lamponi, ma anche di ciliegie e mandorle; il gusto, secco, è strutturato, poco tannico, sentori di rosa, piuttosto acido, non molto alcolico."
+      },
+      {
+        "field": "tannin",
+        "lang": "it",
+        "value": "low",
+        "quote": "Dalle uve Teroldego si ottiene un vino di colore rubino carico con riflessi porpora; il profumo è vinoso, e si possono percepire odori di viola e lamponi, ma anche di ciliegie e mandorle; il gusto, secco, è strutturato, poco tannico, sentori di rosa, piuttosto acido, non molto alcolico."
+      }
+    ],
+    "ortega": [
+      {
+        "field": "origin",
+        "lang": "fr",
+        "value": "DE",
+        "quote": "L’ortega est un cépage de cuve allemand de raisins blancs."
+      }
     ]
   }
 }

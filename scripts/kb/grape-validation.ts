@@ -241,6 +241,21 @@ const formerNames: Record<string, string[]> = {
  */
 const countryWords: Readonly<Record<string, readonly string[]>> = {
   BG: ["bulgaro", "bulgara", "bulgare", "bulgarisch", "bulgarische", "bulgaars", "bulgarian"],
+  DE: [
+    "aleman",
+    "alemana",
+    "alemany",
+    "alemanya",
+    "allemand",
+    "allemande",
+    "deutsch",
+    "deutsche",
+    "deutschen",
+    "tedesco",
+    "tedesca",
+    "duits",
+    "duitse",
+  ],
   ES: [
     "espanol",
     "espanola",

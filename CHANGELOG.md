@@ -33,6 +33,14 @@ has the reasons.
 
 ### Library
 
+- **Teroldego joins the library**, the first grape added because the
+  registers name it: from Trentino, dry, low in tannin, full-bodied and
+  high in acidity, with red meat and hard cheese. Each fact cites its
+  source — Wikipedia in Italian, Mezzacorona's page on the grape, Grand
+  Cru Wijnen, and three producers' sheets (Villa Corniole, Cavit, Cantine
+  Monfort) for the pairings and its medium alcohol.
+- **Acidity for Zweigelt (high) and Marselan (medium), body for Saperavi
+  (full) and Trebbiano (light)**, from Wine Paradigm's grape profiles.
 - **A region's grapes link to their cards in the register's own language**:
   «Каберне совиньон», «Frankovka», «Rulandské šedé», «Гъмза» and 64 more
   names now open Cabernet Sauvignon, Blaufränkisch, Pinot Gris or Kadarka —

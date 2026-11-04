@@ -24154,7 +24154,7 @@
     "acidity": "high",
     "alcohol": "low",
     "aromas": [],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -24300,6 +24300,14 @@
         "factOnly": true,
         "publisher": "Vinatis",
         "sourceUrl": "https://www.vinatis.com/ugni-blanc-cepage"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/trebbiano/"
       }
     ],
     "id": "trebbiano",
@@ -24849,7 +24857,7 @@
       "raspberry",
       "violet"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -25076,6 +25084,14 @@
         "quote": "Suchá vína se obecně doporučují podávat k teplým pokrmům z telecího nebo vepřového masa",
         "value": "pork",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Saperavi"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/saperavi/"
       }
     ],
     "id": "saperavi",
@@ -32067,7 +32083,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Blaufr%C3%A4nkisch"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "vanilla",
@@ -32403,6 +32419,14 @@
             "wine": "2022 Zweigelt Icewine 200Ml"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/zweigelt/"
       }
     ],
     "id": "zweigelt",
@@ -47939,7 +47963,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Po%C5%A1ip"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": "medium",
     "aromas": [
       "spice",
@@ -48118,6 +48142,14 @@
         "factOnly": true,
         "publisher": "Inter Rhône",
         "sourceUrl": "https://www.vins-rhone.com/en/marselan-grape-variety"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/marselan/"
       }
     ],
     "id": "marselan",
@@ -63196,5 +63228,284 @@
     "tannin": "low",
     "wikidataId": "Q660955",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trepat"
+  },
+  {
+    "acidity": "high",
+    "alcohol": "medium",
+    "aromas": [
+      "spice"
+    ],
+    "body": "high",
+    "color": "red",
+    "evidence": [
+      {
+        "field": "color",
+        "quote": "Teroldego (Italian: ..., is a red Italian grape variety ...",
+        "value": "red"
+      },
+      {
+        "field": "origin",
+        "quote": "is a red Italian grape variety grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy.",
+        "value": "IT"
+      },
+      {
+        "field": "aromas",
+        "quote": "dark colors and its hint of spice",
+        "value": "spice"
+      },
+      {
+        "field": "regions",
+        "quote": "grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy... Roughly 96% is produced in Italy, with most of the rest of worldwide production in the US, Brazil, and Australia. ... US plantings are generally in small vineyards south and east of Sacramento, California. ... in warmer and coastal climates such as McLaren Vale, Margaret River, Alpine Valley and Langhorne Creek.",
+        "value": "IT: Trentino-Alto Adige/Südtirol"
+      },
+      {
+        "field": "regions",
+        "quote": "grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy... Roughly 96% is produced in Italy, with most of the rest of worldwide production in the US, Brazil, and Australia. ... US plantings are generally in small vineyards south and east of Sacramento, California. ... in warmer and coastal climates such as McLaren Vale, Margaret River, Alpine Valley and Langhorne Creek.",
+        "value": "US: Sacramento"
+      },
+      {
+        "field": "regions",
+        "quote": "grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy... Roughly 96% is produced in Italy, with most of the rest of worldwide production in the US, Brazil, and Australia. ... US plantings are generally in small vineyards south and east of Sacramento, California. ... in warmer and coastal climates such as McLaren Vale, Margaret River, Alpine Valley and Langhorne Creek.",
+        "value": "AU: McLaren Vale"
+      },
+      {
+        "field": "regions",
+        "quote": "grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy... Roughly 96% is produced in Italy, with most of the rest of worldwide production in the US, Brazil, and Australia. ... US plantings are generally in small vineyards south and east of Sacramento, California. ... in warmer and coastal climates such as McLaren Vale, Margaret River, Alpine Valley and Langhorne Creek.",
+        "value": "AU: Margaret River"
+      },
+      {
+        "field": "regions",
+        "quote": "grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy... Roughly 96% is produced in Italy, with most of the rest of worldwide production in the US, Brazil, and Australia. ... US plantings are generally in small vineyards south and east of Sacramento, California. ... in warmer and coastal climates such as McLaren Vale, Margaret River, Alpine Valley and Langhorne Creek.",
+        "value": "AU: Alpine Valley"
+      },
+      {
+        "field": "regions",
+        "quote": "grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy... Roughly 96% is produced in Italy, with most of the rest of worldwide production in the US, Brazil, and Australia. ... US plantings are generally in small vineyards south and east of Sacramento, California. ... in warmer and coastal climates such as McLaren Vale, Margaret River, Alpine Valley and Langhorne Creek.",
+        "value": "AU: Langhorne Creek"
+      },
+      {
+        "field": "regions",
+        "quote": "grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy... Roughly 96% is produced in Italy, with most of the rest of worldwide production in the US, Brazil, and Australia. ... US plantings are generally in small vineyards south and east of Sacramento, California. ... in warmer and coastal climates such as McLaren Vale, Margaret River, Alpine Valley and Langhorne Creek.",
+        "value": "BR: Brazil"
+      },
+      {
+        "field": "sweetness",
+        "quote": "Dalle uve Teroldego si ottiene un vino di colore rubino carico con riflessi porpora; il profumo è vinoso, e si possono percepire odori di viola e lamponi, ma anche di ciliegie e mandorle; il gusto, secco, è strutturato, poco tannico, sentori di rosa, piuttosto acido, non molto alcolico.",
+        "value": "dry",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Teroldego"
+      },
+      {
+        "field": "tannin",
+        "quote": "Dalle uve Teroldego si ottiene un vino di colore rubino carico con riflessi porpora; il profumo è vinoso, e si possono percepire odori di viola e lamponi, ma anche di ciliegie e mandorle; il gusto, secco, è strutturato, poco tannico, sentori di rosa, piuttosto acido, non molto alcolico.",
+        "value": "low",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Teroldego"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.villacorniole.com/product-page/magnum-7-pergole-teroldego?lang=en",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Villa Corniole",
+            "sourceUrl": "https://www.villacorniole.com/product-page/magnum-7-pergole-teroldego?lang=en",
+            "wine": "7 Pergole Teroldego"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Luiz Argenta Vinhos Finos",
+            "sourceUrl": "https://www.luizargenta.com.br/produto/vinhos/luiz-argenta-cave/teroldego/51",
+            "wine": "Luiz Argenta Cave Teroldego"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Cavit",
+            "sourceUrl": "https://shoponline.cavit.it/prodotto/il-maso-maso-cervara-teroldego-2021/",
+            "wine": "Maso Cervara Teroldego 2021"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.villacorniole.com/product-page/magnum-7-pergole-teroldego?lang=en",
+        "value": "red meat",
+        "wines": [
+          {
+            "producer": "Villa Corniole",
+            "sourceUrl": "https://www.villacorniole.com/product-page/magnum-7-pergole-teroldego?lang=en",
+            "wine": "7 Pergole Teroldego"
+          },
+          {
+            "producer": "Cavit",
+            "sourceUrl": "https://shoponline.cavit.it/prodotto/il-maso-maso-cervara-teroldego-2021/",
+            "wine": "Maso Cervara Teroldego 2021"
+          },
+          {
+            "producer": "Cantine Monfort",
+            "sourceUrl": "https://cantinemonfort.com/wines/teroldego-rotaliano/?lang=en",
+            "wine": "Teroldego Rotaliano"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.villacorniole.com/product-page/magnum-7-pergole-teroldego?lang=en",
+        "value": "hard cheese",
+        "wines": [
+          {
+            "producer": "Villa Corniole",
+            "sourceUrl": "https://www.villacorniole.com/product-page/magnum-7-pergole-teroldego?lang=en",
+            "wine": "7 Pergole Teroldego"
+          },
+          {
+            "producer": "Cavit",
+            "sourceUrl": "https://shoponline.cavit.it/prodotto/il-maso-maso-cervara-teroldego-2021/",
+            "wine": "Maso Cervara Teroldego 2021"
+          },
+          {
+            "producer": "Cantine Monfort",
+            "sourceUrl": "https://cantinemonfort.com/wines/teroldego-rotaliano/?lang=en",
+            "wine": "Teroldego Rotaliano"
+          }
+        ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Mezzacorona",
+        "sourceUrl": "https://www.mezzacorona.it/en-gb/vines-and-terroir/teroldego/",
+        "place": "Teroldego Rotaliano",
+        "placeId": "it-teroldego-rotaliano"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Grand Cru Wijnen",
+        "sourceUrl": "https://www.grandcruwijnen.nl/en/wines/druif/teroldego"
+      }
+    ],
+    "id": "teroldego",
+    "names": {
+      "en": "Teroldego",
+      "es": "Teroldego",
+      "ca": "Teroldego",
+      "fr": "Teroldego",
+      "de": "Teroldego",
+      "it": "Teroldego",
+      "nl": "Teroldego",
+      "pt": "Teroldego"
+    },
+    "origin": "IT",
+    "pairings": [
+      "red meat",
+      "hard cheese"
+    ],
+    "prominence": 8,
+    "regions": [
+      {
+        "country": "IT",
+        "name": "Trentino-Alto Adige/Südtirol"
+      },
+      {
+        "country": "US",
+        "name": "Sacramento"
+      },
+      {
+        "country": "AU",
+        "name": "McLaren Vale"
+      },
+      {
+        "country": "AU",
+        "name": "Margaret River"
+      },
+      {
+        "country": "AU",
+        "name": "Alpine Valley"
+      },
+      {
+        "country": "AU",
+        "name": "Langhorne Creek"
+      },
+      {
+        "country": "BR",
+        "name": "Brazil"
+      }
+    ],
+    "styles": [],
+    "summaries": {
+      "en": {
+        "text": "Teroldego (Italian: [teˈrɔldeɡo], Venetian: [teˈɾɔldeɡo]) is a red Italian grape variety grown primarily in the northeastern region of Trentino-Alto Adige/Südtirol, Italy.",
+        "url": "https://en.wikipedia.org/wiki/Teroldego"
+      },
+      "es": {
+        "text": "La teroldego es una uva tinta italiana que crece sobre todo en la región de Trentino-Alto Adigio.",
+        "url": "https://es.wikipedia.org/wiki/Teroldego"
+      },
+      "de": {
+        "text": "Teroldego ist eine autochthone Rotweinsorte aus dem Norden Italiens.",
+        "url": "https://de.wikipedia.org/wiki/Teroldego"
+      },
+      "it": {
+        "text": "Il Teroldego è un vitigno a bacca nera coltivato quasi esclusivamente in Trentino, nella zona denominata Piana Rotaliana, cui fanno capo i comuni di Mezzocorona, Mezzolombardo e la frazione di Grumo nel comune di San Michele all'Adige.",
+        "url": "https://it.wikipedia.org/wiki/Teroldego"
+      },
+      "nl": {
+        "text": "Teroldego is een rode inheemse druivensoort die bijna uitsluitend in de Italiaanse provincie Trentino wordt verbouwd, met name in het gebied dat bekendstaat als de Piana Rotaliana. Dit gebied omvat de gemeenten Mezzocorona, Mezzolombardo en de buurtschap Grumo in de gemeente San Michele all'Adige.",
+        "url": "https://nl.wikipedia.org/wiki/Teroldego"
+      },
+      "ca": {
+        "text": "El teroldego és una varietat de raïm negre italiana que es conrea principalment a la regió nord-oriental del Trentino-Tirol del Sud, a Itàlia.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Teroldego"
+      },
+      "fr": {
+        "text": "Le teroldego est un cépage noir italien cultivé principalement dans la région du nord-est du Trentin-Haut-Adige, en Italie.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Teroldego"
+      },
+      "pt": {
+        "text": "A Teroldego é uma casta tinta italiana cultivada sobretudo na região nordeste do Trentino-Alto Ádige, em Itália.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Teroldego"
+      }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
+    "synonyms": [
+      {
+        "name": "Tiroldico",
+        "source": "wikidata"
+      },
+      {
+        "name": "Teroldico",
+        "source": "wikidata"
+      },
+      {
+        "name": "Teroldega",
+        "source": "wikidata"
+      },
+      {
+        "name": "Teroldigo",
+        "source": "wikidata"
+      }
+    ],
+    "tannin": "low",
+    "wikidataId": "Q2405039",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Teroldego"
   }
 ]
