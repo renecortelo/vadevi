@@ -37,7 +37,8 @@ has the reasons.
   data mining are no longer used**, even for the fact alone: the SAQ, the
   Decanter World Wine Awards (Future plc's terms), Vinerra, iDealwine,
   Wine&more, Stanley's Wet Goods, Berry Bros. & Rudd, Les Grappes, Inter
-  Rhône, Drink Michigan and Vino Cum Laude. About a hundred facts go with
+  Rhône, Drink Michigan, Vino Cum Laude, Wine.com and Magyar Bor (bor.hu
+  and Wines of Hungary's Osaka Expo catalogue). About a hundred facts go with
   them — most of the alcohol levels agreed from competition entries,
   Vinerra's profiles — and those fields are gaps again unless another
   source says the same. Shops that only forbid copying their text are still

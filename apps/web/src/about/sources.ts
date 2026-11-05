@@ -88,13 +88,6 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Magyar Bor (Wines of Hungary), grape varieties",
-    terms: "factOnly",
-    url: "https://bor.hu/en/",
-    what: "traits",
-  },
-  {
-    group: "texts",
     name: "Wines of Germany (Deutsches Weininstitut en el Reino Unido), German grape varieties",
     terms: "factOnly",
     url: "https://winesofgermany.co.uk/grape/dornfelder/",
@@ -109,7 +102,7 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Las guías de uvas de los comerciantes: The Wine Society, Weinfreunde, Vinissimus, Wine.com, Mövenpick Wein, Vinatis, BurdiVino, Martel, House of Townend, Martinez Wines, Baur au Lac Vins, Indigene Wines, Enotria&Coe, Italy Abroad y Tannico (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
+    name: "Las guías de uvas de los comerciantes: The Wine Society, Weinfreunde, Vinissimus, Mövenpick Wein, Vinatis, BurdiVino, Martel, House of Townend, Martinez Wines, Baur au Lac Vins, Indigene Wines, Enotria&Coe, Italy Abroad y Tannico (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.weinfreunde.de/c/rebsorte/cinsault/",
     what: "traits",
