@@ -52,8 +52,9 @@ has the reasons.
   Loureira's pairing are gaps again.
 
 - **Winery sheets take over from the removed sources**: Pinot Noir moderate
-  in alcohol from sixty producers, Encruzado, Arneis and Mtsvane moderate,
-  Khikhvi dry, Assyrtiko with seafood and Tempranillo with cheese.
+  in alcohol from sixty producers, Encruzado, Arneis, Mtsvane, Erbaluce,
+  Grechetto and Aligoté moderate, Khikhvi dry, Assyrtiko with seafood and
+  Tempranillo with cheese.
 
 - **Prieto Picudo goes with stews and roasts**, from three producers'
   bottles as Vinissimus and Vinopremier describe them (Dominio Dostares,

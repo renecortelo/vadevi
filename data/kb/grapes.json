@@ -13800,7 +13800,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "herbs",
       "nutty"
@@ -13956,6 +13956,40 @@
         "factOnly": true,
         "publisher": "Vinissimus",
         "sourceUrl": "https://www.vinissimus.com/es/uva/grechetto/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/en/dettaglio/colli-martani-doc-grechetto-grecante-arnaldo-caprai-2021.html",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Arnaldo Caprai",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/colli-martani-doc-grechetto-grecante-arnaldo-caprai-2021.html",
+            "wine": "Colli Martani DOC Grechetto Grecante 2021"
+          },
+          {
+            "abv": 13,
+            "producer": "Antonelli",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/montefalco-doc-grechetto-antonelli-2023.html",
+            "wine": "Montefalco DOC Grechetto 2023"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Roccafiore",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/umbria-bianco-doc-fiordaliso-cantina-roccafiore-2023.html",
+            "wine": "Umbria IGT Grechetto Fiordaliso 2023"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Lungarotti",
+            "sourceUrl": "https://www.lungarotti.it/files/schede/Lungarotti_Grechetto_it.pdf",
+            "wine": "Umbria IGT Grechetto 2025"
+          }
+        ]
       },
       {
         "field": "origin",
@@ -28219,7 +28253,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "apple",
       "lemon",
@@ -28403,6 +28437,64 @@
         "quote": "Obecně je Aligoté živější víno středního těla s vyšší aciditou",
         "value": "medium",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Aligot%C3%A9"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-bourgogne-aligote-olivier-leflaive-2022.html",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12,
+            "producer": "Olivier Leflaive",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-bourgogne-aligote-olivier-leflaive-2022.html",
+            "wine": "Bourgogne Aligoté 2022"
+          },
+          {
+            "abv": 12,
+            "producer": "Joseph Drouhin",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-aligote-joseph-drouhin-2024.html",
+            "wine": "Bourgogne Aligoté 2024"
+          },
+          {
+            "abv": 12,
+            "producer": "Coche-Dury",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-aligote-coche-dury-2021.html",
+            "wine": "Bourgogne Aligoté 2021"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Anne Boisson",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-aligote-domaine-boisson-vadot-2022.html",
+            "wine": "Bourgogne Aligoté 2022"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Château de la Maltroye",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-aligote-chateau-la-maltroye-2022.html",
+            "wine": "Bourgogne Aligoté 2022"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Mongeard-Mugneret",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-aligote-domaine-mongeard-mugneret-2022.html",
+            "wine": "Bourgogne Aligoté 2022"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Emmanuel Rouget",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-aligote-domaine-emmanuel-rouget-2022.html",
+            "wine": "Bourgogne Aligoté 2022"
+          },
+          {
+            "abv": 14,
+            "producer": "Pierrick Bouley",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/bourgogne-aoc-aligote-pierrick-bouley-2022.html",
+            "wine": "Bourgogne Aligoté 2022"
+          }
+        ]
       }
     ],
     "id": "aligote",
