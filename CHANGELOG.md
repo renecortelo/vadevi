@@ -33,6 +33,9 @@ has the reasons.
 
 ### Library
 
+- **Sousão is dry**, from the residual sugar on three producers' sheets:
+  Quinta do Vallado, Menin and Quinta da Pacheca.
+
 - **Plavac Mali goes with grilled meats, lamb and steak**, from Wine&more's
   page on the grape.
 

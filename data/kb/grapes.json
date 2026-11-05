@@ -3449,6 +3449,34 @@
         "factOnly": true,
         "publisher": "Stanley's Wet Goods, grape dictionary",
         "sourceUrl": "https://stanleys.la/pages/grapes/souzao"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.quintadovallado.com/xms/files/Fichas_Tecnicas/10_Vallado_Sousao/10._Vallado_Sousao_Red_2021.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Quinta do Vallado",
+            "sourceUrl": "https://www.quintadovallado.com/xms/files/Fichas_Tecnicas/10_Vallado_Sousao/10._Vallado_Sousao_Red_2021.pdf",
+            "sugar": 0.9,
+            "wine": "Vallado Sousão 2021"
+          },
+          {
+            "producer": "Menin",
+            "sourceUrl": "https://menin.pt/wp-content/uploads/2026/04/ho-sousao-2018-ficha-tecnica-pt.pdf",
+            "sugar": 1.11,
+            "wine": "H.O. Sousão 2018"
+          },
+          {
+            "producer": "Quinta da Pacheca",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0539/1269/9064/files/FT_PACHECA_Sousao_2020_1.pdf",
+            "sugar": 0.6,
+            "wine": "Pacheca Sousão Reserva 2020"
+          }
+        ]
       }
     ],
     "id": "souzao",
@@ -3537,7 +3565,10 @@
         "url": "https://es.wikipedia.org/wiki/Sous%C3%B3n"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Sousão",
