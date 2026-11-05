@@ -45,6 +45,16 @@ has the reasons.
   a clause, Menin and Barbadillo among them. Shops and wineries that only
   forbid copying their text are still cited for the fact alone, with a link.
 
+- **Sites whose robots.txt shuts out Anthropic's crawler are no longer used**:
+  the Georgian Wine Association, Bodegas Ayuso, Oller del Mas, Jordan,
+  Vinogina, Odfjell and Anselmo Mendes, and Kir-Yianni, which now refuses
+  automated access altogether. Chinuri's and Tsolikouri's alcohol and
+  Loureira's pairing are gaps again.
+
+- **Winery sheets take over from the removed sources**: Pinot Noir moderate
+  in alcohol from sixty producers, Encruzado, Arneis and Mtsvane moderate,
+  Khikhvi dry, Assyrtiko with seafood and Tempranillo with cheese.
+
 - **Prieto Picudo goes with stews and roasts**, from three producers'
   bottles as Vinissimus and Vinopremier describe them (Dominio Dostares,
   Tridente, Raíces Ibéricas). Roasts is a new word in the library's

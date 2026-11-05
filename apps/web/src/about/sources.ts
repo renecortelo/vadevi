@@ -74,13 +74,6 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Georgian Wine Association, «Grape varieties»",
-    terms: "factOnly",
-    url: "https://gwa.ge/en/yurdznis-jishebi/",
-    what: "traits",
-  },
-  {
-    group: "texts",
     name: "Wines of Greece (EDOAO), «Varieties»",
     terms: "factOnly",
     url: "https://winesofgreece.org/varieties/",

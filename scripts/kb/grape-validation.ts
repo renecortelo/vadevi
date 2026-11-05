@@ -136,7 +136,13 @@ export function alcoholFigure(quote: string): number | null {
     // so, and never a temperature («servir à 10 °C»).
     /(?:alcool|alcohol|alcol|alkohol|degr[ée]|grad[a-z]*)\D{0,20}?(\d{1,2}(?:[.,]\d{1,2})?)\s?°(?!\s?[CF])/i.exec(
       quote,
-    );
+    ) ??
+    // «ALCOHOL (%VOL.): 13,0», «ALCOHOLIC STRENGTH 13 vol.»: the same, where a
+    // sheet's table puts the unit in the heading or leaves out the sign.
+    /(?:alcool|alcohol|alcol|alkohol)[^\d]{0,20}?%\s?vol\.?\)?:?\s?(\d{1,2}(?:[.,]\d{1,2})?)/i.exec(
+      quote,
+    ) ??
+    /(?:alcool|alcohol|alcol|alkohol)\D{0,20}?(\d{1,2}(?:[.,]\d{1,2})?)\s?vol\b/i.exec(quote);
   return found === null ? null : Number(found[1]!.replace(",", "."));
 }
 

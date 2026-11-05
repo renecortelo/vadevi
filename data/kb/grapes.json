@@ -1016,12 +1016,6 @@
           },
           {
             "abv": 11.5,
-            "producer": "Heretat Oller del Mas",
-            "sourceUrl": "https://ollerdelmas.com/producto/especial-picapoll/",
-            "wine": "Especial Picapoll"
-          },
-          {
-            "abv": 11.5,
             "producer": "Mr. Riggs Wine Co.",
             "sourceUrl": "https://mrriggs.com.au/products/mr-brightside-picpoul-2",
             "wine": "Mr Brightside Picpoul 2"
@@ -2576,31 +2570,6 @@
         "sourceUrl": "https://es.wikipedia.org/wiki/Loureira"
       },
       {
-        "basis": "producers",
-        "factOnly": true,
-        "field": "pairings",
-        "quote": "",
-        "sourceUrl": "https://quintadalixa.pt/product/quinta-da-lixa-loureiro-pack-3un/",
-        "value": "fish",
-        "wines": [
-          {
-            "producer": "Quinta da Lixa",
-            "sourceUrl": "https://quintadalixa.pt/product/quinta-da-lixa-loureiro-pack-3un/",
-            "wine": "Quinta Da Lixa Loureiro Pack 3Un"
-          },
-          {
-            "producer": "Anselmo Mendes Vinhos, Lda.",
-            "sourceUrl": "https://www.anselmomendes.pt/vinhos/tempo-loureiro-2019",
-            "wine": "Tempo Loureiro 2019"
-          },
-          {
-            "producer": "Quinta de Soalheiro",
-            "sourceUrl": "https://soalheiro.com/en/pages/soalheiro-germinar-loureiro-vinhas-velhas",
-            "wine": "Soalheiro Germinar Loureiro Vinhas Velhas"
-          }
-        ]
-      },
-      {
         "field": "body",
         "quote": "",
         "value": "low",
@@ -2629,9 +2598,7 @@
       "nl": "Loureiro"
     },
     "origin": null,
-    "pairings": [
-      "fish"
-    ],
+    "pairings": [],
     "prominence": 10,
     "regions": [
       {
@@ -5933,7 +5900,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "lemon",
       "apple",
@@ -6039,6 +6006,34 @@
             "sourceUrl": "https://sites.google.com/view/quintadabordaleira/qb-1993-branco-2020",
             "sugar": 0.7,
             "wine": "QB 1993 Branco 2020"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0527/9439/2772/files/FT_CAMINHOS_CRUZADOS_RESERVA_ENCRUZADO_2022.pdf",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.5,
+            "producer": "Caminhos Cruzados",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0527/9439/2772/files/FT_CAMINHOS_CRUZADOS_RESERVA_ENCRUZADO_2022.pdf",
+            "wine": "Caminhos Cruzados Reserva Encruzado 2022"
+          },
+          {
+            "abv": 13,
+            "producer": "Cabriz",
+            "sourceUrl": "https://cabriz.pt/wp-content/uploads/2023/03/FT_CABRIZ-RESERVA-BRANCO-2020-750ml.pdf",
+            "wine": "Cabriz Reserva Branco 2020"
+          },
+          {
+            "abv": 13,
+            "producer": "Bacalhôa",
+            "sourceUrl": "https://media.bacalhoa.pt/1/documentos/1088/10557656099435L.pdf",
+            "wine": "Bacalhôa Encruzado 2022"
           }
         ]
       },
@@ -10930,7 +10925,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -11019,14 +11014,6 @@
         "quote": "Вина з цього сорту винограду відрізняються підвищеною кислотністю та фруктовим букетом",
         "value": "fruity",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D1%96"
-      },
-      {
-        "field": "alcohol",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Georgian Wine Association",
-        "sourceUrl": "https://gwa.ge/en/yurdznis-jishebi/"
       }
     ],
     "id": "chinuri",
@@ -11550,12 +11537,29 @@
         "value": "medium"
       },
       {
+        "basis": "producers",
+        "factOnly": true,
         "field": "sweetness",
         "quote": "",
-        "value": "dry-sweet",
-        "factOnly": true,
-        "publisher": "Georgian Wine Association",
-        "sourceUrl": "https://gwa.ge/en/yurdznis-jishebi/"
+        "sourceUrl": "https://www.vazisxidi.com/shop/p/rkatsiteli-2021-sh8th",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "vazisxidi.com",
+            "sourceUrl": "https://www.vazisxidi.com/shop/p/rkatsiteli-2021-sh8th",
+            "wine": "Khikhvi N°1 2023 — VAZIS XIDI WINERY"
+          },
+          {
+            "producer": "babunidzewines.ge",
+            "sourceUrl": "https://www.babunidzewines.ge/product-page/khikhvi-reserve",
+            "wine": "-->"
+          },
+          {
+            "producer": "winerysaba.com",
+            "sourceUrl": "https://winerysaba.com/product/khikhvi-2023/",
+            "wine": "Khikhvi"
+          }
+        ]
       }
     ],
     "id": "khikhvi",
@@ -11638,7 +11642,7 @@
     },
     "sweetness": {
       "from": "dry",
-      "to": "sweet"
+      "to": "dry"
     },
     "synonyms": [],
     "tannin": null,
@@ -15493,7 +15497,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "red fruit",
       "cherry",
@@ -15602,6 +15606,376 @@
         "quote": "con acidez media que a veces es insuficiente.",
         "value": "medium",
         "sourceUrl": "https://web.archive.org/web/20230904004446/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/PINOT_NOIR.pdf"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.daumas-gassac.com/fr/vin/pinot-noir/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.5,
+            "producer": "mas de Daumas Gassac",
+            "sourceUrl": "https://www.daumas-gassac.com/fr/vin/pinot-noir/",
+            "wine": "Pinot Noir 100% Terra Vitis"
+          },
+          {
+            "abv": 13,
+            "producer": "Banfi Vintners",
+            "sourceUrl": "https://banfiusa.com/united-states/rainstorm-pinot-noir/",
+            "wine": "Rainstorm Pinot Noir"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Leopard's Leap",
+            "sourceUrl": "https://www.leopardsleap.co.za/products/2019-culinaria-pinot-noir",
+            "wine": "-->"
+          },
+          {
+            "abv": 13,
+            "producer": "Mission Estate Winery",
+            "sourceUrl": "https://www.missionestate.co.nz/products/estate-pinot-noir",
+            "wine": "Estate Pinot Noir"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Pizzorno",
+            "sourceUrl": "https://pizzornowines.com/product/pizzorno-reserva-pinot-noir/",
+            "wine": "Pizzorno Reserva Pinot Noir"
+          },
+          {
+            "abv": 13.3,
+            "producer": "Viewpointe Estate Winery",
+            "sourceUrl": "https://www.viewpointewinery.com/product/naturally-selected-pinot-noir-vqa/",
+            "wine": "2012 Naturally Selected Pinot Noir"
+          },
+          {
+            "abv": 13,
+            "producer": "Azienda Agricola Tunella",
+            "sourceUrl": "https://www.tunella.it/vini/pinot-nero/",
+            "wine": "Tunella"
+          },
+          {
+            "abv": 13,
+            "producer": "Altùris",
+            "sourceUrl": "https://alturis.it/pinot-nero/",
+            "wine": "Pinot nero"
+          },
+          {
+            "abv": 12,
+            "producer": "Cantina De Pra, Winery & Wine Tour",
+            "sourceUrl": "https://www.cantinadepra.com/en/pinot-nero/",
+            "wine": "Pinot Nero Veneto IGT"
+          },
+          {
+            "abv": 12,
+            "producer": "Bodegas Murviedro",
+            "sourceUrl": "https://murviedro.es/vino/sericis-pinot-noir",
+            "wine": "Sericis Pinot Noir"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Otto Becker",
+            "sourceUrl": "https://weingut-ottobecker.de/products/spatburgunder-rotwein-trocken-rheinhessen",
+            "wine": "Spätburgunder Rotwein trocken"
+          },
+          {
+            "abv": 13,
+            "producer": "Haus Burgblick",
+            "sourceUrl": "https://hausburgblick.de/produkt/blauer-spaetburgunder-trocken/",
+            "wine": "Blauer Spätburgunder Trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Sturm",
+            "sourceUrl": "https://www.sturm-weingut.de/weine/pinot-noir-reserve-fuer-h-2023",
+            "wine": "Pinot Noir RESERVE »für H.«"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Andre",
+            "sourceUrl": "https://andre-wein.de/weinshop/pinot-noir-barrique/",
+            "wine": "Pinot Noir Barrique"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Kögler",
+            "sourceUrl": "https://weingut-koegler.de/products/koegler-rheingau-pinot-noir-2014",
+            "wine": "KOEGLER Rheingau Pinot Noir 2018 *AUSVERKAUFT*"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Härle-Kerth",
+            "sourceUrl": "https://www.weinguthaerle-kerth.de/products/gimmeldinger-kapellenberg-pinot-noir-qualitatswein-trocken",
+            "wine": "Gimmeldinger Kapellenberg Pinot Noir Qualitätswein trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "waldulmer.de",
+            "sourceUrl": "https://www.waldulmer.de/products/spatburgunder-rotwein",
+            "wine": "Spätburgunder Rotwein QbA, trocken"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Marc Josten GmbH",
+            "sourceUrl": "https://www.marcjosten.de/weine/2017er-glanzstueck-pinot-noir/",
+            "wine": "2017er Glanzstück Pinot Noir Qualitätswein trocken 0,75l • Marc Josten +++ Verko"
+          },
+          {
+            "abv": 13,
+            "producer": "Gsellmann Ilse KG",
+            "sourceUrl": "https://www.gsellmann-weine.at/all-wines/pinot-noir-bermasz",
+            "wine": "Pinot Noir — Gsellmann Weine"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Tom Dockner",
+            "sourceUrl": "https://docknertom.at/en/produkt/pinot-noir-kalk-konglomerat-2021/",
+            "wine": "2021 Pinot noir Kalk Konglomerat"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Haimel",
+            "sourceUrl": "https://www.weingut-haimel.at/shop/pinot-noir-oncophora/",
+            "wine": "Pinot Noir Oncophora"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weinhof Anderl",
+            "sourceUrl": "https://anderlwein.at/shop/produkt/blauer-burgunder-2016-2/",
+            "wine": "Blauer Burgunder 2016"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Domaine Etienne Simonis",
+            "sourceUrl": "https://www.vins-simonis.fr/pinot-noir-alsace-les-courbes-bio-s19.html",
+            "wine": "Pinot Noir Alsace Les Courbes Bio"
+          },
+          {
+            "abv": 13.2,
+            "producer": "Weingut Diederik",
+            "sourceUrl": "https://diederik.ch/produkt/dw-pinot-noir-barrique-kuesnacht-aoc-zuerichsee/",
+            "wine": "DW Pinot noir Barrique Küsnacht AOC Zürichsee"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Grillette Domaine de Cressier",
+            "sourceUrl": "https://grillette.ch/produit/pinot-noir-premier-noir-des-roches/",
+            "wine": "Pinot Noir Premier \"Noir des Roches\" 2021"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Caveau des Byards",
+            "sourceUrl": "https://www.caveau-byards.fr/cotes-du-jura/5-cotes-du-jura-pinot-noir-2014-3504842220017.html",
+            "wine": "Côtes du Jura Pinot Noir 2024"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Villa Corniole",
+            "sourceUrl": "https://www.villacorniole.com/product-page/magnum-sagum-pinot-nero?lang=en",
+            "wine": "-->"
+          },
+          {
+            "abv": 13.3,
+            "producer": "Tantalus Vineyards",
+            "sourceUrl": "https://tantalus.ca/products/2022-maija-pinot-noir",
+            "wine": "2022 Maija Pinot Noir"
+          },
+          {
+            "abv": 13,
+            "producer": "monviert.com",
+            "sourceUrl": "https://monviert.com/vino/pinot-nero/",
+            "wine": "Pinot nero"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Weingut Gebrüder Nittnaus",
+            "sourceUrl": "https://www.nittnaus.net/en/weine/pinot-noir-selection/",
+            "wine": "Pinot Noir"
+          },
+          {
+            "abv": 13,
+            "producer": "Vivalti Vinícola",
+            "sourceUrl": "https://www.vinicolavivalti.com.br/pinot-noir",
+            "wine": "Pinot Noir"
+          },
+          {
+            "abv": 13.2,
+            "producer": "Luiz Argenta Vinhos Finos",
+            "sourceUrl": "https://www.luizargenta.com.br/produto/vinhos/la-classico/pinot-noir/15",
+            "wine": "Beverages\" />"
+          },
+          {
+            "abv": 13.7,
+            "producer": "Kyneton Ridge",
+            "sourceUrl": "https://kynetonridge.com.au/product/2024-kyneton-ridge-pinot-noir-reserve/",
+            "wine": "2024 Kyneton Ridge Pinot Noir Reserve"
+          },
+          {
+            "abv": 12,
+            "producer": "Cantine Giacomo Montresor",
+            "sourceUrl": "https://vinimontresor.com/vini/pinot-nero-trevenezie-igt/",
+            "wine": "Vini Montresor Pinot nero Tre Venezie IGT"
+          },
+          {
+            "abv": 13.5,
+            "producer": "mrriggs.com.au",
+            "sourceUrl": "https://mrriggs.com.au/products/valerie-pinot-noir-3",
+            "wine": "Regional Series"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Haslev Vingård",
+            "sourceUrl": "https://www.haslevvingaard.dk/products/140-fritz-wassmer-spatburgunder-m",
+            "wine": "Fritz Wassmer"
+          },
+          {
+            "abv": 13,
+            "producer": "Georgetown Vineyards",
+            "sourceUrl": "https://storka.com/stores/corkscrew-wines-brooklyn/products/domaine-regis-forey-morey-saint-denis-pinot-noir-2017/750ml",
+            "wine": "Domaine Regis Forey Morey-Saint-Denis Pinot Noir 2017"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina La Vis",
+            "sourceUrl": "https://la-vis.com/i-nostri-vini/i-classici/pinot-nero",
+            "wine": "Pinot Nero"
+          },
+          {
+            "abv": 13.6,
+            "producer": "Wollersheim Winery",
+            "sourceUrl": "https://www.wollersheim.com/product/pinot-noir/",
+            "wine": "Pinot Noir"
+          },
+          {
+            "abv": 12.5,
+            "producer": "13th Street Winery",
+            "sourceUrl": "https://13thstreetwinery.com/product/pinot-noir-2024/",
+            "wine": "Pinot Noir 2024"
+          },
+          {
+            "abv": 13,
+            "producer": "Caves René Bentz",
+            "sourceUrl": "https://cavesrenebentz.lu/vins/pinot-noir-rouge",
+            "wine": "Caves René Bentz"
+          },
+          {
+            "abv": 13,
+            "producer": "The A-Frame Wintery on The Blufftop at Rocheport",
+            "sourceUrl": "https://missouriwine.com/product/collectors-series-pinot-noir/",
+            "wine": "Collector's Series: Pinot Noir"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Винарија Лазар",
+            "sourceUrl": "https://lazarwinery.mk/en/shop/product/allure-pinot-noir-075-l",
+            "wine": "Allure Pinot Noir 0.75 l"
+          },
+          {
+            "abv": 12,
+            "producer": "apel-weingut.de",
+            "sourceUrl": "https://www.apel-weingut.de/shop/blauer-spaetburgunder-trocken/",
+            "wine": "Blauer Spätburgunder vom Muschelkalk trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Stauffer",
+            "sourceUrl": "https://www.weingutstauffer.de/produkt/blauer-spaetburgunder/",
+            "wine": "Spätburgunder"
+          },
+          {
+            "abv": 13.5,
+            "producer": "weingut-sohns.de",
+            "sourceUrl": "https://weingut-sohns.de/en/products/2022-hollenberg-assmannshausen-spatburgunder",
+            "wine": "2022 Assmannshausen HÖLLENBERG Spätburgunder Dry"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Puder",
+            "sourceUrl": "https://puder-wein.de/de/wine/2022-spaetburgunder-trocken-qualitaetswein-im-barrique-gereift-zeller-klosterstueck-spaetburgunder-barrique",
+            "wine": "Spätburgunder"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Rings",
+            "sourceUrl": "https://weingut-rings.de/wine/2018-spaetburgunder/",
+            "wine": "2024 Spätburgunder GG"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Steininger",
+            "sourceUrl": "https://www.weingut-steininger.at/online-vinothek/weine/pinot-noir-2003/",
+            "wine": "Pinot Noir 2003"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Thelema",
+            "sourceUrl": "https://www.thelema.co.za/wines/sutherland-pinot-noir-2015",
+            "wine": "Sutherland Pinot Noir 2015"
+          },
+          {
+            "abv": 13,
+            "producer": "Hay shed hill",
+            "sourceUrl": "https://hayshedhill.com.au/products/world-series-pinot-noir-quarterly-delivery",
+            "wine": "World Series Pinot Noir (Quarterly Delivery)"
+          },
+          {
+            "abv": 12.5,
+            "producer": "felixsolisavantis.com",
+            "sourceUrl": "https://felixsolisavantis.com/en/wine/resolution-bay-pinot-noir/",
+            "wine": "Resolution Bay Pinot Noir"
+          },
+          {
+            "abv": 13,
+            "producer": "Schenk",
+            "sourceUrl": "https://www.schenkitalia.it/en/wines/pinot-nero-alto-adige-doc/",
+            "wine": "Pinot Nero Alto Adige DOC"
+          },
+          {
+            "abv": 13,
+            "producer": "Online kaufen",
+            "sourceUrl": "https://shoponline.cavit.it/prodotto/bottega-vinai-pinot-nero-2024/",
+            "wine": "BOTTEGA VINAI PINOT NERO 2024"
+          },
+          {
+            "abv": 13,
+            "producer": "borgoanticovini.com",
+            "sourceUrl": "https://www.borgoanticovini.com/product/28033135/pinot-nero-le-spezie-2021",
+            "wine": "Pinot Noir \"Le Spezie\" Borgo Antico Cellar in Conegliano (Treviso)"
+          },
+          {
+            "abv": 12,
+            "producer": "forchir.it",
+            "sourceUrl": "https://www.forchir.it/vini/pinot-nero/",
+            "wine": "Pinot Nero"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Wente Vineyards",
+            "sourceUrl": "https://wentevineyards.com/product/2024-aly-s-pinot-noir/",
+            "wine": "A R R O Y O S E C O , PINOT NOIR"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Golser Wein GmbH",
+            "sourceUrl": "https://www.golserwein.at/products/pinot-noir-reserve-magnum",
+            "wine": "Pinot Noir Reserve Magnum"
+          },
+          {
+            "abv": 15,
+            "producer": "Domaine des Trois Étoiles",
+            "sourceUrl": "https://trois-etoiles.ch/products/pinot-noir",
+            "wine": "Pinot Noir"
+          },
+          {
+            "abv": 14.5,
+            "producer": "City Winery",
+            "sourceUrl": "https://citywinery.com/products/2020-pinot-noir-reserve-cuvee-griffin",
+            "wine": "Griffin's Lair Vineyard Reserve Pinot Noir Cuvée 2020"
+          }
+        ]
       }
     ],
     "id": "pinot-noir",
@@ -17388,12 +17762,6 @@
             "producer": "Winzergenossenschaft Waldulm / Baden e.G.",
             "sourceUrl": "https://www.waldulmer.de/products/riesling-qba-trocken",
             "wine": "Riesling Qba Trocken"
-          },
-          {
-            "abv": 12,
-            "producer": "Weinhandel Regina Bernhard",
-            "sourceUrl": "https://www.vinogina.at/products/knoll-riesling-loibner-federspiel-wachau-dac-2025",
-            "wine": "Knoll Riesling Loibner Federspiel Wachau Dac 2025"
           },
           {
             "abv": 13.5,
@@ -19536,12 +19904,6 @@
             "wine": "La Garnacha"
           },
           {
-            "producer": "Heretat Oller del Mas",
-            "sourceUrl": "https://ollerdelmas.com/en/producto/especial-garnacha/",
-            "sugar": 0.5,
-            "wine": "Especial Garnacha"
-          },
-          {
             "producer": "Maxwell Wines",
             "sourceUrl": "https://maxwellwines.com.au/products/fresca-grenache-2025",
             "sugar": 2.98,
@@ -19923,14 +20285,14 @@
             "wine": "Murviedro Coleccion Tempranillo"
           },
           {
-            "producer": "Bodegas Ayuso",
-            "sourceUrl": "https://www.bodegasayuso.es/producto/estola-tempranillo-12meses/",
-            "wine": "Estola Tempranillo 12Meses"
-          },
-          {
             "producer": "Cooperativa Santa Catalina",
             "sourceUrl": "https://www.santacatalina.es/en/vino/los-galanes-tempranillo-en/",
             "wine": "Los Galanes Tempranillo En"
+          },
+          {
+            "producer": "The Queensland Wine Centre",
+            "sourceUrl": "https://cedarcreekestatewinery.com.au/product/golden-grove-joven-tempranillo/",
+            "wine": "Golden Grove"
           }
         ]
       },
@@ -20286,11 +20648,6 @@
             "producer": "Diemersfontein",
             "sourceUrl": "https://www.diemersfontein.co.za/product/thokozani-chenin-blanc/",
             "wine": "Thokozani Chenin Blanc"
-          },
-          {
-            "producer": "Jordan",
-            "sourceUrl": "https://www.jordanwines.com/product/jordan-inspector-peringuey-chenin-blanc-2025/",
-            "wine": "Jordan Inspector Peringuey Chenin Blanc 2025"
           },
           {
             "producer": "Stellenbosch Hills Winery",
@@ -23076,11 +23433,6 @@
             "producer": "Cave les Coteaux de Saint-Christol",
             "sourceUrl": "https://www.cave-saint-christol.com/produit/le-carignan-carton-de-6-bouteilles/",
             "wine": "Le Carignan Carton De 6 Bouteilles"
-          },
-          {
-            "producer": "Viña Odfjell",
-            "sourceUrl": "https://odfjellvineyards.cl/en/producto/orzada-carignan-2021/",
-            "wine": "Orzada Carignan 2021"
           },
           {
             "producer": "De Muller",
@@ -34294,15 +34646,9 @@
         "factOnly": true,
         "field": "alcohol",
         "quote": "",
-        "sourceUrl": "https://kiryianni.gr/wines/tarsanas/",
+        "sourceUrl": "https://boutari.gr/en/wine/assyrtiko/",
         "value": "medium",
         "wines": [
-          {
-            "abv": 14,
-            "producer": "Κτήμα Κυρ-Γιάννη Γιαννακοχώρι",
-            "sourceUrl": "https://kiryianni.gr/wines/tarsanas/",
-            "wine": "Tarsanas"
-          },
           {
             "abv": 12.5,
             "producer": "Boutari",
@@ -34334,23 +34680,23 @@
         "factOnly": true,
         "field": "pairings",
         "quote": "",
-        "sourceUrl": "https://moraitiswines.gr/en/2020/12/15/moraitis-estate-assyrtiko/",
-        "value": "fish",
+        "sourceUrl": "https://paterianakis.gr/en/melissokipos-assyrtiko/",
+        "value": "seafood",
         "wines": [
+          {
+            "producer": "Domaine Paterianakis",
+            "sourceUrl": "https://paterianakis.gr/en/melissokipos-assyrtiko/",
+            "wine": "ΜΕΛΙΣΣΟΚΗΠΟΣ ΑΣΥΡΤΙΚΟ"
+          },
           {
             "producer": "Οινοποιείο Μωραΐτη",
             "sourceUrl": "https://moraitiswines.gr/en/2020/12/15/moraitis-estate-assyrtiko/",
-            "wine": "Moraitis Estate Assyrtiko"
+            "wine": "MORAITIS ESTATE ASSYRTIKO"
           },
           {
-            "producer": "Domaine Florian",
-            "sourceUrl": "https://domaineflorian.com/de/wines/assyrtiko-fume/2022",
-            "wine": "2022"
-          },
-          {
-            "producer": "Κτήμα Κυρ-Γιάννη Γιαννακοχώρι",
-            "sourceUrl": "https://kiryianni.gr/wines/tarsanas/",
-            "wine": "Tarsanas"
+            "producer": "Cavino",
+            "sourceUrl": "https://cavino.gr/en/product/historoots-assyrtiko/",
+            "wine": "HISTOROOTS ASSYRTIKO"
           }
         ]
       }
@@ -34368,7 +34714,7 @@
     },
     "origin": "GR",
     "pairings": [
-      "fish"
+      "seafood"
     ],
     "prominence": 16,
     "regions": [],
@@ -35363,7 +35709,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "almond",
       "apricot",
@@ -35550,6 +35896,46 @@
         "quote": "Гарно поєднується з рибними та овочевими стравами",
         "value": "vegetables",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D0%BD%D0%B5%D1%97%D1%81"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.isnardiernesto.com/prodotto/roero-arneis-docg/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Isnardi Ernesto",
+            "sourceUrl": "https://www.isnardiernesto.com/prodotto/roero-arneis-docg/",
+            "wine": "Roero Arneis D.O.C.G"
+          },
+          {
+            "abv": 13,
+            "producer": "Hay Shed Hill",
+            "sourceUrl": "https://hayshedhill.com.au/products/world-series-arneis-quarterly-delivery",
+            "wine": "World Series Arneis (Quarterly Delivery)"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Giacomo Fenocchio",
+            "sourceUrl": "https://www.vino.com/dettaglio/roero-arneis-docg-giacomo-fenocchio-2024.html",
+            "wine": "Roero Arneis DOCG 2024"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Sabaudo",
+            "sourceUrl": "https://www.vino.com/dettaglio/roero-arneis-docg-sabaudo-2025_v.html",
+            "wine": "Roero Arneis DOCG 2025"
+          },
+          {
+            "abv": 14,
+            "producer": "Marchesi di Barolo",
+            "sourceUrl": "https://www.vino.com/dettaglio/roero-docg-roero-arneis-marchesi-di-barolo-2024.html?vpro=1",
+            "wine": "Roero Arneis DOCG 2024"
+          }
+        ]
       }
     ],
     "id": "arneis",
@@ -48661,7 +49047,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "high",
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -48789,12 +49175,38 @@
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
       },
       {
+        "basis": "producers-abv",
+        "factOnly": true,
         "field": "alcohol",
         "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Georgian Wine Association",
-        "sourceUrl": "https://gwa.ge/yurdznisjishebi_/mtsvane-kakhuri/"
+        "sourceUrl": "https://giuaani.ge/product/mtsvane-qvevri-2014/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Giuaani",
+            "sourceUrl": "https://giuaani.ge/product/mtsvane-qvevri-2014/",
+            "wine": "Mtsvane Qvevri 2014"
+          },
+          {
+            "abv": 12,
+            "producer": "iberieli.com",
+            "sourceUrl": "https://www.iberieli.com/wines/mtsvane",
+            "wine": "Mtsvane"
+          },
+          {
+            "abv": 12.5,
+            "producer": "winerybediani.ge",
+            "sourceUrl": "https://winerybediani.ge/en/products/mtsvane-2/",
+            "wine": "MTSVANE QVEVRI"
+          },
+          {
+            "abv": 15.5,
+            "producer": "sesikeli.com",
+            "sourceUrl": "https://www.sesikeli.com/wines/mtsvane-2022/",
+            "wine": "Mtsvane 2022"
+          }
+        ]
       }
     ],
     "id": "mtsvane",
@@ -54121,7 +54533,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "high",
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -54197,14 +54609,6 @@
         "quote": "Tsolikouri har hög syra och gjord enligt europeisk metod producerar den ett aromatiskt lätt syrligt vin.",
         "value": "high",
         "sourceUrl": "https://sv.wikipedia.org/wiki/Tsolikouri"
-      },
-      {
-        "field": "alcohol",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Georgian Wine Association",
-        "sourceUrl": "https://gwa.ge/yurdznisjishebi_/tsolikouri/"
       }
     ],
     "id": "tsolikouri",
