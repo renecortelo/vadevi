@@ -1451,8 +1451,11 @@
   "pairing": {
     "variants": {
       "appetizers": "appetizers",
+      "arrosti": "roasts",
+      "asados": "roasts",
       "asian cuisine": "asian cuisine",
       "asparagus": "asparagus",
+      "braten": "roasts",
       "buffalo mozzarella": "buffalo mozzarella",
       "cassis": "blackcurrant",
       "cheese": "cheese",
@@ -1490,6 +1493,14 @@
       "raclette": "raclette",
       "red meats": "red meat",
       "risotto": "risotto",
+      "roast": "roasts",
+      "roast meat": "roasts",
+      "roast meats": "roasts",
+      "roasted dishes": "roasts",
+      "roasted meat": "roasts",
+      "roasted meats": "roasts",
+      "roasts": "roasts",
+      "rôtis": "roasts",
       "salmon": "salmon",
       "sausages": "sausages",
       "seafood": "seafood",
@@ -1892,6 +1903,16 @@
         "it": "risotto",
         "nl": "risotto",
         "pt-PT": "risoto"
+      },
+      "roasts": {
+        "en": "roasts",
+        "es": "asados",
+        "ca": "rostits",
+        "fr": "rôtis",
+        "de": "Braten",
+        "it": "arrosti",
+        "nl": "gebraad",
+        "pt-PT": "assados"
       },
       "salmon": {
         "en": "salmon",
