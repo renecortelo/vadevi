@@ -33,9 +33,15 @@ has the reasons.
 
 ### Library
 
-- **The SAQ is no longer a source**: its legal notice forbids any
-  commercial use of the data on its site, not only its text. Savagnin's
-  high acidity came from it alone and is a gap again.
+- **Sources whose terms forbid commercial use of their data, robots or
+  data mining are no longer used**, even for the fact alone: the SAQ, the
+  Decanter World Wine Awards (Future plc's terms), Vinerra, iDealwine,
+  Wine&more, Stanley's Wet Goods, Berry Bros. & Rudd, Les Grappes, Inter
+  Rhône, Drink Michigan and Vino Cum Laude. About a hundred facts go with
+  them — most of the alcohol levels agreed from competition entries,
+  Vinerra's profiles — and those fields are gaps again unless another
+  source says the same. Shops that only forbid copying their text are still
+  cited for the fact alone, with a link.
 
 - **Prieto Picudo goes with stews and roasts**, from three producers'
   bottles as Vinissimus and Vinopremier describe them (Dominio Dostares,

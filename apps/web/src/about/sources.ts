@@ -88,13 +88,6 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Inter Rhône, grape varieties",
-    terms: "factOnly",
-    url: "https://www.vins-rhone.com/en/",
-    what: "traits",
-  },
-  {
-    group: "texts",
     name: "Magyar Bor (Wines of Hungary), grape varieties",
     terms: "factOnly",
     url: "https://bor.hu/en/",
@@ -116,9 +109,9 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Las guías de uvas de los comerciantes: The Wine Society, Berry Bros. & Rudd, Weinfreunde, Vinissimus, iDealwine, Wine.com, Mövenpick Wein, Vinatis, BurdiVino, Martel, House of Townend, Martinez Wines, Baur au Lac Vins, Indigene Wines, Enotria&Coe, Italy Abroad, Stanley's Wet Goods y Tannico (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
+    name: "Las guías de uvas de los comerciantes: The Wine Society, Weinfreunde, Vinissimus, Wine.com, Mövenpick Wein, Vinatis, BurdiVino, Martel, House of Townend, Martinez Wines, Baur au Lac Vins, Indigene Wines, Enotria&Coe, Italy Abroad y Tannico (la página de la tienda sobre la uva misma, no la ficha de un vino; cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
-    url: "https://www.bbr.com/grape-hz-hondarribi-zuri",
+    url: "https://www.weinfreunde.de/c/rebsorte/cinsault/",
     what: "traits",
   },
   {
@@ -172,23 +165,9 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Wine&more, páginas de uvas de la tienda: solo el dato (maridajes del Plavac Mali), con su enlace",
-    terms: "factOnly",
-    url: "https://www.wineandmore.com/food-pairing-with-plavac-mali/",
-    what: "traits",
-  },
-  {
-    group: "texts",
     name: "Grand Cru Wijnen, páginas de uvas de la tienda: solo el dato (acidez del Teroldego, seco y dulce del Gros Manseng), con su enlace",
     terms: "factOnly",
     url: "https://www.grandcruwijnen.nl/en/wines/druif/teroldego",
-    what: "traits",
-  },
-  {
-    group: "texts",
-    name: "Vinerra, perfiles de uvas y de vinos de su escuela (cada uno enlazado en la ficha de la uva)",
-    terms: "factOnly",
-    url: "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile",
     what: "traits",
   },
   {
@@ -224,13 +203,6 @@ export const sources: Source[] = [
     name: "Las fichas técnicas de las propias bodegas, por ejemplo Feudi del Pisciotto (un dato de una uva solo cuando tres bodegas o más dicen lo mismo de su vino de esa uva; el alcohol, de la cifra de cada ficha pasada a nivel con la escala del WSET; seco o dulce, del azúcar residual de cada ficha con los términos de etiquetado de la UE; cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.castellare.it/wp-content/uploads/2025/04/Feudi-del-Pisciotto_Grillo_Colori-di-Sicilia_ita.pdf",
-    what: "traits",
-  },
-  {
-    group: "texts",
-    name: "Decanter World Wine Awards, resultados: solo las cifras que cada bodega declaró al inscribir su vino (grado alcohólico, uva al 100 %), nunca la nota ni la medalla del jurado; un vino por bodega y un dato de la uva solo cuando tres bodegas o más y dos tercios de ellas coinciden",
-    terms: "factOnly",
-    url: "https://awards.decanter.com/DWWA/",
     what: "traits",
   },
   {

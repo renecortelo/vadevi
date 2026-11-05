@@ -1861,30 +1861,6 @@
             "wine": "2023 Lakeshore Semillon"
           }
         ]
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "seafood",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/semillon-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "shellfish",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/semillon-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "fish",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/semillon-an-in-depth-wine-profile"
       }
     ],
     "id": "semillon",
@@ -1899,11 +1875,7 @@
       "pt": "Sémillon"
     },
     "origin": "FR",
-    "pairings": [
-      "seafood",
-      "shellfish",
-      "fish"
-    ],
+    "pairings": [],
     "prominence": 26,
     "regions": [],
     "styles": [
@@ -1989,7 +1961,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "low",
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -2140,14 +2112,6 @@
         "quote": "Сік має досить високу кислотність.",
         "value": "high",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B5%D1%80%D0%B0"
-      },
-      {
-        "field": "alcohol",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/glera-an-in-depth-wine-profile"
       }
     ],
     "id": "glera",
@@ -3325,7 +3289,7 @@
     "aromas": [
       "raisin"
     ],
-    "body": "low",
+    "body": null,
     "color": "red",
     "evidence": [
       {
@@ -3441,14 +3405,6 @@
         "quote": "Grado alcohólico medio, color picota",
         "value": "medium",
         "sourceUrl": "https://web.archive.org/web/20250429182922/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/SOUSON.pdf"
-      },
-      {
-        "field": "body",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/souzao"
       },
       {
         "basis": "producers-sugar",
@@ -4800,7 +4756,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "high",
+    "alcohol": null,
     "aromas": [
       "blackberry",
       "herbs",
@@ -4876,88 +4832,6 @@
         "quote": "Такі вина характеризуються смаком та ароматом червоних фруктів, відчутними але м'якими танінами та порівняно високою кислотністю",
         "value": "high",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D1%96%D0%BD%D0%BA%D0%B0%D0%B4%D0%B5%D0%B9%D1%80%D0%B0"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/545307",
-        "value": "high",
-        "wines": [
-          {
-            "abv": 14.5,
-            "producer": "Adega Cooperativa do Cartaxo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/545307",
-            "wine": "Bridão Trincadeira 2013"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Herdade São Miguel",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/553331",
-            "wine": "Trincadeira 2014"
-          },
-          {
-            "abv": 14,
-            "producer": "Esporão",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/571582",
-            "wine": "Trincadeira 2017"
-          },
-          {
-            "abv": 14,
-            "producer": "Cortes de Cima",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/681203",
-            "wine": "Trincadeira 2004"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Casa Ermelinda Freitas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/625604",
-            "wine": "Trincadeira 2010"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Casa Cadaval",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/625834",
-            "wine": "Trincadeira Vinhas Velhas 2009"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Adega Mayor",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/640903",
-            "wine": "Reserva do Comendador 2009"
-          },
-          {
-            "abv": 13.5,
-            "producer": "St.Isidro de Pegões",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/661501",
-            "wine": "Trincadeira 2012"
-          },
-          {
-            "abv": 16,
-            "producer": "Vidigueira",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/697950",
-            "wine": "Trincadeira 2019"
-          },
-          {
-            "abv": 14,
-            "producer": "Companhia das Quintas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/699380",
-            "wine": "Portas da Herdade Trincadeira 2019"
-          },
-          {
-            "abv": 14,
-            "producer": "Herdade Da Lisboa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/753473",
-            "wine": "Paço Dos Infantes Trincadeira 2021"
-          },
-          {
-            "abv": 14,
-            "producer": "Barroca Da Malhada",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/785843",
-            "wine": "Trincadeira 2024"
-          }
-        ]
       },
       {
         "basis": "producers-sugar",
@@ -6054,7 +5928,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "lemon",
       "apple",
@@ -6134,160 +6008,6 @@
         "factOnly": true,
         "publisher": "Quinta da Alameda",
         "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/casta-encruzado"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/535618",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13,
-            "producer": "Caminhos Cruzados",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/535618",
-            "wine": "Titular Encruzado 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Quinta de Lemos",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536366",
-            "wine": "Dona Paulette 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Carlos Lucas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/539896",
-            "wine": "Ribeiro Santo Encruzado 2016"
-          },
-          {
-            "abv": 14,
-            "producer": "Morgado de Silgueiros",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536831",
-            "wine": "Encruzado 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Casa Américo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542817",
-            "wine": "Encruzado 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Casa da Passarella",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/543038",
-            "wine": "O Oenólogo Encruzado 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "António Lopes Ribeiro",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/543041",
-            "wine": "Casa de Mouraz Encruzado 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Soito Wines",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/541426",
-            "wine": "Reserva Encruzado 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Madre de Água",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593155",
-            "wine": "Terras Encruzado 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Quinta dos Carvalhais",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591731",
-            "wine": "Encruzado 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Parras Vinhos",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/559841",
-            "wine": "Evidência 2015"
-          },
-          {
-            "abv": 14,
-            "producer": "Quinta dos Roques",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/555196",
-            "wine": "Encruzado 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Cabriz",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/581930",
-            "wine": "Reserva 2018"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Sociedade Agrícola Boas Quintas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/580592",
-            "wine": "Fonte do Ouro Reserva Especial Encruzado 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Caves Aliança",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/616066",
-            "wine": "Quinta da Garrida Reserva 2010"
-          },
-          {
-            "abv": 12,
-            "producer": "Caves Velhas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/616044",
-            "wine": "Catedral 2010"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Casa de Mouraz",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/625820",
-            "wine": "Encruzado 2010"
-          },
-          {
-            "abv": 13,
-            "producer": "Quinta da Gandara",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/606366",
-            "wine": "Encruzado 2010"
-          },
-          {
-            "abv": 12.6,
-            "producer": "Enoport",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/668319",
-            "wine": "Catedral Branco 2009"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Quinta do Cerrado",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/668341",
-            "wine": "Encruzado 2009"
-          },
-          {
-            "abv": 13,
-            "producer": "Fontes da Cunha",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/640029",
-            "wine": "Munda 2011"
-          },
-          {
-            "abv": 13,
-            "producer": "Terra Magna",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/697908",
-            "wine": "Encruzado 2019"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Quinta dos Monteirinhos",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/715350",
-            "wine": "Avô António Reserva Encruzado 2019"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Taboadella",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/732952",
-            "wine": "Reserva Encruzado 2021"
-          }
-        ]
       },
       {
         "basis": "producers-sugar",
@@ -6406,7 +6126,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "spice",
       "exotic fruit"
@@ -6513,100 +6233,6 @@
         "factOnly": true,
         "publisher": "Quinta da Alameda",
         "sourceUrl": "https://www.quintadaalameda.com/vinho-e-saber/infografia-o-perfil-das-castas-brancas-do-dao"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/563582",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13,
-            "producer": "Casal Branco",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/563582",
-            "wine": "Falcoaria Fernão Pires 2015"
-          },
-          {
-            "abv": 14,
-            "producer": "Quinta da Boa Esperança",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/525354",
-            "wine": "Fernão Pires 2015"
-          },
-          {
-            "abv": 12,
-            "producer": "Rainha do Mar",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542116",
-            "wine": "Fernão Pires 2017"
-          },
-          {
-            "abv": 12,
-            "producer": "Sto.isidro de Pegoes",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/546295",
-            "wine": "Contemporal 2015"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Portinho do Covo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/596814",
-            "wine": "Fernão Pires 2018"
-          },
-          {
-            "abv": 13,
-            "producer": "Quinta de Paços",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/673644",
-            "wine": "Fernao Pires 2010"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Herdade da Comporta",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/622528",
-            "wine": "Chão das Rolas 2010"
-          },
-          {
-            "abv": 13,
-            "producer": "Bridão",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/649260",
-            "wine": "Clássico 2014"
-          },
-          {
-            "abv": 13,
-            "producer": "Santos Lima",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/650181",
-            "wine": "Vale Perdido 2014"
-          },
-          {
-            "abv": 13,
-            "producer": "Quinta da Ribeirinha",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/626777",
-            "wine": "Vale de Lobos 2013"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Encosta Do Sobral",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/709706",
-            "wine": "Grande Reserva Vinhas Velhas Fernão Pires 2020"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Companhia Das Lezírias",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/738641",
-            "wine": "1836 Grande Reserva 2021"
-          },
-          {
-            "abv": 13,
-            "producer": "Falua",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/738919",
-            "wine": "Reserva Unoaked Branco 2020"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Ode",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/775428",
-            "wine": "Fernão Pires 2023"
-          }
-        ]
       },
       {
         "basis": "producers-sugar",
@@ -8099,7 +7725,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "apple"
     ],
@@ -8230,46 +7856,6 @@
         "factOnly": true,
         "publisher": "BurdiVino",
         "sourceUrl": "https://www.burdivino.fr/cepage-mauzac/"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/541348",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13,
-            "producer": "Château Rives-Blanques",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/541348",
-            "wine": "Occitania Mauzac 2016"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Domaine Sarrabelle",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/619608",
-            "wine": "Mauzac Sarrabelle 2009"
-          },
-          {
-            "abv": 12.2,
-            "producer": "Château Lecusse",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/621688",
-            "wine": "Grande Cuvée Prestige Mauzac 2011"
-          },
-          {
-            "abv": 13,
-            "producer": "Clos Rocailleux",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/641674",
-            "wine": "Vieilles Vignes 2012"
-          },
-          {
-            "abv": 13,
-            "producer": "Domaine Vayssette",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/784394",
-            "wine": "Cuvée Clémence 2024"
-          }
-        ]
       },
       {
         "basis": "producers",
@@ -8439,7 +8025,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mauzac_(grape)"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "red fruit",
@@ -8546,14 +8132,6 @@
         "sourceUrl": "https://en.wikipedia.org/wiki/Montefalco_Sagrantino",
         "place": "Montefalco Sagrantino",
         "placeId": "it-montefalco-sagrantino"
-      },
-      {
-        "field": "acidity",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/sagrantino-discovering-the-bold-flavors-of-umbrias-finest-wine"
       }
     ],
     "id": "sagrantino",
@@ -8647,12 +8225,7 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [
-      "strawberry",
-      "cherry",
-      "raspberry",
-      "herbs"
-    ],
+    "aromas": [],
     "body": null,
     "color": "red",
     "evidence": [
@@ -8761,46 +8334,6 @@
         "quote": "Its total lack of character and low acid render it unfit for any other purpose than blending where a neutral ingredient is desired.",
         "value": "low",
         "sourceUrl": "https://archive.org/details/reportofviticult8793cali"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "strawberry",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "cherry",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "raspberry",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "herbs",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
-      },
-      {
-        "field": "tannin",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/mission"
       }
     ],
     "id": "listan-prieto",
@@ -8932,7 +8465,7 @@
         "source": "article"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q60790190",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Listan_Prieto"
   },
@@ -8947,7 +8480,7 @@
       "pear",
       "exotic fruit"
     ],
-    "body": "low",
+    "body": null,
     "color": "white",
     "evidence": [
       {
@@ -9054,30 +8587,6 @@
         "field": "alcohol",
         "quote": "with notable acidity and a medium to moderate alcohol content",
         "value": "medium"
-      },
-      {
-        "field": "body",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "Berry Bros. & Rudd",
-        "sourceUrl": "https://www.bbr.com/grape-hz-hondarribi-zuri"
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry",
-        "factOnly": true,
-        "publisher": "Berry Bros. & Rudd",
-        "sourceUrl": "https://www.bbr.com/grape-hz-hondarribi-zuri"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "seafood",
-        "factOnly": true,
-        "publisher": "Berry Bros. & Rudd",
-        "sourceUrl": "https://www.bbr.com/grape-hz-hondarribi-zuri"
       }
     ],
     "id": "hondarrabi-zuri",
@@ -9092,9 +8601,7 @@
       "nl": "Hondarrabi zuri"
     },
     "origin": "ES",
-    "pairings": [
-      "seafood"
-    ],
+    "pairings": [],
     "prominence": 6,
     "regions": [
       {
@@ -9157,10 +8664,7 @@
         "url": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "dry"
-    },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Hondarribi Zuri",
@@ -11175,38 +10679,6 @@
         "sourceUrl": "https://www.vinissimus.com/es/uva/mencia/"
       },
       {
-        "field": "pairings",
-        "quote": "",
-        "value": "lamb",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "pork",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "duck",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "game",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mencia-an-in-depth-wine-profile"
-      },
-      {
         "basis": "producers-sugar",
         "factOnly": true,
         "field": "sweetness",
@@ -11277,12 +10749,7 @@
       "pt": "Mencia"
     },
     "origin": "PT",
-    "pairings": [
-      "lamb",
-      "pork",
-      "duck",
-      "game"
-    ],
+    "pairings": [],
     "prominence": 13,
     "regions": [
       {
@@ -11414,7 +10881,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "dried apple",
       "walnut",
@@ -11468,166 +10935,6 @@
         "quote": "З кісі виробляється біле сухе або бурштинове вино",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D1%81%D1%96_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/563132",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13.4,
-            "producer": "Vaziani Company",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/563132",
-            "wine": "Makashvili Wine Cellar Kisi 2015"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Maranuli",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591548",
-            "wine": "Qvevri Kisi 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Kindzmarauli Marani",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/535827",
-            "wine": "Terra Initia Kisi 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Bolero & Company",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/534696",
-            "wine": "Daisi Kisi 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Makashvili Wine Cellar",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/535100",
-            "wine": "Kisi 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Teliani Valley",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/537533",
-            "wine": "Glekhuri Kisi Qvevri 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Traditsiuli",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/576596",
-            "wine": "Gran Nino Kisi 2019"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Binekhi Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/577977",
-            "wine": "Kisi Qvevri 2015"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Tsereteli",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/578103",
-            "wine": "Kisi Qvevri 2018"
-          },
-          {
-            "abv": 13,
-            "producer": "Koncho & Co",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/580189",
-            "wine": "Qvevri Kisi 2017"
-          },
-          {
-            "abv": 12,
-            "producer": "Dugladze",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/580274",
-            "wine": "Kisi Qvevri 2018"
-          },
-          {
-            "abv": 13,
-            "producer": "Tbilvino",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/584385",
-            "wine": "Special Reserve Kisi 2019"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Corporation Georgian Wine",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/572632",
-            "wine": "Kisi 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Barbale",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/600398",
-            "wine": "Kisi Qvevri 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Shalvino",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/596789",
-            "wine": "Shalva Gvaramadze Kisi 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Vinoterra",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/641652",
-            "wine": "Kisi 2012"
-          },
-          {
-            "abv": 12,
-            "producer": "Kakhetian Traditional Winemaking",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/701101",
-            "wine": "Guramishvili's Marani Kisi 2020"
-          },
-          {
-            "abv": 13,
-            "producer": "Château Buera",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/718155",
-            "wine": "Qvevri Reserve Kisi 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Tiflisi Marani",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/731157",
-            "wine": "Kisi 2019"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Badagoni",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/733840",
-            "wine": "Qvevri Kisi 2020"
-          },
-          {
-            "abv": 12.45,
-            "producer": "Wine Thieves",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/742081",
-            "wine": "Kisi 2021"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Alexnadrov Wine Collection",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/746468",
-            "wine": "Qvevri Kisi 2022"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Guremani",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/756129",
-            "wine": "Qvevri Kisi 2022"
-          },
-          {
-            "abv": 12,
-            "producer": "Marani Kalo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/753759",
-            "wine": "Kisi 2022"
-          },
-          {
-            "abv": 12,
-            "producer": "Twins Wine House",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/758413",
-            "wine": "Tavankara 2023"
-          }
-        ]
       }
     ],
     "id": "kisi",
@@ -12661,7 +11968,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [],
     "body": "high",
     "color": "white",
@@ -12700,46 +12007,6 @@
         "field": "regions",
         "quote": "Культивируется в Картли и Имерети.",
         "value": "GE: Imereti"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/548529",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 12.5,
-            "producer": "Château Mukhrani",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/548529",
-            "wine": "Reserve du Prince 2013"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Batono",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/596504",
-            "wine": "De'Wino Goruli Mtsvane 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Villa Mosavali",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/579412",
-            "wine": "Qvevri Goruli Mtsvane 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Nanatri",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/746163",
-            "wine": "Goruli Mtsvane 2022"
-          },
-          {
-            "abv": 12.25,
-            "producer": "Uplistsikhe Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/792471",
-            "wine": "Qvevri Goruli Mtsvane 2022"
-          }
-        ]
       }
     ],
     "id": "goruli-mtsvane",
@@ -13412,30 +12679,6 @@
         "field": "sweetness",
         "quote": "Traditionally, most commercially produced Concord wines are sweet, but dry versions are possible",
         "value": "dry-sweet"
-      },
-      {
-        "field": "tannin",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/concord-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "grilled meats",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/concord-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "sausages",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/concord-an-in-depth-wine-profile"
       }
     ],
     "id": "concord",
@@ -13450,10 +12693,7 @@
       "it": "Concord"
     },
     "origin": "US",
-    "pairings": [
-      "grilled meats",
-      "sausages"
-    ],
+    "pairings": [],
     "prominence": 16,
     "regions": [
       {
@@ -13523,7 +12763,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q393047",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Concord_grape"
   },
@@ -13598,46 +12838,6 @@
         "field": "regions",
         "quote": "They are most commonly found in the United States in New York, Pennsylvania, New Jersey, Michigan, Washington, and Ohio, and are also grown in Ontario in Canada ... principally in the states of São Paulo, where the variety first occurred in 1933, and Rio Grande do Sul",
         "value": "BR: Rio Grande do Sul"
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "medium-sweet",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "soft cheese",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "desserts",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "chicken",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "seafood",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/understanding-the-niagara-grape-varietal-flavor-and-characteristics"
       }
     ],
     "id": "niagara",
@@ -13652,12 +12852,7 @@
       "it": "Niagara"
     },
     "origin": "US",
-    "pairings": [
-      "soft cheese",
-      "desserts",
-      "chicken",
-      "seafood"
-    ],
+    "pairings": [],
     "prominence": 7,
     "regions": [
       {
@@ -13725,10 +12920,7 @@
         "url": "https://en.wikipedia.org/wiki/Niagara_(grape)"
       }
     },
-    "sweetness": {
-      "from": "medium",
-      "to": "sweet"
-    },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q392699",
@@ -14688,7 +13880,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "herbs",
       "nutty"
@@ -14844,148 +14036,6 @@
         "factOnly": true,
         "publisher": "Vinissimus",
         "sourceUrl": "https://www.vinissimus.com/es/uva/grechetto/"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536078",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 14,
-            "producer": "Chiorri",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536078",
-            "wine": "Titus Grechetto 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Fongoli",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/544231",
-            "wine": "La Palmetta Grechetto 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Benedetti & Grigi",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/540609",
-            "wine": "Adone Grechetto 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Duca Della Corgna",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592087",
-            "wine": "Nuricante Grechetto 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Cantina Tudernum",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/546614",
-            "wine": "Grechetto Di Todi 2015"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Fratelli Martini Secondo Luigi",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/554284",
-            "wine": "Tesco Finest* Grechetto 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Terre De La Custodia",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/552093",
-            "wine": "Grechetto Dei Colli Martani 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Cantina Goccia",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/556737",
-            "wine": "D'oro 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Goretti",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/563479",
-            "wine": "Il Moggio Grechetto 2015"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Roccafiore",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/602602",
-            "wine": "Fiordaliso 2018"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Mullin Estate Wines",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/580530",
-            "wine": "Grechetto 2018"
-          },
-          {
-            "abv": 14,
-            "producer": "Tenuta La Pazzaglia",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/641384",
-            "wine": "Poggio Triale Grechetto 2012"
-          },
-          {
-            "abv": 13,
-            "producer": "Arnaldo Caprai",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/643904",
-            "wine": "Grecante 2013"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Teodoro Bonati",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/629854",
-            "wine": "Murola Grechetto 2013"
-          },
-          {
-            "abv": 13,
-            "producer": "Castello di Corbara",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/703018",
-            "wine": "Grechetto 2020"
-          },
-          {
-            "abv": 14,
-            "producer": "Terre Margaritelli",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/690357",
-            "wine": "Greco di Renabianca 2018"
-          },
-          {
-            "abv": 13,
-            "producer": "Tenuta di Salviano",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/705557",
-            "wine": "Grechetto 2021"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Fattoria Di Monticello",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/736844",
-            "wine": "Ginestrello 2021"
-          },
-          {
-            "abv": 13,
-            "producer": "Leonardo Bussoletti",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/757286",
-            "wine": "Colle Ozio Grechetto 2023"
-          },
-          {
-            "abv": 14,
-            "producer": "Paolo e Noemia d'Amico",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/766601",
-            "wine": "Agylla Grechetto 2023"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Le Rocche Malatestiane",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/773092",
-            "wine": "Larus Rebola 2023"
-          },
-          {
-            "abv": 10,
-            "producer": "Romandiola",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/787991",
-            "wine": "Bunì Grechetto Gentile 2025"
-          }
-        ]
       },
       {
         "field": "origin",
@@ -15657,7 +14707,7 @@
       "cherry",
       "blackberry"
     ],
-    "body": "medium",
+    "body": null,
     "color": "red",
     "evidence": [
       {
@@ -15736,46 +14786,6 @@
         "sourceUrl": "https://forestlarder.com/our-grapes/"
       },
       {
-        "field": "body",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "red meat",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "beef",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "lamb",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "game",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/rondo-an-in-depth-wine-profile"
-      },
-      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Rondo: Germany",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -15794,12 +14804,7 @@
       "pt": "Rondo"
     },
     "origin": "DE",
-    "pairings": [
-      "red meat",
-      "beef",
-      "lamb",
-      "game"
-    ],
+    "pairings": [],
     "prominence": 9,
     "regions": [
       {
@@ -17937,12 +16942,6 @@
             "wine": "Riesling Muschelkalk Trocken"
           },
           {
-            "abv": 11,
-            "producer": "Weingut K. W. Müller",
-            "sourceUrl": "https://vinocumlaude.de/produkt/riesling-trocken/",
-            "wine": "Riesling Trocken"
-          },
-          {
             "abv": 12,
             "producer": "Weingut Herber",
             "sourceUrl": "https://www.weingut-herber.de/shop/2024-riesling-qualitaetswein-trocken/",
@@ -18411,12 +17410,6 @@
             "wine": "Riesling Premier Beauregards"
           },
           {
-            "abv": 12.5,
-            "producer": "Round Barn Winery",
-            "sourceUrl": "https://drinkmichigan.com/products/taborhill-riesling",
-            "wine": "Taborhill Riesling"
-          },
-          {
             "abv": 13.2,
             "producer": "Harbinger Winery",
             "sourceUrl": "https://www.harbingerwinery.com/products/white-riesling",
@@ -18463,12 +17456,6 @@
             "producer": "Dopff et Irion",
             "sourceUrl": "https://www.dopff-irion.com/fr/boutique/000100010000000467/riesling-cuvee-rene-dopff-a-o-p-alsace",
             "wine": "Riesling Cuvee Rene Dopff A O P Alsace"
-          },
-          {
-            "abv": 12,
-            "producer": "Dupuy Antoine et Vincent",
-            "sourceUrl": "https://www.lesgrappes.com/products/cattin-sauvage-riesling-bio",
-            "wine": "Cattin Sauvage Riesling Bio"
           },
           {
             "abv": 12,
@@ -18625,11 +17612,6 @@
             "producer": "Adega Mãe",
             "sourceUrl": "https://adegamae.pt/vinho/adegamae-riesling-late-release/",
             "wine": "Adegamae Riesling Late Release"
-          },
-          {
-            "producer": "Round Barn Winery",
-            "sourceUrl": "https://drinkmichigan.com/products/roundbarn-riesling",
-            "wine": "Roundbarn Riesling"
           },
           {
             "producer": "Frankland Estate",
@@ -20030,7 +19012,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "black pepper",
       "tobacco",
@@ -20218,14 +19200,6 @@
         "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000001301",
         "place": "Orléans-Cléry",
         "placeId": "fr-orleans-clery"
-      },
-      {
-        "field": "alcohol",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/cabernet-franc-an-in-depth-wine-profile"
       }
     ],
     "id": "cabernet-franc",
@@ -22925,12 +21899,6 @@
             "wine": "Rivaner Trocken 2024"
           },
           {
-            "abv": 12,
-            "producer": "Weingut K. W. Müller",
-            "sourceUrl": "https://vinocumlaude.de/produkt/rivaner-trocken/",
-            "wine": "Rivaner Trocken"
-          },
-          {
             "abv": 11.5,
             "producer": "Weingut Horst Adams",
             "sourceUrl": "https://www.weingut-adams.de/products/rivaner-qualitatswein-0-75l",
@@ -23292,7 +22260,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": "high",
+    "alcohol": null,
     "aromas": [
       "damson",
       "tobacco",
@@ -23500,166 +22468,6 @@
         "factOnly": true,
         "publisher": "Martel",
         "sourceUrl": "https://www.martel.ch/cms/weinwissen/rebsorten/malbec/"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/595185",
-        "value": "high",
-        "wines": [
-          {
-            "abv": 12.5,
-            "producer": "Beefsteak Club",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/595185",
-            "wine": "Reserve Malbec 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Concha y Toro",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/595030",
-            "wine": "Casillero del Diablo Malbec 2017"
-          },
-          {
-            "abv": 13.4,
-            "producer": "Ruca Malen",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/594683",
-            "wine": "Terroir Series Malbec 2016"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Salentein",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/594719",
-            "wine": "Primus Malbec 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Santa Julia",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593039",
-            "wine": "Reserve Malbec 2017"
-          },
-          {
-            "abv": 14,
-            "producer": "Zuccardi",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593080",
-            "wine": "Mountain Vineyards Malbec 2014"
-          },
-          {
-            "abv": 14,
-            "producer": "Mendoza Vineyards",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593094",
-            "wine": "MV Gran Reserva Malbec 2015"
-          },
-          {
-            "abv": 14.5,
-            "producer": "El Esteco",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592995",
-            "wine": "Malbec 2015"
-          },
-          {
-            "abv": 14,
-            "producer": "Trapiche",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592958",
-            "wine": "Broquel Malbec 2016"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Mascota",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592962",
-            "wine": "Gran Mascota Malbec 2015"
-          },
-          {
-            "abv": 14,
-            "producer": "Navarro Correas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592985",
-            "wine": "Reserva Seleccion de Parcelas Malbec 2016"
-          },
-          {
-            "abv": 14.4,
-            "producer": "Pyros",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/594623",
-            "wine": "Apellation Malbec 2016"
-          },
-          {
-            "abv": 14,
-            "producer": "Casa de Uco",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/594976",
-            "wine": "El Salvaje Malbec 2015"
-          },
-          {
-            "abv": 14.1,
-            "producer": "Giovanni Vincenzo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592907",
-            "wine": "Pannunzio Clásicos Malbec 2017"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Pannunzio",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592911",
-            "wine": "Reserva Malbec 2016"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Finca Las Moras",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592937",
-            "wine": "Sagrado Pedernal Malbec 2014"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Zorzal",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593299",
-            "wine": "Terroir Único Malbec 2017"
-          },
-          {
-            "abv": 14,
-            "producer": "Morandé",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593276",
-            "wine": "Gran Reserva Malbec 2014"
-          },
-          {
-            "abv": 14,
-            "producer": "Bousquet",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593468",
-            "wine": "Organic Malbec 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Château Bovila",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591902",
-            "wine": "Malbec 2016"
-          },
-          {
-            "abv": 14,
-            "producer": "Rigal",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591892",
-            "wine": "Troisième Terrasse Malbec 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Vignobles Pelvillain",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591535",
-            "wine": "Château du Port Prestige Malbec 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Condeminal",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592123",
-            "wine": "Malbec 2017"
-          },
-          {
-            "abv": 14.1,
-            "producer": "La Luz",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592133",
-            "wine": "Callejon del Crimen Gran Reserva Malbec 2016"
-          },
-          {
-            "abv": 14,
-            "producer": "Phebus",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592351",
-            "wine": "Reservado Malbec 2016"
-          }
-        ]
       }
     ],
     "id": "malbec",
@@ -26647,12 +25455,6 @@
             "wine": "Weissburgunder 2025"
           },
           {
-            "abv": 13.5,
-            "producer": "Weingut K. W. Müller",
-            "sourceUrl": "https://vinocumlaude.de/produkt/2022er-weissburgunder-s-trocken/",
-            "wine": "2022Er Weissburgunder S Trocken"
-          },
-          {
             "abv": 12,
             "producer": "Weingut Herber",
             "sourceUrl": "https://www.weingut-herber.de/shop/2024-weissburgunder-qualitaetswein/",
@@ -27584,7 +26386,7 @@
       "violet",
       "leather"
     ],
-    "body": "high",
+    "body": null,
     "color": "red",
     "evidence": [
       {
@@ -27737,14 +26539,6 @@
             "wine": "Sutherland Petit Verdot Reserve 2015"
           }
         ]
-      },
-      {
-        "field": "body",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-petit-verdot-grape-varietal-main-characteristics-and-styles"
       }
     ],
     "id": "petit-verdot",
@@ -27846,7 +26640,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "fruity"
     ],
@@ -28034,76 +26828,6 @@
         "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
         "value": "soups",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/550394",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13,
-            "producer": "Murdoch Hill",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/550394",
-            "wine": "The Surrey Pinot Meunier 2015"
-          },
-          {
-            "abv": 12,
-            "producer": "Cleebronn-Güglingen",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/596441",
-            "wine": "Sankt M Blanc de Noir Pinot Meunier 2017"
-          },
-          {
-            "abv": 12.3,
-            "producer": "Champagne Jean Comyn",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/690591",
-            "wine": "So Hype, Blanc de Noirs Brut NV"
-          },
-          {
-            "abv": 12,
-            "producer": "Gusbourne",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/720811",
-            "wine": "Pinot Meunier 2020"
-          },
-          {
-            "abv": 12,
-            "producer": "Philippe Fourrier",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/714110",
-            "wine": "Pinot Meunier Brut NV"
-          },
-          {
-            "abv": 13,
-            "producer": "Simpsons' Wine Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/741553",
-            "wine": "Derringstone Pinot Meunier 2022"
-          },
-          {
-            "abv": 11,
-            "producer": "Kingsthorne",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/776892",
-            "wine": "Rosé 2023"
-          },
-          {
-            "abv": 12,
-            "producer": "Burnt House",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/793343",
-            "wine": "Pinot Meunier 2024"
-          },
-          {
-            "abv": 11.8,
-            "producer": "Yotes Court",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/794616",
-            "wine": "Best Turned Out Pinot Meunier 2023"
-          },
-          {
-            "abv": 13,
-            "producer": "Ossa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/779860",
-            "wine": "Pinot Meunier 2025"
-          }
-        ]
       },
       {
         "basis": "disputed",
@@ -29579,7 +28303,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "apple",
       "lemon",
@@ -29763,76 +28487,6 @@
         "quote": "Obecně je Aligoté živější víno středního těla s vyšší aciditou",
         "value": "medium",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Aligot%C3%A9"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591526",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 12,
-            "producer": "Maison Chanzy",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591526",
-            "wine": "Clos de la Fortune Monopole 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "François Martenot",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/562106",
-            "wine": "L'Or de la Terre 2014"
-          },
-          {
-            "abv": 13,
-            "producer": "Caii de la Letea",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/583362",
-            "wine": "Editie Limitata Aligote 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Viticola Sarica Niculitel",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/572403",
-            "wine": "Caii de la Letea Aligote 2018"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Vignerons de Buxy",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/669097",
-            "wine": "Sainsbury's Taste The Difference 2009"
-          },
-          {
-            "abv": 14,
-            "producer": "Château Le Grand Vostock",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/687386",
-            "wine": "Aligote 2018"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Nuiton-Beaunoy",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/771461",
-            "wine": "Équilibre Biologique 2023"
-          },
-          {
-            "abv": 12,
-            "producer": "Pascal Bouchard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/770975",
-            "wine": "Réserve Saint-Pierre 2024"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Cramele Recaș",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/775994",
-            "wine": "Implicit Aligoté 2024"
-          },
-          {
-            "abv": 12,
-            "producer": "Terres Secrètes",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/787806",
-            "wine": "Les Petits Bourgeons 2024"
-          }
-        ]
       }
     ],
     "id": "aligote",
@@ -30997,7 +29651,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "high",
+    "alcohol": null,
     "aromas": [
       "chocolate",
       "plum"
@@ -31180,166 +29834,6 @@
         "quote": "Сорт слугує основою у виробництві вин: сухих і столових",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%8F%D0%BD%D1%96%D0%BA%D0%BE"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/539565",
-        "value": "high",
-        "wines": [
-          {
-            "abv": 14.5,
-            "producer": "Quintodecimo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/539565",
-            "wine": "Vigna Grande Cerzito Riserva 2012"
-          },
-          {
-            "abv": 14,
-            "producer": "Cantine Iorio",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/539574",
-            "wine": "Aglianico 2016"
-          },
-          {
-            "abv": 13.4,
-            "producer": "Scillicampana",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/539404",
-            "wine": "Aglianico 2016"
-          },
-          {
-            "abv": 14,
-            "producer": "Hither & Yon",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/537488",
-            "wine": "Aglianico 2015"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Vieni Estates",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536892",
-            "wine": "Reserve Aglianico 2013"
-          },
-          {
-            "abv": 13.5,
-            "producer": "La Fortezza",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536702",
-            "wine": "Enzo Rillo 2014"
-          },
-          {
-            "abv": 14,
-            "producer": "Il Passo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/538457",
-            "wine": "Alberi In Piano 2014"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Nativ",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542171",
-            "wine": "Campi Taurasini Bicento 2014"
-          },
-          {
-            "abv": 12,
-            "producer": "San Salvatore 1988",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542161",
-            "wine": "Vetere 2017"
-          },
-          {
-            "abv": 14,
-            "producer": "Cantina di Venosa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542072",
-            "wine": "Terre di Orazio 2013"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Cantine del Notaio",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542721",
-            "wine": "La Firma 2013"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Tenuta Cavalier Pepe",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542366",
-            "wine": "La Loggia del Cavaliere Riserva 2011"
-          },
-          {
-            "abv": 14,
-            "producer": "Bellaria",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542481",
-            "wine": "Rafè Aglianico 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Feudi",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/543005",
-            "wine": "Tesco finest* Aglianico 2015"
-          },
-          {
-            "abv": 14,
-            "producer": "Terredora Dipaolo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/595338",
-            "wine": "Fatica Contadina 2012"
-          },
-          {
-            "abv": 14,
-            "producer": "Ofanto",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593174",
-            "wine": "Calaturi 2013"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Antico Castello",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593092",
-            "wine": "Riserva 2010"
-          },
-          {
-            "abv": 14,
-            "producer": "Tor dé Falchi",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592685",
-            "wine": "Animae Agri Aglianico 2013"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Carrese",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592256",
-            "wine": "Aglianico Riserva 2015"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Regio Cantina",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590958",
-            "wine": "Donpà 2013"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Villa Raiano",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/534888",
-            "wine": "Campi Taurasini 2013"
-          },
-          {
-            "abv": 13,
-            "producer": "Rossovermiglio",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/535269",
-            "wine": "Aglianico 2015"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Amarano",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/560602",
-            "wine": "Principe Lagonessa 2010"
-          },
-          {
-            "abv": 12,
-            "producer": "Vigneti del Vulture",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/549331",
-            "wine": "Pipoli 2015"
-          },
-          {
-            "abv": 14,
-            "producer": "Azienda Agricola Cantine Catena",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/548277",
-            "wine": "Intrecci Aglianico 2013"
-          }
-        ]
       },
       {
         "field": "origin",
@@ -32594,12 +31088,6 @@
             "producer": "Cantina Gildo",
             "sourceUrl": "https://www.gildovini.com/i-nostri-vini/franconia/",
             "wine": "Franconia"
-          },
-          {
-            "abv": 11.2,
-            "producer": "Round Barn Winery",
-            "sourceUrl": "https://drinkmichigan.com/products/taborhill-lemberger",
-            "wine": "Taborhill Lemberger"
           },
           {
             "abv": 13,
@@ -34987,7 +33475,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "high",
+    "alcohol": null,
     "aromas": [
       "grape"
     ],
@@ -35037,112 +33525,6 @@
         "quote": "Conté aromes de raïm, combinades amb fruitades.",
         "value": "grape",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Mavrud"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/559142",
-        "value": "high",
-        "wines": [
-          {
-            "abv": 12.5,
-            "producer": "Edoardo Miroglio",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/559142",
-            "wine": "EM Mavrud 2015"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Katarzyna",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/534463",
-            "wine": "Mavrud 2016"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Villa Melnik",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/544526",
-            "wine": "Aplauz Reserve Mavrud 2015"
-          },
-          {
-            "abv": 15,
-            "producer": "Neragora",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/560841",
-            "wine": "Mavrud 2013"
-          },
-          {
-            "abv": 14,
-            "producer": "Chateau Kolarovo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/562119",
-            "wine": "Megalit Mavrud 2012"
-          },
-          {
-            "abv": 13.7,
-            "producer": "Dragomir",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/579070",
-            "wine": "Sarva 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Manastira",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/580047",
-            "wine": "Ilaya Reserve 2017"
-          },
-          {
-            "abv": 14,
-            "producer": "Izba Karabunar",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/579543",
-            "wine": "Bulgarian Heritage Mavrud Reserve 2016"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Augeo Family Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/597180",
-            "wine": "Reserve Mavrud 2016"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Rumelia Wine Cellar",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/571960",
-            "wine": "Merul Reserve Mavrud 2016"
-          },
-          {
-            "abv": 14,
-            "producer": "Terra Tangra",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/653694",
-            "wine": "Mavrud 2007"
-          },
-          {
-            "abv": 13,
-            "producer": "Bratanov",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/632995",
-            "wine": "Single Vineyard Mavrud 2013"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Via Vinera",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/712813",
-            "wine": "Heritage Mavrud 2019"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Reserve Elenovo Mavrud",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/711070",
-            "wine": "Reserve Elenovo Mavrud 2018"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Ross-Idi",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/713709",
-            "wine": "Nikolaevo Mavrud 2019"
-          },
-          {
-            "abv": 14,
-            "producer": "Minkov Brothers",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/775303",
-            "wine": "Enoteca Mavrud 2022"
-          }
-        ]
       }
     ],
     "id": "mavrud",
@@ -36615,14 +34997,6 @@
         "quote": "Estes vinhos acompanham muito bem pratos de carnes vermelhas, com molhos fortes.",
         "value": "red meat",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Tannat"
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/tannat-an-in-depth-wine-profile"
       }
     ],
     "id": "tannat",
@@ -36722,10 +35096,7 @@
         "url": "https://es.wikipedia.org/wiki/Tannat_(uva)"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "dry"
-    },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Harriague",
@@ -37280,14 +35651,6 @@
         "field": "sweetness",
         "quote": "The grape is most widely associated with the dry and sweet red wines of Nemea",
         "value": "dry-sweet"
-      },
-      {
-        "field": "tannin",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/agiorgitiko"
       }
     ],
     "id": "agiorgitiko",
@@ -37443,13 +35806,13 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q393911",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Agiorgitiko"
   },
   {
     "acidity": "low",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "almond",
       "apricot",
@@ -37636,166 +35999,6 @@
         "quote": "Гарно поєднується з рибними та овочевими стравами",
         "value": "vegetables",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D1%80%D0%BD%D0%B5%D1%97%D1%81"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/538566",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13.5,
-            "producer": "Fontanafredda",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/538566",
-            "wine": "Pradalupo 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Negro Angelo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/537858",
-            "wine": "Serra Lupini 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Ascheri",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542912",
-            "wine": "Arneis 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Tenuta Carretta",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/541727",
-            "wine": "Cayega 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Poderi Moretti",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/535862",
-            "wine": "Occhetti 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Nepenthe",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536393",
-            "wine": "Winemaker Select Arneis 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Giacomo Vico",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592129",
-            "wine": "Bricco Al Pascolo 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Zerella",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591660",
-            "wine": "La Gita Arneis 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "San Silvestro",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/591231",
-            "wine": "Sabbie 2017"
-          },
-          {
-            "abv": 14,
-            "producer": "Cascina Val del Prete",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590628",
-            "wine": "Luèt 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Palazzo Rosso",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593454",
-            "wine": "Montalbano 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Carlin de Paolo",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592708",
-            "wine": "Arneis 2017"
-          },
-          {
-            "abv": 12,
-            "producer": "Bird in Hand",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592761",
-            "wine": "Arneis 2017"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Morra",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/595241",
-            "wine": "Roero Arneis 2017"
-          },
-          {
-            "abv": 14,
-            "producer": "Agricola Brandini",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/561469",
-            "wine": "Le Coccinelle 2014"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Voerzio Martini",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/560587",
-            "wine": "Arneis Bricco Cappellina 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Araldica",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/562160",
-            "wine": "Alasia 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Bric Cenciurio",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/549229",
-            "wine": "Sito dei Fossili 2014"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Cascina Boschetti Gomba",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/547449",
-            "wine": "Fiero 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Aldo Marenco",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/552913",
-            "wine": "Arneis 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Pelassa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/553558",
-            "wine": "San Vito 2015"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Marco Porello",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/544676",
-            "wine": "Camestri 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Flli Casetta",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/545475",
-            "wine": "Mumplin 2014"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Cornarea",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/525329",
-            "wine": "Enritard 2012"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Fratelli Ponte",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/526110",
-            "wine": "Arneis 2016"
-          }
-        ]
       }
     ],
     "id": "arneis",
@@ -38450,22 +36653,6 @@
         "factOnly": true,
         "publisher": "Vinatis",
         "sourceUrl": "https://www.vinatis.com/colombard-cepage"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "seafood",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/colombard-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "sushi",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/colombard-an-in-depth-wine-profile"
       }
     ],
     "id": "colombard",
@@ -38480,10 +36667,7 @@
       "pt": "Colombard"
     },
     "origin": "FR",
-    "pairings": [
-      "seafood",
-      "sushi"
-    ],
+    "pairings": [],
     "prominence": 15,
     "regions": [
       {
@@ -38990,7 +37174,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "red fruit",
       "strawberry",
@@ -39147,166 +37331,6 @@
         "factOnly": true,
         "publisher": "Winemakers of Northern Greece",
         "sourceUrl": "https://winemakersofnorthgreece.gr/en/xinomavro-the-greek-ambassador-variety-2/"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/555259",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13.5,
-            "producer": "Chrisohoou",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/555259",
-            "wine": "Xinomavro 2015"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Kir Yianni",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/556134",
-            "wine": "Ramnista Xinomavro 2013"
-          },
-          {
-            "abv": 12,
-            "producer": "In Vino",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/526462",
-            "wine": "Ideas Xinomavro 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Alpha Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/526190",
-            "wine": "Rosé 2016"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Kechris",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/532519",
-            "wine": "Roza 2016"
-          },
-          {
-            "abv": 12.8,
-            "producer": "Oenops",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592387",
-            "wine": "Xinomavro 2016"
-          },
-          {
-            "abv": 13.1,
-            "producer": "Boutari",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/594334",
-            "wine": "Grande Reserve 2011"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Katsaros",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542483",
-            "wine": "Valos Xinomavro 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Tsililis",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/540247",
-            "wine": "Theopetra Estate Rosé Xinomavro 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Katogi Averoff",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536962",
-            "wine": "Inima Xinomavro 2014"
-          },
-          {
-            "abv": 12,
-            "producer": "Tsipas Anastasios & Michael O.E.",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/571087",
-            "wine": "Ideas Xinomavro 2018"
-          },
-          {
-            "abv": 13,
-            "producer": "Patistis",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/603663",
-            "wine": "Idioma 2014"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Vaeni Naoussa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/599623",
-            "wine": "Damascenos 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Pavlou Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/682523",
-            "wine": "Klima 100% 2006"
-          },
-          {
-            "abv": 14,
-            "producer": "Thymiopoulos Vineyards",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/667410",
-            "wine": "Ghi Ke Uranos 2007"
-          },
-          {
-            "abv": 13.3,
-            "producer": "Ktima Gerovassiliou",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/704493",
-            "wine": "Xinomavro 2020"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Amyntas Wines",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/701496",
-            "wine": "Reserve 2018"
-          },
-          {
-            "abv": 12,
-            "producer": "Tsantali",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/716604",
-            "wine": "1/3000 Limited Selection Xinomavro 2021"
-          },
-          {
-            "abv": 14,
-            "producer": "Wine Art Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/719790",
-            "wine": "Idisma Drios Xi 2017"
-          },
-          {
-            "abv": 12,
-            "producer": "Noema Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/740952",
-            "wine": "Eruption 2022"
-          },
-          {
-            "abv": 12,
-            "producer": "Nico Lazaridi",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/733927",
-            "wine": "Evil Eye Rosé Xinomavro 2022"
-          },
-          {
-            "abv": 14,
-            "producer": "Akrathos",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/736929",
-            "wine": "Xinomavro 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Arvanitidis Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/738081",
-            "wine": "Xinomavro 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Chatzivaritis Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/730277",
-            "wine": "Mus 2021"
-          },
-          {
-            "abv": 13,
-            "producer": "Kappa Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/754985",
-            "wine": "Kokkymelo Xinomavro 2022"
-          }
-        ]
       },
       {
         "basis": "producers",
@@ -40801,30 +38825,6 @@
         "quote": "wird Airén auch zu frischen, trockenen, schnell zu trinkenden Weißweinen vergoren",
         "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Air%C3%A9n"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "white fish",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/discover-the-secrets-of-airen-the-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "soft cheese",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/discover-the-secrets-of-airen-the-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "chicken",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/discover-the-secrets-of-airen-the-in-depth-wine-profile"
       }
     ],
     "id": "airen",
@@ -40839,11 +38839,7 @@
       "pt": "Airén"
     },
     "origin": "ES",
-    "pairings": [
-      "white fish",
-      "soft cheese",
-      "chicken"
-    ],
+    "pairings": [],
     "prominence": 14,
     "regions": [
       {
@@ -42250,30 +40246,6 @@
         "quote": "Die körperreichen Rotweine sind meist sehr dunkel, alkoholreich",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Plavac_Mali_Crni"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "grilled meats",
-        "factOnly": true,
-        "publisher": "Wine&more",
-        "sourceUrl": "https://www.wineandmore.com/food-pairing-with-plavac-mali/"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "lamb",
-        "factOnly": true,
-        "publisher": "Wine&more",
-        "sourceUrl": "https://www.wineandmore.com/food-pairing-with-plavac-mali/"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "steak",
-        "factOnly": true,
-        "publisher": "Wine&more",
-        "sourceUrl": "https://www.wineandmore.com/food-pairing-with-plavac-mali/"
       }
     ],
     "id": "plavac-mali",
@@ -42288,11 +40260,7 @@
       "pt": "Plavac Mali"
     },
     "origin": "HR",
-    "pairings": [
-      "grilled meats",
-      "lamb",
-      "steak"
-    ],
+    "pairings": [],
     "prominence": 14,
     "regions": [
       {
@@ -42858,14 +40826,6 @@
             "wine": "Vin De France Roussanne 2025"
           }
         ]
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry-sweet",
-        "factOnly": true,
-        "publisher": "Inter Rhône",
-        "sourceUrl": "https://www.vins-rhone.com/en/roussanne-grape-variety"
       }
     ],
     "id": "roussanne",
@@ -42925,10 +40885,7 @@
         "url": "https://es.wikipedia.org/wiki/Roussanne"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "sweet"
-    },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Barbin",
@@ -43165,12 +41122,6 @@
             "producer": "Weingut Heise am Kranzberg",
             "sourceUrl": "https://weinerlebniswelt-heise.de/shop/saint-laurent-2024/",
             "wine": "Saint Laurent 2024"
-          },
-          {
-            "abv": 13,
-            "producer": "Weingut K. W. Müller",
-            "sourceUrl": "https://vinocumlaude.de/produkt/2022-saint-laurent-trocken/",
-            "wine": "2022 Saint Laurent Trocken"
           },
           {
             "abv": 12.5,
@@ -44451,7 +42402,7 @@
       "bitter almond",
       "citrus"
     ],
-    "body": "medium",
+    "body": null,
     "color": "white",
     "evidence": [
       {
@@ -44538,14 +42489,6 @@
         "quote": "Сухі вина вживаються у вигляді аперитиву, гарно поєднуються з ризото, м'якими сирами, рибними стравами та стравами з морепродуктів",
         "value": "seafood",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D1%96%D0%BE"
-      },
-      {
-        "field": "body",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/verdicchio-an-in-depth-wine-profile-g73kq"
       },
       {
         "field": "alcohol",
@@ -44879,12 +42822,6 @@
             "producer": "Weingut Albert Lambrich",
             "sourceUrl": "https://www.weingut-albert-lambrich.de/produkt/dornfelder/",
             "wine": "Dornfelder"
-          },
-          {
-            "abv": 13,
-            "producer": "Weingut K. W. Müller",
-            "sourceUrl": "https://vinocumlaude.de/produkt/2020-dornfelder-edition-trocken/",
-            "wine": "2020 Dornfelder Edition Trocken"
           },
           {
             "abv": 12.5,
@@ -45282,46 +43219,6 @@
         "quote": "Son raisin donne des vins colorés, tanniques, assez intenses en saveurs, et souvent aptes à la garde.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "red meat",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "lamb",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "stews",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "game",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "duck",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/feteasca-neagra-an-in-depth-wine-profile-of-romanias-signature-grape"
       }
     ],
     "id": "feteasca-neagra",
@@ -45336,13 +43233,7 @@
       "pt": "Fetească neagră"
     },
     "origin": "RO",
-    "pairings": [
-      "red meat",
-      "lamb",
-      "stews",
-      "game",
-      "duck"
-    ],
+    "pairings": [],
     "prominence": 12,
     "regions": [
       {
@@ -49114,14 +47005,6 @@
         ]
       },
       {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry",
-        "factOnly": true,
-        "publisher": "Inter Rhône",
-        "sourceUrl": "https://www.vins-rhone.com/en/marselan-grape-variety"
-      },
-      {
         "field": "acidity",
         "quote": "",
         "value": "medium",
@@ -49267,10 +47150,7 @@
         "url": "https://en.wikipedia.org/wiki/Marselan"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "dry"
-    },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q833144",
@@ -50234,7 +48114,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sercial"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "grape"
@@ -50381,22 +48261,6 @@
             "wine": "Frappato"
           }
         ]
-      },
-      {
-        "field": "acidity",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Berry Bros. & Rudd",
-        "sourceUrl": "https://www.bbr.com/grape-fp-frappato"
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/frappato-an-in-depth-wine-profile"
       }
     ],
     "id": "frappato",
@@ -50462,10 +48326,7 @@
         "url": "https://en.wikipedia.org/wiki/Frappato"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "dry"
-    },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Frappato di Vittoria",
@@ -50666,14 +48527,6 @@
         ]
       },
       {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry-sweet",
-        "factOnly": true,
-        "publisher": "Berry Bros. & Rudd",
-        "sourceUrl": "https://www.bbr.com/grape-gb-grillo"
-      },
-      {
         "field": "body",
         "quote": "",
         "value": "high",
@@ -50790,10 +48643,7 @@
         "url": "https://en.wikipedia.org/wiki/Grillo"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "sweet"
-    },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "Riddu",
@@ -52398,8 +50248,8 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cardinal_(grape)"
   },
   {
-    "acidity": "medium",
-    "alcohol": "medium",
+    "acidity": null,
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "red",
@@ -52438,66 +50288,6 @@
         "field": "regions",
         "quote": "is an indigenous red grape cultivated on the island of Cyprus",
         "value": "CY: Cyprus"
-      },
-      {
-        "field": "acidity",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "grilled meats",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "lamb",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "sausages",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/mavro-an-in-depth-wine-profile"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/532705",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13.6,
-            "producer": "Santa Irene",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/532705",
-            "wine": "Daniel 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Avantis Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/602624",
-            "wine": "Mavro Koudoura 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Tsiakkas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/568524",
-            "wine": "Mavro Mouklos 2019"
-          }
-        ]
       }
     ],
     "id": "mavro",
@@ -52512,11 +50302,7 @@
       "nl": "Mavro"
     },
     "origin": "CY",
-    "pairings": [
-      "grilled meats",
-      "lamb",
-      "sausages"
-    ],
+    "pairings": [],
     "prominence": 10,
     "regions": [
       {
@@ -55208,7 +52994,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [],
     "body": null,
     "color": "white",
@@ -55257,192 +53043,6 @@
         "field": "regions",
         "quote": "on the south slopes of the Troodos mountain range are planted with this grape variety ... in the hotter wine regions in Australia like the Barossa and the Riverland",
         "value": "AU: Riverland"
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry-sweet",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "fish",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "shellfish",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "soft cheese",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/xynisteri-grape-a-mix-of-taste-and-adaptability"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590766",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 12.5,
-            "producer": "Santa Irene",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590766",
-            "wine": "Vounoplagia Xynisteri 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Gerolemo Athenodorou",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590781",
-            "wine": "Xynisteri dryos 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Vouni Panayia",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590921",
-            "wine": "Alina Xynisteri 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Kyperounda",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/543088",
-            "wine": "Petritis 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Tsiakkas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/544228",
-            "wine": "Xynisteri 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Zambartas Wineries",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/535535",
-            "wine": "Xynisteri 2017"
-          },
-          {
-            "abv": 13,
-            "producer": "Makkas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/594409",
-            "wine": "Xynisteri 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Ezousa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592728",
-            "wine": "Xinisteri 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Tsalapatis",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/594460",
-            "wine": "Rigena Xynisteri 2017"
-          },
-          {
-            "abv": 12,
-            "producer": "Fikardos",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/536544",
-            "wine": "Amalthia Xinisteri 2017"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Vasilikon",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592310",
-            "wine": "Xynisteri 2017"
-          },
-          {
-            "abv": 12,
-            "producer": "Kamanterena",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/547945",
-            "wine": "Xynisteri 2015"
-          },
-          {
-            "abv": 12,
-            "producer": "Lizzarus",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/561722",
-            "wine": "Δελφις White 2015"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Hadjiantonas",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/534219",
-            "wine": "Xinisteri 2016"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Tsangarides Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/581130",
-            "wine": "Xynisteri 2019"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Aes Ambelis Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/577436",
-            "wine": "Xinisteri 2019"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Makarounas Boutique Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/584059",
-            "wine": "Aerides 2019"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Vlassides Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/575655",
-            "wine": "Alátes 2018"
-          },
-          {
-            "abv": 13,
-            "producer": "Dafermou",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/574499",
-            "wine": "Selection Xinisteri 2018"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Sodap",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/614669",
-            "wine": "Kamanterena Xynisteri 2012"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Oenou Yi Ktíma Vassiliades",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/703098",
-            "wine": "Premium Xinisteri 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Gialeli",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/745648",
-            "wine": "Xynisteri 2022"
-          },
-          {
-            "abv": 13.36,
-            "producer": "Kolios Winery",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/751224",
-            "wine": "Persefoni Xinisteri 2023"
-          },
-          {
-            "abv": 13,
-            "producer": "Marathasa",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/767281",
-            "wine": "Athassi Xynisteri 2023"
-          }
-        ]
       }
     ],
     "id": "xynisteri",
@@ -55457,11 +53057,7 @@
       "pt": "Xynisteri"
     },
     "origin": "CY",
-    "pairings": [
-      "fish",
-      "shellfish",
-      "soft cheese"
-    ],
+    "pairings": [],
     "prominence": 10,
     "regions": [
       {
@@ -55519,10 +53115,7 @@
         "url": "https://es.wikipedia.org/wiki/Xynisteri"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "sweet"
-    },
+    "sweetness": null,
     "synonyms": [
       {
         "name": "xinisteri",
@@ -56631,7 +54224,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "nutty"
@@ -56833,14 +54426,6 @@
             "wine": "Epicentro Orange Inzolia Bio"
           }
         ]
-      },
-      {
-        "field": "acidity",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "iDealwine",
-        "sourceUrl": "https://www.idealwine.com/fr/acheter-du-vin/cepage-ansonica"
       }
     ],
     "id": "ansonica",
@@ -57192,7 +54777,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "fruity",
       "apple"
@@ -57281,11 +54866,6 @@
             "wine": "Bacchus 2025"
           },
           {
-            "producer": "Weingut K. W. Müller",
-            "sourceUrl": "https://vinocumlaude.de/produkt/2023-bacchus-kabinett/",
-            "wine": "2023 Bacchus Kabinett"
-          },
-          {
             "producer": "Weinhaus Römerhof",
             "sourceUrl": "https://geil.wine/produkt/bacchus-2/",
             "wine": "Bacchus 2"
@@ -57334,166 +54914,6 @@
             "producer": "Weingut Jung",
             "sourceUrl": "https://wein-macht-jung.de/products/2024-bacchus-gutswein-lieblich",
             "wine": "2024 Bacchus Gutswein Lieblich"
-          }
-        ]
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590812",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 10.8,
-            "producer": "New Hall Vineyards",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/590812",
-            "wine": "Fumé Reserve Bacchus 2016"
-          },
-          {
-            "abv": 11,
-            "producer": "Hidden Spring",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/593478",
-            "wine": "Bacchus 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Chapel Down",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/542348",
-            "wine": "Kit’s Coty Bacchus 2016"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Woodchester Valley",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/543452",
-            "wine": "Bacchus 2017"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Lyme Bay",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/541605",
-            "wine": "Block Bacchus 2017"
-          },
-          {
-            "abv": 10.8,
-            "producer": "Toppesfield Vineyard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/543640",
-            "wine": "Bacchus Reserve 2016"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Blackdown Ridge Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/553593",
-            "wine": "Chiaro 2014"
-          },
-          {
-            "abv": 12,
-            "producer": "Kingscote",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/554189",
-            "wine": "Fat Fumé 2014"
-          },
-          {
-            "abv": 12,
-            "producer": "Denbies",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/554491",
-            "wine": "Bacchus 2013"
-          },
-          {
-            "abv": 12,
-            "producer": "Maud Heath",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/554541",
-            "wine": "Bacchus 2014"
-          },
-          {
-            "abv": 11,
-            "producer": "Giffords Hall",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/554970",
-            "wine": "Bacchus 2015"
-          },
-          {
-            "abv": 10.5,
-            "producer": "Sixteen Ridges",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/556880",
-            "wine": "Bacchus 2015"
-          },
-          {
-            "abv": 11,
-            "producer": "Hoffmann & Rathbone",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/562402",
-            "wine": "Bacchus 2015"
-          },
-          {
-            "abv": 12,
-            "producer": "Winbirri",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/558968",
-            "wine": "Bacchus 2015"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Vagabond Wines",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/566317",
-            "wine": "Bacchus 2018"
-          },
-          {
-            "abv": 12,
-            "producer": "Niki Hills",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/565959",
-            "wine": "Neiro Bacchus 2018"
-          },
-          {
-            "abv": 12,
-            "producer": "Albourne Estate",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/567546",
-            "wine": "Bacchus 2018"
-          },
-          {
-            "abv": 12,
-            "producer": "Ovens Farm Vineyard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/582384",
-            "wine": "Bacchus 2018"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Castlewood Vineyard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/576371",
-            "wine": "Devon Minnow Bacchus 2018"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Three Choirs",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/604125",
-            "wine": "Bacchus 2017"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Sharpham Vineyard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/672100",
-            "wine": "Bacchus 2010"
-          },
-          {
-            "abv": 12,
-            "producer": "Brightwell Vineyard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/618173",
-            "wine": "Bacchus 2009"
-          },
-          {
-            "abv": 11,
-            "producer": "Parva Farm Vineyard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/682540",
-            "wine": "Tintern Parva Bacchus 2006"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Knightor",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/648964",
-            "wine": "Portscatho Bacchus 2014"
-          },
-          {
-            "abv": 11.5,
-            "producer": "Flint Vineyard",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/696614",
-            "wine": "Bacchus 2019"
           }
         ]
       },
@@ -57646,12 +55066,7 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [
-      "strawberry",
-      "raspberry",
-      "cherry",
-      "rose"
-    ],
+    "aromas": [],
     "body": "low",
     "color": "red",
     "evidence": [
@@ -57780,38 +55195,6 @@
         "field": "sweetness",
         "quote": "It is often produced in off-dry to medium sweet style",
         "value": "medium"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "strawberry",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "raspberry",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "cherry",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "rose",
-        "factOnly": true,
-        "publisher": "Stanley's Wet Goods, grape dictionary",
-        "sourceUrl": "https://stanleys.la/pages/grapes/grolleau"
       }
     ],
     "id": "grolleau",
@@ -58620,7 +56003,7 @@
     "acidity": "low",
     "alcohol": "medium",
     "aromas": [],
-    "body": "high",
+    "body": null,
     "color": "red",
     "evidence": [
       {
@@ -58741,38 +56124,6 @@
         "quote": "Le cépage « Ancellotta » provient du nord de l’Italie.",
         "value": "IT",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Ancellotta"
-      },
-      {
-        "field": "body",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "red meat",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "steak",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "beef",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/ancellotta-an-in-depth-wine-profile"
       }
     ],
     "id": "ancellotta",
@@ -58787,11 +56138,7 @@
       "pt": "Ancellotta"
     },
     "origin": "IT",
-    "pairings": [
-      "red meat",
-      "steak",
-      "beef"
-    ],
+    "pairings": [],
     "prominence": 9,
     "regions": [
       {
@@ -59124,7 +56471,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": "medium",
+    "body": null,
     "color": "red",
     "evidence": [
       {
@@ -59205,38 +56552,6 @@
         "sourceUrl": "https://fr.wikipedia.org/wiki/Croatina"
       },
       {
-        "field": "body",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "pizza",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "pasta",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "vegetables",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/discovering-croatina-the-unique-grape-behind-bold-italian-wines"
-      },
-      {
         "field": "acidity",
         "quote": "",
         "value": "low",
@@ -59257,11 +56572,7 @@
       "pt": "Croatina"
     },
     "origin": "IT",
-    "pairings": [
-      "pizza",
-      "pasta",
-      "vegetables"
-    ],
+    "pairings": [],
     "prominence": 9,
     "regions": [
       {
@@ -60856,7 +58167,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "nutty"
     ],
@@ -60950,58 +58261,6 @@
         "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
         "value": "fresh cheese",
         "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/598826",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13,
-            "producer": "Mikrosvin Mikulov",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/598826",
-            "wine": "Perná Kotelná Výběr z Hroznů Neuburské 2017"
-          },
-          {
-            "abv": 12,
-            "producer": "Lahofer",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/575933",
-            "wine": "Neuburské 2018"
-          },
-          {
-            "abv": 11,
-            "producer": "Tomáš Krist",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/607635",
-            "wine": "Neuburské Pozdni Sber 2011"
-          },
-          {
-            "abv": 10,
-            "producer": "Petr Skoupil",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/682893",
-            "wine": "Neuburske 2008"
-          },
-          {
-            "abv": 12,
-            "producer": "Vinařství Cech",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/627061",
-            "wine": "Pozdní Sběr Neuburské 2013"
-          },
-          {
-            "abv": 13,
-            "producer": "Liliac",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/703248",
-            "wine": "Neuburger 2019"
-          },
-          {
-            "abv": 14,
-            "producer": "Kolarić Vina - Coletti",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/739193",
-            "wine": "Amfora Neuburger 2018"
-          }
-        ]
       }
     ],
     "id": "neuburger",
@@ -61433,14 +58692,6 @@
             "wine": "004 Acolon Trocken Bio"
           }
         ]
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry-medium",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/wines/acolon-an-in-depth-wine-profile"
       }
     ],
     "id": "acolon",
@@ -61507,10 +58758,7 @@
         "url": "https://es.wikipedia.org/wiki/Acolon"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "medium"
-    },
+    "sweetness": null,
     "synonyms": [],
     "tannin": "low",
     "wikidataId": "Q342037",
@@ -62712,7 +59960,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "low",
+    "alcohol": null,
     "aromas": [
       "citrus",
       "smoky"
@@ -62764,22 +60012,6 @@
         "field": "regions",
         "quote": "The variety is found in the regions Southern Rhône, Provence and Languedoc ... Only in white La Clape, a geographical designation that may be used in conjunction with the Appellation d'Origine Contrôlée (AOC) Coteaux du Languedoc, is Bourboulenc the dominant grape variety ... Châteauneuf-du-Pape AOC, where Bourboulenc was grown on 1% of the vineyard surface in 2004.",
         "value": "FR: Châteauneuf-du-Pape"
-      },
-      {
-        "field": "alcohol",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "Inter Rhône",
-        "sourceUrl": "https://www.vins-rhone.com/en/bourboulenc-grape-variety"
-      },
-      {
-        "field": "sweetness",
-        "quote": "",
-        "value": "dry",
-        "factOnly": true,
-        "publisher": "Inter Rhône",
-        "sourceUrl": "https://www.vins-rhone.com/en/bourboulenc-grape-variety"
       },
       {
         "field": "origin",
@@ -62865,10 +60097,7 @@
         "url": "https://en.wikipedia.org/wiki/Bourboulenc"
       }
     },
-    "sweetness": {
-      "from": "dry",
-      "to": "dry"
-    },
+    "sweetness": null,
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q358780",
@@ -63057,7 +60286,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "apple"
     ],
@@ -63157,76 +60386,6 @@
         "quote": "Вживається з легкими закусками, стравами з риби та морепродуктів, м'якими сирами",
         "value": "soft cheese",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%B1%D0%B0%D0%BB%D1%83%D1%87%D0%B5"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/538504",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13,
-            "producer": "La Masera",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/538504",
-            "wine": "Anima 2016"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Cantina della Serra",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/592060",
-            "wine": "Larol 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Cieck",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/550794",
-            "wine": "Misobolo 2015"
-          },
-          {
-            "abv": 13,
-            "producer": "Bianchi Cecilia",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/526749",
-            "wine": "Particella 40 Vigneti Valle Roncati 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Valle Roncati",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/572710",
-            "wine": "Parcella 40 2018"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Tappero Merlo Domenico",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/687281",
-            "wine": "Kin 2016"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Il Roccolo di Mezzomerico",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/696033",
-            "wine": "Francesca 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Luca Leggero",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/746212",
-            "wine": "Rend Nen 2022"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Tenuta Roletto",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/771906",
-            "wine": "Lei 2023"
-          },
-          {
-            "abv": 13,
-            "producer": "Donnalia",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/770454",
-            "wine": "Roc Della Regina 2018"
-          }
-        ]
       }
     ],
     "id": "erbaluce",
@@ -63894,7 +61053,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "blackberry",
       "spice"
@@ -63957,76 +61116,6 @@
         "factOnly": true,
         "publisher": "Swiss Wine Promotion",
         "sourceUrl": "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/gamaret-en"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/547697",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13.5,
-            "producer": "Philippe Bovet",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/547697",
-            "wine": "Gamaret 2014"
-          },
-          {
-            "abv": 13.4,
-            "producer": "La Cave de Genève",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/546472",
-            "wine": "Coeur de Clémence Gamaret 2014"
-          },
-          {
-            "abv": 13.6,
-            "producer": "Gregor Kuonen Caveau De Salquenen",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/561626",
-            "wine": "Grandmaître Gamaret 2014"
-          },
-          {
-            "abv": 13.2,
-            "producer": "Vinigma",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/574256",
-            "wine": "Jeninser 2016"
-          },
-          {
-            "abv": 13,
-            "producer": "Domaine des Chantailles",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/650982",
-            "wine": "Concerto Grand Cru Tartegnin 2012"
-          },
-          {
-            "abv": 13.2,
-            "producer": "Norbert et Serge Diserens",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/651242",
-            "wine": "Les Moines Grand Cru Villeneuve 2012"
-          },
-          {
-            "abv": 13,
-            "producer": "Alain Paley",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/649483",
-            "wine": "Réserve d'Epicure Gamaret 2011"
-          },
-          {
-            "abv": 13,
-            "producer": "Cave Cidis",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/638387",
-            "wine": "Gamaret Expression 2011"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Domaine Les Perrières",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/700232",
-            "wine": "Gamaret 2019"
-          },
-          {
-            "abv": 13,
-            "producer": "Cave De La Côte",
-            "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/747181",
-            "wine": "Inspiration Réserve Gamaret 2021"
-          }
-        ]
       }
     ],
     "id": "gamaret",
@@ -64926,11 +62015,7 @@
   {
     "acidity": "low",
     "alcohol": "medium",
-    "aromas": [
-      "peach",
-      "apricot",
-      "elderflower"
-    ],
+    "aromas": [],
     "body": "medium",
     "color": "white",
     "evidence": [
@@ -64944,54 +62029,6 @@
         "quote": "L’ortega est un cépage de cuve allemand de raisins blancs.",
         "value": "DE",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Ortega_(c%C3%A9page)"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "peach",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "apricot",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
-      },
-      {
-        "field": "aromas",
-        "quote": "",
-        "value": "elderflower",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "soft cheese",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "poultry",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
-      },
-      {
-        "field": "pairings",
-        "quote": "",
-        "value": "seafood",
-        "factOnly": true,
-        "publisher": "Vinerra",
-        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
       },
       {
         "basis": "producers",
@@ -65127,11 +62164,7 @@
       "pt": "Ortega"
     },
     "origin": "DE",
-    "pairings": [
-      "soft cheese",
-      "poultry",
-      "seafood"
-    ],
+    "pairings": [],
     "prominence": 7,
     "regions": [],
     "styles": [],
