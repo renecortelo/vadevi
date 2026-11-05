@@ -85,3 +85,4 @@ Cabernet Dorsa
 # (4 Nov 2026).
 Teroldego
 Passerina
+Ortega

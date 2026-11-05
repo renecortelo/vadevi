@@ -33,6 +33,11 @@ has the reasons.
 
 ### Library
 
+- **Ortega joins the library**: German, low in acidity, medium-bodied, of
+  medium alcohol, made from dry to sweet — English producers' dry wines
+  (Davenport, Westwell, Gutter & Stars) and German growers' sweet ones on
+  WirWinzer — with peach, apricot and elderflower, and soft cheese, poultry
+  and seafood (Vinerra).
 - **Passerina joins the library**: dry, high in acidity, with citrus
   aromas, seafood and pasta, medium alcohol — from three producers'
   sheets each (Barone di Valforte, Carminucci, Tenuta del Priore; Pasetti,

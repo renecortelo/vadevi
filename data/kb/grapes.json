@@ -63812,5 +63812,263 @@
     "tannin": null,
     "wikidataId": "Q614760",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Passerina_(grape)"
+  },
+  {
+    "acidity": "low",
+    "alcohol": "medium",
+    "aromas": [
+      "peach",
+      "apricot",
+      "elderflower"
+    ],
+    "body": "medium",
+    "color": "white",
+    "evidence": [
+      {
+        "field": "color",
+        "quote": "Ortega is a grape variety used for white wine.",
+        "value": "white"
+      },
+      {
+        "field": "origin",
+        "quote": "L’ortega est un cépage de cuve allemand de raisins blancs.",
+        "value": "DE",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Ortega_(c%C3%A9page)"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "peach",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "apricot",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "elderflower",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soft cheese",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Vinerra",
+        "sourceUrl": "https://www.vinerra.com/education/grapes/exploring-the-ortega-grape-a-german-rising-star"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.davenportvineyards.co.uk/product-page/2023-ortega",
+        "value": "dry-sweet",
+        "wines": [
+          {
+            "producer": "Davenport Vineyards",
+            "sourceUrl": "https://www.davenportvineyards.co.uk/product-page/2023-ortega",
+            "wine": "Davenport Ortega 2023"
+          },
+          {
+            "producer": "Gutter & Stars",
+            "sourceUrl": "https://www.grapebritannia.co.uk/product/gutterstars-age-of-anxiety-ortega-2025/",
+            "wine": "Age of Anxiety Ortega 2025 (Grape Britannia)"
+          },
+          {
+            "producer": "Westwell Wines",
+            "sourceUrl": "https://www.thewinesociety.com/product/westwell-ortega-kent-2024-en.aspx",
+            "wine": "Westwell Ortega 2024 (The Wine Society)"
+          },
+          {
+            "producer": "Schulze",
+            "sourceUrl": "https://wirwinzer.de/rebsorten/ortega",
+            "wine": "2025 Kloster Posaer Klosterberg Zeitz Ortega (WirWinzer)"
+          },
+          {
+            "producer": "Helmut Weber",
+            "sourceUrl": "https://wirwinzer.de/rebsorten/ortega",
+            "wine": "2010 Ortega Trocken (WirWinzer)"
+          },
+          {
+            "producer": "Martin Bangerth",
+            "sourceUrl": "https://wirwinzer.de/rebsorten/ortega",
+            "wine": "2023 Ortega Trocken (WirWinzer)"
+          },
+          {
+            "producer": "Thomas-Rüb",
+            "sourceUrl": "https://wirwinzer.de/rebsorten/ortega",
+            "wine": "2025 Flonheimer Bingerberg Ortega Spätlese (WirWinzer)"
+          },
+          {
+            "producer": "Hessert",
+            "sourceUrl": "https://wirwinzer.de/rebsorten/ortega",
+            "wine": "2025 Horrweiler Ortega Auslese (WirWinzer)"
+          },
+          {
+            "producer": "Franz Jäckel",
+            "sourceUrl": "https://wirwinzer.de/rebsorten/ortega",
+            "wine": "2025 Herzensstürmer (WirWinzer)"
+          },
+          {
+            "producer": "Georg und Johannes Jung",
+            "sourceUrl": "https://wirwinzer.de/rebsorten/ortega",
+            "wine": "2025 Undenheim Ortega (WirWinzer)"
+          }
+        ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Great British Wine",
+        "sourceUrl": "https://www.greatbritishwine.com/grapevariety/ortega"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://biddendenvineyards.com/product/ortega/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Biddenden Vineyards",
+            "sourceUrl": "https://biddendenvineyards.com/product/ortega/",
+            "wine": "Biddenden Ortega 2024"
+          },
+          {
+            "producer": "Davenport Vineyards",
+            "sourceUrl": "https://www.davenportvineyards.co.uk/product-page/2023-ortega",
+            "wine": "Davenport Ortega 2023"
+          },
+          {
+            "producer": "Forty Hall Vineyard",
+            "sourceUrl": "https://www.fortyhallvineyard.com/products/ortega23_organic",
+            "wine": "Forty Hall Ortega 2023"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://biddendenvineyards.com/product/ortega/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12,
+            "producer": "Biddenden Vineyards",
+            "sourceUrl": "https://biddendenvineyards.com/product/ortega/",
+            "wine": "Biddenden Ortega 2024"
+          },
+          {
+            "abv": 11,
+            "producer": "Davenport Vineyards",
+            "sourceUrl": "https://www.davenportvineyards.co.uk/product-page/2023-ortega",
+            "wine": "Davenport Ortega 2023"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Westwell Wines",
+            "sourceUrl": "https://www.westwellwines.com/products/ortega-2025",
+            "wine": "Westwell Ortega 2025"
+          }
+        ]
+      }
+    ],
+    "id": "ortega",
+    "names": {
+      "en": "Ortega",
+      "es": "Ortega",
+      "ca": "Ortega",
+      "fr": "Ortega",
+      "de": "Ortega",
+      "it": "Ortega",
+      "nl": "Ortega",
+      "pt": "Ortega"
+    },
+    "origin": "DE",
+    "pairings": [
+      "soft cheese",
+      "poultry",
+      "seafood"
+    ],
+    "prominence": 7,
+    "regions": [],
+    "styles": [],
+    "summaries": {
+      "en": {
+        "text": "Ortega is a grape variety used for white wine. It was created in 1948 by Hans Breider at the Bayerischen Landesanstalt für Wein-, Obst- und Gartenbau in Würzburg and was released with varietal protection in 1981. It is a cross between Müller-Thurgau and Siegerrebe. Breider chose to name the variety in honour of the Spanish poet and philosopher José Ortega y Gasset.",
+        "url": "https://en.wikipedia.org/wiki/Ortega_(grape)"
+      },
+      "es": {
+        "text": "La ortega es una variedad de uva usada para hacer vino blanco. Fue creada en 1948 por Hans Breider en el Bayerischen Landesanstalt für Wein-, Obst- und Gartenbau, en Wurzburgo, Alemania, y fue empleada como variedad protegida a partir de 1981. Es un cruce entre la müller-thurgau y la siegerrebe. Breider escogió el nombre de la variedad en honor del poeta y filósofo español José Ortega y Gasset.",
+        "url": "https://es.wikipedia.org/wiki/Ortega_(uva)"
+      },
+      "fr": {
+        "text": "L’ortega est un cépage de cuve allemand de raisins blancs.",
+        "url": "https://fr.wikipedia.org/wiki/Ortega_(c%C3%A9page)"
+      },
+      "de": {
+        "text": "Die Weißweinsorte Ortega wurde 1948 durch Hans Breider an der Bayerischen Landesanstalt für Weinbau und Gartenbau in Veitshöchheim aus Müller-Thurgau × Siegerrebe gekreuzt und 1972 klassifiziert. Die Sorte Ortega hat Breider dem Philosophen José Ortega y Gasset gewidmet. Der Eintrag in die Sortenliste erfolgte im Jahr 1981, nachdem im Jahr 1971 der Sortenschutz erteilt worden war.",
+        "url": "https://de.wikipedia.org/wiki/Ortega_(Rebsorte)"
+      },
+      "nl": {
+        "text": "De ortega is een witte druif die gebruikt wordt voor witte wijn. Het is een kruising van de Müller-Thurgau x Siegerrebe. Zij werd gecreëerd in 1948 door de Duitse oenoloog Hans Breider van het Bayerischen Landesanstalt für Wein-, Obst- und Gartenbau (het Beierse instituut voor wijn-, fruit- en tuinbouw) in het Duitse Veitshöchheim. In 1972 is zij geclassificeerd en als variëteit beschermd sinds 1981.",
+        "url": "https://nl.wikipedia.org/wiki/Ortega_(wit_druivenras)"
+      },
+      "ca": {
+        "text": "L'ortega és una varietat de raïm per a vi blanc. La va crear el 1948 Hans Breider a la Bayerischen Landesanstalt für Wein-, Obst- und Gartenbau de Würzburg i es va comercialitzar amb protecció varietal el 1981. És un encreuament de müller-thurgau i siegerrebe. Breider va triar el nom de la varietat en honor del poeta i filòsof espanyol José Ortega y Gasset.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ortega_(grape)"
+      },
+      "it": {
+        "text": "L'Ortega è un vitigno usato per il vino bianco. Fu creato nel 1948 da Hans Breider presso la Bayerischen Landesanstalt für Wein-, Obst- und Gartenbau di Würzburg e fu messo in commercio con la protezione varietale nel 1981. È un incrocio tra Müller-Thurgau e Siegerrebe. Breider scelse di dare alla varietà questo nome in onore del poeta e filosofo spagnolo José Ortega y Gasset.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ortega_(grape)"
+      },
+      "pt": {
+        "text": "A Ortega é uma casta usada para vinho branco. Foi criada em 1948 por Hans Breider no Bayerischen Landesanstalt für Wein-, Obst- und Gartenbau, em Würzburg, e foi lançada com proteção varietal em 1981. É um cruzamento entre Müller-Thurgau e Siegerrebe. Breider escolheu o nome da casta em homenagem ao poeta e filósofo espanhol José Ortega y Gasset.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Ortega_(grape)"
+      }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "sweet"
+    },
+    "synonyms": [],
+    "tannin": null,
+    "wikidataId": "Q1418343",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ortega_(grape)"
   }
 ]

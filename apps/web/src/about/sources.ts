@@ -144,6 +144,20 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Great British Wine, páginas de uvas de su guía del vino inglés: solo el dato (acidez de la Ortega), con su enlace",
+    terms: "factOnly",
+    url: "https://www.greatbritishwine.com/grapevariety/ortega",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Tiendas de vino, la ficha de una botella (WirWinzer, The Wine Society, Grape Britannia): solo el dato de ese vino, para el consenso de tres bodegas",
+    terms: "factOnly",
+    url: "https://wirwinzer.de/rebsorten/ortega",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Grand Cru Wijnen, páginas de uvas de la tienda: solo el dato (acidez del Teroldego, seco y dulce del Gros Manseng), con su enlace",
     terms: "factOnly",
     url: "https://www.grandcruwijnen.nl/en/wines/druif/teroldego",
