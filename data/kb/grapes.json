@@ -14095,7 +14095,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -14261,6 +14261,51 @@
             "producer": "Giornata Winery",
             "sourceUrl": "https://giornatawines.com/products/2022-moscato-giallo",
             "wine": "2022 Moscato Giallo"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/alto-adige-doc-moscato-giallo-vogelmaier-alois-lageder-2025.html",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Alois Lageder",
+            "sourceUrl": "https://www.vino.com/dettaglio/alto-adige-doc-moscato-giallo-vogelmaier-alois-lageder-2025.html",
+            "wine": "alto adige doc moscato giallo vogelmaier alois lageder 2025 (vino.com)"
+          },
+          {
+            "producer": "Blumenfeld",
+            "sourceUrl": "https://www.vino.com/dettaglio/sudtirol-alto-adige-doc-goldmuskateller-blumenfeld-2024.html",
+            "wine": "sudtirol alto adige doc goldmuskateller blumenfeld 2024 (vino.com)"
+          },
+          {
+            "producer": "H. Lun",
+            "sourceUrl": "https://www.vino.com/dettaglio/sudtirol-alto-adige-doc-moscato-giallo-1840-h-lun-2025.html",
+            "wine": "sudtirol alto adige doc moscato giallo 1840 h lun 2025 (vino.com)"
+          },
+          {
+            "producer": "Erste Neue",
+            "sourceUrl": "https://www.vino.com/dettaglio/sudtirol-alto-adige-doc-moscato-giallo-erste-neue-2025.html",
+            "wine": "sudtirol alto adige doc moscato giallo erste neue 2025 (vino.com)"
+          },
+          {
+            "producer": "Cantina di Bolzano",
+            "sourceUrl": "https://www.vino.com/dettaglio/sudtirol-alto-adige-doc-moscato-giallo-kellerei-bozen-cantina-bolzano-2025.html",
+            "wine": "sudtirol alto adige doc moscato giallo kellerei bozen cantina bolzano 2025 (vino.com)"
+          },
+          {
+            "producer": "Mezzacorona",
+            "sourceUrl": "https://www.vino.com/dettaglio/trentino-doc-moscato-giallo-castel-firmian-mezzacorona-2025.html",
+            "wine": "trentino doc moscato giallo castel firmian mezzacorona 2025 (vino.com)"
+          },
+          {
+            "producer": "Ritterhof",
+            "sourceUrl": "https://www.vino.com/dettaglio/vigneti-delle-dolomiti-igt-moscato-giallo-ritterhof-2025.html",
+            "wine": "vigneti delle dolomiti igt moscato giallo ritterhof 2025 (vino.com)"
           }
         ]
       }
@@ -21923,7 +21968,7 @@
     "aromas": [
       "herbs"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -22075,6 +22120,41 @@
             "producer": "Weingut Christ",
             "sourceUrl": "https://www.weingut-christ.de/products/silvaner-trocken-literwein",
             "wine": "Silvaner Trocken Literwein"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/alto-adige-valle-isarco-doc-2024-sylvaner-kofererhof.html",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Köfererhof",
+            "sourceUrl": "https://www.vino.com/dettaglio/alto-adige-valle-isarco-doc-2024-sylvaner-kofererhof.html",
+            "wine": "alto adige valle isarco doc 2024 sylvaner kofererhof (vino.com)"
+          },
+          {
+            "producer": "Abbazia di Novacella",
+            "sourceUrl": "https://www.vino.com/dettaglio/alto-adige-valle-isarco-doc-praepositus-sylvaner-abbazia-di-novacella-2023.html",
+            "wine": "alto adige valle isarco doc praepositus sylvaner abbazia di novacella 2023 (vino.com)"
+          },
+          {
+            "producer": "Cantina Valle Isarco",
+            "sourceUrl": "https://www.vino.com/dettaglio/sudtirol-alto-adige-valle-isarco-doc-aristos-sylvaner-eisacktaler-kellerei-2023.html",
+            "wine": "sudtirol alto adige valle isarco doc aristos sylvaner eisacktaler kellerei 2023 (vino.com)"
+          },
+          {
+            "producer": "Adler von Klausen",
+            "sourceUrl": "https://www.vino.com/dettaglio/sudtirol-alto-adige-valle-isarco-doc-sylvaner-adler-von-klausen-2024.html",
+            "wine": "sudtirol alto adige valle isarco doc sylvaner adler von klausen 2024 (vino.com)"
+          },
+          {
+            "producer": "Villscheider",
+            "sourceUrl": "https://www.vino.com/dettaglio/sudtirol-alto-adige-valle-isarco-sylvaner-villscheider-2023.html",
+            "wine": "sudtirol alto adige valle isarco sylvaner villscheider 2023 (vino.com)"
           }
         ]
       }
@@ -31630,6 +31710,36 @@
         "factOnly": true,
         "publisher": "Weinfreunde",
         "sourceUrl": "https://www.weinfreunde.de/c/rebsorte/cinsault/"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://wineparadigm.com/cinsault/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wine Paradigm",
+            "sourceUrl": "https://wineparadigm.com/cinsault/",
+            "wine": "Cinsault"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/cinsault/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/cinsault/",
+            "wine": "Cinsault"
+          }
+        ]
       }
     ],
     "id": "cinsaut",
@@ -60065,7 +60175,7 @@
     "aromas": [
       "citrus"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -60187,6 +60297,51 @@
             "producer": "Guicciardini Strozzi",
             "sourceUrl": "https://guicciardinistrozzi.it/en/vini/vernaccia-guicciardini-strozzi-en/",
             "wine": "Vernaccia Guicciardini Strozzi En"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-bertesca-castelli-del-grevepesa-2024.html",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Castelli del Grevepesa",
+            "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-bertesca-castelli-del-grevepesa-2024.html",
+            "wine": "vernaccia di san gimignano docg bertesca castelli del grevepesa 2024 (vino.com)"
+          },
+          {
+            "producer": "Casalino",
+            "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-casalino-2025.html",
+            "wine": "vernaccia di san gimignano docg casalino 2025 (vino.com)"
+          },
+          {
+            "producer": "Tollena",
+            "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-lunario-tollena-2025.html",
+            "wine": "vernaccia di san gimignano docg lunario tollena 2025 (vino.com)"
+          },
+          {
+            "producer": "Panizzi",
+            "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-panizzi-2025.html",
+            "wine": "vernaccia di san gimignano docg panizzi 2025 (vino.com)"
+          },
+          {
+            "producer": "Borgo San Frediano",
+            "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-riserva-borgo-san-frediano-2023.html",
+            "wine": "vernaccia di san gimignano docg riserva borgo san frediano 2023 (vino.com)"
+          },
+          {
+            "producer": "Salcheto",
+            "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-salcheto-2024.html",
+            "wine": "vernaccia di san gimignano docg salcheto 2024 (vino.com)"
+          },
+          {
+            "producer": "Il Colombaio di Santa Chiara",
+            "sourceUrl": "https://www.vino.com/dettaglio/vernaccia-di-san-gimignano-docg-selvabianca-il-colombaio-di-santa-chiara-2025.html",
+            "wine": "vernaccia di san gimignano docg selvabianca il colombaio di santa chiara 2025 (vino.com)"
           }
         ]
       }

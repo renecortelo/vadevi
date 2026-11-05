@@ -33,6 +33,11 @@ has the reasons.
 
 ### Library
 
+- **Body for Silvaner and Vernaccia (medium) and Moscato Giallo (light)**,
+  from the bottles Vino.com describes — five, seven and seven producers'
+  single-variety wines — and Cinsault's acidity now says the sources
+  disagree (Wine Paradigm high, Vine&Wine moderate).
+
 - **Thirty-one acidity and tannin levels now say the sources disagree**:
   where Vine&Wine's variety profile gives another level than the one the
   card held — Merlot's acidity, Montepulciano's and Nero d'Avola's acidity

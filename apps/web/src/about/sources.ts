@@ -137,7 +137,7 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Tiendas de vino, la descripción de una botella (Vino.com): solo el dato, contado como la ficha de ese vino, y para mostrar que las fuentes no coinciden",
+    name: "Tiendas de vino, la descripción de una botella (Vino.com: cuerpo, dosaggio, maridajes): solo el dato, contado como la ficha de ese vino para el consenso de tres bodegas, y para mostrar que las fuentes no coinciden",
     terms: "factOnly",
     url: "https://www.vino.com/dettaglio/marche-igt-passerina-belisario-2025.html",
     what: "traits",
