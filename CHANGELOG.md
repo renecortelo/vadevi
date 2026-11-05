@@ -33,6 +33,10 @@ has the reasons.
 
 ### Library
 
+- **The SAQ is no longer a source**: its legal notice forbids any
+  commercial use of the data on its site, not only its text. Savagnin's
+  high acidity came from it alone and is a gap again.
+
 - **Prieto Picudo goes with stews and roasts**, from three producers'
   bottles as Vinissimus and Vinopremier describe them (Dominio Dostares,
   Tridente, Raíces Ibéricas). Roasts is a new word in the library's

@@ -41732,7 +41732,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Canaiolo"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "nutty",
@@ -41943,14 +41943,6 @@
         "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
         "value": "duck",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
-      },
-      {
-        "field": "acidity",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Société des alcools du Québec (SAQ)",
-        "sourceUrl": "https://www.saq.com/fr/contenu/inspiration/culture-vigne/cepage-savagnin"
       }
     ],
     "id": "savagnin",
