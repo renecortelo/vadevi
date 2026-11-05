@@ -41,19 +41,14 @@ has the reasons.
   and Wines of Hungary's Osaka Expo catalogue). About a hundred facts go with
   them — most of the alcohol levels agreed from competition entries,
   Vinerra's profiles — and those fields are gaps again unless another
-  source says the same. Shops that only forbid copying their text are still
-  cited for the fact alone, with a link.
+  source says the same. The same goes for forty wineries' own sites with such
+  a clause, Menin and Barbadillo among them. Shops and wineries that only
+  forbid copying their text are still cited for the fact alone, with a link.
 
 - **Prieto Picudo goes with stews and roasts**, from three producers'
   bottles as Vinissimus and Vinopremier describe them (Dominio Dostares,
   Tridente, Raíces Ibéricas). Roasts is a new word in the library's
   pairings, in all eight languages.
-
-- **Sousão is dry**, from the residual sugar on three producers' sheets:
-  Quinta do Vallado, Menin and Quinta da Pacheca.
-
-- **Plavac Mali goes with grilled meats, lamb and steak**, from Wine&more's
-  page on the grape.
 
 - **Body for Blaufränkisch and Xinomavro (medium)**, from The Wine
   Society's bottles: four Austrian and German producers of five, and six
