@@ -142,7 +142,8 @@ export function alcoholFigure(quote: string): number | null {
     /(?:alcool|alcohol|alcol|alkohol)[^\d]{0,20}?%\s?vol\.?\)?:?\s?(\d{1,2}(?:[.,]\d{1,2})?)/i.exec(
       quote,
     ) ??
-    /(?:alcool|alcohol|alcol|alkohol)\D{0,20}?(\d{1,2}(?:[.,]\d{1,2})?)\s?vol\b/i.exec(quote);
+    /(?:alcool|alcohol|alcol|alkohol)\D{0,20}?(\d{1,2}(?:[.,]\d{1,2})?)\s?vol\b/i.exec(quote) ??
+    /\balc\.? by vol\.?\s?\(%\):?\s?(\d{1,2}(?:[.,]\d{1,2})?)/i.exec(quote);
   return found === null ? null : Number(found[1]!.replace(",", "."));
 }
 

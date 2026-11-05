@@ -51,6 +51,10 @@ has the reasons.
   automated access altogether. Chinuri's and Tsolikouri's alcohol and
   Loureira's pairing are gaps again.
 
+- **Wine Australia's region pages are no longer quoted**: their default terms
+  allow personal, non-commercial use only. Murray Darling and Swan Hill lose
+  their grapes; Wine Australia's boundaries, under CC BY, stay.
+
 - **Winery sheets take over from the removed sources**: Pinot Noir moderate
   in alcohol from sixty producers, Encruzado, Arneis, Mtsvane, Erbaluce,
   Grechetto and Aligoté moderate, Khikhvi dry, Assyrtiko with seafood and

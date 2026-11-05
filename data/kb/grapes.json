@@ -60268,7 +60268,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "apple"
     ],
@@ -60368,6 +60368,34 @@
         "quote": "Вживається з легкими закусками, стравами з риби та морепродуктів, м'якими сирами",
         "value": "soft cheese",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%B1%D0%B0%D0%BB%D1%83%D1%87%D0%B5"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/en/dettaglio/erbaluce-di-caluso-docg-la-rustia-orsolani-2017.html",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Orsolani",
+            "sourceUrl": "https://www.vino.com/en/dettaglio/erbaluce-di-caluso-docg-la-rustia-orsolani-2017.html",
+            "wine": "Erbaluce di Caluso DOCG La Rustìa 2017"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vite Colte",
+            "sourceUrl": "https://www.vino.com/dettaglio/erbaluce-di-caluso-docg-merlana-vite-colte-2025.html",
+            "wine": "Erbaluce di Caluso DOCG Merlana 2025"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Ferrando",
+            "sourceUrl": "https://creamwine.com/product.php?id=22474",
+            "wine": "Erbaluce di Caluso DOCG Etichetta Bianca 2024"
+          }
+        ]
       }
     ],
     "id": "erbaluce",

@@ -469,6 +469,7 @@ describe("a sheet's alcohol", () => {
     expect(alcoholFigure("Gradazione alcolica 13° C")).toBeNull();
     expect(alcoholFigure("ALCOHOL (%VOL.): 13,0 TOTAL")).toBe(13);
     expect(alcoholFigure("ALCOHOLIC STRENGTH 13 vol.")).toBe(13);
+    expect(alcoholFigure("Alc by Vol(%): 12.5")).toBe(12.5);
     expect(alcoholFigure("75 cl, 13 vol.")).toBeNull();
   });
 });
