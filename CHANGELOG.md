@@ -33,6 +33,9 @@ has the reasons.
 
 ### Library
 
+- **Plavac Mali goes with grilled meats, lamb and steak**, from Wine&more's
+  page on the grape.
+
 - **Body for Blaufränkisch and Xinomavro (medium)**, from The Wine
   Society's bottles: four Austrian and German producers of five, and six
   Greek producers of seven.

@@ -42174,6 +42174,30 @@
         "quote": "Die körperreichen Rotweine sind meist sehr dunkel, alkoholreich",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Plavac_Mali_Crni"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "grilled meats",
+        "factOnly": true,
+        "publisher": "Wine&more",
+        "sourceUrl": "https://www.wineandmore.com/food-pairing-with-plavac-mali/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Wine&more",
+        "sourceUrl": "https://www.wineandmore.com/food-pairing-with-plavac-mali/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "steak",
+        "factOnly": true,
+        "publisher": "Wine&more",
+        "sourceUrl": "https://www.wineandmore.com/food-pairing-with-plavac-mali/"
       }
     ],
     "id": "plavac-mali",
@@ -42188,7 +42212,11 @@
       "pt": "Plavac Mali"
     },
     "origin": "HR",
-    "pairings": [],
+    "pairings": [
+      "grilled meats",
+      "lamb",
+      "steak"
+    ],
     "prominence": 14,
     "regions": [
       {

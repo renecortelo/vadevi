@@ -172,6 +172,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Wine&more, páginas de uvas de la tienda: solo el dato (maridajes del Plavac Mali), con su enlace",
+    terms: "factOnly",
+    url: "https://www.wineandmore.com/food-pairing-with-plavac-mali/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Grand Cru Wijnen, páginas de uvas de la tienda: solo el dato (acidez del Teroldego, seco y dulce del Gros Manseng), con su enlace",
     terms: "factOnly",
     url: "https://www.grandcruwijnen.nl/en/wines/druif/teroldego",
