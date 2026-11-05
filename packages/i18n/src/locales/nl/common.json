@@ -99,6 +99,7 @@
     "moreWines_one": "nog {{count}} wijn",
     "moreWines_other": "nog {{count}} wijnen",
     "noSourceValue": "geen gegeven in de bronnen",
+    "sourcesDisagree": "de bronnen spreken elkaar tegen",
     "kind": {
       "still": "stille wijn",
       "sparkling": "mousserende wijn",

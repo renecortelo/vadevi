@@ -99,6 +99,7 @@
     "moreWines_one": "{{count}} vi més",
     "moreWines_other": "{{count}} vins més",
     "noSourceValue": "sense dada a les fonts",
+    "sourcesDisagree": "les fonts no coincideixen",
     "kind": {
       "still": "vi tranquil",
       "sparkling": "escumós",

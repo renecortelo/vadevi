@@ -34,8 +34,11 @@ export const LibraryEvidenceSchema = z
      * `producers-sugar`: the residual sugar each sheet gives, dry or sweet by
      * the EU's labelling terms (dry to 4 g/l, sweet above 45), with each
      * wine's figure.
+     * `disputed`: sources the library holds valid disagree on this field, so
+     * it stays empty; one entry for each value they give, with who gives it
+     * (`wines`, each linked).
      */
-    basis: z.enum(["producers", "producers-abv", "producers-sugar"]).nullable(),
+    basis: z.enum(["producers", "producers-abv", "producers-sugar", "disputed"]).nullable(),
     wines: z
       .array(
         z

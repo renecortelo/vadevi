@@ -63507,5 +63507,310 @@
     "tannin": "low",
     "wikidataId": "Q2405039",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Teroldego"
+  },
+  {
+    "acidity": "high",
+    "alcohol": "medium",
+    "aromas": [
+      "citrus"
+    ],
+    "body": null,
+    "color": "white",
+    "evidence": [
+      {
+        "field": "color",
+        "quote": "Passerina is both a rare local white grape that is found in the Italian region of Marche",
+        "value": "white"
+      },
+      {
+        "field": "origin",
+        "quote": "Italian region of Marche",
+        "value": "IT"
+      },
+      {
+        "field": "synonyms",
+        "quote": "Known by various names, such as \"Pagadebito Gentile\", \"Campolese\" and \"Uva Passera\"",
+        "value": "Pagadebito Gentile"
+      },
+      {
+        "field": "synonyms",
+        "quote": "Known by various names, such as \"Pagadebito Gentile\", \"Campolese\" and \"Uva Passera\"",
+        "value": "Campolese"
+      },
+      {
+        "field": "synonyms",
+        "quote": "Known by various names, such as \"Pagadebito Gentile\", \"Campolese\" and \"Uva Passera\"",
+        "value": "Uva Passera"
+      },
+      {
+        "field": "regions",
+        "quote": "Passerina is used in some Marche wine blends, including the DOC Falerio dei Colli Ascolani.",
+        "value": "IT: Marche"
+      },
+      {
+        "field": "regions",
+        "quote": "Passerina is used in some Marche wine blends, including the DOC Falerio dei Colli Ascolani.",
+        "value": "IT: DOC Falerio dei Colli Ascolani"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Italy Abroad",
+        "sourceUrl": "https://www.italyabroad.com/grapes/passerina"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pasta",
+        "factOnly": true,
+        "publisher": "Italy Abroad",
+        "sourceUrl": "https://www.italyabroad.com/grapes/passerina"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://tenutadelpriore.it/prodotto/campotino-passerina-terre-dabruzzo-igt/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.5,
+            "producer": "Tenuta del Priore",
+            "sourceUrl": "https://tenutadelpriore.it/prodotto/campotino-passerina-terre-dabruzzo-igt/",
+            "wine": "Campotino Passerina Terre d'Abruzzo IGT"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantine di Castignano",
+            "sourceUrl": "https://www.cantinedicastignano.com/prodotto/offida-passerina-docg-bio/",
+            "wine": "Offida Passerina DOCG Bio"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vini La Quercia",
+            "sourceUrl": "https://www.vinilaquercia.it/vini/vini-bianchi/abruzzo-doc-passerina-superiore-santapupa/",
+            "wine": "Santapupa Abruzzo DOC Passerina Superiore"
+          },
+          {
+            "abv": 13,
+            "producer": "Pasetti Vini",
+            "sourceUrl": "https://www.pasettivini.it/cn/%e5%88%b6%e5%93%81/%e7%99%bd%e8%91%a1%e8%90%84%e9%85%92/testarossa-passerina/",
+            "wine": "Testarossa Passerina"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Cantina Madonna dei Miracoli",
+            "sourceUrl": "https://vinicasalbordino.com/prodotto/villa-adami-passerina/",
+            "wine": "Villa Adami Passerina"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "aromas",
+        "quote": "",
+        "sourceUrl": "https://www.pasettivini.it/cn/%e5%88%b6%e5%93%81/%e7%99%bd%e8%91%a1%e8%90%84%e9%85%92/testarossa-passerina/",
+        "value": "citrus",
+        "wines": [
+          {
+            "producer": "Pasetti Vini",
+            "sourceUrl": "https://www.pasettivini.it/cn/%e5%88%b6%e5%93%81/%e7%99%bd%e8%91%a1%e8%90%84%e9%85%92/testarossa-passerina/",
+            "wine": "Testarossa Passerina"
+          },
+          {
+            "producer": "Cantina Lampato",
+            "sourceUrl": "https://lampato.com/vino-passerina-igt-lamagella-lazio/",
+            "wine": "Lamagella Passerina IGT Lazio"
+          },
+          {
+            "producer": "Vini La Quercia",
+            "sourceUrl": "https://www.vinilaquercia.it/vini/vini-bianchi/abruzzo-doc-passerina-superiore-santapupa/",
+            "wine": "Santapupa Abruzzo DOC Passerina Superiore"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.baronedivalforte.it/prodotto/abruzzo-passerina-d-o-c/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Barone di Valforte",
+            "sourceUrl": "https://www.baronedivalforte.it/prodotto/abruzzo-passerina-d-o-c/",
+            "wine": "Abruzzo Passerina DOC"
+          },
+          {
+            "producer": "Carminucci",
+            "sourceUrl": "https://www.carminucci.com/products/marche-igt-passerina-1",
+            "wine": "Marche IGT Passerina"
+          },
+          {
+            "producer": "Tenuta del Priore",
+            "sourceUrl": "https://tenutadelpriore.it/prodotto/sunnae-passerina-terre-dabruzzo-igt/",
+            "wine": "Sunnae Passerina Terre d'Abruzzo IGT"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://www.pasettivini.it/cn/%e5%88%b6%e5%93%81/%e7%99%bd%e8%91%a1%e8%90%84%e9%85%92/testarossa-passerina/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Pasetti Vini",
+            "sourceUrl": "https://www.pasettivini.it/cn/%e5%88%b6%e5%93%81/%e7%99%bd%e8%91%a1%e8%90%84%e9%85%92/testarossa-passerina/",
+            "wine": "Testarossa Passerina"
+          },
+          {
+            "producer": "Tenuta Cervelli",
+            "sourceUrl": "https://www.ice.it/en/my-home/repository/vetrine/566368/1690376662.9523.pdf",
+            "wine": "Sciùme Passerina del Frusinate IGT"
+          },
+          {
+            "producer": "Cantine Roveri",
+            "sourceUrl": "https://www.cantineroveri.it/tirabuccia-passerina/",
+            "wine": "Tirabuccia Passerina IGT Terre di Chieti"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.citra.it/en/wines/passerina",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Citra",
+            "sourceUrl": "https://www.citra.it/en/wines/passerina",
+            "wine": "Passerina"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://cantinatollo.it/iconic/passerina-terre-dabruzzo-igp/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Cantina Tollo",
+            "sourceUrl": "https://cantinatollo.it/iconic/passerina-terre-dabruzzo-igp/",
+            "wine": "Passerina Terre d'Abruzzo IGP"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/marche-igt-passerina-belisario-2025.html",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Belisario",
+            "sourceUrl": "https://www.vino.com/dettaglio/marche-igt-passerina-belisario-2025.html",
+            "wine": "Marche IGT Passerina 2025 (vino.com)"
+          }
+        ]
+      }
+    ],
+    "id": "passerina",
+    "names": {
+      "en": "Passerina",
+      "es": "Passerina",
+      "ca": "Passerina",
+      "fr": "Passerina",
+      "de": "Passerina",
+      "it": "Passerina",
+      "nl": "Passerina",
+      "pt": "Passerina"
+    },
+    "origin": "IT",
+    "pairings": [
+      "seafood",
+      "pasta"
+    ],
+    "prominence": 6,
+    "regions": [
+      {
+        "country": "IT",
+        "name": "Marche"
+      },
+      {
+        "country": "IT",
+        "name": "DOC Falerio dei Colli Ascolani"
+      }
+    ],
+    "styles": [],
+    "summaries": {
+      "en": {
+        "text": "Passerina is both a rare local white grape that is found in the Italian region of Marche, and a DOC for wines of the same name. Many researchers have studied its identity, so to boast an extensive bibliography and a high number of citations of the grapes on the most famous treatises of ampelography. However, its origins remain uncertain.",
+        "url": "https://en.wikipedia.org/wiki/Passerina_(grape)"
+      },
+      "fr": {
+        "text": "La  passerina est un cépage italien de raisins blancs.",
+        "url": "https://fr.wikipedia.org/wiki/Passerina_(c%C3%A9page)"
+      },
+      "de": {
+        "text": "Passerina ist eine autochthone Weißweinsorte Mittelitaliens. Man findet Anbauflächen in den Regionen Abruzzen, Marken, Umbrien und Latium. Empfohlen ist ihr Anbau in den Provinzen Ancona, Ascoli Piceno, Frosinone, Macerata. Zugelassen ist sie in der Provinz Teramo. Im Jahr 1999 wurde eine bestockte Rebfläche von 1.160 Hektar erhoben. Sie wird häufig als Tafeltraube verwendet.",
+        "url": "https://de.wikipedia.org/wiki/Passerina_(Rebsorte)"
+      },
+      "it": {
+        "text": "La Passerina è un vitigno a bacca bianca, originario dell'area del medio Adriatico.",
+        "url": "https://it.wikipedia.org/wiki/Passerina_(vitigno)"
+      },
+      "es": {
+        "text": "La passerina es a la vez una uva blanca local poco común que se encuentra en la región italiana de las Marcas y una DOC de vinos del mismo nombre. Muchos investigadores han estudiado su identidad, de modo que cuenta con una extensa bibliografía y un gran número de citas en los tratados de ampelografía más famosos. Sin embargo, su origen sigue siendo incierto.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Passerina_(grape)"
+      },
+      "ca": {
+        "text": "La passerina és alhora un raïm blanc local poc comú que es troba a la regió italiana de les Marques i una DOC de vins del mateix nom. Molts investigadors n'han estudiat la identitat, de manera que compta amb una extensa bibliografia i un gran nombre de cites als tractats d'ampelografia més famosos. Tanmateix, el seu origen continua sent incert.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Passerina_(grape)"
+      },
+      "nl": {
+        "text": "Passerina is zowel een zeldzame lokale witte druif uit de Italiaanse regio Marche als een DOC voor wijnen met dezelfde naam. Veel onderzoekers hebben haar identiteit bestudeerd, zodat er een uitgebreide bibliografie en een groot aantal vermeldingen van de druif in de bekendste ampelografische verhandelingen bestaan. Haar herkomst blijft echter onzeker.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Passerina_(grape)"
+      },
+      "pt": {
+        "text": "A Passerina é simultaneamente uma rara casta branca local que se encontra na região italiana das Marcas e uma DOC de vinhos com o mesmo nome. Muitos investigadores estudaram a sua identidade, pelo que conta com uma extensa bibliografia e um elevado número de citações nos mais famosos tratados de ampelografia. No entanto, a sua origem continua incerta.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Passerina_(grape)"
+      }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
+    "synonyms": [
+      {
+        "name": "Pagadebito Gentile",
+        "source": "article"
+      },
+      {
+        "name": "Campolese",
+        "source": "article"
+      }
+    ],
+    "tannin": null,
+    "wikidataId": "Q614760",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Passerina_(grape)"
   }
 ]

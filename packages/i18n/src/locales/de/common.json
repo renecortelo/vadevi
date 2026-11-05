@@ -99,6 +99,7 @@
     "moreWines_one": "{{count}} weiterer Wein",
     "moreWines_other": "{{count}} weitere Weine",
     "noSourceValue": "keine Angabe in den Quellen",
+    "sourcesDisagree": "die Quellen widersprechen sich",
     "kind": {
       "still": "Stillwein",
       "sparkling": "Schaumwein",

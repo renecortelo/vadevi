@@ -123,7 +123,7 @@ function searchTerms(message: string): string[] {
  * EU's labelling terms — enough to bear it, as the card lists all.
  */
 function citedWines(entry: {
-  basis: "producers" | "producers-abv" | "producers-sugar" | null;
+  basis: "producers" | "producers-abv" | "producers-sugar" | "disputed" | null;
   value: string;
   wines: { abv?: number | undefined; sourceUrl: string; sugar?: number | undefined }[] | null;
 }): string[] | null {
@@ -879,7 +879,8 @@ async function loadLibraryStatements(
       const urls = [
         ...new Set(
           card.evidence
-            .filter((entry) => fields.includes(entry.field))
+            // A field its sources dispute is not said, so not cited.
+            .filter((entry) => fields.includes(entry.field) && entry.basis !== "disputed")
             // A fact taken from wines is cited to each of them.
             .flatMap((entry) => citedWines(entry) ?? [entry.sourceUrl]),
         ),
@@ -915,7 +916,9 @@ async function loadLibraryStatements(
     const placeOf = (field: string) =>
       card.evidence.find((entry) => entry.field === field && entry.place !== null)?.place ?? null;
     const producersOf = (field: string) =>
-      card.evidence.find((entry) => entry.field === field && entry.basis !== null) ?? null;
+      card.evidence.find(
+        (entry) => entry.field === field && entry.basis !== null && entry.basis !== "disputed",
+      ) ?? null;
     const placed = (field: string, text: string) => {
       const place = placeOf(field);
       const producers = producersOf(field);

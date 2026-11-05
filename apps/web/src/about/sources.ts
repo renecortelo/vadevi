@@ -123,7 +123,7 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Las páginas de bodegas y rutas del vino sobre una uva, no sobre uno de sus vinos: Quinta da Alameda, Bodegas Monje, Siston Brook Vineyard, Douloufakis, Winemakers of Northern Greece, la Rota de Vinhos da Península de Setúbal, el Instituto de la Vid y el Vino de Pleven, Madeira Wine Company, Taste Trentino (Trentino Marketing), Mezzacorona y el Consejo Regulador de la D.O. Ribeiro (cada una enlazada en la ficha de la uva)",
+    name: "Las páginas de bodegas y rutas del vino sobre una uva, no sobre uno de sus vinos: Quinta da Alameda, Bodegas Monje, Siston Brook Vineyard, Douloufakis, Winemakers of Northern Greece, la Rota de Vinhos da Península de Setúbal, el Instituto de la Vid y el Vino de Pleven, Madeira Wine Company, Taste Trentino (Trentino Marketing), Mezzacorona, Citra y el Consejo Regulador de la D.O. Ribeiro (cada una enlazada en la ficha de la uva)",
     terms: "factOnly",
     url: "https://www.quintadaalameda.com/en/vinho-e-saber/alfrocheiro-grape-variety",
     what: "traits",
@@ -133,6 +133,13 @@ export const sources: Source[] = [
     name: "Wine Paradigm (Pocket Wine), fichas de uvas: solo el nivel que da la ficha (cuerpo, acidez), con su enlace",
     terms: "factOnly",
     url: "https://wineparadigm.com/zweigelt/",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Tiendas de vino, la descripción de una botella (Vino.com): solo el dato, contado como la ficha de ese vino, y para mostrar que las fuentes no coinciden",
+    terms: "factOnly",
+    url: "https://www.vino.com/dettaglio/marche-igt-passerina-belisario-2025.html",
     what: "traits",
   },
   {

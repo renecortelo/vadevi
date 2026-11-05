@@ -282,8 +282,9 @@ export async function getLibraryGrape(
       basis:
         row.basis === "producers" ||
         row.basis === "producers-abv" ||
-        row.basis === "producers-sugar"
-          ? (row.basis as "producers" | "producers-abv" | "producers-sugar")
+        row.basis === "producers-sugar" ||
+        row.basis === "disputed"
+          ? (row.basis as "producers" | "producers-abv" | "producers-sugar" | "disputed")
           : null,
       factOnly: row.fact_only === 1,
       field: row.field,

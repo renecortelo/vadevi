@@ -33,6 +33,17 @@ has the reasons.
 
 ### Library
 
+- **Passerina joins the library**: dry, high in acidity, with citrus
+  aromas, seafood and pasta, medium alcohol — from three producers'
+  sheets each (Barone di Valforte, Carminucci, Tenuta del Priore; Pasetti,
+  Tenuta Cervelli, Cantine Roveri) and Italy Abroad.
+- **A grape's card says when its sources disagree**: where pages the
+  library would take disagree on a field — Passerina's body is full for
+  Citra, medium for Cantina Tollo, light for a Belisario — the gauge says
+  «the sources disagree» and the evidence lists each side, linked, instead
+  of picking one. The field still counts as missing.
+- **Alcohol on French sheets written in degrees** («Degré d'alcool 11°»)
+  is read like a percentage, never a serving temperature.
 - **Teroldego joins the library**, the first grape added because the
   registers name it: from Trentino, dry, low in tannin, full-bodied and
   high in acidity, with red meat and hard cheese. Each fact cites its

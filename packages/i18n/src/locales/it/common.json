@@ -99,6 +99,7 @@
     "moreWines_one": "{{count}} altro vino",
     "moreWines_other": "altri {{count}} vini",
     "noSourceValue": "nessun dato nelle fonti",
+    "sourcesDisagree": "le fonti non concordano",
     "kind": {
       "still": "vino fermo",
       "sparkling": "spumante",

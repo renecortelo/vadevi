@@ -704,7 +704,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -6546,7 +6546,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -19693,7 +19693,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -37504,7 +37504,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -53279,7 +53279,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -66099,7 +66099,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -69192,7 +69192,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -79957,7 +79957,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -117080,7 +117080,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -124220,7 +124220,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -153647,7 +153647,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -164107,6 +164107,11 @@
         "grapeId": "pecorino",
         "quote": "Pecorino ... grows in the Marche, Abruzzo, Tuscany, Umbria and Lazio regions of Italy.",
         "sourceUrl": "https://en.wikipedia.org/wiki/Pecorino_(grape)"
+      },
+      {
+        "grapeId": "passerina",
+        "quote": "Passerina is used in some Marche wine blends, including the DOC Falerio dei Colli Ascolani.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Passerina_(grape)"
       }
     ],
     "id": "it-marche",
@@ -164310,7 +164315,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -187606,7 +187611,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -192081,7 +192086,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -251632,7 +251637,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -261390,7 +261395,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -262546,7 +262551,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {
@@ -263924,7 +263929,7 @@
       ],
       "grapes": [
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         }
       ],
@@ -272400,7 +272405,7 @@
           "name": "Pecorino"
         },
         {
-          "grapeId": null,
+          "grapeId": "passerina",
           "name": "Passerina"
         },
         {

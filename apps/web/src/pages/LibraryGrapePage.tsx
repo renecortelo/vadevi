@@ -100,6 +100,11 @@ export function LibraryGrapePage() {
   const axes = (["acidity", "tannin", "body", "alcohol"] as const).filter(
     (axis) => !(axis === "tannin" && grape.color === "white" && grape.tannin === null),
   );
+  // A field its sources disagree on stays empty, and says so.
+  const disputed = (field: string) =>
+    grape.evidence.some((entry) => entry.field === field && entry.basis === "disputed");
+  const unknown = (field: string) =>
+    t(disputed(field) ? "library.sourcesDisagree" : "library.noSourceValue");
   const structure = [
     ...axes.filter((axis) => grape[axis] !== null),
     ...(grape.sweetness === null ? [] : ["sweetness"]),
@@ -170,7 +175,7 @@ export function LibraryGrapePage() {
   const placeNote = (
     entry:
       | {
-          basis: "producers" | "producers-abv" | "producers-sugar" | null;
+          basis: "producers" | "producers-abv" | "producers-sugar" | "disputed" | null;
           place: string | null;
           placeId: string | null;
           wines: unknown[] | null;
@@ -407,7 +412,7 @@ export function LibraryGrapePage() {
                       </span>
                       {span === null || degrees === null
                         ? level === null
-                          ? t("library.noSourceValue")
+                          ? unknown(axis)
                           : t(`library.level.${level}`)
                         : ends(
                             span.from,
@@ -441,7 +446,7 @@ export function LibraryGrapePage() {
                       return (
                         <>
                           <span aria-hidden="true" className="library-gauge" />
-                          {t("library.noSourceValue")}
+                          {unknown("sweetness")}
                         </>
                       );
                     }
@@ -579,6 +584,13 @@ export function LibraryGrapePage() {
           <ul>
             {grape.evidence.map((entry) => (
               <li key={`${entry.field}-${entry.value}`}>
+                {/* One side of a disagreement: the field it is about, that
+                    the sources disagree, then what this side says. */}
+                {entry.basis === "disputed" ? (
+                  <>
+                    {t(`library.axis.${entry.field}`)} ({t("library.sourcesDisagree")}){" "}
+                  </>
+                ) : null}
                 <strong>{shown(entry)}</strong>
                 {/* A page that is not openly licensed gives the fact, not its
                     words: the value, then who says it, linked. */}

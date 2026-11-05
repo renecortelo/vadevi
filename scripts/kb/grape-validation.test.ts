@@ -8,6 +8,7 @@ import {
   transliterate,
 } from "./appellation-names";
 import {
+  alcoholFigure,
   mentions,
   originNamed,
   parseRegion,
@@ -457,5 +458,14 @@ describe("a summary taken from a lead", () => {
         "La verdejo es una uva blanca de España. Los estudios genéticos descartan esa teoría",
       ),
     ).toBe("La verdejo es una uva blanca de España. Los estudios genéticos descartan esa teoría");
+  });
+});
+
+describe("a sheet's alcohol", () => {
+  it("reads a percentage, or degrees only where the quote names the alcohol", () => {
+    expect(alcoholFigure("Alcool : 11,5 % Vol.")).toBe(11.5);
+    expect(alcoholFigure("Degré d’alcool 11°")).toBe(11);
+    expect(alcoholFigure("Servir à 10°C")).toBeNull();
+    expect(alcoholFigure("Gradazione alcolica 13° C")).toBeNull();
   });
 });

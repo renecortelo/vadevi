@@ -182,9 +182,12 @@ type WebReading = {
   /**
    * The grape's single-variety wines: three producers or more, agreeing —
    * in words (`producers`) or, for alcohol, in the figure each sheet gives,
-   * a level on WSET's scale (`producers-abv`).
+   * a level on WSET's scale (`producers-abv`). `disputed`: pages the
+   * library would take alone (or wines) that say different things of the
+   * same field — each in `wines`, with the value it says — so the field
+   * stays empty and the card says the sources disagree.
    */
-  basis?: "producers" | "producers-abv" | "producers-sugar";
+  basis?: "producers" | "producers-abv" | "producers-sugar" | "disputed";
   wines?: {
     /** The alcohol the sheet gives, as `quote` says it. */
     abv?: number;
@@ -487,6 +490,38 @@ for (const qid of index) {
       rejected.push(...found.rejected.map((entry) => ({ ...entry, grape: `${grape} ${lang}` })));
       return found;
     };
+    if (reading.basis === "disputed") {
+      // Sources that disagree: each is checked as it would be on its own, and
+      // the disagreement stands only where two values survive. The field is
+      // not filled; the card shows each side, linked.
+      if (field === "aromas" || field === "pairings" || result[field] !== null) continue;
+      const sides = new Map<string, { producer: string; sourceUrl: string; wine: string }[]>();
+      for (const wine of reading.wines ?? []) {
+        const found = read(wine.quote, wine.source, wine.lang, wine.words, wine.value);
+        const said = found?.evidence.find((entry) => entry.field === field)?.value;
+        if (said === undefined) continue;
+        sides.set(said, [
+          ...(sides.get(said) ?? []),
+          { producer: wine.producer, sourceUrl: wine.source.url, wine: wine.wine },
+        ]);
+      }
+      if (sides.size < 2) {
+        rejected.push({ field, grape, reason: "no disagreement left", value: "disputed" });
+        continue;
+      }
+      for (const [value, wines] of sides) {
+        result.evidence.push({
+          basis: "disputed",
+          factOnly: true,
+          field,
+          quote: "",
+          sourceUrl: wines[0]!.sourceUrl,
+          value,
+          wines,
+        });
+      }
+      continue;
+    }
     if (reading.basis === "producers-abv") {
       // Alcohol as the grape's still, dry single-variety wines give it: each
       // sheet's figure, found on its page, turned into a level on WSET's

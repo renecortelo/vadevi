@@ -99,6 +99,7 @@
     "moreWines_one": "mais {{count}} vinho",
     "moreWines_other": "mais {{count}} vinhos",
     "noSourceValue": "sem dado nas fontes",
+    "sourcesDisagree": "as fontes não coincidem",
     "kind": {
       "still": "vinho tranquilo",
       "sparkling": "espumante",
