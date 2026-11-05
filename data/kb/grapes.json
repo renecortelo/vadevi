@@ -3685,6 +3685,31 @@
         "sourceUrl": "https://www.vinetowinecircle.com/en/castas_post/prieto-picudo-3/"
       },
       {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.vinissimus.com/es/vino/cumal/",
+        "value": "stews",
+        "wines": [
+          {
+            "producer": "Dominio Dostares",
+            "sourceUrl": "https://www.vinissimus.com/es/vino/cumal/",
+            "wine": "Cumal (Vinissimus)"
+          },
+          {
+            "producer": "Tridente",
+            "sourceUrl": "https://vinopremier.com/en/red-wine-trident-prieto-picudo.html",
+            "wine": "Tridente Prieto Picudo (Vinopremier)"
+          },
+          {
+            "producer": "Raíces Ibéricas",
+            "sourceUrl": "https://www.vinissimus.com/es/vino/raices-pietro-picudo/",
+            "wine": "Raíces Prieto Picudo (Vinissimus)"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Prieto Picudo: Spain",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -3703,7 +3728,9 @@
       "pt": "Prieto Picudo"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "stews"
+    ],
     "prominence": 7,
     "regions": [
       {

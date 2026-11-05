@@ -33,6 +33,10 @@ has the reasons.
 
 ### Library
 
+- **Prieto Picudo goes with stews**, from three producers' bottles as
+  Vinissimus and Vinopremier describe them (Dominio Dostares, Tridente,
+  Raíces Ibéricas).
+
 - **Sousão is dry**, from the residual sugar on three producers' sheets:
   Quinta do Vallado, Menin and Quinta da Pacheca.
 
