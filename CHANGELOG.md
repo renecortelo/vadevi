@@ -33,6 +33,14 @@ has the reasons.
 
 ### Library
 
+- **Nerello Mascalese joins the library**: dry, high in acidity, medium in
+  tannin, with game, red meat and mushrooms (six producers' wines). Its
+  body and alcohol are where the sources disagree — Vino.com's bottles say
+  medium and robust, three producers' sheets give medium alcohol and the
+  French Wikipedia «riche en alcool» — and the card says so.
+- **Tannin for Merlot, St. Laurent and Tinta Barroca (medium), alcohol for
+  Verdicchio (medium)**, from Vine&Wine's variety profiles, the level only.
+
 - **Ortega joins the library**: German, low in acidity, medium-bodied, of
   medium alcohol, made from dry to sweet — English producers' dry wines
   (Davenport, Westwell, Gutter & Stars) and German growers' sweet ones on

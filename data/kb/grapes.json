@@ -18493,6 +18493,14 @@
         "quote": "Le jus de ce cepage donne un vin superieur a tous les points de vue, mais surtout remarquable par son bouquet, sa seve, son moelleux et par son degre d'alcool eleve.",
         "value": "high",
         "sourceUrl": "https://archive.org/details/traitegeneraldev00unse_1"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vine&Wine",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/merlot/"
       }
     ],
     "id": "merlot",
@@ -18806,7 +18814,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "medium",
     "wikidataId": "Q213338",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Merlot"
   },
@@ -42458,6 +42466,14 @@
         ]
       },
       {
+        "field": "tannin",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vine&Wine",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/sankt-laurent/"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Sankt Laurent: Austria",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -42617,7 +42633,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "medium",
     "wikidataId": "Q1435356",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/St._Laurent_(grape)"
   },
@@ -43517,7 +43533,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "lemon",
       "bitter almond",
@@ -43618,6 +43634,14 @@
         "factOnly": true,
         "publisher": "Vinerra",
         "sourceUrl": "https://www.vinerra.com/education/wines/verdicchio-an-in-depth-wine-profile-g73kq"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vine&Wine",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/verdicchio-bianco/"
       }
     ],
     "id": "verdicchio",
@@ -48380,6 +48404,14 @@
         "quote": "позволява да се получат вина с високо алкохолно съдържание – до 14% спирта, при невисока киселинност",
         "value": "low",
         "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BD%D1%82%D0%B0_%D0%91%D0%B0%D1%80%D0%BE%D0%BA%D0%B0"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vine&Wine",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/tinta-barroca/"
       }
     ],
     "id": "tinta-barroca",
@@ -48471,7 +48503,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "medium",
     "wikidataId": "Q861834",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tinta_Barroca"
   },
@@ -64070,5 +64102,373 @@
     "tannin": null,
     "wikidataId": "Q1418343",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ortega_(grape)"
+  },
+  {
+    "acidity": "high",
+    "alcohol": null,
+    "aromas": [
+      "red berry",
+      "floral",
+      "vanilla",
+      "tobacco",
+      "liquorice"
+    ],
+    "body": null,
+    "color": "red",
+    "evidence": [
+      {
+        "field": "color",
+        "quote": "ruby red color, with subtle grenade tones ...",
+        "value": "red"
+      },
+      {
+        "field": "origin",
+        "quote": "named after the Mascali area in Catania, that grow primarily in Sicily and Sardinia ...",
+        "value": "IT"
+      },
+      {
+        "field": "aromas",
+        "quote": "strong fruity scent of red berry fruits, with slight floral shades, a spicy hint, and a delicate effusion of vanilla and tobacco, with a persistent trace of licorice ...",
+        "value": "red berry"
+      },
+      {
+        "field": "aromas",
+        "quote": "strong fruity scent of red berry fruits, with slight floral shades, a spicy hint, and a delicate effusion of vanilla and tobacco, with a persistent trace of licorice ...",
+        "value": "floral"
+      },
+      {
+        "field": "aromas",
+        "quote": "strong fruity scent of red berry fruits, with slight floral shades, a spicy hint, and a delicate effusion of vanilla and tobacco, with a persistent trace of licorice ...",
+        "value": "vanilla"
+      },
+      {
+        "field": "aromas",
+        "quote": "strong fruity scent of red berry fruits, with slight floral shades, a spicy hint, and a delicate effusion of vanilla and tobacco, with a persistent trace of licorice ...",
+        "value": "tobacco"
+      },
+      {
+        "field": "aromas",
+        "quote": "strong fruity scent of red berry fruits, with slight floral shades, a spicy hint, and a delicate effusion of vanilla and tobacco, with a persistent trace of licorice ...",
+        "value": "licorice"
+      },
+      {
+        "field": "styles",
+        "quote": "while it can be used for blending, the grape is often made into varietal wine ...",
+        "value": "still"
+      },
+      {
+        "field": "styles",
+        "quote": "while it can be used for blending, the grape is often made into varietal wine ...",
+        "value": "blending"
+      },
+      {
+        "field": "regions",
+        "quote": "It is grown mainly on the northeastern side of Sicily ... and Sardinia. ... experimental vineyard in Agliano Terme, Piedmont ...",
+        "value": "IT: Sicily"
+      },
+      {
+        "field": "regions",
+        "quote": "It is grown mainly on the northeastern side of Sicily ... and Sardinia. ... experimental vineyard in Agliano Terme, Piedmont ...",
+        "value": "IT: Sardinia"
+      },
+      {
+        "field": "regions",
+        "quote": "It is grown mainly on the northeastern side of Sicily ... and Sardinia. ... experimental vineyard in Agliano Terme, Piedmont ...",
+        "value": "IT: Piedmont"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-inessa-2025.html",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Inessa",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-inessa-2025.html",
+            "wine": "Terre Siciliane IGT Nerello Mascalese 2025 (vino.com)"
+          },
+          {
+            "producer": "Podere Giodo",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-alberelli-di-giodo-podere-giodo-2022.html",
+            "wine": "Alberelli di Giodo 2022 (vino.com)"
+          },
+          {
+            "producer": "Planeta",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nerello-mascalese-eruzione-1614-planeta-2022.html",
+            "wine": "Eruzione 1614 Nerello Mascalese 2022 (vino.com)"
+          },
+          {
+            "producer": "Tasca d'Almerita",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nerello-mascalese-ghiaia-nera-tascante-tasca-dalmerita-2024.html",
+            "wine": "Tascante Ghiaia Nera 2024 (vino.com)"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+        "value": "game",
+        "wines": [
+          {
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+            "wine": "Nerello Mascalese IGT Terre Siciliane"
+          },
+          {
+            "producer": "Planeta",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nerello-mascalese-eruzione-1614-planeta-2022.html",
+            "wine": "Eruzione 1614 Nerello Mascalese 2022 (vino.com)"
+          },
+          {
+            "producer": "Tasca d'Almerita",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nerello-mascalese-ghiaia-nera-tascante-tasca-dalmerita-2024.html",
+            "wine": "Tascante Ghiaia Nera 2024 (vino.com)"
+          },
+          {
+            "producer": "Calabretta",
+            "sourceUrl": "https://www.pedrelli.com/products/nerello-mascalese-vigne-vecchie-calabretta",
+            "wine": "Nerello Mascalese Vigne Vecchie (Pedrelli)"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+        "value": "mushrooms",
+        "wines": [
+          {
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+            "wine": "Nerello Mascalese IGT Terre Siciliane"
+          },
+          {
+            "producer": "Cantina Settesoli",
+            "sourceUrl": "https://www.settesoli.it/en/wines/nerello-mascalese/",
+            "wine": "Settesoli Nerello Mascalese"
+          },
+          {
+            "producer": "Calabretta",
+            "sourceUrl": "https://www.pedrelli.com/products/nerello-mascalese-vigne-vecchie-calabretta",
+            "wine": "Nerello Mascalese Vigne Vecchie (Pedrelli)"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+        "value": "red meat",
+        "wines": [
+          {
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+            "wine": "Nerello Mascalese IGT Terre Siciliane"
+          },
+          {
+            "producer": "Tasca d'Almerita",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nerello-mascalese-ghiaia-nera-tascante-tasca-dalmerita-2024.html",
+            "wine": "Tascante Ghiaia Nera 2024 (vino.com)"
+          },
+          {
+            "producer": "Inessa",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-inessa-2025.html",
+            "wine": "Terre Siciliane IGT Nerello Mascalese 2025 (vino.com)"
+          },
+          {
+            "producer": "Calabretta",
+            "sourceUrl": "https://www.pedrelli.com/products/nerello-mascalese-vigne-vecchie-calabretta",
+            "wine": "Nerello Mascalese Vigne Vecchie (Pedrelli)"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-inessa-2025.html",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Inessa",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-inessa-2025.html",
+            "wine": "Terre Siciliane IGT Nerello Mascalese 2025 (vino.com)"
+          },
+          {
+            "producer": "Planeta",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nerello-mascalese-eruzione-1614-planeta-2022.html",
+            "wine": "Eruzione 1614 Nerello Mascalese 2022 (vino.com)"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-alberelli-di-giodo-podere-giodo-2022.html",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Podere Giodo",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nerello-mascalese-alberelli-di-giodo-podere-giodo-2022.html",
+            "wine": "Alberelli di Giodo 2022 (vino.com)"
+          },
+          {
+            "producer": "Tasca d'Almerita",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nerello-mascalese-ghiaia-nera-tascante-tasca-dalmerita-2024.html",
+            "wine": "Tascante Ghiaia Nera 2024 (vino.com)"
+          }
+        ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotriacoe.com/wine/grapes/nerello-mascalese"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vine&Wine",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/nerello-mascalese/"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Nerello_mascalese",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipédia",
+            "sourceUrl": "https://fr.wikipedia.org/wiki/Nerello_mascalese",
+            "wine": "Nerello mascalese"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/prodotto/nerello-mascalese-igt-terre-siciliane/",
+            "wine": "Nerello Mascalese IGT Terre Siciliane"
+          },
+          {
+            "producer": "Cantina Settesoli",
+            "sourceUrl": "https://www.settesoli.it/it/vini/nerello-mascalese/",
+            "wine": "Settesoli Nerello Mascalese"
+          },
+          {
+            "producer": "Cantine Ermes",
+            "sourceUrl": "https://cantineermes.it/en/brand/vento-di-mare-nerello-mascalese/",
+            "wine": "Vento di Mare Nerello Mascalese"
+          }
+        ]
+      }
+    ],
+    "id": "nerello-mascalese",
+    "names": {
+      "en": "Nerello Mascalese",
+      "es": "Nerello Mascalese",
+      "ca": "Nerello Mascalese",
+      "fr": "Nerello mascalese",
+      "de": "Nerello Mascalese",
+      "it": "Nerello mascalese",
+      "nl": "Nerello Mascalese",
+      "pt": "Nerello Mascalese"
+    },
+    "origin": "IT",
+    "pairings": [
+      "game",
+      "mushrooms",
+      "red meat"
+    ],
+    "prominence": 6,
+    "regions": [
+      {
+        "country": "IT",
+        "name": "Sicily"
+      },
+      {
+        "country": "IT",
+        "name": "Sardinia"
+      },
+      {
+        "country": "IT",
+        "name": "Piedmont"
+      }
+    ],
+    "styles": [
+      "still",
+      "blending"
+    ],
+    "summaries": {
+      "en": {
+        "text": "Nerello mascalese is a name given to a variety of red wine grapes named after the Mascali area in Catania, that grow primarily in Sicily and Sardinia.",
+        "url": "https://en.wikipedia.org/wiki/Nerello_mascalese"
+      },
+      "fr": {
+        "text": "Le nerello mascalese  est un cépage italien de raisins noirs cultivé dans les vignobles de Sicile et de Sardaigne.",
+        "url": "https://fr.wikipedia.org/wiki/Nerello_mascalese"
+      },
+      "de": {
+        "text": "Nerello Mascalese ist eine rote Rebsorte, die nach der Sorte  Nero d’Avola die am häufigsten angebaute Rebsorte auf Sizilien ist. Sie rangiert damit noch vor der Sorte Nerello Cappuccio. Für die Freien Gemeindekonsortien bzw. Metropolitanstädten Agrigent, Catania, Enna, Messina, Palermo, Ragusa, Syrakus und Trapani gibt es Anbauempfehlungen.",
+        "url": "https://de.wikipedia.org/wiki/Nerello_Mascalese"
+      },
+      "it": {
+        "text": "Il Nerello mascalese, detto anche Negrello (Niuriddu mascalisi in siciliano) è un vitigno che cresce prevalentemente sull'Etna, nella città metropolitana di Catania, e nella zona di Torre Faro, frazione del comune di Messina. Esso concorre per l'80-100% alla produzione del vino Etna DOC; per il 45-60% alla produzione del vino Faro DOC.",
+        "url": "https://it.wikipedia.org/wiki/Nerello_mascalese"
+      },
+      "es": {
+        "text": "La nerello mascalese es el nombre de una variedad de uva tinta de vinificación, llamada así por la zona de Mascali, en Catania, que se cultiva sobre todo en Sicilia y Cerdeña.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Nerello_mascalese"
+      },
+      "ca": {
+        "text": "El nerello mascalese és el nom d'una varietat de raïm negre de vinificació, anomenada així per la zona de Mascali, a Catània, que es conrea sobretot a Sicília i Sardenya.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Nerello_mascalese"
+      },
+      "nl": {
+        "text": "Nerello mascalese is de naam van een blauwe druivensoort voor rode wijn, genoemd naar het gebied Mascali bij Catania, die vooral op Sicilië en Sardinië groeit.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Nerello_mascalese"
+      },
+      "pt": {
+        "text": "Nerello mascalese é o nome de uma casta tinta, assim chamada por causa da zona de Mascali, na Catânia, que se cultiva sobretudo na Sicília e na Sardenha.",
+        "translated": true,
+        "url": "https://en.wikipedia.org/wiki/Nerello_mascalese"
+      }
+    },
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
+    "synonyms": [],
+    "tannin": "medium",
+    "wikidataId": "Q1977939",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nerello_mascalese"
   }
 ]

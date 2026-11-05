@@ -459,9 +459,15 @@ for (const qid of index) {
   }
   // Read from pages that are not openly licensed (see `webReadings`): kept as
   // the value and its link, never the page's sentence.
-  for (const reading of webReadings[slug(raw.labels.en ?? qid)] ?? []) {
+  const readings = webReadings[slug(raw.labels.en ?? qid)] ?? [];
+  // A field its sources dispute takes nothing else from these pages.
+  const disputedFields = new Set(
+    readings.filter((reading) => reading.basis === "disputed").map((reading) => reading.field),
+  );
+  for (const reading of readings) {
     const grape = `${raw.labels.en ?? qid} (web)`;
     const field = reading.field;
+    if (reading.basis !== "disputed" && disputedFields.has(field)) continue;
     if (reading.scope?.regionId !== undefined && !atlasIds.has(reading.scope.regionId)) {
       throw new Error(`${grape}: no atlas entry ${reading.scope.regionId}.`);
     }
@@ -497,8 +503,19 @@ for (const qid of index) {
       if (field === "aromas" || field === "pairings" || result[field] !== null) continue;
       const sides = new Map<string, { producer: string; sourceUrl: string; wine: string }[]>();
       for (const wine of reading.wines ?? []) {
-        const found = read(wine.quote, wine.source, wine.lang, wine.words, wine.value);
-        const said = found?.evidence.find((entry) => entry.field === field)?.value;
+        // A sheet's alcohol as its figure, a level on WSET's scale, like the
+        // producers' figures.
+        const figure = field === "alcohol" ? alcoholFigure(wine.quote) : null;
+        const page = figure === null ? null : webPage(wine.source.volume);
+        const flat = (text: string) => text.replace(/\s+/g, " ").toLowerCase();
+        const said =
+          figure !== null
+            ? page !== null && flat(page).includes(flat(wine.quote))
+              ? wsetAlcohol(figure)
+              : undefined
+            : read(wine.quote, wine.source, wine.lang, wine.words, wine.value)?.evidence.find(
+                (entry) => entry.field === field,
+              )?.value;
         if (said === undefined) continue;
         sides.set(said, [
           ...(sides.get(said) ?? []),

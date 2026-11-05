@@ -158,6 +158,20 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Vine&Wine, perfiles de variedades: solo el nivel que marca (acidez, taninos, alcohol moderado), con su enlace; nunca su texto",
+    terms: "factOnly",
+    url: "https://vineandwine.vin/en/wine/wine-varieties/nerello-mascalese/",
+    what: "traits",
+  },
+  {
+    group: "texts",
+    name: "Enotria&Coe, páginas de uvas: solo el dato (acidez del Nerello Mascalese), con su enlace",
+    terms: "factOnly",
+    url: "https://www.enotriacoe.com/wine/grapes/nerello-mascalese",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Grand Cru Wijnen, páginas de uvas de la tienda: solo el dato (acidez del Teroldego, seco y dulce del Gros Manseng), con su enlace",
     terms: "factOnly",
     url: "https://www.grandcruwijnen.nl/en/wines/druif/teroldego",
