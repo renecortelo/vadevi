@@ -53,7 +53,7 @@ export function SessionsPage() {
           setUsingCache(false);
           await cacheSessionList(user.uid, spaceId, response.data);
         })
-        .catch(() => loadCached());
+        .catch(() => (controller.signal.aborted ? undefined : loadCached()));
     }
     return () => controller.abort();
   }, [loadCached, spaceId, user]);

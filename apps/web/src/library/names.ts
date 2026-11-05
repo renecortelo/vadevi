@@ -33,7 +33,14 @@ export function useLibraryNames(regionRefs: readonly (string | null | undefined)
   ].sort();
   const regions = useQuery({
     enabled: user !== null && refs.length > 0,
-    queryFn: ({ signal }) => getLibraryRegionNames(user!, refs.slice(0, 100), signal),
+    // The endpoint takes a hundred at a time; a long list asks in batches.
+    queryFn: async ({ signal }) => {
+      const batches = [];
+      for (let start = 0; start < refs.length; start += 100) {
+        batches.push(getLibraryRegionNames(user!, refs.slice(start, start + 100), signal));
+      }
+      return (await Promise.all(batches)).flat();
+    },
     queryKey: ["library-region-names", refs.join(",")],
     staleTime: day,
   });

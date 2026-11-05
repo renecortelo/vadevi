@@ -929,9 +929,13 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
         503,
       );
     }
-    const image = await proxyBottlePhoto({
+    const params = context.req.valid("param");
+    const image = await proxyBottlePhoto(context.env.DB!, {
+      principal: context.get("principal"),
+      spaceId: params.spaceId,
       thumbnailUrl: context.req.valid("query").url,
       userAgent: context.env.EXTERNAL_API_USER_AGENT!,
+      wineId: params.wineId,
     });
     if (image === null) {
       return context.json(

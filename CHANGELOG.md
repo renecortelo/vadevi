@@ -6,6 +6,28 @@ has the reasons.
 
 ## Unreleased
 
+### Lists that hold up
+
+- **Bottles and wishlist items keep their names**: the cards read "unknown
+  wine" for anything past the hundred latest wines, and for everything the
+  moment the picker's search was used. The lists now carry the name.
+- **Offline, the whole cellar comes along**: a device kept the hundred latest
+  wines and dropped the rest; it now keeps up to two thousand, and a failed
+  refresh leaves the copy it had.
+- **Memory stays as you left it**: coming back to the tab no longer swaps the
+  list for the local copy in another order, changing a filter mid-load no
+  longer mixes old results in or shows the offline notice, and merging
+  duplicates keeps the filters on screen.
+- **A first sign-in stays in your language**: the app no longer turns to
+  English after signing in, and the welcome form starts on the language you
+  arrived in.
+- **A confirmed deletion no longer waits on anything else**: it runs first on
+  the schedule, and one task failing does not stop the others.
+- **Bottle-photo previews only for members**: the preview proxy now checks the
+  Space and the wine, and stops reading a photo past the size limit.
+- **Idle tabs ask less**: with nothing to send, a device refreshes at most
+  every five minutes.
+
 ### On a phone
 
 - **Typing no longer zooms the page**: iOS zoomed into any field with text

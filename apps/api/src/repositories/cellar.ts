@@ -111,7 +111,16 @@ function plusHours(timestamp: string, hours: number): string {
   return new Date(Date.parse(timestamp) + hours * 60 * 60 * 1_000).toISOString();
 }
 
-function bottleResource(row: BottleRow): Bottle {
+/** The name a list row joined in, where it did. */
+type WineNameColumns = { wine_display_name?: string | null; wine_producer_name?: string | null };
+
+function wineName(row: WineNameColumns) {
+  return row.wine_display_name == null || row.wine_producer_name == null
+    ? {}
+    : { wine: { displayName: row.wine_display_name, producerName: row.wine_producer_name } };
+}
+
+function bottleResource(row: BottleRow & WineNameColumns): Bottle {
   return {
     acquiredAt: row.acquired_at,
     createdAt: row.created_at,
@@ -126,11 +135,12 @@ function bottleResource(row: BottleRow): Bottle {
     storageLocation: row.storage_location_text,
     updatedAt: row.updated_at,
     version: row.version,
+    ...wineName(row),
     wineId: row.wine_id,
   };
 }
 
-function wishlistResource(row: WishlistRow): WishlistItem {
+function wishlistResource(row: WishlistRow & WineNameColumns): WishlistItem {
   return {
     createdAt: row.created_at,
     id: row.id,
@@ -144,6 +154,7 @@ function wishlistResource(row: WishlistRow): WishlistItem {
     targetCurrency: row.target_currency,
     updatedAt: row.updated_at,
     version: row.version,
+    ...wineName(row),
     wineId: row.wine_id,
   };
 }
@@ -321,11 +332,16 @@ export async function listBottles(
   if ((await activeUserId(database, options.principal, options.spaceId)) === null) return null;
   const result = await database
     .prepare(
-      `SELECT id, wine_id, purchase_id, state, storage_location_text, acquired_at,
-        opened_at, finished_at, gifted_at, removed_at, notes, version, created_at, updated_at
-      FROM bottles WHERE space_id = ? AND deleted_at IS NULL
-        AND (? IS NULL OR state = ?) AND (? IS NULL OR wine_id = ?)
-      ORDER BY acquired_at DESC, id DESC LIMIT ?`,
+      `SELECT bottle.id, bottle.wine_id, bottle.purchase_id, bottle.state,
+        bottle.storage_location_text, bottle.acquired_at, bottle.opened_at, bottle.finished_at,
+        bottle.gifted_at, bottle.removed_at, bottle.notes, bottle.version, bottle.created_at,
+        bottle.updated_at, wine.display_name AS wine_display_name,
+        wine.producer_name AS wine_producer_name
+      FROM bottles bottle
+      LEFT JOIN wine_records wine ON wine.id = bottle.wine_id AND wine.deleted_at IS NULL
+      WHERE bottle.space_id = ? AND bottle.deleted_at IS NULL
+        AND (? IS NULL OR bottle.state = ?) AND (? IS NULL OR bottle.wine_id = ?)
+      ORDER BY bottle.acquired_at DESC, bottle.id DESC LIMIT ?`,
     )
     .bind(
       options.spaceId,
@@ -335,7 +351,7 @@ export async function listBottles(
       options.wineId ?? null,
       listBound + 1,
     )
-    .all<BottleRow>();
+    .all<BottleRow & WineNameColumns>();
   // One past the bound is read, so the answer can say whether there is more.
   return {
     data: {
@@ -813,15 +829,20 @@ export async function listWishlist(
   if ((await activeUserId(database, options.principal, options.spaceId)) === null) return null;
   const result = await database
     .prepare(
-      `SELECT id, wine_id, reason, priority, target_amount_minor, target_currency,
-        referrer, source_id, notes, state, version, created_at, updated_at
-      FROM wishlist_items WHERE space_id = ? AND deleted_at IS NULL
-        AND (? IS NULL OR state = ?)
-      ORDER BY CASE state WHEN 'active' THEN 0 ELSE 1 END, priority DESC, updated_at DESC, id DESC
+      `SELECT item.id, item.wine_id, item.reason, item.priority, item.target_amount_minor,
+        item.target_currency, item.referrer, item.source_id, item.notes, item.state,
+        item.version, item.created_at, item.updated_at, wine.display_name AS wine_display_name,
+        wine.producer_name AS wine_producer_name
+      FROM wishlist_items item
+      LEFT JOIN wine_records wine ON wine.id = item.wine_id AND wine.deleted_at IS NULL
+      WHERE item.space_id = ? AND item.deleted_at IS NULL
+        AND (? IS NULL OR item.state = ?)
+      ORDER BY CASE item.state WHEN 'active' THEN 0 ELSE 1 END, item.priority DESC,
+        item.updated_at DESC, item.id DESC
       LIMIT ?`,
     )
     .bind(options.spaceId, options.state ?? null, options.state ?? null, listBound + 1)
-    .all<WishlistRow>();
+    .all<WishlistRow & WineNameColumns>();
   return {
     data: result.results.slice(0, listBound).map(wishlistResource),
     hasMore: result.results.length > listBound,

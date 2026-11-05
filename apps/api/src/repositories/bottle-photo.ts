@@ -69,12 +69,45 @@ function braveThumbnailHost(thumbnailUrl: string): string | null {
   }
 }
 
+/**
+ * A response's body, read no further than the most a photo may weigh: a declared
+ * length is checked first, and a stream that lies about it is cut off.
+ */
+async function boundedBody(response: Response): Promise<Uint8Array<ArrayBuffer> | null> {
+  const declaredLength = Number(response.headers.get("Content-Length") ?? "0");
+  if (Number.isFinite(declaredLength) && declaredLength > maxPhotoBytes) return null;
+  if (response.body === null) return new Uint8Array();
+  const reader = response.body.getReader();
+  const bytes = new Uint8Array(maxPhotoBytes);
+  let length = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) return bytes.slice(0, length);
+    if (length + value.byteLength > maxPhotoBytes) {
+      await reader.cancel();
+      return null;
+    }
+    bytes.set(value, length);
+    length += value.byteLength;
+  }
+}
+
 /** The bytes of a candidate thumbnail, fetched server-side from the fixed CDN. */
-export async function proxyBottlePhoto(options: {
-  fetcher?: ProviderFetcher;
-  thumbnailUrl: string;
-  userAgent: string;
-}): Promise<{ bytes: Uint8Array; mimeType: "image/jpeg" | "image/webp" } | null> {
+export async function proxyBottlePhoto(
+  database: D1Database,
+  options: {
+    fetcher?: ProviderFetcher;
+    principal: FirebasePrincipal;
+    spaceId: string;
+    thumbnailUrl: string;
+    userAgent: string;
+    wineId: string;
+  },
+): Promise<{ bytes: Uint8Array; mimeType: "image/jpeg" | "image/webp" } | null> {
+  // Only for a member, on a wine of theirs: otherwise any account could use the
+  // Worker as a free image proxy.
+  if ((await authorizedWine(database, options.principal, options.spaceId, options.wineId)) === null)
+    return null;
   const host = braveThumbnailHost(options.thumbnailUrl);
   if (host === null) return null;
   let response: Response;
@@ -87,8 +120,8 @@ export async function proxyBottlePhoto(options: {
     return null;
   }
   if (!response.ok) return null;
-  const buffer = await response.arrayBuffer();
-  const bytes = new Uint8Array(buffer);
+  const bytes = await boundedBody(response);
+  if (bytes === null) return null;
   const info = storablePhoto(bytes);
   return info === null ? null : { bytes, mimeType: info.mimeType };
 }
@@ -146,15 +179,10 @@ export async function importBottlePhoto(
     return { kind: "rejected", reason: "download_failed" };
   }
   if (!response.ok) return { kind: "rejected", reason: "download_failed" };
-  const declaredLength = Number(response.headers.get("Content-Length") ?? "0");
-  if (Number.isFinite(declaredLength) && declaredLength > maxPhotoBytes) {
+  const bytes = await boundedBody(response);
+  if (bytes === null || bytes.byteLength === 0) {
     return { kind: "rejected", reason: "too_large" };
   }
-  const buffer = await response.arrayBuffer();
-  if (buffer.byteLength === 0 || buffer.byteLength > maxPhotoBytes) {
-    return { kind: "rejected", reason: "too_large" };
-  }
-  const bytes = new Uint8Array(buffer);
   const info = storablePhoto(bytes);
   if (info === null) return { kind: "rejected", reason: "unsupported_format" };
 
@@ -162,7 +190,7 @@ export async function importBottlePhoto(
   const mediaId = ulid();
   const sha = await sha256Base64Url(bytes);
   const r2Key = `private/${await sha256Base64Url(`vadevi-bottle-photo-v1\0${options.spaceId}\0${mediaId}\0${sha}`)}`;
-  await bucket.put(r2Key, buffer, {
+  await bucket.put(r2Key, bytes, {
     httpMetadata: { contentType: info.mimeType },
     customMetadata: { sha256: sha },
   });

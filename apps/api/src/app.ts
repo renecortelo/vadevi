@@ -1,4 +1,5 @@
 import { createRoute, OpenAPIHono } from "@hono/zod-openapi";
+import { routePath } from "hono/route";
 import {
   BootstrapResponseSchema,
   ErrorEnvelopeSchema,
@@ -431,6 +432,11 @@ export function createApi() {
         level: "error",
         requestId: context.get("requestId"),
         errorName: error.name,
+        // The route's pattern, never the URL: an invitation's token rides in it.
+        method: context.req.method,
+        route: routePath(context),
+        message: error.message.slice(0, 500),
+        stack: error.stack?.slice(0, 2_000),
       }),
     );
 

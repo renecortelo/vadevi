@@ -38,6 +38,10 @@ import { OfflineSyncContext, type SyncStatus } from "./OfflineSyncContext";
 import { memoryChangedEvent, sessionsChangedEvent } from "./events";
 import { cacheSessionDetail, cacheSessionList, storeSyncedDeepNote } from "./phase3";
 
+/** The most wines a device keeps for offline use, and how often an idle one asks again. */
+const offlineWineCeiling = 2_000;
+const refreshInterval = 5 * 60_000;
+
 function asSyncMutation(mutation: QueuedMutation): SyncMutation {
   return {
     baseVersion: null,
@@ -107,6 +111,7 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<SyncStatus>(navigator.onLine ? "idle" : "offline");
   const [pendingCount, setPendingCount] = useState(0);
   const flushing = useRef(new Set<string>());
+  const lastRefresh = useRef(new Map<string, number>());
   const userId = user?.uid ?? "";
   const activeSpaceId = bootstrap.data.user.activeSpaceId;
   const allowedSpaceIds = useMemo(
@@ -129,16 +134,34 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
   const refreshMemory = useCallback(
     async (spaceId: string) => {
       if (user === null) return;
-      const response = await getWineMemory(user, spaceId, { limit: 100 });
+      // Every page before anything is written: a failure half way keeps the
+      // copy this device already has, and a Space past the ceiling keeps what
+      // it held rather than losing the wines beyond it.
+      const wines: WineSummary[] = [];
+      let cursor: string | null = null;
+      do {
+        const response: Awaited<ReturnType<typeof getWineMemory>> = await getWineMemory(
+          user,
+          spaceId,
+          { limit: 100, ...(cursor === null ? {} : { cursor }) },
+        );
+        wines.push(...response.data);
+        cursor = response.page.nextCursor;
+      } while (cursor !== null && wines.length < offlineWineCeiling);
       const prefix = partitionId(user.uid, spaceId);
       await offlineDatabase.transaction("rw", offlineDatabase.snapshots, async () => {
-        const existing = await offlineDatabase.snapshots
-          .where("[userId+spaceId]")
-          .equals([user.uid, spaceId])
-          .primaryKeys();
-        await offlineDatabase.snapshots.bulkDelete(existing);
+        if (cursor === null) {
+          const current = new Set(wines.map((wine) => `${prefix}:${wine.id}`));
+          const existing = await offlineDatabase.snapshots
+            .where("[userId+spaceId]")
+            .equals([user.uid, spaceId])
+            .primaryKeys();
+          await offlineDatabase.snapshots.bulkDelete(
+            existing.filter((id) => !current.has(String(id))),
+          );
+        }
         await offlineDatabase.snapshots.bulkPut(
-          response.data.map((wine: WineSummary) => ({
+          wines.map((wine: WineSummary) => ({
             id: `${prefix}:${wine.id}`,
             spaceId,
             updatedAt: new Date().toISOString(),
@@ -254,7 +277,13 @@ export function OfflineSyncProvider({ children }: { children: ReactNode }) {
           .filter((mutation) => mutation.state === "queued" || mutation.state === "syncing")
           .sortBy("occurredAt");
         if (mutations.length === 0) {
-          await Promise.all([refreshMemory(spaceId), refreshSessions(spaceId)]);
+          // Nothing of ours to send: every tab switch lands here, and the copy
+          // on this device is good for a few minutes.
+          const last = lastRefresh.current.get(spaceId) ?? 0;
+          if (Date.now() - last >= refreshInterval) {
+            await Promise.all([refreshMemory(spaceId), refreshSessions(spaceId)]);
+            lastRefresh.current.set(spaceId, Date.now());
+          }
           setStatus("synced");
           return;
         }

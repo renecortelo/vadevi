@@ -1,5 +1,5 @@
 import type { RegionPointsResponse, TastingSessionResponse, WineSummary } from "@vadevi/contracts";
-import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router";
 
@@ -280,6 +280,8 @@ export function WineMemoryPage() {
   // Bumped after a correction. The list is fetched by an effect keyed on the
   // filters, so this is how a change made on this screen asks for it again.
   const [reloadToken, setReloadToken] = useState(0);
+  const listTicket = useRef(0);
+  const cursorTicket = useRef(0);
   // The table lets a reader order by any column, on top of whatever order the
   // list arrived in. It sorts what is loaded rather than asking the server, so
   // it stays instant and works offline; the dropdown still decides the fetch.
@@ -379,6 +381,10 @@ export function WineMemoryPage() {
    *  first page was fetched with, so only the cursor moves. */
   async function loadMore() {
     if (user === null || nextCursor === null || loadingMore) return;
+    // A cursor belongs to the list it came from, and an answer to the list it
+    // was asked for: filters changed since, and neither may touch the new one.
+    const list = listTicket.current;
+    if (cursorTicket.current !== list) return;
     setLoadingMore(true);
     try {
       const response = await getWineMemory(user, spaceId, {
@@ -388,6 +394,7 @@ export function WineMemoryPage() {
         ...(wineType.length === 0 ? {} : { wineType }),
         ...Object.fromEntries(Object.entries(filters).filter(([, value]) => value.length > 0)),
       });
+      if (listTicket.current !== list) return;
       // Appended rather than replaced, and de-duplicated by id: a wine added
       // between the two reads can otherwise arrive on both pages.
       setWines((current) => {
@@ -404,6 +411,8 @@ export function WineMemoryPage() {
 
   useEffect(() => {
     const controller = new AbortController();
+    listTicket.current += 1;
+    const list = listTicket.current;
     const timeout = globalThis.setTimeout(() => {
       if (user === null || !navigator.onLine) {
         void loadLocal();
@@ -423,9 +432,12 @@ export function WineMemoryPage() {
         .then((response) => {
           setWines(response.data);
           setNextCursor(response.page.nextCursor);
+          cursorTicket.current = list;
           setUsingCache(false);
         })
-        .catch(() => loadLocal());
+        // An abort is this list giving way to the next, not the network
+        // failing: the cache must not answer for it.
+        .catch(() => (controller.signal.aborted ? undefined : loadLocal()));
       void offlineDatabase.conflicts
         .where("[userId+spaceId]")
         .equals([user.uid, spaceId])
@@ -439,18 +451,24 @@ export function WineMemoryPage() {
   }, [filters, loadLocal, query, reloadToken, spaceId, user, wineType]);
 
   useEffect(() => {
-    const changed = (event: Event) => {
+    const memoryChanged = (event: Event) => {
       const detail = (event as CustomEvent<{ spaceId: string }>).detail;
-      if (detail.spaceId === spaceId) {
-        void loadLocal(!navigator.onLine);
-        void loadSessionCache();
-      }
+      if (detail.spaceId !== spaceId) return;
+      // Online the list is the server's, in the order asked for: the local
+      // copy stands in for it only when there is no connection.
+      if (navigator.onLine) setReloadToken((current) => current + 1);
+      else void loadLocal();
+      void loadSessionCache();
     };
-    globalThis.addEventListener(memoryChangedEvent, changed);
-    globalThis.addEventListener(sessionsChangedEvent, changed);
+    const sessionsChanged = (event: Event) => {
+      const detail = (event as CustomEvent<{ spaceId: string }>).detail;
+      if (detail.spaceId === spaceId) void loadSessionCache();
+    };
+    globalThis.addEventListener(memoryChangedEvent, memoryChanged);
+    globalThis.addEventListener(sessionsChangedEvent, sessionsChanged);
     return () => {
-      globalThis.removeEventListener(memoryChangedEvent, changed);
-      globalThis.removeEventListener(sessionsChangedEvent, changed);
+      globalThis.removeEventListener(memoryChangedEvent, memoryChanged);
+      globalThis.removeEventListener(sessionsChangedEvent, sessionsChanged);
     };
   }, [loadLocal, loadSessionCache, spaceId]);
 
@@ -502,8 +520,8 @@ export function WineMemoryPage() {
       });
       setMergePlan(null);
       setMergeStatus("merged");
-      const response = await getWineMemory(user, spaceId, { limit: 100 });
-      setWines(response.data);
+      // Through the loader, so the filters on screen still hold.
+      setReloadToken((current) => current + 1);
     } catch {
       setMergeStatus("error");
     }

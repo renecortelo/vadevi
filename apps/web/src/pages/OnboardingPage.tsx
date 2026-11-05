@@ -1,4 +1,9 @@
-import { localeLabels, supportedLocales, type SupportedLocale } from "@vadevi/i18n/runtime";
+import {
+  localeLabels,
+  resolveSupportedLocale,
+  supportedLocales,
+  type SupportedLocale,
+} from "@vadevi/i18n/runtime";
 import { type FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -9,9 +14,9 @@ import { BrandLockup } from "../brand/Wordmark";
 
 export function OnboardingPage() {
   const { bootstrap, isUpdating, updateProfile } = useSession();
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [displayName, setDisplayName] = useState(bootstrap.data.user.displayName);
-  const [locale, setLocale] = useState<SupportedLocale>(bootstrap.data.user.preferredLocale);
+  const [locale, setLocale] = useState<SupportedLocale>(resolveSupportedLocale(i18n.language));
   const [error, setError] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {

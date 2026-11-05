@@ -126,8 +126,13 @@ export function SessionBoundary({
     globalThis.localStorage?.setItem("vadevi.activeSpaceId", bootstrap.data.user.activeSpaceId);
     // Remembered locally as well as applied, so the next launch reads it before
     // the network answers and the loading screen is not in the wrong language.
-    rememberLocale(bootstrap.data.user.preferredLocale);
-    void changeLanguage(bootstrap.data.user.preferredLocale);
+    // Until onboarding is done the account's locale is only the default it was
+    // created with: the language the reader arrived in stands, and the
+    // onboarding form saves it.
+    if (bootstrap.data.user.onboardingComplete) {
+      rememberLocale(bootstrap.data.user.preferredLocale);
+      void changeLanguage(bootstrap.data.user.preferredLocale);
+    }
   }, [bootstrapQuery.data, user.uid]);
 
   const value = useMemo<SessionContextValue | null>(() => {

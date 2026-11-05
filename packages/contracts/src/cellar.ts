@@ -65,6 +65,11 @@ export const InventorySummarySchema = z
   })
   .strict();
 
+/** A wine's name beside what refers to it, so a list can be read on its own. */
+export const WineNameSchema = z
+  .object({ displayName: z.string(), producerName: z.string() })
+  .strict();
+
 export const BottleSchema = z
   .object({
     acquiredAt: ResourceTimestampSchema,
@@ -80,6 +85,7 @@ export const BottleSchema = z
     storageLocation: z.string().nullable(),
     updatedAt: ResourceTimestampSchema,
     version: z.number().int().positive(),
+    wine: WineNameSchema.optional(),
     wineId: ResourceIdSchema,
   })
   .strict();
@@ -252,6 +258,7 @@ export const WishlistItemSchema = z
     targetCurrency: CurrencyCodeSchema.nullable(),
     updatedAt: ResourceTimestampSchema,
     version: z.number().int().positive(),
+    wine: WineNameSchema.optional(),
     wineId: ResourceIdSchema,
   })
   .strict();

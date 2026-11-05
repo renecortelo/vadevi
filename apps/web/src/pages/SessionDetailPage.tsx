@@ -79,7 +79,7 @@ export function SessionDetailPage() {
           setUsingCache(false);
           await cacheSessionDetail(user.uid, spaceId, response, nextComparison);
         })
-        .catch(() => loadCached());
+        .catch(() => (controller.signal.aborted ? undefined : loadCached()));
     }
     return () => controller.abort();
   }, [loadCached, sessionId, spaceId, user]);

@@ -228,7 +228,7 @@ export function WishlistPage() {
         ) : (
           <div className="wishlist-grid">
             {response.data.map((item: WishlistItem) => {
-              const wine = wineById.get(item.wineId);
+              const wine = item.wine ?? wineById.get(item.wineId);
               return (
                 <article className="wishlist-card" key={item.id}>
                   <span className="evidence-chip" data-evidence="personal">

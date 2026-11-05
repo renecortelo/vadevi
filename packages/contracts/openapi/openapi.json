@@ -3707,6 +3707,22 @@
                       "minimum": 0,
                       "exclusiveMinimum": true
                     },
+                    "wine": {
+                      "type": "object",
+                      "properties": {
+                        "displayName": {
+                          "type": "string"
+                        },
+                        "producerName": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "displayName",
+                        "producerName"
+                      ],
+                      "additionalProperties": false
+                    },
                     "wineId": {
                       "type": "string",
                       "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
@@ -3856,6 +3872,22 @@
                 "type": "integer",
                 "minimum": 0,
                 "exclusiveMinimum": true
+              },
+              "wine": {
+                "type": "object",
+                "properties": {
+                  "displayName": {
+                    "type": "string"
+                  },
+                  "producerName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "displayName",
+                  "producerName"
+                ],
+                "additionalProperties": false
               },
               "wineId": {
                 "type": "string",
@@ -4034,6 +4066,22 @@
                       "type": "integer",
                       "minimum": 0,
                       "exclusiveMinimum": true
+                    },
+                    "wine": {
+                      "type": "object",
+                      "properties": {
+                        "displayName": {
+                          "type": "string"
+                        },
+                        "producerName": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "displayName",
+                        "producerName"
+                      ],
+                      "additionalProperties": false
                     },
                     "wineId": {
                       "type": "string",
@@ -4352,6 +4400,22 @@
                   "minimum": 0,
                   "exclusiveMinimum": true
                 },
+                "wine": {
+                  "type": "object",
+                  "properties": {
+                    "displayName": {
+                      "type": "string"
+                    },
+                    "producerName": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "displayName",
+                    "producerName"
+                  ],
+                  "additionalProperties": false
+                },
                 "wineId": {
                   "type": "string",
                   "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
@@ -4455,6 +4519,22 @@
                 "type": "integer",
                 "minimum": 0,
                 "exclusiveMinimum": true
+              },
+              "wine": {
+                "type": "object",
+                "properties": {
+                  "displayName": {
+                    "type": "string"
+                  },
+                  "producerName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "displayName",
+                  "producerName"
+                ],
+                "additionalProperties": false
               },
               "wineId": {
                 "type": "string",

@@ -110,7 +110,10 @@ export function CellarPage() {
     if (user === null || !navigator.onLine || wineId.length === 0) return;
     const parsedAmount = parseDecimalInput(amount) ?? Number.NaN;
     const parsedQuantity = Number.parseInt(quantity, 10);
-    if (!Number.isFinite(parsedAmount) || parsedAmount < 0 || parsedQuantity < 1) return;
+    if (!Number.isFinite(parsedAmount) || parsedAmount < 0 || parsedQuantity < 1) {
+      setError(true);
+      return;
+    }
     setSaving(true);
     setError(false);
     try {
@@ -276,7 +279,9 @@ export function CellarPage() {
         ) : (
           <div className="bottle-grid">
             {response.data.bottles.map((bottle: Bottle) => {
-              const wine = wineById.get(bottle.wineId);
+              // The name the list itself carries: the picker's wines change as
+              // the reader types, and hold only some of the Space's.
+              const wine = bottle.wine ?? wineById.get(bottle.wineId);
               return (
                 <article className="bottle-card" key={bottle.id}>
                   <span className="evidence-chip" data-evidence="observed">
