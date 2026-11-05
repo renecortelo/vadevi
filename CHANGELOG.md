@@ -33,6 +33,10 @@ has the reasons.
 
 ### Library
 
+- **Body for Blaufränkisch and Xinomavro (medium)**, from The Wine
+  Society's bottles: four Austrian and German producers of five, and six
+  Greek producers of seven.
+
 - **Body for Silvaner and Vernaccia (medium) and Moscato Giallo (light)**,
   from the bottles Vino.com describes — five, seven and seven producers'
   single-variety wines — and Cinsault's acidity now says the sources

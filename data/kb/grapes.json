@@ -32334,7 +32334,7 @@
       "spice",
       "black pepper"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -32546,6 +32546,36 @@
             "producer": "Weingut Gehlen-Cornelius",
             "sourceUrl": "https://gehlen-cornelius.de/products/blaufrankisch",
             "wine": "Blaufrankisch"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.thewinesociety.com/product/birgit-braunstein-ried-glawarinza-leithaberg-blaufrankisch-burgenland-2017",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Birgit Braunstein",
+            "sourceUrl": "https://www.thewinesociety.com/product/birgit-braunstein-ried-glawarinza-leithaberg-blaufrankisch-burgenland-2017",
+            "wine": "birgit braunstein ried glawarinza leithaberg blaufrankisch burgenland 2017 (The Wine Society)"
+          },
+          {
+            "producer": "Pittnauer",
+            "sourceUrl": "https://www.thewinesociety.com/product/pittnauer-ungerberg-blaufrankisch-burgenland-2009",
+            "wine": "pittnauer ungerberg blaufrankisch burgenland 2009 (The Wine Society)"
+          },
+          {
+            "producer": "Heidi Schröck & Söhne",
+            "sourceUrl": "https://www.thewinesociety.com/product/heidi-schrock-and-sohne-wine-champion-blaufrankisch-burgenland-2020",
+            "wine": "heidi schrock and sohne wine champion blaufrankisch burgenland 2020 (The Wine Society)"
+          },
+          {
+            "producer": "Aldinger",
+            "sourceUrl": "https://www.thewinesociety.com/product/hanweiler-berg-lemberger-aldinger-2017",
+            "wine": "hanweiler berg lemberger aldinger 2017 (The Wine Society)"
           }
         ]
       },
@@ -38884,7 +38914,7 @@
       "olive",
       "dried fruit"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -39191,6 +39221,46 @@
             "producer": "Kappa Winery",
             "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/754985",
             "wine": "Kokkymelo Xinomavro 2022"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.thewinesociety.com/product/xinomavro-naoussea-ktima-foundi-2016",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Ktima Foundi",
+            "sourceUrl": "https://www.thewinesociety.com/product/xinomavro-naoussea-ktima-foundi-2016",
+            "wine": "xinomavro naoussea ktima foundi 2016 (The Wine Society)"
+          },
+          {
+            "producer": "Dalamára",
+            "sourceUrl": "https://www.thewinesociety.com/product/xinomavro-naoussa-dalamara-2018",
+            "wine": "xinomavro naoussa dalamara 2018 (The Wine Society)"
+          },
+          {
+            "producer": "Thymiopoulos",
+            "sourceUrl": "https://www.thewinesociety.com/product/xinomavro-jeunes-vignes-thymiopoulos-2019",
+            "wine": "xinomavro jeunes vignes thymiopoulos 2019 (The Wine Society)"
+          },
+          {
+            "producer": "Domaine Karydas",
+            "sourceUrl": "https://www.thewinesociety.com/product/xinomavro-naoussa-domaine-karydas-2016",
+            "wine": "xinomavro naoussa domaine karydas 2016 (The Wine Society)"
+          },
+          {
+            "producer": "Markovitis",
+            "sourceUrl": "https://www.thewinesociety.com/product/xinomavro-naoussa-markovitis-2016",
+            "wine": "xinomavro naoussa markovitis 2016 (The Wine Society)"
+          },
+          {
+            "producer": "Oenops",
+            "sourceUrl": "https://www.thewinesociety.com/product/xinomavraw-xinomavro-oenops-2019",
+            "wine": "xinomavraw xinomavro oenops 2019 (The Wine Society)"
           }
         ]
       }
