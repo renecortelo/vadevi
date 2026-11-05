@@ -459,15 +459,14 @@ for (const qid of index) {
   }
   // Read from pages that are not openly licensed (see `webReadings`): kept as
   // the value and its link, never the page's sentence.
-  const readings = webReadings[slug(raw.labels.en ?? qid)] ?? [];
-  // A field its sources dispute takes nothing else from these pages.
-  const disputedFields = new Set(
-    readings.filter((reading) => reading.basis === "disputed").map((reading) => reading.field),
+  // A disagreement is read last, so it meets whatever the other sources
+  // filled the field with and takes that as one of its sides.
+  const readings = [...(webReadings[slug(raw.labels.en ?? qid)] ?? [])].sort(
+    (one, other) => Number(one.basis === "disputed") - Number(other.basis === "disputed"),
   );
   for (const reading of readings) {
     const grape = `${raw.labels.en ?? qid} (web)`;
     const field = reading.field;
-    if (reading.basis !== "disputed" && disputedFields.has(field)) continue;
     if (reading.scope?.regionId !== undefined && !atlasIds.has(reading.scope.regionId)) {
       throw new Error(`${grape}: no atlas entry ${reading.scope.regionId}.`);
     }
@@ -500,8 +499,40 @@ for (const qid of index) {
       // Sources that disagree: each is checked as it would be on its own, and
       // the disagreement stands only where two values survive. The field is
       // not filled; the card shows each side, linked.
-      if (field === "aromas" || field === "pairings" || result[field] !== null) continue;
+      if (field === "aromas" || field === "pairings") continue;
       const sides = new Map<string, { producer: string; sourceUrl: string; wine: string }[]>();
+      const side = (value: string, wine: { producer: string; sourceUrl: string; wine: string }) => {
+        const listed = sides.get(value) ?? [];
+        if (!listed.some((one) => one.sourceUrl === wine.sourceUrl)) listed.push(wine);
+        sides.set(value, listed);
+      };
+      // What the field already holds, from the grape's articles or other
+      // pages, is one side: each source it stood on, linked.
+      const held = result.evidence.filter((entry) => entry.field === field);
+      if (result[field] !== null) {
+        for (const entry of held) {
+          const url =
+            entry.sourceUrl ??
+            `https://en.wikipedia.org/wiki/${encodeURIComponent((raw.titles.en ?? "").replaceAll(" ", "_"))}`;
+          for (const wine of entry.wines ?? [
+            {
+              producer:
+                entry.publisher ??
+                (new URL(url).hostname.endsWith("wikipedia.org")
+                  ? "Wikipedia"
+                  : new URL(url).hostname),
+              sourceUrl: url,
+              wine: raw.labels.en ?? qid,
+            },
+          ]) {
+            side(entry.value, {
+              producer: wine.producer,
+              sourceUrl: wine.sourceUrl,
+              wine: wine.wine,
+            });
+          }
+        }
+      }
       for (const wine of reading.wines ?? []) {
         // A sheet's alcohol as its figure, a level on WSET's scale, like the
         // producers' figures.
@@ -517,15 +548,16 @@ for (const qid of index) {
                 (entry) => entry.field === field,
               )?.value;
         if (said === undefined) continue;
-        sides.set(said, [
-          ...(sides.get(said) ?? []),
-          { producer: wine.producer, sourceUrl: wine.source.url, wine: wine.wine },
-        ]);
+        side(said, { producer: wine.producer, sourceUrl: wine.source.url, wine: wine.wine });
       }
       if (sides.size < 2) {
         rejected.push({ field, grape, reason: "no disagreement left", value: "disputed" });
         continue;
       }
+      // The field held a value: it gives way to the disagreement.
+      result.evidence = result.evidence.filter((entry) => !held.includes(entry));
+      if (field === "sweetness") result.sweetness = null;
+      else result[field] = null;
       for (const [value, wines] of sides) {
         result.evidence.push({
           basis: "disputed",

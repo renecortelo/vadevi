@@ -33,6 +33,13 @@ has the reasons.
 
 ### Library
 
+- **Thirty-one acidity and tannin levels now say the sources disagree**:
+  where Vine&Wine's variety profile gives another level than the one the
+  card held — Merlot's acidity, Montepulciano's and Nero d'Avola's acidity
+  and tannin, Teroldego's tannin and more — the card shows both sides,
+  linked, and claims neither. Alcohol keeps the producers' own figures:
+  Vine&Wine's bands are not WSET's.
+
 - **Nerello Mascalese joins the library**: dry, high in acidity, medium in
   tannin, with game, red meat and mushrooms (six producers' wines). Its
   body and alcohol are where the sources disagree — Vino.com's bottles say

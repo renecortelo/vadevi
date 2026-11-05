@@ -1420,7 +1420,7 @@
     "wikipediaUrl": "https://ca.wikipedia.org/wiki/Garnatxa_roja"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "black fruit"
@@ -1531,12 +1531,6 @@
         "sourceUrl": "https://de.wikipedia.org/wiki/Touriga_Nacional"
       },
       {
-        "field": "acidity",
-        "quote": "Сорт даёт вина насыщенного, глубокого красного цвета с фиолетовым оттенком, с содержанием алкоголя от среднего до высокого, с высокой кислотностью и высокими танинами",
-        "value": "high",
-        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D0%B8%D0%B3%D0%B0_%D0%9D%D0%B0%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB"
-      },
-      {
         "field": "sweetness",
         "quote": "торига-насионал придаёт сухим красным винам тело и танинную структуру … Помимо десертных вин (типа портвейна) торига-насионал всё чаще используется",
         "value": "dry-sweet",
@@ -1564,6 +1558,36 @@
             "producer": "Tr3smano",
             "sourceUrl": "https://www.tresmano.com/producto/touriga-nacional-carvalhas/",
             "wine": "Touriga Nacional Carvalhas"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D0%B8%D0%B3%D0%B0_%D0%9D%D0%B0%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D0%B8%D0%B3%D0%B0_%D0%9D%D0%B0%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB",
+            "wine": "Touriga Nacional"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/touriga-nacional/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/touriga-nacional/",
+            "wine": "Touriga Nacional"
           }
         ]
       }
@@ -2777,7 +2801,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Loureiro_(grape)"
   },
   {
-    "acidity": "medium",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "lemon"
@@ -2872,12 +2896,6 @@
         "sourceUrl": "https://de.wikipedia.org/wiki/Trajadura"
       },
       {
-        "field": "acidity",
-        "quote": "una acidez total media-baja",
-        "value": "medium",
-        "sourceUrl": "https://es.wikipedia.org/wiki/Treixadura"
-      },
-      {
         "field": "origin",
         "quote": "La treixadura es una uva blanca autóctona de Galicia,​ España, aunque también se encuentra en Portugal.",
         "value": "ES",
@@ -2888,6 +2906,36 @@
         "quote": "Die spätreifende Sorte erbringt duftige, körperreiche und alkoholstarke Weine.",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Trajadura"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://es.wikipedia.org/wiki/Treixadura",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://es.wikipedia.org/wiki/Treixadura",
+            "wine": "Treixadura"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/trajadura/",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/trajadura/",
+            "wine": "Treixadura"
+          }
+        ]
       }
     ],
     "id": "treixadura",
@@ -5273,7 +5321,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Alfrocheiro_Preto"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": null,
     "aromas": [
       "red fruit",
@@ -5338,12 +5386,6 @@
         "value": "AU: Tasmania"
       },
       {
-        "field": "tannin",
-        "quote": "Grâce à la finesse et la forte concentration de ses tanins, il contribue au bon vieillissement des assemblages auxquels il participe.",
-        "value": "high",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca"
-      },
-      {
         "field": "aromas",
         "quote": "Il présente une variété d'arômes délicats mais intenses de fruits rouges frais et mûrs (mûres), de fleurs sauvages, de violettes et de rose, ainsi que des notes de ciste, d'herbes et d'épices séchées.",
         "value": "red fruit",
@@ -5406,12 +5448,64 @@
         "sourceUrl": "https://www.houseoftownend.com/wines/grape/touriga-franca"
       },
       {
+        "basis": "disputed",
+        "factOnly": true,
         "field": "acidity",
         "quote": "",
+        "sourceUrl": "https://www.houseoftownend.com/wines/grape/touriga-franca",
         "value": "high",
+        "wines": [
+          {
+            "producer": "House of Townend",
+            "sourceUrl": "https://www.houseoftownend.com/wines/grape/touriga-franca",
+            "wine": "Touriga Francesa"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
         "factOnly": true,
-        "publisher": "House of Townend",
-        "sourceUrl": "https://www.houseoftownend.com/wines/grape/touriga-franca"
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/touriga-franca/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/touriga-franca/",
+            "wine": "Touriga Francesa"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://fr.wikipedia.org/wiki/Touriga_franca",
+            "wine": "Touriga Francesa"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/touriga-franca/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/touriga-franca/",
+            "wine": "Touriga Francesa"
+          }
+        ]
       }
     ],
     "id": "touriga-francesa",
@@ -5506,7 +5600,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q431045",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Touriga_Francesa"
   },
@@ -7135,7 +7229,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Fiano_(grape)"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "peach",
@@ -7297,12 +7391,6 @@
         "value": "dry-sweet"
       },
       {
-        "field": "acidity",
-        "quote": "グレコ (greco) とは、ギリシャが起源ではないかといわれている、一連のイタリアのワイン用ブドウ品種である。この呼称は白ブドウ品種 (グレコ・ディ・トゥーフォ (greco di tufo) やグレコ・ビアンコ (greco bianco) など) にも黒ブドウ品種 (グレコ・ネロ (greco nero) ) にも用いられている。グレコ・ネロの栽培に用いられている面積のほうが大きいが、「グレコ」の呼び名が指すものとしてもっとも一般的なのは、白ブドウ品種のほうである。グレコ種は、カンパーニャ州では保証つき統制原産地呼称 (d.o.c.g.) 認定ワインであるグレコ・ディ・トゥーフォ (greco di tufo) の生産に用いられている。カラブリア州では、グレコ・ビアンコ種が原産地統制呼称 (d.o.c.) 認定ワインであるグレコ・ディ・ビアンコ (greco di bianco) の生産に用いられている。時として「グレコ」という名称は、ギリシャが起源だと考えられている複数の品種----もっとも有名なものではトレッビアーノなど----の別名として用いられることがある。 == 歴史 == 一連のグレコ種の祖先となるブドウは、2500年以上前にギリシャ人入植者によってイタリア南部にもたらされたのではないかと言われている。歴史家や生産者たちは、このブドウが古代ローマのいわゆる「カルトワイン」にあたるファレルヌムやアミネウムと混醸されていたかもしれないと推測している。この品種がイタリア各地に広まっていくにつれ、「グレコ」の名称は歴史的にギリシャと関係がありそうないくつかの品種に対して用いられるようになった。「グレコ」がいくつかの枝変わり種をもつ単一の品種であるのか、それとも複数の品種を「グレコ」の名で一括りにしているのかについては、ブドウ品種学者たちの間でも見解が分かれている。また、イタリアのいわゆる「ギリシャ系ブドウ」のうち、現在ギリシャで栽培されているものがあるのかどうかについても、見解の一致をみていない。 第二次世界大戦後、多くのイタリア南部のブドウ品種と同様、グレコの命運も危うくなった。戦時中のブドウ園の荒廃とならんで、イタリアのブドウ農家が農業から海外や都市部の都市型産業へと大量に移ったことによって、同地域のブドウ栽培が全体的に衰退する時期が到来したのである。植栽が減少しブドウ園が掘り返されていくなかで、多くの品種が絶滅の瀬戸際に立たされた。家族単位のワイン生産者の努力や、ピエロ・マストロベラルディーノ主導の秘儀荘 (villa dei misteri) プロジェクトといったワイン醸造の文化財事業のおかげで、イタリア南部におけるグレコ種は生き残ることができた。 === 近年において判明したこと === 21世紀初頭に行なわれたdna型鑑定の結果、イタリアにおいて「グレコ」の名で栽培されているものは、遺伝子的にアスプリーニョと同一であることが確認された。 2005年に行なわれたdna型鑑定によって、グレコ・ビアンコの名を冠する品種のうち、少なくとも別名グレコ・ディ・ジェラーチェ (greco di gerace) もしくはグレコ・ディ・ビアンコ (greco di bianco) と呼ばれるものは遺伝子的にマルヴァジーア・デッレ・リーパリと同一種であると発表された。ただし、名称が「グレコ・ビアンコ」で始まる別名をもつブドウは少なくとも4つはあるうえ、グレコ・ディ・ビアンコ docの地元カラブリア州ビアンコではこの研究結果に異論を唱える者もおり、全ての「グレコ・ビアンコ 」がマルヴァジーア・デッレ・リーパリであるかは不明である。 == グレコ (およびグレコ・ビアンコ) == グレコ種はブドウ樹の生長周期において果実の成熟する時期が非常に遅い傾向があり、ブドウ栽培するうえではべと病やうどんこ病の害を被りがちである。ブドウ品種学者はこのブドウを見分ける際、特徴的な岐肩をもつ果房に注目する。果実は成熟すると黄金がかった灰色になる。この果実に含まれるフェノール化合物のおかげで、ワインの色は特有の深みを増す。グレコのワインは豊かなアロマが特徴であり、ジャンシス・ロビンソンなどのワイン専門家のなかには、どこかヴィオニエに似た香りと評する者もいる。一般的にこのブドウと結びつきのあるアロマとしては、モモや若葉などがある。グレコのワインは熟成が進むと、ハーブの香りが現れることがある。 グレコがもっとも広く見受けられるのはイタリア南部で、いくつかのd.o.c.認定ワインの主要品種になっている。2006年の時点での栽培面積は1,000ヘクタール (2,500エーカー) にのぼる。カラブリア州では、枝変わり種のグレコ・ビアンコ (greco bianco) が甘口のデザートワインであるグレコ・ディ・ビアンコ (greco di bianco) を作るのに使用されており、収穫後半乾燥させたブドウから一部パッシート方式を用いて製造される。カプリ島では、グレコは通常ビアンコレッラやファランギーナとブレンドされ、辛口のワインを作る。プッリャ州では、グラヴィーナ doc (gravina doc) のブレンドに使用することが許されている。カンパーニャ州では、アヴェッリーノ県トゥーフォの町周辺で生産されるd.o.c.g.認定ワイン、グレコ・ディ・トゥーフォ (greco di tufo) の主要品種となっている。また、ヴェスヴィオ山の斜面で生産されているラクリマ・クリスティにブレンドすることも認められている。 === アスプリーニョ・ビアンコ === 以前はグレコとアスプリーニョは別の品種と考えられていたが、2000年にdna型鑑定によって遺伝子的に同一種であると判明した。しかしながら、果房の形状が異なる (前者は円錐形で岐肩が目立つほど大きく、後者は長円筒形で岐肩は目立たないことがある) だけでなく、栽培法にも両者の違いが見られる。特にアスプリーニョの伝統的な仕立て方であるアルベラータは、高さ30メートルに及ぶ樫の高木を支柱として、カーテン状に枝を這わせるものである。収穫は細い木製のはしごを架けて行なうため、危険が伴う。 === d.o.c.g.およびd.o.c.認定地域 === グレコが主体となっているd.o.c.g.認定地域は2つであるが、ブレンドの一部として認められているd.o.c.認定地域であれば、イタリア南部にいくつか存在する。カンパーニャ州のグレコ・ディ・トゥーフォ docgはフィアーノ ・ディ・アヴェッリーノ docg (fiano di avellino docg) の北側に位置し、トゥーフォの町のほか丘陵地にある7つのコムーネを含む。この地域は2003年にd.o.c.g.に昇格した。グレコ・ディ・トゥーフォの広さはフィアーノ ・ディ・アヴェッリーノの3分の1にすぎないが、d.o.c./g.認定の高品質ワインの生産量はカンパーニャ州で最大である。この地域のブドウ畑の土壌は、火山灰から形成された凝灰岩 (イタリア語: tufo) が元となっており、トゥーフォ (tufo) という町名もそこからとられている。同地域のすべてのd.o.c.g.認定ワインは85%以上がグレコでなければならず、ブレンドの残りの部分はたいていコーダ・ディ・ヴォルペが占める。マスター・オブ・ワインのメアリー・ユーイング=マリガンによると、グレコ・ディ・トゥーフォのワインは通常収穫年から3、4年後に飲み頃を迎え、優に10年から12年は熟成を続けるだけの力があるという。発泡性であるスプマンテの製法も認められている。 カラブリア州のグレコ・ディ・ビアンコ docは、イタリア半島の「つま先」におけるイオニア海側の沿岸部、ビアンコの街の周囲一帯に位置する。使用するブドウ品種はグレコ・ビアンコ (別名グレコ・ディ・ジェラーチェ) で、95%以上を占める。これは半乾燥させたブドウからつくられるデザートワイン的なもので、アルコール度数は17%以上なければいけない (既得アルコール14%) 。このワインの特徴としては、暗い琥珀色を帯び、柑橘類やハーブのアロマをもつ。ブドウの収穫量は1ヘクタールあたり最大10トンまでに制限されている。ワイン専門家のピーター・ソーンダーズによると、グレコ・ディ・ビアンコは最高のイタリア産デザートワインのひとつと評されることが多いという。 グレコ (およびグレコ・ビアンコ) の使用が認められているその他のd.o.c.認定地域は以下の通りである。 アヴェルサ doc (aversa doc) - カンパーニャ州カゼルタ県南部のアヴェルサを中心とし、一部ナポリ県北部までを含むワイン生産地域。白ワインおよび強い酸味を生かしたスプマンテが生産されている。前者はアスプリーニョを85%以上、後者は100%使用しなければいけない。 ビヴォンジ doc (bivongi doc) - カラブリア州のコンソリーノ山の斜面、スティラーロ川沿岸に位置するワイン生産地域。ビヴォンジの白ワインにおいて、グレコはグアルダヴァッレ、モントニコ・ビアンコ、マルヴァジーア・ビアンカ、アンソニカ/インツォリアとならんでブレンドの30-50%を占めることがある。 カプリ doc (capri doc) - カンパーニャ州のカプリ島に位置するワイン生産地域。ファランギーナおよびビアンコレッラとならんでグレコはブレンドの50%まで使用することが認められている (ビアンコレッラは20%まで) 。 チレント doc (cilento doc) - カンパーニャ州サレルノ県のチレントに位置するワイン生産地域。白ワインのブレンドはフィアーノを主体とし、トレッビアーノ、マルヴァジーア・ビアンカとならんでグレコ・ビアンコを10-15%使用することが認められている。 チロ doc (ciro doc) - カラブリア州カタンザーロ県に位置するワイン生産地域。白ワインはグレコ・ビアンコを90%以上使用し、トレッビアーノは10%まで使用できる。赤ワインのブレンドはほぼ全てガリオッポで占められている (95%以上) が、トレッビアーノとならんでグレコ・ビアンコもわずかながら (5%以下) 入ることがある。この赤ワインに白ブドウが含まれるているのは、その目的や歴史において、キアンティの赤ワインに白ブドウが含まれている事情と一部共通する。 フィアーノ・ディ・アヴェッリーノ docg (fiano di avellino docg) - カンパーニャ州のワイン生産地域で、2003年にd.o.c.g.認定地域に昇格した。フィアーノを主体 (85%以上) とするブレンドにおいて、グレコはトレッビアーノおよびコーダ・ディ・ヴォルペとならんで15%まで使用することが認められている。 グラヴィーナ doc (gravina doc) - プッリャ州のグラヴィーナの町を中心とするワイン生産地域。ブレンドのうちグレコは50%以上を占める。マルヴァジーア・ビアンカは20%以上を占め、残りの部分にはヴェルデーカ、ビアンコ・ダレッサーノ、シャルドネを使用することができる。 メリッサ doc (melissa doc) - カラブリア州メリッサ周辺のd.o.c.認定地域。この地域名はギリシャ語で「甘い」「蜂蜜」を意味する言葉(ギリシア語: μελι)に由来しており、この地域の気候だからこそ達することのできるワイン用ブドウの高い糖度を形容するのに用いられる。赤ワインの場合、グレコ・ネロとグレコ・ビアンコの両方もしくはいずれかを5-25%使用することが認められている (主体はガリオッポの75-95%) 。白ワインの場合、グレコ・ビアンコはブレンドの80-95%を占め、残りの部分にはトレッビアーノやマルヴァジーア・ビアンカを使用する。 モリーゼ doc (molise doc) - この広大なd.o.c.は、アブルッツォ州の南に位置する山がちなモリーゼ州の各地に広がっている。1998年にd.o.c.の認定を受けた同地域は、グレコ・ビアンコのセパージュワインを認めている数少ないワイン生産地域のひとつで、その場合ワインの85%以上がグレコ・ビアンコでなければいけない。 ペニゾーラ・ソッレンティーナ doc (penisola sorrentina doc) - カンパーニャ州のソレント半島にあるワイン生産地域。このd.o.c.の白ワインのブレンドを構成するグレコ、ファランギーナ、ビアンコレッラのうち、グレコは60%まで使用が認められている (ファランギーナが40%以上のため) 。 サンニオ doc (sannio doc) - カンパーニャ州の丘陵地帯中央に位置するワイン生産地域で、歴史上のぶどう栽培地域であったサムニウムと部分的に重なる。同地域では、グレコはスティルワインにも、伝統的なスパークリングワインの製法で作られたスプマンテ方式のワインにも使われている。白のスティルワインの場合、トレッビアーノを50%以上とし、他はグレコ、コーダ・ディ・ヴォルペ、ファランギーナ、フィアーノ、モスカートのいずれかもしくは複数とのブレンドになる。したがってグレコは50%まで使用することが認められている。ただしグレコのセパージュワインも存在し、その場合グレコは85%以上となる。スプマンテの場合、使用の認められている品種はグレコとファランギーナの2つのみである。 サンタガタ・デ・ゴーティ doc (sant'agata dei goti doc) - カンパーニャ州の町、サンタガタ・デ・ゴーティの周辺一帯に位置するワイン生産地域であり、サンニオの下位区分地区にあたる。グレコとファランギーナとのブレンドで、グレコは40-60%を占めることが認められている。 サンタンナ・ディ・イーゾラ・カーポ・リッツート doc (sant'anna di isola capo rizzuto doc) - カラブリア州クロトーネ県の南端に位置するワイン生産地域。このd.o.c.の赤ワインのブレンドにおいては、白ブドウのグレコ・ビアンコを35%まで使用することが認められている。 スカヴィーニャ doc (scavigna doc) - カラブリア州カンタンザーロ県のファレルナ付近にあるワイン生産地域であり、歴史上ファレルナでは古代ローマのワイン、ファレルヌムが生産されていた。トラミネール・アロマティコとシャルドネを主体にし、グレコ・ビアンコにかんしては2019年現在の認定基準では特に規定がないが、その他の地元産ブドウ (45%以下) の枠に含まれることが多い。 == グレコ・ネロ == グレコ種のなかでは赤ワイン用の品種となるグレコ・ネロ (greco nero) は、全グレコ種のうちイタリア国内での栽培面積がもっとも広く、推計3,200ヘクタール (7,900エーカー) に達する。たいがいのグレコ・ネロはカラブリア州で見かけられるものであり、ガリオッポとブレンドされることが多い。 グレコ・ネロの使用を認めているd.o.c.認定地域には、以下のようなものがある。 ビヴォンジ doc (bivongi doc) - 赤およびロゼワインの場合、ガリオッポ、ノチェラ、ネロ・ダヴォラ、カスティリオーネとのブレンドにおいて、グレコ・ネロは30-50%使用することが認められている。 カンピダーノ・ディ・テッラルバ doc (campidano di terralba doc) - サルデーニャ島の西海岸、カンピダーノ平野に位置するワイン生産地域 (ただし現在の規定でブドウ園は海抜400m以上) 。ボヴァーレ (bovale、別名bovale sardo) およびボヴァーレ・グランデ (bovale grande、別名bovale di spagna) を主体とし (85%以上) 、グレコ・ネロはパスカーレ・ディ・カリャリ、モニカとともにブレンドの15%まで使用することが認められている。 ドンニチ (donnici doc) - カラブリア州の都市コゼンツァの周辺一帯に位置するワイン生産地域。現在はテッレ・ディ・コゼンツァ doc (terre di cosenza doc) の下位区分地区にあたる。赤およびロゼワインはマリオッコを主体とし (60%以上) 、グレコ・ネロは10%以上使用する。その他ガリオッポ、マルヴァジーア・ビアンカ、マントニコ・ビアンコ、ペコレッロの使用は10%以下まで認められている。 ラメツィア doc (lamezia doc) - カラブリア州の都市ラメツィアの周辺一帯に位置するワイン生産地域。赤およびロゼワインの場合、ガリオッポ、マリオッコ、マルシリャーナ、ネレッロ・マスカレーゼ、ネレッロ・カップッチョとのブレンドにおいて、グレコ・ネロは25-45%使用することが認められている。なお、グレコ・ネロのセパージュワインも存在し、その場合グレコ・ネロは85%以上となる。 メリッサ (melissa doc) - 赤ワインの場合、ガリオッポを主体とし (75-95%) 、残りの5-25%にグレコ・ネロおよび白ブドウ品種のグレコ・ビアンコ、トレッビアーノ、マルヴァジーア・ビアンカを使用することが認められている。 ポッリーノ (pollino doc) - カラブリア州最北端のワイン生産地域で、サン・バジーレなどのコムーネを含むポッリーノ山麓に位置する。現在はテッレ・ディ・コゼンツァ doc (terre di cosenza doc) の下位区分地区にあたる。ガリオッポおよびマリオッコを主体とし (60%以上) 、残りの40%以下にグレコ・ネロおよび白ブドウ品種のマルヴァジーア・ビアンカ、モントニコ・ビアンコ、グアルナッチャ・ビアンカなどを使用することが認められている。 == 別名 == グレコの別名:グレコ・デル・ヴェスヴィオ (greco del vesuvio) 、グレコ・デッレ・トッレ (greco delle torre) 、グレコ・ディ・トゥーフォ (greco di tufo) 、 グレコ・ディ・ナポリ (greco di napoli) など アスプリーニョ・ビアンコの別名:アスプリーノ (asprino) 、アスプリーニャ・ディ・アヴェルサ (asprinia di aversa) 、オリヴェーゼ (olivese) 、ラグザーノ・ビアンコ (ragusano bianco) 、ウーヴァ・アスプリーナ (uva asprina) など グレコ・ネロの別名:グレク・ニウル (grecu niuru) 、サンビアーゼ (sambiase) 、ヴェルディッキオ・ネーラ (verdicchio nera) など グレコ・ビアンコをマルヴァジーア・ディ・リーパリと同一種とする説にもとづき、「グレコ」の別名扱いにされているもの (実際はグレコ・ディ・ジェラーチェ (greco di gerace) /グレコ・ディ・ビアンコ (greco di bianco) の別名に相当) :バルサミーナ・ビアンカ (balsamina bianca) 、ビアンカーメ (biancame) 、グレッコ・ビオンデッロ (greco biondello) 、グレコ・カステッラーノ (greco castellano) 、グレコ・マチェラティーノ (greco maceratino) 、グレコ・モネッチョ (greco moneccio) 、グリエコ (grieco) 、モンテッキエーゼ (montecchiese) 、モルビデッラ (morbidella) など == 関連項目 == ヴィーノ・グレコ ワイン用ブドウ品種の一覧 イタリアのブドウ品種の一覧 イタリアワイン == 脚注 ==",
-        "value": "high",
-        "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%82%B3_(%E3%83%96%E3%83%89%E3%82%A6)"
-      },
-      {
         "field": "body",
         "quote": "Al palato si presenta con una struttura ricca e avvolgente",
         "value": "high",
@@ -7385,6 +7473,36 @@
             "producer": "CANTINA LA GUARDIENSE -JANARE - SCA",
             "sourceUrl": "https://www.laguardiense.it/collezioni/sannio-greco-dop-mirata/",
             "wine": "Sannio Greco Dop Mirata"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%82%B3_(%E3%83%96%E3%83%89%E3%82%A6)",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%82%B3_(%E3%83%96%E3%83%89%E3%82%A6)",
+            "wine": "Greco"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/greco/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/greco/",
+            "wine": "Greco"
           }
         ]
       },
@@ -7551,7 +7669,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Greco_(grape)"
   },
   {
-    "acidity": "medium",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "lime",
@@ -7564,11 +7682,6 @@
         "field": "color",
         "quote": "Cortese is a white Italian wine grape variety",
         "value": "white"
-      },
-      {
-        "field": "acidity",
-        "quote": "The wine's moderate acidity and light, crisp flavors pair well with the delicate flavors of some fish.",
-        "value": "medium"
       },
       {
         "field": "body",
@@ -7717,6 +7830,36 @@
         "quote": "З кортезе виробляють як сухі, так і ігристі вина",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D1%82%D0%B5%D0%B7%D0%B5"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cortese",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Cortese",
+            "wine": "Cortese"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/cortese/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/cortese/",
+            "wine": "Cortese"
+          }
+        ]
       }
     ],
     "id": "cortese",
@@ -8969,7 +9112,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "citrus",
@@ -8988,11 +9131,6 @@
         "field": "origin",
         "quote": "Grenache blanc is thought to have originated ... in Spain",
         "value": "ES"
-      },
-      {
-        "field": "acidity",
-        "quote": "Its wines are characterized by high alcohol and low acidity",
-        "value": "low"
       },
       {
         "field": "aromas",
@@ -9148,6 +9286,36 @@
             "producer": "Винарија Лазар",
             "sourceUrl": "https://lazarwinery.mk/en/shop/product/belan-075-l",
             "wine": "Belan 075 L"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grenache_blanc",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Grenache_blanc",
+            "wine": "Grenache Blanc"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/garnacha-blanca/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/garnacha-blanca/",
+            "wine": "Grenache Blanc"
           }
         ]
       }
@@ -9977,7 +10145,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Alicante_Bouschet"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "gamey",
@@ -10098,12 +10266,6 @@
         "value": "high"
       },
       {
-        "field": "acidity",
-        "quote": "Le vin de mourvèdre est assez faible en acidité, mais il est reconnu pour la qualité de sa structure tannique, sa richesse aromatique et son aptitude au vieillissement",
-        "value": "low",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Mourv%C3%A8dre"
-      },
-      {
         "field": "body",
         "quote": "les vins à la fois corsés, colorés, riches, solides el droits, dont il esl le type",
         "value": "high",
@@ -10159,6 +10321,36 @@
             "sourceUrl": "https://downtherabbitholewines.com.au/products/2024-mataro",
             "sugar": 1.2,
             "wine": "2024 Mataro"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Mourv%C3%A8dre",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://fr.wikipedia.org/wiki/Mourv%C3%A8dre",
+            "wine": "Mourvèdre"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/monastrell/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/monastrell/",
+            "wine": "Mourvèdre"
           }
         ]
       }
@@ -10891,14 +11083,6 @@
         "sourceUrl": "https://es.wikipedia.org/wiki/Menc%C3%ADa_(uva)"
       },
       {
-        "field": "tannin",
-        "quote": "con una ligera acidez y con un final de boca con ligeros taninos dulces",
-        "value": "low",
-        "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006870",
-        "place": "Ribeira Sacra",
-        "placeId": "es-ribeira-sacra"
-      },
-      {
         "field": "body",
         "quote": "",
         "value": "medium",
@@ -10963,6 +11147,36 @@
             "sourceUrl": "https://wfs.bottlebooks.me/partners/56fd0c92b7edb7e055618cf9/products/604f3f30c3d33f1a0df43118",
             "sugar": 1.5,
             "wine": "Virgen del Galir  Pagos del Galir Mencía 2018"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006870",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "ec.europa.eu",
+            "sourceUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006870",
+            "wine": "Mencia"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/mencia/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/mencia/",
+            "wine": "Mencia"
           }
         ]
       }
@@ -11110,7 +11324,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q1293271",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
   },
@@ -15052,12 +15266,6 @@
         "value": "SI: Koper"
       },
       {
-        "field": "tannin",
-        "quote": "Die Sorte erbringt einen granatfarbenen, säure- und tanninreichen Wein mit einem fruchtigen Bouquet.",
-        "value": "high",
-        "sourceUrl": "https://de.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
-      },
-      {
         "basis": "producers",
         "factOnly": true,
         "field": "pairings",
@@ -15156,6 +15364,36 @@
             "producer": "Forchir",
             "sourceUrl": "https://www.forchir.it/vini/refosco/",
             "wine": "Refosco"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://de.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso",
+            "wine": "Refosco dal Peduncolo Rosso"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/refosco-dal-peduncolo-rosso/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/refosco-dal-peduncolo-rosso/",
+            "wine": "Refosco dal Peduncolo Rosso"
           }
         ]
       }
@@ -15279,7 +15517,7 @@
         "source": "article"
       }
     ],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q2137197",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
   },
@@ -19179,7 +19417,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Syrah"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "melon",
@@ -19203,11 +19441,6 @@
         "field": "origin",
         "quote": "has been known since the Middle Ages in the Burgundy region",
         "value": "FR"
-      },
-      {
-        "field": "acidity",
-        "quote": "moderate to low acidity",
-        "value": "low"
       },
       {
         "field": "body",
@@ -19289,6 +19522,36 @@
         "quote": "Esto puede conducir a un vino más dulce o, en el caso de que se fermente para producir un vino seco",
         "value": "dry-sweet",
         "sourceUrl": "https://es.wikipedia.org/wiki/Pinot_gris"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_gris",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_gris",
+            "wine": "Pinot gris"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinot-gris/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinot-gris/",
+            "wine": "Pinot gris"
+          }
+        ]
       }
     ],
     "id": "pinot-gris",
@@ -20224,7 +20487,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Zinfandel"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "raspberry",
@@ -20245,11 +20508,6 @@
         "field": "origin",
         "quote": "it needs hot, dry conditions such as those found in Spain, where the grape is believed to have originated.",
         "value": "ES"
-      },
-      {
-        "field": "acidity",
-        "quote": "Wines made from Grenache tend to lack acid, tannin and color",
-        "value": "low"
       },
       {
         "field": "tannin",
@@ -20389,6 +20647,36 @@
             "sourceUrl": "https://www.bodegasmontecillo.com/vinos/vina-monty/garnacha-reserva/",
             "sugar": 1.5,
             "wine": "Garnacha Reserva"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Grenache",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Grenache",
+            "wine": "Grenache"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/garnacha/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/garnacha/",
+            "wine": "Grenache"
           }
         ]
       }
@@ -20782,12 +21070,34 @@
         ]
       },
       {
+        "basis": "disputed",
+        "factOnly": true,
         "field": "tannin",
         "quote": "",
+        "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/tempranillo.html",
         "value": "high",
+        "wines": [
+          {
+            "producer": "Mövenpick Wein",
+            "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/tempranillo.html",
+            "wine": "Tempranillo"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
         "factOnly": true,
-        "publisher": "Mövenpick Wein",
-        "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/tempranillo.html"
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/tempranillo/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/tempranillo/",
+            "wine": "Tempranillo"
+          }
+        ]
       }
     ],
     "id": "tempranillo",
@@ -20953,7 +21263,7 @@
         "source": "article"
       }
     ],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q519874",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tempranillo"
   },
@@ -24667,12 +24977,6 @@
         "sourceUrl": "https://doi.org/10.3390/foods13193065"
       },
       {
-        "field": "tannin",
-        "quote": "Aus der Carménère-Traube wird ein tanninarmer, dunkler, süffiger, nach Schokolade-, Tabak- und Lederaromen schmeckender Rotwein mit einem angenehmen Beerenaroma gekeltert.",
-        "value": "low",
-        "sourceUrl": "https://de.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
-      },
-      {
         "basis": "producers-abv",
         "factOnly": true,
         "field": "alcohol",
@@ -24737,6 +25041,36 @@
             "sourceUrl": "https://evaton.com/wp-content/uploads/2016/12/ficha_mom_ca22_eng.pdf",
             "sugar": 4.43,
             "wine": "Momentos Reserva Carmenere 2022"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://de.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re",
+            "wine": "Carménère"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/carmenere/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/carmenere/",
+            "wine": "Carménère"
           }
         ]
       }
@@ -24852,7 +25186,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q1043868",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Carm%C3%A9n%C3%A8re"
   },
@@ -25889,7 +26223,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rkatsiteli"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "apple",
@@ -25905,11 +26239,6 @@
         "field": "color",
         "quote": "Pinot blanc ... is a white wine grape.",
         "value": "white"
-      },
-      {
-        "field": "acidity",
-        "quote": "most wines under the label 'Pinot blanc' are rather high in acidity",
-        "value": "high"
       },
       {
         "field": "body",
@@ -26608,6 +26937,36 @@
             "producer": "Weingut Leitner Gernot",
             "sourceUrl": "https://leitner-gols.at/weine/weisswein/pannobile-salzberg/",
             "wine": "Pannobile Salzberg"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_blanc",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_blanc",
+            "wine": "Pinot blanc"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinot-blanc/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinot-blanc/",
+            "wine": "Pinot blanc"
           }
         ]
       }
@@ -27322,7 +27681,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Petit_Verdot"
   },
   {
-    "acidity": "medium",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "fruity"
@@ -27483,11 +27842,6 @@
         "value": "dry-medium"
       },
       {
-        "field": "acidity",
-        "quote": "As a varietal red wine, Pinot Meunier tends to produce slightly jammy, fruity wines with moderate acidity and low tannins",
-        "value": "medium"
-      },
-      {
         "field": "pairings",
         "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
         "value": "pork",
@@ -27584,6 +27938,36 @@
             "producer": "Ossa",
             "sourceUrl": "https://awards.decanter.com/DWWA/any/wines/779860",
             "wine": "Pinot Meunier 2025"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Meunier",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Pinot_Meunier",
+            "wine": "Pinot meunier"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinot-meunier/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinot-meunier/",
+            "wine": "Pinot meunier"
           }
         ]
       },
@@ -29451,7 +29835,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aligot%C3%A9"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "blackberry",
@@ -29548,12 +29932,6 @@
         "value": "dry"
       },
       {
-        "field": "acidity",
-        "quote": "Вино має повне тіло, відносно невелику кислотність та м'які таніни",
-        "value": "low",
-        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
-      },
-      {
         "field": "pairings",
         "quote": "Неро д'Авола гарно поєднується зі стравами з м'яса, пастою, тушкованими овочами",
         "value": "pasta",
@@ -29563,12 +29941,6 @@
         "field": "pairings",
         "quote": "Неро д'Авола гарно поєднується зі стравами з м'яса, пастою, тушкованими овочами",
         "value": "vegetables",
-        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
-      },
-      {
-        "field": "tannin",
-        "quote": "Вино має повне тіло, відносно невелику кислотність та м'які таніни.",
-        "value": "low",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
       },
       {
@@ -29602,6 +29974,66 @@
             "producer": "Orbis Wines",
             "sourceUrl": "https://www.orbiswines.com.au/products/2024-nero-d-avola",
             "wine": "2024 Nero D Avola"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0",
+            "wine": "Nero d'Avola"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/nero-davola/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/nero-davola/",
+            "wine": "Nero d'Avola"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0",
+            "wine": "Nero d'Avola"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/nero-davola/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/nero-davola/",
+            "wine": "Nero d'Avola"
           }
         ]
       }
@@ -29712,7 +30144,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q1713890",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nero_d'Avola"
   },
@@ -31356,7 +31788,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cinsaut"
   },
   {
-    "acidity": "high",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "smoky",
@@ -31379,11 +31811,6 @@
         "field": "origin",
         "quote": "It was cultivated there in 1925 ... South Africa",
         "value": "ZA"
-      },
-      {
-        "field": "tannin",
-        "quote": "The grape is naturally high in tannins",
-        "value": "high"
       },
       {
         "field": "aromas",
@@ -31506,12 +31933,6 @@
         "value": "ZW: Zimbabwe"
       },
       {
-        "field": "acidity",
-        "quote": "Молоді вина мають виражений фруктовий смак та відносно високу кислотність",
-        "value": "high",
-        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE%D1%82%D0%B0%D0%B6"
-      },
-      {
         "field": "sweetness",
         "quote": "Цей сорт винограду зазвичай використовується для виробництва сухих червоних",
         "value": "dry",
@@ -31617,6 +32038,66 @@
             "producer": "Windmeul",
             "sourceUrl": "https://windmeul.com/shop-wine/the-red-cellar-range/2024-pinotage/",
             "wine": "2024 Pinotage"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE%D1%82%D0%B0%D0%B6",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%BE%D1%82%D0%B0%D0%B6",
+            "wine": "Pinotage"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinotage/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinotage/",
+            "wine": "Pinotage"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pinotage",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Pinotage",
+            "wine": "Pinotage"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinotage/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/pinotage/",
+            "wine": "Pinotage"
           }
         ]
       }
@@ -31731,12 +32212,12 @@
         "source": "article"
       }
     ],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q1504214",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pinotage"
   },
   {
-    "acidity": "medium",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "black fruit",
@@ -31755,11 +32236,6 @@
         "field": "origin",
         "quote": "geographic area of origin of the variety is Lower Styria (today Slovenian Styria).",
         "value": "SI"
-      },
-      {
-        "field": "acidity",
-        "quote": "moderate to high acidity",
-        "value": "medium"
       },
       {
         "field": "tannin",
@@ -31960,6 +32436,36 @@
             "producer": "Weingut Gehlen-Cornelius",
             "sourceUrl": "https://gehlen-cornelius.de/products/blaufrankisch",
             "wine": "Blaufrankisch"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Blaufr%C3%A4nkisch",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Blaufr%C3%A4nkisch",
+            "wine": "Blaufränkisch"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/blaufrankisch/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/blaufrankisch/",
+            "wine": "Blaufränkisch"
           }
         ]
       }
@@ -32170,12 +32676,6 @@
         "field": "regions",
         "quote": "Widely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe ... It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings ...",
         "value": "US: Washington state"
-      },
-      {
-        "field": "tannin",
-        "quote": "Das Bukett ist oft mit Vanille-Aromen und weichen Tanninen im Abgang",
-        "value": "low",
-        "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt"
       },
       {
         "field": "aromas",
@@ -32435,6 +32935,36 @@
         "factOnly": true,
         "publisher": "Wine Paradigm",
         "sourceUrl": "https://wineparadigm.com/zweigelt/"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://de.wikipedia.org/wiki/Zweigelt",
+            "wine": "Zweigelt"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/zweigelt/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/zweigelt/",
+            "wine": "Zweigelt"
+          }
+        ]
       }
     ],
     "id": "zweigelt",
@@ -32550,7 +33080,7 @@
         "source": "article"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q232825",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Zweigelt"
   },
@@ -33098,7 +33628,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Macabeo"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "earthy",
@@ -33234,22 +33764,10 @@
         "sourceUrl": "https://ca.wikipedia.org/wiki/Negroamaro"
       },
       {
-        "field": "tannin",
-        "quote": "Негроамаро даёт красные вина с высоким содержанием алкоголя и танинов",
-        "value": "high",
-        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D0%B0%D0%BC%D0%B0%D1%80%D0%BE"
-      },
-      {
         "field": "sweetness",
         "quote": "Здебільшого виробляються сухі червоні вина",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D0%B0%D0%BC%D0%B0%D1%80%D0%BE"
-      },
-      {
-        "field": "acidity",
-        "quote": "Druen besidder karakteristisk kraft og fylde, lavt syreindhold, rig på tanniner",
-        "value": "low",
-        "sourceUrl": "https://da.wikipedia.org/wiki/Negroamaro"
       },
       {
         "field": "body",
@@ -33289,6 +33807,66 @@
             "producer": "Claudio Quarta",
             "sourceUrl": "https://claudioquarta.it/it/vino/anima-di-negroamaro",
             "wine": "Anima Di Negroamaro"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://da.wikipedia.org/wiki/Negroamaro",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://da.wikipedia.org/wiki/Negroamaro",
+            "wine": "Negroamaro"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/negroamaro/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/negroamaro/",
+            "wine": "Negroamaro"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D0%B0%D0%BC%D0%B0%D1%80%D0%BE",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B3%D1%80%D0%BE%D0%B0%D0%BC%D0%B0%D1%80%D0%BE",
+            "wine": "Negroamaro"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/negroamaro/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/negroamaro/",
+            "wine": "Negroamaro"
           }
         ]
       }
@@ -33437,7 +34015,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q936512",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Negroamaro"
   },
@@ -43144,7 +43722,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/B%C4%83beasc%C4%83_neagr%C4%83"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "cherry"
@@ -43161,16 +43739,6 @@
         "field": "origin",
         "quote": "its origin is more likely to be in the Abruzzo region in central Italy",
         "value": "IT"
-      },
-      {
-        "field": "acidity",
-        "quote": "Compared to most Italian varieties, Montepulciano has moderately low acidity",
-        "value": "low"
-      },
-      {
-        "field": "tannin",
-        "quote": "more mild (i.e. softer) than bitter edged tannins",
-        "value": "low"
       },
       {
         "field": "synonyms",
@@ -43370,6 +43938,66 @@
             "wine": "Montepulciano D Abruzzo"
           }
         ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Montepulciano_(grape)",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Montepulciano_(grape)",
+            "wine": "Montepulciano"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/montepulciano/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/montepulciano/",
+            "wine": "Montepulciano"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Montepulciano_(grape)",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Montepulciano_(grape)",
+            "wine": "Montepulciano"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/montepulciano/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/montepulciano/",
+            "wine": "Montepulciano"
+          }
+        ]
       }
     ],
     "id": "montepulciano",
@@ -43527,7 +44155,7 @@
         "source": "article"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q1937737",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Montepulciano_(grape)"
   },
@@ -45000,12 +45628,6 @@
         "sourceUrl": "https://fr.wikipedia.org/wiki/Graciano_(c%C3%A9page)"
       },
       {
-        "field": "tannin",
-        "quote": "Czyste graciano cechuje się wysoką kwasowością i zawartością garbników",
-        "value": "high",
-        "sourceUrl": "https://pl.wikipedia.org/wiki/Graciano"
-      },
-      {
         "basis": "producers-abv",
         "factOnly": true,
         "field": "alcohol",
@@ -45055,6 +45677,36 @@
             "producer": "Bodegas Navajas",
             "sourceUrl": "https://bodegasnavajas.es/tienda/producto/vinos-doc-rioja-navajas/monovarietales/navajas-graciano-crianza/",
             "wine": "Navajas Graciano Crianza"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://pl.wikipedia.org/wiki/Graciano",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://pl.wikipedia.org/wiki/Graciano",
+            "wine": "Graciano"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/graciano/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/graciano/",
+            "wine": "Graciano"
           }
         ]
       }
@@ -45236,7 +45888,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q119794",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Graciano"
   },
@@ -46370,7 +47022,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains"
   },
   {
-    "acidity": "low",
+    "acidity": null,
     "alcohol": "high",
     "aromas": [
       "nutty",
@@ -46587,12 +47239,6 @@
         "value": "dry-sweet"
       },
       {
-        "field": "acidity",
-        "quote": "Les vins sont puissants, de faible acidité",
-        "value": "low",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Marsanne_(c%C3%A9page)"
-      },
-      {
         "field": "pairings",
         "quote": "De wijn past meestal goed bij visgerechten.",
         "value": "fish",
@@ -46605,6 +47251,36 @@
         "factOnly": true,
         "publisher": "Mövenpick Wein",
         "sourceUrl": "https://www.moevenpick-wein.com/de/rebsorten/marsanne.html"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Marsanne_(c%C3%A9page)",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://fr.wikipedia.org/wiki/Marsanne_(c%C3%A9page)",
+            "wine": "Marsanne"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/marsanne/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/marsanne/",
+            "wine": "Marsanne"
+          }
+        ]
       }
     ],
     "id": "marsanne",
@@ -48095,12 +48771,6 @@
         "sourceUrl": "https://fr.wikipedia.org/wiki/Marselan"
       },
       {
-        "field": "tannin",
-        "quote": "El raïm marselan produeix generalment vins aromàtics amb cos, de color fosc i tons porpra, rics en tanins",
-        "value": "high",
-        "sourceUrl": "https://ca.wikipedia.org/wiki/Marselan"
-      },
-      {
         "basis": "producers",
         "factOnly": true,
         "field": "pairings",
@@ -48174,6 +48844,36 @@
         "factOnly": true,
         "publisher": "Wine Paradigm",
         "sourceUrl": "https://wineparadigm.com/marselan/"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://ca.wikipedia.org/wiki/Marselan",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://ca.wikipedia.org/wiki/Marselan",
+            "wine": "Marselan"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/marselan/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/marselan/",
+            "wine": "Marselan"
+          }
+        ]
       }
     ],
     "id": "marselan",
@@ -48288,7 +48988,7 @@
       "to": "dry"
     },
     "synonyms": [],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q833144",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Marselan"
   },
@@ -52330,7 +53030,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Falanghina"
   },
   {
-    "acidity": "medium",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "strawberry",
@@ -52348,11 +53048,6 @@
         "field": "origin",
         "quote": "While the grape is likely northern Italian in origin",
         "value": "IT"
-      },
-      {
-        "field": "acidity",
-        "quote": "Trollinger has moderate acidity and tends to produce light bodied wines with fruity strawberry and subtle smokey notes.",
-        "value": "medium"
       },
       {
         "field": "body",
@@ -52535,6 +53230,36 @@
             "producer": "Weingut Faschian",
             "sourceUrl": "https://weingut-faschian.de/wein-shop/trollinger-trocken-2/",
             "wine": "Trollinger Trocken 2"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Trollinger",
+            "wine": "Trollinger"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "acidity",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/schiava-grossa/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/schiava-grossa/",
+            "wine": "Trollinger"
           }
         ]
       }
@@ -63327,12 +64052,6 @@
         "sourceUrl": "https://it.wikipedia.org/wiki/Teroldego"
       },
       {
-        "field": "tannin",
-        "quote": "Dalle uve Teroldego si ottiene un vino di colore rubino carico con riflessi porpora; il profumo è vinoso, e si possono percepire odori di viola e lamponi, ma anche di ciliegie e mandorle; il gusto, secco, è strutturato, poco tannico, sentori di rosa, piuttosto acido, non molto alcolico.",
-        "value": "low",
-        "sourceUrl": "https://it.wikipedia.org/wiki/Teroldego"
-      },
-      {
         "basis": "producers-abv",
         "factOnly": true,
         "field": "alcohol",
@@ -63427,6 +64146,36 @@
         "factOnly": true,
         "publisher": "Grand Cru Wijnen",
         "sourceUrl": "https://www.grandcruwijnen.nl/en/wines/druif/teroldego"
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://it.wikipedia.org/wiki/Teroldego",
+        "value": "low",
+        "wines": [
+          {
+            "producer": "Wikipedia",
+            "sourceUrl": "https://it.wikipedia.org/wiki/Teroldego",
+            "wine": "Teroldego"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "tannin",
+        "quote": "",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/teroldego/",
+        "value": "medium",
+        "wines": [
+          {
+            "producer": "Vine&Wine",
+            "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/teroldego/",
+            "wine": "Teroldego"
+          }
+        ]
       }
     ],
     "id": "teroldego",
@@ -63536,7 +64285,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": "low",
+    "tannin": null,
     "wikidataId": "Q2405039",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Teroldego"
   },
@@ -64292,6 +65041,22 @@
         ]
       },
       {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotriacoe.com/wine/grapes/nerello-mascalese"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Vine&Wine",
+        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/nerello-mascalese/"
+      },
+      {
         "basis": "disputed",
         "factOnly": true,
         "field": "body",
@@ -64332,37 +65097,6 @@
         ]
       },
       {
-        "field": "acidity",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Enotria&Coe",
-        "sourceUrl": "https://www.enotriacoe.com/wine/grapes/nerello-mascalese"
-      },
-      {
-        "field": "tannin",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Vine&Wine",
-        "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/nerello-mascalese/"
-      },
-      {
-        "basis": "disputed",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://fr.wikipedia.org/wiki/Nerello_mascalese",
-        "value": "high",
-        "wines": [
-          {
-            "producer": "Wikipédia",
-            "sourceUrl": "https://fr.wikipedia.org/wiki/Nerello_mascalese",
-            "wine": "Nerello mascalese"
-          }
-        ]
-      },
-      {
         "basis": "disputed",
         "factOnly": true,
         "field": "alcohol",
@@ -64384,6 +65118,21 @@
             "producer": "Cantine Ermes",
             "sourceUrl": "https://cantineermes.it/en/brand/vento-di-mare-nerello-mascalese/",
             "wine": "Vento di Mare Nerello Mascalese"
+          }
+        ]
+      },
+      {
+        "basis": "disputed",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://fr.wikipedia.org/wiki/Nerello_mascalese",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Wikipédia",
+            "sourceUrl": "https://fr.wikipedia.org/wiki/Nerello_mascalese",
+            "wine": "Nerello mascalese"
           }
         ]
       }
