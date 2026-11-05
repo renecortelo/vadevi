@@ -17802,6 +17802,12 @@
             "producer": "Weingut Steininger",
             "sourceUrl": "https://www.weingut-steininger.at/online-vinothek/weine/riesling-novemberlese-2008/",
             "wine": "Riesling Novemberlese 2008"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/riesling-trocken/",
+            "wine": "Riesling Trocken"
           }
         ]
       },
@@ -22197,6 +22203,12 @@
             "producer": "Weingut Mossel Mentz",
             "sourceUrl": "https://www.weingut-mossel-mentz.de/produkt/mueller-thurgau-2/",
             "wine": "Mueller Thurgau 2"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/rivaner-trocken/",
+            "wine": "Rivaner Trocken"
           }
         ]
       },
@@ -25994,6 +26006,12 @@
             "producer": "Weingasthaus Wisser",
             "sourceUrl": "https://www.weingasthaus-wisser.de/produkt/weisser-burgunder/",
             "wine": "Weisser Burgunder"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2022er-weissburgunder-s-trocken/",
+            "wine": "2022Er Weissburgunder S Trocken"
           }
         ]
       },
@@ -41245,6 +41263,12 @@
             "producer": "Weingut Jordan",
             "sourceUrl": "https://www.weingut-jordan.at/product/st-laurent-ried-satzen/",
             "wine": "St Laurent Ried Satzen"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2022-saint-laurent-trocken/",
+            "wine": "2022 Saint Laurent Trocken"
           }
         ]
       },
@@ -43023,6 +43047,12 @@
             "producer": "Öko-Weingut Schmalzried",
             "sourceUrl": "https://www.weingutschmalzried.de/produkt/dornfelder/",
             "wine": "Dornfelder"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2020-dornfelder-edition-trocken/",
+            "wine": "2020 Dornfelder Edition Trocken"
           }
         ]
       },
@@ -54932,6 +54962,11 @@
             "producer": "Weingut Jung",
             "sourceUrl": "https://wein-macht-jung.de/products/2024-bacchus-gutswein-lieblich",
             "wine": "2024 Bacchus Gutswein Lieblich"
+          },
+          {
+            "producer": "Weingut K. W. Müller",
+            "sourceUrl": "https://vinocumlaude.de/produkt/2023-bacchus-kabinett/",
+            "wine": "2023 Bacchus Kabinett"
           }
         ]
       },

@@ -63544,7 +63544,74 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000007821",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "bobal",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-franc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "grenache",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "macabeo",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "mourvedre",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "tempranillo",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "es-chozas-carrascal",
     "latitude": 39.48854,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007821",
@@ -142244,7 +142311,134 @@
     "countryCode": "SK",
     "eambrosiaId": "EUGI00000006683",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-alba",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-regala",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blaufrankisch",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "irsai-oliver",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blauer-portugieser",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-ottonel",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muller-thurgau",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "neuburger",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "italian-riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "silvaner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "st-laurent",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gruner-veltliner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "zweigelt",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "sk-juznoslovenska",
     "latitude": 48.33061299900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006683",
@@ -142813,7 +143007,134 @@
     "countryCode": "SK",
     "eambrosiaId": "EUGI00000007210",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-alba",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-regala",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blaufrankisch",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "irsai-oliver",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blauer-portugieser",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-ottonel",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muller-thurgau",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "neuburger",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "italian-riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "silvaner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "st-laurent",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gruner-veltliner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "zweigelt",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "sk-karpatska-perla",
     "latitude": 48.52560899900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000007210",
@@ -161272,7 +161593,134 @@
     "countryCode": "SK",
     "eambrosiaId": "EUGI00000006690",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-alba",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-regala",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blaufrankisch",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "irsai-oliver",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blauer-portugieser",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-ottonel",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muller-thurgau",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "neuburger",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "italian-riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "silvaner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "st-laurent",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gruner-veltliner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "zweigelt",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "sk-malokarpatska",
     "latitude": 48.341126325500056,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006690",
@@ -177883,7 +178331,14 @@
     "countryCode": "DE",
     "eambrosiaId": "EUGI00000015112",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "de-monzinger-niederberg",
     "latitude": 49.79917,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000015112",
@@ -183852,7 +184307,14 @@
     "countryCode": "HR",
     "eambrosiaId": "EUGI00000014449",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-blanc-a-petits-grains",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "hr-muskat-momjanski",
     "latitude": 45.439,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000014449",
@@ -189589,7 +190051,134 @@
     "countryCode": "SK",
     "eambrosiaId": "EUGI00000006685",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-alba",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-regala",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blaufrankisch",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "irsai-oliver",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blauer-portugieser",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-ottonel",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muller-thurgau",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "neuburger",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "italian-riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "silvaner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "st-laurent",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gruner-veltliner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "zweigelt",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "sk-nitrianska",
     "latitude": 48.36174437400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006685",
@@ -253549,7 +254138,140 @@
     "countryCode": "SK",
     "eambrosiaId": "EUGI00000006395",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-alba",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-regala",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blaufrankisch",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "furmint",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "irsai-oliver",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blauer-portugieser",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-ottonel",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muller-thurgau",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "neuburger",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "italian-riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "silvaner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "st-laurent",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gruner-veltliner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "zweigelt",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "sk-stredoslovenska",
     "latitude": 48.36174437400007,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006395",
@@ -286147,7 +286869,38 @@
     "countryCode": "ES",
     "eambrosiaId": "EUGI00000008543",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "bobal",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "merlot",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "tempranillo",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "es-vera-de-estenas",
     "latitude": 39.550888888888885,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000008543",
@@ -292881,7 +293634,26 @@
     "countryCode": "SK",
     "eambrosiaId": "EUGI00000003562",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "furmint",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "harslevelu",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-blanc-a-petits-grains",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "sk-vinohradnicka-oblast-tokaj",
     "latitude": 48.67682674900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000003562",
@@ -295519,7 +296291,134 @@
     "countryCode": "SK",
     "eambrosiaId": "EUGI00000006368",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-alba",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-regala",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blaufrankisch",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "irsai-oliver",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "blauer-portugieser",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muscat-ottonel",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "muller-thurgau",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "neuburger",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "italian-riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-noir",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "sauvignon-blanc",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "silvaner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "st-laurent",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gewurztraminer",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "gruner-veltliner",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "zweigelt",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "sk-vychodoslovenska",
     "latitude": 48.67682674900004,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000006368",
@@ -302020,7 +302919,62 @@
     "countryCode": "RO",
     "eambrosiaId": "EUGI00000004891",
     "giType": "PDO",
-    "grapes": [],
+    "grapes": [
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "aligote",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "cabernet-sauvignon",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "chardonnay",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-alba",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "feteasca-regala",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "pinot-gris",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "italian-riesling",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      },
+      {
+        "by": "Candiago et al., 2022",
+        "grapeId": "syrah",
+        "quote": "",
+        "sourceUrl": "https://doi.org/10.1038/s41597-022-01513-0"
+      }
+    ],
     "id": "ro-insuratei",
     "latitude": 44.916666666667,
     "legalUrl": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/details/EUGI00000004891",

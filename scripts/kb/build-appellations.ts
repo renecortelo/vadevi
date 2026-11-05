@@ -2215,6 +2215,38 @@ for (const [id, region] of Object.entries(adelaide.regions)) {
 }
 console.info(`  ${fromAdelaideGrapes} grape links from the University of Adelaide.`);
 
+// Where nothing above names a grape, the varieties Candiago et al.'s inventory
+// of the EU's PDOs lists for it (CC0, as of November 2021; `pnpm kb:read-candiago`).
+const candiago = (
+  JSON.parse(readFileSync(resolve("data/kb/candiago-region-grapes.json"), "utf8")) as {
+    regions: Record<string, { pdo: string; varieties: string[] }>;
+  }
+).regions;
+let fromCandiago = 0;
+for (const [id, { varieties }] of Object.entries(candiago)) {
+  const entry = entryById.get(id);
+  if (entry === undefined) throw new Error(`candiago-region-grapes: no name ${id}`);
+  if ((entry.register?.grapes.length ?? 0) > 0 || entry.grapes.length > 0) continue;
+  const listed = new Set(
+    varieties
+      .map((name) => primaryName.get(matchKey(name)))
+      .filter((grapeId): grapeId is string => Boolean(grapeId)),
+  );
+  for (const name of varieties) {
+    const grapeId = linkVariety(name, listed, families);
+    if (grapeId === null || entry.grapes.some((known) => known.grapeId === grapeId)) continue;
+    entry.grapes.push({
+      by: "Candiago et al., 2022",
+      grapeId,
+      quote: "",
+      sourceUrl: "https://doi.org/10.1038/s41597-022-01513-0",
+    });
+    fromCandiago += 1;
+    links += 1;
+  }
+}
+console.info(`  ${fromCandiago} grape links from Candiago et al.'s inventory.`);
+
 // Where nothing above names a grape, the varieties a name's own body gives
 // on its pages (Wine Growers British Columbia, VQA Ontario, Wines of South
 // Africa), under the operator's rule of the fact alone

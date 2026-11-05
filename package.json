@@ -61,6 +61,7 @@
     "kb:fetch-pt-production": "tsx scripts/kb/fetch-pt-production.ts",
     "kb:fetch-region-infobox-grapes": "tsx scripts/kb/fetch-region-infobox-grapes.ts",
     "kb:read-adelaide": "tsx scripts/kb/read-adelaide.ts",
+    "kb:read-candiago": "tsx scripts/kb/read-candiago.ts",
     "kb:fetch-topics": "tsx scripts/kb/fetch-topics.ts",
     "kb:build-topics": "tsx scripts/kb/build-topics.ts",
     "kb:fetch-grape-images": "tsx scripts/kb/fetch-grape-images.ts",

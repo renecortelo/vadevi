@@ -528,6 +528,15 @@ export const sources: Source[] = [
   },
   {
     credit:
+      "Candiago, S., et al., A geospatial inventory of regulatory information for wine protected designations of origin in Europe, Scientific Data 9, 2022",
+    group: "figures",
+    licence: "CC0 1.0",
+    name: "Candiago et al., inventory of the EU's wine PDOs",
+    url: "https://doi.org/10.1038/s41597-022-01513-0",
+    what: "varieties",
+  },
+  {
+    credit:
       "Anderson, K., S. Nelgen and G. Puga, Database of Regional, National and Global Winegrape Bearing Areas by Variety, 2000 to 2023, Wine Economics Research Centre, University of Adelaide, December 2025 (revised March 2026); summed by region and grape",
     group: "figures",
     licence: "CC BY 4.0",

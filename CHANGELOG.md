@@ -55,12 +55,16 @@ has the reasons.
 
 ### Library
 
+- **Twelve more registered names have their grapes**, from Candiago et al.'s
+  inventory of the EU's wine PDOs (CC0): most of Slovakia's, Chozas Carrascal,
+  Vera de Estenas, Însurăței and Muškat momjanski among them.
+
 - **Sources whose terms forbid commercial use of their data, robots or
   data mining are no longer used**, even for the fact alone: the SAQ, the
   Decanter World Wine Awards (Future plc's terms), Vinerra, iDealwine,
   Wine&more, Stanley's Wet Goods, Berry Bros. & Rudd, Les Grappes, Inter
-  Rhône, Drink Michigan, Vino Cum Laude, Wine.com and Magyar Bor (bor.hu
-  and Wines of Hungary's Osaka Expo catalogue). About a hundred facts go with
+  Rhône, Drink Michigan, Wine.com and Magyar Bor (bor.hu and Wines of
+  Hungary's Osaka Expo catalogue). About a hundred facts go with
   them — most of the alcohol levels agreed from competition entries,
   Vinerra's profiles — and those fields are gaps again unless another
   source says the same. The same goes for forty wineries' own sites with such
