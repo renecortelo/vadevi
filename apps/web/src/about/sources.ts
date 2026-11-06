@@ -527,6 +527,13 @@ export const sources: Source[] = [
     what: "areas",
   },
   {
+    group: "texts",
+    name: "Bundessortenamt, Beschreibende Sortenliste Reben 2024",
+    terms: "reuseCiting",
+    url: "https://www.bundessortenamt.de/bsa/media/Files/BSL/bsl_rebe_2024.pdf",
+    what: "traits",
+  },
+  {
     credit:
       "Candiago, S., et al., A geospatial inventory of regulatory information for wine protected designations of origin in Europe, Scientific Data 9, 2022",
     group: "figures",

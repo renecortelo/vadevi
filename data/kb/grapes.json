@@ -52294,7 +52294,9 @@
   {
     "acidity": null,
     "alcohol": "medium",
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -52461,6 +52463,14 @@
             "wine": "Muskattrollinger 1"
           }
         ]
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "fruity",
+        "factOnly": true,
+        "publisher": "Bundessortenamt",
+        "sourceUrl": "https://www.bundessortenamt.de/bsa/media/Files/BSL/bsl_rebe_2024.pdf"
       }
     ],
     "id": "black-muscat",

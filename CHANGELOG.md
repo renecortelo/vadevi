@@ -62,6 +62,9 @@ has the reasons.
   Baga, Xinomavro and Irsai Olivér are moderate in alcohol, from their
   producers' figures.
 
+- **Muskat Trollinger has its first aroma, fruity**, from the German plant
+  variety office's descriptive list of vines.
+
 - **Twelve more registered names have their grapes**, from Candiago et al.'s
   inventory of the EU's wine PDOs (CC0): most of Slovakia's, Chozas Carrascal,
   Vera de Estenas, Însurăței and Muškat momjanski among them.
