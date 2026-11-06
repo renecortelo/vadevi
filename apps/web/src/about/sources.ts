@@ -109,14 +109,14 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Wine Paradigm (Pocket Wine), fichas de uvas: solo el nivel que da la ficha (cuerpo, acidez), con su enlace",
+    name: "Wine Paradigm (Pocket Wine), fichas de uvas: solo el nivel que da la ficha (cuerpo, acidez, seco o dulce, aromas), con su enlace",
     terms: "factOnly",
     url: "https://wineparadigm.com/zweigelt/",
     what: "traits",
   },
   {
     group: "texts",
-    name: "Tiendas de vino, la descripción de una botella (Vino.com: cuerpo, dosaggio, maridajes): solo el dato, contado como la ficha de ese vino para el consenso de tres bodegas, y para mostrar que las fuentes no coinciden",
+    name: "Tiendas de vino y catálogos de agencias, la descripción de una botella (Vino.com: cuerpo, dosaggio, maridajes; Tocade y Elixirs, en Kork: grado y maridajes): solo el dato, contado como la ficha de ese vino para el consenso de tres bodegas, y para mostrar que las fuentes no coinciden",
     terms: "factOnly",
     url: "https://www.vino.com/dettaglio/marche-igt-passerina-belisario-2025.html",
     what: "traits",

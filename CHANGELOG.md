@@ -6,6 +6,13 @@ has the reasons.
 
 ## Unreleased
 
+### The library
+
+- **Twelve more facts about grapes**: Hondarrabi Zuri (light, dry),
+  Roussanne (dry), Petit Verdot (full-bodied) and Trebbiano (citrus) from Wine
+  Paradigm; Usakhelauri's plum from its Georgian appellation; alcohol for
+  Garnacha Roja, Rondo and Nero d'Avola; and lamb, beef and fish for Mencía.
+
 ### Lists that hold up
 
 - **Bottles and wishlist items keep their names**: the cards read "unknown

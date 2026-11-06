@@ -1198,7 +1198,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity",
       "raspberry",
@@ -1306,6 +1306,40 @@
         "factOnly": true,
         "publisher": "Baur au Lac Vins",
         "sourceUrl": "https://www.bauraulacvins.ch/en/grenache-gris-_content---1--669--11105713.html"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://tocade.kork.ca/en/our-wineries/altolandon/enrosado-manchuela/2024",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.3,
+            "producer": "Altolandon",
+            "sourceUrl": "https://tocade.kork.ca/en/our-wineries/altolandon/enrosado-manchuela/2024",
+            "wine": "Enrosado, Manchuela"
+          },
+          {
+            "abv": 13.3,
+            "producer": "Le Pinard de Rochard",
+            "sourceUrl": "https://nobleselection.kork.ca/en/our-wineries/le-pinard-de-rochard/grenache-gris/2022",
+            "wine": "Grenache Gris"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Jeff Carrel",
+            "sourceUrl": "https://divinparadis.kork.ca/en/our-wineries/toowo-the-way-of-wine-sarl/jeff-carrel-les-mamettes/2025",
+            "wine": "Jeff Carrel, Les Mamettes"
+          },
+          {
+            "abv": 14,
+            "producer": "Celler Mas Llunes",
+            "sourceUrl": "https://masllunes.es/vins/garnatxa-roja/",
+            "wine": "Garnatxa Roja"
+          }
+        ]
       }
     ],
     "id": "garnacha-roja",
@@ -8467,7 +8501,7 @@
       "pear",
       "exotic fruit"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -8574,6 +8608,22 @@
         "field": "alcohol",
         "quote": "with notable acidity and a medium to moderate alcohol content",
         "value": "medium"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/hondarrabi-zuri-txakoli/"
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/hondarrabi-zuri-txakoli/"
       }
     ],
     "id": "hondarrabi-zuri",
@@ -8651,7 +8701,10 @@
         "url": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Hondarribi Zuri",
@@ -10691,6 +10744,81 @@
         ]
       },
       {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://tocade.kork.ca/en/our-wineries/bodegas-gallegas/rectoral-de-amandi-galice/2023",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Bodegas Gallegas",
+            "sourceUrl": "https://tocade.kork.ca/en/our-wineries/bodegas-gallegas/rectoral-de-amandi-galice/2023",
+            "wine": "Rectoral de Amandi"
+          },
+          {
+            "producer": "Quinta do Mondego",
+            "sourceUrl": "https://elixirs.kork.ca/en/our-wineries/quinta-do-mondego/quinta-mondego-jaen/2024",
+            "wine": "Jaen"
+          },
+          {
+            "producer": "Adega Ponte da Boga",
+            "sourceUrl": "https://pontedaboga.es/tienda/mencia/",
+            "wine": "Mencía"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://tocade.kork.ca/en/our-wineries/bodegas-gallegas/bodegas-millenium-vina-leirado-mencia/2022",
+        "value": "beef",
+        "wines": [
+          {
+            "producer": "Bodegas Gallegas",
+            "sourceUrl": "https://tocade.kork.ca/en/our-wineries/bodegas-gallegas/bodegas-millenium-vina-leirado-mencia/2022",
+            "wine": "Viña Leirado Mencía"
+          },
+          {
+            "producer": "Quinta do Mondego",
+            "sourceUrl": "https://elixirs.kork.ca/en/our-wineries/quinta-do-mondego/jaen/2024",
+            "wine": "Jaen"
+          },
+          {
+            "producer": "Varney Wines",
+            "sourceUrl": "https://varneywines.com.au/products/2025-mencia",
+            "wine": "Mencia 2025"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://elixirs.kork.ca/en/our-wineries/quinta-do-mondego/jaen/2024",
+        "value": "lamb",
+        "wines": [
+          {
+            "producer": "Quinta do Mondego",
+            "sourceUrl": "https://elixirs.kork.ca/en/our-wineries/quinta-do-mondego/jaen/2024",
+            "wine": "Jaen"
+          },
+          {
+            "producer": "Varney Wines",
+            "sourceUrl": "https://varneywines.com.au/products/2025-mencia",
+            "wine": "Mencia 2025"
+          },
+          {
+            "producer": "Bodegas Murviedro",
+            "sourceUrl": "https://murviedro.es/vino/santerra-mecia",
+            "wine": "Santerra Mencía"
+          }
+        ]
+      },
+      {
         "basis": "disputed",
         "factOnly": true,
         "field": "tannin",
@@ -10733,7 +10861,11 @@
       "pt": "Mencia"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "beef",
+      "lamb"
+    ],
     "prominence": 13,
     "regions": [
       {
@@ -12081,7 +12213,9 @@
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "plum"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -12109,6 +12243,16 @@
         "field": "sweetness",
         "quote": "is a naturally semi-sweet Georgian wine",
         "value": "medium"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "plum",
+        "factOnly": true,
+        "publisher": "Sakpatenti",
+        "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
+        "place": "Okureshis Usakhelouri",
+        "placeId": "ge-okureshis-usakhelouri"
       }
     ],
     "id": "usakhelauri",
@@ -14729,7 +14873,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "cherry",
       "blackberry"
@@ -14811,6 +14955,52 @@
         "factOnly": true,
         "publisher": "Siston Brook Vineyard",
         "sourceUrl": "https://forestlarder.com/our-grapes/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://vesterhave-vingaard.dk/product/roedvin-groen-lagune-1-claretvin-2024-14-alc-500ml-rondo-93-point/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 14,
+            "producer": "Vesterhave Vingaard",
+            "sourceUrl": "https://vesterhave-vingaard.dk/product/roedvin-groen-lagune-1-claretvin-2024-14-alc-500ml-rondo-93-point/",
+            "wine": "Grøn Lagune 1, 2024"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Vesterhave Vingaard",
+            "sourceUrl": "https://vesterhave-vingaard.dk/product/roedvin-groen-lagune-2025-115-alc-500ml-rondo/",
+            "wine": "Grøn Lagune, 2025"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Vesterhave Vingaard",
+            "sourceUrl": "https://vesterhave-vingaard.dk/product/roedvin-groen-lagune-1-claretvin-2023-125-alc-500ml-rondo/",
+            "wine": "Grøn Lagune 1, Claretvin, 2023"
+          },
+          {
+            "abv": 13,
+            "producer": "Vesterhave Vingaard",
+            "sourceUrl": "https://vesterhave-vingaard.dk/product/roedvin-roed-lagune-1-2024-rondo-13-alc-500ml-oekologisk/",
+            "wine": "Rød Lagune 1, 2024"
+          },
+          {
+            "abv": 11,
+            "producer": "White Castle Vineyard",
+            "sourceUrl": "https://whitecastlevineyard.com/product/rondo-2016/",
+            "wine": "Rondo 2016"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Kerry Vale Vineyard",
+            "sourceUrl": "https://www.kerryvalevineyard.co.uk/shop/p/rondo-reserve",
+            "wine": "Rondo Reserve"
+          }
+        ]
       },
       {
         "field": "origin",
@@ -23717,7 +23907,9 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "citrus"
+    ],
     "body": "low",
     "color": "white",
     "evidence": [
@@ -23869,6 +24061,14 @@
         "field": "body",
         "quote": "",
         "value": "low",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/trebbiano/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "citrus",
         "factOnly": true,
         "publisher": "Wine Paradigm",
         "sourceUrl": "https://wineparadigm.com/trebbiano/"
@@ -26636,7 +26836,7 @@
       "violet",
       "leather"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -26789,6 +26989,14 @@
             "wine": "Sutherland Petit Verdot Reserve 2015"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/petit-verdot/"
       }
     ],
     "id": "petit-verdot",
@@ -28852,7 +29060,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "blackberry",
       "fruity",
@@ -28958,6 +29166,130 @@
         "quote": "Неро д'Авола гарно поєднується зі стравами з м'яса, пастою, тушкованими овочами",
         "value": "vegetables",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%BE_%D0%B4'%D0%90%D0%B2%D0%BE%D0%BB%D0%B0"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/nero-davola",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.5,
+            "producer": "Mandrarossa",
+            "sourceUrl": "https://www.mandrarossa.it/en/varietals-wines/nero-davola",
+            "wine": "Nero d'Avola"
+          },
+          {
+            "abv": 13,
+            "producer": "Cantina Sociale La Vite",
+            "sourceUrl": "https://www.cantinelavite.it/prodotto/nero-davola-doc-sicilia/",
+            "wine": "Nero d'Avola DOC Sicilia"
+          },
+          {
+            "abv": 14,
+            "producer": "Musita",
+            "sourceUrl": "https://musita.it/prodotto/rabah-nero-davola/",
+            "wine": "Rabah Nero d'Avola"
+          },
+          {
+            "abv": 14,
+            "producer": "Colosi",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nero-d-avola-colosi-2025.html",
+            "wine": "Sicilia DOC Nero d'Avola Colosi 2025"
+          },
+          {
+            "abv": 13,
+            "producer": "Feudo Arancio",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nero-d-avola-feudo-arancio-2023.html",
+            "wine": "Sicilia DOC Nero d'Avola Feudo Arancio 2023"
+          },
+          {
+            "abv": 14,
+            "producer": "Li Ciuri",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nero-d-avola-li-ciuri-2025.html",
+            "wine": "Sicilia DOC Nero d'Avola Li Ciuri 2025"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Inessa",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nero-d-avola-riserva-inessa-2023.html",
+            "wine": "Sicilia DOC Nero d'Avola Riserva Inessa 2023"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Donnafugata",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-nero-d-avola-sherazade-donnafugata-2024.html",
+            "wine": "Sicilia DOC Nero d'Avola Sherazade Donnafugata 2024"
+          },
+          {
+            "abv": 13,
+            "producer": "Pellegrino",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-tareni-nero-d-avola-pellegrino-2025.html",
+            "wine": "Sicilia DOC Tareni Nero d'Avola Pellegrino 2025"
+          },
+          {
+            "abv": 13,
+            "producer": "Nicosia",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-nero-d-avola-doc-bio-vegan-nicosia-2023.html",
+            "wine": "Sicilia DOC Nero d'Avola Vegan Nicosia 2023"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Cusumano",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-nero-d-avola-doc-disueri-cusumano-2024.html",
+            "wine": "Sicilia Nero d'Avola DOC Disueri Cusumano 2024"
+          },
+          {
+            "abv": 14,
+            "producer": "Baglio di Grìsi",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nero-d-avola-baglio-di-grisi-2024.html",
+            "wine": "Terre Siciliane IGT Nero d'Avola Baglio di Grìsi 2024"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Fina",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nero-d-avola-cantine-fina-2024.html",
+            "wine": "Sicilia DOC Nero d'Avola Fina 2024"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Feudo Maccari",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-nero-d-avola-nere-feudo-maccari-2023.html",
+            "wine": "Sicilia DOC Nero d'Avola Neré Feudo Maccari 2023"
+          },
+          {
+            "abv": 13,
+            "producer": "LAMURA",
+            "sourceUrl": "https://nobleselection.kork.ca/en/our-wineries/lamura/nero-d-avola/2024",
+            "wine": "Nero d'Avola"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Firriato",
+            "sourceUrl": "https://lbv.kork.ca/en/our-wineries/firriato/chiaramonte-nero-d-avola/2020",
+            "wine": "Chiaramonte Nero d'Avola"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Gebbia Vini",
+            "sourceUrl": "https://divinparadis.kork.ca/en/our-wineries/gebbia-vini/gebbia-vini-nero-d-avola/2020",
+            "wine": "Gebbia Vini, Nero d'Avola"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Gorghi Tondi",
+            "sourceUrl": "https://divinparadis.kork.ca/en/our-wineries/gorghi-tondi/coste-a-preola-nero-d-avola-sicilia-doc/2024",
+            "wine": "Coste a Preola Nero d'Avola Sicilia DOC"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Natale Verga",
+            "sourceUrl": "https://tocade.kork.ca/en/our-wineries/natale-verga/i-balzi-bio-nero-d-avola/2022",
+            "wine": "I Balzi BIO Nero d'Avola"
+          }
+        ]
       },
       {
         "basis": "disputed",
@@ -41118,6 +41450,14 @@
             "wine": "Vin De France Roussanne 2025"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "Wine Paradigm",
+        "sourceUrl": "https://wineparadigm.com/roussanne/"
       }
     ],
     "id": "roussanne",
@@ -41177,7 +41517,10 @@
         "url": "https://es.wikipedia.org/wiki/Roussanne"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Barbin",
