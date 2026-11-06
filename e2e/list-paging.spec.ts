@@ -29,6 +29,9 @@ const bottle = (id: string, displayName: string) => ({
 });
 const inventory = { finished: 0, gifted: 0, opened: 0, owned: 2, removed: 0, totalAvailable: 2 };
 
+// The service worker would answer first, past the routes below.
+test.use({ serviceWorkers: "block" });
+
 test("a cellar longer than a page comes in a page at a time", async ({ page }) => {
   test.setTimeout(120_000);
   await signIn(page);
