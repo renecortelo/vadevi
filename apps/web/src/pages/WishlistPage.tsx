@@ -1,7 +1,6 @@
 import {
   type CurrencyCode,
   fromMinorUnits,
-  listBound,
   supportedCurrencies,
   toMinorUnits,
   type WineSummary,
@@ -19,7 +18,9 @@ import { getWineMemory } from "../services/api";
 import { createWishlistItem, getWishlist, updateWishlistItem } from "../services/cellar";
 import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
+import { LoadMoreButton } from "../components/LoadMoreButton";
 import { useLatestLoad } from "../lib/latest-load";
+import { useLoadMore } from "../lib/load-more";
 
 export function WishlistPage() {
   const { t } = useTranslation();
@@ -27,7 +28,11 @@ export function WishlistPage() {
   const { bootstrap } = useSession();
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
-  const [response, setResponse] = useState<WishlistListResponse>({ data: [], hasMore: false });
+  const [response, setResponse] = useState<WishlistListResponse>({
+    data: [],
+    hasMore: false,
+    nextCursor: null,
+  });
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [usingCache, setUsingCache] = useState(false);
   const [error, setError] = useState(false);
@@ -50,8 +55,10 @@ export function WishlistPage() {
   }, [spaceId, userId]);
 
   const startLoad = useLatestLoad();
+  const { loading: loadingMore, loadMore, restart } = useLoadMore();
   const load = useCallback(async () => {
     const isLatest = startLoad();
+    restart();
     setError(false);
     if (user === null || !navigator.onLine) return loadCache();
     try {
@@ -76,7 +83,7 @@ export function WishlistPage() {
       setError(true);
       await loadCache();
     }
-  }, [loadCache, spaceId, startLoad, user]);
+  }, [loadCache, restart, spaceId, startLoad, user]);
 
   useEffect(() => {
     queueMicrotask(() => void load());
@@ -133,6 +140,15 @@ export function WishlistPage() {
   /** Refresh the pickable wines from the server as the reader types. Without
    *  this the picker can only offer the page of wines already loaded, which is
    *  where the old hundred-wine ceiling still bit. */
+  function showMore() {
+    const cursor = response.nextCursor;
+    if (user === null || cursor === null) return;
+    void loadMore(
+      () => getWishlist(user, spaceId, undefined, undefined, cursor),
+      (page) => setResponse((current) => ({ ...page, data: [...current.data, ...page.data] })),
+    );
+  }
+
   async function searchWines(query: string) {
     if (user === null || !navigator.onLine) return;
     try {
@@ -156,9 +172,6 @@ export function WishlistPage() {
         </div>
       </header>
       {usingCache ? <p className="offline-banner">{t("wishlist.cached")}</p> : null}
-      {response.hasMore ? (
-        <p className="offline-banner">{t("lists.firstOnly", { count: listBound })}</p>
-      ) : null}
       {error ? <p className="form-error">{t("wishlist.error")}</p> : null}
       <section className="phase5-form-card">
         <h2>{t("wishlist.addTitle")}</h2>
@@ -269,6 +282,13 @@ export function WishlistPage() {
               );
             })}
           </div>
+        )}
+        {(response.nextCursor ?? null) === null ? null : (
+          <LoadMoreButton
+            count={response.data.length}
+            loading={loadingMore}
+            onClick={() => showMore()}
+          />
         )}
       </section>
     </section>

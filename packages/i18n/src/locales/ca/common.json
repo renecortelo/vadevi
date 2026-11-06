@@ -52,9 +52,6 @@
     "reload": "Recarrega Va de Vi",
     "home": "Torna a l'inici"
   },
-  "lists": {
-    "firstOnly": "Es mostren els primers {{count}}. L'exportació de Dades i privadesa ho inclou tot."
-  },
   "library": {
     "eyebrow": "Biblioteca del vi",
     "title": "Raïm",

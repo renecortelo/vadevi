@@ -33,6 +33,9 @@ export function fromMinorUnits(amountMinor: number, currency: CurrencyCode): num
   return amountMinor / 10 ** minorUnitDigits[currency];
 }
 export const MoneyAmountMinorSchema = z.number().int().min(0).max(2_147_483_647);
+/** An opaque place in a list, as a page's `nextCursor` gave it. */
+export const ListCursorSchema = z.string().min(1).max(512);
+
 export const BottleStateSchema = z.enum(["owned", "opened", "finished", "gifted", "removed"]);
 export const WishlistStateSchema = z.enum(["active", "purchased", "dismissed"]);
 export const PriceChannelSchema = z.enum(["physical", "online", "unknown"]);
@@ -120,16 +123,16 @@ export const BottleResponseSchema = z
 
 export const BottleListQuerySchema = z
   .object({
+    cursor: ListCursorSchema.optional(),
+    limit: z.coerce.number().int().min(1).max(250).optional(),
     state: BottleStateSchema.optional(),
     wineId: ResourceIdSchema.optional(),
   })
   .strict();
 
 /**
- * The lists below stop at a bound and say so: `hasMore` is true when the
- * Space holds more than the page, so a client can tell the reader they are
- * looking at the first N rather than at everything. A cursor to walk past
- * the bound is future work; until then the export carries the whole set.
+ * The lists below come a page at a time: `hasMore` says the Space holds more,
+ * and `nextCursor`, passed back as `cursor`, asks for the next page.
  */
 export const listBound = 250;
 
@@ -140,6 +143,7 @@ export const BottleListResponseSchema = z
         bottles: z.array(BottleSchema).max(listBound),
         hasMore: z.boolean(),
         inventory: InventorySummarySchema,
+        nextCursor: z.string().nullable(),
       })
       .strict(),
   })
@@ -268,10 +272,20 @@ export const WishlistItemResponseSchema = z
   .strict()
   .openapi("WishlistItemResponse");
 
-export const WishlistListQuerySchema = z.object({ state: WishlistStateSchema.optional() }).strict();
+export const WishlistListQuerySchema = z
+  .object({
+    cursor: ListCursorSchema.optional(),
+    limit: z.coerce.number().int().min(1).max(250).optional(),
+    state: WishlistStateSchema.optional(),
+  })
+  .strict();
 
 export const WishlistListResponseSchema = z
-  .object({ data: z.array(WishlistItemSchema).max(listBound), hasMore: z.boolean() })
+  .object({
+    data: z.array(WishlistItemSchema).max(listBound),
+    hasMore: z.boolean(),
+    nextCursor: z.string().nullable(),
+  })
   .strict()
   .openapi("WishlistListResponse");
 
@@ -339,7 +353,9 @@ export const PriceObservationResponseSchema = z
 export const PriceObservationListQuerySchema = z
   .object({
     currency: CurrencyCodeSchema.optional(),
+    cursor: ListCursorSchema.optional(),
     freshnessDays: z.coerce.number().int().min(1).max(365).default(90),
+    limit: z.coerce.number().int().min(1).max(250).optional(),
   })
   .strict();
 
@@ -348,6 +364,7 @@ export const PriceObservationListResponseSchema = z
     data: z
       .object({
         hasMore: z.boolean(),
+        nextCursor: z.string().nullable(),
         observations: z.array(PriceObservationSchema).max(listBound),
         warnings: z.array(z.enum(["external_lookup_disabled", "no_observations"])).max(2),
       })

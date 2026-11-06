@@ -52,9 +52,6 @@
     "reload": "Recarregar o Va de Vi",
     "home": "Voltar ao início"
   },
-  "lists": {
-    "firstOnly": "Mostram-se os primeiros {{count}}. A exportação em Dados e privacidade contém tudo."
-  },
   "library": {
     "eyebrow": "Biblioteca do vinho",
     "title": "Casta",

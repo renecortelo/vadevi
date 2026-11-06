@@ -1,7 +1,6 @@
 import {
   type CurrencyCode,
   fromMinorUnits,
-  listBound,
   type PriceObservation,
   type PriceObservationListResponse,
   supportedCurrencies,
@@ -19,7 +18,9 @@ import { getWineMemory } from "../services/api";
 import { createPriceObservation, getPriceObservations } from "../services/cellar";
 import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
+import { LoadMoreButton } from "../components/LoadMoreButton";
 import { useLatestLoad } from "../lib/latest-load";
+import { useLoadMore } from "../lib/load-more";
 
 function priceSnapshotId(userId: string, spaceId: string, wineId: string) {
   return `${userId}:${spaceId}:${wineId}`;
@@ -33,7 +34,7 @@ export function ShopPage() {
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [wineId, setWineId] = useState("");
   const [prices, setPrices] = useState<PriceObservationListResponse>({
-    data: { hasMore: false, observations: [], warnings: [] },
+    data: { hasMore: false, nextCursor: null, observations: [], warnings: [] },
   });
   const [usingCache, setUsingCache] = useState(false);
   const [error, setError] = useState(false);
@@ -46,11 +47,13 @@ export function ShopPage() {
   const [vintageMatch, setVintageMatch] = useState<PriceObservation["vintageMatch"]>("unknown");
 
   const startLoad = useLatestLoad();
+  const { loading: loadingMore, loadMore, restart } = useLoadMore();
   const loadPrices = useCallback(async () => {
     const isLatest = startLoad();
+    restart();
     // The previous wine's prices are cleared at once: an answer for the new
     // one that has not arrived yet is an empty list, not the old one's.
-    setPrices({ data: { hasMore: false, observations: [], warnings: [] } });
+    setPrices({ data: { hasMore: false, nextCursor: null, observations: [], warnings: [] } });
     if (wineId.length === 0 || user === null) return;
     const id = priceSnapshotId(user.uid, spaceId, wineId);
     if (!navigator.onLine) {
@@ -81,7 +84,22 @@ export function ShopPage() {
       if (cached !== undefined) setPrices(cached.response);
       setUsingCache(true);
     }
-  }, [spaceId, startLoad, user, wineId]);
+  }, [restart, spaceId, startLoad, user, wineId]);
+
+  function showMore() {
+    const cursor = prices.data.nextCursor;
+    if (user === null || cursor === null) return;
+    void loadMore(
+      () => getPriceObservations(user, spaceId, wineId, { cursor, freshnessDays: 90 }),
+      (page) =>
+        setPrices((current) => ({
+          data: {
+            ...page.data,
+            observations: [...current.data.observations, ...page.data.observations],
+          },
+        })),
+    );
+  }
 
   // Named, so the picker can ask for the list again after adding a wine to it.
   const loadWines = useCallback(async () => {
@@ -169,9 +187,6 @@ export function ShopPage() {
         </div>
       </header>
       {usingCache ? <p className="offline-banner">{t("shop.cached")}</p> : null}
-      {prices.data.hasMore ? (
-        <p className="offline-banner">{t("lists.firstOnly", { count: listBound })}</p>
-      ) : null}
       {error ? <p className="form-error">{t("shop.error")}</p> : null}
       <WinePicker
         onSearch={searchWines}
@@ -303,6 +318,13 @@ export function ShopPage() {
               </article>
             ))}
           </div>
+        )}
+        {(prices.data.nextCursor ?? null) === null ? null : (
+          <LoadMoreButton
+            count={prices.data.observations.length}
+            loading={loadingMore}
+            onClick={() => showMore()}
+          />
         )}
       </section>
     </section>

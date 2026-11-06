@@ -23,6 +23,7 @@ import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
+import { decodeListCursor, encodeListCursor } from "./list-cursor";
 
 type CommandResult<T> =
   | { kind: "conflict" }
@@ -323,13 +324,18 @@ async function wishlistById(database: D1Database, spaceId: string, itemId: strin
 export async function listBottles(
   database: D1Database,
   options: {
+    cursor?: string;
+    limit?: number;
     principal: FirebasePrincipal;
     spaceId: string;
     state?: Bottle["state"];
     wineId?: string;
   },
 ): Promise<BottleListResponse | null> {
+  const after = options.cursor === undefined ? null : decodeListCursor(options.cursor, 2);
+  if (options.cursor !== undefined && after === null) return null;
   if ((await activeUserId(database, options.principal, options.spaceId)) === null) return null;
+  const limit = options.limit ?? listBound;
   const result = await database
     .prepare(
       `SELECT bottle.id, bottle.wine_id, bottle.purchase_id, bottle.state,
@@ -341,6 +347,7 @@ export async function listBottles(
       LEFT JOIN wine_records wine ON wine.id = bottle.wine_id AND wine.deleted_at IS NULL
       WHERE bottle.space_id = ? AND bottle.deleted_at IS NULL
         AND (? IS NULL OR bottle.state = ?) AND (? IS NULL OR bottle.wine_id = ?)
+        AND (? IS NULL OR (bottle.acquired_at, bottle.id) < (?, ?))
       ORDER BY bottle.acquired_at DESC, bottle.id DESC LIMIT ?`,
     )
     .bind(
@@ -349,15 +356,23 @@ export async function listBottles(
       options.state ?? null,
       options.wineId ?? null,
       options.wineId ?? null,
-      listBound + 1,
+      after?.[0] ?? null,
+      after?.[0] ?? null,
+      after?.[1] ?? null,
+      limit + 1,
     )
     .all<BottleRow & WineNameColumns>();
-  // One past the bound is read, so the answer can say whether there is more.
+  // One past the page is read, so the answer can say whether there is more.
+  const page = result.results.slice(0, limit);
+  const last = page.at(-1);
+  const hasMore = result.results.length > limit;
   return {
     data: {
-      bottles: result.results.slice(0, listBound).map(bottleResource),
-      hasMore: result.results.length > listBound,
+      bottles: page.map(bottleResource),
+      hasMore,
       inventory: await inventorySummary(database, options.spaceId),
+      nextCursor:
+        hasMore && last !== undefined ? encodeListCursor([last.acquired_at, last.id]) : null,
     },
   };
 }
@@ -824,9 +839,18 @@ export async function createPurchase(
 
 export async function listWishlist(
   database: D1Database,
-  options: { principal: FirebasePrincipal; spaceId: string; state?: WishlistItem["state"] },
+  options: {
+    cursor?: string;
+    limit?: number;
+    principal: FirebasePrincipal;
+    spaceId: string;
+    state?: WishlistItem["state"];
+  },
 ): Promise<WishlistListResponse | null> {
+  const after = options.cursor === undefined ? null : decodeListCursor(options.cursor, 4);
+  if (options.cursor !== undefined && after === null) return null;
   if ((await activeUserId(database, options.principal, options.spaceId)) === null) return null;
+  const limit = options.limit ?? listBound;
   const result = await database
     .prepare(
       `SELECT item.id, item.wine_id, item.reason, item.priority, item.target_amount_minor,
@@ -837,15 +861,39 @@ export async function listWishlist(
       LEFT JOIN wine_records wine ON wine.id = item.wine_id AND wine.deleted_at IS NULL
       WHERE item.space_id = ? AND item.deleted_at IS NULL
         AND (? IS NULL OR item.state = ?)
-      ORDER BY CASE item.state WHEN 'active' THEN 0 ELSE 1 END, item.priority DESC,
+        AND (? IS NULL OR (CASE item.state WHEN 'active' THEN 1 ELSE 0 END, item.priority,
+          item.updated_at, item.id) < (?, ?, ?, ?))
+      ORDER BY CASE item.state WHEN 'active' THEN 1 ELSE 0 END DESC, item.priority DESC,
         item.updated_at DESC, item.id DESC
       LIMIT ?`,
     )
-    .bind(options.spaceId, options.state ?? null, options.state ?? null, listBound + 1)
+    .bind(
+      options.spaceId,
+      options.state ?? null,
+      options.state ?? null,
+      after?.[0] ?? null,
+      after === null ? null : Number(after[0]),
+      after === null ? null : Number(after[1]),
+      after?.[2] ?? null,
+      after?.[3] ?? null,
+      limit + 1,
+    )
     .all<WishlistRow & WineNameColumns>();
+  const page = result.results.slice(0, limit);
+  const last = page.at(-1);
+  const hasMore = result.results.length > limit;
   return {
-    data: result.results.slice(0, listBound).map(wishlistResource),
-    hasMore: result.results.length > listBound,
+    data: page.map(wishlistResource),
+    hasMore,
+    nextCursor:
+      hasMore && last !== undefined
+        ? encodeListCursor([
+            last.state === "active" ? 1 : 0,
+            last.priority,
+            last.updated_at,
+            last.id,
+          ])
+        : null,
   };
 }
 
@@ -1032,12 +1080,17 @@ export async function listPriceObservations(
   database: D1Database,
   options: {
     currency?: string;
+    cursor?: string;
     freshnessDays: number;
+    limit?: number;
     principal: FirebasePrincipal;
     spaceId: string;
     wineId: string;
   },
 ): Promise<PriceObservationListResponse | null> {
+  const after = options.cursor === undefined ? null : decodeListCursor(options.cursor, 2);
+  if (options.cursor !== undefined && after === null) return null;
+  const limit = options.limit ?? listBound;
   if (!(await authorizedWineExists(database, options.principal, options.spaceId, options.wineId))) {
     return null;
   }
@@ -1048,6 +1101,7 @@ export async function listPriceObservations(
         evidence_media_id, purchase_id, observed_at, retrieved_at, version, created_at, updated_at
       FROM price_observations WHERE space_id = ? AND wine_id = ? AND deleted_at IS NULL
         AND (? IS NULL OR currency = ?)
+        AND (? IS NULL OR (observed_at, id) < (?, ?))
       ORDER BY observed_at DESC, id DESC LIMIT ?`,
     )
     .bind(
@@ -1055,16 +1109,22 @@ export async function listPriceObservations(
       options.wineId,
       options.currency ?? null,
       options.currency ?? null,
-      listBound + 1,
+      after?.[0] ?? null,
+      after?.[0] ?? null,
+      after?.[1] ?? null,
+      limit + 1,
     )
     .all<PriceRow>();
   const staleBefore = Date.now() - options.freshnessDays * 24 * 60 * 60 * 1_000;
-  const observations = result.results
-    .slice(0, listBound)
-    .map((row) => priceResource(row, staleBefore));
+  const page = result.results.slice(0, limit);
+  const observations = page.map((row) => priceResource(row, staleBefore));
+  const last = page.at(-1);
+  const hasMore = result.results.length > limit;
   return {
     data: {
-      hasMore: result.results.length > listBound,
+      hasMore,
+      nextCursor:
+        hasMore && last !== undefined ? encodeListCursor([last.observed_at, last.id]) : null,
       observations,
       warnings: [
         "external_lookup_disabled",

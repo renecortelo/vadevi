@@ -298,6 +298,8 @@ export function registerCellarRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const response = await listBottles(context.env.DB!, {
       principal: context.get("principal"),
       spaceId: params.spaceId,
+      ...(query.cursor === undefined ? {} : { cursor: query.cursor }),
+      ...(query.limit === undefined ? {} : { limit: query.limit }),
       ...(query.state === undefined ? {} : { state: query.state }),
       ...(query.wineId === undefined ? {} : { wineId: query.wineId }),
     });
@@ -400,6 +402,8 @@ export function registerCellarRoutes(app: OpenAPIHono<ApiEnvironment>) {
     const response = await listWishlist(context.env.DB!, {
       principal: context.get("principal"),
       spaceId: params.spaceId,
+      ...(query.cursor === undefined ? {} : { cursor: query.cursor }),
+      ...(query.limit === undefined ? {} : { limit: query.limit }),
       ...(query.state === undefined ? {} : { state: query.state }),
     });
     return response === null
@@ -472,6 +476,8 @@ export function registerCellarRoutes(app: OpenAPIHono<ApiEnvironment>) {
       spaceId: params.spaceId,
       wineId: params.wineId,
       ...(query.currency === undefined ? {} : { currency: query.currency }),
+      ...(query.cursor === undefined ? {} : { cursor: query.cursor }),
+      ...(query.limit === undefined ? {} : { limit: query.limit }),
     });
     return response === null
       ? context.json(

@@ -51,10 +51,11 @@ import { apiError, authenticatedFetch, type TokenSource } from "./api";
 export async function getBottles(
   tokenSource: TokenSource,
   spaceId: string,
-  options: { state?: string; wineId?: string } = {},
+  options: { cursor?: string; state?: string; wineId?: string } = {},
   signal?: AbortSignal,
 ): Promise<BottleListResponse> {
   const parameters = new URLSearchParams();
+  if (options.cursor !== undefined) parameters.set("cursor", options.cursor);
   if (options.state !== undefined) parameters.set("state", options.state);
   if (options.wineId !== undefined) parameters.set("wineId", options.wineId);
   const query = parameters.size === 0 ? "" : `?${parameters.toString()}`;
@@ -109,8 +110,12 @@ export async function getWishlist(
   spaceId: string,
   state?: string,
   signal?: AbortSignal,
+  cursor?: string,
 ): Promise<WishlistListResponse> {
-  const query = state === undefined ? "" : `?state=${encodeURIComponent(state)}`;
+  const parameters = new URLSearchParams();
+  if (state !== undefined) parameters.set("state", state);
+  if (cursor !== undefined) parameters.set("cursor", cursor);
+  const query = parameters.size === 0 ? "" : `?${parameters.toString()}`;
   const response = await authenticatedFetch(
     tokenSource,
     `/api/v1/spaces/${spaceId}/wishlist${query}`,
@@ -161,10 +166,11 @@ export async function getPriceObservations(
   tokenSource: TokenSource,
   spaceId: string,
   wineId: string,
-  options: { currency?: string; freshnessDays?: number } = {},
+  options: { currency?: string; cursor?: string; freshnessDays?: number } = {},
   signal?: AbortSignal,
 ): Promise<PriceObservationListResponse> {
   const parameters = new URLSearchParams();
+  if (options.cursor !== undefined) parameters.set("cursor", options.cursor);
   if (options.currency !== undefined) parameters.set("currency", options.currency);
   if (options.freshnessDays !== undefined) {
     parameters.set("freshnessDays", String(options.freshnessDays));

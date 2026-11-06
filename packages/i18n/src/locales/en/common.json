@@ -52,9 +52,6 @@
     "reload": "Reload Va de Vi",
     "home": "Back to start"
   },
-  "lists": {
-    "firstOnly": "Showing the first {{count}}. The export in Data and privacy carries everything."
-  },
   "library": {
     "eyebrow": "Wine library",
     "title": "Grape",

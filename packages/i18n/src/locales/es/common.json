@@ -52,9 +52,6 @@
     "reload": "Recargar Va de Vi",
     "home": "Volver al inicio"
   },
-  "lists": {
-    "firstOnly": "Se muestran los primeros {{count}}. La exportación de Datos y privacidad lo incluye todo."
-  },
   "library": {
     "eyebrow": "Biblioteca del vino",
     "title": "Uva",

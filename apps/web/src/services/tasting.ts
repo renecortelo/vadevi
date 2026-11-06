@@ -34,10 +34,12 @@ export async function listTastingSessions(
   tokenSource: TokenSource,
   spaceId: string,
   signal?: AbortSignal,
+  cursor?: string,
 ) {
+  const query = cursor === undefined ? "" : `?cursor=${encodeURIComponent(cursor)}`;
   const response = await authenticatedFetch(
     tokenSource,
-    `/api/v1/spaces/${spaceId}/sessions`,
+    `/api/v1/spaces/${spaceId}/sessions${query}`,
     signal === undefined ? {} : { signal },
   );
   if (!response.ok) throw await apiError(response);

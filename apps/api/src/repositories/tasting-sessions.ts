@@ -15,6 +15,7 @@ import { ulid } from "ulid";
 
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
+import { decodeListCursor, encodeListCursor } from "./list-cursor";
 import { grapesFromJson } from "./wine-memory";
 import { jsonList } from "../services/sql-list";
 
@@ -336,20 +337,32 @@ export async function createTastingSession(
 
 export async function listTastingSessions(
   database: D1Database,
-  options: { principal: FirebasePrincipal; spaceId: string },
-): Promise<{ data: TastingSessionResponse["data"][]; hasMore: boolean } | null> {
+  options: { cursor?: string; limit?: number; principal: FirebasePrincipal; spaceId: string },
+): Promise<{
+  data: TastingSessionResponse["data"][];
+  hasMore: boolean;
+  nextCursor: string | null;
+} | null> {
+  const after = options.cursor === undefined ? null : decodeListCursor(options.cursor, 2);
+  if (options.cursor !== undefined && after === null) return null;
   if ((await activeUserId(database, options.principal, options.spaceId)) === null) return null;
+  const limit = options.limit ?? sessionListBound;
   const result = await database
     .prepare(
       `${sessionSelect}
       WHERE session.space_id = ? AND session.deleted_at IS NULL
+        AND (? IS NULL OR (session.starts_at, session.id) < (?, ?))
       ORDER BY session.starts_at DESC, session.id DESC LIMIT ?`,
     )
-    .bind(options.spaceId, sessionListBound + 1)
+    .bind(options.spaceId, after?.[0] ?? null, after?.[0] ?? null, after?.[1] ?? null, limit + 1)
     .all<SessionRow>();
+  const page = result.results.slice(0, limit);
+  const last = page.at(-1);
+  const hasMore = result.results.length > limit;
   return {
-    data: result.results.slice(0, sessionListBound).map(sessionResource),
-    hasMore: result.results.length > sessionListBound,
+    data: page.map(sessionResource),
+    hasMore,
+    nextCursor: hasMore && last !== undefined ? encodeListCursor([last.starts_at, last.id]) : null,
   };
 }
 

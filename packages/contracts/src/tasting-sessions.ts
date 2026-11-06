@@ -269,8 +269,19 @@ export const TastingSessionResponseSchema = z
 
 export const sessionListBound = 100;
 
+export const TastingSessionListQuerySchema = z
+  .object({
+    cursor: z.string().min(1).max(512).optional(),
+    limit: z.coerce.number().int().min(1).max(sessionListBound).optional(),
+  })
+  .strict();
+
 export const TastingSessionListResponseSchema = z
-  .object({ data: z.array(TastingSessionSchema).max(sessionListBound), hasMore: z.boolean() })
+  .object({
+    data: z.array(TastingSessionSchema).max(sessionListBound),
+    hasMore: z.boolean(),
+    nextCursor: z.string().nullable(),
+  })
   .strict()
   .openapi("TastingSessionListResponse");
 

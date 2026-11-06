@@ -3788,12 +3788,17 @@
                   "totalAvailable"
                 ],
                 "additionalProperties": false
+              },
+              "nextCursor": {
+                "type": "string",
+                "nullable": true
               }
             },
             "required": [
               "bottles",
               "hasMore",
-              "inventory"
+              "inventory",
+              "nextCursor"
             ],
             "additionalProperties": false
           }
@@ -4442,11 +4447,16 @@
           },
           "hasMore": {
             "type": "boolean"
+          },
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
           }
         },
         "required": [
           "data",
-          "hasMore"
+          "hasMore",
+          "nextCursor"
         ],
         "additionalProperties": false
       },
@@ -4626,6 +4636,10 @@
               "hasMore": {
                 "type": "boolean"
               },
+              "nextCursor": {
+                "type": "string",
+                "nullable": true
+              },
               "observations": {
                 "type": "array",
                 "items": {
@@ -4778,6 +4792,7 @@
             },
             "required": [
               "hasMore",
+              "nextCursor",
               "observations",
               "warnings"
             ],
@@ -8913,11 +8928,16 @@
           },
           "hasMore": {
             "type": "boolean"
+          },
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
           }
         },
         "required": [
           "data",
-          "hasMore"
+          "hasMore",
+          "nextCursor"
         ],
         "additionalProperties": false
       },
@@ -16662,6 +16682,26 @@
           {
             "schema": {
               "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "required": false,
+            "name": "cursor",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 250
+            },
+            "required": false,
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
               "enum": [
                 "owned",
                 "opened",
@@ -17039,6 +17079,26 @@
           {
             "schema": {
               "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "required": false,
+            "name": "cursor",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 250
+            },
+            "required": false,
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
               "enum": [
                 "active",
                 "purchased",
@@ -17332,6 +17392,16 @@
           },
           {
             "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "required": false,
+            "name": "cursor",
+            "in": "query"
+          },
+          {
+            "schema": {
               "type": "integer",
               "minimum": 1,
               "maximum": 365,
@@ -17339,6 +17409,16 @@
             },
             "required": false,
             "name": "freshnessDays",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 250
+            },
+            "required": false,
+            "name": "limit",
             "in": "query"
           }
         ],
@@ -19268,6 +19348,26 @@
             "required": true,
             "in": "path",
             "name": "spaceId"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "required": false,
+            "name": "cursor",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "required": false,
+            "name": "limit",
+            "in": "query"
           }
         ],
         "responses": {

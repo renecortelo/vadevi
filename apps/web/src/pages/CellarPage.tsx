@@ -2,7 +2,6 @@ import {
   type Bottle,
   type BottleListResponse,
   type CurrencyCode,
-  listBound,
   supportedCurrencies,
   toMinorUnits,
   type WineSummary,
@@ -18,7 +17,9 @@ import { createIdempotencyKey } from "../security/idempotency";
 import { getWineMemory } from "../services/api";
 import { createPurchase, getBottles, updateBottle } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
+import { LoadMoreButton } from "../components/LoadMoreButton";
 import { useLatestLoad } from "../lib/latest-load";
+import { useLoadMore } from "../lib/load-more";
 
 const emptyInventory: BottleListResponse["data"]["inventory"] = {
   finished: 0,
@@ -36,7 +37,7 @@ export function CellarPage() {
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
   const [response, setResponse] = useState<BottleListResponse>({
-    data: { bottles: [], hasMore: false, inventory: emptyInventory },
+    data: { bottles: [], hasMore: false, inventory: emptyInventory, nextCursor: null },
   });
   const [wines, setWines] = useState<WineSummary[]>([]);
   const [usingCache, setUsingCache] = useState(false);
@@ -61,8 +62,10 @@ export function CellarPage() {
   }, [spaceId, userId]);
 
   const startLoad = useLatestLoad();
+  const { loading: loadingMore, loadMore, restart } = useLoadMore();
   const load = useCallback(async () => {
     const isLatest = startLoad();
+    restart();
     setLoading(true);
     setError(false);
     if (user === null || !navigator.onLine) {
@@ -94,7 +97,7 @@ export function CellarPage() {
     } finally {
       if (isLatest()) setLoading(false);
     }
-  }, [loadCache, spaceId, startLoad, user]);
+  }, [loadCache, restart, spaceId, startLoad, user]);
 
   useEffect(() => {
     queueMicrotask(() => void load());
@@ -104,6 +107,18 @@ export function CellarPage() {
     () => new Map(wines.map((wine): [string, WineSummary] => [wine.id, wine])),
     [wines],
   );
+
+  function showMore() {
+    const cursor = response.data.nextCursor;
+    if (user === null || cursor === null) return;
+    void loadMore(
+      () => getBottles(user, spaceId, { cursor }),
+      (page) =>
+        setResponse((current) => ({
+          data: { ...page.data, bottles: [...current.data.bottles, ...page.data.bottles] },
+        })),
+    );
+  }
 
   async function submitPurchase(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -187,9 +202,6 @@ export function CellarPage() {
       </header>
 
       {usingCache ? <p className="offline-banner">{t("cellar.cached")}</p> : null}
-      {response.data.hasMore ? (
-        <p className="offline-banner">{t("lists.firstOnly", { count: listBound })}</p>
-      ) : null}
       {error ? <p className="form-error">{t("cellar.error")}</p> : null}
 
       <section aria-label={t("cellar.inventoryTitle")} className="inventory-grid">
@@ -332,6 +344,13 @@ export function CellarPage() {
               );
             })}
           </div>
+        )}
+        {(response.data.nextCursor ?? null) === null ? null : (
+          <LoadMoreButton
+            count={response.data.bottles.length}
+            loading={loadingMore}
+            onClick={() => showMore()}
+          />
         )}
       </section>
     </section>

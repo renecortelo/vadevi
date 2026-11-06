@@ -1,10 +1,12 @@
-import { sessionListBound, type TastingSessionResponse } from "@vadevi/contracts";
+import type { TastingSessionResponse } from "@vadevi/contracts";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
+import { LoadMoreButton } from "../components/LoadMoreButton";
 import { MapLink } from "../components/MapLink";
+import { useLoadMore } from "../lib/load-more";
 import { offlineDatabase } from "../offline/database";
 import { sessionsChangedEvent } from "../offline/events";
 import { cacheSessionList } from "../offline/phase3";
@@ -21,7 +23,8 @@ export function SessionsPage() {
   const spaceId = bootstrap.data.user.activeSpaceId;
   const userId = user?.uid ?? "";
   const [sessions, setSessions] = useState<SessionSummary[]>([]);
-  const [hasMore, setHasMore] = useState(false);
+  const [nextCursor, setNextCursor] = useState<string | null>(null);
+  const { loading: loadingMore, loadMore, restart } = useLoadMore();
   const [usingCache, setUsingCache] = useState(false);
 
   const loadCached = useCallback(
@@ -36,6 +39,7 @@ export function SessionsPage() {
           .map((snapshot) => snapshot.detail.data.session)
           .sort((left, right) => right.startsAt.localeCompare(left.startsAt)),
       );
+      setNextCursor(null);
       setUsingCache(showCacheNotice);
     },
     [spaceId, userId],
@@ -43,20 +47,21 @@ export function SessionsPage() {
 
   useEffect(() => {
     const controller = new AbortController();
+    restart();
     if (user === null || !navigator.onLine) {
       queueMicrotask(() => void loadCached());
     } else {
       void listTastingSessions(user, spaceId, controller.signal)
         .then(async (response) => {
           setSessions(response.data);
-          setHasMore(response.hasMore);
+          setNextCursor(response.nextCursor);
           setUsingCache(false);
           await cacheSessionList(user.uid, spaceId, response.data);
         })
         .catch(() => (controller.signal.aborted ? undefined : loadCached()));
     }
     return () => controller.abort();
-  }, [loadCached, spaceId, user]);
+  }, [loadCached, restart, spaceId, user]);
 
   useEffect(() => {
     const changed = (event: Event) => {
@@ -66,6 +71,17 @@ export function SessionsPage() {
     globalThis.addEventListener(sessionsChangedEvent, changed);
     return () => globalThis.removeEventListener(sessionsChangedEvent, changed);
   }, [loadCached, spaceId]);
+
+  function showMore() {
+    if (user === null || nextCursor === null) return;
+    void loadMore(
+      () => listTastingSessions(user, spaceId, undefined, nextCursor),
+      (page) => {
+        setSessions((current) => [...current, ...page.data]);
+        setNextCursor(page.nextCursor);
+      },
+    );
+  }
 
   const dateFormatter = new Intl.DateTimeFormat(i18n.language, {
     dateStyle: "medium",
@@ -87,11 +103,6 @@ export function SessionsPage() {
       {usingCache ? (
         <p className="cache-note" role="status">
           {t("sessions.cached")}
-        </p>
-      ) : null}
-      {hasMore ? (
-        <p className="cache-note" role="status">
-          {t("lists.firstOnly", { count: sessionListBound })}
         </p>
       ) : null}
       {sessions.length === 0 ? (
@@ -140,6 +151,9 @@ export function SessionsPage() {
             </article>
           ))}
         </div>
+      )}
+      {nextCursor === null ? null : (
+        <LoadMoreButton count={sessions.length} loading={loadingMore} onClick={() => showMore()} />
       )}
     </section>
   );

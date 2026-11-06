@@ -13,6 +13,7 @@ import {
   TastingHistoryResponseSchema,
   TastingNoteIdPathSchema,
   TastingSessionDetailResponseSchema,
+  TastingSessionListQuerySchema,
   TastingSessionListResponseSchema,
   TastingSessionResponseSchema,
   UpdateDeepTastingRequestSchema,
@@ -89,7 +90,7 @@ const listSessionsRoute = createRoute({
   tags: ["Sessions"],
   summary: "List the authorized Space's tasting sessions",
   security: [{ FirebaseBearer: [] }],
-  request: { params: SpaceIdPathSchema },
+  request: { params: SpaceIdPathSchema, query: TastingSessionListQuerySchema },
   responses: {
     200: {
       content: { "application/json": { schema: TastingSessionListResponseSchema } },
@@ -325,9 +326,12 @@ export function registerTastingSessionRoutes(app: OpenAPIHono<ApiEnvironment>) {
   });
 
   app.openapi(listSessionsRoute, async (context) => {
+    const query = context.req.valid("query");
     const response = await listTastingSessions(context.env.DB!, {
       principal: context.get("principal"),
       spaceId: context.req.valid("param").spaceId,
+      ...(query.cursor === undefined ? {} : { cursor: query.cursor }),
+      ...(query.limit === undefined ? {} : { limit: query.limit }),
     });
     return response === null
       ? context.json(

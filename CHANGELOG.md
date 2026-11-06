@@ -11,6 +11,9 @@ has the reasons.
 - **Bottles and wishlist items keep their names**: the cards read "unknown
   wine" for anything past the hundred latest wines, and for everything the
   moment the picker's search was used. The lists now carry the name.
+- **The cellar, wishlist, prices and sessions no longer stop at a limit**: each
+  has a «Load more» button, a page at a time. The export is no longer the only
+  way to see the rest.
 - **Offline, the whole cellar comes along**: a device kept the hundred latest
   wines and dropped the rest; it now keeps up to two thousand, and a failed
   refresh leaves the copy it had.

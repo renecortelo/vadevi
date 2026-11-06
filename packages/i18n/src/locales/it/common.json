@@ -52,9 +52,6 @@
     "reload": "Ricarica Va de Vi",
     "home": "Torna all'inizio"
   },
-  "lists": {
-    "firstOnly": "Sono mostrati i primi {{count}}. L'esportazione in Dati e privacy contiene tutto."
-  },
   "library": {
     "eyebrow": "Biblioteca del vino",
     "title": "Vitigno",

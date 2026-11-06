@@ -52,9 +52,6 @@
     "reload": "Va de Vi neu laden",
     "home": "Zurück zum Anfang"
   },
-  "lists": {
-    "firstOnly": "Die ersten {{count}} werden angezeigt. Der Export unter Daten und Datenschutz enthält alles."
-  },
   "library": {
     "eyebrow": "Weinbibliothek",
     "title": "Rebsorte",
