@@ -171,13 +171,24 @@ export function sugarFigure(quote: string): number | null {
  * A still wine's residual sugar as a level, by the terms the EU's labelling
  * rules define (Regulation (EU) 2019/33, Annex III, Part B): dry up to 4 g/l,
  * semi-dry («medium dry» and «medium») to 45, sweet above. Between 4 and 9
- * a wine is dry only if its acidity is high enough, which a sheet rarely
- * says: no level, and the wine counts against any.
+ * a wine is dry only if its total acidity, as tartaric acid, is no more than
+ * 2 g/l below its sugar. A sheet that does not say has no level, and the wine
+ * counts against any.
  */
-export function euSweetness(grams: number, bound = false): Sweetness | null {
+export function euSweetness(
+  grams: number,
+  bound = false,
+  acidity: number | null = null,
+): Sweetness | null {
   if (grams <= 4) return "dry";
-  if (bound || grams <= 9) return null;
+  if (bound) return null;
+  if (grams <= 9) return acidity !== null && acidity >= grams - 2 ? "dry" : null;
   return grams <= 45 ? "medium" : "sweet";
+}
+
+/** A sheet's total acidity in g/l, unless it is given as sulphuric acid. */
+export function acidityFigure(quote: string): number | null {
+  return /h2so4|sulfuri|sulphuri|schwefel/i.test(quote) ? null : sugarFigure(quote);
 }
 
 /** The words of a value are in its quote (accent- and case-blind). */

@@ -55,6 +55,13 @@ has the reasons.
 
 ### Library
 
+- **Dry follows the EU's rule all the way up to 9 g/l**: between 4 and 9 g/l of
+  sugar a wine is dry when the sheet's acidity is within 2 g/l of it. With it,
+  and more producers' sheets, eight grapes are now dry: Cabernet Dorsa, Corvina,
+  Tempranillo, Mourvèdre, Frappato, Grillo, Tannat and Marselan. Agiorgitiko,
+  Baga, Xinomavro and Irsai Olivér are moderate in alcohol, from their
+  producers' figures.
+
 - **Twelve more registered names have their grapes**, from Candiago et al.'s
   inventory of the EU's wine PDOs (CC0): most of Slovakia's, Chozas Carrascal,
   Vera de Estenas, Însurăței and Muškat momjanski among them.

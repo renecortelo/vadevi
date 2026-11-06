@@ -3994,7 +3994,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity",
       "mulberry",
@@ -4173,6 +4173,46 @@
             "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/984/17646538281343n.pdf",
             "sugar": 4,
             "wine": "Baga Reserva 2018"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://media.bacalhoa.pt/1/documentos/1397/bacalhoa-baga-tinto-2021ptpdf.pdf",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.5,
+            "producer": "Bacalhôa",
+            "sourceUrl": "https://media.bacalhoa.pt/1/documentos/1397/bacalhoa-baga-tinto-2021ptpdf.pdf",
+            "wine": "Bacalhôa Baga 2021"
+          },
+          {
+            "abv": 13,
+            "producer": "Campolargo",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/996/17539826561112T.pdf",
+            "wine": "Campolargo Baga 2019"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Caves Primavera",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1298/12298183754056J.pdf",
+            "wine": "Primavera Baga Reserva"
+          },
+          {
+            "abv": 12.8,
+            "producer": "Mata Fidalga",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1366/9947130157984g.pdf",
+            "wine": "Mata Fidalga Baga Estágio Longo 2016"
+          },
+          {
+            "abv": 14,
+            "producer": "Quinta da Lagoa Velha",
+            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1780/ftquintadalagoavelhatintobagagrandereservarotadabairradapdf.pdf",
+            "wine": "Grande Reserva Baga 2024"
           }
         ]
       }
@@ -9827,6 +9867,36 @@
         ]
       },
       {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/alicante-do-tinto-monastrell-al-muvedre-telmo-rodriguez-2023.html",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Telmo Rodríguez",
+            "sourceUrl": "https://www.vino.com/dettaglio/alicante-do-tinto-monastrell-al-muvedre-telmo-rodriguez-2023.html",
+            "wine": "Alicante DO Tinto Monastrell Al-muvedre Telmo Rodríguez 2023"
+          },
+          {
+            "producer": "Familia Bastida",
+            "sourceUrl": "https://www.vino.com/dettaglio/jumilla-do-monastrell-finca-el-lince-familia-bastida-2021.html",
+            "wine": "Jumilla DO Monastrell Finca El Lince Familia Bastida 2021"
+          },
+          {
+            "producer": "Bodegas Alceño",
+            "sourceUrl": "https://www.vino.com/dettaglio/jumilla-dop-monastrell-organic-cibolo-bodegas-alceno-2023.html",
+            "wine": "Jumilla DOP Monastrell Cibolo Bodegas Alceño 2023"
+          },
+          {
+            "producer": "Vicente Gandía",
+            "sourceUrl": "https://www.vino.com/dettaglio/valencia-do-monastrell-ceramic-vicente-gandia-2023.html",
+            "wine": "Valencia DO Monastrell Ceramic Vicente Gandía 2023"
+          }
+        ]
+      },
+      {
         "basis": "disputed",
         "factOnly": true,
         "field": "acidity",
@@ -9937,7 +10007,10 @@
         "url": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Monestrell",
@@ -15177,6 +15250,40 @@
             "wine": "Cabernet Dorsa 2022"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://shop.weingut-koch.com/products/cabernet-dorsa",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Weingut Bernhard Koch",
+            "sourceUrl": "https://shop.weingut-koch.com/products/cabernet-dorsa",
+            "sugar": 3.2,
+            "wine": "Cabernet Dorsa"
+          },
+          {
+            "producer": "Weingut Frank Kühn",
+            "sourceUrl": "https://kuehn-wein.de/produkt/cabernet-dorsa-rotwein/",
+            "sugar": 1.8,
+            "wine": "Cabernet Dorsa"
+          },
+          {
+            "producer": "Weingut Bert Wechsler",
+            "sourceUrl": "https://wechsler-wein.de/products/2022-selection-luise-cabernet-dorsa-qualitatsrotwein-trocken",
+            "sugar": 5.4,
+            "wine": "Selection Luise Cabernet Dorsa 2022"
+          },
+          {
+            "producer": "Weingut Klemens Weber",
+            "sourceUrl": "https://www.weingut-klemens-weber.de/produkt/13-2022er-cabernet-dorsa-rotweinauslese-trockenim-barrique-gereiftburrweiler-schlossgarten-075-lgoldene-kammerpreismuenze/",
+            "sugar": 5,
+            "wine": "Cabernet Dorsa 2022"
+          }
+        ]
       }
     ],
     "id": "cabernet-dorsa",
@@ -15241,7 +15348,10 @@
         "url": "https://en.wikipedia.org/wiki/Cabernet_Dorsa"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": "high",
     "wikidataId": "Q450880",
@@ -20337,6 +20447,34 @@
         ]
       },
       {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://shop.weingut-koch.com/products/hainfelder-tempranillo",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Weingut Bernhard Koch",
+            "sourceUrl": "https://shop.weingut-koch.com/products/hainfelder-tempranillo",
+            "sugar": 0.6,
+            "wine": "Hainfelder Tempranillo"
+          },
+          {
+            "producer": "Nativo",
+            "sourceUrl": "https://nativo.co.za/product/nativo-tempranillo-2021/",
+            "sugar": 1.2,
+            "wine": "Nativo Tempranillo 2021"
+          },
+          {
+            "producer": "Niel Joubert",
+            "sourceUrl": "https://nieljoubert.co.za/product/reserve-tempranillo-2021/",
+            "sugar": 3.3,
+            "wine": "Reserve Tempranillo 2021"
+          }
+        ]
+      },
+      {
         "basis": "disputed",
         "factOnly": true,
         "field": "tannin",
@@ -20468,7 +20606,10 @@
         "url": "https://pt.wikipedia.org/wiki/Aragonez"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Ull de Llebre",
@@ -27455,6 +27596,34 @@
             "wine": "Veronese Rosso IGT Corvina"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.albinopiona.it/premio/bacchus-2018-corvina/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Albino Piona",
+            "sourceUrl": "https://www.albinopiona.it/premio/bacchus-2018-corvina/",
+            "sugar": 2.6,
+            "wine": "Corvina"
+          },
+          {
+            "producer": "Allegrini",
+            "sourceUrl": "https://allegrini.it/en/wines/allegrini-la-poja/",
+            "sugar": 1.3,
+            "wine": "La Poja"
+          },
+          {
+            "producer": "Val dei Molini",
+            "sourceUrl": "https://www.vinusta.com/products/val-dei-molini-corvina-garda-doc",
+            "sugar": 5,
+            "wine": "Corvina Garda DOC"
+          }
+        ]
       }
     ],
     "id": "corvina",
@@ -27524,7 +27693,10 @@
         "url": "https://es.wikipedia.org/wiki/Corvina_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Corvina Veronese",
@@ -35016,6 +35188,34 @@
         "quote": "Estes vinhos acompanham muito bem pratos de carnes vermelhas, com molhos fortes.",
         "value": "red meat",
         "sourceUrl": "https://pt.wikipedia.org/wiki/Tannat"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://pizzornowines.com/product/la-fiesta-sur-tannat/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Pizzorno",
+            "sourceUrl": "https://pizzornowines.com/product/la-fiesta-sur-tannat/",
+            "sugar": 1.8,
+            "wine": "La Fiesta Sur Tannat"
+          },
+          {
+            "producer": "Toscanini",
+            "sourceUrl": "https://www.toscaniniwines.com/es/vinos/classic/tannat/tannat/",
+            "sugar": 2.4,
+            "wine": "Tannat Classic"
+          },
+          {
+            "producer": "Bodega Garzón",
+            "sourceUrl": "https://bodegagarzon.com/wp-content/uploads/2024/04/Technical-Sheet-Tannat-Single-Vineyard-2022-ENG-1.pdf",
+            "sugar": 2,
+            "wine": "Single Vineyard Tannat 2022"
+          }
+        ]
       }
     ],
     "id": "tannat",
@@ -35115,7 +35315,10 @@
         "url": "https://es.wikipedia.org/wiki/Tannat_(uva)"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Harriague",
@@ -35524,7 +35727,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "plum",
       "spice",
@@ -35658,6 +35861,34 @@
         "field": "sweetness",
         "quote": "The grape is most widely associated with the dry and sweet red wines of Nemea",
         "value": "dry-sweet"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://boutari.gr/en/wine/agiorgitiko-boutari/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Boutari",
+            "sourceUrl": "https://boutari.gr/en/wine/agiorgitiko-boutari/",
+            "wine": "Agiorgitiko Boutari"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Lafazanis Winery",
+            "sourceUrl": "https://lafazanis.gr/en/product/geometria-agiorgitiko/",
+            "wine": "Geometria Agiorgitiko"
+          },
+          {
+            "abv": 13,
+            "producer": "Domaine Skouras",
+            "sourceUrl": "https://skouras.gr/wp-content/uploads/2023/07/AGIORGITIKO-RED-EN-4.pdf",
+            "wine": "Saint George Nemea 2024"
+          }
+        ]
       }
     ],
     "id": "agiorgitiko",
@@ -37213,7 +37444,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "red fruit",
       "strawberry",
@@ -37408,6 +37639,34 @@
             "producer": "Oenops",
             "sourceUrl": "https://www.thewinesociety.com/product/xinomavraw-xinomavro-oenops-2019",
             "wine": "xinomavraw xinomavro oenops 2019 (The Wine Society)"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.thymiopoulosvineyards.gr/xinomavro-young-vines",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Thymiopoulos",
+            "sourceUrl": "https://www.thymiopoulosvineyards.gr/xinomavro-young-vines",
+            "wine": "Young Vines Xinomavro"
+          },
+          {
+            "abv": 13,
+            "producer": "Boutari",
+            "sourceUrl": "https://boutari.gr/en/wine/naoussa/",
+            "wine": "Naoussa Boutari 2022"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Katogi Averoff",
+            "sourceUrl": "https://divinparadis.kork.ca/qc/en/our-wineries/katogi-averoff-s.a./katogi-inima/2020/14887247",
+            "wine": "Katogi Inima 2020"
           }
         ]
       }
@@ -47075,6 +47334,40 @@
         "sourceUrl": "https://wineparadigm.com/marselan/"
       },
       {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://pizzornowines.com/product/mayusculas-marselan/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Pizzorno",
+            "sourceUrl": "https://pizzornowines.com/product/mayusculas-marselan/",
+            "sugar": 1.7,
+            "wine": "Mayúsculas Marselan"
+          },
+          {
+            "producer": "Toscanini",
+            "sourceUrl": "https://www.toscaniniwines.com/es/vinos/reserva/marselan/marselan/",
+            "sugar": 1.3,
+            "wine": "Marselan Reserva"
+          },
+          {
+            "producer": "Bodega Garzón",
+            "sourceUrl": "https://bodegagarzon.com/wp-content/uploads/2021/08/Ficha-Tecnica-Marselan-Reserva-2020-ESP.pdf",
+            "sugar": 2.8,
+            "wine": "Marselan Reserva 2020"
+          },
+          {
+            "producer": "Salton",
+            "sourceUrl": "https://www.salton.com.br/upload/produto/ficha/esp_salton-paradoxo-marselan-2020.pdf",
+            "sugar": 2.3,
+            "wine": "Paradoxo Marselan 2020"
+          }
+        ]
+      },
+      {
         "basis": "disputed",
         "factOnly": true,
         "field": "tannin",
@@ -47212,7 +47505,10 @@
         "url": "https://en.wikipedia.org/wiki/Marselan"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q833144",
@@ -48323,6 +48619,51 @@
             "wine": "Frappato"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-frappato-belsito-terre-di-giurfo-2022.html",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Terre di Giurfo",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-frappato-belsito-terre-di-giurfo-2022.html",
+            "wine": "Vittoria DOC Frappato Belsito Terre di Giurfo 2022"
+          },
+          {
+            "producer": "Feudi del Pisciotto",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-frappato-feudi-del-pisciotto-2025.html",
+            "wine": "Sicilia DOC Frappato Colori di Sicilia Feudi del Pisciotto 2025"
+          },
+          {
+            "producer": "Tasca d'Almerita",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-frappato-tasca-d-almerita-2024.html",
+            "wine": "Sicilia DOC Frappato Tenuta Regaleali Tasca d'Almerita 2024"
+          },
+          {
+            "producer": "Nicosia",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-frappato-igt-bio-vegan-senza-solfiti-aggiunti-nicosia-2024.html",
+            "wine": "Terre Siciliane IGT Frappato Vegan Nicosia 2024"
+          },
+          {
+            "producer": "Pellegrino",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-frappato-junco-pellegrino-2024.html",
+            "wine": "Terre Siciliane IGT Frappato Gazzerotta Junco Pellegrino 2024"
+          },
+          {
+            "producer": "Arianna Occhipinti",
+            "sourceUrl": "https://www.vino.com/dettaglio/terre-siciliane-igt-il-frappato-arianna-occhipinti-2024.html",
+            "wine": "Terre Siciliane IGT Il Frappato Arianna Occhipinti 2024"
+          },
+          {
+            "producer": "Planeta",
+            "sourceUrl": "https://www.vino.com/dettaglio/vittoria-doc-frappato-planeta-2025.html",
+            "wine": "Vittoria DOC Frappato Planeta 2025"
+          }
+        ]
       }
     ],
     "id": "frappato",
@@ -48388,7 +48729,10 @@
         "url": "https://en.wikipedia.org/wiki/Frappato"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Frappato di Vittoria",
@@ -48603,6 +48947,71 @@
         "factOnly": true,
         "publisher": "Enotria&Coe",
         "sourceUrl": "https://www.enotria.com/wine/grapes/grillo/"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.vino.com/dettaglio/langhe-rossese-bianco-doc-josetta-saffirio-2023.html",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Josetta Saffirio",
+            "sourceUrl": "https://www.vino.com/dettaglio/langhe-rossese-bianco-doc-josetta-saffirio-2023.html",
+            "wine": "Langhe Rossese Bianco DOC Josetta Saffirio 2023"
+          },
+          {
+            "producer": "Pellegrino",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-bianco-superiore-doc-grillo-gazzerotta-pellegrino-2025.html",
+            "wine": "Sicilia Bianco Superiore DOC Grillo Gazzerotta Senaría Pellegrino 2... Attenzione: i cooki"
+          },
+          {
+            "producer": "Barone di Serramarrocco",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-grillo-del-barone-barone-di-serramarrocco-2024.html",
+            "wine": "Sicilia DOC Grillo del Barone Barone di Serramarrocco 2024"
+          },
+          {
+            "producer": "Feudi del Pisciotto",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-grillo-feudi-del-pisciotto-2025.html",
+            "wine": "Sicilia DOC Grillo Colori di Sicilia Feudi del Pisciotto 2025"
+          },
+          {
+            "producer": "Feudo Arancio",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-grillo-feudo-arancio-2025.html",
+            "wine": "Sicilia DOC Grillo Feudo Arancio 2025"
+          },
+          {
+            "producer": "Cantine Birgi",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-grillo-kalura-cantine-birgi-2024.html",
+            "wine": "Sicilia DOC Grillo Kalura Cantine Birgi 2024"
+          },
+          {
+            "producer": "Fina",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-grillo-kebrilla-cantine-fina-2025.html",
+            "wine": "Sicilia DOC Grillo Kebrilla Fina 2025"
+          },
+          {
+            "producer": "Tenute Orestiadi",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-doc-grillo-tenute-orestiadi-2025.html",
+            "wine": "Sicilia DOC Grillo Nissim Tenute Orestiadi 2025"
+          },
+          {
+            "producer": "Nicosia",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-grillo-doc-bio-vegan-nicosia-2025.html",
+            "wine": "Sicilia DOC Grillo Vegan Nicosia 2025"
+          },
+          {
+            "producer": "Mandrarossa",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-grillo-doc-costadune-mandrarossa-2025.html",
+            "wine": "Sicilia DOC Grillo Mandrarossa 2025"
+          },
+          {
+            "producer": "Li Ciuri",
+            "sourceUrl": "https://www.vino.com/dettaglio/sicilia-grillo-doc-li-ciuri-2025.html",
+            "wine": "Sicilia DOC Grillo Li Ciuri 2025"
+          }
+        ]
       }
     ],
     "id": "grillo",
@@ -48705,7 +49114,10 @@
         "url": "https://en.wikipedia.org/wiki/Grillo"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Riddu",
@@ -53434,7 +53846,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "grape",
       "tropical fruit",
@@ -53551,6 +53963,34 @@
         "quote": "doporučováno k chodům jako dezertní přípitek, eventuálně k těžkým a hutným sýrům či k dezertům",
         "value": "desserts",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Irsai_Oliver"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://groczpinceszet.hu/termek/irsai-oliver-2025-baginbox-1-5-liter/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 11,
+            "producer": "Grócz Pincészet",
+            "sourceUrl": "https://groczpinceszet.hu/termek/irsai-oliver-2025-baginbox-1-5-liter/",
+            "wine": "Irsai Olivér 2025"
+          },
+          {
+            "abv": 12,
+            "producer": "Günzer",
+            "sourceUrl": "https://www.gunzer.com/en/product/irsai-oliver",
+            "wine": "Irsai Olivér"
+          },
+          {
+            "abv": 12,
+            "producer": "Garamvári",
+            "sourceUrl": "https://hungarianwines.eu/product/merlot-2015/",
+            "wine": "Garamvári Irsai Olivér 2024"
+          }
+        ]
       }
     ],
     "id": "irsai-oliver",

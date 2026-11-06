@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { leadIsAboutWine } from "./appellation-names";
 import {
   alcoholFigure,
+  acidityFigure,
   euSweetness,
   type GrapeEntry,
   type Level,
@@ -191,6 +192,9 @@ type WebReading = {
   wines?: {
     /** The alcohol the sheet gives, as `quote` says it. */
     abv?: number;
+    /** The sheet's total acidity, g/l, as `acidityQuote` says it: it decides 4–9 g/l of sugar. */
+    acidity?: number;
+    acidityQuote?: string;
     /** The residual sugar the sheet gives, g/l, as `quote` says it. */
     sugar?: number;
     lang: string;
@@ -632,18 +636,21 @@ for (const qid of index) {
         const page = webPage(wine.source.volume);
         const figure = sugarFigure(wine.quote);
         const flat = (text: string) => text.replace(/\s+/g, " ").toLowerCase();
+        const acidity = wine.acidityQuote === undefined ? null : acidityFigure(wine.acidityQuote);
         if (
           page === null ||
           figure === null ||
           figure !== wine.sugar ||
-          !flat(page).includes(flat(wine.quote))
+          !flat(page).includes(flat(wine.quote)) ||
+          (wine.acidityQuote !== undefined &&
+            (acidity !== wine.acidity || !flat(page).includes(flat(wine.acidityQuote))))
         ) {
           rejected.push({ field, grape, reason: "figure not on its page", value: wine.quote });
           return [];
         }
         return [
           {
-            level: euSweetness(figure, /<\s?\d/.test(wine.quote)),
+            level: euSweetness(figure, /<\s?\d/.test(wine.quote), acidity),
             wine: { ...wine, sugar: figure },
           },
         ];

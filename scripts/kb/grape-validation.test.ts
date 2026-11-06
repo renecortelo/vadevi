@@ -8,7 +8,9 @@ import {
   transliterate,
 } from "./appellation-names";
 import {
+  acidityFigure,
   alcoholFigure,
+  euSweetness,
   mentions,
   originNamed,
   parseRegion,
@@ -458,6 +460,22 @@ describe("a summary taken from a lead", () => {
         "La verdejo es una uva blanca de España. Los estudios genéticos descartan esa teoría",
       ),
     ).toBe("La verdejo es una uva blanca de España. Los estudios genéticos descartan esa teoría");
+  });
+});
+
+describe("a sheet's sugar", () => {
+  it("is dry up to 9 g/l only where the acidity is within 2 g/l of it", () => {
+    expect(euSweetness(4)).toBe("dry");
+    expect(euSweetness(7.7, false, 5.8)).toBe("dry");
+    expect(euSweetness(7.7, false, 5.6)).toBeNull();
+    expect(euSweetness(5)).toBeNull();
+    expect(euSweetness(5, true, 6)).toBeNull();
+    expect(euSweetness(9.5, false, 9)).toBe("medium");
+  });
+
+  it("reads acidity as tartaric, never as sulphuric", () => {
+    expect(acidityFigure("Säure: 6,3 g/l")).toBe(6.3);
+    expect(acidityFigure("Acidité totale 3,4 g/l H2SO4")).toBeNull();
   });
 });
 
