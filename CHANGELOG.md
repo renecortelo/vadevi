@@ -8,6 +8,13 @@ has the reasons.
 
 ### The library
 
+- **Fifty-six more facts about grapes**: Xynisteri has aromas, acidity, pairings
+  and dry at last, from Cypriot wines and two importers. Kisi, Mtsvane and
+  Tsolikouri gain alcohol, body and pairings from three producers' wines in
+  Wines of Georgia's directory. The rest come from Quattrocalici, Vinum, a
+  Spanish tasting club and Wikipedia in Bulgarian, German, Hungarian and
+  Ukrainian. Aromas and pairings may now be said of one place's wine, and the
+  card names the place: Elbling from Luxembourg, Mandilaria from the Aegean.
 - **Twelve more facts about grapes**: Hondarrabi Zuri (light, dry),
   Roussanne (dry), Petit Verdot (full-bodied) and Trebbiano (citrus) from Wine
   Paradigm; Usakhelauri's plum from its Georgian appellation; alcohol for

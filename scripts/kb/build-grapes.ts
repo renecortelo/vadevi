@@ -161,7 +161,9 @@ const handReadings = (
  * kept in the private repository only): an interprofessional body's, a
  * school's, a merchant's or a producer's page about the grape itself (never
  * a page about one of its wines), or the grape's single-variety wines as
- * their producers describe them. Each sentence is
+ * their producers describe them. Aromas and pairings may also be what such a
+ * page says of one place's wine, with `scope` naming the place (the operator's
+ * rule of 6 November 2026); levels never. Each sentence is
  * checked word for word against our copy of its page (`.kb-cache/web/<volume>.txt`)
  * exactly as an article's is, and the fact is kept as its value and link
  * alone: the operator's rule for such pages is the fact, never the text. A

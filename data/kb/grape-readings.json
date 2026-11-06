@@ -350,6 +350,12 @@
           "volume": "itwiki-ansonica-costa-dell-argentario",
           "work": "wikipedia-it"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "uk",
+        "quote": "Вина мають гарну структуру, помірну кислотність, жовтий колір.",
+        "value": "medium"
       }
     ],
     "aramon": [
@@ -596,6 +602,12 @@
         "lang": "en",
         "quote": "Black Muscat (or Muscat Hamburg) is a red Vitis vinifera grape variety derived from the crossing of the Schiava Grossa and Muscat of Alexandria by Seward Snow, Head Gardener to Earl de Grey at Wrest Park, Bedfordshire UK in 1850, according to the Vitis International Variety Catalogue.",
         "value": "GB"
+      },
+      {
+        "field": "acidity",
+        "lang": "hu",
+        "quote": "alacsony savtartalmú asztali bor",
+        "value": "low"
       }
     ],
     "blatina": [
@@ -627,6 +639,12 @@
         "lang": "de",
         "value": "medium",
         "quote": "Blatina ergibt rubinrote, vollfruchtige und mittelschwere Qualitätsweine mit 12 bis 13,5 % Alkohol, 5 bis 7 g/l Säure, 25 bis 32 g/l Extrakt und Johannisbeer- und Brombeer-Aromen."
+      },
+      {
+        "field": "tannin",
+        "lang": "de",
+        "quote": "hohen Farbstoff- und Tanningehalt",
+        "value": "high"
       }
     ],
     "blauer-portugieser": [
@@ -1443,6 +1461,12 @@
           "white meat": "білого м'яса",
           "soft cheese": "м'якими сирами"
         }
+      },
+      {
+        "field": "acidity",
+        "lang": "uk",
+        "quote": "Сухі вина мають жовтий колір, гарну структуру, виражену кислотність та мінеральну складову",
+        "value": "high"
       }
     ],
     "folle-blanche": [
@@ -3089,6 +3113,12 @@
           "volume": "mapa-vid-pedro-ximenez",
           "work": "mapa-vid"
         }
+      },
+      {
+        "field": "body",
+        "lang": "bg",
+        "quote": "се отличават с ниска киселинност, висока плътност и аромати на грозде и сушени плодове",
+        "value": "high"
       }
     ],
     "petit-manseng": [

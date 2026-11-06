@@ -468,6 +468,54 @@
         "quote": "Ce cépage productif donne un vin très fin, élégant, fruité et acide.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Parellada"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/parellada/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/parellada/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pasta",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/parellada/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "vegetables",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/parellada/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/parellada/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "desserts",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/parellada/"
       }
     ],
     "id": "parellada",
@@ -482,7 +530,14 @@
       "pt": "Vitis vinifera 'Parellada'"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "shellfish",
+      "fish",
+      "pasta",
+      "vegetables",
+      "poultry",
+      "desserts"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -1889,6 +1944,22 @@
             "wine": "SEMILLON 2007"
           }
         ]
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Vinatis",
+        "sourceUrl": "https://www.vinatis.co.uk/semillon"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Vinatis",
+        "sourceUrl": "https://www.vinatis.co.uk/semillon"
       }
     ],
     "id": "semillon",
@@ -1903,7 +1974,10 @@
       "pt": "Sémillon"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "poultry"
+    ],
     "prominence": 26,
     "regions": [],
     "styles": [
@@ -2618,6 +2692,14 @@
         "factOnly": true,
         "publisher": "Enotria&Coe",
         "sourceUrl": "https://www.enotria.com/wine/grapes/loureiro/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Enotria&Coe",
+        "sourceUrl": "https://www.enotria.com/wine/grapes/loureiro/"
       }
     ],
     "id": "loureira",
@@ -2632,7 +2714,9 @@
       "nl": "Loureiro"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "shellfish"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -3022,7 +3106,9 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "red berry"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -3142,6 +3228,14 @@
         "quote": "einen hellen, rubinroten Wein mit niedrigem Alkoholgehalt",
         "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Borra%C3%A7al"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "red berry",
+        "factOnly": true,
+        "publisher": "Museo do Viño de Galicia (Xunta)",
+        "sourceUrl": "https://museovinogalicia.xunta.gal/en/o-vino/uvas-e-vinos-de-galicia/caino-tinto"
       }
     ],
     "id": "caino-tinto",
@@ -4034,7 +4128,7 @@
       "mulberry",
       "honey"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -4249,6 +4343,14 @@
             "wine": "Grande Reserva Baga 2024"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/baga/"
       }
     ],
     "id": "baga",
@@ -6527,7 +6629,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Fern%C3%A3o_Pires"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "honey",
@@ -6711,6 +6813,12 @@
         "field": "pairings",
         "quote": "Гарно поєднуються зі стравами з риби, білого м'яса та м'якими сирами",
         "value": "soft cheese",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
+      },
+      {
+        "field": "acidity",
+        "quote": "Сухі вина мають жовтий колір, гарну структуру, виражену кислотність та мінеральну складову",
+        "value": "high",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A4%D1%96%D0%B0%D0%BD%D0%BE"
       },
       {
@@ -7906,6 +8014,30 @@
         "sourceUrl": "https://www.burdivino.fr/cepage-mauzac/"
       },
       {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "BurdiVino",
+        "sourceUrl": "https://www.burdivino.fr/cepage-mauzac/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "goat cheese",
+        "factOnly": true,
+        "publisher": "BurdiVino",
+        "sourceUrl": "https://www.burdivino.fr/cepage-mauzac/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "BurdiVino",
+        "sourceUrl": "https://www.burdivino.fr/cepage-mauzac/"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Mauzac Blanc: France",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -7924,7 +8056,11 @@
       "pt": "Mauzac"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "goat cheese",
+      "seafood"
+    ],
     "prominence": 5,
     "regions": [
       {
@@ -8246,7 +8382,14 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "cherry",
+      "strawberry",
+      "raspberry",
+      "white pepper",
+      "floral",
+      "herbs"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -8355,6 +8498,94 @@
         "quote": "Its total lack of character and low acid render it unfit for any other purpose than blending where a neutral ingredient is desired.",
         "value": "low",
         "sourceUrl": "https://archive.org/details/reportofviticult8793cali"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "cherry",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/pais/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "strawberry",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/pais/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "raspberry",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/pais/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "white pepper",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/pais/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "floral",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/pais/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "herbs",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/pais/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "beef",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
       }
     ],
     "id": "listan-prieto",
@@ -8369,7 +8600,13 @@
       "nl": "Listán prieto"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "beef",
+      "pork",
+      "poultry",
+      "fish",
+      "shellfish"
+    ],
     "prominence": 3,
     "regions": [
       {
@@ -10997,13 +11234,13 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "dried apple",
       "walnut",
       "spice"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -11051,6 +11288,65 @@
         "quote": "З кісі виробляється біле сухе або бурштинове вино",
         "value": "dry",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D1%81%D1%96_(%D0%B2%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4)"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/anbani-kisi/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Anbani Wine",
+            "sourceUrl": "https://www.winesgeorgia.com/label/anbani-kisi/",
+            "wine": "Anbani Kisi"
+          },
+          {
+            "abv": 13,
+            "producer": "Anbani Wine",
+            "sourceUrl": "https://www.winesgeorgia.com/label/kisi-and-rkatsiteli-cuvee/",
+            "wine": "Kisi and Rkatsiteli Cuvee"
+          },
+          {
+            "abv": 12,
+            "producer": "Twins Wine House in Napareuli",
+            "sourceUrl": "https://www.winesgeorgia.com/label/rkatsiteli-kakhuri/",
+            "wine": "Rkatsiteli (Kakhuri)"
+          },
+          {
+            "abv": 12,
+            "producer": "Rtvelisi",
+            "sourceUrl": "https://www.winesgeorgia.com/label/kisi-qvevri/",
+            "wine": "Kisi Qvevri"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "body",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/rkatsiteli-kakhuri/",
+        "value": "high",
+        "wines": [
+          {
+            "producer": "Twins Wine House in Napareuli",
+            "sourceUrl": "https://www.winesgeorgia.com/label/rkatsiteli-kakhuri/",
+            "wine": "Rkatsiteli (Kakhuri)"
+          },
+          {
+            "producer": "Anapea",
+            "sourceUrl": "https://www.winesgeorgia.com/label/kisi-amber-2019/",
+            "wine": "Kisi Udabno"
+          },
+          {
+            "producer": "Orgo (Teleda)",
+            "sourceUrl": "https://www.winesgeorgia.com/label/kisi-white/",
+            "wine": "Kisi (White)"
+          }
+        ]
       }
     ],
     "id": "kisi",
@@ -12816,6 +13112,14 @@
         "field": "sweetness",
         "quote": "Traditionally, most commercially produced Concord wines are sweet, but dry versions are possible",
         "value": "dry-sweet"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/concord/"
       }
     ],
     "id": "concord",
@@ -12900,12 +13204,12 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q393047",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Concord_grape"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": null,
     "aromas": [
       "candied lemon peel",
@@ -12975,6 +13279,14 @@
         "field": "regions",
         "quote": "They are most commonly found in the United States in New York, Pennsylvania, New Jersey, Michigan, Washington, and Ohio, and are also grown in Ontario in Canada ... principally in the states of São Paulo, where the variety first occurred in 1933, and Rio Grande do Sul",
         "value": "BR: Rio Grande do Sul"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/niagara/"
       }
     ],
     "id": "niagara",
@@ -15115,7 +15427,7 @@
     "aromas": [
       "grape"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -15248,6 +15560,14 @@
             "wine": "Siegerrebe süß 2025"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinum",
+        "sourceUrl": "https://www.vinum.eu/de/weinwissen/weinlexikon/rebsortenlexikon/s/siegerrebe/"
       }
     ],
     "id": "siegerrebe",
@@ -27921,7 +28241,7 @@
   },
   {
     "acidity": "medium",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity",
       "spice"
@@ -28076,6 +28396,46 @@
         "quote": "Odlikuje se elegancijom, lakoćom, pitkošću, rafiniranošću i umerenim prisustvom odgovarajuće kiseline",
         "value": "medium",
         "sourceUrl": "https://sr.wikipedia.org/wiki/Kadarka"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soups",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "white meat",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/kadarka/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/kadarka/"
       }
     ],
     "id": "kadarka",
@@ -28090,7 +28450,12 @@
       "pt": "Kadarka"
     },
     "origin": null,
-    "pairings": [],
+    "pairings": [
+      "soups",
+      "white meat",
+      "cheese",
+      "fish"
+    ],
     "prominence": 20,
     "regions": [
       {
@@ -32541,7 +32906,7 @@
       "grapefruit",
       "apple"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -32723,6 +33088,14 @@
             "wine": "Valdequemao Macabeo"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/macabeo/"
       }
     ],
     "id": "macabeo",
@@ -34004,7 +34377,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "grape"
     ],
@@ -34054,6 +34427,14 @@
         "quote": "Conté aromes de raïm, combinades amb fruitades.",
         "value": "grape",
         "sourceUrl": "https://ca.wikipedia.org/wiki/Mavrud"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vinum",
+        "sourceUrl": "https://www.vinum.eu/de/weinwissen/weinlexikon/rebsortenlexikon/m/mavrud/"
       }
     ],
     "id": "mavrud",
@@ -36221,6 +36602,30 @@
             "wine": "Saint George Nemea 2024"
           }
         ]
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/agiorgitiko/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/agiorgitiko/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/agiorgitiko/"
       }
     ],
     "id": "agiorgitiko",
@@ -36235,7 +36640,11 @@
       "pt": "Agiorgitiko"
     },
     "origin": "GR",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "game",
+      "cheese"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -37255,6 +37664,30 @@
         "factOnly": true,
         "publisher": "Vinatis",
         "sourceUrl": "https://www.vinatis.com/colombard-cepage"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "appetizers",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/colombard/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cured meats",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/colombard/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "foie gras",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/colombard/"
       }
     ],
     "id": "colombard",
@@ -37269,7 +37702,11 @@
       "pt": "Colombard"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "appetizers",
+      "cured meats",
+      "foie gras"
+    ],
     "prominence": 15,
     "regions": [
       {
@@ -37428,7 +37865,7 @@
       "fig",
       "molasses"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -37612,6 +38049,12 @@
         "quote": "Mostos muy alcohólicos, con baja acidez.",
         "value": "high",
         "sourceUrl": "https://web.archive.org/web/20230618142756/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/PEDRO_XIMENEZ.pdf"
+      },
+      {
+        "field": "body",
+        "quote": "се отличават с ниска киселинност, висока плътност и аромати на грозде и сушени плодове",
+        "value": "high",
+        "sourceUrl": "https://bg.wikipedia.org/wiki/%D0%9F%D0%B5%D0%B4%D1%80%D0%BE_%D0%A5%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D1%81"
       }
     ],
     "id": "pedro-ximenez",
@@ -39455,6 +39898,38 @@
         "quote": "wird Airén auch zu frischen, trockenen, schnell zu trinkenden Weißweinen vergoren",
         "value": "dry",
         "sourceUrl": "https://de.wikipedia.org/wiki/Air%C3%A9n"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/airen/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pasta",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/airen/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "white fish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/airen/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/airen/"
       }
     ],
     "id": "airen",
@@ -39469,7 +39944,12 @@
       "pt": "Airén"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "pasta",
+      "white fish",
+      "shellfish"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -39968,7 +40448,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Feteasc%C4%83_alb%C4%83"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": "medium",
     "aromas": [
       "fruity"
@@ -40192,6 +40672,14 @@
             "wine": "Canaiolo 100"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/canaiolo-nero/"
       }
     ],
     "id": "canaiolo",
@@ -43043,7 +43531,7 @@
       "bitter almond",
       "citrus"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -43138,6 +43626,14 @@
         "factOnly": true,
         "publisher": "Vine&Wine",
         "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/verdicchio-bianco/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/verdicchio/"
       }
     ],
     "id": "verdicchio",
@@ -43786,7 +44282,7 @@
     "aromas": [
       "blackcurrant"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -43854,6 +44350,46 @@
         "quote": "Son raisin donne des vins colorés, tanniques, assez intenses en saveurs, et souvent aptes à la garde.",
         "value": "high",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/feteasca-neagra/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cured meats",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/feteasca-neagra/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/feteasca-neagra/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/feteasca-neagra/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/feteasca-neagra/"
       }
     ],
     "id": "feteasca-neagra",
@@ -43868,7 +44404,12 @@
       "pt": "Fetească neagră"
     },
     "origin": "RO",
-    "pairings": [],
+    "pairings": [
+      "cured meats",
+      "red meat",
+      "game",
+      "cheese"
+    ],
     "prominence": 12,
     "regions": [
       {
@@ -47243,6 +47784,12 @@
         "quote": "Blatina ergibt rubinrote, vollfruchtige und mittelschwere Qualitätsweine mit 12 bis 13,5 % Alkohol, 5 bis 7 g/l Säure, 25 bis 32 g/l Extrakt und Johannisbeer- und Brombeer-Aromen.",
         "value": "medium",
         "sourceUrl": "https://de.wikipedia.org/wiki/Blatina"
+      },
+      {
+        "field": "tannin",
+        "quote": "hohen Farbstoff- und Tanningehalt",
+        "value": "high",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Blatina"
       }
     ],
     "id": "blatina",
@@ -47315,7 +47862,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q12628015",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Blatina"
   },
@@ -50084,6 +50631,146 @@
             "wine": "Mtsvane 2022"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/mtsvane-2014-white-3/",
+        "value": "poultry",
+        "wines": [
+          {
+            "producer": "Pheasant’s Tears",
+            "sourceUrl": "https://www.winesgeorgia.com/label/mtsvane-2014-white-3/",
+            "wine": "Mtsvane 2014 (White)"
+          },
+          {
+            "producer": "Bolero & Co.",
+            "sourceUrl": "https://www.winesgeorgia.com/label/sabado-mtsvane-dry-white-2018/",
+            "wine": "Sabado Mtsvane"
+          },
+          {
+            "producer": "Orgo",
+            "sourceUrl": "https://www.georgianwinehouse.com/orgo-mtsvane",
+            "wine": "Mtsvane"
+          },
+          {
+            "producer": "Giuaani",
+            "sourceUrl": "https://giuaani.ge/product/mtsvane-qvevri-2014/",
+            "wine": "Mtsvane Qvevri 2014"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/mtsvane-2014-white-3/",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Pheasant’s Tears",
+            "sourceUrl": "https://www.winesgeorgia.com/label/mtsvane-2014-white-3/",
+            "wine": "Mtsvane 2014 (White)"
+          },
+          {
+            "producer": "Shalauri Cellars",
+            "sourceUrl": "https://www.winesgeorgia.com/label/mtsvane-2013-white/",
+            "wine": "Mtsvane 2013 (White)"
+          },
+          {
+            "producer": "Bolero & Co.",
+            "sourceUrl": "https://www.winesgeorgia.com/label/sabado-mtsvane-dry-white-2018/",
+            "wine": "Sabado Mtsvane"
+          },
+          {
+            "producer": "Vazisubani Estate",
+            "sourceUrl": "https://vazisubaniestate.ge/product/kakhuri-mtsvane-qvevri/",
+            "wine": "Kakhuri Mtsvane Qvevri"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/mtsvane-2013-white/",
+        "value": "pork",
+        "wines": [
+          {
+            "producer": "Shalauri Cellars",
+            "sourceUrl": "https://www.winesgeorgia.com/label/mtsvane-2013-white/",
+            "wine": "Mtsvane 2013 (White)"
+          },
+          {
+            "producer": "Orgo",
+            "sourceUrl": "https://www.georgianwinehouse.com/orgo-mtsvane",
+            "wine": "Mtsvane"
+          },
+          {
+            "producer": "Chona’s Marani",
+            "sourceUrl": "https://www.georgianwinehouse.com/chonas-marani-mtsvane",
+            "wine": "Mtsvane"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/sabado-mtsvane-dry-white-2018/",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Bolero & Co.",
+            "sourceUrl": "https://www.winesgeorgia.com/label/sabado-mtsvane-dry-white-2018/",
+            "wine": "Sabado Mtsvane"
+          },
+          {
+            "producer": "Giuaani",
+            "sourceUrl": "https://giuaani.ge/product/mtsvane-qvevri-2014/",
+            "wine": "Mtsvane Qvevri 2014"
+          },
+          {
+            "producer": "Giuaani",
+            "sourceUrl": "https://giuaani.ge/product/mtsvane-qvevri/",
+            "wine": "Mtsvane Qvevri"
+          },
+          {
+            "producer": "Rtvelisi",
+            "sourceUrl": "https://rtvelisi.com/mtsvane-qvevri-amber-dry",
+            "wine": "Mtsvane Qvevri"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://giuaani.ge/product/mtsvane-qvevri/",
+        "value": "seafood",
+        "wines": [
+          {
+            "producer": "Giuaani",
+            "sourceUrl": "https://giuaani.ge/product/mtsvane-qvevri/",
+            "wine": "Mtsvane Qvevri"
+          },
+          {
+            "producer": "Rtvelisi",
+            "sourceUrl": "https://rtvelisi.com/mtsvane-qvevri-amber-dry",
+            "wine": "Mtsvane Qvevri"
+          },
+          {
+            "producer": "Vazisubani Estate",
+            "sourceUrl": "https://vazisubaniestate.ge/product/kakhuri-mtsvane-qvevri/",
+            "wine": "Kakhuri Mtsvane Qvevri"
+          }
+        ]
       }
     ],
     "id": "mtsvane",
@@ -50098,7 +50785,13 @@
       "nl": "Mtsvane"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "poultry",
+      "fish",
+      "pork",
+      "cheese",
+      "seafood"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -51213,7 +51906,12 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "citrus",
+      "gooseberry",
+      "green apple",
+      "pomegranate"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -51300,6 +51998,62 @@
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D1%8C%D0%B1%D0%BB%D0%B8%D0%BD%D0%B3"
       },
       {
+        "field": "aromas",
+        "quote": "",
+        "value": "citrus",
+        "factOnly": true,
+        "publisher": "Institut Viti-Vinicole (Luxemburgo)",
+        "sourceUrl": "https://aop.public.lu/en/cepages.html",
+        "place": "Luxemburgo",
+        "placeId": "lu-moselle-luxembourgeoise"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "gooseberry",
+        "factOnly": true,
+        "publisher": "Institut Viti-Vinicole (Luxemburgo)",
+        "sourceUrl": "https://aop.public.lu/en/cepages.html",
+        "place": "Luxemburgo",
+        "placeId": "lu-moselle-luxembourgeoise"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "green apple",
+        "factOnly": true,
+        "publisher": "Institut Viti-Vinicole (Luxemburgo)",
+        "sourceUrl": "https://aop.public.lu/en/cepages.html",
+        "place": "Luxemburgo",
+        "placeId": "lu-moselle-luxembourgeoise"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "pomegranate",
+        "factOnly": true,
+        "publisher": "Institut Viti-Vinicole (Luxemburgo)",
+        "sourceUrl": "https://aop.public.lu/en/cepages.html",
+        "place": "Luxemburgo",
+        "placeId": "lu-moselle-luxembourgeoise"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "WirWinzer",
+        "sourceUrl": "https://wirwinzer.de/rebsorten/elbling"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "WirWinzer",
+        "sourceUrl": "https://wirwinzer.de/rebsorten/elbling"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Elbling: Germany",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -51318,7 +52072,10 @@
       "pt": "Elbling"
     },
     "origin": "DE",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -52635,7 +53392,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aramon_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "low",
     "alcohol": "medium",
     "aromas": [
       "fruity"
@@ -52778,6 +53535,12 @@
         "field": "origin",
         "quote": "Black Muscat (or Muscat Hamburg) is a red Vitis vinifera grape variety derived from the crossing of the Schiava Grossa and Muscat of Alexandria by Seward Snow, Head Gardener to Earl de Grey at Wrest Park, Bedfordshire UK in 1850, according to the Vitis International Variety Catalogue.",
         "value": "GB"
+      },
+      {
+        "field": "acidity",
+        "quote": "alacsony savtartalmú asztali bor",
+        "value": "low",
+        "sourceUrl": "https://hu.wikipedia.org/wiki/Hamburgi_muskot%C3%A1ly"
       },
       {
         "basis": "producers-abv",
@@ -53440,6 +54203,30 @@
         "sourceUrl": "https://fr.wikipedia.org/wiki/Muscadelle"
       },
       {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/muscadelle/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fresh cheese",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/muscadelle/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "asian cuisine",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/muscadelle/"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Muscadelle: France",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -53458,7 +54245,11 @@
       "pt": "Muscadelle"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "fresh cheese",
+      "asian cuisine"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -53835,9 +54626,13 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Albana_(grape)"
   },
   {
-    "acidity": null,
-    "alcohol": null,
-    "aromas": [],
+    "acidity": "low",
+    "alcohol": "medium",
+    "aromas": [
+      "citrus",
+      "apricot",
+      "peach"
+    ],
     "body": null,
     "color": "white",
     "evidence": [
@@ -53885,6 +54680,111 @@
         "field": "regions",
         "quote": "on the south slopes of the Troodos mountain range are planted with this grape variety ... in the hotter wine regions in Australia like the Barossa and the Riverland",
         "value": "AU: Riverland"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "citrus",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "apricot",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "peach",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "grilled meats",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "white meat",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soft cheese",
+        "factOnly": true,
+        "publisher": "Paphos Weine",
+        "sourceUrl": "https://www.paphosweine.ch/2021/12/02/xinisteri-guenstige-spitzenweine-aus-zypern/"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Wein aus Zypern",
+        "sourceUrl": "https://www.weinauszypern.de/en/c/wine/xynisteri"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://zambartaswineries.com/product/xynisteri/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Zambartas Wineries",
+            "sourceUrl": "https://zambartaswineries.com/product/xynisteri/",
+            "wine": "Xynisteri"
+          },
+          {
+            "producer": "Makarounas Winery",
+            "sourceUrl": "https://www.thewinesociety.com/product/aerides-xynisteri-makarounas-winery-2023/",
+            "wine": "Aerides Xynisteri"
+          },
+          {
+            "producer": "Kyperounda Winery",
+            "sourceUrl": "https://kyperoundawinery.com/en/product/petritis-2023/",
+            "wine": "Petritis"
+          }
+        ]
       }
     ],
     "id": "xynisteri",
@@ -53899,7 +54799,13 @@
       "pt": "Xynisteri"
     },
     "origin": "CY",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "seafood",
+      "grilled meats",
+      "white meat",
+      "soft cheese"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -53957,7 +54863,10 @@
         "url": "https://es.wikipedia.org/wiki/Xynisteri"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "xinisteri",
@@ -53971,8 +54880,14 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "lemon",
+      "lime",
+      "green apple",
+      "floral",
+      "herbs"
+    ],
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -54075,6 +54990,54 @@
         "quote": "elle donne un vin peu alcoolique, nerveux acide et pâle",
         "value": "low",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Folle-blanche"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "lemon",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/folle-blanche/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "lime",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/folle-blanche/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "green apple",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/folle-blanche/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "floral",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/folle-blanche/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "herbs",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/folle-blanche/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/folle-blanche/"
       }
     ],
     "id": "folle-blanche",
@@ -55078,12 +56041,12 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ribolla_Gialla"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": "medium",
     "aromas": [
       "nutty"
     ],
-    "body": null,
+    "body": "high",
     "color": "white",
     "evidence": [
       {
@@ -55254,6 +56217,12 @@
         "placeId": "it-ansonica-costa-dell-argentario"
       },
       {
+        "field": "acidity",
+        "quote": "Вина мають гарну структуру, помірну кислотність, жовтий колір.",
+        "value": "medium",
+        "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D1%81%D0%BE%D0%BD%D1%96%D0%BA%D0%B0"
+      },
+      {
         "basis": "producers-abv",
         "factOnly": true,
         "field": "alcohol",
@@ -55280,6 +56249,14 @@
             "wine": "Epicentro Orange Inzolia Bio"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ansonica/"
       }
     ],
     "id": "ansonica",
@@ -55448,7 +56425,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -55524,6 +56501,74 @@
         "quote": "Tsolikouri har hög syra och gjord enligt europeisk metod producerar den ett aromatiskt lätt syrligt vin.",
         "value": "high",
         "sourceUrl": "https://sv.wikipedia.org/wiki/Tsolikouri"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/tsolikouri-5/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Winery Georgino",
+            "sourceUrl": "https://www.winesgeorgia.com/label/tsolikouri-5/",
+            "wine": "Tsolikouri"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Sevsamora Winery",
+            "sourceUrl": "https://www.winesgeorgia.com/label/tsolikouri-4/",
+            "wine": "Tsolikouri"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Zaal Liluashvili’s Marani",
+            "sourceUrl": "https://www.winesgeorgia.com/label/liluashvili/",
+            "wine": "Liluashvili"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Mshvenieradze Winery",
+            "sourceUrl": "https://www.winesgeorgia.com/label/tsolikouri-3/",
+            "wine": "Tsolikouri"
+          },
+          {
+            "abv": 12,
+            "producer": "Winery Zodi",
+            "sourceUrl": "https://www.winesgeorgia.com/label/tsolikouri-2/",
+            "wine": "Tsolikouri"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Obene Winery",
+            "sourceUrl": "https://www.winesgeorgia.com/label/obene-tsolikauri/",
+            "wine": "Obene – Tsolikauri"
+          },
+          {
+            "abv": 13,
+            "producer": "Winery Malani",
+            "sourceUrl": "https://www.winesgeorgia.com/label/tsolikauri-2/",
+            "wine": "Tsolikauri"
+          }
+        ]
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "salmon",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/tsolikouri/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "desserts",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/tsolikouri/"
       }
     ],
     "id": "tsolikouri",
@@ -55538,7 +56583,10 @@
       "nl": "Tsolikouri"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "salmon",
+      "desserts"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -56378,7 +57426,10 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "ripe fruit",
+      "leather"
+    ],
     "body": "low",
     "color": "red",
     "evidence": [
@@ -56508,6 +57559,24 @@
         "factOnly": true,
         "publisher": "Douloufakis",
         "sourceUrl": "https://douloufakis.wine/en/mandilari-variety/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "ripe fruit",
+        "factOnly": true,
+        "publisher": "Cava Oinos",
+        "sourceUrl": "https://cavaoinos.com/varieties/mandilaria/",
+        "place": "islas del Egeo y Creta"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "leather",
+        "factOnly": true,
+        "publisher": "Cava Oinos",
+        "sourceUrl": "https://cavaoinos.com/varieties/mandilaria/",
+        "place": "islas del Egeo y Creta"
       },
       {
         "field": "origin",
@@ -56848,8 +57917,14 @@
   {
     "acidity": "low",
     "alcohol": "medium",
-    "aromas": [],
-    "body": null,
+    "aromas": [
+      "cherry",
+      "blackberry",
+      "plum",
+      "violet",
+      "spice"
+    ],
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -56970,6 +58045,62 @@
         "quote": "Le cépage « Ancellotta » provient du nord de l’Italie.",
         "value": "IT",
         "sourceUrl": "https://fr.wikipedia.org/wiki/Ancellotta"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "cherry",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "blackberry",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "plum",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "violet",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "spice",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
       }
     ],
     "id": "ancellotta",
@@ -57108,7 +58239,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q488942",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ancellotta"
   },
@@ -57317,7 +58448,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -57404,6 +58535,38 @@
         "factOnly": true,
         "publisher": "AIS Lombardia (Associazione Italiana Sommelier), ViniPlus",
         "sourceUrl": "https://www.aislombardia.it/media2/libreria/allegati/ViniPlus24_specialeVitigni_Croatina.pdf"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/croatina/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "roasts",
+        "factOnly": true,
+        "publisher": "Italy Abroad",
+        "sourceUrl": "https://www.italyabroad.com/grapes/croatina"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Italy Abroad",
+        "sourceUrl": "https://www.italyabroad.com/grapes/croatina"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pasta",
+        "factOnly": true,
+        "publisher": "Italy Abroad",
+        "sourceUrl": "https://www.italyabroad.com/grapes/croatina"
       }
     ],
     "id": "croatina",
@@ -57418,7 +58581,11 @@
       "pt": "Croatina"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "roasts",
+      "cheese",
+      "pasta"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -60770,7 +61937,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "citrus",
       "smoky"
@@ -60824,6 +61991,38 @@
         "value": "FR: Châteauneuf-du-Pape"
       },
       {
+        "field": "alcohol",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/bourboulenc/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/bourboulenc/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/bourboulenc/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fresh cheese",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/bourboulenc/"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Bourboulenc: France",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -60842,7 +62041,11 @@
       "pt": "Bourboulenc"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "shellfish",
+      "fresh cheese"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -61568,7 +62771,9 @@
   {
     "acidity": "low",
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "fruity"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -61624,6 +62829,22 @@
         "factOnly": true,
         "publisher": "Institute of Vine and Wine – Pleven",
         "sourceUrl": "https://ive.bg/en/sortove/pamid/"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Vinum",
+        "sourceUrl": "https://www.vinum.eu/de/weinwissen/weinlexikon/rebsortenlexikon/p/pamid/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "fruity",
+        "factOnly": true,
+        "publisher": "Bulwine",
+        "sourceUrl": "https://www.bulwine.com/bulgarian-indigenous-grapes"
       }
     ],
     "id": "pamid",
@@ -61709,14 +62930,19 @@
       "to": "dry"
     },
     "synonyms": [],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1099124",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pamid"
   },
   {
     "acidity": null,
     "alcohol": null,
-    "aromas": [],
+    "aromas": [
+      "red fruit",
+      "blackberry",
+      "cherry",
+      "violet"
+    ],
     "body": null,
     "color": "red",
     "evidence": [
@@ -61789,6 +63015,38 @@
         "field": "regions",
         "quote": "Die Sorte ist in der Provinz Ferrara der Emilia-Romagna sowie den Provinzen Cremona und Mantua in der Lombardei zugelassen.",
         "value": "IT: Cremona"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "red fruit",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/lambrusco-viadanese/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "blackberry",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/lambrusco-viadanese/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "cherry",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/lambrusco-viadanese/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "violet",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/lambrusco-viadanese/"
       }
     ],
     "id": "lambrusco-viadanese",
@@ -61896,7 +63154,7 @@
       "blackberry",
       "spice"
     ],
-    "body": null,
+    "body": "high",
     "color": "red",
     "evidence": [
       {
@@ -61954,6 +63212,14 @@
         "factOnly": true,
         "publisher": "Swiss Wine Promotion",
         "sourceUrl": "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/gamaret-en"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/gamaret/"
       }
     ],
     "id": "gamaret",
@@ -62138,6 +63404,14 @@
         "factOnly": true,
         "publisher": "Enotria&Coe",
         "sourceUrl": "https://www.enotria.com/wine/grapes/trepat/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/trepat/"
       }
     ],
     "id": "trepat",
@@ -62152,7 +63426,9 @@
       "nl": "Trepat"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 8,
     "regions": [
       {
