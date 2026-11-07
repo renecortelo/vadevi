@@ -762,6 +762,14 @@
         "factOnly": true,
         "publisher": "Institut d'Estudis Catalans (IEC), Dossiers Agraris",
         "sourceUrl": "https://revistes.iec.cat/index.php/DA/article/download/78875/135139"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vitis Navarra",
+        "sourceUrl": "https://vitisnavarra.com/variedades/uvas-tintas/sumoll-tinta/"
       }
     ],
     "id": "sumoll",
@@ -868,7 +876,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q3064821",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sumoll"
   },
@@ -13209,7 +13217,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Concord_grape"
   },
   {
-    "acidity": "medium",
+    "acidity": null,
     "alcohol": null,
     "aromas": [
       "candied lemon peel",
@@ -13279,14 +13287,6 @@
         "field": "regions",
         "quote": "They are most commonly found in the United States in New York, Pennsylvania, New Jersey, Michigan, Washington, and Ohio, and are also grown in Ontario in Canada ... principally in the states of São Paulo, where the variety first occurred in 1933, and Rio Grande do Sul",
         "value": "BR: Rio Grande do Sul"
-      },
-      {
-        "field": "acidity",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Quattrocalici",
-        "sourceUrl": "https://www.quattrocalici.it/vitigni/niagara/"
       }
     ],
     "id": "niagara",
@@ -13495,7 +13495,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "cinnamon",
       "honey",
@@ -13666,6 +13666,14 @@
         "factOnly": true,
         "publisher": "Enotria&Coe",
         "sourceUrl": "https://www.enotria.com/wine/grapes/petit-manseng/"
+      },
+      {
+        "field": "alcohol",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Vitis Navarra",
+        "sourceUrl": "https://vitisnavarra.com/variedades/uvas-blancas/petit-manseng/"
       }
     ],
     "id": "petit-manseng",
@@ -15184,7 +15192,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Refosco_dal_Peduncolo_Rosso"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "cherry",
@@ -15313,6 +15321,14 @@
             "wine": "Rondo Reserve"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "vinograd.info",
+        "sourceUrl": "https://vinograd.info/sorta/vinnye/rondo.html"
       },
       {
         "field": "origin",
@@ -40448,7 +40464,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Feteasc%C4%83_alb%C4%83"
   },
   {
-    "acidity": "medium",
+    "acidity": null,
     "alcohol": "medium",
     "aromas": [
       "fruity"
@@ -40672,14 +40688,6 @@
             "wine": "Canaiolo 100"
           }
         ]
-      },
-      {
-        "field": "acidity",
-        "quote": "",
-        "value": "medium",
-        "factOnly": true,
-        "publisher": "Quattrocalici",
-        "sourceUrl": "https://www.quattrocalici.it/vitigni/canaiolo-nero/"
       }
     ],
     "id": "canaiolo",
@@ -57579,6 +57587,14 @@
         "place": "islas del Egeo y Creta"
       },
       {
+        "field": "tannin",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "vinograd.info",
+        "sourceUrl": "https://vinograd.info/sorta/vinnye/tsumbrena-mavri.html"
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Mandilaria: Greece",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -57715,7 +57731,7 @@
         "source": "article"
       }
     ],
-    "tannin": null,
+    "tannin": "high",
     "wikidataId": "Q384968",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mandilaria"
   },

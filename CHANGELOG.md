@@ -8,6 +8,11 @@ has the reasons.
 
 ### The library
 
+- **Four more facts about grapes, two withdrawn**: Petit Manseng's alcohol and
+  Sumoll's tannin from the Vitis Navarra nursery; Mandilaria's tannin and
+  Rondo's acidity from vinograd.info. Niagara's and Canaiolo's acidity are gone
+  again: vinograd.info says low where Quattrocalici said moderate, and when
+  two pages disagree the card says nothing.
 - **Fifty-six more facts about grapes**: Xynisteri has aromas, acidity, pairings
   and dry at last, from Cypriot wines and two importers. Kisi, Mtsvane and
   Tsolikouri gain alcohol, body and pairings from three producers' wines in
