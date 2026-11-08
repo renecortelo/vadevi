@@ -8,6 +8,11 @@ has the reasons.
 
 ### The library
 
+- **Eight more facts about grapes**: Concord's body and pairings from the
+  Missouri Wine and Grape Board; Sercial's and Boal's pairings from Madeira's
+  wine institute, said of Madeira; Treixadura's from the Diccionario del Vino,
+  said of Ribeiro; Mavrud's from International Mavrud Day's sommeliers;
+  Grolleau's aromas from VinePair.
 - **Nineteen more facts about grapes**: a wine its source calls light now
   counts as light-bodied when the sentence is read by hand (never a light
   colour, never a model's proposal), which gives Elbling, Pamid, Trepat,

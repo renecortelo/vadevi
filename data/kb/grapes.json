@@ -2965,6 +2965,26 @@
         "sourceUrl": "https://de.wikipedia.org/wiki/Trajadura"
       },
       {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Diccionario del Vino",
+        "sourceUrl": "https://diccionariodelvino.com/index.php/treixadura",
+        "place": "Ribeiro",
+        "placeId": "es-ribeiro"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Diccionario del Vino",
+        "sourceUrl": "https://diccionariodelvino.com/index.php/treixadura",
+        "place": "Ribeiro",
+        "placeId": "es-ribeiro"
+      },
+      {
         "basis": "disputed",
         "factOnly": true,
         "field": "acidity",
@@ -3007,7 +3027,10 @@
       "nl": "Treixadura"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "shellfish"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -13089,7 +13112,7 @@
     "aromas": [
       "musk"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -13144,6 +13167,54 @@
         "factOnly": true,
         "publisher": "Quattrocalici",
         "sourceUrl": "https://www.quattrocalici.it/vitigni/concord/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Missouri Wine and Grape Board",
+        "sourceUrl": "https://missouriwine.org/education/learn-the-basics/varietals/catawba-or-concord"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Missouri Wine and Grape Board",
+        "sourceUrl": "https://missouriwine.org/education/learn-the-basics/varietals/catawba-or-concord"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Missouri Wine and Grape Board",
+        "sourceUrl": "https://missouriwine.org/education/learn-the-basics/varietals/catawba-or-concord"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Missouri Wine and Grape Board",
+        "sourceUrl": "https://missouriwine.org/education/learn-the-basics/varietals/catawba-or-concord"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "beef",
+        "factOnly": true,
+        "publisher": "Missouri Wine and Grape Board",
+        "sourceUrl": "https://missouriwine.org/education/learn-the-basics/varietals/catawba-or-concord"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Missouri Wine and Grape Board",
+        "sourceUrl": "https://missouriwine.org/education/learn-the-basics/varietals/catawba-or-concord"
       }
     ],
     "id": "concord",
@@ -13158,7 +13229,13 @@
       "it": "Concord"
     },
     "origin": "US",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "poultry",
+      "pork",
+      "beef",
+      "seafood"
+    ],
     "prominence": 16,
     "regions": [
       {
@@ -34481,6 +34558,38 @@
         "factOnly": true,
         "publisher": "Vinum",
         "sourceUrl": "https://www.vinum.eu/de/weinwissen/weinlexikon/rebsortenlexikon/m/mavrud/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "International Mavrud Day (Bulgarian Association of Wine Professionals)",
+        "sourceUrl": "https://mavrudday.com/en/kombinaciya-s-hrana"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "beef",
+        "factOnly": true,
+        "publisher": "International Mavrud Day (Bulgarian Association of Wine Professionals)",
+        "sourceUrl": "https://mavrudday.com/en/kombinaciya-s-hrana"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "International Mavrud Day (Bulgarian Association of Wine Professionals)",
+        "sourceUrl": "https://mavrudday.com/en/kombinaciya-s-hrana"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "game",
+        "factOnly": true,
+        "publisher": "International Mavrud Day (Bulgarian Association of Wine Professionals)",
+        "sourceUrl": "https://mavrudday.com/en/kombinaciya-s-hrana"
       }
     ],
     "id": "mavrud",
@@ -34495,7 +34604,12 @@
       "pt": "Mavrud"
     },
     "origin": "BG",
-    "pairings": [],
+    "pairings": [
+      "red meat",
+      "beef",
+      "lamb",
+      "game"
+    ],
     "prominence": 17,
     "regions": [],
     "styles": [
@@ -49335,6 +49449,46 @@
         "sourceUrl": "https://madeirawinecompany.com/en/madeira/grape-varieties.html",
         "place": "Madeira",
         "placeId": "pt-madeira"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "smoked fish",
+        "factOnly": true,
+        "publisher": "Instituto do Vinho, do Bordado e do Artesanato da Madeira",
+        "sourceUrl": "https://vinhomadeira.com/o-vinho-madeira/consumir/foodmatching",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Instituto do Vinho, do Bordado e do Artesanato da Madeira",
+        "sourceUrl": "https://vinhomadeira.com/o-vinho-madeira/consumir/foodmatching",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "sushi",
+        "factOnly": true,
+        "publisher": "Instituto do Vinho, do Bordado e do Artesanato da Madeira",
+        "sourceUrl": "https://vinhomadeira.com/o-vinho-madeira/consumir/foodmatching",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "goat cheese",
+        "factOnly": true,
+        "publisher": "Instituto do Vinho, do Bordado e do Artesanato da Madeira",
+        "sourceUrl": "https://vinhomadeira.com/o-vinho-madeira/consumir/foodmatching",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
       }
     ],
     "id": "sercial",
@@ -49349,7 +49503,12 @@
       "pt": "Sercial"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "smoked fish",
+      "shellfish",
+      "sushi",
+      "goat cheese"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -57058,7 +57217,11 @@
   {
     "acidity": "high",
     "alcohol": "low",
-    "aromas": [],
+    "aromas": [
+      "liquorice",
+      "plum",
+      "cherry"
+    ],
     "body": "low",
     "color": "red",
     "evidence": [
@@ -57187,6 +57350,30 @@
         "field": "sweetness",
         "quote": "It is often produced in off-dry to medium sweet style",
         "value": "medium"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "liquorice",
+        "factOnly": true,
+        "publisher": "VinePair",
+        "sourceUrl": "https://vinepair.com/wine-blog/loire-valley-light-red-wines/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "plum",
+        "factOnly": true,
+        "publisher": "VinePair",
+        "sourceUrl": "https://vinepair.com/wine-blog/loire-valley-light-red-wines/"
+      },
+      {
+        "field": "aromas",
+        "quote": "",
+        "value": "cherry",
+        "factOnly": true,
+        "publisher": "VinePair",
+        "sourceUrl": "https://vinepair.com/wine-blog/loire-valley-light-red-wines/"
       }
     ],
     "id": "grolleau",
@@ -61808,6 +61995,36 @@
         "sourceUrl": "https://madeirawinecompany.com/en/madeira/grape-varieties.html",
         "place": "Madeira",
         "placeId": "pt-madeira"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "desserts",
+        "factOnly": true,
+        "publisher": "Instituto do Vinho, do Bordado e do Artesanato da Madeira",
+        "sourceUrl": "https://vinhomadeira.com/o-vinho-madeira/consumir/foodmatching",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "soft cheese",
+        "factOnly": true,
+        "publisher": "Instituto do Vinho, do Bordado e do Artesanato da Madeira",
+        "sourceUrl": "https://vinhomadeira.com/o-vinho-madeira/consumir/foodmatching",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "hard cheese",
+        "factOnly": true,
+        "publisher": "Instituto do Vinho, do Bordado e do Artesanato da Madeira",
+        "sourceUrl": "https://vinhomadeira.com/o-vinho-madeira/consumir/foodmatching",
+        "place": "Madeira",
+        "placeId": "pt-madeira"
       }
     ],
     "id": "boal",
@@ -61822,7 +62039,11 @@
       "pt": "Boal"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "desserts",
+      "soft cheese",
+      "hard cheese"
+    ],
     "prominence": 8,
     "regions": [
       {
