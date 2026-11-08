@@ -608,6 +608,12 @@
         "lang": "hu",
         "quote": "alacsony savtartalmú asztali bor",
         "value": "low"
+      },
+      {
+        "field": "body",
+        "lang": "ro",
+        "quote": "obținându-se vinuri ușoare de masă",
+        "value": "low"
       }
     ],
     "blatina": [
@@ -956,6 +962,12 @@
         "lang": "cs",
         "value": "low",
         "quote": "Z odrůdy získáváme velmi lehká, víceméně neutrální vína, chudá na kyseliny, s nižším obsahem alkoholu"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "quote": "Der Wein ist ein leichter, süffiger, frischer, fruchtbetonter und anregender Weißwein",
+        "value": "low"
       }
     ],
     "chenin-blanc": [
@@ -1275,6 +1287,12 @@
         "lang": "ru",
         "value": "low",
         "quote": "Вина из эльблинга лёгкие и свежие, с высокой кислотностью и невысоким содержанием алкоголя"
+      },
+      {
+        "field": "body",
+        "lang": "ru",
+        "quote": "Вина из эльблинга лёгкие и свежие, с высокой кислотностью и невысоким содержанием алкоголя",
+        "value": "low"
       }
     ],
     "erbaluce": [
@@ -4277,6 +4295,12 @@
         "lang": "de",
         "quote": "Der Trepat oder Trepadell ist eine einheimische Rotweinsorte aus dem Weinanbaugebiet Conca de Barberà in Katalonien (Spanien).",
         "value": "ES"
+      },
+      {
+        "field": "body",
+        "lang": "de",
+        "quote": "Der Wein dieser Traube ist aufgrund des vergleichsweise hohen Säuregehalts frisch, leicht und fruchtig",
+        "value": "low"
       }
     ],
     "trollinger": [
@@ -4807,6 +4831,14 @@
         "lang": "fr",
         "value": "DE",
         "quote": "L’ortega est un cépage de cuve allemand de raisins blancs."
+      }
+    ],
+    "pamid": [
+      {
+        "field": "body",
+        "lang": "ru",
+        "quote": "изготовляют как моносортовые, так и  купажные, красные, легкие столовые вина для массового потребления",
+        "value": "low"
       }
     ]
   }

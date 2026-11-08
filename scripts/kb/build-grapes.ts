@@ -443,6 +443,7 @@ for (const qid of index) {
       },
       source.article,
       raw.wikidataOrigin,
+      { lightIsBody: true },
     );
     rejected.push(
       ...found.rejected.map((entry) => ({ ...entry, grape: `${raw.labels.en ?? qid} (by hand)` })),
@@ -497,6 +498,7 @@ for (const qid of index) {
         { [field]: { quote, value, ...(words === undefined ? {} : { words }) } },
         page,
         raw.wikidataOrigin,
+        { lightIsBody: true },
       );
       rejected.push(...found.rejected.map((entry) => ({ ...entry, grape: `${grape} ${lang}` })));
       return found;

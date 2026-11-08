@@ -8,6 +8,14 @@ has the reasons.
 
 ### The library
 
+- **Nineteen more facts about grapes**: a wine its source calls light now
+  counts as light-bodied when the sentence is read by hand (never a light
+  colour, never a model's proposal), which gives Elbling, Pamid, Trepat,
+  Chasselas, Airén, Listán Prieto, Muscat Hamburg, Muscadelle and Bourboulenc
+  their body. Quattrocalici's descriptions, read again against every gap, add
+  acidity for Pignolo, Poulsard, Savagnin and Tinta Cão, body for Koshu,
+  Auxerrois and Erbaluce, Molinara's tannin and Ancellotta's pairings; the
+  Club de Catas Torrejón adds Frappato's acidity.
 - **Four more facts about grapes, two withdrawn**: Petit Manseng's alcohol and
   Sumoll's tannin from the Vitis Navarra nursery; Mandilaria's tannin and
   Rondo's acidity from vinograd.info. Niagara's and Canaiolo's acidity are gone

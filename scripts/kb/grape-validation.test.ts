@@ -473,6 +473,17 @@ describe("a sheet's sugar", () => {
     expect(euSweetness(9.5, false, 9)).toBe("medium");
   });
 
+  it("reads a light wine as a light body, by hand only, never a light colour", () => {
+    const body = (quote: string, lightIsBody = true) =>
+      validateExtraction({ body: { quote, value: "low" } }, quote, [], { lightIsBody }).body;
+    expect(body("Da vinos ligeros, con aromas a cítricos")).toBe("low");
+    expect(body("Вина из эльблинга лёгкие и свежие")).toBe("low");
+    expect(body("Der Wein dieser Traube ist frisch, leicht und fruchtig")).toBe("low");
+    expect(body("The wine has a light red colour")).toBeNull();
+    expect(body("vinos de color rojo ligero")).toBeNull();
+    expect(body("Marzemino can produce light wines", false)).toBeNull();
+  });
+
   it("reads acidity as tartaric, never as sulphuric", () => {
     expect(acidityFigure("Säure: 6,3 g/l")).toBe(6.3);
     expect(acidityFigure("Acidité totale 3,4 g/l H2SO4")).toBeNull();

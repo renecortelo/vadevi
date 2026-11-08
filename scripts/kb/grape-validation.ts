@@ -209,11 +209,31 @@ export function mentions(quote: string, value: string): boolean {
  * and German — accents set aside, as `normalize` leaves them.
  */
 export const levelWords: Record<Level, RegExp> = {
-  high: /\b(high|higher|highly|full|full-bodied|di corpo|pronounced|pronunciad[ao]s?|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]?s?|alts?|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|fullige[mnrs]?|plen[ao]s?|pien[oaie]|corpulent[ao]s?|corpos[aoie]|important[ei]|marcad[ao]s?|marcat[ao]|spiccat[aeio]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|rics?|abondante?s?|abundante?s?|corsee?s?|charpentee?s?|encorpad[ao]s?|vollen?|viel(e[nrs]?)?|rich|riches?|richesse|noticeable|notables?|molt[ae]?s?|markante?[nrs]?|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?|magas|magasabb|eros|testes|bogat[aei]?|ridicat[aei]?|visok[aeiou]?|visoki[hm]?|vysok[a-z]*|vyss[a-z]*|pesant[ei]|alkoholstark[a-z]*|alcooliques?|alcoholicos?|alcolic[io]|acides?|acidos?|acid[io]|tanniques?|tanicos?|tannic[io]|hoog|hoge|hogere|krachtige?|stevige?|volle|hog[at]?|fyllig[at]?|kraftig[at]?|høy[et]?|høj[et]?|fyldig[et]?|korkea[a-z]*|taytelai[a-z]*|yuksek|altua|pun(a|e|i|im|o|og)?|plny|plna|plne|wysok[a-z]*|pełn[a-z]*)\b|высок|богат|повышенн|выраженн|виражен|значительн|полнотел|насыщенн|висок|підвищен|повишен|плътн|повнотіл|насичен|υψηλ|πλουσι|εντον|მაღალ|(?<![\u0590-\u05ff])(?:מלא|חזק|גבוה)|(?<![а-яё])пун(?:о|ог|а|е|и|им)?(?![а-яё])|高い|高め|豊か|強い|フルボディ|較高|较高|很高|浓郁|濃郁|饱满|飽滿|丰厚|豐厚/,
-  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[aoie]|baix(a|os|es)?|faibles?|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrig(e[mnrs]?)?|leichte[rn]?|manquant|manque|pas assez|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao]|geringe[mnrs]?|pauvres?|wenig|(saure|tannin|alkohol|korper)arm[a-z]*|alacsony|konnyu|keves|nizak|nisk[a-z]*|nizk[a-z]*|lagan[aio]?|lahk[a-z]*|lehk[a-z]*|lekk[a-z]*|scazut[aei]?|redus[aei]?|slab[a-z]*|nizs[a-z]*|chud[a-z]*|laag|lage|lagere|weinig|lichte?|zachte?|lag[at]?|latt[a]?|mjuk[a]?|lav[et]?|lett[e]?|matala[a-z]*|alhai[a-z]*|dusuk|baxua)\b|низк|невысок|невисок|невелик|мягк|легк|низьк|ниск|(?<![а-яё])лек(а|о|и|ото)?(?![а-яё])|м.як|χαμηλ|ελαφρ|დაბალ|მსუბუქ|(?<![\u0590-\u05ff])קל(?![\u0590-\u05ff])|低い|低め|少な|穏やか|軽い|ライトボディ|較低|较低|清淡|轻盈|輕盈/,
+  high: /\b(high|higher|highly|full|full-bodied|di corpo|pronounced|pronunciad[ao]s?|pronunciat[aoie]|bracing|firm|robust|powerful|heavy|plenty of|marked|considerable|alta|alto|altas|altos|elevad[ao]s?|elevat[ao]?s?|alts?|elevee?s?|haute?s?|fortes?|potentes?|puissante?s?|robust[ao]s?|ricc[ao]|hoch|hohe[nr]?|kraftige?|vollmundige?|fullige[mnrs]?|plen[ao]s?|pien[oaie]|corpulent[ao]s?|corpos[aoie]|important[ei]|marcad[ao]s?|marcat[ao]|spiccat[aeio]|gran|grandes?|much[ao]s?|importantes?|korperreiche?|notevol[ei]|rics?|abondante?s?|abundante?s?|corsee?s?|charpentee?s?|encorpad[ao]s?|vollen?|viel(e[nrs]?)?|rich|riches?|richesse|noticeable|notables?|molt[ae]?s?|markante?[nrs]?|(tannin|extrakt|korper|saure|alkohol)reich[a-z]*|[a-z]*herbe[nr]?|[a-z]*betonte[nr]?|magas|magasabb|eros|testes|bogat[aei]?|ridicat[aei]?|visok[aeiou]?|visoki[hm]?|vysok[a-z]*|vyss[a-z]*|pesant[ei]|alkoholstark[a-z]*|alcooliques?|alcoholicos?|alcolic[io]|acides?|acidos?|acid[io]|tanniques?|tanicos?|tannic[io]|hoog|hoge|hogere|krachtige?|stevige?|volle|hog[at]?|fyllig[at]?|kraftig[at]?|høy[et]?|høj[et]?|fyldig[et]?|korkea[a-z]*|taytelai[a-z]*|yuksek|altua|pun(a|e|i|im|o|og)?|plny|plna|plne|wysok[a-z]*|pełn[a-z]*)\b|высок|богат|повышенн|выраженн|виражен|значительн|полнотел|насыщенн|висок|підвищен|повишен|плътн|повнотіл|насичен|υψηλ|πλουσι|εντον|მაღალ|(?<![\u0590-\u05ff])(?:מלא|חזק|גבוה)|(?<![а-яё])пун(?:о|ог|а|е|и|им)?(?![а-яё])|高い|高め|豊か|強い|フルボディ|較高|较高|很高|浓郁|濃郁|饱满|飽滿|丰厚|豐厚/,
+  low: /\b(low|lower|light|light-bodied|soft|lacks?|lacking|little|thin|mild|mildly|subtle|gentle|baj[ao]s?|bass[aoie]|baix(a|os|es)?|faibles?|esil[ei]|snell[oaie]|sottil[ei]|liger[ao]s?|legger[ao]|legere?s?|ligeir[ao]s?|leves?|lleugera?|suaves?|suau|morbid[ao]|souples?|niedrig(e[mnrs]?)?|leichte[rn]?|manquant|manque|pas assez|peu|weiche[nr]?|fehlt|escas[ao]s?|poc[ao]?s?|scars[ao]|pouc[ao]|geringe[mnrs]?|pauvres?|wenig|(saure|tannin|alkohol|korper)arm[a-z]*|alacsony|konnyu|keves|nizak|nisk[a-z]*|nizk[a-z]*|lagan[aio]?|lahk[a-z]*|lehk[a-z]*|lekk[a-z]*|scazut[aei]?|redus[aei]?|slab[a-z]*|nizs[a-z]*|chud[a-z]*|laag|lage|lagere|weinig|lichte?|zachte?|lag[at]?|latt[a]?|mjuk[a]?|lav[et]?|lett[e]?|matala[a-z]*|alhai[a-z]*|dusuk|baxua)\b|низк|невысок|невисок|невелик|мягк|легк|низьк|ниск|(?<![а-яё])лек(а|о|и|ото)?(?![а-яё])|м.як|χαμηλ|ελαφρ|დაბალ|მსუბუქ|(?<![\u0590-\u05ff])קל(?![\u0590-\u05ff])|低い|低め|少な|穏やか|軽い|ライトボディ|較低|较低|清淡|轻盈|輕盈/,
   medium:
     /\b(medium|moderate|moderately|medium-bodied|average|medi[ao]|mediana|moyenne?|moyennement|mediamente|moderee?|moderad[ao]|moderadamente|moderat[ao]?|moderate[mnrs]|mediocremente|mitjana?|mittel|mittlere[mnr]?|mittelschwere[nr]?|kozepes|umeren[a-z]*|gemiddelde?|matige?|medel|mellan|middels|mellem|keskitas[a-z]*|keski[a-z]*|orta|ertain[a-z]*|srednj[a-z]*|stredn[a-z]*|sredni[a-z]*|mediu|medie)\b|средн|умеренн|середн|помірн|умерен|μετρι|μεσαι|საშუალო|中程度|ミディアム|中等|適度|适中|適中/,
 };
+
+/**
+ * A wine called light, in the languages the sources are read in: "light
+ * wines", «vinos ligeros», «vins légers», «leichte Weine», «лёгкие вина».
+ * Never a light colour («light red», «rojo ligero», «светло-»), and only in a
+ * sentence about the wine. Written as `normalize` writes text.
+ */
+const lightWord =
+  /(?:^|[^\p{L}])(light|ligeros?|ligeras?|lleugers?|lleugeres|legers?|legeres?|leggeri|leggero|leggera|leggere|ligeiros?|ligeiras?|leicht|leichte[nrs]?|leichter|lichte|usoare|usor|konnyu|lagan[aio]?|lehk[a-z]*|lekk[a-z]*|легк[а-я]*|леки)(?![\p{L}-])(?!\s+(?:red|white|pink|ruby|straw|yellow|gold|golden|purple|cherry|rojo|blanco|rosado|amarillo|rouge|blanc|jaune|rosso|bianco|giallo|rot|gelb|rosa|красн|бел|желт|розов|соломен)|\s*-)/u;
+const wineWord = /vin|wein|wine|вин|bor\b|wijn|\breds\b|\bwhites\b|tint[oa]s|rossi|bianchi/;
+const colourBefore =
+  /(red|white|pink|ruby|straw|yellow|rojo|blanco|rosado|amarillo|rouge|blanc|jaune|rosso|bianco|giallo|rot|gelb|красн[а-я]*|бел[а-я]*|желт[а-я]*)\s*$/;
+function lightWine(quote: string): boolean {
+  const found = lightWord.exec(quote);
+  return (
+    found !== null &&
+    wineWord.test(quote) &&
+    !colourBefore.test(quote.slice(0, found.index + found[0].indexOf(found[1]!)))
+  );
+}
 
 export const fieldWords: Record<"acidity" | "alcohol" | "body" | "tannin", RegExp> = {
   acidity:
@@ -549,6 +569,8 @@ export function validateExtraction(
   proposalInput: unknown,
   article: string,
   wikidataOrigin: string[],
+  /** Read by hand: a sentence calling the wine light gives a light body. */
+  options: { lightIsBody?: boolean } = {},
 ): {
   acidity: Level | null;
   alcohol: Level | null;
@@ -637,6 +659,13 @@ export function validateExtraction(
     const value = toLevel(entry.value);
     const quote = normalize(entry.quote);
     if (value !== null && fieldWords[name].test(quote) && levelWords[value].test(quote)) {
+      evidence.push({ field: name, quote: entry.quote, value });
+      return value;
+    }
+    // Read by hand, a "light wine" is a light-bodied one (the operator's rule
+    // of 7 November 2026), even where the sentence has no word for body; never
+    // in a model's proposal, which may take a conditional or a region's wine.
+    if (options.lightIsBody === true && name === "body" && value === "low" && lightWine(quote)) {
       evidence.push({ field: name, quote: entry.quote, value });
       return value;
     }

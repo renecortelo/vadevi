@@ -8398,7 +8398,7 @@
       "floral",
       "herbs"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -8591,6 +8591,14 @@
         "field": "pairings",
         "quote": "",
         "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
         "factOnly": true,
         "publisher": "Club de Catas Torrejón",
         "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
@@ -12806,7 +12814,7 @@
       "peach",
       "jasmine"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -12856,6 +12864,14 @@
         "quote": "Na vinificatie kan het resultaat zowel droge als zoete wijn zijn.",
         "value": "dry-sweet",
         "sourceUrl": "https://nl.wikipedia.org/wiki/Koshu_(druivensoort)"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/koshu/"
       },
       {
         "field": "origin",
@@ -14669,7 +14685,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Grechetto"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "plum",
@@ -14751,6 +14767,14 @@
             "wine": "Pignolo Di Rosazzo"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/pignolo/"
       }
     ],
     "id": "pignolo",
@@ -29850,7 +29874,7 @@
       "fruity",
       "mineral"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -29968,6 +29992,12 @@
         "quote": "Z odrůdy získáváme velmi lehká, víceméně neutrální vína, chudá na kyseliny, s nižším obsahem alkoholu",
         "value": "low",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Chrupka_b%C3%ADl%C3%A1"
+      },
+      {
+        "field": "body",
+        "quote": "Der Wein ist ein leichter, süffiger, frischer, fruchtbetonter und anregender Weißwein",
+        "value": "low",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Gutedel"
       }
     ],
     "id": "chasselas",
@@ -39745,7 +39775,7 @@
       "grapefruit",
       "rose"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -39946,6 +39976,14 @@
         "factOnly": true,
         "publisher": "Club de Catas Torrejón",
         "sourceUrl": "http://catastorrejon.eu/airen/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "vinograd.info",
+        "sourceUrl": "https://vinograd.info/sorta/vinnye/airen.html"
       }
     ],
     "id": "airen",
@@ -40848,7 +40886,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Canaiolo"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "nutty",
@@ -41059,6 +41097,14 @@
         "quote": "K „Vin Jaune“ se doporučuje jako ideální partner sýr Comte, nebo pstruh či humr připravený právě na žlutém víně, případně husí játra (Foie Gras) či kachna na pomerančích",
         "value": "duck",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Tram%C3%ADn_b%C3%ADl%C3%BD"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/savagnin-blanc/"
       }
     ],
     "id": "savagnin",
@@ -49370,7 +49416,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sercial"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "grape"
@@ -49562,6 +49608,14 @@
             "wine": "Vittoria DOC Frappato Planeta 2025"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Club de Catas Torrejón",
+        "sourceUrl": "http://catastorrejon.eu/frappato/"
       }
     ],
     "id": "frappato",
@@ -50390,6 +50444,14 @@
         "factOnly": true,
         "publisher": "Vinissimus",
         "sourceUrl": "https://www.vinissimus.com/es/uva/molinara/"
+      },
+      {
+        "field": "tannin",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/molinara/"
       }
     ],
     "id": "molinara",
@@ -50473,7 +50535,7 @@
         "source": "wikidata"
       }
     ],
-    "tannin": null,
+    "tannin": "low",
     "wikidataId": "Q1753085",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Molinara_(grape)"
   },
@@ -51330,7 +51392,7 @@
       "spice",
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -51592,6 +51654,14 @@
             "wine": "Auxerrois Muschelkalk Feinherb"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/auxerrois/"
       }
     ],
     "id": "auxerrois-blanc",
@@ -51920,7 +51990,7 @@
       "green apple",
       "pomegranate"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -52001,6 +52071,12 @@
       },
       {
         "field": "alcohol",
+        "quote": "Вина из эльблинга лёгкие и свежие, с высокой кислотностью и невысоким содержанием алкоголя",
+        "value": "low",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D1%8C%D0%B1%D0%BB%D0%B8%D0%BD%D0%B3"
+      },
+      {
+        "field": "body",
         "quote": "Вина из эльблинга лёгкие и свежие, с высокой кислотностью и невысоким содержанием алкоголя",
         "value": "low",
         "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D1%8C%D0%B1%D0%BB%D0%B8%D0%BD%D0%B3"
@@ -53405,7 +53481,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -53549,6 +53625,12 @@
         "quote": "alacsony savtartalmú asztali bor",
         "value": "low",
         "sourceUrl": "https://hu.wikipedia.org/wiki/Hamburgi_muskot%C3%A1ly"
+      },
+      {
+        "field": "body",
+        "quote": "obținându-se vinuri ușoare de masă",
+        "value": "low",
+        "sourceUrl": "https://ro.wikipedia.org/wiki/Muscat_de_Hamburg"
       },
       {
         "basis": "producers-abv",
@@ -54095,7 +54177,7 @@
     "aromas": [
       "raisin"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -54230,6 +54312,14 @@
         "field": "pairings",
         "quote": "",
         "value": "asian cuisine",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/muscadelle/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
         "factOnly": true,
         "publisher": "Quattrocalici",
         "sourceUrl": "https://www.quattrocalici.it/vitigni/muscadelle/"
@@ -58117,6 +58207,22 @@
         "factOnly": true,
         "publisher": "Quattrocalici",
         "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cured meats",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "red meat",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/ancellotta/"
       }
     ],
     "id": "ancellotta",
@@ -58131,7 +58237,10 @@
       "pt": "Ancellotta"
     },
     "origin": "IT",
-    "pairings": [],
+    "pairings": [
+      "cured meats",
+      "red meat"
+    ],
     "prominence": 9,
     "regions": [
       {
@@ -59942,7 +60051,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Vernaccia"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "medium",
     "aromas": [
       "floral"
@@ -60080,6 +60189,14 @@
             "wine": "Poulsard Pinte Bien 2023"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/poulsard/"
       }
     ],
     "id": "poulsard",
@@ -61786,7 +61903,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Boal_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": "high",
     "aromas": [
       "fruity",
@@ -61869,6 +61986,14 @@
         "quote": "Ist eine autochthone Rotweinsorte aus Portugal und wurde erstmals Mitte des 17.",
         "value": "PT",
         "sourceUrl": "https://de.wikipedia.org/wiki/Tinto_C%C3%A3o"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/tinto-cao/"
       }
     ],
     "id": "tinta-cao",
@@ -61958,7 +62083,7 @@
       "citrus",
       "smoky"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -62034,6 +62159,14 @@
         "field": "pairings",
         "quote": "",
         "value": "fresh cheese",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/bourboulenc/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
         "factOnly": true,
         "publisher": "Quattrocalici",
         "sourceUrl": "https://www.quattrocalici.it/vitigni/bourboulenc/"
@@ -62319,7 +62452,7 @@
     "aromas": [
       "apple"
     ],
-    "body": null,
+    "body": "low",
     "color": "white",
     "evidence": [
       {
@@ -62443,6 +62576,14 @@
             "wine": "Erbaluce di Caluso DOCG Etichetta Bianca 2024"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "low",
+        "factOnly": true,
+        "publisher": "Quattrocalici",
+        "sourceUrl": "https://www.quattrocalici.it/vitigni/erbaluce/"
       }
     ],
     "id": "erbaluce",
@@ -62790,7 +62931,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -62837,6 +62978,12 @@
         "field": "regions",
         "quote": "It has been cultivated in Bulgaria since the times of the ancient Thracians ... Pamid is also cultivated in North Macedonia, Serbia, Albania, Turkey, Greece, Hungary and Romania.",
         "value": "RO: Romania"
+      },
+      {
+        "field": "body",
+        "quote": "изготовляют как моносортовые, так и  купажные, красные, легкие столовые вина для массового потребления",
+        "value": "low",
+        "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BC%D0%B8%D0%B4"
       },
       {
         "field": "sweetness",
@@ -63314,7 +63461,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "low",
     "color": "red",
     "evidence": [
       {
@@ -63411,6 +63558,12 @@
         "field": "origin",
         "quote": "Der Trepat oder Trepadell ist eine einheimische Rotweinsorte aus dem Weinanbaugebiet Conca de Barberà in Katalonien (Spanien).",
         "value": "ES",
+        "sourceUrl": "https://de.wikipedia.org/wiki/Trepat"
+      },
+      {
+        "field": "body",
+        "quote": "Der Wein dieser Traube ist aufgrund des vergleichsweise hohen Säuregehalts frisch, leicht und fruchtig",
+        "value": "low",
         "sourceUrl": "https://de.wikipedia.org/wiki/Trepat"
       },
       {
