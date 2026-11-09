@@ -8,7 +8,9 @@ has the reasons.
 
 ### The library
 
-- **Eight more facts about grapes**: Concord's body and pairings from the
+- **Monica's pairings** (pecorino, cured meats, pasta) from Vino.it's guide to
+  the grape.
+- **Seven more facts about grapes**: Concord's body and pairings from the
   Missouri Wine and Grape Board; Sercial's and Boal's pairings from Madeira's
   wine institute, said of Madeira; Treixadura's from the Diccionario del Vino,
   said of Ribeiro; Mavrud's from International Mavrud Day's sommeliers;

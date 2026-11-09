@@ -2449,6 +2449,30 @@
         "factOnly": true,
         "publisher": "Tannico",
         "sourceUrl": "https://www.tannico.it/blogs/tannico/vitigni-autoctoni-della-sardegna-nasco-monica"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Vino.it",
+        "sourceUrl": "https://www.vino.it/guide/vitigni/monica"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cured meats",
+        "factOnly": true,
+        "publisher": "Vino.it",
+        "sourceUrl": "https://www.vino.it/guide/vitigni/monica"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pasta",
+        "factOnly": true,
+        "publisher": "Vino.it",
+        "sourceUrl": "https://www.vino.it/guide/vitigni/monica"
       }
     ],
     "id": "monica",
@@ -2463,7 +2487,11 @@
       "pt": "Monica"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "cured meats",
+      "pasta"
+    ],
     "prominence": 4,
     "regions": [
       {
