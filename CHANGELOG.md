@@ -8,6 +8,9 @@ has the reasons.
 
 ### The library
 
+- **Trincadeira's alcohol** (high) from three producers' sheets: Plansel and
+  Cartuxa at 15.5 %, Fita Preta at 14 %. The figure reader now also takes
+  «Alcohol (%) – 15,5».
 - **Monica's pairings** (pecorino, cured meats, pasta) from Vino.it's guide to
   the grape.
 - **Seven more facts about grapes**: Concord's body and pairings from the

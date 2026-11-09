@@ -4927,7 +4927,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "blackberry",
       "herbs",
@@ -5029,6 +5029,34 @@
             "sourceUrl": "https://www.vinhosdoalentejo.pt/en/wines/detalhe/trincadeira-red/",
             "sugar": 0.4,
             "wine": "Trincadeira Red 2021"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.adega.plansel.com/en/_files/ugd/2b9903_290f622395504230b20a23ab125af53d.pdf",
+        "value": "high",
+        "wines": [
+          {
+            "abv": 15.5,
+            "producer": "Plansel",
+            "sourceUrl": "https://www.adega.plansel.com/en/_files/ugd/2b9903_290f622395504230b20a23ab125af53d.pdf",
+            "wine": "Plansel Trincadeira"
+          },
+          {
+            "abv": 15.5,
+            "producer": "Fundação Eugénio de Almeida (Cartuxa)",
+            "sourceUrl": "https://www.cartuxa.pt/wp-content/uploads/cartuxa-pack-60-anos-eng.pdf",
+            "wine": "60 Year Special Edition Trincadeira 2021"
+          },
+          {
+            "abv": 14,
+            "producer": "Fita Preta Vinhos",
+            "sourceUrl": "https://winehouseportugal.com/en/alentejo-wines/7335-visconde-de-borba-2019-red-wine.html",
+            "wine": "A Trincadeira Não é Tão Preta 2021"
           }
         ]
       }

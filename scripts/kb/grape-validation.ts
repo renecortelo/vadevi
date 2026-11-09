@@ -143,7 +143,9 @@ export function alcoholFigure(quote: string): number | null {
       quote,
     ) ??
     /(?:alcool|alcohol|alcol|alkohol)\D{0,20}?(\d{1,2}(?:[.,]\d{1,2})?)\s?vol\b/i.exec(quote) ??
-    /\balc\.? by vol\.?\s?\(%\):?\s?(\d{1,2}(?:[.,]\d{1,2})?)/i.exec(quote);
+    /\balc\.? by vol\.?\s?\(%\):?\s?(\d{1,2}(?:[.,]\d{1,2})?)/i.exec(quote) ??
+    // «Alcohol (%) – 15,5»: the unit in brackets, a dash before the figure.
+    /(?:alcool|alcohol|alcol|alkohol)\s?\(%\)\s?[–:-]?\s?(\d{1,2}(?:[.,]\d{1,2})?)/i.exec(quote);
   return found === null ? null : Number(found[1]!.replace(",", "."));
 }
 

@@ -500,5 +500,6 @@ describe("a sheet's alcohol", () => {
     expect(alcoholFigure("ALCOHOLIC STRENGTH 13 vol.")).toBe(13);
     expect(alcoholFigure("Alc by Vol(%): 12.5")).toBe(12.5);
     expect(alcoholFigure("75 cl, 13 vol.")).toBeNull();
+    expect(alcoholFigure("Alcohol (%) – 15,5")).toBe(15.5);
   });
 });
