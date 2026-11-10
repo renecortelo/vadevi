@@ -8,6 +8,12 @@ has the reasons.
 
 ### The library
 
+- **Listán Negro's alcohol** (medium) from five producers' sheets, three of
+  them read from the Tenerife appellation's own data portal.
+- **Three facts withdrawn**: Petit Manseng's alcohol and Sumoll's tannin came
+  from the Vitis Navarra nursery, whose catalogue agrees with the library's
+  checked values only 60 % of the time; Airén's light body, because the Club
+  de Catas Torrejón calls its wines full («con cuerpo»).
 - **Trincadeira's alcohol** (high) from three producers' sheets: Plansel and
   Cartuxa at 15.5 %, Fita Preta at 14 %. The figure reader now also takes
   «Alcohol (%) – 15,5».

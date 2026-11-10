@@ -762,14 +762,6 @@
         "factOnly": true,
         "publisher": "Institut d'Estudis Catalans (IEC), Dossiers Agraris",
         "sourceUrl": "https://revistes.iec.cat/index.php/DA/article/download/78875/135139"
-      },
-      {
-        "field": "tannin",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Vitis Navarra",
-        "sourceUrl": "https://vitisnavarra.com/variedades/uvas-tintas/sumoll-tinta/"
       }
     ],
     "id": "sumoll",
@@ -876,7 +868,7 @@
         "source": "article"
       }
     ],
-    "tannin": "high",
+    "tannin": null,
     "wikidataId": "Q3064821",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Sumoll"
   },
@@ -3906,7 +3898,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -4040,6 +4032,71 @@
         "factOnly": true,
         "publisher": "Bodegas Monje",
         "sourceUrl": "https://bodegasmonje.com/en/blog/black-listan-the-red-grape-of-wine/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.bodegasvinatigo.com/product-page/listan-negro",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Bodegas Viñátigo",
+            "sourceUrl": "https://www.bodegasvinatigo.com/product-page/listan-negro",
+            "wine": "Listán Negro"
+          },
+          {
+            "abv": 13,
+            "producer": "Bodegas Monje",
+            "sourceUrl": "https://bodegasmonje.com/shop/en/products/wines/listan-negro.html",
+            "wine": "Listán Negro"
+          },
+          {
+            "abv": 13,
+            "producer": "Bodega Tafuriaste",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/tafuriaste-tinto-2025-tinto",
+            "wine": "Tafuriaste Tinto 2025 - Tinto"
+          },
+          {
+            "abv": 13,
+            "producer": "Bodega Linaje del Pago",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/linaje-del-pago-rojo-carmin-tinto",
+            "wine": "LINAJE DEL PAGO ROJO CARMÍN - Tinto"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Atrevino",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/atrevino-listan-negro-tinto",
+            "wine": "ATREVINO LISTÁN NEGRO - Tinto"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://datos.vinosdetenerife.es/es/el-medianero-tinto-tinto",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Bodega Las Galanas",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/el-medianero-tinto-tinto",
+            "wine": "El Medianero Tinto - Tinto"
+          },
+          {
+            "producer": "Bodegas Monje",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/monje-tradicional-tinto-tinto",
+            "wine": "MONJE TRADICIONAL TINTO - Tinto"
+          },
+          {
+            "producer": "Bodega Linaje del Pago",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/linaje-del-pago-rojo-carmin-tinto",
+            "wine": "LINAJE DEL PAGO ROJO CARMÍN - Tinto"
+          }
+        ]
       }
     ],
     "id": "listan-negro",
@@ -13644,7 +13701,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "high",
+    "alcohol": null,
     "aromas": [
       "cinnamon",
       "honey",
@@ -13815,14 +13872,6 @@
         "factOnly": true,
         "publisher": "Enotria&Coe",
         "sourceUrl": "https://www.enotria.com/wine/grapes/petit-manseng/"
-      },
-      {
-        "field": "alcohol",
-        "quote": "",
-        "value": "high",
-        "factOnly": true,
-        "publisher": "Vitis Navarra",
-        "sourceUrl": "https://vitisnavarra.com/variedades/uvas-blancas/petit-manseng/"
       }
     ],
     "id": "petit-manseng",
@@ -39945,7 +39994,7 @@
       "grapefruit",
       "rose"
     ],
-    "body": "low",
+    "body": null,
     "color": "white",
     "evidence": [
       {
@@ -40146,14 +40195,6 @@
         "factOnly": true,
         "publisher": "Club de Catas Torrejón",
         "sourceUrl": "http://catastorrejon.eu/airen/"
-      },
-      {
-        "field": "body",
-        "quote": "",
-        "value": "low",
-        "factOnly": true,
-        "publisher": "vinograd.info",
-        "sourceUrl": "https://vinograd.info/sorta/vinnye/airen.html"
       }
     ],
     "id": "airen",

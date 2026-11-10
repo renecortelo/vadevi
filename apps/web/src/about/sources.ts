@@ -130,13 +130,6 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Vitis Navarra, catálogo de variedades del vivero: solo el dato, con su enlace",
-    terms: "factOnly",
-    url: "https://vitisnavarra.com/variedades/uvas-tintas/sumoll-tinta/",
-    what: "traits",
-  },
-  {
-    group: "texts",
     name: "Vinum, léxico de variedades: solo el dato, con su enlace",
     terms: "factOnly",
     url: "https://www.vinum.eu/de/weinwissen/weinlexikon/rebsortenlexikon/m/mavrud/",
