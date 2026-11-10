@@ -8,6 +8,9 @@ has the reasons.
 
 ### The library
 
+- **Kadarka and Frühburgunder are dry**: four Hungarian estates label their
+  Kadarka «száraz»; three German estates give their Frühburgunder 0.2–0.5 g/l
+  of residual sugar.
 - **Five more facts from producers' sheets**: Zierfandler's alcohol (medium,
   four of five estates) and pairings (fish, beef and Asian cooking, three
   estates each); Neuburger's alcohol (medium, five estates); Bacchus's alcohol

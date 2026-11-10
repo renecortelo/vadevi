@@ -28658,6 +28658,36 @@
         "factOnly": true,
         "publisher": "Quattrocalici",
         "sourceUrl": "https://www.quattrocalici.it/vitigni/kadarka/"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://beneborshop.hu/Gal-Tibor-Kadarka-minosegi-szaraz-vorosbor",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Gál Tibor Pincészet",
+            "sourceUrl": "https://beneborshop.hu/Gal-Tibor-Kadarka-minosegi-szaraz-vorosbor",
+            "wine": "Kadarka 2024"
+          },
+          {
+            "producer": "Lajvér Borbirtok",
+            "sourceUrl": "https://boretelhez.hu/borok-pezsgok/borok-pezsgok/bortipusok/vorosborok/lajver-kadarka/",
+            "wine": "Lajvér Kadarka"
+          },
+          {
+            "producer": "Sebestyén Pince",
+            "sourceUrl": "https://boretelhez.hu/borok-pezsgok/borok-pezsgok/bortipusok/vorosborok/sebestyen-kadarka/",
+            "wine": "Sebestyén Kadarka"
+          },
+          {
+            "producer": "Bodri Pincészet",
+            "sourceUrl": "https://piaolcson.hu/termek/bodri-szekszardi-kadarka-szaraz-vorosbor-075/",
+            "wine": "Bodri Szekszárdi Kadarka"
+          }
+        ]
       }
     ],
     "id": "kadarka",
@@ -28742,7 +28772,10 @@
         "url": "https://es.wikipedia.org/wiki/Kadarka"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Backator-Szőlő",
@@ -55951,6 +55984,34 @@
         "sourceUrl": "https://archive.org/details/traitegeneralvol02unse"
       },
       {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.weingut-milch.de/weine/fruehburgunder-trocken-monsheim/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Weingut Milch",
+            "sourceUrl": "https://www.weingut-milch.de/weine/fruehburgunder-trocken-monsheim/",
+            "sugar": 0.2,
+            "wine": "Frühburgunder trocken Monsheim"
+          },
+          {
+            "producer": "Weingut Zaiss",
+            "sourceUrl": "https://www.weingut-zaiss.de/shop/13-24-2020-fruhburgunder-trocken-316",
+            "sugar": 0.5,
+            "wine": "2020 Frühburgunder trocken"
+          },
+          {
+            "producer": "Weingut Wasem Doppelstück",
+            "sourceUrl": "https://doppelstueck.com/produkt/222-ortswein-ingelheimer-fruehburgunder/",
+            "sugar": 0.2,
+            "wine": "2020 Ingelheimer Frühburgunder trocken"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Pinot Noir Précoce: France",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -56033,7 +56094,10 @@
         "url": "https://en.wikipedia.org/wiki/Pinot_Noir_Pr%C3%A9coce"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Frühburgunder",
