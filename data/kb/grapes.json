@@ -2063,7 +2063,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -2214,6 +2214,64 @@
         "quote": "Сік має досить високу кислотність.",
         "value": "high",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B5%D1%80%D0%B0"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://santamargherita.com/sparkling/pdf/Valdobbiadene-Prosecco-Sup-DOCG-Brut-SM-ita.pdf",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 11.5,
+            "producer": "Santa Margherita",
+            "sourceUrl": "https://santamargherita.com/sparkling/pdf/Valdobbiadene-Prosecco-Sup-DOCG-Brut-SM-ita.pdf",
+            "wine": "Valdobbiadene Prosecco Superiore DOCG Brut"
+          },
+          {
+            "abv": 11,
+            "producer": "Casalina",
+            "sourceUrl": "https://res.cloudinary.com/casalinaprosecco/image/upload/w_auto,c_scale/v1741946524/media/wines/sirocol-data-sheet",
+            "wine": "Sirocol"
+          },
+          {
+            "abv": 11,
+            "producer": "Gli Allori",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0614/2001/1777/files/LE_TOSE_-_Scheda_Prosecco_Privee.pdf",
+            "wine": "Le Tose Valdobbiadene Prosecco Superiore DOCG Brut"
+          },
+          {
+            "abv": 11,
+            "producer": "Adami",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0614/2001/1777/files/Col_Fondo_-_Scheda_Prosecco_Privee.pdf",
+            "wine": "Col Fondo Valdobbiadene Prosecco Superiore DOCG Sui Lieviti"
+          },
+          {
+            "abv": 11,
+            "producer": "Nino Franco",
+            "sourceUrl": "https://www.vino.com/dettaglio/prosecco-doc-rustico-nino-franco.html",
+            "wine": "Prosecco Treviso Brut DOC Rustico"
+          },
+          {
+            "abv": 12,
+            "producer": "Bortolomiol",
+            "sourceUrl": "https://www.vino.com/dettaglio/valdobbiadene-prosecco-superiore-docg-brut-prior-bortolomiol-2025.html",
+            "wine": "Valdobbiadene Prosecco Superiore DOCG Brut Prior 2025"
+          },
+          {
+            "abv": 11.5,
+            "producer": "Valdo",
+            "sourceUrl": "https://www.vino.com/dettaglio/valdobbiadene-prosecco-superiore-docg-cuvee-di-boj-valdo.html",
+            "wine": "Valdobbiadene Prosecco Superiore DOCG Cuvée di Boj"
+          },
+          {
+            "abv": 11,
+            "producer": "Dolceriva",
+            "sourceUrl": "https://www.vino.com/dettaglio/valdobbiadene-prosecco-superiore-extra-dry-docg-dolceriva.html",
+            "wine": "Valdobbiadene Prosecco Superiore Extra Dry DOCG"
+          }
+        ]
       }
     ],
     "id": "glera",
@@ -13095,6 +13153,38 @@
         "field": "sweetness",
         "quote": "to produce a semi-sweet red wine known as Khvanchkara or as a medium bodied, semi-dry, chewy blend",
         "value": "medium"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "grilled meats",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/aleksandrouli"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "roasts",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/aleksandrouli"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/aleksandrouli"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/aleksandrouli"
       }
     ],
     "id": "alexandrouli",
@@ -13109,7 +13199,12 @@
       "nl": "Alexandrouli"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "grilled meats",
+      "roasts",
+      "lamb",
+      "pork"
+    ],
     "prominence": 10,
     "regions": [
       {
@@ -49467,6 +49562,38 @@
             "wine": "The Giant Durif"
           }
         ]
+      },
+      {
+        "field": "sweetness",
+        "quote": "",
+        "value": "dry",
+        "factOnly": true,
+        "publisher": "De Bortoli Wines",
+        "sourceUrl": "https://www.debortoli.com.au/wine-101/grape-variety/durif"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "steak",
+        "factOnly": true,
+        "publisher": "De Bortoli Wines",
+        "sourceUrl": "https://www.debortoli.com.au/wine-101/grape-variety/durif"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "De Bortoli Wines",
+        "sourceUrl": "https://www.debortoli.com.au/wine-101/grape-variety/durif"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "beef",
+        "factOnly": true,
+        "publisher": "De Bortoli Wines",
+        "sourceUrl": "https://www.debortoli.com.au/wine-101/grape-variety/durif"
       }
     ],
     "id": "durif",
@@ -49481,7 +49608,11 @@
       "pt": "Durif"
     },
     "origin": "FR",
-    "pairings": [],
+    "pairings": [
+      "steak",
+      "lamb",
+      "beef"
+    ],
     "prominence": 11,
     "regions": [
       {
@@ -49562,7 +49693,10 @@
         "url": "https://es.wikipedia.org/wiki/Durif"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Petite Sirah",

@@ -8,6 +8,16 @@ has the reasons.
 
 ### The library
 
+- **Durif is dry**, and pairs with steak, lamb and beef, from De Bortoli's
+  own guide to the grape. Its levels agree with the library's checked values
+  13 times in 14; three more of its facts fell on fields where sources
+  already disagree, so they were not used.
+- **Glera's alcohol** (medium) from eight Prosecco producers' sheets, all
+  between 11 and 12 %: Santa Margherita, Casalina, Gli Allori, Adami, Nino
+  Franco, Bortolomiol, Valdo and Dolceriva.
+- **Alexandrouli pairs with grilled and roasted meats, lamb and pork**
+  (Wineland).
+
 - **Georgian grapes from Wineland's grape academy** (wineland.ge, a Tbilisi
   wine merchant): acidity of Goruli Mtsvane (high), Kisi (medium) and
   Mujuretuli (high); medium body for Ojaleshi, Usakhelauri, Mtsvane and

@@ -144,6 +144,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "De Bortoli Wines, guías de la bodega sobre cada uva: solo el dato, con su enlace",
+    terms: "factOnly",
+    url: "https://www.debortoli.com.au/wine-101/grape-variety/durif",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Wineland, academia de uvas de una tienda de vino de Tiflis: solo el dato, con su enlace",
     terms: "factOnly",
     url: "https://wineland.ge/academy/grapes/ojaleshi",
