@@ -8,6 +8,11 @@ has the reasons.
 
 ### The library
 
+- **Five more facts from producers' sheets**: Zierfandler's alcohol (medium,
+  four of five estates) and pairings (fish, beef and Asian cooking, three
+  estates each); Neuburger's alcohol (medium, five estates); Bacchus's alcohol
+  (medium, five Franconian estates); Acolon is dry by the EU's acidity rule in
+  four of six estates' sheets.
 - **Tinta Barroca is dry**, from three producers' sheets: Plansel (0.5 g/l),
   Quinta de Ventozelo (under 0.6 g/l) and Muxagat (0.6 g/l).
 - **Listán Negro's alcohol** (medium) from five producers' sheets, three of

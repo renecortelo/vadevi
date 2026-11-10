@@ -57056,7 +57056,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity",
       "apple"
@@ -57243,6 +57243,46 @@
             "producer": "Weingut Merz",
             "sourceUrl": "https://www.weingut-merz.de/produkt/hanna/",
             "wine": "Hanna Bacchus"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.frankenweinliebhaber.de/weingut/duell/8917.2020-Bacchus-trocken.html",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12,
+            "producer": "Weingut Düll",
+            "sourceUrl": "https://www.frankenweinliebhaber.de/weingut/duell/8917.2020-Bacchus-trocken.html",
+            "wine": "Bacchus trocken"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Höhn",
+            "sourceUrl": "https://www.frankenweinliebhaber.de/weingut/hoehn/13853.2023-Bacchus-trocken.html",
+            "wine": "Bacchus trocken"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Weisensee",
+            "sourceUrl": "https://www.frankenweinliebhaber.de/weingut/weisensee/12102.2022-Bacchus-trocken.html",
+            "wine": "Bacchus trocken"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Braun",
+            "sourceUrl": "https://www.frankenweinliebhaber.de/weingut/braun-fahr/7352.2019-Bacchus-trocken.html",
+            "wine": "Bacchus trocken"
+          },
+          {
+            "abv": 11,
+            "producer": "Weingut Kirch",
+            "sourceUrl": "https://www.frankenweinliebhaber.de/weingut/kirch/9791.2021-Bacchus-Kabinett-trocken.html",
+            "wine": "Bacchus trocken"
           }
         ]
       }
@@ -60628,7 +60668,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "nutty"
     ],
@@ -60722,6 +60762,46 @@
         "quote": "Grazie alla sua struttura morbida, corpo medio e aromi delicati, il Neuburger si abbina bene a diversi piatti:\n\nAntipasti e piatti a base di verdure.\nCucina austriaca tradizionale, come la Wiener Schnitzel o il Tafelspitz leggero.\nPesce d'acqua dolce (trota, salmerino).\nCarni bianche (pollo, tacchino).\nFormaggi freschi o a media stagionatura.",
         "value": "fresh cheese",
         "sourceUrl": "https://it.wikipedia.org/wiki/Neuburger"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://fruehwirth.bio/produkt/neuburger-classic-2023/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.3,
+            "producer": "Bio-Weingut Frühwirth",
+            "sourceUrl": "https://fruehwirth.bio/produkt/neuburger-classic-2023/",
+            "wine": "Neuburger classic 2024"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Schneeweis",
+            "sourceUrl": "https://weingut-schneeweis.at/produkt/trenning-neuburger-smaragd/",
+            "wine": "Neuburger Smaragd Ried Trenning"
+          },
+          {
+            "abv": 12,
+            "producer": "Weingut Jäger",
+            "sourceUrl": "https://www.weingut-jaeger.at/home/die-weine/die-verspielten/neuburger/neuburger/",
+            "wine": "Neuburger"
+          },
+          {
+            "abv": 13,
+            "producer": "Weingut Karner",
+            "sourceUrl": "https://www.karner-wein.at/produkt/neuburger-selection/",
+            "wine": "Neuburger Selection 2024"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Weingut Müller",
+            "sourceUrl": "https://www.weingutmueller.at/produkt/kremser-kogl-neuburger/",
+            "wine": "Neuburger Ried Kremser Kogl"
+          }
+        ]
       }
     ],
     "id": "neuburger",
@@ -60814,7 +60894,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "nutty",
       "pistachio",
@@ -60900,6 +60980,121 @@
         "value": "sweet"
       },
       {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://weingut-gebeshuber.at/shop/gebeshuber-weine/gumpoldskirchen-zierfandler-bio/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12.5,
+            "producer": "Weingut Gebeshuber",
+            "sourceUrl": "https://weingut-gebeshuber.at/shop/gebeshuber-weine/gumpoldskirchen-zierfandler-bio/",
+            "wine": "Gumpoldskirchen Zierfandler 2025"
+          },
+          {
+            "abv": 13.2,
+            "producer": "Weingut Zierer",
+            "sourceUrl": "http://www.weingut-zierer.at/index.php/vinothek/klassisch/zierfandler",
+            "wine": "Zierfandler Schatzberg DAC"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Freigut Thallern",
+            "sourceUrl": "https://freigut-thallern.at/shop/weisswein/gebietswein-thermenregion/354/zierfandler-thermenregion-dac-2025",
+            "wine": "Zierfandler Thermenregion DAC 2025"
+          },
+          {
+            "abv": 14,
+            "producer": "Weingut Familie Auer",
+            "sourceUrl": "https://www.weingutauer.at/wp-content/uploads/2024/10/Zierfandler-Ried-Preisen-Gumpoldskirchen-DAC-2023_Weingut-Familie-Auer_Thermenregion_Oesterreich_Bio.pdf",
+            "wine": "Zierfandler Ried Preisen 2023"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Hannes Hofer",
+            "sourceUrl": "https://www.progwine.ch/produkt/zierfandler-hannes-hofer-2023/",
+            "wine": "Zierfandler Thermenregion DAC 2023"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://weingut-gebeshuber.at/shop/gebeshuber-weine/gumpoldskirchen-zierfandler-bio/",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Weingut Gebeshuber",
+            "sourceUrl": "https://weingut-gebeshuber.at/shop/gebeshuber-weine/gumpoldskirchen-zierfandler-bio/",
+            "wine": "Gumpoldskirchen Zierfandler 2025"
+          },
+          {
+            "producer": "Freigut Thallern",
+            "sourceUrl": "https://freigut-thallern.at/shop/weisswein/gebietswein-thermenregion/354/zierfandler-thermenregion-dac-2025",
+            "wine": "Zierfandler Thermenregion DAC 2025"
+          },
+          {
+            "producer": "Weingut Familie Auer",
+            "sourceUrl": "https://www.weingutauer.at/wp-content/uploads/2024/10/Zierfandler-Ried-Preisen-Gumpoldskirchen-DAC-2023_Weingut-Familie-Auer_Thermenregion_Oesterreich_Bio.pdf",
+            "wine": "Zierfandler Ried Preisen 2023"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://freigut-thallern.at/shop/weisswein/gebietswein-thermenregion/354/zierfandler-thermenregion-dac-2025",
+        "value": "beef",
+        "wines": [
+          {
+            "producer": "Freigut Thallern",
+            "sourceUrl": "https://freigut-thallern.at/shop/weisswein/gebietswein-thermenregion/354/zierfandler-thermenregion-dac-2025",
+            "wine": "Zierfandler Thermenregion DAC 2025"
+          },
+          {
+            "producer": "Weingut Familie Auer",
+            "sourceUrl": "https://www.weingutauer.at/wp-content/uploads/2024/10/Zierfandler-Ried-Preisen-Gumpoldskirchen-DAC-2023_Weingut-Familie-Auer_Thermenregion_Oesterreich_Bio.pdf",
+            "wine": "Zierfandler Ried Preisen 2023"
+          },
+          {
+            "producer": "Weingut Zierer",
+            "sourceUrl": "http://www.weingut-zierer.at/index.php/vinothek/klassisch/zierfandler",
+            "wine": "Zierfandler"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.weingutauer.at/wp-content/uploads/2024/10/Zierfandler-Ried-Preisen-Gumpoldskirchen-DAC-2023_Weingut-Familie-Auer_Thermenregion_Oesterreich_Bio.pdf",
+        "value": "asian cuisine",
+        "wines": [
+          {
+            "producer": "Weingut Familie Auer",
+            "sourceUrl": "https://www.weingutauer.at/wp-content/uploads/2024/10/Zierfandler-Ried-Preisen-Gumpoldskirchen-DAC-2023_Weingut-Familie-Auer_Thermenregion_Oesterreich_Bio.pdf",
+            "wine": "Zierfandler Ried Preisen 2023"
+          },
+          {
+            "producer": "Weingut Zierer",
+            "sourceUrl": "http://www.weingut-zierer.at/index.php/vinothek/klassisch/zierfandler",
+            "wine": "Zierfandler"
+          },
+          {
+            "producer": "Hannes Hofer",
+            "sourceUrl": "https://www.progwine.ch/produkt/zierfandler-hannes-hofer-2023/",
+            "wine": "Zierfandler Thermenregion DAC 2023"
+          }
+        ]
+      },
+      {
         "field": "origin",
         "quote": "Country of origin of prime varieties, Zierfandler: Austria",
         "sourceUrl": "https://doi.org/10.25909/32870405.v1",
@@ -60918,7 +61113,11 @@
       "pt": "Zierfandler"
     },
     "origin": "AT",
-    "pairings": [],
+    "pairings": [
+      "fish",
+      "beef",
+      "asian cuisine"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -61117,6 +61316,52 @@
             "wine": "004 Acolon Trocken Bio"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.heuchelberg.de/unsere-weine/rotwein/acolon-trocken/",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Heuchelberg Weingärtner",
+            "sourceUrl": "https://www.heuchelberg.de/unsere-weine/rotwein/acolon-trocken/",
+            "sugar": 5.8,
+            "wine": "Acolon trocken"
+          },
+          {
+            "producer": "Weingut im Klee (Golter)",
+            "sourceUrl": "https://www.weingut-golter.de/66/acolon-trocken",
+            "sugar": 3.4,
+            "wine": "Acolon trocken"
+          },
+          {
+            "producer": "Weingut Bescher",
+            "sourceUrl": "https://www.weingut-bescher.de/produkt/acolon-2/",
+            "sugar": 6.7,
+            "wine": "Acolon"
+          },
+          {
+            "producer": "Hahn Weingut",
+            "sourceUrl": "https://www.hahn-weingut.de/produkt/acolon-rotwein/",
+            "sugar": 8,
+            "wine": "Acolon Rotwein"
+          },
+          {
+            "producer": "Weingut Melber",
+            "sourceUrl": "https://weingut-melber.de/products/roedelseer-acolon-2023-trocken",
+            "sugar": 2.1,
+            "wine": "Roedelseer Acolon 2023 Trocken"
+          },
+          {
+            "producer": "Weingut Martin Schmitt",
+            "sourceUrl": "https://www.das-weingut-schmitt.de/products/acolon-edition-m-2021-trocken-pfalz",
+            "sugar": 7.7,
+            "wine": "Acolon Edition M 2021 Trocken Pfalz"
+          }
+        ]
       }
     ],
     "id": "acolon",
@@ -61183,7 +61428,10 @@
         "url": "https://es.wikipedia.org/wiki/Acolon"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": "low",
     "wikidataId": "Q342037",
