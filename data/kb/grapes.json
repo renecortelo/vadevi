@@ -39891,6 +39891,34 @@
             "wine": "Fermí Bohigas Xarel·lo"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://seguraviudas.com/es/wp-content/uploads/sites/2/2021/04/segura-viudas-xarello.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Segura Viudas",
+            "sourceUrl": "https://seguraviudas.com/es/wp-content/uploads/sites/2/2021/04/segura-viudas-xarello.pdf",
+            "sugar": 1,
+            "wine": "Segura Viudas Xarel·lo"
+          },
+          {
+            "producer": "Vallformosa",
+            "sourceUrl": "https://www.vallformosa.com/en/producto/cultivare-blanco/",
+            "sugar": 1.2,
+            "wine": "Cultivare Blanco"
+          },
+          {
+            "producer": "Canals Nadal",
+            "sourceUrl": "https://www.canalsnadal.com/es/producte/vino-blanco-xarello/",
+            "sugar": 0.4,
+            "wine": "Xarel·lo"
+          }
+        ]
       }
     ],
     "id": "xarel-lo",
@@ -39979,7 +40007,10 @@
         "url": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Cartoixà",

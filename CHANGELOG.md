@@ -8,6 +8,8 @@ has the reasons.
 
 ### The library
 
+- **Xarel·lo is dry**, from Segura Viudas, Vallformosa and Canals Nadal's
+  sheets (0.4 to 1.2 g/l).
 - **Kadarka and Frühburgunder are dry**: four Hungarian estates label their
   Kadarka «száraz»; three German estates give their Frühburgunder 0.2–0.5 g/l
   of residual sugar.
