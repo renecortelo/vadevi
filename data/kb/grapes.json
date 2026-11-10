@@ -48789,6 +48789,34 @@
         "factOnly": true,
         "publisher": "Vine&Wine",
         "sourceUrl": "https://vineandwine.vin/en/wine/wine-varieties/tinta-barroca/"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.adega.plansel.com/en/_files/ugd/2b9903_62eb6d12b28c4e629b0346c8dbae5962.pdf",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Plansel",
+            "sourceUrl": "https://www.adega.plansel.com/en/_files/ugd/2b9903_62eb6d12b28c4e629b0346c8dbae5962.pdf",
+            "sugar": 0.5,
+            "wine": "Plansel Tinta Barroca"
+          },
+          {
+            "producer": "Quinta de Ventozelo",
+            "sourceUrl": "https://quintadeventozelo.pt/wp-content/uploads/2024/04/ficha-tecnica-tinta-barroca-2020-pt.pdf",
+            "sugar": 0.6,
+            "wine": "Ventozelo Tinta Barroca 2020"
+          },
+          {
+            "producer": "Muxagat Vinhos",
+            "sourceUrl": "https://static1.squarespace.com/static/5df6b7b8d477c67e1c76048d/t/63cbc6c803da844ee6859181/1674299080486/Muxagat+Tinta+Barroca+2020+Tech+Sheet.pdf",
+            "sugar": 0.6,
+            "wine": "Muxagat Tinta Barroca 2020"
+          }
+        ]
       }
     ],
     "id": "tinta-barroca",
@@ -48869,7 +48897,10 @@
         "url": "https://es.wikipedia.org/wiki/Tinta_barroca"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Tinta Grossa",

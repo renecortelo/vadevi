@@ -8,6 +8,8 @@ has the reasons.
 
 ### The library
 
+- **Tinta Barroca is dry**, from three producers' sheets: Plansel (0.5 g/l),
+  Quinta de Ventozelo (under 0.6 g/l) and Muxagat (0.6 g/l).
 - **Listán Negro's alcohol** (medium) from five producers' sheets, three of
   them read from the Tenerife appellation's own data portal.
 - **Three facts withdrawn**: Petit Manseng's alcohol and Sumoll's tannin came
