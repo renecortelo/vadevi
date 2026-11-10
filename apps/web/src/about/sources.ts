@@ -144,6 +144,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Wineland, academia de uvas de una tienda de vino de Tiflis: solo el dato, con su enlace",
+    terms: "factOnly",
+    url: "https://wineland.ge/academy/grapes/ojaleshi",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Wines of Georgia, directorio de etiquetas: bodega, grado y maridajes de cada vino, contados para el consenso de tres bodegas",
     terms: "factOnly",
     url: "https://www.winesgeorgia.com/grape-variety/tsolikouri/",

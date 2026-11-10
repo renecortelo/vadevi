@@ -11385,7 +11385,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)"
   },
   {
-    "acidity": null,
+    "acidity": "medium",
     "alcohol": "medium",
     "aromas": [
       "dried apple",
@@ -11499,6 +11499,38 @@
             "wine": "Kisi (White)"
           }
         ]
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/kisi"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/kisi"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/kisi"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "veal",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/kisi"
       }
     ],
     "id": "kisi",
@@ -11513,7 +11545,11 @@
       "nl": "Kisi"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "poultry",
+      "pork",
+      "veal"
+    ],
     "prominence": 3,
     "regions": [
       {
@@ -11667,6 +11703,30 @@
         "quote": "Вина з цього сорту винограду відрізняються підвищеною кислотністю та фруктовим букетом",
         "value": "fruity",
         "sourceUrl": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BD%D1%83%D1%80%D1%96"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/chinuri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "sushi",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/chinuri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "fish",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/chinuri"
       }
     ],
     "id": "chinuri",
@@ -11681,7 +11741,11 @@
       "nl": "Chinuri"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "shellfish",
+      "sushi",
+      "fish"
+    ],
     "prominence": 4,
     "regions": [
       {
@@ -11775,7 +11839,7 @@
       "spice",
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -11834,6 +11898,46 @@
         "quote": "Den har sitt ursprung i Georgien.",
         "value": "GE",
         "sourceUrl": "https://sv.wikipedia.org/wiki/Ojaleshi"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/ojaleshi"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/ojaleshi"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "veal",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/ojaleshi"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/ojaleshi"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "cheese",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/ojaleshi"
       }
     ],
     "id": "ojaleshi",
@@ -11848,7 +11952,12 @@
       "nl": "Ojaleshi"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "pork",
+      "veal",
+      "lamb",
+      "cheese"
+    ],
     "prominence": 8,
     "regions": [
       {
@@ -11921,7 +12030,7 @@
     "wikipediaUrl": "https://fr.wikipedia.org/wiki/Odjaleschi"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [
       "pomegranate",
@@ -12008,6 +12117,38 @@
         "field": "sweetness",
         "quote": "a medium bodied, semi-dry, chewy blend",
         "value": "medium"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/mujuretuli"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "poultry",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/mujuretuli"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "veal",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/mujuretuli"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/mujuretuli"
       }
     ],
     "id": "mujuretuli",
@@ -12022,7 +12163,11 @@
       "nl": "Mujuretuli"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "poultry",
+      "veal",
+      "pork"
+    ],
     "prominence": 3,
     "regions": [
       {
@@ -12213,6 +12358,14 @@
             "wine": "Khikhvi"
           }
         ]
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/khikhvi"
       }
     ],
     "id": "khikhvi",
@@ -12227,7 +12380,9 @@
       "nl": "Khikhvi"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "seafood"
+    ],
     "prominence": 7,
     "regions": [
       {
@@ -12425,6 +12580,30 @@
         "quote": "თავკვერისგან დგება საინტერესო წითელი და მშრალი ან ვარდისფერი ღვინო ველური ვარდისა და წითელი ხილის სურნელით",
         "value": "red fruit",
         "sourceUrl": "https://ka.wikipedia.org/wiki/%E1%83%97%E1%83%90%E1%83%95%E1%83%99%E1%83%95%E1%83%94%E1%83%A0%E1%83%98"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "chicken",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/tavkveri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/tavkveri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "veal",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/tavkveri"
       }
     ],
     "id": "tavkveri",
@@ -12439,7 +12618,11 @@
       "nl": "Tavkveri"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "chicken",
+      "pork",
+      "veal"
+    ],
     "prominence": 4,
     "regions": [
       {
@@ -12540,7 +12723,7 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tavkveri"
   },
   {
-    "acidity": null,
+    "acidity": "high",
     "alcohol": null,
     "aromas": [],
     "body": "high",
@@ -12580,6 +12763,30 @@
         "field": "regions",
         "quote": "Культивируется в Картли и Имерети.",
         "value": "GE: Imereti"
+      },
+      {
+        "field": "acidity",
+        "quote": "",
+        "value": "high",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/goruli-mtsvane"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "seafood",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/goruli-mtsvane"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "shellfish",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/goruli-mtsvane"
       }
     ],
     "id": "goruli-mtsvane",
@@ -12594,7 +12801,10 @@
       "nl": "Goruli mtsvane"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "seafood",
+      "shellfish"
+    ],
     "prominence": 2,
     "regions": [
       {
@@ -12664,7 +12874,7 @@
     "aromas": [
       "plum"
     ],
-    "body": null,
+    "body": "medium",
     "color": "red",
     "evidence": [
       {
@@ -12701,6 +12911,38 @@
         "sourceUrl": "https://www.sakpatenti.gov.ge/media/django-summernote/2025-11-19/cfe08679-1c1a-4980-bb75-a586f1550475.pdf",
         "place": "Okureshis Usakhelouri",
         "placeId": "ge-okureshis-usakhelouri"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/usakhelauri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "duck",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/usakhelauri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "pork",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/usakhelauri"
+      },
+      {
+        "field": "pairings",
+        "quote": "",
+        "value": "lamb",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/usakhelauri"
       }
     ],
     "id": "usakhelauri",
@@ -12715,7 +12957,11 @@
       "nl": "Usakhelauri"
     },
     "origin": "GE",
-    "pairings": [],
+    "pairings": [
+      "duck",
+      "pork",
+      "lamb"
+    ],
     "prominence": 4,
     "regions": [
       {
@@ -41687,6 +41933,31 @@
         "quote": "Die körperreichen Rotweine sind meist sehr dunkel, alkoholreich",
         "value": "high",
         "sourceUrl": "https://de.wikipedia.org/wiki/Plavac_Mali_Crni"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://www.okusime.com/proizvod/tajano-plavac-mali-kiridzija-vina/",
+        "value": "game",
+        "wines": [
+          {
+            "producer": "Kiridžija vina",
+            "sourceUrl": "https://www.okusime.com/proizvod/tajano-plavac-mali-kiridzija-vina/",
+            "wine": "Tajano Plavac mali"
+          },
+          {
+            "producer": "Edivo vina",
+            "sourceUrl": "https://tipsy.hr/vino/edivo-plavac-mali-075l/",
+            "wine": "Edivo Plavac mali"
+          },
+          {
+            "producer": "Vinarija Rozić",
+            "sourceUrl": "https://greenside.hr/proizvod/plavac-mali-rozic-075-l/",
+            "wine": "Plavac mali Rozić"
+          }
+        ]
       }
     ],
     "id": "plavac-mali",
@@ -41701,7 +41972,9 @@
       "pt": "Plavac Mali"
     },
     "origin": "HR",
-    "pairings": [],
+    "pairings": [
+      "game"
+    ],
     "prominence": 14,
     "regions": [
       {
@@ -44607,7 +44880,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "high",
     "aromas": [
       "blackcurrant"
     ],
@@ -44719,6 +44992,46 @@
         "factOnly": true,
         "publisher": "Club de Catas Torrejón",
         "sourceUrl": "http://catastorrejon.eu/feteasca-neagra/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://banumaracine.ucv.ro/index.php/feteasca-neagra-2021/",
+        "value": "high",
+        "wines": [
+          {
+            "abv": 15.45,
+            "producer": "Banu Mărăcine (Universitatea din Craiova)",
+            "sourceUrl": "https://banumaracine.ucv.ro/index.php/feteasca-neagra-2021/",
+            "wine": "Fetească neagră 2021"
+          },
+          {
+            "abv": 14.5,
+            "producer": "Domeniul Bogdan",
+            "sourceUrl": "https://www.domeniulbogdan.ro/wp-content/uploads/fise/Fisa_tehnica_Primordial_Feteasc%C4%83_Neagr%C4%83_2021.pdf",
+            "wine": "Primordial Fetească Neagră 2021"
+          },
+          {
+            "abv": 14.9,
+            "producer": "Pripa",
+            "sourceUrl": "https://produse-moldovenesti.ro/produs/vin-rosu-sec-feteasca-neagra-pripa-075l/",
+            "wine": "Fetească Neagră Pripa"
+          },
+          {
+            "abv": 13,
+            "producer": "Vie Vin Vînju Mare",
+            "sourceUrl": "https://vvm.ro/vinul-principelui/feteasca-neagra-sec/",
+            "wine": "Fetească Neagră, sec"
+          },
+          {
+            "abv": 14,
+            "producer": "Crama Pandora",
+            "sourceUrl": "https://cramapandora.ro/vin/stories-feteasca-neagra/",
+            "wine": "Stories Fetească Neagră"
+          }
+        ]
       }
     ],
     "id": "feteasca-neagra",
@@ -50896,7 +51209,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -51192,6 +51505,14 @@
             "wine": "Kakhuri Mtsvane Qvevri"
           }
         ]
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/kakhuri-mtsvane"
       }
     ],
     "id": "mtsvane",
@@ -56909,7 +57230,7 @@
     "aromas": [
       "fruity"
     ],
-    "body": null,
+    "body": "medium",
     "color": "white",
     "evidence": [
       {
@@ -57049,6 +57370,14 @@
         "factOnly": true,
         "publisher": "Club de Catas Torrejón",
         "sourceUrl": "http://catastorrejon.eu/tsolikouri/"
+      },
+      {
+        "field": "body",
+        "quote": "",
+        "value": "medium",
+        "factOnly": true,
+        "publisher": "Wineland",
+        "sourceUrl": "https://wineland.ge/academy/grapes/tsolikouri"
       }
     ],
     "id": "tsolikouri",

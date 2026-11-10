@@ -8,6 +8,16 @@ has the reasons.
 
 ### The library
 
+- **Georgian grapes from Wineland's grape academy** (wineland.ge, a Tbilisi
+  wine merchant): acidity of Goruli Mtsvane (high), Kisi (medium) and
+  Mujuretuli (high); medium body for Ojaleshi, Usakhelauri, Mtsvane and
+  Tsolikouri; pairings for seven grapes. Its levels agree with the library's
+  checked values 10 times in 13; ranges («light- to medium-bodied») and any
+  value another source contradicts were left out.
+- **Fetească Neagră's alcohol** (high) from five Romanian producers' sheets
+  (13 to 15.45 %), and **Plavac Mali goes with game**, from three Dalmatian
+  producers.
+
 - **Xarel·lo is dry**, from Segura Viudas, Vallformosa and Canals Nadal's
   sheets (0.4 to 1.2 g/l).
 - **Kadarka and Frühburgunder are dry**: four Hungarian estates label their
