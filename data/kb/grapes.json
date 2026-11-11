@@ -4155,6 +4155,52 @@
             "wine": "LINAJE DEL PAGO ROJO CARMÍN - Tinto"
           }
         ]
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://datos.vinosdetenerife.es/es/atrevino-listan-negro-tinto",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "ATREVINO - LÁZARO ALONSO ALONSO",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/atrevino-listan-negro-tinto",
+            "sugar": 1.3,
+            "wine": "Atrevino Listán Negro"
+          },
+          {
+            "producer": "BODEGA LINAJE DEL PAGO",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/linaje-del-pago-rojo-carmin-tinto",
+            "sugar": 0.2,
+            "wine": "Rojo Carmín"
+          },
+          {
+            "producer": "BODEGAS MONJE SL",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/monje-tradicional-tinto-tinto",
+            "sugar": 1.5,
+            "wine": "Monje Tradicional Tinto"
+          },
+          {
+            "producer": "Bodega Tafuriaste",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/tafuriaste-tinto-2025-tinto",
+            "sugar": 0.2,
+            "wine": "Tafuriaste Tinto 2025"
+          },
+          {
+            "producer": "BODEGAS INSULARES DE TENERIFE",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/vina-norte-tinto-maceracion-carbonica-tinto-0",
+            "sugar": 0.3,
+            "wine": "Viña Norte Tinto Maceración Carbónica"
+          },
+          {
+            "producer": "BODEGAS VIÑATIGO C.B.",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/vinatigo-listan-negro-tinto",
+            "sugar": 1,
+            "wine": "Viñátigo Listán Negro"
+          }
+        ]
       }
     ],
     "id": "listan-negro",
@@ -4255,7 +4301,10 @@
         "url": "https://en.wikipedia.org/wiki/List%C3%A1n_negro"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Almuñeco",

@@ -8,6 +8,10 @@ has the reasons.
 
 ### The library
 
+- **Listán Negro is dry**, from six producers' sheets on the Tenerife
+  appellation's open data portal (0.2 to 1.5 g/l): Atrevino, Linaje del
+  Pago, Monje, Tafuriaste, Bodegas Insulares de Tenerife and Viñátigo.
+
 - **Tinto Cão is dry**, from three Douro producers' sheets, all at 0.6 g/l:
   Quinta do Noval, Real Companhia Velha (read from an image-only PDF) and
   Quinta da Romaneira.
