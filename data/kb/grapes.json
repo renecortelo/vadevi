@@ -63041,6 +63041,34 @@
         "factOnly": true,
         "publisher": "Quattrocalici",
         "sourceUrl": "https://www.quattrocalici.it/vitigni/tinto-cao/"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://www.quintadonoval.com/en/vin/37/quinta-do-noval-tinto-cao",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Quinta do Noval",
+            "sourceUrl": "https://www.quintadonoval.com/en/vin/37/quinta-do-noval-tinto-cao",
+            "sugar": 0.6,
+            "wine": "Quinta do Noval Tinto Cão 2023"
+          },
+          {
+            "producer": "Real Companhia Velha",
+            "sourceUrl": "https://realcompanhiavelha.pt/wp-content/uploads/2026/01/Series-Tinto-Cao-2019-Product-File-ING.pdf",
+            "sugar": 0.6,
+            "wine": "Séries Tinto Cão 2019"
+          },
+          {
+            "producer": "Quinta da Romaneira",
+            "sourceUrl": "https://quintadaromaneira.pt/client/files/0000000001/1397.pdf",
+            "sugar": 0.6,
+            "wine": "Tinto Cão Liceiras 2020"
+          }
+        ]
       }
     ],
     "id": "tinta-cao",
@@ -63104,7 +63132,10 @@
         "url": "https://es.wikipedia.org/wiki/Tinta_c%C3%A3o"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [
       {
         "name": "Castellana Negra",

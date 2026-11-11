@@ -8,6 +8,10 @@ has the reasons.
 
 ### The library
 
+- **Tinto Cão is dry**, from three Douro producers' sheets, all at 0.6 g/l:
+  Quinta do Noval, Real Companhia Velha (read from an image-only PDF) and
+  Quinta da Romaneira.
+
 - **Three alcohol levels withdrawn**: Fetească Neagră (high), Agiorgitiko and
   Baga (medium). A few producers' sheets agreed, but a wider sample of
   declared figures, read before that source was dropped for its terms, split
