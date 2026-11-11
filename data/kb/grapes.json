@@ -12894,6 +12894,31 @@
         "factOnly": true,
         "publisher": "Wineland",
         "sourceUrl": "https://wineland.ge/academy/grapes/goruli-mtsvane"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://wineland.ge/products/avandi-avandari-goruli-mtsvane/10232",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Avandi",
+            "sourceUrl": "https://wineland.ge/products/avandi-avandari-goruli-mtsvane/10232",
+            "wine": "Avandari Goruli Mtsvane"
+          },
+          {
+            "producer": "Napheri",
+            "sourceUrl": "https://wineland.ge/products/napheri-goruli-mtsvane/10090",
+            "wine": "Napheri Goruli Mtsvane"
+          },
+          {
+            "producer": "Doesi Estate",
+            "sourceUrl": "https://wineland.ge/products/doesi-estate-goruli-mtsvane/10028",
+            "wine": "Doesi Estate Goruli Mtsvane"
+          }
+        ]
       }
     ],
     "id": "goruli-mtsvane",
@@ -12969,7 +12994,10 @@
         "url": "https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%83%D0%BB%D0%B8_%D0%9C%D1%86%D0%B2%D0%B0%D0%BD%D0%B5"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q20572365",

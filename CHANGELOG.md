@@ -8,6 +8,9 @@ has the reasons.
 
 ### The library
 
+- **Goruli Mtsvane is dry**: Avandi, Napheri and Doesi Estate label theirs
+  dry (Wineland's shop).
+
 - **Listán Prieto's alcohol** (medium) from five wines of the grape, all
   between 12 and 13.9 %: Miguel Torres's Millapoa País, Envínate's Benje
   (Tenerife), and Bouchon, Huaso de Sauzal and La Marchigiana as Amanda
