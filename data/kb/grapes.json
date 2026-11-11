@@ -4296,7 +4296,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "fruity",
       "mulberry",
@@ -4475,46 +4475,6 @@
             "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/984/17646538281343n.pdf",
             "sugar": 4,
             "wine": "Baga Reserva 2018"
-          }
-        ]
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://media.bacalhoa.pt/1/documentos/1397/bacalhoa-baga-tinto-2021ptpdf.pdf",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 13.5,
-            "producer": "Bacalhôa",
-            "sourceUrl": "https://media.bacalhoa.pt/1/documentos/1397/bacalhoa-baga-tinto-2021ptpdf.pdf",
-            "wine": "Bacalhôa Baga 2021"
-          },
-          {
-            "abv": 13,
-            "producer": "Campolargo",
-            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/996/17539826561112T.pdf",
-            "wine": "Campolargo Baga 2019"
-          },
-          {
-            "abv": 13.5,
-            "producer": "Caves Primavera",
-            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1298/12298183754056J.pdf",
-            "wine": "Primavera Baga Reserva"
-          },
-          {
-            "abv": 12.8,
-            "producer": "Mata Fidalga",
-            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1366/9947130157984g.pdf",
-            "wine": "Mata Fidalga Baga Estágio Longo 2016"
-          },
-          {
-            "abv": 14,
-            "producer": "Quinta da Lagoa Velha",
-            "sourceUrl": "https://medialoja.rotadabairrada.pt/1/documentos/1780/ftquintadalagoavelhatintobagagrandereservarotadabairradapdf.pdf",
-            "wine": "Grande Reserva Baga 2024"
           }
         ]
       },
@@ -37079,7 +37039,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": "medium",
+    "alcohol": null,
     "aromas": [
       "plum",
       "spice",
@@ -37213,34 +37173,6 @@
         "field": "sweetness",
         "quote": "The grape is most widely associated with the dry and sweet red wines of Nemea",
         "value": "dry-sweet"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://boutari.gr/en/wine/agiorgitiko-boutari/",
-        "value": "medium",
-        "wines": [
-          {
-            "abv": 12.5,
-            "producer": "Boutari",
-            "sourceUrl": "https://boutari.gr/en/wine/agiorgitiko-boutari/",
-            "wine": "Agiorgitiko Boutari"
-          },
-          {
-            "abv": 12.5,
-            "producer": "Lafazanis Winery",
-            "sourceUrl": "https://lafazanis.gr/en/product/geometria-agiorgitiko/",
-            "wine": "Geometria Agiorgitiko"
-          },
-          {
-            "abv": 13,
-            "producer": "Domaine Skouras",
-            "sourceUrl": "https://skouras.gr/wp-content/uploads/2023/07/AGIORGITIKO-RED-EN-4.pdf",
-            "wine": "Saint George Nemea 2024"
-          }
-        ]
       },
       {
         "field": "pairings",
@@ -44975,7 +44907,7 @@
   },
   {
     "acidity": null,
-    "alcohol": "high",
+    "alcohol": null,
     "aromas": [
       "blackcurrant"
     ],
@@ -45087,46 +45019,6 @@
         "factOnly": true,
         "publisher": "Club de Catas Torrejón",
         "sourceUrl": "http://catastorrejon.eu/feteasca-neagra/"
-      },
-      {
-        "basis": "producers-abv",
-        "factOnly": true,
-        "field": "alcohol",
-        "quote": "",
-        "sourceUrl": "https://banumaracine.ucv.ro/index.php/feteasca-neagra-2021/",
-        "value": "high",
-        "wines": [
-          {
-            "abv": 15.45,
-            "producer": "Banu Mărăcine (Universitatea din Craiova)",
-            "sourceUrl": "https://banumaracine.ucv.ro/index.php/feteasca-neagra-2021/",
-            "wine": "Fetească neagră 2021"
-          },
-          {
-            "abv": 14.5,
-            "producer": "Domeniul Bogdan",
-            "sourceUrl": "https://www.domeniulbogdan.ro/wp-content/uploads/fise/Fisa_tehnica_Primordial_Feteasc%C4%83_Neagr%C4%83_2021.pdf",
-            "wine": "Primordial Fetească Neagră 2021"
-          },
-          {
-            "abv": 14.9,
-            "producer": "Pripa",
-            "sourceUrl": "https://produse-moldovenesti.ro/produs/vin-rosu-sec-feteasca-neagra-pripa-075l/",
-            "wine": "Fetească Neagră Pripa"
-          },
-          {
-            "abv": 13,
-            "producer": "Vie Vin Vînju Mare",
-            "sourceUrl": "https://vvm.ro/vinul-principelui/feteasca-neagra-sec/",
-            "wine": "Fetească Neagră, sec"
-          },
-          {
-            "abv": 14,
-            "producer": "Crama Pandora",
-            "sourceUrl": "https://cramapandora.ro/vin/stories-feteasca-neagra/",
-            "wine": "Stories Fetească Neagră"
-          }
-        ]
       }
     ],
     "id": "feteasca-neagra",

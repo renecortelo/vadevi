@@ -8,6 +8,12 @@ has the reasons.
 
 ### The library
 
+- **Three alcohol levels withdrawn**: Fetească Neagră (high), Agiorgitiko and
+  Baga (medium). A few producers' sheets agreed, but a wider sample of
+  declared figures, read before that source was dropped for its terms, split
+  each grape below two thirds; GAIA's Agiorgitiko at 14 % had also been left
+  out. The library does not pick the sheets that agree.
+
 - **Durif is dry**, and pairs with steak, lamb and beef, from De Bortoli's
   own guide to the grape. Its levels agree with the library's checked values
   13 times in 14; three more of its facts fell on fields where sources
