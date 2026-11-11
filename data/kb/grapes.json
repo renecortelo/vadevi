@@ -11721,7 +11721,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -11834,6 +11834,34 @@
         "factOnly": true,
         "publisher": "Wineland",
         "sourceUrl": "https://wineland.ge/academy/grapes/chinuri"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.winesgeorgia.com/label/chinuri/",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.2,
+            "producer": "Armazuli",
+            "sourceUrl": "https://www.winesgeorgia.com/label/chinuri/",
+            "wine": "Chinuri"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Tedzami Wines",
+            "sourceUrl": "https://www.winesgeorgia.com/label/tedzami-wines-chinuri-2/",
+            "wine": "Tedzami Chinuri"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Barbale",
+            "sourceUrl": "https://8wines.com/wines/barbale-chinuri-2022",
+            "wine": "Barbale Chinuri 2022"
+          }
+        ]
       }
     ],
     "id": "chinuri",

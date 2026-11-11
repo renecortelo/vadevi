@@ -8,6 +8,9 @@ has the reasons.
 
 ### The library
 
+- **Chinuri's alcohol** (medium) from three producers: Armazuli (13.2 %),
+  Tedzami (12.5 %) and Barbale (12.5 %).
+
 - **Goruli Mtsvane is dry**: Avandi, Napheri and Doesi Estate label theirs
   dry (Wineland's shop).
 
