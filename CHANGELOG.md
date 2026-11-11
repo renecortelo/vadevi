@@ -8,6 +8,10 @@ has the reasons.
 
 ### The library
 
+- **Touriga Franca goes with game**, from three Douro producers' sheets:
+  Casa Ferreirinha's Quinta da Leda, Quinta da Pacheca and Quinta de
+  Ventozelo.
+
 - **Chinuri's alcohol** (medium) from three producers: Armazuli (13.2 %),
   Tedzami (12.5 %) and Barbale (12.5 %).
 

@@ -5729,6 +5729,31 @@
         "sourceUrl": "https://www.houseoftownend.com/wines/grape/touriga-franca"
       },
       {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0606/1250/9919/files/Quinta_Da_Leda_Tinto_Douro.pdf",
+        "value": "game",
+        "wines": [
+          {
+            "producer": "Casa Ferreirinha",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0606/1250/9919/files/Quinta_Da_Leda_Tinto_Douro.pdf",
+            "wine": "Quinta da Leda Touriga Franca 2019"
+          },
+          {
+            "producer": "Quinta da Pacheca",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0539/1269/9064/files/FT_PACHECA_TOURIGA_FRANCESA_2019-1.pdf",
+            "wine": "Pacheca Grande Reserva Touriga Francesa 2019"
+          },
+          {
+            "producer": "Quinta de Ventozelo",
+            "sourceUrl": "https://winehouseportugal.com/en/douro-wines-portugal/10275-quinta-ventozelo-touriga-franca-2019-red.html",
+            "wine": "Vinha da Serra Touriga Franca 2019"
+          }
+        ]
+      },
+      {
         "basis": "disputed",
         "factOnly": true,
         "field": "acidity",
@@ -5801,7 +5826,9 @@
       "pt": "Touriga Francesa"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "game"
+    ],
     "prominence": 7,
     "regions": [
       {
