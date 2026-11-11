@@ -8592,7 +8592,7 @@
   },
   {
     "acidity": "low",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "cherry",
       "strawberry",
@@ -8805,6 +8805,46 @@
         "factOnly": true,
         "publisher": "Club de Catas Torrejón",
         "sourceUrl": "http://catastorrejon.eu/listan-prieto/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.torres.es/sites/default/files/2025-12/TS%20MILLAPOA%20PAIS%202022%20ING.pdf",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Miguel Torres Chile",
+            "sourceUrl": "https://www.torres.es/sites/default/files/2025-12/TS%20MILLAPOA%20PAIS%202022%20ING.pdf",
+            "wine": "Millapoa País 2022"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Envínate",
+            "sourceUrl": "https://datos.vinosdetenerife.es/es/envinate-benje-tinto-tinto",
+            "wine": "Benje Tinto"
+          },
+          {
+            "abv": 12,
+            "producer": "Bouchon Family Wines",
+            "sourceUrl": "https://southamericawineguide.com/tasting-note/j-bouchon-pais-salvaje/",
+            "wine": "J Bouchon País Salvaje 2015"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Huaso de Sauzal",
+            "sourceUrl": "https://southamericawineguide.com/tasting-note/huaso-de-sauzal-chilena-pais/",
+            "wine": "Chilena País 2014"
+          },
+          {
+            "abv": 13.9,
+            "producer": "La Marchigiana",
+            "sourceUrl": "https://southamericawineguide.com/tasting-note/la-marchigiana-criolla-chica/",
+            "wine": "Criolla Chica 2017"
+          }
+        ]
       }
     ],
     "id": "listan-prieto",

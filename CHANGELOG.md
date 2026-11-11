@@ -8,6 +8,11 @@ has the reasons.
 
 ### The library
 
+- **Listán Prieto's alcohol** (medium) from five wines of the grape, all
+  between 12 and 13.9 %: Miguel Torres's Millapoa País, Envínate's Benje
+  (Tenerife), and Bouchon, Huaso de Sauzal and La Marchigiana as Amanda
+  Barnes's South America Wine Guide lists them.
+
 - **Listán Negro is dry**, from six producers' sheets on the Tenerife
   appellation's open data portal (0.2 to 1.5 g/l): Atrevino, Linaje del
   Pago, Monje, Tafuriaste, Bodegas Insulares de Tenerife and Viñátigo.

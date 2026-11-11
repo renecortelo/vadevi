@@ -144,6 +144,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "South America Wine Guide (Amanda Barnes): solo el grado y la uva que da de cada vino, contados para el consenso de tres bodegas",
+    terms: "factOnly",
+    url: "https://southamericawineguide.com/tasting-note/j-bouchon-pais-salvaje/",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "De Bortoli Wines, guías de la bodega sobre cada uva: solo el dato, con su enlace",
     terms: "factOnly",
     url: "https://www.debortoli.com.au/wine-101/grape-variety/durif",
