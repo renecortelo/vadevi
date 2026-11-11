@@ -131,7 +131,8 @@ export function quoteIsVerbatim(quote: string, article: string): boolean {
 /** The alcohol a technical sheet gives, «13,5 % vol» or «Alcohol: 14%». */
 export function alcoholFigure(quote: string): number | null {
   const found =
-    /(\d{1,2}(?:[.,]\d{1,2})?)\s?%/.exec(quote) ??
+    // Not inside a longer number: «100% Pais, 12%» is 12, not «00 %».
+    /(?<![\d.,])(\d{1,2}(?:[.,]\d{1,2})?)\s?%/.exec(quote) ??
     // «Degré d'alcool 11°»: degrees are the alcohol only where the quote says
     // so, and never a temperature («servir à 10 °C»).
     /(?:alcool|alcohol|alcol|alkohol|degr[ée]|grad[a-z]*)\D{0,20}?(\d{1,2}(?:[.,]\d{1,2})?)\s?°(?!\s?[CF])/i.exec(

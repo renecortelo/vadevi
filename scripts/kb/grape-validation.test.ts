@@ -501,5 +501,7 @@ describe("a sheet's alcohol", () => {
     expect(alcoholFigure("Alc by Vol(%): 12.5")).toBe(12.5);
     expect(alcoholFigure("75 cl, 13 vol.")).toBeNull();
     expect(alcoholFigure("Alcohol (%) – 15,5")).toBe(15.5);
+    // A grape's share is not the alcohol: «100%» is not «00 %».
+    expect(alcoholFigure("100% Pais, 12% alcohol.")).toBe(12);
   });
 });
