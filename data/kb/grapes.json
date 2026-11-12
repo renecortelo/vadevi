@@ -3609,6 +3609,31 @@
         "quote": "Grado alcohólico medio, color picota",
         "value": "medium",
         "sourceUrl": "https://web.archive.org/web/20250429182922/https://www.mapa.gob.es/ministerio/pags/exposiciones/vid/www/imagenes/pdf/SOUSON.pdf"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0539/1269/9064/files/FT_PACHECA_Sousao_2020_1.pdf",
+        "value": "stews",
+        "wines": [
+          {
+            "producer": "Quinta da Pacheca",
+            "sourceUrl": "https://cdn.shopify.com/s/files/1/0539/1269/9064/files/FT_PACHECA_Sousao_2020_1.pdf",
+            "wine": "Pacheca Sousão Reserva 2020"
+          },
+          {
+            "producer": "Quinta de Ventozelo",
+            "sourceUrl": "https://winehouseportugal.com/en/douro-wines-portugal/9845-quinta-de-ventozelo-sousao-2020-red-wine.html",
+            "wine": "Quinta de Ventozelo Sousão 2021"
+          },
+          {
+            "producer": "Maçanita",
+            "sourceUrl": "https://www.oleobrigado.com/wine/2436-macanita-sousao-letra-a",
+            "wine": "Maçanita Sousão Letra A"
+          }
+        ]
       }
     ],
     "id": "souzao",
@@ -3623,7 +3648,9 @@
       "pt": "Souzão"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "stews"
+    ],
     "prominence": 8,
     "regions": [
       {

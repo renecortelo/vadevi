@@ -144,6 +144,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Olé & Obrigado, importador: la ficha que publica de cada vino que trae, con su bodega",
+    terms: "factOnly",
+    url: "https://www.oleobrigado.com/wine/2436-macanita-sousao-letra-a",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "South America Wine Guide (Amanda Barnes): solo el grado y la uva que da de cada vino, contados para el consenso de tres bodegas",
     terms: "factOnly",
     url: "https://southamericawineguide.com/tasting-note/j-bouchon-pais-salvaje/",

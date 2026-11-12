@@ -8,6 +8,10 @@ has the reasons.
 
 ### The library
 
+- **Sousão goes with stews**, from three producers: Quinta da Pacheca,
+  Quinta de Ventozelo (Winehouse Portugal's sheet) and Maçanita's Letra A
+  (its importer Olé & Obrigado).
+
 - **Touriga Franca goes with game**, from three Douro producers' sheets:
   Casa Ferreirinha's Quinta da Leda, Quinta da Pacheca and Quinta de
   Ventozelo.
