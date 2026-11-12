@@ -144,6 +144,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Private Celler e Iberowine, tiendas: la ficha de cada vino, con su bodega (maridaje del txakoli)",
+    terms: "factOnly",
+    url: "https://www.iberowine.com/wine/txakoli-txomin-etxanix",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Olé & Obrigado, importador: la ficha que publica de cada vino que trae, con su bodega",
     terms: "factOnly",
     url: "https://www.oleobrigado.com/wine/2436-macanita-sousao-letra-a",
@@ -221,7 +228,7 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
-    name: "Grand Cru Wijnen, páginas de uvas de la tienda: solo el dato (acidez del Teroldego, seco y dulce del Gros Manseng), con su enlace",
+    name: "Grand Cru Wijnen, tienda: páginas de uvas (acidez del Teroldego, seco y dulce del Gros Manseng) y fichas de vinos con su bodega: solo el dato, con su enlace",
     terms: "factOnly",
     url: "https://www.grandcruwijnen.nl/en/wines/druif/teroldego",
     what: "traits",

@@ -9174,6 +9174,31 @@
         "factOnly": true,
         "publisher": "Wine Paradigm",
         "sourceUrl": "https://wineparadigm.com/hondarrabi-zuri-txakoli/"
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://privateceller.com/en/white-wine/4560076-white-wine-rezabal-txakoli-do-getariako-txakolina-basque-country-spain-hondarribi-zuri-75-cl-8437008335018.html",
+        "value": "fish",
+        "wines": [
+          {
+            "producer": "Rezabal",
+            "sourceUrl": "https://privateceller.com/en/white-wine/4560076-white-wine-rezabal-txakoli-do-getariako-txakolina-basque-country-spain-hondarribi-zuri-75-cl-8437008335018.html",
+            "wine": "Rezabal Txakolí"
+          },
+          {
+            "producer": "Txomin Etxaniz",
+            "sourceUrl": "https://www.iberowine.com/wine/txakoli-txomin-etxanix",
+            "wine": "Txomin Etxaniz Txakoli"
+          },
+          {
+            "producer": "Marqués de Riscal",
+            "sourceUrl": "https://www.marquesderiscal.com/public/Attachment/2022/5/txakolidemarqusderiscal2020.pdf",
+            "wine": "Marqués de Riscal Txakoli 2020"
+          }
+        ]
       }
     ],
     "id": "hondarrabi-zuri",
@@ -9188,7 +9213,9 @@
       "nl": "Hondarrabi zuri"
     },
     "origin": "ES",
-    "pairings": [],
+    "pairings": [
+      "fish"
+    ],
     "prominence": 6,
     "regions": [
       {

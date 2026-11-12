@@ -8,6 +8,9 @@ has the reasons.
 
 ### The library
 
+- **Hondarrabi Zuri goes with fish**, from three Basque txakolis: Rezabal,
+  Txomin Etxaniz and Marqués de Riscal's.
+
 - **Sousão goes with stews**, from three producers: Quinta da Pacheca,
   Quinta de Ventozelo (Winehouse Portugal's sheet) and Maçanita's Letra A
   (its importer Olé & Obrigado).
