@@ -8,6 +8,14 @@ has the reasons.
 
 ### The library
 
+- **Ruby Cabernet is dry** (seven South African producers, 2.9 to 5.1 g/l)
+  **and goes with pasta, pizza and red meat**, from the producers' own entries
+  on wine.co.za.
+
+- **Tinta Barroca goes with game and cheese**: game from Allesverloren,
+  Dornier and Fraga Alta, cheese from Quinta de Ventozelo, Boplaas and
+  Louiesenhof.
+
 - **Gamaret's alcohol** (medium) from three producers: Grand'Cour
   (13.5 %), Les Parcelles (13.8 %) and the Staatskellerei Zürich (12.5 %).
 

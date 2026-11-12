@@ -144,6 +144,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "wine.co.za, catálogo de vinos sudafricanos que llena cada bodega: variedad, análisis (grado, azúcar, acidez) y maridaje de la bodega, contados vino a vino",
+    terms: "factOnly",
+    url: "https://wine.co.za/wine/wine.aspx?WINEID=52319",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Cave SA (cavesa.ch) y Mövenpick Wein, tiendas suizas: la uva y el grado de cada vino, con su bodega",
     terms: "factOnly",
     url: "https://www.cavesa.ch/en/geneve-gamaret-pellegrin-2022-1000963",

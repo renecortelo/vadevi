@@ -14963,6 +14963,143 @@
         "field": "origin",
         "quote": "Ruby Cabernet is a cross between Cabernet Sauvignon and Carignan created in 1936 by Dr Harold Olmo at UC Davis in California.",
         "value": "US"
+      },
+      {
+        "basis": "producers-sugar",
+        "factOnly": true,
+        "field": "sweetness",
+        "quote": "",
+        "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=52319",
+        "value": "dry",
+        "wines": [
+          {
+            "producer": "Robertson Winery",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=52319",
+            "sugar": 2.9,
+            "wine": "RW Ruby Cabernet 2025"
+          },
+          {
+            "producer": "McGregor Winery",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=18683",
+            "sugar": 3.22,
+            "wine": "McGregor Ruby Cabernet 2007"
+          },
+          {
+            "producer": "Merwida",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=6267",
+            "sugar": 3.2,
+            "wine": "Merwida Riverstone Ruby Cabernet 2002"
+          },
+          {
+            "producer": "Drostdy-Hof Wines",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=3655",
+            "sugar": 3.2,
+            "wine": "Drostdy Hof Ruby Cabernet 1999"
+          },
+          {
+            "producer": "Goudini Wines",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=8323",
+            "sugar": 3.61,
+            "wine": "Goudini Ruby Cabernet Reserve 2002"
+          },
+          {
+            "producer": "Zandvliet Wine Estate",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=13434",
+            "sugar": 4.45,
+            "wine": "Zandvliet Astonvale Ruby Cabernet 2005"
+          },
+          {
+            "producer": "Lutzville Vineyards",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=21681",
+            "sugar": 5.1,
+            "wine": "Cape Elephant Ruby Cabernet 2007"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=52319",
+        "value": "pasta",
+        "wines": [
+          {
+            "producer": "Robertson Winery",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=52319",
+            "wine": "RW Ruby Cabernet 2025"
+          },
+          {
+            "producer": "Orange River Cellars",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=40665",
+            "wine": "Orange River Cellars Ruby Cabernet 2015"
+          },
+          {
+            "producer": "McGregor Winery",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=18683",
+            "wine": "McGregor Ruby Cabernet 2007"
+          },
+          {
+            "producer": "Zandvliet Wine Estate",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=13434",
+            "wine": "Zandvliet Astonvale Ruby Cabernet 2005"
+          },
+          {
+            "producer": "Merwida",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=6267",
+            "wine": "Merwida Riverstone Ruby Cabernet 2002"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=40665",
+        "value": "pizza",
+        "wines": [
+          {
+            "producer": "Orange River Cellars",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=40665",
+            "wine": "Orange River Cellars Ruby Cabernet 2015"
+          },
+          {
+            "producer": "Zandvliet Wine Estate",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=13434",
+            "wine": "Zandvliet Astonvale Ruby Cabernet 2005"
+          },
+          {
+            "producer": "Merwida",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=6267",
+            "wine": "Merwida Riverstone Ruby Cabernet 2002"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=18683",
+        "value": "red meat",
+        "wines": [
+          {
+            "producer": "McGregor Winery",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=18683",
+            "wine": "McGregor Ruby Cabernet 2007"
+          },
+          {
+            "producer": "Zandvliet Wine Estate",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=13434",
+            "wine": "Zandvliet Astonvale Ruby Cabernet 2005"
+          },
+          {
+            "producer": "Lutzville Vineyards",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=29844",
+            "wine": "Lutzville Ruby Cabernet 2011"
+          }
+        ]
       }
     ],
     "id": "ruby-cabernet",
@@ -14977,7 +15114,11 @@
       "pt": "Ruby Cabernet"
     },
     "origin": "US",
-    "pairings": [],
+    "pairings": [
+      "pasta",
+      "pizza",
+      "red meat"
+    ],
     "prominence": 5,
     "regions": [
       {
@@ -15054,7 +15195,10 @@
         "url": "https://en.wikipedia.org/wiki/Ruby_Cabernet"
       }
     },
-    "sweetness": null,
+    "sweetness": {
+      "from": "dry",
+      "to": "dry"
+    },
     "synonyms": [],
     "tannin": null,
     "wikidataId": "Q356683",
@@ -49407,6 +49551,56 @@
             "wine": "Muxagat Tinta Barroca 2020"
           }
         ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://quintadeventozelo.pt/wp-content/uploads/2024/04/ficha-tecnica-tinta-barroca-2020-pt.pdf",
+        "value": "cheese",
+        "wines": [
+          {
+            "producer": "Quinta de Ventozelo",
+            "sourceUrl": "https://quintadeventozelo.pt/wp-content/uploads/2024/04/ficha-tecnica-tinta-barroca-2020-pt.pdf",
+            "wine": "Quinta de Ventozelo Tinta Barroca 2020"
+          },
+          {
+            "producer": "Boplaas Family Vineyards",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=52061",
+            "wine": "Boplaas Tinta Barocca 2023"
+          },
+          {
+            "producer": "Louiesenhof",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=4977",
+            "wine": "Louiesenhof Tinta Barocca 2002"
+          }
+        ]
+      },
+      {
+        "basis": "producers",
+        "factOnly": true,
+        "field": "pairings",
+        "quote": "",
+        "sourceUrl": "https://winehouseportugal.com/en/douro-wines/9445-fraga-alta-tinta-barroca-2014-red-wine.html",
+        "value": "game",
+        "wines": [
+          {
+            "producer": "Fraga Alta (Lucinda Todo Bom)",
+            "sourceUrl": "https://winehouseportugal.com/en/douro-wines/9445-fraga-alta-tinta-barroca-2014-red-wine.html",
+            "wine": "Fraga Alta Tinta Barroca 2014"
+          },
+          {
+            "producer": "Dornier Wines",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=51844",
+            "wine": "Dornier Moordenaarskloof Tinta Barocca 2021"
+          },
+          {
+            "producer": "Allesverloren Wine Estate",
+            "sourceUrl": "https://wine.co.za/wine/wine.aspx?WINEID=47604",
+            "wine": "Allesverloren Tinta Barocca 2018"
+          }
+        ]
       }
     ],
     "id": "tinta-barroca",
@@ -49421,7 +49615,10 @@
       "pt": "Tinta Barroca"
     },
     "origin": "PT",
-    "pairings": [],
+    "pairings": [
+      "cheese",
+      "game"
+    ],
     "prominence": 11,
     "regions": [
       {
