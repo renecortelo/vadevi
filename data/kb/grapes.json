@@ -64616,7 +64616,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "blackberry",
       "spice"
@@ -64687,6 +64687,34 @@
         "factOnly": true,
         "publisher": "Quattrocalici",
         "sourceUrl": "https://www.quattrocalici.it/vitigni/gamaret/"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.cavesa.ch/en/geneve-gamaret-pellegrin-2022-1000963",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13.5,
+            "producer": "Domaine du Grand'Cour (J.-P. Pellegrin)",
+            "sourceUrl": "https://www.cavesa.ch/en/geneve-gamaret-pellegrin-2022-1000963",
+            "wine": "Genève Gamaret Pellegrin 2022"
+          },
+          {
+            "abv": 13.8,
+            "producer": "Les Parcelles (L. Villard)",
+            "sourceUrl": "https://www.cavesa.ch/en/geneve-gamaret-les-parcelles-l-villard-2023-1001443",
+            "wine": "Genève Gamaret Les Parcelles 2023"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Staatskellerei Zürich",
+            "sourceUrl": "https://www.moevenpick-wein.com/fr/customization_catalog/product/pdf/product_id/109664/file/2023-gamaret-prestige-barrique-aoc-zuerich-staatskellerei-zuerich.pdf",
+            "wine": "Gamaret Prestige Barrique AOC Zürich 2023"
+          }
+        ]
       }
     ],
     "id": "gamaret",

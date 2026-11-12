@@ -821,6 +821,11 @@ describe("Vicenç deterministic read path", () => {
       });
       expect(note.status).toBe(201);
     }
+    // Yesterday, to the second: a fixed date goes stale once the 90-day
+    // freshness window passes it, and the price stops counting as recent.
+    const observedAt = new Date(
+      Math.floor((Date.now() - 24 * 60 * 60 * 1_000) / 1_000) * 1_000,
+    ).toISOString();
     const price = await SELF.fetch(
       `https://vadevi.test/api/v1/spaces/${spaceId}/wines/${alpha.id}/prices`,
       {
@@ -830,7 +835,7 @@ describe("Vicenç deterministic read path", () => {
           currency: "EUR",
           merchantName: "Example Recommendation Merchant",
           merchantUrl: "https://merchant.example.test/recommendation-alpha",
-          observedAt: "2026-08-14T09:45:00.000Z",
+          observedAt,
           sourceType: "merchant",
           vintageMatch: "yes",
         }),
@@ -889,7 +894,7 @@ describe("Vicenç deterministic read path", () => {
       expect.objectContaining({
         amountMinor: 1995,
         currency: "EUR",
-        observedAt: "2026-08-14T09:45:00.000Z",
+        observedAt,
         sourceType: "merchant",
         wineId: alpha.id,
       }),

@@ -144,6 +144,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Cave SA (cavesa.ch) y Mövenpick Wein, tiendas suizas: la uva y el grado de cada vino, con su bodega",
+    terms: "factOnly",
+    url: "https://www.cavesa.ch/en/geneve-gamaret-pellegrin-2022-1000963",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "Private Celler e Iberowine, tiendas: la ficha de cada vino, con su bodega (maridaje del txakoli)",
     terms: "factOnly",
     url: "https://www.iberowine.com/wine/txakoli-txomin-etxanix",

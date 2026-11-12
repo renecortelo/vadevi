@@ -8,6 +8,9 @@ has the reasons.
 
 ### The library
 
+- **Gamaret's alcohol** (medium) from three producers: Grand'Cour
+  (13.5 %), Les Parcelles (13.8 %) and the Staatskellerei Zürich (12.5 %).
+
 - **Hondarrabi Zuri goes with fish**, from three Basque txakolis: Rezabal,
   Txomin Etxaniz and Marqués de Riscal's.
 
