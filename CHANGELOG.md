@@ -39,10 +39,11 @@ has the reasons.
 - **Goruli Mtsvane is dry**: Avandi, Napheri and Doesi Estate label theirs
   dry (Wineland's shop).
 
-- **Listán Prieto's alcohol** (medium) from five wines of the grape, all
-  between 12 and 13.9 %: Miguel Torres's Millapoa País, Envínate's Benje
-  (Tenerife), and Bouchon, Huaso de Sauzal and La Marchigiana as Amanda
-  Barnes's South America Wine Guide lists them.
+- **Listán Prieto's alcohol** (medium) from four wines of the grape, all
+  between 12 and 13.9 %: Miguel Torres's Millapoa País, and Bouchon, Huaso
+  de Sauzal and La Marchigiana as Amanda Barnes's South America Wine Guide
+  lists them. Envínate's Benje, first counted, is a blend (90 % Listán
+  Prieto) and was taken out.
 
 - **Listán Negro is dry**, from six producers' sheets on the Tenerife
   appellation's open data portal (0.2 to 1.5 g/l): Atrevino, Linaje del
