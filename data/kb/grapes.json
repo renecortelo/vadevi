@@ -5206,7 +5206,7 @@
           {
             "abv": 14,
             "producer": "Fita Preta Vinhos",
-            "sourceUrl": "https://winehouseportugal.com/en/alentejo-wines/7335-visconde-de-borba-2019-red-wine.html",
+            "sourceUrl": "https://winehouseportugal.com/en/alentejo-wines/7335-fitapreta-trincadeira-2015-red-wine-a-23-year-old-winemaker-and-an-english-winemaker-could-only-go-wrong-portuguese-winemaker-an.html",
             "wine": "A Trincadeira Não é Tão Preta 2021"
           }
         ]
@@ -6567,7 +6567,7 @@
   },
   {
     "acidity": "high",
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "spice",
       "exotic fruit"
@@ -6773,6 +6773,40 @@
             "producer": "Casal Branco",
             "sourceUrl": "https://casadovinhodealmeirim.pt/catalogo/casal-branco/falcoaria-branco",
             "wine": "Falcoaria Branco"
+          }
+        ]
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://winehouseportugal.com/en/ribatejo-wines/10509-casa-cadaval-fernao-pires-2021-white-wine.html",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 12,
+            "producer": "Casa Cadaval",
+            "sourceUrl": "https://winehouseportugal.com/en/ribatejo-wines/10509-casa-cadaval-fernao-pires-2021-white-wine.html",
+            "wine": "Casa Cadaval Fernão Pires 2022"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Ode Winery",
+            "sourceUrl": "https://winehouseportugal.com/en/ribatejo-wines/10845-ode-fernao-pires-2022-vinho-branco.html",
+            "wine": "Ode Fernão Pires 2022"
+          },
+          {
+            "abv": 13,
+            "producer": "Quinta do Rol",
+            "sourceUrl": "https://winehouseportugal.com/en/lisbon-wines/6672-quinta-do-rol-barrica-fernao-pires-2015-white-wine-quinta-do-rol-is-a-brands-wine-from-lisboa-region-quinta-do-rol-5600256523282.html",
+            "wine": "Quinta do Rol Barrica Fernão Pires 2015"
+          },
+          {
+            "abv": 12.5,
+            "producer": "Pinhal da Torre",
+            "sourceUrl": "https://winehouseportugal.com/en/ribatejo-wines/2835-quinta-do-alqueve-tradicional-2016-white-wine-located-in-the-heart-of-ribatejo-pinhal-da-torre-is-responsible-for-the-production.html",
+            "wine": "Quinta do Alqueve Tradicional 2016"
           }
         ]
       }

@@ -8,6 +8,9 @@ has the reasons.
 
 ### The library
 
+- **Fernão Pires's alcohol** (medium) from four producers: Casa Cadaval
+  (12 %), Ode (13.5 %), Quinta do Rol (13 %) and Pinhal da Torre (12.5 %).
+
 - **Ruby Cabernet is dry** (seven South African producers, 2.9 to 5.1 g/l)
   **and goes with pasta, pizza and red meat**, from the producers' own entries
   on wine.co.za.
