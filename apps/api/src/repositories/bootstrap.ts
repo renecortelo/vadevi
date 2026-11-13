@@ -283,6 +283,38 @@ export async function updateUserProfile(
         activeSpaceId,
         activeSpaceId,
       ),
+    // The personal Space is created before the reader has said which language
+    // they want, so it is born with the account's default. Onboarding is where
+    // they say it: the request that completes it also gives the personal Space
+    // that language — only on that first completion (`onboarding_completed_at`
+    // is this request's time) and only while nobody has edited the Space yet
+    // (version 1), so a language chosen by hand is never overwritten.
+    database
+      .prepare(
+        `UPDATE spaces
+        SET default_locale = ?, version = version + 1, updated_at = ?
+        WHERE ? = 1
+          AND type = 'personal'
+          AND version = 1
+          AND deleted_at IS NULL
+          AND default_locale <> ?
+          AND created_by_user_id = (
+            SELECT id FROM users
+            WHERE firebase_uid = ?
+              AND deleted_at IS NULL
+              AND onboarding_completed_at = ?
+          )`,
+      )
+      .bind(
+        options.update.preferredLocale ?? null,
+        now,
+        options.update.completeOnboarding === true && options.update.preferredLocale !== undefined
+          ? 1
+          : 0,
+        options.update.preferredLocale ?? null,
+        options.principal.firebaseUid,
+        now,
+      ),
     database
       .prepare(
         `INSERT INTO change_events (

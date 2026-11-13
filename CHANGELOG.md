@@ -164,7 +164,11 @@ has the reasons.
   duplicates keeps the filters on screen.
 - **A first sign-in stays in your language**: the app no longer turns to
   English after signing in, and the welcome form starts on the language you
-  arrived in.
+  arrived in. Your personal Space now takes that language too when you finish
+  the welcome form, instead of keeping the English it was created with; one
+  you have already edited keeps what it has. Migration 0050 does the same
+  for personal Spaces created before, where the owner finished in another
+  language and nobody had edited the Space.
 - **A confirmed deletion no longer waits on anything else**: it runs first on
   the schedule, and one task failing does not stop the others.
 - **Bottle-photo previews only for members**: the preview proxy now checks the

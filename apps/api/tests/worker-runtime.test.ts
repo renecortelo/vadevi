@@ -187,4 +187,59 @@ describe("Workers runtime", () => {
 
     expect(events).toEqual({ audits: 1, changes: 1 });
   });
+
+  it("gives the personal Space the language chosen at onboarding, once and only if untouched", async () => {
+    const personalSpace = (userId: string) =>
+      env.DB.prepare(
+        `SELECT default_locale AS locale, version FROM spaces
+        WHERE created_by_user_id = ? AND type = 'personal'`,
+      )
+        .bind(userId)
+        .first<{ locale: string; version: number }>();
+    const patchMe = (token: string, update: Record<string, unknown>) =>
+      SELF.fetch("https://vadevi.test/api/v1/me", {
+        body: JSON.stringify(update),
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        method: "PATCH",
+      });
+
+    // A new reader: the Space is born in the account's default, English.
+    const token = emulatorIdToken({ email: "locale@example.test", sub: "locale-reader" });
+    const bootstrap = BootstrapResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+      ).json(),
+    );
+    expect(await personalSpace(bootstrap.data.user.id)).toEqual({ locale: "en", version: 1 });
+
+    // Onboarding in Spanish gives the personal Space Spanish.
+    const onboarded = await patchMe(token, { completeOnboarding: true, preferredLocale: "es" });
+    expect(onboarded.status).toBe(200);
+    expect(await personalSpace(bootstrap.data.user.id)).toEqual({ locale: "es", version: 2 });
+
+    // A later change of the reader's language leaves the Space as it is.
+    expect((await patchMe(token, { preferredLocale: "fr" })).status).toBe(200);
+    expect(await personalSpace(bootstrap.data.user.id)).toEqual({ locale: "es", version: 2 });
+
+    // A Space edited before onboarding keeps what it was given.
+    const editedToken = emulatorIdToken({ email: "edited@example.test", sub: "locale-edited" });
+    const edited = BootstrapResponseSchema.parse(
+      await (
+        await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+          headers: { Authorization: `Bearer ${editedToken}` },
+        })
+      ).json(),
+    );
+    await env.DB.prepare(
+      `UPDATE spaces SET version = 2 WHERE created_by_user_id = ? AND type = 'personal'`,
+    )
+      .bind(edited.data.user.id)
+      .run();
+    expect(
+      (await patchMe(editedToken, { completeOnboarding: true, preferredLocale: "it" })).status,
+    ).toBe(200);
+    expect(await personalSpace(edited.data.user.id)).toEqual({ locale: "en", version: 2 });
+  });
 });
