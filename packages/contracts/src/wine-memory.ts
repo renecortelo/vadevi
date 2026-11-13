@@ -240,6 +240,42 @@ export const WineMemoryResponseSchema = z
   .strict()
   .openapi("WineMemoryResponse");
 
+/**
+ * A wine as a picker shows it: enough to tell one bottle from another, nothing
+ * more.
+ *
+ * The cellar, the wishlist, the price list and Quick Log each asked the Wine
+ * Memory list for a hundred wines to fill one dropdown, and every one of them
+ * came back with its tasting count, average score, last tasting, first photo,
+ * grapes and last venue — five lookups per wine and one more per page, all
+ * thrown away. A choice needs the label, and the id to send back.
+ */
+export const WineLookupItemSchema = z
+  .object({
+    displayName: z.string(),
+    id: ResourceIdSchema,
+    nonVintage: z.boolean(),
+    producerName: z.string(),
+    vintageYear: z.number().int().nullable(),
+  })
+  .strict();
+
+export const WineLookupQuerySchema = z
+  .object({
+    limit: z.coerce.number().int().min(1).max(100).default(100),
+    /** Matched like the Wine Memory search: name, producer, both, or an alias. */
+    query: z.string().trim().max(120).optional(),
+  })
+  .strict();
+
+export const WineLookupResponseSchema = z
+  .object({ data: z.array(WineLookupItemSchema).max(100) })
+  .strict()
+  .openapi("WineLookupResponse");
+
+export type WineLookupItem = z.infer<typeof WineLookupItemSchema>;
+export type WineLookupResponse = z.infer<typeof WineLookupResponseSchema>;
+
 export const WineMemorySortSchema = z.enum(["recent", "tasted", "score", "name"]);
 
 export const WineMemoryQuerySchema = z

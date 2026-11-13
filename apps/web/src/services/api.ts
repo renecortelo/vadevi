@@ -33,6 +33,7 @@ import {
   SyncRequestSchema,
   SyncResponseSchema,
   RegionPointsResponseSchema,
+  WineLookupResponseSchema,
   WineMemoryResponseSchema,
   WineResponseSchema,
   type IdentificationRequest,
@@ -41,6 +42,7 @@ import {
   type SyncRequest,
   type SyncResponse,
   type RegionPointsResponse,
+  type WineLookupItem,
   type WineMemoryResponse,
   type WineSummary,
 } from "@vadevi/contracts";
@@ -273,6 +275,31 @@ export async function getWineMemory(
   );
   if (!response.ok) throw await apiError(response);
   return WineMemoryResponseSchema.parse(await response.json());
+}
+
+/**
+ * Wines to choose from: id, producer, name and vintage, newest first.
+ *
+ * What the pickers ask for. The Wine Memory list answers with whole summaries —
+ * scores, tastings, photos, grapes, venues — which a dropdown never shows.
+ * An empty search is no search.
+ */
+export async function lookupWines(
+  tokenSource: TokenSource,
+  spaceId: string,
+  query = "",
+  signal?: AbortSignal,
+): Promise<WineLookupItem[]> {
+  const search = query.trim();
+  const response = await authenticatedFetch(
+    tokenSource,
+    `/api/v1/spaces/${spaceId}/wines/lookup${
+      search.length === 0 ? "" : `?query=${encodeURIComponent(search)}`
+    }`,
+    signal === undefined ? {} : { signal },
+  );
+  if (!response.ok) throw await apiError(response);
+  return WineLookupResponseSchema.parse(await response.json()).data;
 }
 
 /**

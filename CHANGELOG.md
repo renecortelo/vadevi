@@ -194,6 +194,16 @@ has the reasons.
 
 ### Lighter on the database
 
+- **Pickers ask for labels, not whole wines**: the cellar, the wishlist,
+  the price list and Quick Log's prefill filled their wine dropdown by
+  asking the memory list for a hundred wines, each with its tastings,
+  average score, last tasting, first photo, grapes and last venue — read
+  again on every search. They now use `wines/lookup`, which reads
+  producer, name and vintage from the wine table alone, newest first and
+  searched like the list. Prefilling Quick Log reads the one wine chosen.
+  Event screens still take whole wines, which they keep in the offline
+  copy of the event.
+
 - **Opening the app writes nothing when nothing changed**: each launch used
   to rewrite the account's row (e-mail, picture and update time) even when
   they were the same; now it only does when the sign-in brings a different

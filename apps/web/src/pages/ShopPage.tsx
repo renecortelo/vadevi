@@ -5,7 +5,7 @@ import {
   type PriceObservationListResponse,
   supportedCurrencies,
   toMinorUnits,
-  type WineSummary,
+  type WineLookupItem,
 } from "@vadevi/contracts";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
@@ -14,7 +14,7 @@ import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
-import { getWineMemory } from "../services/api";
+import { lookupWines } from "../services/api";
 import { createPriceObservation, getPriceObservations } from "../services/cellar";
 import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
@@ -31,7 +31,7 @@ export function ShopPage() {
   const { user } = useAuth();
   const { bootstrap } = useSession();
   const spaceId = bootstrap.data.user.activeSpaceId;
-  const [wines, setWines] = useState<WineSummary[]>([]);
+  const [wines, setWines] = useState<WineLookupItem[]>([]);
   const [wineId, setWineId] = useState("");
   const [prices, setPrices] = useState<PriceObservationListResponse>({
     data: { hasMore: false, nextCursor: null, observations: [], warnings: [] },
@@ -113,7 +113,7 @@ export function ShopPage() {
       return;
     }
     try {
-      setWines((await getWineMemory(user, spaceId, { limit: 100 })).data);
+      setWines(await lookupWines(user, spaceId));
     } catch {
       setError(true);
     }
@@ -167,11 +167,7 @@ export function ShopPage() {
   async function searchWines(query: string) {
     if (user === null || !navigator.onLine) return;
     try {
-      const response = await getWineMemory(user, spaceId, {
-        limit: 100,
-        ...(query.length === 0 ? {} : { query }),
-      });
-      setWines(response.data);
+      setWines(await lookupWines(user, spaceId, query));
     } catch {
       // Keep whatever is already offered; the reader can still pick from it.
     }

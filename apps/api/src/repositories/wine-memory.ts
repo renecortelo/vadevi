@@ -8,6 +8,7 @@ import type {
   TastingNoteResponse,
   UpdateWineRequest,
   WineGrape,
+  WineLookupItem,
   WineMemoryResponse,
   WineSummary,
 } from "@vadevi/contracts";
@@ -776,6 +777,98 @@ export async function listWines(
           : null,
     },
   };
+}
+
+type LookupRow = {
+  display_name: string;
+  id: string;
+  non_vintage: number;
+  producer_name: string;
+  vintage_year: number | null;
+};
+
+/**
+ * Wines to choose from, as a picker needs them.
+ *
+ * The Wine Memory list computes, for every row, the tasting count, the average
+ * score, the last tasting, the first photo and the grapes, and then the last
+ * venue for the page. A dropdown shows a producer, a name and a vintage. This
+ * reads those from `wine_records` alone, newest first like the list's default
+ * order (served by `idx_wine_records_updated`), and matches the search the way
+ * the list does, so a wine found there is found here.
+ *
+ * `null` when the caller is not an active member of a live Space, which the
+ * route answers as not found.
+ */
+export async function lookupWines(
+  database: D1Database,
+  options: {
+    limit: number;
+    principal: FirebasePrincipal;
+    query?: string | undefined;
+    spaceId: string;
+  },
+): Promise<WineLookupItem[] | null> {
+  const query =
+    options.query === undefined || options.query.length === 0
+      ? null
+      : `%${normalizeWineText(options.query)}%`;
+  // One round trip: the membership answer and the rows, read together.
+  const [membership, rows] = await database.batch<Record<string, unknown>>([
+    database
+      .prepare(
+        `SELECT 1 AS allowed FROM users actor
+        JOIN space_memberships membership ON membership.user_id = actor.id
+        JOIN spaces space ON space.id = membership.space_id
+        WHERE actor.firebase_uid = ? AND actor.deleted_at IS NULL
+          AND membership.space_id = ? AND membership.status = 'active'
+          AND space.deleted_at IS NULL`,
+      )
+      .bind(options.principal.firebaseUid, options.spaceId),
+    database
+      .prepare(
+        `SELECT wine.id, wine.display_name, wine.producer_name, wine.vintage_year, wine.non_vintage
+        FROM wine_records wine
+        WHERE wine.space_id = ? AND wine.deleted_at IS NULL
+          -- Not correlated with the row, so it is answered once, not per wine.
+          AND EXISTS (
+            SELECT 1 FROM space_memberships membership
+            JOIN users actor ON actor.id = membership.user_id
+            WHERE membership.space_id = ? AND membership.status = 'active'
+              AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
+          )
+          AND (? IS NULL OR wine.normalized_name LIKE ? OR wine.normalized_producer_name LIKE ?
+            OR (wine.normalized_producer_name || ' ' || wine.normalized_name) LIKE ?
+            OR EXISTS (
+              SELECT 1 FROM wine_aliases alias
+              WHERE alias.wine_id = wine.id AND alias.space_id = wine.space_id
+                AND alias.normalized_alias LIKE ?
+            ))
+        ORDER BY wine.updated_at DESC, wine.id DESC
+        LIMIT ?`,
+      )
+      .bind(
+        options.spaceId,
+        options.spaceId,
+        options.principal.firebaseUid,
+        query,
+        query,
+        query,
+        query,
+        query,
+        options.limit,
+      ),
+  ]);
+  if (membership === undefined || membership.results.length === 0 || rows === undefined) {
+    return null;
+  }
+  return (rows.results as LookupRow[]).map((row) => ({
+    displayName: row.display_name,
+    id: row.id,
+    nonVintage: row.non_vintage === 1,
+    producerName: row.producer_name,
+    vintageYear: row.vintage_year,
+  }));
 }
 
 function sortValueOf(

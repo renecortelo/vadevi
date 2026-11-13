@@ -4,7 +4,7 @@ import {
   type CurrencyCode,
   supportedCurrencies,
   toMinorUnits,
-  type WineSummary,
+  type WineLookupItem,
 } from "@vadevi/contracts";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
@@ -14,7 +14,7 @@ import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, partitionId } from "../offline/database";
 import { WinePicker } from "../components/WinePicker";
 import { createIdempotencyKey } from "../security/idempotency";
-import { getWineMemory } from "../services/api";
+import { lookupWines } from "../services/api";
 import { createPurchase, getBottles, updateBottle } from "../services/cellar";
 import { useSession } from "../session/SessionContext";
 import { LoadMoreButton } from "../components/LoadMoreButton";
@@ -39,7 +39,7 @@ export function CellarPage() {
   const [response, setResponse] = useState<BottleListResponse>({
     data: { bottles: [], hasMore: false, inventory: emptyInventory, nextCursor: null },
   });
-  const [wines, setWines] = useState<WineSummary[]>([]);
+  const [wines, setWines] = useState<WineLookupItem[]>([]);
   const [usingCache, setUsingCache] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -76,12 +76,12 @@ export function CellarPage() {
     try {
       const [cellar, memory] = await Promise.all([
         getBottles(user, spaceId),
-        getWineMemory(user, spaceId, { limit: 100 }),
+        lookupWines(user, spaceId),
       ]);
       // A Space switched mid-load: this answer is the old Space's.
       if (!isLatest()) return;
       setResponse(cellar);
-      setWines(memory.data);
+      setWines(memory);
       setUsingCache(false);
       await offlineDatabase.cellar.put({
         id: partitionId(user.uid, spaceId),
@@ -104,7 +104,7 @@ export function CellarPage() {
   }, [load]);
 
   const wineById = useMemo(
-    () => new Map(wines.map((wine): [string, WineSummary] => [wine.id, wine])),
+    () => new Map(wines.map((wine): [string, WineLookupItem] => [wine.id, wine])),
     [wines],
   );
 
@@ -181,11 +181,7 @@ export function CellarPage() {
   async function searchWines(query: string) {
     if (user === null || !navigator.onLine) return;
     try {
-      const response = await getWineMemory(user, spaceId, {
-        limit: 100,
-        ...(query.length === 0 ? {} : { query }),
-      });
-      setWines(response.data);
+      setWines(await lookupWines(user, spaceId, query));
     } catch {
       // Keep whatever is already offered; the reader can still pick from it.
     }

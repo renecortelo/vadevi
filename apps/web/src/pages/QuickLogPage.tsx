@@ -1,5 +1,11 @@
 import { WineTypeSchema } from "@vadevi/contracts";
-import type { TastingSessionResponse, WineGrape, WineSummary, WineType } from "@vadevi/contracts";
+import type {
+  TastingSessionResponse,
+  WineGrape,
+  WineLookupItem,
+  WineSummary,
+  WineType,
+} from "@vadevi/contracts";
 import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
   descriptorsForWineType,
@@ -20,7 +26,7 @@ import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import { useWineSearch } from "../components/use-wine-search";
-import { getWineMemory } from "../services/api";
+import { getWine, lookupWines } from "../services/api";
 import { preprocessImage } from "../media/image";
 import { offlineDatabase, partitionId, type QuickLogDraft } from "../offline/database";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
@@ -89,13 +95,15 @@ export function QuickLogPage() {
   const [photoOpen, setPhotoOpen] = useState(false);
   // Wines already saved, offered as a prefill source for a new vintage of a
   // bottle already known. Best-effort: empty (and the control hidden) offline.
-  const [wines, setWines] = useState<WineSummary[]>([]);
+  // Only the label lives here; the whole wine is read when one is chosen.
+  const [wines, setWines] = useState<WineLookupItem[]>([]);
+  const prefillRequest = useRef(0);
 
   useEffect(() => {
     if (user === null) return;
     const controller = new AbortController();
-    void getWineMemory(user, spaceId, { limit: 100 }, controller.signal)
-      .then((memory) => setWines(memory.data))
+    void lookupWines(user, spaceId, "", controller.signal)
+      .then(setWines)
       .catch(() => undefined);
     return () => controller.abort();
   }, [spaceId, user]);
@@ -171,9 +179,18 @@ export function QuickLogPage() {
   // Copy a saved wine's details into this NEW draft — a fresh record, not a link
   // to the old bottle — so logging next year's vintage of the same wine is only a
   // change of year. The reader can still edit anything afterwards.
-  function prefillFrom(wineId: string) {
-    const source = wines.find((candidate) => candidate.id === wineId);
-    if (source === undefined) return;
+  async function prefillFrom(wineId: string) {
+    if (user === null) return;
+    // The picker holds labels only, so the details are read now. A second
+    // choice made before the first answer arrives is the one that counts.
+    const request = ++prefillRequest.current;
+    let source: WineSummary;
+    try {
+      source = await getWine(user, spaceId, wineId);
+    } catch {
+      return;
+    }
+    if (request !== prefillRequest.current) return;
     setSaved(false);
     setDraft((current) => ({
       ...current,
@@ -337,11 +354,7 @@ export function QuickLogPage() {
   async function searchWines(query: string) {
     if (user === null || !navigator.onLine) return;
     try {
-      const response = await getWineMemory(user, spaceId, {
-        limit: 100,
-        ...(query.length === 0 ? {} : { query }),
-      });
-      setWines(response.data);
+      setWines(await lookupWines(user, spaceId, query));
     } catch {
       // Keep whatever is already offered; prefilling is a convenience.
     }
@@ -407,7 +420,7 @@ export function QuickLogPage() {
               <select
                 id="prefill-from"
                 onChange={(event) => {
-                  if (event.target.value.length > 0) prefillFrom(event.target.value);
+                  if (event.target.value.length > 0) void prefillFrom(event.target.value);
                   event.target.selectedIndex = 0;
                 }}
                 value=""

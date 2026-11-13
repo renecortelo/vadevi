@@ -3,7 +3,7 @@ import {
   fromMinorUnits,
   supportedCurrencies,
   toMinorUnits,
-  type WineSummary,
+  type WineLookupItem,
   type WishlistItem,
   type WishlistListResponse,
 } from "@vadevi/contracts";
@@ -14,7 +14,7 @@ import { parseDecimalInput } from "../lib/decimal";
 import { useAuth } from "../auth/AuthContext";
 import { offlineDatabase, partitionId } from "../offline/database";
 import { createIdempotencyKey } from "../security/idempotency";
-import { getWineMemory } from "../services/api";
+import { lookupWines } from "../services/api";
 import { createWishlistItem, getWishlist, updateWishlistItem } from "../services/cellar";
 import { WinePicker } from "../components/WinePicker";
 import { useSession } from "../session/SessionContext";
@@ -33,7 +33,7 @@ export function WishlistPage() {
     hasMore: false,
     nextCursor: null,
   });
-  const [wines, setWines] = useState<WineSummary[]>([]);
+  const [wines, setWines] = useState<WineLookupItem[]>([]);
   const [usingCache, setUsingCache] = useState(false);
   const [error, setError] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -64,12 +64,12 @@ export function WishlistPage() {
     try {
       const [wishlist, memory] = await Promise.all([
         getWishlist(user, spaceId),
-        getWineMemory(user, spaceId, { limit: 100 }),
+        lookupWines(user, spaceId),
       ]);
       // A Space switched mid-load: this answer is the old Space's.
       if (!isLatest()) return;
       setResponse(wishlist);
-      setWines(memory.data);
+      setWines(memory);
       setUsingCache(false);
       await offlineDatabase.wishlist.put({
         id: partitionId(user.uid, spaceId),
@@ -90,7 +90,7 @@ export function WishlistPage() {
   }, [load]);
 
   const wineById = useMemo(
-    () => new Map(wines.map((wine): [string, WineSummary] => [wine.id, wine])),
+    () => new Map(wines.map((wine): [string, WineLookupItem] => [wine.id, wine])),
     [wines],
   );
 
@@ -152,11 +152,7 @@ export function WishlistPage() {
   async function searchWines(query: string) {
     if (user === null || !navigator.onLine) return;
     try {
-      const response = await getWineMemory(user, spaceId, {
-        limit: 100,
-        ...(query.length === 0 ? {} : { query }),
-      });
-      setWines(response.data);
+      setWines(await lookupWines(user, spaceId, query));
     } catch {
       // Keep whatever is already offered; the reader can still pick from it.
     }

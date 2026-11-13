@@ -44,6 +44,71 @@ test.describe("adding a wine where it is needed", () => {
 });
 
 /**
+ * Prefilling Quick Log from a wine already saved.
+ *
+ * The picker now holds only labels — producer, name, vintage — from
+ * `wines/lookup`, so choosing one must still bring its region and the rest:
+ * they are read for that one wine when it is chosen. And each screen with a
+ * picker asks for labels, not for a hundred full wines.
+ */
+test("prefilling Quick Log reads the chosen wine, and pickers use the lookup", async ({ page }) => {
+  test.setTimeout(120_000);
+  await signIn(page);
+  await completeOnboarding(page);
+
+  const token = await page.evaluate(() => {
+    const key = Object.keys(localStorage).find((k) => k.startsWith("firebase:authUser:"));
+    return key === undefined
+      ? ""
+      : (JSON.parse(localStorage.getItem(key) ?? "{}").stsTokenManager?.accessToken ?? "");
+  });
+  const headers = { Authorization: `Bearer ${token}` };
+  const me = await page.request.get("/api/v1/me/bootstrap", { headers });
+  const spaceId = (await me.json()).data.user.activeSpaceId as string;
+  const created = await page.request.post(`/api/v1/spaces/${spaceId}/wines`, {
+    data: {
+      displayName: "Prefill Negre",
+      identityStatus: "confirmed",
+      nonVintage: false,
+      producerName: "Celler del Prefill",
+      region: "Priorat",
+      vintageYear: 2019,
+      wineType: "red",
+    },
+    headers: { ...headers, "Idempotency-Key": `${"P".repeat(42)}0` },
+  });
+  expect(created.ok(), await created.text()).toBeTruthy();
+
+  const listAsks: string[] = [];
+  page.on("request", (request) => {
+    const url = new URL(request.url());
+    if (request.method() === "GET" && url.pathname.startsWith(`/api/v1/spaces/${spaceId}/wines`)) {
+      listAsks.push(url.pathname.slice(`/api/v1/spaces/${spaceId}`.length) + url.search);
+    }
+  });
+
+  for (const path of ["/cellar", "/wishlist", "/shop"]) {
+    await page.goto(path);
+    await page.waitForLoadState("networkidle");
+    await expect(page.locator("select#wine-picker")).toContainText("Prefill Negre");
+  }
+
+  await page.goto("/log/new");
+  await page.waitForLoadState("networkidle");
+  await page
+    .locator("select#prefill-from")
+    .selectOption({ label: "Celler del Prefill · Prefill Negre · '19" });
+  await expect(page.locator("#producer-name")).toHaveValue("Celler del Prefill");
+  await expect(page.locator("#wine-name")).toHaveValue("Prefill Negre");
+  await expect(page.locator("#region")).toHaveValue("Priorat");
+
+  // One lookup per screen with a picker. The full list is still read, but by
+  // the offline copy's refresh, which keeps whole wines on purpose; it runs on
+  // its own clock, so it is not counted here.
+  expect(listAsks.filter((ask) => ask === "/wines/lookup")).toHaveLength(4);
+});
+
+/**
  * Choosing wines for an event, while the list moves.
  *
  * The event screens used to resolve a selection against the visible list, which

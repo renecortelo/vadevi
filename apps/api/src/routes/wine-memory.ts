@@ -31,6 +31,8 @@ import {
   TastingNoteResponseSchema,
   UpdateWineRequestSchema,
   WineIdPathSchema,
+  WineLookupQuerySchema,
+  WineLookupResponseSchema,
   WineMemoryQuerySchema,
   WineMemoryResponseSchema,
   WineResponseSchema,
@@ -59,6 +61,7 @@ import {
   createWine,
   getWineSummary,
   listWines,
+  lookupWines,
   regionPoints,
   syncSpace,
   updateWine,
@@ -211,6 +214,41 @@ const regionPointsRoute = createRoute({
     404: {
       content: { "application/json": { schema: ErrorEnvelopeSchema } },
       description: "The Space is unavailable to the caller.",
+    },
+  },
+});
+
+/**
+ * Wines to choose from: id, producer, name and vintage, newest first.
+ *
+ * For the pickers, which used to ask the Wine Memory list for a hundred full
+ * summaries to fill one dropdown. Registered before `wines/{wineId}` so the
+ * literal segment is never read as an id.
+ */
+const lookupWinesRoute = createRoute({
+  method: "get",
+  path: "/api/v1/spaces/{spaceId}/wines/lookup",
+  operationId: "lookupWines",
+  tags: ["Wine memory"],
+  summary: "The Space's wines as a picker shows them",
+  security: [{ FirebaseBearer: [] }],
+  request: { params: SpaceIdPathSchema, query: WineLookupQuerySchema },
+  responses: {
+    200: {
+      content: { "application/json": { schema: WineLookupResponseSchema } },
+      description: "Up to `limit` wines, most recently changed first.",
+    },
+    400: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Invalid query.",
+    },
+    401: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Authentication required.",
+    },
+    404: {
+      content: { "application/json": { schema: ErrorEnvelopeSchema } },
+      description: "Space unavailable.",
     },
   },
 });
@@ -715,6 +753,24 @@ export function registerWineMemoryRoutes(app: OpenAPIHono<ApiEnvironment>) {
           404,
         )
       : context.json(RegionPointsResponseSchema.parse({ data: points }), 200);
+  });
+
+  app.openapi(lookupWinesRoute, async (context) => {
+    const wines = await lookupWines(context.env.DB!, {
+      ...context.req.valid("query"),
+      principal: context.get("principal"),
+      spaceId: context.req.valid("param").spaceId,
+    });
+    return wines === null
+      ? context.json(
+          errorEnvelope(
+            context.get("requestId"),
+            "NOT_FOUND",
+            "The requested resource was not found.",
+          ),
+          404,
+        )
+      : context.json(WineLookupResponseSchema.parse({ data: wines }), 200);
   });
 
   app.openapi(getWineRoute, async (context) => {
