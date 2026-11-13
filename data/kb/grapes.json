@@ -28339,7 +28339,7 @@
   },
   {
     "acidity": null,
-    "alcohol": null,
+    "alcohol": "medium",
     "aromas": [
       "fruity"
     ],
@@ -28527,6 +28527,34 @@
         "quote": "Červená odrůdová vína jsou vhodná k pečenému vepřovému a jehněčímu masu a k sýrům s výraznější chutí, růžová vína hlavně k předkrmům či krémovým polévkám",
         "value": "soups",
         "sourceUrl": "https://cs.wikipedia.org/wiki/Mlyn%C3%A1%C5%99ka_(odr%C5%AFda_r%C3%A9vy_vinn%C3%A9)"
+      },
+      {
+        "basis": "producers-abv",
+        "factOnly": true,
+        "field": "alcohol",
+        "quote": "",
+        "sourceUrl": "https://www.dalrymplevineyards.com.au/pinot-meunier-2025/DALCPM256.html",
+        "value": "medium",
+        "wines": [
+          {
+            "abv": 13,
+            "producer": "Dalrymple Vineyards",
+            "sourceUrl": "https://www.dalrymplevineyards.com.au/pinot-meunier-2025/DALCPM256.html",
+            "wine": "Dalrymple Pinot Meunier 2025"
+          },
+          {
+            "abv": 13.5,
+            "producer": "Oakridge Wines",
+            "sourceUrl": "https://oakridgewines.com.au/wine/meunier-2025/",
+            "wine": "Oakridge Meunier 2025"
+          },
+          {
+            "abv": 12,
+            "producer": "Best's Great Western",
+            "sourceUrl": "https://www.campbellmattinson.com/reviews/bests-old-vine-pinot-meunier-2023",
+            "wine": "Best's Old Vine Pinot Meunier 2023"
+          }
+        ]
       },
       {
         "basis": "disputed",

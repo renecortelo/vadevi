@@ -8,6 +8,10 @@ has the reasons.
 
 ### The library
 
+- **Pinot Meunier's alcohol** (medium) from three still reds: Dalrymple
+  (13 %), Oakridge (13.5 %) and Best's Old Vine (12 %, as Campbell
+  Mattinson's review gives it).
+
 - **Fernão Pires's alcohol** (medium) from four producers: Casa Cadaval
   (12 %), Ode (13.5 %), Quinta do Rol (13 %) and Pinhal da Torre (12.5 %).
 

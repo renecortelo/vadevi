@@ -172,6 +172,13 @@ export const sources: Source[] = [
   },
   {
     group: "texts",
+    name: "Campbell Mattinson, reseñas de vinos australianos: solo el grado y la uva que da de cada vino, contados para el consenso de tres bodegas",
+    terms: "factOnly",
+    url: "https://www.campbellmattinson.com/reviews/bests-old-vine-pinot-meunier-2023",
+    what: "traits",
+  },
+  {
+    group: "texts",
     name: "South America Wine Guide (Amanda Barnes): solo el grado y la uva que da de cada vino, contados para el consenso de tres bodegas",
     terms: "factOnly",
     url: "https://southamericawineguide.com/tasting-note/j-bouchon-pais-salvaje/",
