@@ -7,6 +7,7 @@ import {
   WishlistListResponseSchema,
 } from "@vadevi/contracts";
 import { applyD1Migrations, env, SELF } from "cloudflare:test";
+import { ulid } from "ulid";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { randomOpaqueToken } from "../src/security/opaque-token";
@@ -144,6 +145,90 @@ describe("lists a page at a time", () => {
       expect(list.pages).toBe(Math.ceil(total / 2));
     }
     expect(priorities).toEqual([3, 2, 2, 1]);
+  });
+
+  it("pages past a hundred rows, each naming its own wine", async () => {
+    // D1 binds at most 100 parameters to a statement, and each row of the
+    // cellar and the wishlist carries its wine's name, looked up for the whole
+    // page at once. A page of 250 rows, each of a different wine, is where
+    // that would break, so 260 are seeded directly: through the API it would
+    // be slow and prove nothing more.
+    const owner = emulatorIdToken({
+      email: "list-paging-many@example.test",
+      sub: "firebase-emulator-user-list-paging-many",
+    });
+    const headers = { Authorization: `Bearer ${owner}` };
+    const me = BootstrapResponseSchema.parse(
+      await (await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", { headers })).json(),
+    );
+    const spaceId = me.data.user.activeSpaceId;
+    const now = new Date().toISOString();
+    const total = 260;
+    const statements = [];
+    for (let index = 0; index < total; index += 1) {
+      const wineId = ulid();
+      const name = `Many Wine ${String(index).padStart(3, "0")}`;
+      statements.push(
+        env.DB.prepare(
+          `INSERT INTO wine_records (
+            id, space_id, display_name, normalized_name, producer_name, normalized_producer_name,
+            non_vintage, identity_status, version, created_by_user_id, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, 'Many Producer', 'many producer', 0, 'confirmed', 1, ?, ?, ?)`,
+        ).bind(wineId, spaceId, name, name.toLowerCase(), me.data.user.id, now, now),
+        env.DB.prepare(
+          `INSERT INTO bottles (
+            id, space_id, wine_id, created_by_user_id, state, acquired_at, version, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, 'owned', ?, 1, ?, ?)`,
+        ).bind(ulid(), spaceId, wineId, me.data.user.id, now, now, now),
+        env.DB.prepare(
+          `INSERT INTO wishlist_items (
+            id, space_id, wine_id, created_by_user_id, reason, priority, state, version,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, 'Many', 2, 'active', 1, ?, ?)`,
+        ).bind(ulid(), spaceId, wineId, me.data.user.id, now, now),
+      );
+    }
+    await env.DB.batch(statements);
+
+    const read = async (list: "bottles" | "wishlist", limit: number | null) => {
+      const names: string[] = [];
+      const pages: number[] = [];
+      let cursor: string | null = null;
+      do {
+        const query = new URLSearchParams();
+        if (limit !== null) query.set("limit", String(limit));
+        if (cursor !== null) query.set("cursor", cursor);
+        const response = await SELF.fetch(
+          `https://vadevi.test/api/v1/spaces/${spaceId}/${list}?${query.toString()}`,
+          { headers },
+        );
+        expect(response.status).toBe(200);
+        const body: unknown = await response.json();
+        if (list === "bottles") {
+          const { data } = BottleListResponseSchema.parse(body);
+          names.push(...data.bottles.map((bottle) => bottle.wine?.displayName ?? ""));
+          pages.push(data.bottles.length);
+          cursor = data.nextCursor;
+        } else {
+          const response = WishlistListResponseSchema.parse(body);
+          names.push(...response.data.map((item) => item.wine?.displayName ?? ""));
+          pages.push(response.data.length);
+          cursor = response.nextCursor;
+        }
+      } while (cursor !== null && pages.length < 20);
+      return { names, pages };
+    };
+
+    for (const list of ["bottles", "wishlist"] as const) {
+      const full = await read(list, 250);
+      expect(full.pages).toEqual([250, 10]);
+      expect(new Set(full.names).size).toBe(total);
+      expect(full.names.every((name) => name.startsWith("Many Wine "))).toBe(true);
+
+      const byDefault = await read(list, null);
+      expect(byDefault.pages.reduce((sum, rows) => sum + rows, 0)).toBe(total);
+      expect(new Set(byDefault.names).size).toBe(total);
+    }
   });
 
   it("refuses a cursor that is not one", async () => {
