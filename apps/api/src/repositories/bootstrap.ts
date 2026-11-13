@@ -67,7 +67,14 @@ export async function bootstrapUser(
           email_normalized = excluded.email_normalized,
           avatar_url = excluded.avatar_url,
           updated_at = excluded.updated_at
-        WHERE users.deleted_at IS NULL`,
+        WHERE users.deleted_at IS NULL
+          -- Every launch of the app runs this. A row the update reaches counts
+          -- as written even when nothing in it changes, so it is reached only
+          -- when the sign-in brings a different e-mail or picture.
+          AND (
+            users.email_normalized IS NOT excluded.email_normalized
+            OR users.avatar_url IS NOT excluded.avatar_url
+          )`,
       )
       .bind(
         candidateUserId,

@@ -194,6 +194,11 @@ has the reasons.
 
 ### Lighter on the database
 
+- **Opening the app writes nothing when nothing changed**: each launch used
+  to rewrite the account's row (e-mail, picture and update time) even when
+  they were the same; now it only does when the sign-in brings a different
+  e-mail or picture.
+
 - **A wine's photo without reading every photo**: the memory list, a wine's
   card and a session's wines found each wine's first photo by reading all
   the Space's ready photos and sorting them, wine by wine; an index in the

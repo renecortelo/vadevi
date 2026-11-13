@@ -94,6 +94,35 @@ describe("Workers runtime", () => {
     expect(counts).toEqual({ audits: 1, memberships: 1, spaces: 1, users: 1 });
   });
 
+  it("writes nothing when the app is opened again and nothing has changed", async () => {
+    const sub = "firebase-emulator-user-quiet-bootstrap";
+    const open = (email: string) =>
+      SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
+        headers: { Authorization: `Bearer ${emulatorIdToken({ email, sub })}` },
+      });
+    const row = () =>
+      env.DB.prepare(
+        `SELECT email_normalized AS email, updated_at FROM users WHERE firebase_uid = ?`,
+      )
+        .bind(sub)
+        .first<{ email: string; updated_at: string }>();
+
+    expect((await open("quiet@example.test")).status).toBe(200);
+    const first = await row();
+    await new Promise((resolve) => setTimeout(resolve, 10));
+
+    // The same sign-in again: the row is not rewritten.
+    expect((await open("quiet@example.test")).status).toBe(200);
+    expect(await row()).toEqual(first);
+
+    // A different e-mail from the provider is still taken.
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    expect((await open("quiet.new@example.test")).status).toBe(200);
+    const changed = await row();
+    expect(changed?.email).toBe("quiet.new@example.test");
+    expect(changed?.updated_at).not.toBe(first?.updated_at);
+  });
+
   it("rejects empty updates and Spaces outside the user's memberships", async () => {
     const token = emulatorIdToken();
     await SELF.fetch("https://vadevi.test/api/v1/me/bootstrap", {
