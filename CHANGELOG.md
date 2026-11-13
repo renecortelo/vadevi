@@ -132,6 +132,17 @@ has the reasons.
   Paradigm; Usakhelauri's plum from its Georgian appellation; alcohol for
   Garnacha Roja, Rondo and Nero d'Avola; and lamb, beef and fish for Mencía.
 
+### Security
+
+- **Hono 4.13.18** for the API (was 4.13.13). It closes five advisories,
+  among them one where the router could skip wildcard middleware for some
+  routes (GHSA-h7mg-cq63-vhpq): the API puts sign-in and the access list on
+  wildcard paths. Also `mount()` path forwarding, `csrf()` and hyperlink
+  auditing, `validator('form')` with multipart bodies and the `css` helper.
+  The production audit is clean; what remains is in build and development
+  tools only (deepmerge, glob, minimatch, @hono/node-server under
+  firebase-tools).
+
 ### Lists that hold up
 
 - **Bottles and wishlist items keep their names**: the cards read "unknown
