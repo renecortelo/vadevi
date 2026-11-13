@@ -194,6 +194,13 @@ has the reasons.
 
 ### Lighter on the database
 
+- **A wine's photo without reading every photo**: the memory list, a wine's
+  card and a session's wines found each wine's first photo by reading all
+  the Space's ready photos and sorting them, wine by wine; an index in the
+  photo order lets each wine read its own links and stop at the first. The
+  scheduled clean-up of expired uploads also stops reading the whole link
+  table for each one (migration 0051).
+
 - **The library reads up to a thousand times fewer rows**: a grape's card,
   the library search, linking a wine to its registered name and the
   assistant's reading of names now use the indexes they were meant to (a
