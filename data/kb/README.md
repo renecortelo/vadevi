@@ -343,9 +343,9 @@ operator's rule of the fact alone (24 October 2026). The library keeps the
 value and the link and names who says it; it never shows the page's
 sentence. A page whose terms forbid automated access, extraction, building a
 database or reusing its data is not used at all (Wine Folly, VinoVoss, the
-German Wine Institute's «private, non-commercial» copies), nor are rating or
-shop sites; a site that refuses scripts goes on the operator's list to read
-by hand.
+German Wine Institute's «private, non-commercial» copies, Decanter's World
+Wine Awards), nor is a rating; a site that refuses scripts, ClaudeBot
+included, goes on the operator's list to read by hand.
 
 - **A page about the grape itself** (the Georgian Wine Association's
   «Grape varieties», the Italian ministry's register of vine varieties):
@@ -354,9 +354,16 @@ by hand.
   that grape alone («100 % Grillo», «in purezza», «monovarietal») is about
   that wine, not the grape, so it stands only when **three producers or
   more** say the same of theirs. Each counts once however many sites carry
-  its sheet (its own, an importer's); a shop's tasting note is not the
-  producer's and does not count. The card says «according to the wines of
-  three producers» and lists each wine, linked. A sheet's label line naming
+  its sheet (its own, an importer's). Since 4 November 2026 (the operator's
+  decision) a shop's or restaurant's page about one bottle that names its
+  producer counts as that wine's sheet too, and so do the catalogues the
+  producers or exhibitors fill in themselves (Bottlebooks and ICEX tastings,
+  regional commissions' catalogues, South Africa's wine.co.za) — for
+  figures, and for pairings where the producer wrote them. A critic's guide
+  counts for a wine's figures only, never for its notes or pairings. A
+  wine is that grape alone when its sheet names no other; one that another
+  source shows to be a blend is left out. The card says «according to the
+  wines of three producers» and lists each wine, linked. A sheet's label line naming
   one grape alone («Rebsorte: Silvaner», «Varietal: Lagrein») counts as the
   wine being that grape. A sentence that rules a dish out («con esclusione
   della selvaggina») gives no pairing, and a name more than one variety
@@ -381,9 +388,11 @@ by hand.
   of 28 October 2026): a sheet's «zucchero residuo 1,5 g/l» is turned into
   the term the EU's labelling rules define for it (Regulation (EU) 2019/33,
   Annex III, Part B): dry up to 4 g/l, semi-dry («medium dry», «medium») to
-  45, sweet above. Between 4 and 9 g/l a wine is dry only if its acidity is
-  high enough, which a sheet rarely says, so it gets no level and counts
-  against any; an upper bound («< 1,5 g/l») is read only when it is dry's.
+  45, sweet above. Between 4 and 9 g/l a wine is dry only if its total
+  acidity is no more than 2 g/l below its sugar, as the same annex says, so
+  such a wine counts as dry only where its sheet gives the acidity too (and
+  the card quotes it); without it the wine gets no level and counts against
+  any. An upper bound («< 1,5 g/l») is read only when it is dry's.
   Sparkling and rosé pages are left out, as for alcohol. A level, or a range
   of two, stands when three producers reach each end and two thirds of all
   those listed fall within it. Red wines rarely write «dry» on their sheets
