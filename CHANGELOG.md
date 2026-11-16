@@ -200,9 +200,11 @@ has the reasons.
   They were found by a new test that runs the repositories behind the most
   used routes — the bootstrap, the memory in its four orders, search and
   filters, the pickers' lookup, a wine, the cellar, the wishlist, prices,
-  events and a wine's tastings, personal statistics — records every
-  statement they execute and fails on any that reads a whole table or
-  sorts a page after reading it.
+  events and a wine's tastings, personal statistics, and every page of the
+  library — records every statement they execute and fails on any that
+  reads a whole table or sorts a page after reading it. The few that read
+  a whole table because the answer is the whole table (every grape, every
+  topic) are listed in the test with why.
 
 - **Clean-ups read only what they clean**: the scheduled run looked for
   expired photographs and for wines whose region is not yet linked by
