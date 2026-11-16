@@ -1,7 +1,7 @@
 import type {
   SessionComparisonResponse,
   TastingSessionDetailResponse,
-  WineSummary,
+  WineLookupItem,
 } from "@vadevi/contracts";
 import { descriptorText, resolveSupportedLocale } from "@vadevi/i18n/runtime";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -20,7 +20,8 @@ import {
 } from "../offline/phase3";
 import { useWineChoice } from "../components/use-wine-choice";
 import { useWineSearch } from "../components/use-wine-search";
-import { getWineMemory } from "../services/api";
+import { lookupWines } from "../services/api";
+import { wholeWines } from "../offline/whole-wines";
 import { getSessionComparison, getTastingSession } from "../services/tasting";
 import { useSession } from "../session/SessionContext";
 import { MapLink } from "../components/MapLink";
@@ -41,8 +42,9 @@ export function SessionDetailPage() {
   const locale = resolveSupportedLocale(i18n.language);
   const [detail, setDetail] = useState<TastingSessionDetailResponse | null>(null);
   const [comparison, setComparison] = useState<SessionComparisonResponse | null>(null);
-  const [availableWines, setAvailableWines] = useState<WineSummary[]>([]);
-  const choice = useWineChoice<WineSummary>();
+  // Labels only; the whole wines are read for the ones chosen, on adding.
+  const [availableWines, setAvailableWines] = useState<WineLookupItem[]>([]);
+  const choice = useWineChoice<WineLookupItem>();
   const [usingCache, setUsingCache] = useState(false);
   const [error, setError] = useState(false);
 
@@ -98,7 +100,7 @@ export function SessionDetailPage() {
       return;
     }
     try {
-      setAvailableWines((await getWineMemory(user, spaceId, { limit: 100 })).data);
+      setAvailableWines(await lookupWines(user, spaceId));
     } catch {
       await loadCachedWines();
     }
@@ -158,7 +160,7 @@ export function SessionDetailPage() {
         userId: user.uid,
         // From the choice itself: searching replaces what is visible, and a
         // wine ticked before a search would otherwise be dropped from the flight.
-        wines: choice.chosen,
+        wines: await wholeWines(user, user.uid, spaceId, choice.chosen),
       });
       choice.clear();
       await refreshStatus();
@@ -173,11 +175,7 @@ export function SessionDetailPage() {
   async function searchWines(query: string) {
     if (user === null || !navigator.onLine) return;
     try {
-      const response = await getWineMemory(user, spaceId, {
-        limit: 100,
-        ...(query.length === 0 ? {} : { query }),
-      });
-      setAvailableWines(response.data);
+      setAvailableWines(await lookupWines(user, spaceId, query));
     } catch {
       // Keep whatever is already offered.
     }
@@ -189,7 +187,7 @@ export function SessionDetailPage() {
   const addVisible = [
     ...addSearch.shown,
     ...choice.chosen.filter((wine) => !addSearch.shown.some((shown) => shown.id === wine.id)),
-  ] as WineSummary[];
+  ] as WineLookupItem[];
 
   if (detail === null) {
     return (

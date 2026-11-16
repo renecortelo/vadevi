@@ -1,4 +1,4 @@
-import type { WineSummary } from "@vadevi/contracts";
+import type { WineLookupItem } from "@vadevi/contracts";
 import { type FormEvent, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router";
@@ -9,9 +9,10 @@ import { VenuePicker } from "../components/VenuePicker";
 import { offlineDatabase } from "../offline/database";
 import { useOfflineSync } from "../offline/OfflineSyncContext";
 import { queueNewSession } from "../offline/phase3";
+import { wholeWines } from "../offline/whole-wines";
 import { useWineChoice } from "../components/use-wine-choice";
 import { useWineSearch } from "../components/use-wine-search";
-import { getWineMemory } from "../services/api";
+import { lookupWines } from "../services/api";
 import { useSession } from "../session/SessionContext";
 import { fromLocalDateTimeInput, toLocalDateTimeInput } from "../lib/local-date-time";
 
@@ -32,8 +33,9 @@ export function NewSessionPage() {
   );
   const [startsAt, setStartsAt] = useState(() => toLocalDateTimeInput(new Date().toISOString()));
   const [status, setStatus] = useState<"active" | "draft">("active");
-  const [wines, setWines] = useState<WineSummary[]>([]);
-  const choice = useWineChoice<WineSummary>();
+  // Labels only; the whole wines are read for the ones chosen, on saving.
+  const [wines, setWines] = useState<WineLookupItem[]>([]);
+  const choice = useWineChoice<WineLookupItem>();
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -47,9 +49,7 @@ export function NewSessionPage() {
     };
     if (user === null || !navigator.onLine) void loadCached();
     else {
-      void getWineMemory(user, spaceId, { limit: 100 }, controller.signal)
-        .then((response) => setWines(response.data))
-        .catch(loadCached);
+      void lookupWines(user, spaceId, "", controller.signal).then(setWines).catch(loadCached);
     }
     return () => controller.abort();
   }, [spaceId, user, userId]);
@@ -65,7 +65,7 @@ export function NewSessionPage() {
     try {
       // From the choice itself, not from the visible list: searching replaces
       // what is visible, and a wine ticked before a search would be dropped.
-      const selected = choice.chosen;
+      const selected = await wholeWines(user, user.uid, spaceId, choice.chosen);
       const sessionId = await queueNewSession({
         createdByUserId: bootstrap.data.user.id,
         request: {
@@ -94,11 +94,7 @@ export function NewSessionPage() {
   async function searchWines(query: string) {
     if (user === null || !navigator.onLine) return;
     try {
-      const response = await getWineMemory(user, spaceId, {
-        limit: 100,
-        ...(query.length === 0 ? {} : { query }),
-      });
-      setWines(response.data);
+      setWines(await lookupWines(user, spaceId, query));
     } catch {
       // Keep whatever is already offered.
     }
@@ -110,7 +106,7 @@ export function NewSessionPage() {
   const flightVisible = [
     ...flightSearch.shown,
     ...choice.chosen.filter((wine) => !flightSearch.shown.some((shown) => shown.id === wine.id)),
-  ] as WineSummary[];
+  ] as WineLookupItem[];
 
   return (
     <section className="sessions-page">

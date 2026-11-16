@@ -153,3 +153,89 @@ test("a wine ticked before a search survives it into the flight", async ({ page 
   const alfaAfter = page.locator("label.wine-picker", { hasText: "Alfa Uno" }).locator("input");
   await expect(alfaAfter).toBeChecked();
 });
+
+/**
+ * An event's wines, chosen by label and saved whole.
+ *
+ * The event screens offer wines from `wines/lookup`, labels only, but queue the
+ * event as it will look once saved, so it shows at once and offline. The whole
+ * wines come from the device's offline copy, or, for one it does not hold, from
+ * the server one by one. The copy is emptied here so that second way is the one
+ * taken: the flight must still name its wines.
+ */
+test("an event's wines are chosen by label and saved whole", async ({ page }) => {
+  test.setTimeout(120_000);
+  await signIn(page);
+  await completeOnboarding(page);
+
+  const token = await page.evaluate(() => {
+    const key = Object.keys(localStorage).find((k) => k.startsWith("firebase:authUser:"));
+    return key === undefined
+      ? ""
+      : (JSON.parse(localStorage.getItem(key) ?? "{}").stsTokenManager?.accessToken ?? "");
+  });
+  const headers = { Authorization: `Bearer ${token}` };
+  const me = await page.request.get("/api/v1/me/bootstrap", { headers });
+  const spaceId = (await me.json()).data.user.activeSpaceId as string;
+  for (const [index, name] of ["Vol Primer", "Vol Segon"].entries()) {
+    const created = await page.request.post(`/api/v1/spaces/${spaceId}/wines`, {
+      data: {
+        displayName: name,
+        identityStatus: "confirmed",
+        nonVintage: false,
+        producerName: "Celler del Vol",
+        vintageYear: 2021,
+        wineType: "red",
+      },
+      headers: { ...headers, "Idempotency-Key": `${"V".repeat(42)}${index}` },
+    });
+    expect(created.ok(), await created.text()).toBeTruthy();
+  }
+
+  const asks: string[] = [];
+  page.on("request", (request) => {
+    const url = new URL(request.url());
+    if (request.method() === "GET" && url.pathname.startsWith(`/api/v1/spaces/${spaceId}/wines/`)) {
+      asks.push(url.pathname.slice(`/api/v1/spaces/${spaceId}/wines/`.length));
+    }
+  });
+  const emptyTheCopy = () =>
+    page.evaluate(
+      () =>
+        new Promise<void>((resolve, reject) => {
+          const opened = indexedDB.open("vadevi-offline-v1");
+          opened.onsuccess = () => {
+            const cleared = opened.result
+              .transaction("snapshots", "readwrite")
+              .objectStore("snapshots")
+              .clear();
+            cleared.onsuccess = () => resolve();
+            cleared.onerror = () => reject(cleared.error);
+          };
+          opened.onerror = () => reject(opened.error);
+        }),
+    );
+
+  await page.goto("/sessions/new");
+  await page.waitForLoadState("networkidle");
+  await emptyTheCopy();
+  await page.getByLabel(/name/i).first().fill("Cata del vol");
+  await page.locator("label.wine-picker", { hasText: "Vol Primer" }).locator("input").check();
+  await page.getByRole("button", { name: /create event/i }).click();
+
+  await expect(page).toHaveURL(/\/sessions\/[0-9A-Z]{26}$/, { timeout: 30_000 });
+  await expect(page.locator(".flight-card h3")).toHaveText(["Vol Primer"]);
+
+  await emptyTheCopy();
+  await page.locator("label.wine-picker", { hasText: "Vol Segon" }).locator("input").check();
+  await page.getByRole("button", { name: /add to flight/i }).click();
+  await expect(page.locator(".flight-card h3")).toHaveText(["Vol Primer", "Vol Segon"], {
+    timeout: 30_000,
+  });
+
+  // Both screens offered labels. The first wine, with the copy emptied, was
+  // read whole by id; the second may come from the copy instead, which the
+  // sync refills once the event is saved — either is a way the screen has.
+  expect(asks.filter((ask) => ask === "lookup").length).toBeGreaterThanOrEqual(2);
+  expect(asks.filter((ask) => /^[0-9A-Z]{26}$/.test(ask)).length).toBeGreaterThanOrEqual(1);
+});
