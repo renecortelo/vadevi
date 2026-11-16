@@ -194,6 +194,14 @@ has the reasons.
 
 ### Lighter on the database
 
+- **No more change log nobody read**: every change to a wine, a tasting,
+  a bottle, a source or a profile also wrote a row to a change log meant
+  for a future incremental sync. Nothing ever applied it — the offline
+  copy refreshes from the Wine Memory list — and it never recorded a
+  deletion, so it could not have served that purpose as it was. It is no
+  longer written; `/sync` still answers with an empty `changes` list so
+  installed clients keep working, and the table is then dropped.
+
 - **Pickers ask for labels, not whole wines**: the cellar, the wishlist,
   the price list and Quick Log's prefill filled their wine dropdown by
   asking the memory list for a hundred wines, each with its tastings,

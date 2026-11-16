@@ -596,6 +596,11 @@ describe("Wine Memory and Quick Log", () => {
       "applied",
       "applied",
     ]);
+    // There is no change feed (D-06): the fields stay for installed clients,
+    // empty, and the cursor sent (none here) is the cursor returned.
+    expect(first.data.changes).toEqual([]);
+    expect(first.data.hasMore).toBe(false);
+    expect(first.data.nextCursor).toBe("0");
     const replayResponse = await sync();
     const replay = SyncResponseSchema.parse(await replayResponse.json());
     expect(replay.data.mutationResults.map((result: { status: string }) => result.status)).toEqual([

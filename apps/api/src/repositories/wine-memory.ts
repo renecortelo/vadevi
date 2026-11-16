@@ -415,15 +415,6 @@ export async function createWine(
       .bind(now, options.request.mediaId ?? null, candidateId, options.spaceId),
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT space_id, 'wine_record', id, 'create', version, ?
-        FROM wine_records WHERE id = ? AND space_id = ? AND created_at = ?`,
-      )
-      .bind(now, candidateId, options.spaceId, now),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
@@ -1007,14 +998,6 @@ export async function createTastingNote(
         )
         .bind(ulid(), code, code, now, now, candidateId, options.spaceId),
     ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'tasting_note', id, 'create', version, ?
-          FROM tasting_notes WHERE id = ? AND space_id = ? AND created_at = ?`,
-      )
-      .bind(now, candidateId, options.spaceId, now),
   ]);
 
   const command = await database
@@ -1207,41 +1190,18 @@ export async function syncSpace(
 
   const rawCursor = options.cursor === null ? 0 : Number.parseInt(options.cursor, 10);
   if (!Number.isSafeInteger(rawCursor) || rawCursor < 0) return null;
-  const changesResult = await database
-    .prepare(
-      `SELECT event.seq, event.resource_type, event.resource_id, event.operation,
-        event.resource_version, event.changed_at
-      FROM change_events event
-      JOIN space_memberships membership ON membership.space_id = event.space_id
-      JOIN users actor ON actor.id = membership.user_id
-      WHERE event.space_id = ? AND event.seq > ?
-        AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
-        AND membership.status = 'active'
-      ORDER BY event.seq LIMIT 101`,
-    )
-    .bind(options.spaceId, rawCursor, options.principal.firebaseUid)
-    .all<{
-      changed_at: string;
-      operation: "create" | "delete" | "update";
-      resource_id: string;
-      resource_type: string;
-      resource_version: number;
-      seq: number;
-    }>();
-  const hasMore = changesResult.results.length > 100;
-  const changes = changesResult.results.slice(0, 100);
+  // There is no change feed (D-06, 16 Nov 2026). `change_events` was written by
+  // every mutation and read only here, and no client ever applied what this
+  // returned: the offline copy is refreshed by reading the Wine Memory list.
+  // It never recorded a deletion either, so it could not have been a sync
+  // feed without a redesign. The fields stay, empty, so a client already
+  // installed keeps parsing the answer; the cursor it sent comes back as is.
   return {
     data: {
-      changes: changes.map((event) => ({
-        changedAt: event.changed_at,
-        operation: event.operation,
-        resourceId: event.resource_id,
-        resourceType: event.resource_type,
-        version: event.resource_version,
-      })),
-      hasMore,
+      changes: [],
+      hasMore: false,
       mutationResults,
-      nextCursor: String(changes.at(-1)?.seq ?? rawCursor),
+      nextCursor: String(rawCursor),
     },
   };
 }
@@ -1433,15 +1393,6 @@ export async function updateWine(
         ON CONFLICT(wine_id, media_id) DO NOTHING`,
       )
       .bind(now, next.mediaId ?? null, options.wineId, options.spaceId),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT space_id, 'wine_record', id, 'update', version, ?
-        FROM wine_records WHERE id = ? AND space_id = ?`,
-      )
-      .bind(now, options.wineId, options.spaceId),
     database
       .prepare(
         `INSERT INTO audit_events (

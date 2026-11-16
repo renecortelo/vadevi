@@ -453,13 +453,6 @@ export async function createBottle(
       ),
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) VALUES (?, 'bottle', ?, 'create', 1, ?)`,
-      )
-      .bind(options.spaceId, bottleId, now),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
@@ -544,13 +537,6 @@ export async function updateBottle(
         options.spaceId,
         options.request.version,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT ?, 'bottle', ?, 'update', ?, ? WHERE changes() = 1`,
-      )
-      .bind(options.spaceId, options.bottleId, nextVersion, now),
     database
       .prepare(
         `INSERT INTO audit_events (
@@ -783,36 +769,8 @@ export async function createPurchase(
         WHERE space_id = ? AND wine_id = ? AND state = 'active' AND deleted_at IS NULL`,
       )
       .bind(now, options.spaceId, options.request.wineId),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) VALUES
-          (?, 'purchase', ?, 'create', 1, ?),
-          (?, 'price_observation', ?, 'create', 1, ?)`,
-      )
-      .bind(options.spaceId, purchaseId, now, options.spaceId, priceId, now),
   );
-  if (bottleIds.length > 0) {
-    statements.push(
-      database
-        .prepare(
-          `INSERT INTO change_events (
-            space_id, resource_type, resource_id, operation, resource_version, changed_at
-          ) SELECT ?, 'bottle', value, 'create', 1, ? FROM json_each(?)`,
-        )
-        .bind(options.spaceId, now, JSON.stringify(bottleIds)),
-    );
-  }
   statements.push(
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'wishlist_item', id, 'update', version, ?
-        FROM wishlist_items WHERE space_id = ? AND wine_id = ? AND state = 'purchased' AND updated_at = ?`,
-      )
-      .bind(now, options.spaceId, options.request.wineId, now),
     database
       .prepare(
         `INSERT INTO audit_events (
@@ -978,13 +936,6 @@ export async function createWishlistItem(
         now,
         now,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) VALUES (?, 'wishlist_item', ?, 'create', 1, ?)`,
-      )
-      .bind(options.spaceId, itemId, now),
   ]);
   const row = await wishlistById(database, options.spaceId, itemId);
   return row === null
@@ -1037,13 +988,6 @@ export async function updateWishlistItem(
         options.spaceId,
         options.request.version,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT ?, 'wishlist_item', ?, 'update', ?, ? WHERE changes() = 1`,
-      )
-      .bind(options.spaceId, options.itemId, nextVersion, now),
   ]);
   if (result[0]?.meta.changes !== 1) {
     const latest = await wishlistById(database, options.spaceId, options.itemId);
@@ -1218,13 +1162,6 @@ export async function createPriceObservation(
         now,
         now,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) VALUES (?, 'price_observation', ?, 'create', 1, ?)`,
-      )
-      .bind(options.spaceId, priceId, now),
     database
       .prepare(
         `INSERT INTO audit_events (

@@ -153,16 +153,6 @@ export async function bootstrapUser(
       .bind(now, options.principal.firebaseUid),
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT id, 'space', id, 'create', version, ?
-        FROM spaces
-        WHERE id = ?`,
-      )
-      .bind(now, candidateSpaceId),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
@@ -322,19 +312,6 @@ export async function updateUserProfile(
         options.principal.firebaseUid,
         now,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT active_space_id, 'user_profile', id, 'update', 1, ?
-        FROM users
-        WHERE firebase_uid = ?
-          AND deleted_at IS NULL
-          AND active_space_id IS NOT NULL
-          AND updated_at = ?`,
-      )
-      .bind(now, options.principal.firebaseUid, now),
     database
       .prepare(
         `INSERT INTO audit_events (

@@ -265,13 +265,6 @@ export async function createSource(
         ),
       database
         .prepare(
-          `INSERT INTO change_events (
-            space_id, resource_type, resource_id, operation, resource_version, changed_at
-          ) VALUES (?, 'source', ?, 'create', 1, ?)`,
-        )
-        .bind(options.spaceId, sourceId, now),
-      database
-        .prepare(
           `INSERT INTO audit_events (
             id, actor_user_id, space_id, action, target_type, target_id,
             request_id, safe_metadata_json, created_at
@@ -525,13 +518,6 @@ export async function createWineFact(
   commands.push(
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) VALUES (?, 'fact', ?, 'create', 1, ?)`,
-      )
-      .bind(options.spaceId, factId, now),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
@@ -593,14 +579,6 @@ export async function acceptFact(
           AND status <> 'retired'`,
       )
       .bind(actorId, now, now, options.factId, options.spaceId, options.version),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'fact', id, 'update', version, ?
-          FROM facts WHERE id = ? AND space_id = ? AND updated_at = ?`,
-      )
-      .bind(now, options.factId, options.spaceId, now),
     database
       .prepare(
         `INSERT INTO audit_events (
@@ -665,14 +643,6 @@ export async function rejectFact(
           AND status <> 'accepted' AND status <> 'retired'`,
       )
       .bind(now, options.factId, options.spaceId, options.version),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'fact', id, 'update', version, ?
-          FROM facts WHERE id = ? AND space_id = ? AND updated_at = ?`,
-      )
-      .bind(now, options.factId, options.spaceId, now),
     database
       .prepare(
         `INSERT INTO audit_events (

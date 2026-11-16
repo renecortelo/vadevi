@@ -300,14 +300,6 @@ export async function createTastingSession(
         requestHash,
         sessionId,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'tasting_session', id, 'create', version, ?
-          FROM tasting_sessions WHERE id = ? AND space_id = ? AND created_at = ?`,
-      )
-      .bind(now, sessionId, options.spaceId, now),
   ]);
   const command = await database
     .prepare(
@@ -643,14 +635,6 @@ export async function reorderSessionWines(
         WHERE id = ? AND space_id = ? AND deleted_at IS NULL`,
       )
       .bind(now, options.sessionId, options.spaceId),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'tasting_session', id, 'update', version, ?
-          FROM tasting_sessions WHERE id = ? AND space_id = ? AND updated_at = ?`,
-      )
-      .bind(now, options.sessionId, options.spaceId, now),
   ]);
   return getTastingSessionDetail(database, options);
 }
@@ -1080,16 +1064,6 @@ export async function createDeepTastingNote(
         ),
     );
   }
-  commands.push(
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'tasting_note', id, 'create', version, ? FROM tasting_notes
-          WHERE id = ? AND space_id = ? AND created_at = ?`,
-      )
-      .bind(now, noteId, options.spaceId, now),
-  );
   let results: D1Result[];
   try {
     results = await database.batch(commands);
@@ -1198,14 +1172,6 @@ export async function updateDeepTastingNote(
         options.request.version,
         options.principal.firebaseUid,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'tasting_note', id, 'update', version, ? FROM tasting_notes
-          WHERE id = ? AND space_id = ? AND updated_at = ?`,
-      )
-      .bind(now, options.noteId, options.spaceId, now),
   ];
   const context = options.request.context;
   if (context !== undefined) {
@@ -1356,14 +1322,6 @@ export async function submitDeepTastingNote(
             SELECT id FROM users WHERE firebase_uid = ? AND deleted_at IS NULL)`,
       )
       .bind(now, options.noteId, options.spaceId, options.version, options.principal.firebaseUid),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'tasting_note', id, 'update', version, ? FROM tasting_notes
-          WHERE id = ? AND space_id = ? AND updated_at = ?`,
-      )
-      .bind(now, options.noteId, options.spaceId, now),
   ]);
   if (results[0]?.meta.changes !== 1) return { kind: "conflict", current: { data: current } };
   const note = await getDeepNote(database, options.principal, options.spaceId, options.noteId);

@@ -750,14 +750,6 @@ async function persistCompletedJob(
             ) VALUES (?, ?, NULL, 'direct', ?)`,
           )
           .bind(factId, sourceId, now),
-        database
-          .prepare(
-            `INSERT INTO change_events (
-              space_id, resource_type, resource_id, operation, resource_version, changed_at
-            ) SELECT ?, 'fact', ?, 'create', 1, ?
-            WHERE EXISTS (SELECT 1 FROM facts WHERE id = ? AND created_at = ?)`,
-          )
-          .bind(options.spaceId, factId, now, factId, now),
       );
     }
   }
@@ -1026,13 +1018,6 @@ export async function regenerateNarrative(
         )
         .bind(factId, sourceId, now),
     ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) VALUES (?, 'fact', ?, 'create', 1, ?)`,
-      )
-      .bind(options.spaceId, factId, now),
     database
       .prepare(
         `INSERT INTO audit_events (
@@ -1399,13 +1384,6 @@ export async function regenerateTastingComparison(
         )
         .bind(factId, sourceId, now),
     ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) VALUES (?, 'fact', ?, 'create', 1, ?)`,
-      )
-      .bind(options.spaceId, factId, now),
     database
       .prepare(
         `INSERT INTO audit_events (

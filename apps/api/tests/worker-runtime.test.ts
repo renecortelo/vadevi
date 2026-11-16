@@ -214,7 +214,8 @@ describe("Workers runtime", () => {
         (SELECT COUNT(*) FROM change_events WHERE resource_type = 'user_profile') AS changes`,
     ).first<{ audits: number; changes: number }>();
 
-    expect(events).toEqual({ audits: 1, changes: 1 });
+    // The audit trail stays; the change feed nobody read is no longer written (D-06).
+    expect(events).toEqual({ audits: 1, changes: 0 });
   });
 
   it("gives the personal Space the language chosen at onboarding, once and only if untouched", async () => {

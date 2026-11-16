@@ -8351,7 +8351,9 @@
                     "version"
                   ],
                   "additionalProperties": false
-                }
+                },
+                "maxItems": 0,
+                "description": "Always empty: there is no change feed."
               },
               "hasMore": {
                 "type": "boolean"

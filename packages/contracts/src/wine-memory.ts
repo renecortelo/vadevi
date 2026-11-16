@@ -664,17 +664,23 @@ export const SyncResponseSchema = z
   .object({
     data: z
       .object({
-        changes: z.array(
-          z
-            .object({
-              changedAt: ResourceTimestampSchema,
-              operation: z.enum(["create", "update", "delete"]),
-              resourceId: ResourceIdSchema,
-              resourceType: z.string(),
-              version: z.number().int().positive(),
-            })
-            .strict(),
-        ),
+        // Always empty, and `hasMore` always false: there is no change feed
+        // (D-06). Kept in the shape because installed clients still expect
+        // the fields; the offline copy is refreshed from the Wine Memory list.
+        changes: z
+          .array(
+            z
+              .object({
+                changedAt: ResourceTimestampSchema,
+                operation: z.enum(["create", "update", "delete"]),
+                resourceId: ResourceIdSchema,
+                resourceType: z.string(),
+                version: z.number().int().positive(),
+              })
+              .strict(),
+          )
+          .max(0)
+          .openapi({ description: "Always empty: there is no change feed." }),
         hasMore: z.boolean(),
         mutationResults: z.array(
           z

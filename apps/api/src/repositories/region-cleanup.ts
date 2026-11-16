@@ -165,15 +165,6 @@ export async function renameRegions(
       ),
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT space_id, 'wine_record', id, 'update', version, ?
-        FROM wine_records WHERE space_id = ? AND updated_at = ? AND region = ?`,
-      )
-      .bind(now, spaceId, now, request.to),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
@@ -273,15 +264,6 @@ export async function renameProducers(
         JSON.stringify(request.from),
         request.to,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT space_id, 'wine_record', id, 'update', version, ?
-        FROM wine_records WHERE space_id = ? AND updated_at = ? AND producer_name = ?`,
-      )
-      .bind(now, spaceId, now, request.to),
     database
       .prepare(
         `INSERT INTO audit_events (
@@ -395,15 +377,6 @@ export async function renameGrapes(
           AND trim(name_snapshot) <> ?`,
       )
       .bind(request.to, normalizeWineText(request.to), grapeId, now, spaceId, from, request.to),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT space_id, 'wine_record', id, 'update', version, ?
-        FROM wine_records WHERE space_id = ? AND updated_at = ?`,
-      )
-      .bind(now, spaceId, now),
     database
       .prepare(
         `INSERT INTO audit_events (

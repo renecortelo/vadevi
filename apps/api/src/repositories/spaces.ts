@@ -261,16 +261,6 @@ export async function createSpace(
       .bind(candidateSpaceId, now, options.principal.firebaseUid, candidateSpaceId),
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT id, 'space', id, 'create', version, ?
-        FROM spaces
-        WHERE id = ?`,
-      )
-      .bind(now, candidateSpaceId),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
@@ -420,16 +410,6 @@ export async function createInvitation(
         requestHash,
         candidateInvitationId,
       ),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT space_id, 'invitation', id, 'create', 1, ?
-        FROM space_invitations
-        WHERE id = ?`,
-      )
-      .bind(now, candidateInvitationId),
     database
       .prepare(
         `INSERT INTO audit_events (
@@ -623,20 +603,6 @@ export async function acceptInvitation(
       .bind(tokenHash, now, now, options.principal.firebaseUid, tokenHash, now),
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT membership.space_id, 'membership', membership.user_id, 'create',
-          membership.version, ?
-        FROM space_memberships membership
-        JOIN space_invitations invitation ON invitation.space_id = membership.space_id
-        WHERE invitation.token_hash = ?
-          AND invitation.accepted_at = ?
-          AND membership.user_id = invitation.accepted_by_user_id`,
-      )
-      .bind(now, tokenHash, now),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
@@ -762,19 +728,6 @@ export async function removeMember(
           )`,
       )
       .bind(now, options.memberId, options.spaceId, options.spaceId, now),
-    database
-      .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        )
-        SELECT space_id, 'membership', user_id, 'update', version, ?
-        FROM space_memberships
-        WHERE space_id = ?
-          AND user_id = ?
-          AND status = 'removed'
-          AND updated_at = ?`,
-      )
-      .bind(now, options.spaceId, options.memberId, now),
     database
       .prepare(
         `INSERT INTO audit_events (

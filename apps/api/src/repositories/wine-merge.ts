@@ -276,14 +276,6 @@ export async function mergeWines(
       ),
     database
       .prepare(
-        `INSERT INTO change_events (
-          space_id, resource_type, resource_id, operation, resource_version, changed_at
-        ) SELECT space_id, 'wine_record', id, 'update', version, ?
-        FROM wine_records WHERE id = ? AND space_id = ? AND updated_at = ?`,
-      )
-      .bind(now, options.targetWineId, options.spaceId, now),
-    database
-      .prepare(
         `INSERT INTO audit_events (
           id, actor_user_id, space_id, action, target_type, target_id,
           request_id, safe_metadata_json, created_at
