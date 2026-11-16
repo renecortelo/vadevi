@@ -4,6 +4,10 @@
   "main": "apps/api/src/worker.ts",
   "compatibility_date": "2026-08-11",
   "compatibility_flags": ["nodejs_compat"],
+  // Workers Logs keeps what the Worker writes, so the per-request metrics line
+  // (route, status, time, D1 rows read and written) can be grouped by route in
+  // the dashboard. Free up to 200,000 lines a day, kept 3 days (7 on Paid).
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
   "assets": {
     "directory": "apps/web/dist",
     "binding": "ASSETS",

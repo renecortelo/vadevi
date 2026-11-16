@@ -194,6 +194,14 @@ has the reasons.
 
 ### Lighter on the database
 
+- **Every request measures itself**: the API writes one line per request
+  with the route it matched (the pattern, never the URL), its status, how
+  long it took, and how many statements it ran on D1 and how many rows
+  they read and wrote. Workers Logs keeps them, so the dashboard can rank
+  routes by what they cost in real use instead of by estimates. Self-hosters
+  get it from `"observability"` in `wrangler.example.jsonc`; how to read it
+  is in `docs/performance-evidence.md`.
+
 - **Lists read in the order they show**: the cellar, the wishlist and a
   wine's prices sorted every row of the Space before returning the first
   page; each now reads its own index in its own order (migration 0055).

@@ -20,6 +20,7 @@ import {
   placeSearchEnabled,
 } from "./adapters/research-factory";
 import { requestContext } from "./middleware/request-context";
+import { requestMetrics } from "./middleware/request-metrics";
 import { security } from "./middleware/security";
 import { bootstrapUser, updateUserProfile } from "./repositories/bootstrap";
 import { registerAccessRoutes } from "./routes/access";
@@ -276,6 +277,8 @@ export function createApi() {
   });
 
   app.use("*", requestContext);
+  // Around everything below, so what it measures includes the doors.
+  app.use("*", requestMetrics);
   app.use("*", security);
 
   // Registered before authentication middleware: the sign-in handler is what
@@ -413,8 +416,9 @@ export function createApi() {
     ),
   );
 
-  app.notFound((context) =>
-    context.json(
+  app.notFound((context) => {
+    context.set("unmatchedRoute", true);
+    return context.json(
       ErrorEnvelopeSchema.parse({
         error: {
           code: "NOT_FOUND",
@@ -423,8 +427,8 @@ export function createApi() {
         },
       }),
       404,
-    ),
-  );
+    );
+  });
 
   app.onError((error, context) => {
     console.error(

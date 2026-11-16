@@ -20,6 +20,9 @@ export default defineConfig(async () => {
       fileParallelism: false,
       include: ["tests/**/*.test.ts"],
       maxWorkers: 1,
+      // Every request writes a metrics line (Q-04); in tests it would bury the
+      // output. `request-metrics.test.ts` reads them through a spy instead.
+      onConsoleLog: (log: string) => !log.startsWith('{"level":"info","message":"request"'),
     },
   };
 });

@@ -56,5 +56,8 @@ export type ApiEnvironment = {
   Variables: {
     principal: FirebasePrincipal;
     requestId: string;
+    /** Set by the not-found handler, so the request's metrics line names no
+     *  route for a URL that matched none. */
+    unmatchedRoute?: boolean;
   };
 };

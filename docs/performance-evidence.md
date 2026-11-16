@@ -108,9 +108,54 @@ Neither of the remaining gaps can be closed from a development machine:
   library reporting to an endpoint the deployment owns — which is itself a
   privacy decision, since it means collecting timing data about members.
 - Deployed API percentiles need the authenticated flow against the real Firebase
-  and the real D1, which cannot be automated: the sign-in is a Google popup. The
-  practical substitute is watching the network panel during the manual
-  acceptance run and noting anything that feels slow.
+  and the real D1, which cannot be automated: the sign-in is a Google popup.
+  They no longer need it to be automated, though: every request now writes its
+  own figures (below), so real use measures itself.
 
 Until then, what is established is a floor and a lab profile, and this file says
 so rather than ticking a field budget it did not measure.
+
+## What the deployment measures by itself
+
+Every API request writes one line (`apps/api/src/middleware/request-metrics.ts`):
+
+```json
+{
+  "level": "info",
+  "message": "request",
+  "requestId": "01K…",
+  "method": "GET",
+  "route": "/api/v1/spaces/:spaceId/wines",
+  "status": 200,
+  "ms": 41,
+  "d1": { "queries": 3, "rowsRead": 58, "rowsWritten": 0, "ms": 1.2 }
+}
+```
+
+- `route` is the pattern the request matched, never its URL: no id, no
+  invitation token. A URL that matches no route is `(none)`.
+- `ms` is the Worker's clock across the whole request, doors included
+  (authentication, the allowlist). The Worker's clock moves on I/O, which is
+  what a request mostly waits on.
+- `d1` sums what D1 reports for each statement the request ran, a batch
+  counting each of its statements: `rowsRead` is what D1 bills and what an
+  index saves, `ms` is time inside the database. Work handed to `waitUntil`
+  ends after the line is written and is not counted.
+- Nothing else: no user, no Space, no wine name. The request id is the one the
+  response carries in `X-Request-Id`, so a slow request a member reports can be
+  found.
+
+Workers Logs keeps the lines (`observability` in the Wrangler config; free up
+to 200,000 a day, kept three days, seven on the Paid plan). To read them:
+Cloudflare dashboard → Workers → the Worker → Observability → Query builder,
+filter `message = request`, group by `route`, and take the average or P99 of
+`ms`, `d1.rowsRead` and `d1.rowsWritten`, or the count by `status`. Live,
+without the dashboard:
+
+```bash
+pnpm exec wrangler tail --config wrangler.preview.jsonc --format json
+```
+
+This replaces estimating cost from query plans with measuring it in use;
+`apps/api/tests/query-plans.test.ts` stays as the gate that keeps a plan from
+regressing before it ships.
