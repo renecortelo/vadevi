@@ -200,7 +200,8 @@ has the reasons.
   copy refreshes from the Wine Memory list — and it never recorded a
   deletion, so it could not have served that purpose as it was. It is no
   longer written; `/sync` still answers with an empty `changes` list so
-  installed clients keep working, and the table is then dropped.
+  installed clients keep working, and the table is dropped (migration
+  0052).
 
 - **Pickers ask for labels, not whole wines**: the cellar, the wishlist,
   the price list and Quick Log's prefill filled their wine dropdown by

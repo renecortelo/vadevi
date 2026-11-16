@@ -14,7 +14,7 @@ Application identifiers are ULIDs stored as text. Timestamps are UTC ISO 8601 st
 `0002_bootstrap_audit.sql` makes personal-Space bootstrap safe and observable:
 
 - a partial unique index permits at most one active personal Space per creator
-- `change_events` is no longer written or read (D-06, 16 Nov 2026) and is being dropped: it was a change feed no client applied, and it never recorded deletions
+- `change_events` was dropped in migration 0052 (D-06, 16 Nov 2026): a change feed no client applied, which never recorded deletions
 - `audit_events` records security-relevant actions without token or private-content payloads
 
 ## Wine Memory and Quick Log

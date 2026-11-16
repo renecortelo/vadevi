@@ -17,6 +17,8 @@ describe("Workers runtime", () => {
 
     const tables = result.results.map(({ name }) => name);
 
+    // The change log nobody read is gone (D-06, migration 0052).
+    expect(tables).not.toContain("change_events");
     expect(tables).toEqual(
       expect.arrayContaining([
         "d1_migrations",
@@ -209,13 +211,10 @@ describe("Workers runtime", () => {
     });
 
     const events = await env.DB.prepare(
-      `SELECT
-        (SELECT COUNT(*) FROM audit_events WHERE action = 'profile.updated') AS audits,
-        (SELECT COUNT(*) FROM change_events WHERE resource_type = 'user_profile') AS changes`,
-    ).first<{ audits: number; changes: number }>();
+      `SELECT COUNT(*) AS audits FROM audit_events WHERE action = 'profile.updated'`,
+    ).first<{ audits: number }>();
 
-    // The audit trail stays; the change feed nobody read is no longer written (D-06).
-    expect(events).toEqual({ audits: 1, changes: 0 });
+    expect(events).toEqual({ audits: 1 });
   });
 
   it("gives the personal Space the language chosen at onboarding, once and only if untouched", async () => {

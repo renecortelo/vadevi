@@ -481,7 +481,6 @@ export const spaceScopedTables = [
   "media_assets",
   "wine_records",
   "sync_mutations",
-  "change_events",
   "audit_events",
   "space_invitations",
   "space_memberships",
