@@ -20,6 +20,7 @@ import type { FirebasePrincipal } from "../types";
 import { jsonList } from "../services/sql-list";
 import { libraryGrapeIds } from "./grape-names";
 import { hueLabels } from "./hue-labels";
+import { refreshWineFigures } from "./wine-figures";
 import { countryOfProducer, countryOfRegion, readPlaces, regionRefOf } from "./region-names";
 
 type IdempotentResult<T> =
@@ -138,16 +139,7 @@ const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.
     FROM (SELECT name_snapshot, percentage_milli, grape_code FROM wine_grapes g0
       WHERE g0.wine_id = wine.id AND g0.space_id = wine.space_id ORDER BY g0.position) AS g
   ) AS grapes_json,
-  (SELECT MAX(note.tasted_at) FROM tasting_notes note
-    WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
-  ) AS last_tasted_at,
-  (SELECT COUNT(*) FROM tasting_notes note
-    WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
-  ) AS note_count,
-  (SELECT CAST(ROUND(AVG(note.score_100)) AS INTEGER) FROM tasting_notes note
-    WHERE note.space_id = wine.space_id AND note.wine_id = wine.id
-      AND note.deleted_at IS NULL AND note.state = 'submitted' AND note.score_100 IS NOT NULL
-  ) AS score_100,
+  wine.last_tasted_at, wine.note_count, wine.score_100,
   (SELECT link.media_id FROM wine_media link
     JOIN media_assets media ON media.id = link.media_id AND media.space_id = wine.space_id
     WHERE link.wine_id = wine.id AND media.processing_status = 'ready' AND media.deleted_at IS NULL
@@ -569,15 +561,13 @@ const sortKeys = {
     expression: "(wine.normalized_producer_name || ' ' || wine.normalized_name)",
   },
   recent: { direction: "DESC", expression: "wine.updated_at" },
-  // Spelled as a CASE, not COALESCE around printf: printf('%03d', NULL) is
-  // '000', not NULL, so the COALESCE never fired and an unscored wine sorted
-  // as a zero here while its cursor said -1 — and every unscored wine after
-  // the page break was skipped.
-  score: {
-    direction: "DESC",
-    expression: "CASE WHEN score_100 IS NULL THEN '-1' ELSE printf('%03d', score_100) END",
-  },
-  tasted: { direction: "DESC", expression: "COALESCE(last_tasted_at, '')" },
+  // A number, compared as a number: the cursor's text is read back with
+  // parseInt (old cursors, zero-padded, read the same). Unscored wines sort as
+  // -1, after every score. Each expression here is the one an index of
+  // migration 0053 is built on, character for character, or SQLite cannot use
+  // it and sorts the whole Space again.
+  score: { direction: "DESC", expression: "COALESCE(wine.score_100, -1)" },
+  tasted: { direction: "DESC", expression: "COALESCE(wine.last_tasted_at, '')" },
 } as const;
 
 /**
@@ -644,65 +634,72 @@ export async function listWines(
       : JSON.stringify([options.hue, ...(hueLabels[options.hue] ?? [])]);
   const sort = sortKeys[options.sort];
   const comparison = sort.direction === "DESC" ? "<" : ">";
+  // The score order compares numbers; bound as text, every number would sort
+  // below it and the next page would come back empty.
+  const cursorValue =
+    cursor === null
+      ? null
+      : options.sort === "score"
+        ? Number.parseInt(cursor.sortValue, 10)
+        : cursor.sortValue;
+  if (typeof cursorValue === "number" && !Number.isSafeInteger(cursorValue)) return null;
 
   const result = await database
     .prepare(
-      `SELECT * FROM (
-        ${wineSelect}
-        JOIN space_memberships membership ON membership.space_id = wine.space_id
-        JOIN users actor ON actor.id = membership.user_id
-        WHERE wine.space_id = ? AND wine.deleted_at IS NULL
-          AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
-          AND membership.status = 'active'
-          AND (? IS NULL OR COALESCE(wine.wine_type_free, wine.wine_type) = ?)
-          AND (? IS NULL OR wine.identity_status = ?)
-          AND (? IS NULL OR wine.normalized_country_code = ?)
-          AND (? IS NULL OR wine.normalized_region LIKE ?)
-          AND (? IS NULL OR wine.region_ref = ?)
-          AND (? IS NULL OR wine.vintage_year >= ?)
-          AND (? IS NULL OR wine.vintage_year <= ?)
-          AND (? IS NULL OR EXISTS (
-            SELECT 1 FROM wine_grapes grape
-            WHERE grape.wine_id = wine.id AND grape.space_id = wine.space_id
-              AND grape.normalized_name LIKE ?
+      `${wineSelect}
+      JOIN space_memberships membership ON membership.space_id = wine.space_id
+      JOIN users actor ON actor.id = membership.user_id
+      WHERE wine.space_id = ? AND wine.deleted_at IS NULL
+        AND actor.firebase_uid = ? AND actor.deleted_at IS NULL
+        AND membership.status = 'active'
+        AND (? IS NULL OR COALESCE(wine.wine_type_free, wine.wine_type) = ?)
+        AND (? IS NULL OR wine.identity_status = ?)
+        AND (? IS NULL OR wine.normalized_country_code = ?)
+        AND (? IS NULL OR wine.normalized_region LIKE ?)
+        AND (? IS NULL OR wine.region_ref = ?)
+        AND (? IS NULL OR wine.vintage_year >= ?)
+        AND (? IS NULL OR wine.vintage_year <= ?)
+        AND (? IS NULL OR EXISTS (
+          SELECT 1 FROM wine_grapes grape
+          WHERE grape.wine_id = wine.id AND grape.space_id = wine.space_id
+            AND grape.normalized_name LIKE ?
+        ))
+        AND (? IS NULL OR (? = 'true') = EXISTS (
+          SELECT 1 FROM wine_media link
+          JOIN media_assets media ON media.id = link.media_id AND media.space_id = wine.space_id
+          WHERE link.wine_id = wine.id AND media.processing_status = 'ready'
+            AND media.deleted_at IS NULL
+        ))
+        AND (? IS NULL OR EXISTS (
+          SELECT 1 FROM tasting_notes note
+          WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+            AND note.deleted_at IS NULL AND note.sentiment = ?
+        ))
+        AND (? IS NULL OR EXISTS (
+          SELECT 1 FROM tasting_notes note
+          WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+            AND note.deleted_at IS NULL
+            AND lower(note.appearance_hue) IN (SELECT lower(value) FROM json_each(?))
+        ))
+        AND (? IS NULL OR EXISTS (
+          SELECT 1 FROM tasting_notes note
+          WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+            AND note.deleted_at IS NULL AND note.tasted_at >= ?
+        ))
+        AND (? IS NULL OR EXISTS (
+          SELECT 1 FROM tasting_notes note
+          WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
+            AND note.deleted_at IS NULL AND note.tasted_at <= ?
+        ))
+        AND (? IS NULL OR wine.normalized_name LIKE ? OR wine.normalized_producer_name LIKE ?
+          OR (wine.normalized_producer_name || ' ' || wine.normalized_name) LIKE ?
+          OR EXISTS (
+            SELECT 1 FROM wine_aliases alias
+            WHERE alias.wine_id = wine.id AND alias.space_id = wine.space_id
+              AND alias.normalized_alias LIKE ?
           ))
-          AND (? IS NULL OR (? = 'true') = EXISTS (
-            SELECT 1 FROM wine_media link
-            JOIN media_assets media ON media.id = link.media_id AND media.space_id = wine.space_id
-            WHERE link.wine_id = wine.id AND media.processing_status = 'ready'
-              AND media.deleted_at IS NULL
-          ))
-          AND (? IS NULL OR EXISTS (
-            SELECT 1 FROM tasting_notes note
-            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
-              AND note.deleted_at IS NULL AND note.sentiment = ?
-          ))
-          AND (? IS NULL OR EXISTS (
-            SELECT 1 FROM tasting_notes note
-            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
-              AND note.deleted_at IS NULL
-              AND lower(note.appearance_hue) IN (SELECT lower(value) FROM json_each(?))
-          ))
-          AND (? IS NULL OR EXISTS (
-            SELECT 1 FROM tasting_notes note
-            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
-              AND note.deleted_at IS NULL AND note.tasted_at >= ?
-          ))
-          AND (? IS NULL OR EXISTS (
-            SELECT 1 FROM tasting_notes note
-            WHERE note.wine_id = wine.id AND note.space_id = wine.space_id
-              AND note.deleted_at IS NULL AND note.tasted_at <= ?
-          ))
-          AND (? IS NULL OR wine.normalized_name LIKE ? OR wine.normalized_producer_name LIKE ?
-            OR (wine.normalized_producer_name || ' ' || wine.normalized_name) LIKE ?
-            OR EXISTS (
-              SELECT 1 FROM wine_aliases alias
-              WHERE alias.wine_id = wine.id AND alias.space_id = wine.space_id
-                AND alias.normalized_alias LIKE ?
-            ))
-      ) AS wine
-      WHERE (? IS NULL OR score_100 >= ?)
-        AND (? IS NULL OR score_100 <= ?)
+        AND (? IS NULL OR wine.score_100 >= ?)
+        AND (? IS NULL OR wine.score_100 <= ?)
         AND (? IS NULL OR ${sort.expression} ${comparison} ?
           OR (${sort.expression} = ? AND wine.id ${comparison} ?))
       ORDER BY ${sort.expression} ${sort.direction}, wine.id ${sort.direction}
@@ -746,9 +743,9 @@ export async function listWines(
       options.minScore ?? null,
       options.maxScore ?? null,
       options.maxScore ?? null,
-      cursor?.sortValue ?? null,
-      cursor?.sortValue ?? null,
-      cursor?.sortValue ?? null,
+      cursorValue,
+      cursorValue,
+      cursorValue,
       cursor?.id ?? null,
       options.limit + 1,
     )
@@ -998,6 +995,8 @@ export async function createTastingNote(
         )
         .bind(ulid(), code, code, now, now, candidateId, options.spaceId),
     ),
+    // Last, after the note it counts.
+    refreshWineFigures(database, options.spaceId, [options.request.wineId]),
   ]);
 
   const command = await database

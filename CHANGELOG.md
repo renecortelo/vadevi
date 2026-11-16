@@ -194,6 +194,16 @@ has the reasons.
 
 ### Lighter on the database
 
+- **A wine knows its own figures**: how many times a wine was tasted, when
+  last, and its average score were worked out again for every wine on every
+  page of the memory, of an event and of a merge's answer — and sorting by
+  last tasting or by score sorted the whole Space first. They are now kept
+  on the wine, refreshed by every write that can change them, and each of
+  the memory's orders reads its own index, a page at a time (migration
+  0053). A test writes notes by every path — Quick Log, deep tastings,
+  edits, submitting, the offline queue, merges — and checks the figures
+  against the notes after each.
+
 - **No more change log nobody read**: every change to a wine, a tasting,
   a bottle, a source or a profile also wrote a row to a change log meant
   for a future incremental sync. Nothing ever applied it — the offline

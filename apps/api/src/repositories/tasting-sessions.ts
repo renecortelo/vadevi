@@ -16,6 +16,7 @@ import { ulid } from "ulid";
 import { sha256Base64Url } from "../security/opaque-token";
 import type { FirebasePrincipal } from "../types";
 import { decodeListCursor, encodeListCursor } from "./list-cursor";
+import { refreshWineFiguresOfNote } from "./wine-figures";
 import { grapesFromJson } from "./wine-memory";
 import { jsonList } from "../services/sql-list";
 
@@ -365,16 +366,7 @@ const wineSelect = `SELECT wine.id, wine.display_name, wine.producer_name, wine.
     FROM (SELECT name_snapshot, percentage_milli FROM wine_grapes g0
       WHERE g0.wine_id = wine.id AND g0.space_id = wine.space_id ORDER BY g0.position) AS g
   ) AS grapes_json,
-  (SELECT MAX(note.tasted_at) FROM tasting_notes note
-    WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
-  ) AS last_tasted_at,
-  (SELECT COUNT(*) FROM tasting_notes note
-    WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
-  ) AS note_count,
-  (SELECT CAST(ROUND(AVG(note.score_100)) AS INTEGER) FROM tasting_notes note
-    WHERE note.space_id = wine.space_id AND note.wine_id = wine.id
-      AND note.deleted_at IS NULL AND note.state = 'submitted' AND note.score_100 IS NOT NULL
-  ) AS score_100,
+  wine.last_tasted_at, wine.note_count, wine.score_100,
   (SELECT link.media_id FROM wine_media link
     JOIN media_assets media ON media.id = link.media_id AND media.space_id = wine.space_id
     WHERE link.wine_id = wine.id AND media.processing_status = 'ready' AND media.deleted_at IS NULL
@@ -1064,6 +1056,8 @@ export async function createDeepTastingNote(
         ),
     );
   }
+  // Last, after the note it counts.
+  commands.push(refreshWineFiguresOfNote(database, options.spaceId, noteId));
   let results: D1Result[];
   try {
     results = await database.batch(commands);
@@ -1284,6 +1278,8 @@ export async function updateDeepTastingNote(
       ),
     );
   }
+  // Last: an edit can change the score, and with it the wine's average.
+  commands.push(refreshWineFiguresOfNote(database, options.spaceId, options.noteId));
   const results = await database.batch(commands);
   if (results[0]?.meta.changes !== 1) {
     const latest = await getDeepNote(database, options.principal, options.spaceId, options.noteId);
@@ -1322,6 +1318,8 @@ export async function submitDeepTastingNote(
             SELECT id FROM users WHERE firebase_uid = ? AND deleted_at IS NULL)`,
       )
       .bind(now, options.noteId, options.spaceId, options.version, options.principal.firebaseUid),
+    // A submitted score is the first that counts towards the wine's average.
+    refreshWineFiguresOfNote(database, options.spaceId, options.noteId),
   ]);
   if (results[0]?.meta.changes !== 1) return { kind: "conflict", current: { data: current } };
   const note = await getDeepNote(database, options.principal, options.spaceId, options.noteId);

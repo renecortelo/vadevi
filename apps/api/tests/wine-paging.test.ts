@@ -3,6 +3,7 @@ import { applyD1Migrations, env, SELF } from "cloudflare:test";
 import { ulid } from "ulid";
 import { beforeAll, describe, expect, it } from "vitest";
 
+import { refreshWineFigures } from "../src/repositories/wine-figures";
 import { jsonList } from "../src/services/sql-list";
 import { emulatorIdToken } from "./fixtures/firebase-token";
 
@@ -134,6 +135,8 @@ describe("lists longer than D1's parameter budget", () => {
         );
       }
     }
+    // Seeded past the API, so the wines' figures are refreshed as the API would.
+    statements.push(refreshWineFigures(env.DB, spaceId, seeded));
     await env.DB.batch(statements);
 
     const seen: string[] = [];

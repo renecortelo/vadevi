@@ -3,6 +3,7 @@ import { ulid } from "ulid";
 
 import type { FirebasePrincipal } from "../types";
 import { grapesFromJson, normalizeWineText } from "./wine-memory";
+import { refreshWineFigures } from "./wine-figures";
 
 type MergeResult =
   | { kind: "conflict" }
@@ -298,6 +299,12 @@ export async function mergeWines(
         options.targetWineId,
         now,
       ),
+    // Last: the target now holds the source's notes. Both are recomputed, the
+    // source to nothing, so neither keeps figures its notes no longer give.
+    refreshWineFigures(database, options.spaceId, [
+      options.targetWineId,
+      options.request.sourceWineId,
+    ]),
   ]);
 
   const at = (index: number) => results[index]?.meta.changes ?? 0;
@@ -357,16 +364,7 @@ async function targetSummary(
           FROM (SELECT name_snapshot, percentage_milli FROM wine_grapes g0
             WHERE g0.wine_id = wine.id AND g0.space_id = wine.space_id ORDER BY g0.position) AS g
         ) AS grapes_json,
-        (SELECT MAX(note.tasted_at) FROM tasting_notes note
-          WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
-        ) AS last_tasted_at,
-        (SELECT COUNT(*) FROM tasting_notes note
-          WHERE note.space_id = wine.space_id AND note.wine_id = wine.id AND note.deleted_at IS NULL
-        ) AS note_count,
-        (SELECT CAST(ROUND(AVG(note.score_100)) AS INTEGER) FROM tasting_notes note
-          WHERE note.space_id = wine.space_id AND note.wine_id = wine.id
-            AND note.deleted_at IS NULL AND note.state = 'submitted' AND note.score_100 IS NOT NULL
-        ) AS score_100,
+        wine.last_tasted_at, wine.note_count, wine.score_100,
         (SELECT link.media_id FROM wine_media link
           JOIN media_assets media ON media.id = link.media_id AND media.space_id = wine.space_id
           WHERE link.wine_id = wine.id AND media.processing_status = 'ready' AND media.deleted_at IS NULL
