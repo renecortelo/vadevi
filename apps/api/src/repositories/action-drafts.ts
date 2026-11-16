@@ -111,15 +111,19 @@ function draftResource(row: DraftRow, now: string): ActionDraftResponse {
   });
 }
 
+/**
+ * Clears what an expired, unanswered draft still holds. It runs before every
+ * read of a draft as well as in the scheduled run, so it must stay on the
+ * partial index of migration 0054 (`scheduled-plans.test.ts` reads its plan),
+ * or each read scans every user's drafts.
+ */
+export const purgeExpiredDraftContentQuery = `UPDATE action_drafts
+  SET payload_json = NULL, summary = NULL, updated_at = ?
+  WHERE expires_at <= ? AND confirmed_at IS NULL AND canceled_at IS NULL
+    AND (payload_json IS NOT NULL OR summary IS NOT NULL)`;
+
 export async function purgeExpiredActionDraftContent(database: D1Database, now: string) {
-  await database
-    .prepare(
-      `UPDATE action_drafts SET payload_json = NULL, summary = NULL, updated_at = ?
-      WHERE expires_at <= ? AND confirmed_at IS NULL AND canceled_at IS NULL
-        AND (payload_json IS NOT NULL OR summary IS NOT NULL)`,
-    )
-    .bind(now, now)
-    .run();
+  await database.prepare(purgeExpiredDraftContentQuery).bind(now, now).run();
 }
 
 async function draftById(database: D1Database, actorId: string, spaceId: string, draftId: string) {

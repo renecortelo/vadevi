@@ -17,6 +17,20 @@ const rateWindowRetentionSeconds = 2 * 24 * 60 * 60;
 /** Usage counters are per day and reported for the month; keep 35 days. */
 const usageRetentionDays = 35;
 
+/**
+ * Photographs past their window and referenced by nothing. Its own constant
+ * so `scheduled-plans.test.ts` reads the plan of this very statement: it must
+ * stay on the partial index of migration 0054, or every run reads every
+ * photograph of every Space.
+ */
+export const staleMediaQuery = `SELECT id, r2_key FROM media_assets media
+  WHERE media.processing_status IN ('reserved', 'rejected') AND media.expires_at <= ?
+    AND NOT EXISTS (SELECT 1 FROM wine_media link WHERE link.media_id = media.id)
+    AND NOT EXISTS (SELECT 1 FROM identification_drafts draft WHERE draft.media_id = media.id)
+    AND NOT EXISTS (SELECT 1 FROM purchases purchase WHERE purchase.evidence_media_id = media.id)
+    AND NOT EXISTS (SELECT 1 FROM price_observations price WHERE price.evidence_media_id = media.id)
+  LIMIT ?`;
+
 function daysBefore(nowIso: string, days: number): string {
   return new Date(Date.parse(nowIso) - days * 24 * 60 * 60 * 1_000).toISOString().slice(0, 10);
 }
@@ -83,15 +97,7 @@ export async function runHousekeeping(
   // one only in theory — the upload writes the object after validation — but
   // the key is checked and removed regardless, so nothing is orphaned.
   const stale = await database
-    .prepare(
-      `SELECT id, r2_key FROM media_assets media
-      WHERE media.processing_status IN ('reserved', 'rejected') AND media.expires_at <= ?
-        AND NOT EXISTS (SELECT 1 FROM wine_media link WHERE link.media_id = media.id)
-        AND NOT EXISTS (SELECT 1 FROM identification_drafts draft WHERE draft.media_id = media.id)
-        AND NOT EXISTS (SELECT 1 FROM purchases purchase WHERE purchase.evidence_media_id = media.id)
-        AND NOT EXISTS (SELECT 1 FROM price_observations price WHERE price.evidence_media_id = media.id)
-      LIMIT ?`,
-    )
+    .prepare(staleMediaQuery)
     .bind(nowIso, batch)
     .all<{ id: string; r2_key: string }>();
   let reservations = 0;

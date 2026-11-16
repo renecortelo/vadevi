@@ -194,6 +194,13 @@ has the reasons.
 
 ### Lighter on the database
 
+- **Clean-ups read only what they clean**: the scheduled run looked for
+  expired photographs and for wines whose region is not yet linked by
+  reading every photograph and every wine, and clearing an expired action
+  draft — which also happens before every read of a draft — read every
+  user's drafts. Each now reads a partial index holding just the rows it
+  may act on (migration 0054), and a test reads the three plans.
+
 - **A wine knows its own figures**: how many times a wine was tasted, when
   last, and its average score were worked out again for every wine on every
   page of the memory, of an event and of a merge's answer — and sorting by

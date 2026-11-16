@@ -18,6 +18,17 @@ import { readPlaces } from "./region-names";
  */
 const batch = 200;
 
+/**
+ * Unlinked wines not yet read against this build. Its own constant so
+ * `scheduled-plans.test.ts` reads the plan of this very statement: it must
+ * stay on the partial index of migration 0054, or every run reads every wine.
+ */
+export const unlinkedWinesQuery = `SELECT id, region, country_code FROM wine_records
+  WHERE region_ref IS NULL AND region IS NOT NULL AND trim(region) <> ''
+    AND deleted_at IS NULL
+    AND (region_ref_checked IS NULL OR region_ref_checked <> ?)
+  LIMIT ?`;
+
 export async function linkWineRegions(
   database: D1Database,
 ): Promise<{ checked: number; linked: number }> {
@@ -29,13 +40,7 @@ export async function linkWineRegions(
   if (version === undefined) return { checked: 0, linked: 0 };
   const wines = (
     await database
-      .prepare(
-        `SELECT id, region, country_code FROM wine_records
-        WHERE region_ref IS NULL AND region IS NOT NULL AND trim(region) <> ''
-          AND deleted_at IS NULL
-          AND (region_ref_checked IS NULL OR region_ref_checked <> ?)
-        LIMIT ?`,
-      )
+      .prepare(unlinkedWinesQuery)
       .bind(version, batch)
       .all<{ country_code: string | null; id: string; region: string }>()
   ).results;
